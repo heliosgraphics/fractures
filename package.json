@@ -1,0 +1,15 @@
+{
+  "name": "fractures",
+  "version": "0.0.1",
+  "scripts": {
+    "start": "gulp",
+    "watch": "gulp",
+    "build": "gulp"
+  },
+  "devDependencies": {
+    "gulp": "latest",
+    "gulp-less": "latest",
+    "gulp-cssmin": "latest",
+    "gulp-watch": "^4.3.5"
+  }
+}

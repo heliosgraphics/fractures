@@ -1,0 +1,52 @@
+// Basic grid
+.grid {
+	@media (max-width: @bp-tablet) { flex-direction: column; };
+
+	display: flex;
+	flex-wrap: nowrap;
+
+	.cell {
+		@media (max-width: @bp-tablet) {
+			margin-left: 0;
+			margin-right: 0;
+		};
+
+		flex: 1;
+	}
+}
+
+// TODO Needs update
+.grid--center {
+	align-items: center;
+	justify-content: center;
+}
+
+.grid--hcenter { align-items: center; }
+.grid--vcenter { justify-content: center; }
+.grid--column { flex-direction: column; }
+
+.grid--left {
+	align-items: flex-start;
+	justify-content: flex-start;
+}
+
+.grid--right {
+	align-items: flex-end;
+	justify-content: flex-end;
+}
+
+// Grid helpers
+.float-left { float: left; }
+.float-right { float: right; }
+
+.clearfix:before,
+.clearfix:after {
+	display: block;
+	height: 0;
+	overflow: hidden;
+
+	content: "\0020";
+}
+
+.clearfix:after { clear: both; }
+.clearfix { zoom: 1; }
