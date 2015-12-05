@@ -1,0 +1,19 @@
+body {
+	font-family: Arial;
+}
+
+.grid {
+	min-height: 5rem;
+	border: 1px dashed blue;
+}
+
+div:not(.grid) {
+	height: 2.5rem;
+	width: 2.5rem;
+
+	box-shadow: inset 0 0 0 1px blue;
+}
+
+nav { max-width: 10rem; }
+
+main .grid { background: #eee; }

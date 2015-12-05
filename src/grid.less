@@ -1,11 +1,11 @@
-// Basic grid
 .grid {
 	@media (max-width: @bp-tablet) { flex-direction: column; };
 
 	display: flex;
-	flex-wrap: nowrap;
 
 	.cell {
+
+		// Handle margins on your responsive container instead
 		@media (max-width: @bp-tablet) {
 			margin-left: 0;
 			margin-right: 0;
@@ -15,7 +15,25 @@
 	}
 }
 
-// TODO Needs update
+// Wrap
+.grid--wrap { flex-wrap: wrap; }
+
+// Directions
+.grid--reverse {
+	@media (max-width: @bp-tablet) { flex-direction: column-reverse; };
+
+	flex-direction: row-reverse;
+}
+
+.grid--reverse.grid--column {
+	@media (max-width: @bp-tablet) { flex-direction: column-reverse; };
+
+	flex-direction: column-reverse;
+}
+
+.grid--column { flex-direction: column; }
+
+// Positions
 .grid--center {
 	align-items: center;
 	justify-content: center;
@@ -23,30 +41,10 @@
 
 .grid--hcenter { align-items: center; }
 .grid--vcenter { justify-content: center; }
-.grid--column { flex-direction: column; }
 
-.grid--left {
-	align-items: flex-start;
-	justify-content: flex-start;
-}
+.grid--around { justify-content: space-around; }
+.grid--between { justify-content: space-between; }
+.grid--right { justify-content: flex-end; }
 
-.grid--right {
-	align-items: flex-end;
-	justify-content: flex-end;
-}
-
-// Grid helpers
-.float-left { float: left; }
-.float-right { float: right; }
-
-.clearfix:before,
-.clearfix:after {
-	display: block;
-	height: 0;
-	overflow: hidden;
-
-	content: "\0020";
-}
-
-.clearfix:after { clear: both; }
-.clearfix { zoom: 1; }
+.grid--bottom { align-items: flex-end; }
+.grid--top { align-items: flex-start; }

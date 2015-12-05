@@ -5,15 +5,71 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<title>Fractures</title>
 		<link rel="stylesheet" href="./dist/fractures.css">
+		<link rel="stylesheet" href="./demo/style.css">
 	</head>
-	<body>
+	<body class="grid grid--reverse">
+		<nav class="cell m-6">
+			<ul>
+				<li><a href="#grid">format</a></li>
+				<li><a href="#grid">grid</a></li>
+				<li><a href="#grid">margin</a></li>
+				<li><a href="#grid">padding</a></li>
+				<li><a href="#grid">reset</a></li>
+				<li><a href="#grid">typo</a></li>
+			</ul>
+		</nav>
 
-		<h1>Hello</h1>
-		<p>This is a demo</p>
+		<main
+			class="cell m-6"
+			id="grid">
+			<h1 class="font-bold">Hello</h1>
+			<p>This is a demo</p>
+			<div class="grid mb-12">
+				<div class="cell">.cell 1</div>
+				<div class="cell">.cell 2</div>
+				<div class="cell">.cell 3</div>
+			</div>
 
-		<div class="grid">
-			<div class="cell">.cell</div>
-		</div>
+			<div class="grid grid--reverse mb-12">
+				<div class="cell">.cell 1</div>
+				<div class="cell">.cell 2</div>
+				<div class="cell">.cell 3</div>
+			</div>
 
+			<em>grid grid--center</em>
+			<div class="grid grid--center mb-9">
+				<div></div>
+			</div>
+
+			<em>grid grid--hcenter</em>
+			<div class="grid grid--hcenter mb-9">
+				<div></div>
+			</div>
+
+			<em>grid grid--vcenter</em>
+			<div class="grid grid--vcenter mb-9">
+				<div></div>
+			</div>
+
+			<em>grid grid--left</em>
+			<div class="grid grid--left mb-9">
+				<div></div>
+			</div>
+
+			<em>grid grid--right</em>
+			<div class="grid grid--right mb-9">
+				<div></div>
+			</div>
+
+			<em>grid grid--top</em>
+			<div class="grid grid--top mb-9">
+				<div></div>
+			</div>
+
+			<em>grid grid--bottom</em>
+			<div class="grid grid--bottom mb-9">
+				<div></div>
+			</div>
+		</main>
 	</body>
 </html>
