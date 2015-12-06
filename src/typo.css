@@ -18,7 +18,6 @@
 }
 
 .text-uppercase { text-transform: uppercase; }
-.text-italic { font-style: italic; }
 
 h1,
 .h1 {
@@ -64,8 +63,8 @@ blockquote { margin: var(--s06) 0; }
 
 blockquote {
 	font-size: var(--s08);
+	font-style: italic;
 	line-height: calc(1.25 * var(--s08));
-	text-align: center;
 }
 
 small {

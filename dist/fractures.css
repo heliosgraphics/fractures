@@ -261,7 +261,6 @@ body {
 }
 
 .text-uppercase { text-transform: uppercase; }
-.text-italic { font-style: italic; }
 
 h1,
 .h1 {
@@ -320,9 +319,9 @@ blockquote { margin: 16px 0; margin: 1rem 0; }
 blockquote {
 	font-size: 24px;
 	font-size: 1.5rem;
+	font-style: italic;
 	line-height: 30px;
 	line-height: 1.875rem;
-	text-align: center;
 }
 
 small {
