@@ -7,7 +7,7 @@
 	margin-bottom: var(--s06);
 }
 
-.format p a { font-weight: bold; }
+.format p a { font-weight: var(--bold); }
 
 .format ul,
 .format ol { margin-left: 2.5rem; }

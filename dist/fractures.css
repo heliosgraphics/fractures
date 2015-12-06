@@ -7,7 +7,6 @@
 	outline: 0;
 
 	font-size: 100%;
-	font-weight: normal;
 	vertical-align: baseline;
 
 	-webkit-tap-highlight-color: rgba(0, 0, 0, 0);
@@ -243,7 +242,7 @@ body {
 .pr-12 { padding-right: 48px; padding-right: 3rem; }
 .pr-15 { padding-right: 64px; padding-right: 4rem; }
 .font-normal { font-weight: normal; }
-.font-bold { font-weight: 600; }
+.font-bold { font-weight: bold; }
 
 .ws-nowrap { white-space: nowrap; }
 .ws-pre { white-space: pre-line; }

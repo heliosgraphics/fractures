@@ -1,5 +1,5 @@
 .font-normal { font-weight: normal; }
-.font-bold { font-weight: 600; }
+.font-bold { font-weight: var(--bold); }
 
 .ws-nowrap { white-space: nowrap; }
 .ws-pre { white-space: pre-line; }

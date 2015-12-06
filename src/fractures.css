@@ -9,6 +9,8 @@
 	--s10: 2.25rem;
 	--s12: 3rem;
 	--s15: 4rem;
+
+	--bold: bold;
 }
 
 @custom-media --tablet (max-width: 48rem);
