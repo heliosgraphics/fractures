@@ -1,39 +1,28 @@
-.grid {
-	/*@media (max-width: @bp-tablet) { flex-direction: column; };*/
+@media (--tablet) {
+	.grid { flex-direction: column; }
 
-	display: flex;
-}
+	.grid.grid--reverse,
+	.grid.grid--reverse.grid--column { flex-direction: column-reverse; }
 
-.cell {
-
-	/*// Handle margins on your responsive container instead
-	@media (max-width: @bp-tablet) {
+	.cell {
 		margin-left: 0;
 		margin-right: 0;
-	};*/
-
-	flex: 1;
+	}
 }
 
-/*// Wrap*/
+.grid { display: flex; }
+.cell { flex: 1; }
+
+/* Wrap*/
 .grid--wrap { flex-wrap: wrap; }
 
-/*// Directions*/
-.grid--reverse {
-	/*@media (max-width: @bp-tablet) { flex-direction: column-reverse; };*/
-
-	flex-direction: row-reverse;
-}
-
-.grid--reverse.grid--column {
-	/*@media (max-width: @bp-tablet) { flex-direction: column-reverse; };*/
-
-	flex-direction: column-reverse;
-}
+/* Directions*/
+.grid--reverse { flex-direction: row-reverse; }
+.grid--reverse.grid--column { flex-direction: column-reverse; }
 
 .grid--column { flex-direction: column; }
 
-/*// Positions*/
+/* Positions*/
 .grid--center {
 	align-items: center;
 	justify-content: center;
