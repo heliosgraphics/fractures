@@ -24,51 +24,51 @@ h1,
 .h1 {
 	overflow: hidden;
 
-	font-size: @s10;
-	line-height: 1.375 * @s10;
+	font-size: var(--s10);
+	line-height: calc(1.375 * var(--s10));
 	text-overflow: ellipsis;
 }
 
 h2,
 .h2 {
-	font-size: @s09;
-	line-height: 1.375 * @s09;
+	font-size: var(--s09);
+	line-height: calc(1.375 * var(--s09));
 }
 
 h3,
 .h3 {
-	font-size: @s08;
-	line-height: 1.25 * @s08;
+	font-size: var(--s08);
+	line-height: calc(1.25 * var(--s08));
 }
 
 h4,
 .h4 {
-	font-size: @s07;
-	line-height: 1.25 * @s07;
+	font-size: var(--s07);
+	line-height: calc(1.25 * var(--s07));
 }
 
 h5,
 .h5 {
-	font-size: @s06;
-	line-height: 1.25 * @s06;
+	font-size: var(--s06);
+	line-height: calc(1.25 * var(--s06));
 }
 
 h6,
 .h6 {
-	font-size: @s05;
-	line-height: 1.25 * @s05;
+	font-size: var(--s05);
+	line-height: calc(1.25 * var(--s05));
 }
 
 p,
-blockquote { margin: @s06 0; }
+blockquote { margin: var(--s06) 0; }
 
 blockquote {
-	font-size: @s08;
-	line-height: 1.25 * @s08;
+	font-size: var(--s08);
+	line-height: calc(1.25 * var(--s08));
 	text-align: center;
 }
 
 small {
-	font-size: @s04;
-	line-height: 1.25 * @s04;
+	font-size: var(--s04);
+	line-height: calc(1.25 * var(--s04));
 }

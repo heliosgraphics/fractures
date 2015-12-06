@@ -1,0 +1,15 @@
+.format p:empty { display: none; }
+
+.format p,
+.format ul,
+.format ol {
+	margin-top: var(--s06);
+	margin-bottom: var(--s06);
+}
+
+.format p a { font-weight: bold; }
+
+.format ul,
+.format ol { margin-left: 2.5rem; }
+.format ul li { list-style-type: disc; }
+.format ol li { list-style-type: decimal; }
