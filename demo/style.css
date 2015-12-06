@@ -1,19 +1,40 @@
+/*Layout*/
 body {
+	overflow-y: scroll;
+
+	background-color: white;
+	color: #383838;
+
 	font-family: Arial;
 }
 
-.grid {
-	min-height: 5rem;
-	border: 1px dashed blue;
+@media (max-width: 48rem) {
+	.side-nav.cell { max-width: 100%; }
 }
 
-div:not(.grid) {
+.side-nav {
+	max-width: 20rem;
+	min-height: 100vh;
+
+	background: slategray;
+	color: white;
+}
+
+.side-nav a { color: white; }
+
+/*.container { padding-top: 14rem; }*/
+.container { display: none; }
+.container:target { display: block; }
+
+/*Indicators*/
+.container .grid {
+	min-height: 5rem;
+	border: 1px dashed slategray;
+}
+
+.container .grid > div {
 	height: 2.5rem;
 	width: 2.5rem;
 
-	box-shadow: inset 0 0 0 1px blue;
+	box-shadow: inset 0 0 0 1px slategray;
 }
-
-nav { max-width: 10rem; }
-
-main .grid { background: #eee; }
