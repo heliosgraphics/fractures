@@ -26,5 +26,5 @@ gulp.task("build", function() {
 });
 
 gulp.task("watch", function() {
-	return gulp.watch("./src/*.css", ["default"]);
+	return gulp.watch("./src/*.css", ["default", "build"]);
 });
