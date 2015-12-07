@@ -245,26 +245,17 @@ body {
 .pr-9 { padding-right: 32px; padding-right: 2rem; }
 .pr-12 { padding-right: 48px; padding-right: 3rem; }
 .pr-15 { padding-right: 64px; padding-right: 4rem; }
-.font-normal { font-weight: normal; }
-.font-bold { font-weight: bold; }
+.normal { font-weight: normal; }
+.bold { font-weight: bold; }
 
-.ws-nowrap { white-space: nowrap; }
-.ws-pre { white-space: pre-line; }
+.nowrap { white-space: nowrap; }
+.pre { white-space: pre-line; }
 
-.text-center { text-align: center; }
-.text-left {
-	display: block;
+.center { text-align: center; }
+.left { text-align: left; }
+.right { text-align: right; }
 
-	text-align: left;
-}
-
-.text-right {
-	display: block;
-
-	text-align: right;
-}
-
-.text-uppercase { text-transform: uppercase; }
+.uppercase { text-transform: uppercase; }
 
 h1,
 .h1 {
