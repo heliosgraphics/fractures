@@ -111,3 +111,5 @@ body {
 
 	font-size: 16px;
 }
+
+html { overflow-y: scroll; }

@@ -111,6 +111,8 @@ body {
 
 	font-size: 16px;
 }
+
+html { overflow-y: scroll; }
 .format p:empty { display: none; }
 
 .format p,
