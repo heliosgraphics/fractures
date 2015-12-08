@@ -1,41 +1,44 @@
 /*Layout*/
 body {
-	overflow-y: scroll;
-
 	background-color: white;
 	color: #383838;
 
 	font-family: Arial;
 }
 
-@media (max-width: 48rem) {
-	.side-nav.cell { max-width: 100%; }
-}
+main { padding-bottom: 5rem; }
 
 .side-nav {
-	max-width: 20rem;
-	min-height: 100vh;
+	bottom: 0;
+	position: fixed;
 
-	background: slategray;
+	height: 5rem;
+	width: 100%;
+
+	background: navy;
 	color: white;
+
+	line-height: 5rem;
+	font-size: 1.25rem;
 }
 
 .side-nav a { color: white; }
 
-.container { display: none; }
-.container:target { display: block; }
+.specimen { display: none; }
+.specimen:target { display: block; }
 
 /*Indicators*/
-.container .grid {
+.specimen-container .container { box-shadow: inset 0 0 0 1rem rgba(12,211,0,0.25); }
+.specimen-container .container .grid {
 	min-height: 5rem;
 	border: 1px dashed slategray;
 }
 
-.container .grid > div {
+.specimen-container .container .grid > div {
 	height: 2.5rem;
 	width: 2.5rem;
 
 	box-shadow: inset 0 0 0 1px slategray;
 }
 
-#typo { background-image: url("./vertical.png"); }
+.specimen-container #typo { background-image: url("./vertical.png"); }

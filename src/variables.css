@@ -1,0 +1,21 @@
+:root {
+	--s03: 0.5rem;
+	--s04: 0.75rem;
+	--s05: 0.875rem;
+	--s06: 1rem;
+	--s07: 1.25rem;
+	--s08: 1.5rem;
+	--s09: 2rem;
+	--s10: 2.25rem;
+	--s12: 3rem;
+	--s15: 4rem;
+
+	--bold: bold;
+
+	--width: 62rem;
+}
+
+@custom-media --mobile (max-width: 30rem);
+@custom-media --tablet (max-width: 48rem);
+@custom-media --desktop (max-width: 64rem);
+@custom-media --hd (min-width: 86rem);

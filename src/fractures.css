@@ -1,21 +1,7 @@
-:root {
-	--s03: 0.5rem;
-	--s04: 0.75rem;
-	--s05: 0.875rem;
-	--s06: 1rem;
-	--s07: 1.25rem;
-	--s08: 1.5rem;
-	--s09: 2rem;
-	--s10: 2.25rem;
-	--s12: 3rem;
-	--s15: 4rem;
-
-	--bold: bold;
-}
-
-@custom-media --tablet (max-width: 48rem);
-
+@import url(./variables.css);
 @import url(./reset.css);
+
+@import url(./container.css);
 @import url(./format.css);
 @import url(./grid.css);
 @import url(./helpers.css);

@@ -1,0 +1,27 @@
+@media (--desktop) {
+	.container {
+		padding-left: 1.25rem !important;
+		padding-right: 1.25rem !important;
+		width: 100% !important;
+	}
+}
+
+@media (--tablet) {
+	.container {
+		padding-left: 1rem !important;
+		padding-right: 1rem !important;
+	}
+}
+
+@media (--mobile) {
+	.container {
+		padding-left: 0.5rem !important;
+		padding-right: 0.5rem !important;
+	}
+}
+
+.container {
+	margin-left: auto;
+	margin-right: auto;
+	width: var(--width);
+}
