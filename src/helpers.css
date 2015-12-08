@@ -1,0 +1,14 @@
+.float-left { float: left; }
+.float-right { float: right; }
+
+.clearfix:before,
+.clearfix:after {
+	display: block;
+	height: 0;
+	overflow: hidden;
+
+	content: "\0020";
+}
+
+.clearfix:after { clear: both; }
+.clearfix { zoom: 1; }

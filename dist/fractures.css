@@ -177,6 +177,20 @@ body {
 
 .cell--left { -webkit-align-self: flex-start; -ms-flex-item-align: start; align-self: flex-start; }
 .cell--right { -webkit-align-self: flex-end; -ms-flex-item-align: end; align-self: flex-end; }
+.float-left { float: left; }
+.float-right { float: right; }
+
+.clearfix:before,
+.clearfix:after {
+	display: block;
+	height: 0;
+	overflow: hidden;
+
+	content: "\0020";
+}
+
+.clearfix:after { clear: both; }
+.clearfix { zoom: 1; }
 .m-0 { margin: 0; }
 .m-3 { margin: 8px; margin: 0.5rem; }
 .m-6 { margin: 16px; margin: 1rem; }
