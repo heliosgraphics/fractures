@@ -16,10 +16,6 @@
 *:before,
 *:after { box-sizing: border-box; }
 
-img,
-object,
-embed { max-width: 100%; }
-
 li { list-style-type: none; }
 blockquote,
 q { quotes: none; }
