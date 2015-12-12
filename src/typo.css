@@ -1,3 +1,9 @@
+/*
+	Typo
+
+	Provides utility classes, font-sizes, and basic margins for common use cases.
+*/
+
 h1, .h1 { font-size: var(--h1); }
 h2, .h2 { font-size: var(--h2); }
 h3, .h3 { font-size: var(--h3); }
@@ -12,7 +18,43 @@ p,
 ul,
 ol { margin-bottom: calc(1.5 * var(--line)); }
 
-/*Utility*/
+strong,
+b { font-weight: var(--bold); }
+
+del { text-decoration: line-through; }
+
+sub,
+sup {
+	position: relative;
+
+	font-size: 0.75em;
+	line-height: 0;
+}
+
+sup { top: -0.5em; }
+sub { bottom: -0.25em; }
+textarea { resize: none; }
+
+pre {
+	white-space: pre;
+	white-space: pre-wrap;
+	white-space: pre-line;
+	word-wrap: break-word;
+}
+
+hr {
+	display: block;
+	height: 1px;
+	padding: 0;
+
+	border: 0;
+}
+
+pre,
+code,
+kbd,
+samp { font-family: monospace, sans-serif; }
+
 .normal { font-weight: normal; }
 .bold { font-weight: var(--bold); }
 

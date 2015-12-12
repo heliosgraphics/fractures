@@ -3,7 +3,7 @@ body {
 	background-color: white;
 	color: #383838;
 
-	font-family: Arial;
+	font-family: "Arimo", Arial;
 }
 
 main { padding-bottom: 5rem; }
@@ -43,7 +43,7 @@ main { padding-bottom: 5rem; }
 }
 
 /*Typo*/
-.specimen--typo { background-image: url("./vertical.png"); }
+/*.specimen--typo { background-image: url("./vertical.png"); }*/
 
 /*Box*/
 .specimen--box .clearfix { background: rgba(12,211,0,0.25); }

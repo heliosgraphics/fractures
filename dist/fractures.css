@@ -1,3 +1,13 @@
+/*
+	Reset
+
+	Resets the box model, handles font-size and base line-height.
+	Also turns on scrollbar on html, to avoid page jump.
+
+	- no edge cases
+	- no old browser support
+*/
+
 * {
 	margin: 0;
 	padding: 0;
@@ -15,88 +25,7 @@
 *:after { box-sizing: border-box; }
 
 li { list-style-type: none; }
-blockquote,
-q { quotes: none; }
-
-blockquote:before,
-blockquote:after,
-q:before,
-q:after {
-	content: '';
-	content: none;
-}
-
-a {
-	margin: 0;
-	padding: 0;
-
-	cursor: pointer;
-
-	vertical-align: baseline;
-	text-decoration: none;
-
-	&:hover { text-decoration: none; }
-}
-
-del { text-decoration: line-through; }
-
-abbr[title],
-dfn[title] {
-	border-bottom: 1px dotted black;
-
-	cursor: help;
-}
-
-hr {
-	display: block;
-	height: 1px;
-	padding: 0;
-
-	border: 0;
-}
-
-input,
-select { vertical-align: middle; }
-textarea { resize: none; }
-
-pre {
-	white-space: pre;
-	white-space: pre-wrap;
-	white-space: pre-line;
-	word-wrap: break-word;
-}
-
-input[type="radio"] { vertical-align: text-bottom; }
-input[type="checkbox"] { vertical-align: bottom; }
-
-strong,
-b { font-weight: bold; }
-
-sub,
-sup {
-	position: relative;
-
-	font-size: 0.75em;
-	line-height: 0;
-}
-
-sup { top: -0.5em; }
-sub { bottom: -0.25em; }
-pre,
-code,
-kbd,
-samp { font-family: monospace, sans-serif; }
-
-input[type=button],
-input[type=submit],
-input[type=file],
-button { cursor: pointer; }
-
-button,
-input[type=button] {
-	overflow: visible;
-	width: auto;
-}
+a { text-decoration: none; }
 
 html,
 body {
@@ -107,6 +36,10 @@ body {
 }
 
 html { overflow-y: scroll; }
+
+/*
+	Container
+*/
 
 @media (max-width: 64rem) {
 	.container {
@@ -136,6 +69,10 @@ html { overflow-y: scroll; }
 	width: 992px;
 	width: 62rem;
 }
+/*
+	Format
+*/
+
 .format p:empty { display: none; }
 
 .format p { line-height: 24px; }
@@ -145,12 +82,19 @@ html { overflow-y: scroll; }
 .format ol { margin-left: 32px; }
 .format ul li { list-style-type: disc; }
 .format ol li { list-style-type: decimal; }
+/*
+	Grid
+
+	Real basic flex classes.
+*/
+
 @media (max-width: 48rem) {
 	.grid { -webkit-box-orient: vertical; -webkit-box-direction: normal; -webkit-flex-direction: column; -ms-flex-direction: column; flex-direction: column; }
 
 	.grid.grid--reverse,
 	.grid.grid--reverse.grid--column { -webkit-box-orient: vertical; -webkit-box-direction: reverse; -webkit-flex-direction: column-reverse; -ms-flex-direction: column-reverse; flex-direction: column-reverse; }
 
+	/*Prepares cell for responsive layout*/
 	.cell {
 		margin-left: 0 !important;
 		margin-right: 0 !important;
@@ -158,17 +102,17 @@ html { overflow-y: scroll; }
 }
 
 .grid { display: -webkit-box; display: -webkit-flex; display: -ms-flexbox; display: flex; }
+.cell { -webkit-box-flex: 1; -webkit-flex: 1; -ms-flex: 1; flex: 1; }
 
-/* Wrap*/
 .grid--wrap { -webkit-flex-wrap: wrap; -ms-flex-wrap: wrap; flex-wrap: wrap; }
 
-/* Directions*/
+/*Directions*/
 .grid--reverse { -webkit-box-orient: horizontal; -webkit-box-direction: reverse; -webkit-flex-direction: row-reverse; -ms-flex-direction: row-reverse; flex-direction: row-reverse; }
 .grid--reverse.grid--column { -webkit-box-orient: vertical; -webkit-box-direction: reverse; -webkit-flex-direction: column-reverse; -ms-flex-direction: column-reverse; flex-direction: column-reverse; }
 
 .grid--column { -webkit-box-orient: vertical; -webkit-box-direction: normal; -webkit-flex-direction: column; -ms-flex-direction: column; flex-direction: column; }
 
-/* Positions*/
+/*Positions*/
 .grid--center {
 	-webkit-box-align: center;
 	-webkit-align-items: center;
@@ -189,11 +133,12 @@ html { overflow-y: scroll; }
 
 .grid--bottom { -webkit-box-align: end; -webkit-align-items: flex-end; -ms-flex-align: end; align-items: flex-end; }
 .grid--top { -webkit-box-align: start; -webkit-align-items: flex-start; -ms-flex-align: start; align-items: flex-start; }
+/*
+	Helpers
 
-.cell { -webkit-box-flex: 1; -webkit-flex: 1; -ms-flex: 1; flex: 1; }
+	Layout utility.
+*/
 
-.cell--start { -webkit-align-self: flex-start; -ms-flex-item-align: start; align-self: flex-start; }
-.cell--end { -webkit-align-self: flex-end; -ms-flex-item-align: end; align-self: flex-end; }
 .float-left { float: left; }
 .float-right { float: right; }
 
@@ -208,6 +153,12 @@ html { overflow-y: scroll; }
 
 .clearfix:after { clear: both; }
 .clearfix { zoom: 1; }
+/*
+	Paddings
+
+	Gives you an option.
+*/
+
 .m-0 { margin: 0; }
 .m-1 { margin: 8px; }
 .m-2 { margin: 16px; }
@@ -242,6 +193,12 @@ html { overflow-y: scroll; }
 .mr-3 { margin-right: 32px; }
 .mr-4 { margin-right: 64px; }
 .mr-5 { margin-right: 128px; }
+/*
+	Paddings
+
+	Gives you an option.
+*/
+
 .p-0 { padding: 0; }
 .p-1 { padding: 8px; }
 .p-2 { padding: 16px; }
@@ -276,6 +233,12 @@ html { overflow-y: scroll; }
 .pr-3 { padding-right: 32px; }
 .pr-4 { padding-right: 64px; }
 .pr-5 { padding-right: 128px; }
+/*
+	Typo
+
+	Provides utility classes, font-sizes, and basic margins for common use cases.
+*/
+
 h1, .h1 { font-size: 36px; font-size: 2.25rem; }
 h2, .h2 { font-size: 32px; font-size: 2rem; }
 h3, .h3 { font-size: 28px; font-size: 1.75rem; }
@@ -290,7 +253,43 @@ p,
 ul,
 ol { margin-bottom: 24px; }
 
-/*Utility*/
+strong,
+b { font-weight: bold; }
+
+del { text-decoration: line-through; }
+
+sub,
+sup {
+	position: relative;
+
+	font-size: 0.75em;
+	line-height: 0;
+}
+
+sup { top: -0.5em; }
+sub { bottom: -0.25em; }
+textarea { resize: none; }
+
+pre {
+	white-space: pre;
+	white-space: pre-wrap;
+	white-space: pre-line;
+	word-wrap: break-word;
+}
+
+hr {
+	display: block;
+	height: 1px;
+	padding: 0;
+
+	border: 0;
+}
+
+pre,
+code,
+kbd,
+samp { font-family: monospace, sans-serif; }
+
 .normal { font-weight: normal; }
 .bold { font-weight: bold; }
 

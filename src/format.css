@@ -1,3 +1,7 @@
+/*
+	Format
+*/
+
 .format p:empty { display: none; }
 
 .format p { line-height: calc(1.5 * var(--line)); }

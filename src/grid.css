@@ -1,9 +1,16 @@
+/*
+	Grid
+
+	Real basic flex classes.
+*/
+
 @media (--tablet) {
 	.grid { flex-direction: column; }
 
 	.grid.grid--reverse,
 	.grid.grid--reverse.grid--column { flex-direction: column-reverse; }
 
+	/*Prepares cell for responsive layout*/
 	.cell {
 		margin-left: 0 !important;
 		margin-right: 0 !important;
@@ -11,17 +18,17 @@
 }
 
 .grid { display: flex; }
+.cell { flex: 1; }
 
-/* Wrap*/
 .grid--wrap { flex-wrap: wrap; }
 
-/* Directions*/
+/*Directions*/
 .grid--reverse { flex-direction: row-reverse; }
 .grid--reverse.grid--column { flex-direction: column-reverse; }
 
 .grid--column { flex-direction: column; }
 
-/* Positions*/
+/*Positions*/
 .grid--center {
 	align-items: center;
 	justify-content: center;
@@ -36,8 +43,3 @@
 
 .grid--bottom { align-items: flex-end; }
 .grid--top { align-items: flex-start; }
-
-.cell { flex: 1; }
-
-.cell--start { align-self: flex-start; }
-.cell--end { align-self: flex-end; }
