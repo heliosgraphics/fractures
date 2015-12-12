@@ -8,8 +8,6 @@
 
 	font-size: 100%;
 	vertical-align: baseline;
-
-	-webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
 
 *,
@@ -78,7 +76,7 @@ sub,
 sup {
 	position: relative;
 
-	font-size: 75%;
+	font-size: 0.75em;
 	line-height: 0;
 }
 
@@ -89,7 +87,6 @@ code,
 kbd,
 samp { font-family: monospace, sans-serif; }
 
-label,
 input[type=button],
 input[type=submit],
 input[type=file],
@@ -105,7 +102,8 @@ html,
 body {
 	position: relative;
 
-	font-size: 16px;
+	font-size: var(--atom);
+	line-height: 1.25;
 }
 
 html { overflow-y: scroll; }
