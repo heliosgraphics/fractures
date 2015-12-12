@@ -39,5 +39,5 @@
 
 .cell { flex: 1; }
 
-.cell--left { align-self: flex-start; }
-.cell--right { align-self: flex-end; }
+.cell--start { align-self: flex-start; }
+.cell--end { align-self: flex-end; }

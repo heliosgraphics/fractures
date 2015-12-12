@@ -14,51 +14,51 @@ h1,
 .h1 {
 	overflow: hidden;
 
-	font-size: var(--s10);
-	line-height: calc(1.375 * var(--s10));
+	font-size: var(--h1);
+	line-height: calc(1.375 * var(--h1));
 	text-overflow: ellipsis;
 }
 
 h2,
 .h2 {
-	font-size: var(--s09);
-	line-height: calc(1.375 * var(--s09));
+	font-size: var(--h2);
+	line-height: calc(1.375 * var(--h2));
 }
 
 h3,
 .h3 {
-	font-size: var(--s08);
-	line-height: calc(1.25 * var(--s08));
+	font-size: var(--h3);
+	line-height: calc(1.25 * var(--h3));
 }
 
 h4,
 .h4 {
-	font-size: var(--s07);
-	line-height: calc(1.25 * var(--s07));
+	font-size: var(--h4);
+	line-height: calc(1.25 * var(--h4));
 }
 
 h5,
 .h5 {
-	font-size: var(--s06);
-	line-height: calc(1.25 * var(--s06));
+	font-size: var(--h5);
+	line-height: calc(1.25 * var(--h5));
 }
 
 h6,
 .h6 {
-	font-size: var(--s05);
-	line-height: calc(1.25 * var(--s05));
+	font-size: var(--h6);
+	line-height: calc(1.25 * var(--h6));
 }
 
 p,
-blockquote { margin: var(--s06) 0; }
+blockquote { margin: var(--h5) 0; }
 
 blockquote {
-	font-size: var(--s08);
+	font-size: var(--h4);
 	font-style: italic;
-	line-height: calc(1.25 * var(--s08));
+	line-height: calc(1.25 * var(--h4));
 }
 
 small {
-	font-size: var(--s04);
-	line-height: calc(1.25 * var(--s04));
+	font-size: var(--h7);
+	line-height: calc(1.25 * var(--h7));
 }

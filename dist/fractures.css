@@ -152,7 +152,7 @@ html { overflow-y: scroll; }
 .format p a { font-weight: bold; }
 
 .format ul,
-.format ol { margin-left: 40px; margin-left: 2.5rem; }
+.format ol { margin-left: 32px; margin-left: 2rem; }
 .format ul li { list-style-type: disc; }
 .format ol li { list-style-type: decimal; }
 @media (max-width: 48rem) {
@@ -202,8 +202,8 @@ html { overflow-y: scroll; }
 
 .cell { -webkit-box-flex: 1; -webkit-flex: 1; -ms-flex: 1; flex: 1; }
 
-.cell--left { -webkit-align-self: flex-start; -ms-flex-item-align: start; align-self: flex-start; }
-.cell--right { -webkit-align-self: flex-end; -ms-flex-item-align: end; align-self: flex-end; }
+.cell--start { -webkit-align-self: flex-start; -ms-flex-item-align: start; align-self: flex-start; }
+.cell--end { -webkit-align-self: flex-end; -ms-flex-item-align: end; align-self: flex-end; }
 .float-left { float: left; }
 .float-right { float: right; }
 
@@ -219,73 +219,73 @@ html { overflow-y: scroll; }
 .clearfix:after { clear: both; }
 .clearfix { zoom: 1; }
 .m-0 { margin: 0; }
-.m-3 { margin: 8px; margin: 0.5rem; }
-.m-6 { margin: 16px; margin: 1rem; }
-.m-9 { margin: 32px; margin: 2rem; }
-.m-12 { margin: 48px; margin: 3rem; }
-.m-15 { margin: 64px; margin: 4rem; }
+.m-1 { margin: 8px; margin: .5rem; }
+.m-2 { margin: 16px; margin: 1rem; }
+.m-3 { margin: 32px; margin: 2rem; }
+.m-4 { margin: 64px; margin: 4rem; }
+.m-5 { margin: 128px; margin: 8rem; }
 
 .ml-0 { margin-left: 0; }
-.ml-3 { margin-left: 8px; margin-left: 0.5rem; }
-.ml-6 { margin-left: 16px; margin-left: 1rem; }
-.ml-9 { margin-left: 32px; margin-left: 2rem; }
-.ml-12 { margin-left: 48px; margin-left: 3rem; }
-.ml-15 { margin-left: 64px; margin-left: 4rem; }
+.ml-1 { margin-left: 8px; margin-left: .5rem; }
+.ml-2 { margin-left: 16px; margin-left: 1rem; }
+.ml-3 { margin-left: 32px; margin-left: 2rem; }
+.ml-4 { margin-left: 64px; margin-left: 4rem; }
+.ml-5 { margin-left: 128px; margin-left: 8rem; }
 
 .mt-0 { margin-top: 0; }
-.mt-3 { margin-top: 8px; margin-top: 0.5rem; }
-.mt-6 { margin-top: 16px; margin-top: 1rem; }
-.mt-9 { margin-top: 32px; margin-top: 2rem; }
-.mt-12 { margin-top: 48px; margin-top: 3rem; }
-.mt-15 { margin-top: 64px; margin-top: 4rem; }
+.mt-1 { margin-top: 8px; margin-top: .5rem; }
+.mt-2 { margin-top: 16px; margin-top: 1rem; }
+.mt-3 { margin-top: 32px; margin-top: 2rem; }
+.mt-4 { margin-top: 64px; margin-top: 4rem; }
+.mt-5 { margin-top: 128px; margin-top: 8rem; }
 
 .mb-0 { margin-bottom: 0; }
-.mb-3 { margin-bottom: 8px; margin-bottom: 0.5rem; }
-.mb-6 { margin-bottom: 16px; margin-bottom: 1rem; }
-.mb-9 { margin-bottom: 32px; margin-bottom: 2rem; }
-.mb-12 { margin-bottom: 48px; margin-bottom: 3rem; }
-.mb-15 { margin-bottom: 64px; margin-bottom: 4rem; }
+.mb-1 { margin-bottom: 8px; margin-bottom: .5rem; }
+.mb-2 { margin-bottom: 16px; margin-bottom: 1rem; }
+.mb-3 { margin-bottom: 32px; margin-bottom: 2rem; }
+.mb-4 { margin-bottom: 64px; margin-bottom: 4rem; }
+.mb-5 { margin-bottom: 128px; margin-bottom: 8rem; }
 
 .mr-0 { margin-right: 0; }
-.mr-3 { margin-right: 8px; margin-right: 0.5rem; }
-.mr-6 { margin-right: 16px; margin-right: 1rem; }
-.mr-9 { margin-right: 32px; margin-right: 2rem; }
-.mr-12 { margin-right: 48px; margin-right: 3rem; }
-.mr-15 { margin-right: 64px; margin-right: 4rem; }
+.mr-1 { margin-right: 8px; margin-right: .5rem; }
+.mr-2 { margin-right: 16px; margin-right: 1rem; }
+.mr-3 { margin-right: 32px; margin-right: 2rem; }
+.mr-4 { margin-right: 64px; margin-right: 4rem; }
+.mr-5 { margin-right: 128px; margin-right: 8rem; }
 .p-0 { padding: 0; }
-.p-3 { padding: 8px; padding: 0.5rem; }
-.p-6 { padding: 16px; padding: 1rem; }
-.p-9 { padding: 32px; padding: 2rem; }
-.p-12 { padding: 48px; padding: 3rem; }
-.p-15 { padding: 64px; padding: 4rem; }
+.p-1 { padding: 8px; padding: .5rem; }
+.p-2 { padding: 16px; padding: 1rem; }
+.p-3 { padding: 32px; padding: 2rem; }
+.p-4 { padding: 64px; padding: 4rem; }
+.p-5 { padding: 128px; padding: 8rem; }
 
 .pl-0 { padding-left: 0; }
-.pl-3 { padding-left: 8px; padding-left: 0.5rem; }
-.pl-6 { padding-left: 16px; padding-left: 1rem; }
-.pl-9 { padding-left: 32px; padding-left: 2rem; }
-.pl-12 { padding-left: 48px; padding-left: 3rem; }
-.pl-15 { padding-left: 64px; padding-left: 4rem; }
+.pl-1 { padding-left: 8px; padding-left: .5rem; }
+.pl-2 { padding-left: 16px; padding-left: 1rem; }
+.pl-3 { padding-left: 32px; padding-left: 2rem; }
+.pl-4 { padding-left: 64px; padding-left: 4rem; }
+.pl-5 { padding-left: 128px; padding-left: 8rem; }
 
 .pt-0 { padding-top: 0; }
-.pt-3 { padding-top: 8px; padding-top: 0.5rem; }
-.pt-6 { padding-top: 16px; padding-top: 1rem; }
-.pt-9 { padding-top: 32px; padding-top: 2rem; }
-.pt-12 { padding-top: 48px; padding-top: 3rem; }
-.pt-15 { padding-top: 64px; padding-top: 4rem; }
+.pt-1 { padding-top: 8px; padding-top: .5rem; }
+.pt-2 { padding-top: 16px; padding-top: 1rem; }
+.pt-3 { padding-top: 32px; padding-top: 2rem; }
+.pt-4 { padding-top: 64px; padding-top: 4rem; }
+.pt-5 { padding-top: 128px; padding-top: 8rem; }
 
 .pb-0 { padding-bottom: 0; }
-.pb-3 { padding-bottom: 8px; padding-bottom: 0.5rem; }
-.pb-6 { padding-bottom: 16px; padding-bottom: 1rem; }
-.pb-9 { padding-bottom: 32px; padding-bottom: 2rem; }
-.pb-12 { padding-bottom: 48px; padding-bottom: 3rem; }
-.pb-15 { padding-bottom: 64px; padding-bottom: 4rem; }
+.pb-1 { padding-bottom: 8px; padding-bottom: .5rem; }
+.pb-2 { padding-bottom: 16px; padding-bottom: 1rem; }
+.pb-3 { padding-bottom: 32px; padding-bottom: 2rem; }
+.pb-4 { padding-bottom: 64px; padding-bottom: 4rem; }
+.pb-5 { padding-bottom: 128px; padding-bottom: 8rem; }
 
 .pr-0 { padding-right: 0; }
-.pr-3 { padding-right: 8px; padding-right: 0.5rem; }
-.pr-6 { padding-right: 16px; padding-right: 1rem; }
-.pr-9 { padding-right: 32px; padding-right: 2rem; }
-.pr-12 { padding-right: 48px; padding-right: 3rem; }
-.pr-15 { padding-right: 64px; padding-right: 4rem; }
+.pr-1 { padding-right: 8px; padding-right: .5rem; }
+.pr-2 { padding-right: 16px; padding-right: 1rem; }
+.pr-3 { padding-right: 32px; padding-right: 2rem; }
+.pr-4 { padding-right: 64px; padding-right: 4rem; }
+.pr-5 { padding-right: 128px; padding-right: 8rem; }
 .normal { font-weight: normal; }
 .bold { font-weight: bold; }
 
@@ -353,11 +353,11 @@ p,
 blockquote { margin: 16px 0; margin: 1rem 0; }
 
 blockquote {
-	font-size: 24px;
-	font-size: 1.5rem;
+	font-size: 20px;
+	font-size: 1.25rem;
 	font-style: italic;
-	line-height: 30px;
-	line-height: 1.875rem;
+	line-height: 25px;
+	line-height: 1.5625rem;
 }
 
 small {

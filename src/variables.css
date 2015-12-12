@@ -1,15 +1,19 @@
 :root {
-	--s03: 0.5rem;
-	--s04: 0.75rem;
-	--s05: 0.875rem;
-	--s06: 1rem;
-	--s07: 1.25rem;
-	--s08: 1.5rem;
-	--s09: 2rem;
-	--s10: 2.25rem;
-	--s12: 3rem;
-	--s15: 4rem;
+	--atom: .5rem;
 
+	--box1: var(--atom);
+	--box2: calc(var(--box1) * 2);
+	--box3: calc(var(--box2) * 2);
+	--box4: calc(var(--box3) * 2);
+	--box5: calc(var(--box4) * 2);
+
+	--h1: 2.25rem;
+	--h2: 2rem;
+	--h3: 1.5rem;
+	--h4: 1.25rem;
+	--h5: 1rem;
+	--h6: 0.875rem;
+	--h7: 0.75rem;
 	--bold: bold;
 
 	--width: 62rem;

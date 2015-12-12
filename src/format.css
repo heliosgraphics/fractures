@@ -3,13 +3,13 @@
 .format p,
 .format ul,
 .format ol {
-	margin-top: var(--s06);
-	margin-bottom: var(--s06);
+	margin-top: var(--box2);
+	margin-bottom: var(--box2);
 }
 
 .format p a { font-weight: var(--bold); }
 
 .format ul,
-.format ol { margin-left: 2.5rem; }
+.format ol { margin-left: var(--box3); }
 .format ul li { list-style-type: disc; }
 .format ol li { list-style-type: decimal; }

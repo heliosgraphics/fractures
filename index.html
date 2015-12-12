@@ -11,8 +11,9 @@
 		<nav class="side-nav">
 			<div class="container">
 				<a href="#"><b>Fractures</b></a> &mdash;
-				<a href="#grid" class="ml-9">Grid</a>
+				<a href="#grid" class="ml-3">Grid</a>
 				<a href="#typo">Typo</a>
+				<a href="#box">Box</a>
 			</div>
 		</nav>
 		<main class="specimen-container">
@@ -20,48 +21,48 @@
 
 				<!-- Grid -->
 				<div
-					class="specimen"
+					class="specimen specimen--grid"
 					id="grid">
 
-					<div class="grid mb-12">
+					<div class="grid mb-4">
 						<div class="cell">.cell 1</div>
 						<div class="cell">.cell 2</div>
 						<div class="cell">.cell 3</div>
 					</div>
 
-					<div class="grid grid--reverse mb-12">
+					<div class="grid grid--reverse mb-4">
 						<div class="cell">.cell 1</div>
 						<div class="cell">.cell 2</div>
 						<div class="cell">.cell 3</div>
 					</div>
 
 					<em>grid grid--center</em>
-					<div class="grid grid--center mb-9">
+					<div class="grid grid--center mb-3">
 						<div></div>
 					</div>
 
 					<em>grid grid--hcenter</em>
-					<div class="grid grid--hcenter mb-9">
+					<div class="grid grid--hcenter mb-3">
 						<div></div>
 					</div>
 
 					<em>grid grid--vcenter</em>
-					<div class="grid grid--vcenter mb-9">
+					<div class="grid grid--vcenter mb-3">
 						<div></div>
 					</div>
 
 					<em>grid grid--left</em>
-					<div class="grid grid--left mb-9">
+					<div class="grid grid--left mb-3">
 						<div></div>
 					</div>
 
 					<em>grid grid--right</em>
-					<div class="grid grid--right mb-9">
+					<div class="grid grid--right mb-3">
 						<div></div>
 					</div>
 
 					<em>grid grid--top</em>
-					<div class="grid grid--top mb-9">
+					<div class="grid grid--top mb-3">
 						<div></div>
 					</div>
 
@@ -73,11 +74,10 @@
 
 				<!-- Typo -->
 				<div
-					class="specimen"
+					class="specimen specimen--typo"
 					id="typo">
 					<h1>The quick brown fox jumps over the lazy dog</h1>
 					<h1 class="normal">The quick brown fox jumps over the lazy dog</h1>
-					<hr class="mt-12">
 					<h2>The quick brown fox jumps over the lazy dog</h2>
 					<h3>The quick brown fox jumps over the lazy dog</h3>
 					<h4>The quick brown fox jumps over the lazy dog</h4>
@@ -89,6 +89,65 @@
 					<small>One morning</small>
 
 					<blockquote>One morning, when Gregor Samsa woke from troubled dreams, he found himself transformed in his bed into a horrible vermin. He lay on his armour-like back, and if he lifted his head a little he could see his brown belly, slightly domed and divided by arches into stiff sections. The bedding was hardly able to cover it and seemed ready to slide off any moment. His many legs, pitifully thin compared with the size of the rest of him, waved about helplessly as he looked.</blockquote>
+				</div>
+
+				<!-- Margin/Padding -->
+				<div
+					class="specimen specimen--box"
+					id="box">
+					<h1>Box</h1>
+					<p>Helper classes for unified margins, paddings + floats</p>
+
+					<h3 class="normal">All</h3>
+					<div class="clearfix mb-2">
+						<div class="m-1 p-1 float-left"></div>
+						<div class="m-2 p-2 float-left"></div>
+						<div class="m-3 p-3 float-left"></div>
+						<div class="m-4 p-4 float-left"></div>
+						<div class="m-5 p-5 float-left"></div>
+					</div>
+
+					<h3 class="normal">Right</h3>
+					<div class="clearfix mb-2">
+						<div class="mr-1 pr-1 float-left"></div>
+						<div class="mr-2 pr-2 float-left"></div>
+						<div class="mr-3 pr-3 float-left"></div>
+						<div class="mr-4 pr-4 float-left"></div>
+						<div class="mr-5 pr-5 float-left"></div>
+					</div>
+
+					<h3 class="normal">Left</h3>
+					<div class="clearfix mb-2">
+						<div class="ml-1 pl-1 float-right"></div>
+						<div class="ml-2 pl-2 float-right"></div>
+						<div class="ml-3 pl-3 float-right"></div>
+						<div class="ml-4 pl-4 float-right"></div>
+						<div class="ml-5 pl-5 float-right"></div>
+					</div>
+
+					<h3 class="normal">Top</h3>
+					<div class="clearfix mb-2">
+						<div class="mt-1 pt-1 float-left"></div>
+						<div class="mt-2 pt-2 float-left"></div>
+						<div class="mt-3 pt-3 float-left"></div>
+						<div class="mt-4 pt-4 float-left"></div>
+						<div class="mt-5 pt-5 float-left"></div>
+					</div>
+
+					<h3 class="normal">Bottom</h3>
+					<div class="clearfix mb-2">
+						<div class="mb-1 pb-1 float-left"></div>
+						<div class="mb-2 pb-2 float-left"></div>
+						<div class="mb-3 pb-3 float-left"></div>
+						<div class="mb-4 pb-4 float-left"></div>
+						<div class="mb-5 pb-5 float-left"></div>
+					</div>
+
+					<h3 class="normal">Floats</h3>
+					<div class="clearfix mb-2">
+						<div class="float-left"></div>
+						<div class="float-right"></div>
+					</div>
 				</div>
 			</div>
 		</main>
