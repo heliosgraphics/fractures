@@ -1,9 +1,3 @@
-/*
-	Margins
-
-	Gives you an option.
-*/
-
 .m-0 { margin: 0; }
 .m-1 { margin: var(--box1); }
 .m-2 { margin: var(--box2); }

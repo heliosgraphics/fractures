@@ -1,9 +1,3 @@
-/*
-	Grid
-
-	Real basic flex classes.
-*/
-
 @media (--tablet) {
 	.grid { flex-direction: column; }
 

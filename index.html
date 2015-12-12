@@ -11,8 +11,8 @@
 	<body>
 		<nav class="side-nav">
 			<div class="container">
-				<a href="#"><b>Fractures</b></a> &mdash;
-				<a href="#grid" class="ml-3">Grid</a>
+				<a href="#"><b>Fractures&mdash;</b></a>
+				<a href="#grid" class="ml-2">Grid</a>
 				<a href="#typo">Typo</a>
 				<a href="#box">Box</a>
 			</div>
@@ -22,70 +22,47 @@
 
 				<!-- Grid -->
 				<div
-					class="specimen specimen--grid format"
+					class="specimen specimen--grid format pb-3"
 					id="grid">
 					<h1>Grid</h1>
-					<ul>
-						<li>container</li>
-						<li>grid</li>
-					</ul>
-
-					<div class="grid mb-4">
-						<div class="cell">.cell 1</div>
-						<div class="cell">.cell 2</div>
-						<div class="cell">.cell 3</div>
+					<div class="info mb-4">
+						<p>Basic flex utility with predefined, responsive breakpoints.</p>
+						<ul>
+							<li>container</li>
+							<li>grid</li>
+						</ul>
 					</div>
 
-					<div class="grid grid--reverse mb-4">
-						<div class="cell">.cell 1</div>
-						<div class="cell">.cell 2</div>
-						<div class="cell">.cell 3</div>
+					<div class="grid" data-class=".grid">
+						<div class="cell" data-class=".cell"></div>
+						<div class="cell" data-class=".cell"></div>
+						<div class="cell" data-class=".cell"></div>
 					</div>
-
-					<em>grid grid--center</em>
-					<div class="grid grid--center mb-3">
-						<div></div>
+					<div class="grid grid--reverse" data-class=".grid .grid--reverse">
+						<div class="cell" data-class=".cell (1)"></div>
+						<div class="cell" data-class=".cell (2)"></div>
+						<div class="cell" data-class=".cell (3)"></div>
 					</div>
-
-					<em>grid grid--hcenter</em>
-					<div class="grid grid--hcenter mb-3">
-						<div></div>
-					</div>
-
-					<em>grid grid--vcenter</em>
-					<div class="grid grid--vcenter mb-3">
-						<div></div>
-					</div>
-
-					<em>grid grid--left</em>
-					<div class="grid grid--left mb-3">
-						<div></div>
-					</div>
-
-					<em>grid grid--right</em>
-					<div class="grid grid--right mb-3">
-						<div></div>
-					</div>
-
-					<em>grid grid--top</em>
-					<div class="grid grid--top mb-3">
-						<div></div>
-					</div>
-
-					<em>grid grid--bottom</em>
-					<div class="grid grid--bottom">
-						<div></div>
-					</div>
+					<div class="grid grid--center" data-class=".grid .grid--center"><div></div></div>
+					<div class="grid grid--hcenter" data-class=".grid .grid--hcenter"><div></div></div>
+					<div class="grid grid--vcenter" data-class=".grid .grid--vcenter"><div></div></div>
+					<div class="grid grid--left" data-class=".grid .grid--left"><div></div></div>
+					<div class="grid grid--right" data-class=".grid .grid--right"><div></div></div>
+					<div class="grid grid--top" data-class=".grid .grid--top"><div></div></div>
+					<div class="grid grid--bottom" data-class=".grid .grid--bottom"><div></div></div>
 				</div>
 
 				<!-- Typo -->
 				<div
-					class="specimen specimen--typo format"
+					class="specimen specimen--typo format pb-3"
 					id="typo">
 					<h1>Typo</h1>
-					<ul>
-						<li>typo</li>
-					</ul>
+					<div class="info mb-4">
+						<p>Covers basic typography.</p>
+						<ul>
+							<li>typo</li>
+						</ul>
+					</div>
 
 					<h1>The quick brown fox jumps over the lazy dog</h1>
 					<h1 class="normal">The quick brown fox jumps over the lazy dog</h1>
@@ -112,64 +89,67 @@
 
 				<!-- Margin/Padding -->
 				<div
-					class="specimen specimen--box format"
+					class="specimen specimen--box format pb-3"
 					id="box">
 					<h1>Box</h1>
-					<ul>
-						<li>margin</li>
-						<li>padding</li>
-						<li>helpers</li>
-					</ul>
+					<div class="info mb-4">
+						<p>Layout utility.</p>
+						<ul>
+							<li>margin</li>
+							<li>padding</li>
+							<li>helpers</li>
+						</ul>
+					</div>
 
 					<h3 class="normal">All</h3>
 					<div class="clearfix mb-2">
-						<div class="m-1 p-1 float-left"></div>
-						<div class="m-2 p-2 float-left"></div>
-						<div class="m-3 p-3 float-left"></div>
-						<div class="m-4 p-4 float-left"></div>
-						<div class="m-5 p-5 float-left"></div>
+						<div class="m-1 p-1 float-left" data-class=".m-1 .p-1"></div>
+						<div class="m-2 p-2 float-left" data-class=".m-2 .p-2"></div>
+						<div class="m-3 p-3 float-left" data-class=".m-3 .p-3"></div>
+						<div class="m-4 p-4 float-left" data-class=".m-4 .p-4"></div>
+						<div class="m-5 p-5 float-left" data-class=".m-5 .p-5"></div>
 					</div>
 
 					<h3 class="normal">Right</h3>
 					<div class="clearfix mb-2">
-						<div class="mr-1 pr-1 float-left"></div>
-						<div class="mr-2 pr-2 float-left"></div>
-						<div class="mr-3 pr-3 float-left"></div>
-						<div class="mr-4 pr-4 float-left"></div>
-						<div class="mr-5 pr-5 float-left"></div>
+						<div class="mr-1 pr-1 float-left" data-class=".mr-1 .pr-1"></div>
+						<div class="mr-2 pr-2 float-left" data-class=".mr-2 .pr-2"></div>
+						<div class="mr-3 pr-3 float-left" data-class=".mr-3 .pr-3"></div>
+						<div class="mr-4 pr-4 float-left" data-class=".mr-4 .pr-4"></div>
+						<div class="mr-5 pr-5 float-left" data-class=".mr-5 .pr-5"></div>
 					</div>
 
 					<h3 class="normal">Left</h3>
 					<div class="clearfix mb-2">
-						<div class="ml-1 pl-1 float-right"></div>
-						<div class="ml-2 pl-2 float-right"></div>
-						<div class="ml-3 pl-3 float-right"></div>
-						<div class="ml-4 pl-4 float-right"></div>
-						<div class="ml-5 pl-5 float-right"></div>
+						<div class="ml-1 pl-1 float-right" data-class=".ml-1 .pl-1"></div>
+						<div class="ml-2 pl-2 float-right" data-class=".ml-2 .pl-2"></div>
+						<div class="ml-3 pl-3 float-right" data-class=".ml-3 .pl-3"></div>
+						<div class="ml-4 pl-4 float-right" data-class=".ml-4 .pl-4"></div>
+						<div class="ml-5 pl-5 float-right" data-class=".ml-5 .pl-5"></div>
 					</div>
 
 					<h3 class="normal">Top</h3>
 					<div class="clearfix mb-2">
-						<div class="mt-1 pt-1 float-left"></div>
-						<div class="mt-2 pt-2 float-left"></div>
-						<div class="mt-3 pt-3 float-left"></div>
-						<div class="mt-4 pt-4 float-left"></div>
-						<div class="mt-5 pt-5 float-left"></div>
+						<div class="mt-1 pt-1 float-left" data-class=".mt-1 .pt-1"></div>
+						<div class="mt-2 pt-2 float-left" data-class=".mt-2 .pt-2"></div>
+						<div class="mt-3 pt-3 float-left" data-class=".mt-3 .pt-3"></div>
+						<div class="mt-4 pt-4 float-left" data-class=".mt-4 .pt-4"></div>
+						<div class="mt-5 pt-5 float-left" data-class=".mt-5 .pt-5"></div>
 					</div>
 
 					<h3 class="normal">Bottom</h3>
 					<div class="clearfix mb-2">
-						<div class="mb-1 pb-1 float-left"></div>
-						<div class="mb-2 pb-2 float-left"></div>
-						<div class="mb-3 pb-3 float-left"></div>
-						<div class="mb-4 pb-4 float-left"></div>
-						<div class="mb-5 pb-5 float-left"></div>
+						<div class="mb-1 pb-1 float-left" data-class=".mb-1 .pb-1"></div>
+						<div class="mb-2 pb-2 float-left" data-class=".mb-2 .pb-2"></div>
+						<div class="mb-3 pb-3 float-left" data-class=".mb-3 .pb-3"></div>
+						<div class="mb-4 pb-4 float-left" data-class=".mb-4 .pb-4"></div>
+						<div class="mb-5 pb-5 float-left" data-class=".mb-5 .pb-5"></div>
 					</div>
 
 					<h3 class="normal">Floats</h3>
 					<div class="clearfix mb-2">
-						<div class="float-left"></div>
-						<div class="float-right"></div>
+						<div class="float-left" data-class=".float-left"></div>
+						<div class="float-right" data-class=".float-right"></div>
 					</div>
 				</div>
 			</div>

@@ -37,10 +37,6 @@ body {
 
 html { overflow-y: scroll; }
 
-/*
-	Container
-*/
-
 @media (max-width: 64rem) {
 	.container {
 		padding-left: 1.25rem !important;
@@ -69,10 +65,6 @@ html { overflow-y: scroll; }
 	width: 992px;
 	width: 62rem;
 }
-/*
-	Format
-*/
-
 .format p:empty { display: none; }
 
 .format p { line-height: 24px; }
@@ -82,12 +74,6 @@ html { overflow-y: scroll; }
 .format ol { margin-left: 32px; }
 .format ul li { list-style-type: disc; }
 .format ol li { list-style-type: decimal; }
-/*
-	Grid
-
-	Real basic flex classes.
-*/
-
 @media (max-width: 48rem) {
 	.grid { -webkit-box-orient: vertical; -webkit-box-direction: normal; -webkit-flex-direction: column; -ms-flex-direction: column; flex-direction: column; }
 
@@ -133,12 +119,6 @@ html { overflow-y: scroll; }
 
 .grid--bottom { -webkit-box-align: end; -webkit-align-items: flex-end; -ms-flex-align: end; align-items: flex-end; }
 .grid--top { -webkit-box-align: start; -webkit-align-items: flex-start; -ms-flex-align: start; align-items: flex-start; }
-/*
-	Helpers
-
-	Layout utility.
-*/
-
 .float-left { float: left; }
 .float-right { float: right; }
 
@@ -153,12 +133,6 @@ html { overflow-y: scroll; }
 
 .clearfix:after { clear: both; }
 .clearfix { zoom: 1; }
-/*
-	Margins
-
-	Gives you an option.
-*/
-
 .m-0 { margin: 0; }
 .m-1 { margin: 8px; }
 .m-2 { margin: 16px; }
@@ -193,12 +167,6 @@ html { overflow-y: scroll; }
 .mr-3 { margin-right: 32px; }
 .mr-4 { margin-right: 64px; }
 .mr-5 { margin-right: 128px; }
-/*
-	Paddings
-
-	Gives you an option.
-*/
-
 .p-0 { padding: 0; }
 .p-1 { padding: 8px; }
 .p-2 { padding: 16px; }
@@ -233,12 +201,6 @@ html { overflow-y: scroll; }
 .pr-3 { padding-right: 32px; }
 .pr-4 { padding-right: 64px; }
 .pr-5 { padding-right: 128px; }
-/*
-	Typo
-
-	Provides utility classes, font-sizes, and basic margins for common use cases.
-*/
-
 h1, .h1 { font-size: 36px; font-size: 2.25rem; }
 h2, .h2 { font-size: 32px; font-size: 2rem; }
 h3, .h3 { font-size: 28px; font-size: 1.75rem; }
