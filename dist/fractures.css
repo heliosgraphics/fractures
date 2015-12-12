@@ -103,7 +103,7 @@ body {
 	position: relative;
 
 	font-size: 16px;
-	line-height: 1.25;
+	line-height: 1.375;
 }
 
 html { overflow-y: scroll; }
@@ -138,18 +138,11 @@ html { overflow-y: scroll; }
 }
 .format p:empty { display: none; }
 
-.format p,
-.format ul,
-.format ol {
-	margin-top: 28px;
-	margin-bottom: 28px;
-}
-
 .format p { line-height: 24px; }
 .format p a { font-weight: bold; }
 
 .format ul,
-.format ol { margin-left: 28px; }
+.format ol { margin-left: 32px; }
 .format ul li { list-style-type: disc; }
 .format ol li { list-style-type: decimal; }
 @media (max-width: 48rem) {
@@ -283,15 +276,19 @@ html { overflow-y: scroll; }
 .pr-3 { padding-right: 32px; }
 .pr-4 { padding-right: 64px; }
 .pr-5 { padding-right: 128px; }
-h1, .h1 { font-size: 48px; font-size: 3rem; }
-h2, .h2 { font-size: 44px; font-size: 2.75rem; }
-h3, .h3 { font-size: 40px; font-size: 2.5rem; }
-h4, .h4 { font-size: 36px; font-size: 2.25rem; }
-h5, .h5 { font-size: 28px; font-size: 1.75rem; }
+h1, .h1 { font-size: 36px; font-size: 2.25rem; }
+h2, .h2 { font-size: 32px; font-size: 2rem; }
+h3, .h3 { font-size: 28px; font-size: 1.75rem; }
+h4, .h4 { font-size: 24px; font-size: 1.5rem; }
+h5, .h5 { font-size: 20px; font-size: 1.25rem; }
 h6, .h6 { font-size: 16px; font-size: 1rem; }
 
-blockquote { font-size: 28px; font-size: 1.75rem; }
+blockquote { font-size: 20px; font-size: 1.25rem; }
 small { font-size: 12px; font-size: 0.75rem; }
+
+p,
+ul,
+ol { margin-bottom: 24px; }
 
 /*Utility*/
 .normal { font-weight: normal; }

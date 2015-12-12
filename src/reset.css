@@ -103,7 +103,7 @@ body {
 	position: relative;
 
 	font-size: var(--atom);
-	line-height: 1.25;
+	line-height: 1.375;
 }
 
 html { overflow-y: scroll; }

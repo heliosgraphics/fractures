@@ -8,6 +8,10 @@ h6, .h6 { font-size: var(--h6); }
 blockquote { font-size: var(--h5); }
 small { font-size: var(--h7); }
 
+p,
+ul,
+ol { margin-bottom: calc(1.5 * var(--line)); }
+
 /*Utility*/
 .normal { font-weight: normal; }
 .bold { font-weight: var(--bold); }
