@@ -3,32 +3,27 @@
 .m-2 { margin: var(--box2); }
 .m-3 { margin: var(--box3); }
 .m-4 { margin: var(--box4); }
-.m-5 { margin: var(--box5); }
 
 .ml-0 { margin-left: 0; }
 .ml-1 { margin-left: var(--box1); }
 .ml-2 { margin-left: var(--box2); }
 .ml-3 { margin-left: var(--box3); }
 .ml-4 { margin-left: var(--box4); }
-.ml-5 { margin-left: var(--box5); }
 
 .mt-0 { margin-top: 0; }
 .mt-1 { margin-top: var(--box1); }
 .mt-2 { margin-top: var(--box2); }
 .mt-3 { margin-top: var(--box3); }
 .mt-4 { margin-top: var(--box4); }
-.mt-5 { margin-top: var(--box5); }
 
 .mb-0 { margin-bottom: 0; }
 .mb-1 { margin-bottom: var(--box1); }
 .mb-2 { margin-bottom: var(--box2); }
 .mb-3 { margin-bottom: var(--box3); }
 .mb-4 { margin-bottom: var(--box4); }
-.mb-5 { margin-bottom: var(--box5); }
 
 .mr-0 { margin-right: 0; }
 .mr-1 { margin-right: var(--box1); }
 .mr-2 { margin-right: var(--box2); }
 .mr-3 { margin-right: var(--box3); }
 .mr-4 { margin-right: var(--box4); }
-.mr-5 { margin-right: var(--box5); }
