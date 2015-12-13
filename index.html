@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html ng-app="app">
 	<head>
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
@@ -11,219 +11,27 @@
 	<body>
 		<nav class="side-nav">
 			<div class="container">
-				<a href="#"><b>Fractures&mdash;</b></a>
-				<a href="#grid" class="ml-2">Grid</a>
-				<a href="#typo">Typo</a>
-				<a href="#box">Box</a>
+				<a ui-sref="index" ui-sref-active="active">&mdash;</a>
+				<a ui-sref="grid" ui-sref-active="active">Grid</a>
+				<a ui-sref="typo" ui-sref-active="active">Typo</a>
+				<a ui-sref="box" ui-sref-active="active">Box</a>
 			</div>
 		</nav>
-		<main class="specimen-container">
-			<div class="container">
+		<main class="container" ui-view autoscroll></main>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.0-rc.0/angular.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.0-rc.0/angular-animate.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.2.15/angular-ui-router.js"></script>
+		<script type="text/javascript">
+			angular.module("app", ["ui.router", "ngAnimate"])
+			.config(function($stateProvider, $urlRouterProvider) {
+				$stateProvider
+					.state("index", { url: "/", templateUrl: "./demo/components/index.html" })
+					.state("grid", { url: "/grid/", templateUrl: "./demo/components/grid.html" })
+					.state("typo", { url: "/typo/", templateUrl: "./demo/components/typo.html" })
+					.state("box", { url: "/box/", templateUrl: "./demo/components/box.html" })
 
-				<!-- Grid -->
-				<div
-					class="specimen specimen--grid format pb-3"
-					id="grid">
-					<h1>Grid</h1>
-					<div class="info mb-4">
-						<p>Basic flex utility with predefined, responsive breakpoints.</p>
-						<ul>
-							<li>container</li>
-							<li>grid</li>
-						</ul>
-					</div>
-
-					<h5>display</h5>
-					<div class="grid" data-grid>
-						<div class="cell mr-1" data-class=".cell" data-cell></div>
-						<div class="cell mr-1" data-class=".cell" data-cell></div>
-						<div class="cell" data-class=".cell" data-cell></div>
-					</div>
-					<pre class="mb-3 p-1">
-						&lt;div class="grid"&gt;&lt;/div&gt;
-					</pre>
-
-					<h5>flex-direction</h5>
-					<div class="grid grid--reverse" data-grid>
-						<div class="cell" data-class=".cell (1)" data-cell></div>
-						<div class="cell mr-1" data-class=".cell (2)" data-cell></div>
-						<div class="cell mr-1" data-class=".cell (3)" data-cell></div>
-					</div>
-					<pre class="mb-3 p-1">
-						&lt;div class="grid grid--reverse"&gt;&lt;/div&gt;
-					</pre>
-
-					<h5>align-items, justify-content</h5>
-					<div class="grid grid--center" data-grid><div data-cell></div></div>
-					<pre class="mb-3 p-1">
-						&lt;div class="grid grid--center"&gt;&lt;/div&gt;
-					</pre>
-
-					<h5>align-items</h5>
-					<div class="grid grid--hcenter" data-grid><div data-cell></div></div>
-					<pre class="mb-3 p-1">
-						&lt;div class="grid grid--hcenter"&gt;&lt;/div&gt;
-					</pre>
-
-					<div class="grid grid--top" data-grid><div data-cell></div></div>
-					<pre class="mb-3 p-1">
-						&lt;div class="grid grid--top"&gt;&lt;/div&gt;
-					</pre>
-
-					<div class="grid grid--bottom" data-grid><div data-cell></div></div>
-					<pre class="mb-3 p-1">
-						&lt;div class="grid grid--bottom"&gt;&lt;/div&gt;
-					</pre>
-
-					<h5>justify-content</h5>
-					<div class="grid grid--vcenter" data-grid><div data-cell></div></div>
-					<pre class="mb-3 p-1">
-						&lt;div class="grid grid--vcenter"&gt;&lt;/div&gt;
-					</pre>
-
-					<div class="grid grid--right" data-grid><div data-cell></div></div>
-					<pre class="mb-3 p-1">
-						&lt;div class="grid grid--right"&gt;&lt;/div&gt;
-					</pre>
-
-					<div class="grid grid--around" data-grid>
-						<div data-cell></div>
-						<div data-cell></div>
-					</div>
-					<pre class="mb-3 p-1">
-						&lt;div class="grid grid--vcenter"&gt;&lt;/div&gt;
-					</pre>
-
-					<div class="grid grid--between" data-grid>
-						<div data-cell></div>
-						<div data-cell></div>
-					</div>
-					<pre class="mb-3 p-1">
-						&lt;div class="grid grid--vcenter"&gt;&lt;/div&gt;
-					</pre>
-				</div>
-
-				<!-- Typo -->
-				<div
-					class="specimen specimen--typo format pb-3"
-					id="typo">
-					<h1>Typo</h1>
-					<div class="info mb-4">
-						<p>Covers basic typography.</p>
-						<ul>
-							<li>typo</li>
-						</ul>
-					</div>
-					<h1>The quick brown fox jumps over the lazy dog</h1>
-					<h1 class="normal">The quick brown fox jumps over the lazy dog</h1>
-					<h2>The quick brown fox jumps over the lazy dog</h2>
-					<h3>The quick brown fox jumps over the lazy dog</h3>
-					<h4>The quick brown fox jumps over the lazy dog</h4>
-					<h5>The quick brown fox jumps over the lazy dog</h5>
-					<h6>The quick brown fox jumps over the lazy dog</h6>
-
-					<hr class="pb-4"></hr>
-
-					<p>Now I will tell you the answer to my question. <b>It is this.</b> The Party seeks power entirely for its own sake. We are not interested in the good of others; we are interested solely in power, pure power. What pure power means you will understand presently. We are different from the oligarchies of the past in that we know what we are doing. All the others, even those who resembled ourselves, were cowards and hypocrites.</p>
-					<p>The <em>German Nazis</em> and the <em>Russian Communists</em> came very close to us in their methods, but they never had the courage to recognize their own motives.</p>
-					<ul>
-						<li>establish a dictatorship</li>
-						<li>safeguard a revolution</li>
-					</ul>
-					<ol>
-						<li>The object of persecution is persecution.</li>
-						<li>The object of torture is torture.</li>
-					</ol>
-					<p>They pretended, perhaps they even believed, that they had seized power unwillingly and for a limited time, and that just around the corner there lay a paradise where human beings would be free and equal. We are not like that. We know that no one ever seizes power with the intention of relinquishing it. Power is not a means; it is an end.</p>
-					<small>One morning</small>
-					<blockquote>What pure power means you will understand presently. We are different from the oligarchies of the past in that we know what we are doing.</blockquote>
-				</div>
-
-				<!-- Margin/Padding -->
-				<div
-					class="specimen specimen--box format pb-3"
-					id="box">
-					<h1>Box</h1>
-					<div class="info mb-4">
-						<p>Layout utility.</p>
-						<ul>
-							<li>margin</li>
-							<li>padding</li>
-							<li>helpers</li>
-						</ul>
-					</div>
-
-					<h5>margin, padding</h5>
-					<div class="grid" data-grid>
-						<div class="m-4 p-4" data-class=".m-4 .p-4" data-cell></div>
-						<div class="m-3 p-3" data-class=".m-3 .p-3" data-cell></div>
-						<div class="m-2 p-2" data-class=".m-2 .p-2" data-cell></div>
-						<div class="m-1 p-1" data-class=".m-1 .p-1" data-cell></div>
-					</div>
-					<pre class="mb-3 p-1">
-						&lt;div class="m-{0,1,2,3,4}"&gt;&lt;/div&gt;
-						&lt;div class="p-{0,1,2,3,4}"&gt;&lt;/div&gt;
-					</pre>
-
-					<h5>margin-right, padding-right</h5>
-					<div class="grid" data-grid>
-						<div class="mr-4 pr-0" data-class=".mr-4 .pr-0" data-cell></div>
-						<div data-cell></div>
-					</div>
-					<pre class="mb-3 p-1">
-						&lt;div class="mr-{0,1,2,3,4}"&gt;&lt;/div&gt;
-						&lt;div class="pr-{0,1,2,3,4}"&gt;&lt;/div&gt;
-					</pre>
-
-					<h5>margin-left, padding-left</h5>
-					<div class="grid" data-grid>
-						<div data-cell></div>
-						<div class="ml-4 pl-0" data-class=".ml-4 .pl-0" data-cell></div>
-					</div>
-					<pre class="mb-3 p-1">
-						&lt;div class="ml-{0,1,2,3,4}"&gt;&lt;/div&gt;
-						&lt;div class="pl-{0,1,2,3,4}"&gt;&lt;/div&gt;
-					</pre>
-
-					<h5>margin-top, padding-top</h5>
-					<div class="grid" data-grid>
-						<div class="mt-3 pt-0" data-class=".mt-3 .pt-0" data-cell></div>
-					</div>
-					<pre class="mb-3 p-1">
-						&lt;div class="mt-{0,1,2,3,4}"&gt;&lt;/div&gt;
-						&lt;div class="pt-{0,1,2,3,4}"&gt;&lt;/div&gt;
-					</pre>
-
-					<h5>margin-bottom, padding-bottom</h5>
-					<div class="grid" data-grid>
-						<div class="mb-2 pb-0" data-class=".mb-2 .pb-0" data-cell></div>
-					</div>
-					<pre class="mb-3 p-1">
-						&lt;div class="mb-{0,1,2,3,4}"&gt;&lt;/div&gt;
-						&lt;div class="pb-{0,1,2,3,4}"&gt;&lt;/div&gt;
-					</pre>
-
-					<h5>float</h5>
-					<div class="clearfix" data-grid>
-						<div class="float-left" data-class=".float-left" data-cell></div>
-						<div class="float-right" data-class=".float-right" data-class-right data-cell></div>
-					</div>
-					<pre class="mb-3 p-1">
-						&lt;div class="float-left"&gt;&lt;/div&gt;
-						&lt;div class="float-right"&gt;&lt;/div&gt;
-					</pre>
-
-					<h5>display</h5>
-					<div class="clearfix" data-grid>
-						<div class="block" data-class=".block" data-cell></div>
-					</div>
-					<pre class="mb-3 p-1">
-						&lt;div class="block"&gt;&lt;/div&gt;
-						&lt;div class="inline"&gt;&lt;/div&gt;
-						&lt;div class="inline-block"&gt;&lt;/div&gt;
-					</pre>
-				</div>
-			</div>
-		</main>
+				$urlRouterProvider.otherwise("/");
+			});
+		</script>
 	</body>
 </html>

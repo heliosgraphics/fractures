@@ -1,4 +1,3 @@
-/*layout*/
 body {
 	background-color: white;
 	color: rgba(40, 45, 90, 1);
@@ -13,24 +12,38 @@ main { padding-bottom: 8rem; }
 	position: fixed;
 	z-index: 1;
 
-	height: 5rem;
 	width: 100%;
 
 	background: rgba(40, 45, 90, 1);
 	color: white;
-
-	line-height: 5rem;
-	font-size: 1.25rem;
 }
 
-.side-nav a { color: white; }
+.side-nav a {
+	float: left;
+	padding: 1rem;
 
-.specimen {
-	display: none;
-	padding-top: 8rem;
+	color: white;
+
+	font-weight: bold;
 }
 
-.specimen:target { display: block; }
+.side-nav a.active {
+	background: white;
+	color: rgba(40, 45, 90, 1);
+}
+
+main {
+	opacity: 1;
+	transform: translateY(0);
+	transition: all 120ms ease;
+}
+
+main.ng-animate { opacity: 0; }
+
+main.ng-enter,
+main.ng-enter-active { transform: translateY(-1rem); }
+
+.specimen { padding-top: 6rem; }
 
 /*class indicator tooltip*/
 *[data-class] { position: relative; }
