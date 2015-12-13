@@ -1,9 +1,0 @@
-.format p:empty { display: none; }
-
-.format p { line-height: calc(1.5 * var(--line)); }
-.format p a { font-weight: var(--bold); }
-
-.format ul,
-.format ol { margin-left: calc(2 * var(--line)); }
-.format ul li { list-style-type: disc; }
-.format ol li { list-style-type: decimal; }

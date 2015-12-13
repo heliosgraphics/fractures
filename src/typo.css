@@ -1,3 +1,4 @@
+/*Font size*/
 h1, .h1 { font-size: var(--h1); }
 h2, .h2 { font-size: var(--h2); }
 h3, .h3 { font-size: var(--h3); }
@@ -8,14 +9,25 @@ h6, .h6 { font-size: var(--h6); }
 blockquote { font-size: var(--h5); }
 small { font-size: var(--h7); }
 
+/*Formatted content*/
 p,
-ul,
-ol { margin-bottom: calc(1.5 * var(--line)); }
+.format ul,
+.format ol { margin-bottom: calc(1.5 * var(--line)); }
 
-strong,
+.format ul,
+.format ol { margin-left: calc(2 * var(--line)); }
+
+.format ul > li { list-style-type: disc; }
+.format ol > li { list-style-type: decimal; }
+.format a { font-weight: var(--bold); }
+
+/*Defaults*/
 b { font-weight: var(--bold); }
-
 del { text-decoration: line-through; }
+
+blockquote,
+em,
+i { font-style: italic; }
 
 sub,
 sup {
@@ -30,18 +42,15 @@ sub { bottom: -0.25em; }
 textarea { resize: none; }
 
 pre {
-	white-space: pre;
-	white-space: pre-wrap;
 	white-space: pre-line;
 	word-wrap: break-word;
 }
 
 hr {
-	display: block;
-	height: 1px;
 	padding: 0;
 
 	border: 0;
+	border-top: 1px solid lightgray;
 }
 
 pre,
@@ -49,6 +58,7 @@ code,
 kbd,
 samp { font-family: monospace, sans-serif; }
 
+/*Utility*/
 .normal { font-weight: normal; }
 .bold { font-weight: var(--bold); }
 
