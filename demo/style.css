@@ -5,8 +5,6 @@ body {
 	font-family: "Arimo", Arial;
 }
 
-main { padding-bottom: 8rem; }
-
 .side-nav {
 	top: 0;
 	position: fixed;
@@ -91,4 +89,9 @@ div[data-grid] + pre {
 
 	font-size: 0.75rem;
 	font-family: "Source Code Pro", monospace;
+}
+
+.specimen--index img {
+	height: 10rem;
+	width: 10rem;
 }
