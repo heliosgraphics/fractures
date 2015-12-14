@@ -1,6 +1,7 @@
 .block { display: block; }
-.inline-block { display: inline-block; }
+.none { display: none; }
 .inline { display: inline; }
+.inline-block { display: inline-block; }
 
 .float-left { float: left; }
 .float-right { float: right; }

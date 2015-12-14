@@ -111,8 +111,9 @@ html { overflow-y: scroll; }
 .grid--bottom { -webkit-box-align: end; -webkit-align-items: flex-end; -ms-flex-align: end; align-items: flex-end; }
 .grid--top { -webkit-box-align: start; -webkit-align-items: flex-start; -ms-flex-align: start; align-items: flex-start; }
 .block { display: block; }
-.inline-block { display: inline-block; }
+.none { display: none; }
 .inline { display: inline; }
+.inline-block { display: inline-block; }
 
 .float-left { float: left; }
 .float-right { float: right; }
