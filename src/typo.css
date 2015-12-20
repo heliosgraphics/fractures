@@ -11,6 +11,8 @@ small { font-size: var(--h7); }
 
 /*Formatted content*/
 p,
+hr,
+.format blockquote,
 .format ul,
 .format ol { margin-bottom: calc(var(--font-size) * var(--line-height)); }
 

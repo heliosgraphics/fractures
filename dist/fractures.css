@@ -203,6 +203,8 @@ small { font-size: 12px; font-size: 0.75rem; }
 
 /*Formatted content*/
 p,
+hr,
+.format blockquote,
 .format ul,
 .format ol { margin-bottom: 24px; }
 
