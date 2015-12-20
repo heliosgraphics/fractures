@@ -15,8 +15,6 @@ h5, .h5,
 h6, .h6 { margin-bottom: calc(var(--font-size) / 4); }
 
 blockquote { font-size: var(--h5); }
-sub,
-sup,
 small { font-size: var(--h7); }
 
 /*Formatted content*/
@@ -34,24 +32,6 @@ hr,
 .format a { font-weight: var(--bold); }
 
 /*Defaults*/
-b { font-weight: var(--bold); }
-del { text-decoration: line-through; }
-
-blockquote,
-em,
-i { font-style: italic; }
-
-sub,
-sup {
-	position: relative;
-
-	line-height: 0;
-}
-
-sup { top: -calc(var(--font-size) / 2); }
-sub { bottom: -calc(var(--font-size) / 4); }
-textarea { resize: none; }
-
 pre {
 	white-space: pre-line;
 	word-wrap: break-word;
@@ -64,14 +44,15 @@ hr {
 	border-top: 1px solid lightgray;
 }
 
-pre,
-code,
-kbd,
-samp { font-family: monospace, sans-serif; }
-
 /*Utility*/
 .normal { font-weight: normal; }
+b,
 .bold { font-weight: var(--bold); }
+
+blockquote,
+i,
+em,
+.italic { font-style: italic; }
 
 .nowrap { white-space: nowrap; }
 .pre { white-space: pre-line; }
