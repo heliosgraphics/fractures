@@ -61,7 +61,10 @@ main.ng-enter-active { transform: translateY(-1rem); }
 	white-space: nowrap;
 }
 
-*[data-class-right]:before { right: 0; left: auto; }
+*[data-class-right]:before {
+	left: auto;
+	right: 0;
+}
 
 div[data-cell] {
 	height: 1.5rem;
@@ -73,8 +76,8 @@ div[data-cell] {
 }
 
 div[data-grid] {
-	min-height: 6rem;
-	padding: .5rem;
+	min-height: 8rem;
+	padding: .25rem;
 
 	border-radius: .25rem .25rem 0 0;
 	box-shadow: inset 0 0 0 1px #dfe0e6;
