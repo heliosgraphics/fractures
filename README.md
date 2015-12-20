@@ -1,5 +1,5 @@
 # fractures
 
-A really simple, atomic css toolkit containing basic parts that I usually use on my projects.
+Atomic CSS toolkit.
 
 At this point, this is only a learning experiment.
