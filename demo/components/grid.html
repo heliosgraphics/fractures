@@ -9,23 +9,23 @@
 	</div>
 
 	<h5>display</h5>
-	<div class="grid" data-grid>
-		<div class="cell mr-1" data-class=".cell" data-cell></div>
-		<div class="cell mr-1" data-class=".cell" data-cell></div>
-		<div class="cell" data-class=".cell" data-cell></div>
+	<div class="grid grid--collapse" data-grid>
+		<div class="cell mr-1 mb-1" data-class=".cell" data-cell></div>
+		<div class="cell mr-1 mb-1" data-class=".cell" data-cell></div>
+		<div class="cell mb-1" data-class=".cell" data-cell></div>
 	</div>
 	<pre class="mb-3 p-1">
-		&lt;div class="grid"&gt;&lt;/div&gt;
+		&lt;div class="grid grid--collapse"&gt;&lt;/div&gt;
 	</pre>
 
 	<h5>flex-direction</h5>
-	<div class="grid grid--reverse" data-grid>
-		<div class="cell" data-class=".cell (1)" data-cell></div>
-		<div class="cell mr-1" data-class=".cell (2)" data-cell></div>
-		<div class="cell mr-1" data-class=".cell (3)" data-cell></div>
+	<div class="grid grid--collapse grid--reverse" data-grid>
+		<div class="cell mb-1" data-class=".cell (1)" data-cell></div>
+		<div class="cell mr-1 mb-1" data-class=".cell (2)" data-cell></div>
+		<div class="cell mr-1 mb-1" data-class=".cell (3)" data-cell></div>
 	</div>
 	<pre class="mb-3 p-1">
-		&lt;div class="grid grid--reverse"&gt;&lt;/div&gt;
+		&lt;div class="grid grid--collapse grid--reverse"&gt;&lt;/div&gt;
 	</pre>
 
 	<h5>align-items, justify-content</h5>
@@ -75,5 +75,12 @@
 	</div>
 	<pre class="mb-3 p-1">
 		&lt;div class="grid grid--between"&gt;&lt;/div&gt;
+	</pre>
+
+	<div class="grid grid--100" data-grid>
+		<div data-cell></div>
+	</div>
+	<pre class="mb-3 p-1">
+		&lt;div class="grid grid--100"&gt;&lt;/div&gt;
 	</pre>
 </div>

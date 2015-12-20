@@ -12,10 +12,10 @@ small { font-size: var(--h7); }
 /*Formatted content*/
 p,
 .format ul,
-.format ol { margin-bottom: calc(1.5 * var(--line)); }
+.format ol { margin-bottom: calc(var(--font-size) * var(--line-height)); }
 
 .format ul,
-.format ol { margin-left: calc(2 * var(--line)); }
+.format ol { margin-left: calc(var(--font-size) * var(--line-height)); }
 
 .format ul > li { list-style-type: disc; }
 .format ol > li { list-style-type: decimal; }

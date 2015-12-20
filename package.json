@@ -1,8 +1,8 @@
 {
 	"name": "fractures",
-	"version": "0.0.9",
+	"version": "0.0.10",
 	"author": "Krisztian Puska",
-	"description": "atomic css toolkit",
+	"description": "Atomic CSS toolkit.",
 	"keywords": [ "CSS" ],
 	"repository": {
 		"type": "git",
@@ -16,7 +16,8 @@
 	"scripts": {
 		"start": "gulp",
 		"build": "gulp build",
-		"watch": "gulp watch"
+		"watch": "gulp watch",
+		"server": "python -m SimpleHTTPServer"
 	},
 	"devDependencies": {
 		"cssnext": "^1.8.4",

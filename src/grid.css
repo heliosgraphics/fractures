@@ -1,11 +1,11 @@
 @media (--tablet) {
-	.grid { flex-direction: column; }
+	.grid--collapse.grid { flex-direction: column; }
 
-	.grid.grid--reverse,
-	.grid.grid--reverse.grid--column { flex-direction: column-reverse; }
+	.grid--collapse.grid.grid--reverse,
+	.grid--collapse.grid.grid--reverse.grid--column { flex-direction: column-reverse; }
 
 	/*Prepares cell for responsive layout*/
-	.cell {
+	.grid--collapse .cell {
 		margin-left: 0 !important;
 		margin-right: 0 !important;
 	}
@@ -37,3 +37,5 @@
 
 .grid--bottom { align-items: flex-end; }
 .grid--top { align-items: flex-start; }
+
+.grid--100 { min-height: 100vh; }

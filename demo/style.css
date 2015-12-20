@@ -17,7 +17,7 @@ body {
 }
 
 .side-nav a {
-	float: left;
+	display: inline-block;
 	padding: 1rem;
 
 	color: white;
