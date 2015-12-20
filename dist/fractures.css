@@ -47,14 +47,14 @@ html { overflow-y: scroll; }
 	}
 }
 
-@media (max-width: 768px) {
+@media (max-width: 792px) {
 	.container {
 		padding-left: 1rem !important;
 		padding-right: 1rem !important;
 	}
 }
 
-@media (max-width: 480px) {
+@media (max-width: 360px) {
 	.container {
 		padding-left: 0.5rem !important;
 		padding-right: 0.5rem !important;
@@ -66,7 +66,7 @@ html { overflow-y: scroll; }
 	margin-right: auto;
 	width: 992px;
 }
-@media (max-width: 768px) {
+@media (max-width: 792px) {
 	.grid--collapse.grid { -webkit-box-orient: vertical; -webkit-box-direction: normal; -webkit-flex-direction: column; -ms-flex-direction: column; flex-direction: column; }
 
 	.grid--collapse.grid.grid--reverse,
