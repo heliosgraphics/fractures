@@ -26,7 +26,6 @@
 
 li { list-style-type: none; }
 a { text-decoration: none; }
-textarea { resize: none; }
 
 html,
 body {
@@ -114,11 +113,13 @@ html { overflow-y: scroll; }
 .grid--top { -webkit-box-align: start; -webkit-align-items: flex-start; -ms-flex-align: start; align-items: flex-start; }
 
 .grid--100 { min-height: 100vh; }
+/*Element helpers*/
 .block { display: block; }
 .none { display: none; }
 .inline { display: inline; }
 .inline-block { display: inline-block; }
 
+/*Float helpers*/
 .float-left { float: left; }
 .float-right { float: right; }
 
@@ -191,7 +192,7 @@ html { overflow-y: scroll; }
 .pr-2 { padding-right: 16px; }
 .pr-3 { padding-right: 32px; }
 .pr-4 { padding-right: 64px; }
-/*Font size*/
+/*Headers*/
 h1, .h1 { font-size: 36px; font-size: 2.25rem; }
 h2, .h2 { font-size: 32px; font-size: 2rem; }
 h3, .h3 { font-size: 28px; font-size: 1.75rem; }
@@ -207,23 +208,6 @@ h4, .h4,
 h5, .h5,
 h6, .h6 { margin-bottom: 4px; }
 
-blockquote { font-size: 20px; font-size: 1.25rem; }
-small { font-size: 12px; font-size: 0.75rem; }
-
-/*Formatted content*/
-p,
-hr,
-.format blockquote,
-.format ul,
-.format ol { margin-bottom: 24px; }
-
-.format ul,
-.format ol { margin-left: 24px; }
-
-.format ul > li { list-style-type: disc; }
-.format ol > li { list-style-type: decimal; }
-.format a { font-weight: bold; }
-
 /*Defaults*/
 pre {
 	white-space: pre-line;
@@ -237,14 +221,32 @@ hr {
 	border-top: 1px solid lightgray;
 }
 
-/*Utility*/
-.normal { font-weight: normal; }
-b,
-.bold { font-weight: bold; }
-
+b { font-weight: bold; }
 blockquote,
 i,
-em,
+em { font-style: italic; }
+
+blockquote { font-size: 20px; font-size: 1.25rem; }
+small { font-size: 12px; font-size: 0.75rem; }
+
+/*Formatted content*/
+.format p,
+.format hr,
+.format blockquote,
+.format ul,
+.format ol { margin-bottom: 24px; }
+
+.format ul,
+.format ol { margin-left: 24px; }
+
+.format ul > li { list-style-type: disc; }
+.format ol > li { list-style-type: decimal; }
+.format a { font-weight: bold; }
+
+/*Utility*/
+.normal { font-weight: normal; }
+.bold { font-weight: bold; }
+
 .italic { font-style: italic; }
 
 .nowrap { white-space: nowrap; }

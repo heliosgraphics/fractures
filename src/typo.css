@@ -1,4 +1,4 @@
-/*Font size*/
+/*Headers*/
 h1, .h1 { font-size: var(--h1); }
 h2, .h2 { font-size: var(--h2); }
 h3, .h3 { font-size: var(--h3); }
@@ -14,23 +14,6 @@ h4, .h4,
 h5, .h5,
 h6, .h6 { margin-bottom: calc(var(--font-size) / 4); }
 
-blockquote { font-size: var(--h5); }
-small { font-size: var(--h7); }
-
-/*Formatted content*/
-p,
-hr,
-.format blockquote,
-.format ul,
-.format ol { margin-bottom: calc(var(--font-size) * var(--line-height)); }
-
-.format ul,
-.format ol { margin-left: calc(var(--font-size) * var(--line-height)); }
-
-.format ul > li { list-style-type: disc; }
-.format ol > li { list-style-type: decimal; }
-.format a { font-weight: var(--bold); }
-
 /*Defaults*/
 pre {
 	white-space: pre-line;
@@ -44,14 +27,32 @@ hr {
 	border-top: 1px solid lightgray;
 }
 
-/*Utility*/
-.normal { font-weight: normal; }
-b,
-.bold { font-weight: var(--bold); }
-
+b { font-weight: var(--bold); }
 blockquote,
 i,
-em,
+em { font-style: italic; }
+
+blockquote { font-size: var(--h5); }
+small { font-size: var(--h7); }
+
+/*Formatted content*/
+.format p,
+.format hr,
+.format blockquote,
+.format ul,
+.format ol { margin-bottom: calc(var(--font-size) * var(--line-height)); }
+
+.format ul,
+.format ol { margin-left: calc(var(--font-size) * var(--line-height)); }
+
+.format ul > li { list-style-type: disc; }
+.format ol > li { list-style-type: decimal; }
+.format a { font-weight: var(--bold); }
+
+/*Utility*/
+.normal { font-weight: normal; }
+.bold { font-weight: var(--bold); }
+
 .italic { font-style: italic; }
 
 .nowrap { white-space: nowrap; }
