@@ -20,6 +20,7 @@
 	--h7: 0.75rem;
 
 	--width: 992px;
+	--width-small: 480px;
 }
 
 @custom-media --mobile (max-width: 360px);

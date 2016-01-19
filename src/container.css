@@ -25,3 +25,8 @@
 	margin-right: auto;
 	width: var(--width);
 }
+
+.container.container--small {
+
+	width: var(--width-small);
+}

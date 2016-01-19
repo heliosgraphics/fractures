@@ -64,6 +64,11 @@ html { overflow-y: scroll; }
 	margin-right: auto;
 	width: 992px;
 }
+
+.container.container--small {
+
+	width: 480px;
+}
 @media (max-width: 792px) {
 	.grid--collapse.grid { -webkit-box-orient: vertical; -webkit-box-direction: normal; -webkit-flex-direction: column; -ms-flex-direction: column; flex-direction: column; }
 
@@ -111,6 +116,11 @@ html { overflow-y: scroll; }
 .grid--top { -webkit-box-align: start; -webkit-align-items: flex-start; -ms-flex-align: start; align-items: flex-start; }
 
 .grid--100 { min-height: 100vh; }
+
+/*Self*/
+.self--center { -webkit-align-self: center; -ms-flex-item-align: center; align-self: center; }
+.self--start { -webkit-align-self: flex-start; -ms-flex-item-align: start; align-self: flex-start; }
+.self--end { -webkit-align-self: flex-end; -ms-flex-item-align: end; align-self: flex-end; }
 /*Element helpers*/
 .block { display: block; }
 .none { display: none; }

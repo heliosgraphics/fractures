@@ -39,3 +39,8 @@
 .grid--top { align-items: flex-start; }
 
 .grid--100 { min-height: 100vh; }
+
+/*Self*/
+.self--center { align-self: center; }
+.self--start { align-self: flex-start; }
+.self--end { align-self: flex-end; }
