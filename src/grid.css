@@ -5,15 +5,15 @@
 	.grid--collapse.grid.grid--reverse.grid--column { flex-direction: column-reverse; }
 
 	/*Prepares cell for responsive layout*/
-	.grid--collapse .cell {
+	.grid--collapse *[class^="cell--"] {
 		margin-left: 0 !important;
 		margin-right: 0 !important;
 	}
 }
 
 .grid { display: flex; }
-.cell { flex: 1; }
 
+/*Wrap*/
 .grid--wrap { flex-wrap: wrap; }
 
 /*Directions*/
@@ -33,14 +33,28 @@
 
 .grid--around { justify-content: space-around; }
 .grid--between { justify-content: space-between; }
-.grid--right { justify-content: flex-end; }
+.grid--end { justify-content: flex-end; }
 
-.grid--bottom { align-items: flex-end; }
-.grid--top { align-items: flex-start; }
-
-.grid--100 { min-height: 100vh; }
+.grid--end { align-items: flex-end; }
+.grid--start { align-items: flex-start; }
 
 /*Self*/
 .self--center { align-self: center; }
 .self--start { align-self: flex-start; }
 .self--end { align-self: flex-end; }
+.self--baseline { align-self: baseline; }
+.self--stretch { align-self: stretch; }
+
+/*Grow*/
+.grow-1 { flex-grow: 1; }
+.grow-2 { flex-grow: 2; }
+.grow-3 { flex-grow: 3; }
+.grow-4 { flex-grow: 4; }
+.grow-5 { flex-grow: 5; }
+
+/*Shrink*/
+.shrink-1 { flex-shrink: 1; }
+.shrink-2 { flex-shrink: 2; }
+.shrink-3 { flex-shrink: 3; }
+.shrink-4 { flex-shrink: 4; }
+.shrink-5 { flex-shrink: 5; }

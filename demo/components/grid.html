@@ -10,19 +10,23 @@
 
 	<h5>display</h5>
 	<div class="grid grid--collapse" data-grid>
-		<div class="cell mr-1 mb-1" data-class=".cell" data-cell></div>
-		<div class="cell mr-1 mb-1" data-class=".cell" data-cell></div>
-		<div class="cell mb-1" data-class=".cell" data-cell></div>
+		<div class="grow-3 mr-1 mb-1" data-class=".grow-3" data-cell></div>
+		<div class="grow-2 mr-1 mb-1" data-class=".grow-2" data-cell></div>
+		<div class="grow-1 mb-1" data-class=".grow-1" data-cell></div>
 	</div>
 	<pre class="mb-3 p-1">
-		&lt;div class="grid grid--collapse"&gt;&lt;/div&gt;
+		&lt;div class="grid grid--collapse"&gt;
+		&lt;div class="grow-3"&gt;&lt;/div&gt;
+		&lt;div class="grow-2"&gt;&lt;/div&gt;
+		&lt;div class="grow-1"&gt;&lt;/div&gt;
+		&lt;/div&gt;
 	</pre>
 
 	<h5>flex-direction</h5>
 	<div class="grid grid--collapse grid--reverse" data-grid>
-		<div class="cell mb-1" data-class=".cell (1)" data-cell></div>
-		<div class="cell mr-1 mb-1" data-class=".cell (2)" data-cell></div>
-		<div class="cell mr-1 mb-1" data-class=".cell (3)" data-cell></div>
+		<div class="grow-1 mb-1" data-class=".grow-1 (1)" data-cell></div>
+		<div class="grow-1 mr-1 mb-1" data-class=".grow-1 (2)" data-cell></div>
+		<div class="grow-1 mr-1 mb-1" data-class=".grow-1 (3)" data-cell></div>
 	</div>
 	<pre class="mb-3 p-1">
 		&lt;div class="grid grid--collapse grid--reverse"&gt;&lt;/div&gt;
@@ -77,10 +81,19 @@
 		&lt;div class="grid grid--between"&gt;&lt;/div&gt;
 	</pre>
 
-	<div class="grid grid--100" data-grid>
-		<div data-cell></div>
+	<h5>align-self</h5>
+	<div class="grid grid--between" data-grid>
+		<div class="self--start" data-cell></div>
+		<div class="self--center" data-cell></div>
+		<div class="self--end" data-cell></div>
+		<div class="self--baseline" data-cell></div>
+		<div class="self--stretch" data-cell></div>
 	</div>
 	<pre class="mb-3 p-1">
-		&lt;div class="grid grid--100"&gt;&lt;/div&gt;
+		&lt;div class="self--start"&gt;&lt;/div&gt;
+		&lt;div class="self--center"&gt;&lt;/div&gt;
+		&lt;div class="self--end"&gt;&lt;/div&gt;
+		&lt;div class="self--baseline"&gt;&lt;/div&gt;
+		&lt;div class="self--stretch"&gt;&lt;/div&gt;
 	</pre>
 </div>
