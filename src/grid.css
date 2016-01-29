@@ -52,6 +52,13 @@
 .grow-4 { flex-grow: 4; }
 .grow-5 { flex-grow: 5; }
 
+/*Grid intentions*/
+.grow-1,
+.grow-2,
+.grow-3,
+.grow-4,
+.grow-5 { flex-basis: 0; }
+
 /*Shrink*/
 .shrink-1 { flex-shrink: 1; }
 .shrink-2 { flex-shrink: 2; }

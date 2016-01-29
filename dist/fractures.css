@@ -129,6 +129,13 @@ html { overflow-y: scroll; }
 .grow-4 { -webkit-box-flex: 4; -webkit-flex-grow: 4; -ms-flex-positive: 4; flex-grow: 4; }
 .grow-5 { -webkit-box-flex: 5; -webkit-flex-grow: 5; -ms-flex-positive: 5; flex-grow: 5; }
 
+/*Grid intentions*/
+.grow-1,
+.grow-2,
+.grow-3,
+.grow-4,
+.grow-5 { -webkit-flex-basis: 0; -ms-flex-preferred-size: 0; flex-basis: 0; }
+
 /*Shrink*/
 .shrink-1 { -webkit-flex-shrink: 1; -ms-flex-negative: 1; flex-shrink: 1; }
 .shrink-2 { -webkit-flex-shrink: 2; -ms-flex-negative: 2; flex-shrink: 2; }
