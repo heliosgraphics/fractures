@@ -9,6 +9,13 @@
 		margin-left: 0 !important;
 		margin-right: 0 !important;
 	}
+
+	/*Reset space*/
+	.grid--collapse .grow-1,
+	.grid--collapse .grow-2,
+	.grid--collapse .grow-3,
+	.grid--collapse .grow-4,
+	.grid--collapse .grow-5 { flex-basis: auto; }
 }
 
 .grid { display: flex; }

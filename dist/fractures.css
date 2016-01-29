@@ -80,6 +80,13 @@ html { overflow-y: scroll; }
 		margin-left: 0 !important;
 		margin-right: 0 !important;
 	}
+
+	/*Reset space*/
+	.grid--collapse .grow-1,
+	.grid--collapse .grow-2,
+	.grid--collapse .grow-3,
+	.grid--collapse .grow-4,
+	.grid--collapse .grow-5 { -webkit-flex-basis: auto; -ms-flex-preferred-size: auto; flex-basis: auto; }
 }
 
 .grid { display: -webkit-box; display: -webkit-flex; display: -ms-flexbox; display: flex; }
