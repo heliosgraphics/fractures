@@ -4,8 +4,8 @@
 	.grid--collapse.grid.grid--reverse,
 	.grid--collapse.grid.grid--reverse.grid--column { flex-direction: column-reverse; }
 
-	/*Prepares cell for responsive layout*/
-	.grid--collapse *[class^="cell--"] {
+	/*Prepare direct child elements for responsive layout*/
+	.grid--collapse > * {
 		margin-left: 0 !important;
 		margin-right: 0 !important;
 	}
