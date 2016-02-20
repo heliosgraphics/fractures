@@ -40,7 +40,7 @@
 
 .grid--around { justify-content: space-around; }
 .grid--between { justify-content: space-between; }
-.grid--end { justify-content: flex-end; }
+.grid--right { justify-content: flex-right; }
 
 .grid--end { align-items: flex-end; }
 .grid--start { align-items: flex-start; }
