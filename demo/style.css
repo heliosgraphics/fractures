@@ -1,35 +1,14 @@
+/*Layout*/
 body {
 	background-color: white;
-	color: rgba(40, 45, 90, 1);
+	color: rgba(60, 60, 80, 1);
 
 	font-family: "Arimo", Arial;
 }
 
-.side-nav {
-	top: 0;
-	position: fixed;
-	z-index: 1;
+a { color: rgba(60, 60, 80, 1); }
 
-	width: 100%;
-
-	background: rgba(40, 45, 90, 1);
-	color: white;
-}
-
-.side-nav a {
-	display: inline-block;
-	padding: 1rem;
-
-	color: white;
-
-	font-weight: bold;
-}
-
-.side-nav a.active {
-	background: white;
-	color: rgba(40, 45, 90, 1);
-}
-
+/*Animate*/
 main {
 	opacity: 1;
 	transform: translateY(0);
@@ -41,59 +20,61 @@ main.ng-animate { opacity: 0; }
 main.ng-enter,
 main.ng-enter-active { transform: translateY(-1rem); }
 
-.specimen { padding-top: 8rem; }
-
-/*class indicator tooltip*/
-*[data-class] { position: relative; }
-*[data-class]:before {
-	position: absolute;
-	left: 0;
-	top: 100%;
-
-	padding: .25rem .5rem;
-
-	background: white;
-	content: attr(data-class);
-
-	font-size: 0.75rem;
-	font-weight: bold;
-	white-space: nowrap;
+/*Specimens*/
+.specimen { padding-top: 6rem; }
+.specimen__logo {
+	height: 10rem;
+	width: 10rem;
 }
 
-*[data-class-right]:before {
-	left: auto;
-	right: 0;
-}
+.grid[data-grid] {
+	min-height: 12rem;
+	padding: .5rem;
 
-div[data-cell] {
-	min-height: 1.5rem;
-	min-width: 1.5rem;
-
-	background: rgba(80, 225, 160, 1);
-	border-radius: .125rem;
-	box-shadow: inset 0 0 0 1px rgba(40, 45, 90, .1);
-}
-
-div[data-grid] {
-	min-height: 6rem;
-	padding: .5rem .5rem 1.5rem .5rem;
-
-	border-radius: .25rem .25rem 0 0;
+	border-radius: 2px;
 	box-shadow: inset 0 0 0 1px #dfe0e6;
 }
 
-div[data-grid] + pre {
-	margin-top: -1px;
+.grid[data-grid] > * {
+	height: 2rem;
+	margin: .5rem;
+	width: 2rem;
 
-	background: #dfe0e6;
-	border-radius: 0 0 .25rem .25rem;
-	box-shadow: inset 0 0 0 1px #cdcdd9;
+	background-color: rgba(80, 225, 160, 1);
+	border-radius: 2px;
+	color: white;
 
+	font-weight: bold;
+	line-height: 2rem;
+	text-align: center;
+}
+
+.grid[data-grid] > *:first-child { background-color: rgba(80, 125, 160, 1); }
+
+pre {
 	font-size: 0.75rem;
 	font-family: "Source Code Pro", monospace;
 }
 
-.specimen--index img {
-	height: 10rem;
-	width: 10rem;
+/*Navigation*/
+.nav-top {
+	top: 0;
+	position: fixed;
+	z-index: 1;
+
+	width: 100%;
+
+	background-color: #dfe0e6;
+}
+
+.nav-top a {
+	display: inline-block;
+	padding: 1rem;
+
+	font-weight: bold;
+}
+
+.nav-top a.active {
+	background: white;
+	color: rgba(40, 45, 90, 1);
 }

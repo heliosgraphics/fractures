@@ -1,99 +1,198 @@
-<div class="specimen specimen--grid format">
-	<h1>Grid</h1>
-	<div class="info mb-4">
-		<p>Basic flex utility with predefined, responsive breakpoints.</p>
-		<ul>
-			<li>container</li>
-			<li>grid</li>
-		</ul>
+<div class="specimen">
+	<div class="container">
+		<h1>Grid</h1>
 	</div>
+	<div
+		ng-class="{ 'container--small': containerSmall }"
+		class="container">
+		<div
+			ng-class="{
+				'grid--collapse': gridCollapse,
+				'grid--column': gridColumn,
+				'grid--reverse': gridReverse,
+				'grid--wrap': gridWrap,
 
-	<h5>display</h5>
-	<div class="grid grid--collapse" data-grid>
-		<div class="grow-3 mr-1 mb-1" data-class=".grow-3" data-cell></div>
-		<div class="grow-2 mr-1 mb-1" data-class=".grow-2" data-cell></div>
-		<div class="grow-1 mb-1" data-class=".grow-1" data-cell></div>
+				'grid--start': gridAlign === 'start',
+				'grid--end': gridAlign === 'end',
+
+				'grid--center': gridCenter === 'center',
+				'grid--hcenter': gridCenter === 'hcenter',
+				'grid--vcenter': gridCenter === 'vcenter',
+
+				'grid--around': gridJustify === 'around',
+				'grid--between': gridJustify === 'between',
+				'grid--right': gridJustify === 'right'
+			}"
+			class="grid mb-3"
+			data-grid>
+			<div
+				ng-class="{
+					'grow-1': elemGrow === '1',
+					'grow-2': elemGrow === '2',
+					'grow-3': elemGrow === '3',
+					'grow-4': elemGrow === '4',
+					'grow-5': elemGrow === '5',
+
+					'shrink-1': elemShrink === '1',
+					'shrink-2': elemShrink === '2',
+					'shrink-3': elemShrink === '3',
+					'shrink-4': elemShrink === '4',
+					'shrink-5': elemShrink === '5',
+
+					'order-1': elemOrder === '1',
+					'order-2': elemOrder === '2',
+					'order-3': elemOrder === '3',
+					'order-4': elemOrder === '4',
+					'order-5': elemOrder === '5',
+
+					'self--center': elemAlign === 'center',
+					'self--start': elemAlign === 'start',
+					'self--end': elemAlign === 'end',
+					'self--baseline': elemAlign === 'baseline',
+					'self--stretch': elemAlign === 'stretch'
+				}">1</div>
+			<div
+				ng-bind="$index + 2"
+				ng-class="{
+					'grow-1': elemGrow !== 'false'
+				}"
+				ng-repeat="x in ((x = []) && (x.length=elementCount) && x) track by $index"></div>
+		</div>
 	</div>
-	<pre class="mb-3 p-1">
-		&lt;div class="grid grid--collapse"&gt;
-		&lt;div class="grow-3"&gt;&lt;/div&gt;
-		&lt;div class="grow-2"&gt;&lt;/div&gt;
-		&lt;div class="grow-1"&gt;&lt;/div&gt;
-		&lt;/div&gt;
-	</pre>
+	<div class="container">
+		<div class="grid grid--collapse">
 
-	<h5>flex-direction</h5>
-	<div class="grid grid--collapse grid--reverse" data-grid>
-		<div class="grow-1 mb-1" data-class=".grow-1 (1)" data-cell></div>
-		<div class="grow-1 mr-1 mb-1" data-class=".grow-1 (2)" data-cell></div>
-		<div class="grow-1 mr-1 mb-1" data-class=".grow-1 (3)" data-cell></div>
+			<!-- Container options -->
+			<div class="grow-1 mr-1 mb-2">
+				<h3 class="normal">container</h3>
+				<ul>
+					<li>
+						<input ng-model="containerSmall" type="checkbox" id="containerSmall">
+						<label for="containerSmall">container--small</label>
+					</li>
+				</ul>
+			</div>
+
+			<!-- Grid options -->
+			<div class="grow-2 mr-1 mb-2">
+				<h3 class="normal">grid</h3>
+				<ul>
+					<li>
+						<input ng-model="gridCollapse" type="checkbox" id="gridCollapse">
+						<label for="gridCollapse">grid--collapse</label>
+					</li>
+					<li>
+						<input ng-model="gridColumn" type="checkbox" id="gridColumn">
+						<label for="gridColumn">grid--column</label>
+					</li>
+					<li>
+						<input ng-model="gridReverse" type="checkbox" id="gridReverse">
+						<label for="gridReverse">grid--reverse</label>
+					</li>
+					<li>
+						<input ng-model="gridWrap" type="checkbox" id="gridWrap">
+						<label for="gridWrap">grid--wrap</label>
+					</li>
+					<li>
+						center helpers
+						<select
+							ng-init="gridCenter = 'false'"
+							ng-model="gridCenter">
+							<option value="false">false</option>
+							<option value="center">grid--center</option>
+							<option value="hcenter">grid--hcenter</option>
+							<option value="vcenter">grid--vcenter</option>
+						</select>
+					</li>
+					<li>
+						justify
+						<select
+							ng-init="gridJustify = 'false'"
+							ng-model="gridJustify">
+							<option value="false">false</option>
+							<option value="around">grid--around</option>
+							<option value="between">grid--between</option>
+							<option value="right">grid--right</option>
+						</select>
+					</li>
+					<li>
+						grid align
+						<select
+							ng-init="gridAlign = 'false'"
+							ng-model="gridAlign">
+							<option value="false">false</option>
+							<option value="start">grid--start</option>
+							<option value="end">grid--end</option>
+						</select>
+					</li>
+				</ul>
+			</div>
+			<div class="grow-2 mb-2">
+				<h3 class="normal">element</h3>
+				<ul>
+					<li ng-init="elementCount = 6">
+						<input type="number" ng-model="elementCount" min="1" max="15">
+						<label for="elementCount">elementCount</label>
+					</li>
+					<li>
+						element grow
+						<select
+							ng-init="elemGrow = 'false'"
+							ng-model="elemGrow">
+							<option value="false">false</option>
+							<option value="1">grow-1</option>
+							<option value="2">grow-2</option>
+							<option value="3">grow-3</option>
+							<option value="4">grow-4</option>
+							<option value="5">grow-5</option>
+						</select>
+					</li>
+					<li>
+						<!-- TODO -->
+						element shrink
+						<select
+							ng-init="elemShrink = 'false'"
+							ng-model="elemShrink">
+							<option value="false">false</option>
+							<option value="1">shrink-1</option>
+							<option value="2">shrink-2</option>
+							<option value="3">shrink-3</option>
+							<option value="4">shrink-4</option>
+							<option value="5">shrink-5</option>
+						</select>
+					</li>
+					<li>
+						element order
+						<select
+							ng-init="elemOrder = 'false'"
+							ng-model="elemOrder">
+							<option value="false">false</option>
+							<option value="1">order-1</option>
+							<option value="2">order-2</option>
+							<option value="3">order-3</option>
+							<option value="4">order-4</option>
+							<option value="5">order-5</option>
+						</select>
+					</li>
+
+					<li>
+						element align
+						<select
+							ng-init="elemAlign = 'false'"
+							ng-model="elemAlign">
+							<option value="false">false</option>
+							<option value="center">self--center</option>
+							<option value="start">self--start</option>
+							<option value="end">self--end</option>
+							<option value="baseline">self--baseline</option>
+							<option value="stretch">self--stretch</option>
+						</select>
+					</li>
+				</ul>
+			</div>
+		</div>
+
+		<!-- TODO: Add docs -->
+		<!-- Basic flex utility with predefined, responsive breakpoints. -->
 	</div>
-	<pre class="mb-3 p-1">
-		&lt;div class="grid grid--collapse grid--reverse"&gt;&lt;/div&gt;
-	</pre>
-
-	<h5>align-items, justify-content</h5>
-	<div class="grid grid--center" data-grid><div data-cell></div></div>
-	<pre class="mb-3 p-1">
-		&lt;div class="grid grid--center"&gt;&lt;/div&gt;
-	</pre>
-
-	<h5>align-items</h5>
-	<div class="grid grid--hcenter" data-grid><div data-cell></div></div>
-	<pre class="mb-3 p-1">
-		&lt;div class="grid grid--hcenter"&gt;&lt;/div&gt;
-	</pre>
-
-	<div class="grid grid--top" data-grid><div data-cell></div></div>
-	<pre class="mb-3 p-1">
-		&lt;div class="grid grid--top"&gt;&lt;/div&gt;
-	</pre>
-
-	<div class="grid grid--bottom" data-grid><div data-cell></div></div>
-	<pre class="mb-3 p-1">
-		&lt;div class="grid grid--bottom"&gt;&lt;/div&gt;
-	</pre>
-
-	<h5>justify-content</h5>
-	<div class="grid grid--vcenter" data-grid><div data-cell></div></div>
-	<pre class="mb-3 p-1">
-		&lt;div class="grid grid--vcenter"&gt;&lt;/div&gt;
-	</pre>
-
-	<div class="grid grid--right" data-grid><div data-cell></div></div>
-	<pre class="mb-3 p-1">
-		&lt;div class="grid grid--right"&gt;&lt;/div&gt;
-	</pre>
-
-	<div class="grid grid--around" data-grid>
-		<div data-cell></div>
-		<div data-cell></div>
-	</div>
-	<pre class="mb-3 p-1">
-		&lt;div class="grid grid--around"&gt;&lt;/div&gt;
-	</pre>
-
-	<div class="grid grid--between" data-grid>
-		<div data-cell></div>
-		<div data-cell></div>
-	</div>
-	<pre class="mb-3 p-1">
-		&lt;div class="grid grid--between"&gt;&lt;/div&gt;
-	</pre>
-
-	<h5>align-self</h5>
-	<div class="grid grid--between" data-grid>
-		<div class="self--start" data-cell></div>
-		<div class="self--center" data-cell></div>
-		<div class="self--end" data-cell></div>
-		<div class="self--baseline" data-cell></div>
-		<div class="self--stretch" data-cell></div>
-	</div>
-	<pre class="mb-3 p-1">
-		&lt;div class="self--start"&gt;&lt;/div&gt;
-		&lt;div class="self--center"&gt;&lt;/div&gt;
-		&lt;div class="self--end"&gt;&lt;/div&gt;
-		&lt;div class="self--baseline"&gt;&lt;/div&gt;
-		&lt;div class="self--stretch"&gt;&lt;/div&gt;
-	</pre>
 </div>
