@@ -47,16 +47,25 @@
 					'self--baseline': elemAlign === 'baseline',
 					'self--stretch': elemAlign === 'stretch',
 
-					'p-1': elemMargin === 'p-1'
-				}">1</div>
+					'm-0': elemMargin === 'm-0',
+					'm-1': elemMargin === 'm-1',
+					'm-2': elemMargin === 'm-2',
+					'm-3': elemMargin === 'm-3',
+					'm-4': elemMargin === 'm-4',
+
+					'p-0': elemPadding === 'p-0',
+					'p-1': elemPadding === 'p-1',
+					'p-2': elemPadding === 'p-2',
+					'p-3': elemPadding === 'p-3',
+					'p-4': elemPadding === 'p-4',
+
+
+				}"><span>1</span></div>
 			<div
 				ng-bind="$index + 2"
-				ng-class="{
-					'grow-1': elemGrow !== 'false'
-				}"
+				ng-class="{ 'grow-1': elemGrow !== 'false' }"
 				ng-repeat="x in ((x = []) && (x.length=elementCount) && x) track by $index"></div>
 		</div>
-
 		<div
 			class="clearfix pt-1"
 			ng-init="elementCount = 1">
@@ -180,21 +189,42 @@
 							<option value="stretch">self--stretch</option>
 						</select>
 					</li>
-
+					<li>
+						element margin
+						<select
+							ng-init="elemMargin = 'm-0'"
+							ng-model="elemMargin">
+							<option value="m-0">m-0</option>
+							<option value="m-1">m-1</option>
+							<option value="m-2">m-2</option>
+							<option value="m-3">m-3</option>
+							<option value="m-4">m-4</option>
+						</select>
+					</li>
 					<li>
 						element padding
-						elemMargin
+						<select
+							ng-init="elemPadding = 'p-0'"
+							ng-model="elemPadding">
+							<option value="p-0">p-0</option>
+							<option value="p-1">p-1</option>
+							<option value="p-2">p-2</option>
+							<option value="p-3">p-3</option>
+							<option value="p-4">p-4</option>
+						</select>
 					</li>
 				</ul>
 			</div>
 		</div>
 
-		<!-- Output -->
+		<!-- TODO Output -->
 		<h2>Output</h2>
 		<pre class="p-1">
 			&lt;div class="m-{0,1,2,3,4}"&gt;&lt;/div&gt;
 			&lt;div class="p-{0,1,2,3,4}"&gt;&lt;/div&gt;
 		</pre>
+
+		<!-- TODO Element helpers -->
 
 		<!-- TODO: Add docs -->
 		<!-- Basic flex utility with predefined, responsive breakpoints. -->
