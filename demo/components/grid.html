@@ -2,6 +2,8 @@
 	<div class="container">
 		<h1>Grid</h1>
 	</div>
+
+	<!-- Playground -->
 	<div
 		ng-class="{ 'container--small': containerSmall }"
 		class="container">
@@ -23,7 +25,7 @@
 				'grid--between': gridJustify === 'between',
 				'grid--right': gridJustify === 'right'
 			}"
-			class="grid mb-3"
+			class="grid"
 			data-grid>
 			<div
 				ng-class="{
@@ -49,7 +51,9 @@
 					'self--start': elemAlign === 'start',
 					'self--end': elemAlign === 'end',
 					'self--baseline': elemAlign === 'baseline',
-					'self--stretch': elemAlign === 'stretch'
+					'self--stretch': elemAlign === 'stretch',
+
+					'p-1': elemMargin === 'p-1'
 				}">1</div>
 			<div
 				ng-bind="$index + 2"
@@ -58,13 +62,23 @@
 				}"
 				ng-repeat="x in ((x = []) && (x.length=elementCount) && x) track by $index"></div>
 		</div>
+
+		<div
+			class="clearfix pt-1"
+			ng-init="elementCount = 1">
+			<a class="btn float-right" ng-click="elementCount = elementCount + 1" ng-class="{ 'disabled': elementCount >= 14 }">more</a>
+			<a class="btn float-right" ng-click="elementCount = elementCount - 1" ng-class="{ 'disabled': elementCount <= 1 }">less</a>
+		</div>
 	</div>
+
 	<div class="container">
-		<div class="grid grid--collapse">
+
+		<!-- Options -->
+		<div class="grid grid--collapse mh-2">
 
 			<!-- Container options -->
 			<div class="grow-1 mr-1 mb-2">
-				<h3 class="normal">container</h3>
+				<h4 class="normal">container</h4>
 				<ul>
 					<li>
 						<input ng-model="containerSmall" type="checkbox" id="containerSmall">
@@ -75,7 +89,7 @@
 
 			<!-- Grid options -->
 			<div class="grow-2 mr-1 mb-2">
-				<h3 class="normal">grid</h3>
+				<h4 class="normal">grid</h4>
 				<ul>
 					<li>
 						<input ng-model="gridCollapse" type="checkbox" id="gridCollapse">
@@ -127,13 +141,11 @@
 					</li>
 				</ul>
 			</div>
+
+			<!-- Element options -->
 			<div class="grow-2 mb-2">
-				<h3 class="normal">element</h3>
+				<h4 class="normal">element</h4>
 				<ul>
-					<li ng-init="elementCount = 6">
-						<input type="number" ng-model="elementCount" min="1" max="15">
-						<label for="elementCount">elementCount</label>
-					</li>
 					<li>
 						element grow
 						<select
@@ -147,8 +159,9 @@
 							<option value="5">grow-5</option>
 						</select>
 					</li>
-					<li>
-						<!-- TODO -->
+
+					<!-- TODO -->
+					<!-- <li>
 						element shrink
 						<select
 							ng-init="elemShrink = 'false'"
@@ -160,7 +173,7 @@
 							<option value="4">shrink-4</option>
 							<option value="5">shrink-5</option>
 						</select>
-					</li>
+					</li> -->
 					<li>
 						element order
 						<select
@@ -188,9 +201,21 @@
 							<option value="stretch">self--stretch</option>
 						</select>
 					</li>
+
+					<li>
+						element padding
+						elemMargin
+					</li>
 				</ul>
 			</div>
 		</div>
+
+		<!-- Output -->
+		<h2>Output</h2>
+		<pre class="p-1">
+			&lt;div class="m-{0,1,2,3,4}"&gt;&lt;/div&gt;
+			&lt;div class="p-{0,1,2,3,4}"&gt;&lt;/div&gt;
+		</pre>
 
 		<!-- TODO: Add docs -->
 		<!-- Basic flex utility with predefined, responsive breakpoints. -->
