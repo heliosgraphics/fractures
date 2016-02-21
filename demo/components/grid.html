@@ -3,64 +3,64 @@
 		<h1>Grid</h1>
 	</div>
 
-	<!-- Playground -->
+	<!-- Playground grid -->
 	<div
-		ng-class="{ 'container--small': containerSmall }"
+		ng-init="container = {}; grid = {}; element = {};"
+		ng-class="{ 'container--small': container.small }"
 		class="container">
-		<div
-			ng-class="{
-				'grid--collapse': gridCollapse,
-				'grid--column': gridColumn,
-				'grid--reverse': gridReverse,
-				'grid--wrap': gridWrap,
+		<div ng-class="{
+			'grid--collapse': gridCollapse,
+			'grid--column': gridColumn,
+			'grid--reverse': gridReverse,
+			'grid--wrap': gridWrap,
+			'grid--100': grid100,
 
-				'grid--start': gridAlign === 'start',
-				'grid--end': gridAlign === 'end',
+			'grid--start': gridAlign === 'start',
+			'grid--end': gridAlign === 'end',
 
-				'grid--center': gridCenter === 'center',
-				'grid--hcenter': gridCenter === 'hcenter',
-				'grid--vcenter': gridCenter === 'vcenter',
+			'grid--center': gridCenter === 'center',
+			'grid--hcenter': gridCenter === 'hcenter',
+			'grid--vcenter': gridCenter === 'vcenter',
 
-				'grid--around': gridJustify === 'around',
-				'grid--between': gridJustify === 'between',
-				'grid--right': gridJustify === 'right'
-			}"
-			class="grid"
-			data-grid>
-			<div
-				ng-class="{
-					'grow-1': elemGrow === '1',
-					'grow-2': elemGrow === '2',
-					'grow-3': elemGrow === '3',
-					'grow-4': elemGrow === '4',
-					'grow-5': elemGrow === '5',
+			'grid--around': gridJustify === 'around',
+			'grid--between': gridJustify === 'between',
+			'grid--right': gridJustify === 'right'
+		}"
+		class="grid"
+		data-grid>
 
-					'order-1': elemOrder === '1',
-					'order-2': elemOrder === '2',
-					'order-3': elemOrder === '3',
-					'order-4': elemOrder === '4',
-					'order-5': elemOrder === '5',
+			<!-- Elements -->
+			<div ng-class="{
+				'grow-1': elemGrow === '1',
+				'grow-2': elemGrow === '2',
+				'grow-3': elemGrow === '3',
+				'grow-4': elemGrow === '4',
+				'grow-5': elemGrow === '5',
 
-					'self--center': elemAlign === 'center',
-					'self--start': elemAlign === 'start',
-					'self--end': elemAlign === 'end',
-					'self--baseline': elemAlign === 'baseline',
-					'self--stretch': elemAlign === 'stretch',
+				'order-1': elemOrder === '1',
+				'order-2': elemOrder === '2',
+				'order-3': elemOrder === '3',
+				'order-4': elemOrder === '4',
+				'order-5': elemOrder === '5',
 
-					'm-0': elemMargin === 'm-0',
-					'm-1': elemMargin === 'm-1',
-					'm-2': elemMargin === 'm-2',
-					'm-3': elemMargin === 'm-3',
-					'm-4': elemMargin === 'm-4',
+				'self--center': elemAlign === 'center',
+				'self--start': elemAlign === 'start',
+				'self--end': elemAlign === 'end',
+				'self--baseline': elemAlign === 'baseline',
+				'self--stretch': elemAlign === 'stretch',
 
-					'p-0': elemPadding === 'p-0',
-					'p-1': elemPadding === 'p-1',
-					'p-2': elemPadding === 'p-2',
-					'p-3': elemPadding === 'p-3',
-					'p-4': elemPadding === 'p-4',
+				'm-0': elemMargin === 'm-0',
+				'm-1': elemMargin === 'm-1',
+				'm-2': elemMargin === 'm-2',
+				'm-3': elemMargin === 'm-3',
+				'm-4': elemMargin === 'm-4',
 
-
-				}"><span>1</span></div>
+				'p-0': elemPadding === 'p-0',
+				'p-1': elemPadding === 'p-1',
+				'p-2': elemPadding === 'p-2',
+				'p-3': elemPadding === 'p-3',
+				'p-4': elemPadding === 'p-4',
+			}"><span>1</span></div>
 			<div
 				ng-bind="$index + 2"
 				ng-class="{ 'grow-1': elemGrow !== 'false' }"
@@ -73,7 +73,6 @@
 			<a class="btn float-right" ng-click="elementCount = elementCount - 1" ng-class="{ 'disabled': elementCount <= 1 }">less</a>
 		</div>
 	</div>
-
 	<div class="container">
 
 		<!-- Options -->
@@ -81,66 +80,75 @@
 
 			<!-- Container options -->
 			<div class="grow-1 mr-1 mb-2">
-				<h4 class="normal">container</h4>
+				<h4 class="normal">Container</h4>
 				<ul>
 					<li>
-						<input ng-model="containerSmall" type="checkbox" id="containerSmall">
-						<label for="containerSmall">container--small</label>
+						<input ng-model="container.small" type="checkbox" id="containerSmall">
+						<label for="containerSmall">small</label>
 					</li>
 				</ul>
 			</div>
 
 			<!-- Grid options -->
 			<div class="grow-2 mr-1 mb-2">
-				<h4 class="normal">grid</h4>
+				<h4 class="normal">Grid</h4>
 				<ul>
 					<li>
 						<input ng-model="gridCollapse" type="checkbox" id="gridCollapse">
-						<label for="gridCollapse">grid--collapse</label>
+						<label for="gridCollapse">responsive</label>
 					</li>
 					<li>
 						<input ng-model="gridColumn" type="checkbox" id="gridColumn">
-						<label for="gridColumn">grid--column</label>
+						<label for="gridColumn">column direction</label>
 					</li>
 					<li>
 						<input ng-model="gridReverse" type="checkbox" id="gridReverse">
-						<label for="gridReverse">grid--reverse</label>
+						<label for="gridReverse">reverse order</label>
 					</li>
 					<li>
 						<input ng-model="gridWrap" type="checkbox" id="gridWrap">
-						<label for="gridWrap">grid--wrap</label>
+						<label for="gridWrap">wrap elements</label>
 					</li>
 					<li>
-						center helpers
-						<select
-							ng-init="gridCenter = 'false'"
-							ng-model="gridCenter">
-							<option value="false">false</option>
-							<option value="center">grid--center</option>
-							<option value="hcenter">grid--hcenter</option>
-							<option value="vcenter">grid--vcenter</option>
-						</select>
+						<input ng-model="grid100" type="checkbox" id="grid100">
+						<label for="grid100">size = screen</label>
 					</li>
-					<li>
-						justify
-						<select
-							ng-init="gridJustify = 'false'"
-							ng-model="gridJustify">
-							<option value="false">false</option>
-							<option value="around">grid--around</option>
-							<option value="between">grid--between</option>
-							<option value="right">grid--right</option>
-						</select>
+					<li ng-init="gridCenter = 'false'">
+						<input ng-model="gridCenter" type="radio" value="false" id="gridCenterNone">
+						<label for="gridCenterNone">none</label>
+
+						<input ng-model="gridCenter" type="radio" value="center" id="gridCenterCenter">
+						<label for="gridCenterCenter">center</label>
+
+						<input ng-model="gridCenter" type="radio" value="hcenter" id="gridCenterHcenter">
+						<label for="gridCenterHcenter">hcenter</label>
+
+						<input ng-model="gridCenter" type="radio" value="vcenter" id="gridCenterVcenter">
+						<label for="gridCenterVcenter">vcenter</label>
 					</li>
-					<li>
-						grid align
-						<select
-							ng-init="gridAlign = 'false'"
-							ng-model="gridAlign">
-							<option value="false">false</option>
-							<option value="start">grid--start</option>
-							<option value="end">grid--end</option>
-						</select>
+					<li ng-init="gridJustify = 'false'">
+						<input ng-model="gridJustify" type="radio" value="false" id="gridJustifyNone">
+						<label for="gridJustifyNone">none</label>
+
+						<input ng-model="gridJustify" type="radio" value="around" id="gridJustifyAround">
+						<label for="gridJustifyAround">around</label>
+
+						<input ng-model="gridJustify" type="radio" value="between" id="gridJustifyBetween">
+						<label for="gridJustifyBetween">between</label>
+
+						<input ng-model="gridJustify" type="radio" value="right" id="gridJustifyRight">
+						<label for="gridJustifyRight">right</label>
+					</li>
+
+					<li ng-init="gridAlign = 'false'">
+						<input ng-model="gridAlign" type="radio" value="false" id="gridAlignNone">
+						<label for="gridAlignNone">none</label>
+
+						<input ng-model="gridAlign" type="radio" value="start" id="gridAlignStart">
+						<label for="gridAlignStart">start</label>
+
+						<input ng-model="gridAlign" type="radio" value="end" id="gridAlignEnd">
+						<label for="gridAlignEnd">end</label>
 					</li>
 				</ul>
 			</div>
@@ -219,14 +227,16 @@
 
 		<!-- TODO Output -->
 		<h2>Output</h2>
-		<pre class="p-1">
-			&lt;div class="m-{0,1,2,3,4}"&gt;&lt;/div&gt;
-			&lt;div class="p-{0,1,2,3,4}"&gt;&lt;/div&gt;
-		</pre>
+		<pre class="p-1">&lt;div class="<span>container</span><b ng-if="value" ng-repeat="(class, value) in container"> container--{{ class }}</b>"&gt;
+	&lt;div class="<span>grid</span>"&gt;
+		&lt;div class="<span>grow-1</span>"&gt;&lt;/div&gt;
+	&lt;/div&gt;
+&lt;/div&gt;</pre>
 
 		<!-- TODO Element helpers -->
-
-		<!-- TODO: Add docs -->
+		<!-- TODO Breakpoints -->
+		<!-- TODO Atom size -->
+		<!-- TODO Add docs -->
 		<!-- Basic flex utility with predefined, responsive breakpoints. -->
 	</div>
 </div>

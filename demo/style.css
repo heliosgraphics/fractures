@@ -24,7 +24,11 @@ main.ng-enter,
 main.ng-enter-active { transform: translateY(-1rem); }
 
 /*Specimens*/
-.specimen { padding-top: 6rem; }
+.specimen {
+	padding-bottom: 3rem;
+	padding-top: 6rem;
+}
+
 .specimen__logo {
 	height: 10rem;
 	width: 10rem;
@@ -50,6 +54,12 @@ main.ng-enter-active { transform: translateY(-1rem); }
 	text-align: center;
 }
 
+.grid[data-grid].grid--100 {
+	z-index: 3;
+
+	pointer-events: none;
+}
+
 .grid[data-grid] > * > span {
 	float: left;
 	height: 100%;
@@ -57,6 +67,7 @@ main.ng-enter-active { transform: translateY(-1rem); }
 
 	box-shadow: inset 0 0 0 2px rgba(60, 105, 130, 1);
 }
+
 .grid[data-grid] > *:first-child { background-color: rgba(80, 125, 160, 1); }
 
 input,
@@ -93,7 +104,12 @@ pre {
 
 	font-size: 0.75rem;
 	font-family: "Source Code Pro", monospace;
+	tab-size: 4;
+	white-space: pre;
 }
+
+pre span { color: gray; }
+pre b { color: red; }
 
 /*Navigation*/
 .nav-top {
