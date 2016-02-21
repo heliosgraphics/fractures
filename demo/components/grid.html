@@ -17,6 +17,7 @@
 
 			'grid--start': grid.align === 'start',
 			'grid--end': grid.align === 'end',
+			'grid--baseline': grid.align === 'baseline',
 
 			'grid--center': grid.center === 'center',
 			'grid--hcenter': grid.center === 'hcenter',
@@ -144,6 +145,9 @@
 						<input ng-model="grid.align" type="radio" value="false" id="gridAlignNone">
 						<label for="gridAlignNone">none</label>
 
+						<input ng-model="grid.align" type="radio" value="baseline" id="gridAlignBaseline">
+						<label for="gridAlignBaseline">baseline</label>
+
 						<input ng-model="grid.align" type="radio" value="start" id="gridAlignStart">
 						<label for="gridAlignStart">start</label>
 
@@ -262,6 +266,7 @@
 		<!-- TODO Breakpoints -->
 		<!-- TODO Atom size -->
 		<!-- TODO Add docs -->
+		<!-- TODO Usage -->
 		<!-- Basic flex utility with predefined, responsive breakpoints. -->
 	</div>
 </div>

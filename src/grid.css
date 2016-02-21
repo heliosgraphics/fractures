@@ -42,6 +42,7 @@
 .grid--between { justify-content: space-between; }
 .grid--right { justify-content: flex-end; }
 
+.grid--baseline { align-items: baseline; }
 .grid--end { align-items: flex-end; }
 .grid--start { align-items: flex-start; }
 
