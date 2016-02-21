@@ -40,10 +40,21 @@
 
 .grid--around { justify-content: space-around; }
 .grid--between { justify-content: space-between; }
-.grid--end { justify-content: flex-end; }
+.grid--right { justify-content: flex-end; }
 
+.grid--baseline { align-items: baseline; }
 .grid--end { align-items: flex-end; }
 .grid--start { align-items: flex-start; }
+
+/*Helpers*/
+.grid--screen {
+	left: 0;
+	position: absolute;
+	top: 0;
+
+	height: 100vh;
+	width: 100%;
+}
 
 /*Self*/
 .self--center { align-self: center; }
@@ -65,13 +76,6 @@
 .grow-3,
 .grow-4,
 .grow-5 { flex-basis: 0; }
-
-/*Shrink*/
-.shrink-1 { flex-shrink: 1; }
-.shrink-2 { flex-shrink: 2; }
-.shrink-3 { flex-shrink: 3; }
-.shrink-4 { flex-shrink: 4; }
-.shrink-5 { flex-shrink: 5; }
 
 /*Order*/
 .order-1 { order: 1; }
