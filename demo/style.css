@@ -54,11 +54,7 @@ main.ng-enter-active { transform: translateY(-1rem); }
 	text-align: center;
 }
 
-.grid[data-grid].grid--100 {
-	z-index: 3;
-
-	pointer-events: none;
-}
+.grid[data-grid].grid--screen { pointer-events: none; }
 
 .grid[data-grid] > * > span {
 	float: left;
@@ -97,6 +93,7 @@ select {
 	pointer-events: none;
 }
 
+/*Output*/
 pre {
 	background-color: #dfe0e6;
 	user-select: all;
@@ -105,11 +102,20 @@ pre {
 	font-size: 0.75rem;
 	font-family: "Source Code Pro", monospace;
 	tab-size: 4;
-	white-space: pre;
+	white-space: normal;
 }
 
-pre span { color: gray; }
+pre span { color: blue; }
 pre b { color: red; }
+
+pre em {
+	float: left;
+	opacity: 0;
+	width: 1.5rem;
+
+	user-select: none;
+	-webkit-user-select: none;
+}
 
 /*Navigation*/
 .nav-top {

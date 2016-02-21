@@ -46,7 +46,7 @@
 .grid--start { align-items: flex-start; }
 
 /*Helpers*/
-.grid--100 {
+.grid--screen {
 	left: 0;
 	position: absolute;
 	top: 0;
