@@ -1,7 +1,19 @@
+/*
+
+colors:
+
+navy: 3C3C50
+navy-light: 84849C
+green: 50E1A0
+dark-green: 3BAE7A
+light: DFE0E6
+
+*/
+
 /*Layout*/
 body {
 	background-color: white;
-	color: rgba(60, 60, 80, 1);
+	color: #3C3C50;
 
 	user-select: none;
 	-webkit-user-select: none;
@@ -9,75 +21,82 @@ body {
 	font-family: "Arimo", Arial;
 }
 
-a { color: rgba(60, 60, 80, 1); }
+a { color: #3C3C50; }
 
-/*Animate*/
-main {
-	opacity: 1;
-	transform: translateY(0);
-	transition: all 120ms ease;
-}
-
-main.ng-animate { opacity: 0; }
-
-main.ng-enter,
-main.ng-enter-active { transform: translateY(-1rem); }
-
-/*Specimens*/
-.specimen {
-	padding-bottom: 3rem;
-	padding-top: 6rem;
-}
-
-.specimen__logo {
+.logo {
 	height: 10rem;
 	width: 10rem;
 }
 
+/*Navigation*/
+.nav-top {
+	top: 0;
+	position: fixed;
+	z-index: 1;
+
+	width: 100%;
+
+	background: white;
+}
+
+.nav-top .active { color: #50E1A0; }
+
+/*Animate*/
+.main {
+	opacity: 1;
+	padding-top: 6rem;
+
+	transform: translateY(0);
+	transition: all 260ms ease;
+}
+
+.main.ng-enter,
+.main.ng-enter-active { transform: translateY(-1rem); }
+.main.ng-animate { opacity: 0; }
+
+/*Demo grid*/
 .grid[data-grid] {
 	min-height: 11rem;
 	padding: .5rem;
 
 	border-radius: 2px;
-	box-shadow: inset 0 0 0 1px #dfe0e6;
+	box-shadow: inset 0 0 0 1px #DFE0E6;
 }
 
+.grid[data-grid].grid--screen { pointer-events: none; }
+
+/*Demo element*/
 .grid[data-grid] > * {
 	height: 5rem;
 	width: 5rem;
 
-	background-color: rgba(80, 225, 160, 1);
-	color: white;
+	background-color: #DFE0E6;
+	color: #84849C;
 
 	font-weight: bold;
 	line-height: 5rem;
 	text-align: center;
 }
 
-.grid[data-grid].grid--screen { pointer-events: none; }
-
 .grid[data-grid] > * > span {
 	float: left;
 	height: 100%;
 	width: 100%;
 
-	box-shadow: inset 0 0 0 2px rgba(60, 105, 130, 1);
+	box-shadow: inset 0 0 0 2px #3BAE7A;
 }
 
-.grid[data-grid] > *:first-child { background-color: rgba(80, 125, 160, 1); }
-
-input,
-select {
-	padding: .25rem;
-
-	border: 1px solid #aaa;
+.grid[data-grid] > *:first-child {
+	background-color: #50E1A0;
+	color: white;
 }
 
+/*Demo controls*/
 .btn {
 	margin: 0 0 .25rem .25rem;
 	padding: 0 .75rem;
 
-	box-shadow: inset 0 0 0 1px #dfe0e6;
+	box-shadow: inset 0 0 0 1px #DFE0E6;
 	border-radius: 2px;
 	cursor: pointer;
 
@@ -88,14 +107,14 @@ select {
 }
 
 .btn.disabled {
-	color: rgba(60, 60, 80, .5);
+	color: #84849C;
 
 	pointer-events: none;
 }
 
 /*Output*/
 pre {
-	background-color: #dfe0e6;
+	background-color: #DFE0E6;
 	user-select: all;
 	-webkit-user-select: all;
 
@@ -115,26 +134,4 @@ pre em {
 
 	user-select: none;
 	-webkit-user-select: none;
-}
-
-/*Navigation*/
-.nav-top {
-	top: 0;
-	position: fixed;
-	z-index: 1;
-
-	width: 100%;
-
-	background: white;
-}
-
-.nav-top a {
-	display: inline-block;
-	padding: 1rem;
-
-	font-weight: bold;
-}
-
-.nav-top a.active {
-	box-shadow: inset 0 -2px 0 0 #dfe0e6;
 }
