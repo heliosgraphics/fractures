@@ -66,13 +66,6 @@
 .grow-4,
 .grow-5 { flex-basis: 0; }
 
-/*Shrink*/
-.shrink-1 { flex-shrink: 1; }
-.shrink-2 { flex-shrink: 2; }
-.shrink-3 { flex-shrink: 3; }
-.shrink-4 { flex-shrink: 4; }
-.shrink-5 { flex-shrink: 5; }
-
 /*Order*/
 .order-1 { order: 1; }
 .order-2 { order: 2; }
