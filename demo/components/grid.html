@@ -31,47 +31,46 @@
 		data-grid>
 
 			<!-- Elements -->
-			<div ng-class="{
-				'grow-1': element.grow === '1',
-				'grow-2': element.grow === '2',
-				'grow-3': element.grow === '3',
-				'grow-4': element.grow === '4',
-				'grow-5': element.grow === '5',
+			<div
+			ng-class="{
+				'grow-1': element.grow === 1,
+				'grow-2': element.grow === 2,
+				'grow-3': element.grow === 3,
+				'grow-4': element.grow === 4,
+				'grow-5': element.grow === 5,
 
-				'order-1': element.order === '1',
-				'order-2': element.order === '2',
-				'order-3': element.order === '3',
-				'order-4': element.order === '4',
-				'order-5': element.order === '5',
+				'order-1': element.order === 1,
+				'order-2': element.order === 2,
+				'order-3': element.order === 3,
+				'order-4': element.order === 4,
+				'order-5': element.order === 5,
 
 				'self--center': element.align === 'center',
 				'self--start': element.align === 'start',
 				'self--end': element.align === 'end',
 				'self--baseline': element.align === 'baseline',
 				'self--stretch': element.align === 'stretch',
-
-				'm-0': element.margin === 'm-0',
-				'm-1': element.margin === 'm-1',
-				'm-2': element.margin === 'm-2',
-				'm-3': element.margin === 'm-3',
-				'm-4': element.margin === 'm-4',
-
-				'p-0': element.padding === 'p-0',
-				'p-1': element.padding === 'p-1',
-				'p-2': element.padding === 'p-2',
-				'p-3': element.padding === 'p-3',
-				'p-4': element.padding === 'p-4',
-			}"><span>1</span></div>
+			}"
+			class="{{ element.marginpos }}-{{ element.margin }} {{ element.paddingpos }}-{{ element.padding }}">
+				<span>1</span>
+			</div>
 			<div
 				ng-bind="$index + 2"
-				ng-class="{ 'grow-1': element.grow !== 'false' }"
+				ng-class="{
+					'grow-1': element.grow,
+					'element--sized': demo.elementSize
+				}"
 				ng-repeat="x in ((x = []) && (x.length=elementCount) && x) track by $index"></div>
 		</div>
+
+		<!-- Grid options -->
 		<div
 			class="clearfix pt-1"
 			ng-init="elementCount = 1">
-			<a class="btn float-right" ng-click="elementCount = elementCount + 1" ng-class="{ 'disabled': elementCount >= 14 }">more</a>
-			<a class="btn float-right" ng-click="elementCount = elementCount - 1" ng-class="{ 'disabled': elementCount <= 1 }">less</a>
+			<div class="btn-group float-right">
+				<a class="btn" ng-click="elementCount = elementCount - 1" ng-class="{ 'disabled': elementCount <= 1 }">less</a>
+				<a class="btn" ng-click="elementCount = elementCount + 1" ng-class="{ 'disabled': elementCount >= 14 }">more</a>
+			</div>
 		</div>
 	</div>
 	<div class="container">
@@ -93,6 +92,32 @@
 			<!-- Grid options -->
 			<div class="grow-2 mr-1 mb-2">
 				<h4 class="normal">Grid</h4>
+				<ul class="mb-3">
+					<li ng-init="grid.center = false" class="mb-1">
+						<div class="btn-group clearfix">
+							<a class="btn" ng-click="grid.center = false" ng-class="{ 'active': !grid.center }">Center: -</a>
+							<a class="btn" ng-click="grid.center = 'center'" ng-class="{ 'active': grid.center === 'center' }">center</a>
+							<a class="btn" ng-click="grid.center = 'hcenter'" ng-class="{ 'active': grid.center === 'hcenter' }">hcenter</a>
+							<a class="btn" ng-click="grid.center = 'vcenter'" ng-class="{ 'active': grid.center === 'vcenter' }">vcenter</a>
+						</div>
+					</li>
+					<li ng-init="grid.justify = false" class="mb-1">
+						<div class="btn-group clearfix">
+							<a class="btn" ng-click="grid.justify = false" ng-class="{ 'active': !grid.justify }">Justify: -</a>
+							<a class="btn" ng-click="grid.justify = 'around'" ng-class="{ 'active': grid.justify === 'around' }">around</a>
+							<a class="btn" ng-click="grid.justify = 'between'" ng-class="{ 'active': grid.justify === 'between' }">between</a>
+							<a class="btn" ng-click="grid.justify = 'right'" ng-class="{ 'active': grid.justify === 'right' }">right</a>
+						</div>
+					</li>
+					<li ng-init="grid.align = false">
+						<div class="btn-group clearfix">
+							<a class="btn" ng-click="grid.align = false" ng-class="{ 'active': !grid.align }">Align: -</a>
+							<a class="btn" ng-click="grid.align = 'baseline'" ng-class="{ 'active': grid.align === 'baseline' }">baseline</a>
+							<a class="btn" ng-click="grid.align = 'start'" ng-class="{ 'active': grid.align === 'start' }">start</a>
+							<a class="btn" ng-click="grid.align = 'end'" ng-class="{ 'active': grid.align === 'end' }">end</a>
+						</div>
+					</li>
+				</ul>
 				<ul>
 					<li>
 						<input ng-model="grid.options.collapse" type="checkbox" id="grid.options.collapse">
@@ -114,123 +139,86 @@
 						<input ng-model="grid.options.screen" type="checkbox" id="grid.options.screen">
 						<label for="grid.options.screen">size = screen</label>
 					</li>
-					<li ng-init="grid.center = 'false'">
-						<input ng-model="grid.center" type="radio" value="false" id="grid.center.none">
-						<label for="grid.center.none">none</label>
-
-						<input ng-model="grid.center" type="radio" value="center" id="grid.center.center">
-						<label for="grid.center.center">center</label>
-
-						<input ng-model="grid.center" type="radio" value="hcenter" id="grid.center.hcenter">
-						<label for="grid.center.hcenter">hcenter</label>
-
-						<input ng-model="grid.center" type="radio" value="vcenter" id="grid.center.vcenter">
-						<label for="grid.center.vcenter">vcenter</label>
-					</li>
-					<li ng-init="grid.justify = 'false'">
-						<input ng-model="grid.justify" type="radio" value="false" id="gridJustifyNone">
-						<label for="gridJustifyNone">none</label>
-
-						<input ng-model="grid.justify" type="radio" value="around" id="gridJustifyAround">
-						<label for="gridJustifyAround">around</label>
-
-						<input ng-model="grid.justify" type="radio" value="between" id="gridJustifyBetween">
-						<label for="gridJustifyBetween">between</label>
-
-						<input ng-model="grid.justify" type="radio" value="right" id="gridJustifyRight">
-						<label for="gridJustifyRight">right</label>
-					</li>
-
-					<li ng-init="grid.align = 'false'">
-						<input ng-model="grid.align" type="radio" value="false" id="gridAlignNone">
-						<label for="gridAlignNone">none</label>
-
-						<input ng-model="grid.align" type="radio" value="baseline" id="gridAlignBaseline">
-						<label for="gridAlignBaseline">baseline</label>
-
-						<input ng-model="grid.align" type="radio" value="start" id="gridAlignStart">
-						<label for="gridAlignStart">start</label>
-
-						<input ng-model="grid.align" type="radio" value="end" id="gridAlignEnd">
-						<label for="gridAlignEnd">end</label>
-					</li>
 				</ul>
 			</div>
 
 			<!-- Element options -->
 			<div class="grow-2 mb-2">
 				<h4 class="normal">element</h4>
+				<ul class="mb-3">
+					<li ng-init="element.grow = false" class="mb-1">
+						<div class="btn-group clearfix">
+							<a class="btn" ng-click="element.grow = false" ng-class="{ 'active': !element.grow }">Grow: -</a>
+							<a class="btn" ng-click="element.grow = 1" ng-class="{ 'active': element.grow === 1 }">1</a>
+							<a class="btn" ng-click="element.grow = 2" ng-class="{ 'active': element.grow === 2 }">2</a>
+							<a class="btn" ng-click="element.grow = 3" ng-class="{ 'active': element.grow === 3 }">3</a>
+							<a class="btn" ng-click="element.grow = 4" ng-class="{ 'active': element.grow === 4 }">4</a>
+						</div>
+					</li>
+					<li ng-init="element.order = false" class="mb-1">
+						<div class="btn-group clearfix">
+							<a class="btn" ng-click="element.order = false" ng-class="{ 'active': !element.order }">Order: -</a>
+							<a class="btn" ng-click="element.order = 1" ng-class="{ 'active': element.order === 1 }">1</a>
+							<a class="btn" ng-click="element.order = 2" ng-class="{ 'active': element.order === 2 }">2</a>
+							<a class="btn" ng-click="element.order = 3" ng-class="{ 'active': element.order === 3 }">3</a>
+							<a class="btn" ng-click="element.order = 4" ng-class="{ 'active': element.order === 4 }">4</a>
+						</div>
+					</li>
+					<li ng-init="element.align = false" class="mb-1">
+						<div class="btn-group clearfix">
+							<a class="btn" ng-click="element.align = false" ng-class="{ 'active': !element.align }">Align: -</a>
+							<a class="btn" ng-click="element.align = 'center'" ng-class="{ 'active': element.align === 'center' }">center</a>
+							<a class="btn" ng-click="element.align = 'start'" ng-class="{ 'active': element.align === 'start' }">start</a>
+							<a class="btn" ng-click="element.align = 'end'" ng-class="{ 'active': element.align === 'end' }">end</a>
+							<a class="btn" ng-click="element.align = 'baseline'" ng-class="{ 'active': element.align === 'baseline' }">baseline</a>
+							<a class="btn" ng-click="element.align = 'stretch'" ng-class="{ 'active': element.align === 'stretch' }">stretch</a>
+						</div>
+					</li>
+				</ul>
+				<ul class="mb-3">
+					<li ng-init="element.margin = false" class="mb-1">
+						<div class="btn-group clearfix">
+							<a class="btn" ng-click="element.margin = false" ng-class="{ 'active': !element.margin }">Margin: -</a>
+							<a class="btn" ng-click="element.margin = '0'" ng-class="{ 'active': element.margin === '0' }">0</a>
+							<a class="btn" ng-click="element.margin = 1" ng-class="{ 'active': element.margin === 1 }">1</a>
+							<a class="btn" ng-click="element.margin = 2" ng-class="{ 'active': element.margin === 2 }">2</a>
+							<a class="btn" ng-click="element.margin = 3" ng-class="{ 'active': element.margin === 3 }">3</a>
+							<a class="btn" ng-click="element.margin = 4" ng-class="{ 'active': element.margin === 4 }">4</a>
+						</div>
+					</li>
+					<li ng-init="element.marginpos = 'm'" class="mb-1">
+						<div class="btn-group clearfix">
+							<a class="btn" ng-click="element.marginpos = 'm'" ng-class="{ 'active': element.marginpos === 'm' }">m</a>
+							<a class="btn" ng-click="element.marginpos = 'mh'" ng-class="{ 'active': element.marginpos === 'mh' }">mh</a>
+							<a class="btn" ng-click="element.marginpos = 'mv'" ng-class="{ 'active': element.marginpos === 'mv' }">mv</a>
+							<a class="btn" ng-click="element.marginpos = 'ml'" ng-class="{ 'active': element.marginpos === 'ml' }">ml</a>
+							<a class="btn" ng-click="element.marginpos = 'mr'" ng-class="{ 'active': element.marginpos === 'mr' }">mr</a>
+							<a class="btn" ng-click="element.marginpos = 'mb'" ng-class="{ 'active': element.marginpos === 'mb' }">mb</a>
+							<a class="btn" ng-click="element.marginpos = 'mt'" ng-class="{ 'active': element.marginpos === 'mt' }">mt</a>
+						</div>
+					</li>
+				</ul>
 				<ul>
-					<li ng-init="element.grow = 'false'">
-						<input ng-model="element.grow" type="radio" value="false" id="element.grow.none">
-						<label for="element.grow.none">grow false</label>
-
-						<input ng-model="element.grow" type="radio" value="1" id="element.grow.1">
-						<label for="element.grow.1">grow 1</label>
-
-						<input ng-model="element.grow" type="radio" value="2" id="element.grow.2">
-						<label for="element.grow.2">grow 2</label>
-
-						<input ng-model="element.grow" type="radio" value="3" id="element.grow.3">
-						<label for="element.grow.3">grow 3</label>
-
-						<input ng-model="element.grow" type="radio" value="4" id="element.grow.4">
-						<label for="element.grow.4">grow 4</label>
+					<li ng-init="element.padding = false" class="mb-1">
+						<div class="btn-group clearfix">
+							<a class="btn" ng-click="element.padding = false" ng-class="{ 'active': !element.padding }">Padding: -</a>
+							<a class="btn" ng-click="element.padding = '0'" ng-class="{ 'active': element.padding === '0' }">0</a>
+							<a class="btn" ng-click="element.padding = 1" ng-class="{ 'active': element.padding === 1 }">1</a>
+							<a class="btn" ng-click="element.padding = 2" ng-class="{ 'active': element.padding === 2 }">2</a>
+							<a class="btn" ng-click="element.padding = 3" ng-class="{ 'active': element.padding === 3 }">3</a>
+							<a class="btn" ng-click="element.padding = 4" ng-class="{ 'active': element.padding === 4 }">4</a>
+						</div>
 					</li>
-					<li ng-init="element.order = 'false'">
-						<input ng-model="element.order" type="radio" value="false" id="element.order.none">
-						<label for="element.order.none">order false</label>
-
-						<input ng-model="element.order" type="radio" value="1" id="element.order.1">
-						<label for="element.order.1">order 1</label>
-
-						<input ng-model="element.order" type="radio" value="2" id="element.order.2">
-						<label for="element.order.2">order 2</label>
-
-						<input ng-model="element.order" type="radio" value="3" id="element.order.3">
-						<label for="element.order.3">order 3</label>
-
-						<input ng-model="element.order" type="radio" value="4" id="element.order.4">
-						<label for="element.order.4">order 4</label>
-					</li>
-					<li>
-						element align
-						<select
-							ng-init="element.align = 'false'"
-							ng-model="element.align">
-							<option value="false">false</option>
-							<option value="center">self--center</option>
-							<option value="start">self--start</option>
-							<option value="end">self--end</option>
-							<option value="baseline">self--baseline</option>
-							<option value="stretch">self--stretch</option>
-						</select>
-					</li>
-					<li>
-						margin
-						<select
-							ng-init="element.margin = 'false'"
-							ng-model="element.margin">
-							<option value="false">false</option>
-							<option value="m-0">m-0</option>
-							<option value="m-1">m-1</option>
-							<option value="m-2">m-2</option>
-							<option value="m-3">m-3</option>
-							<option value="m-4">m-4</option>
-						</select>
-					</li>
-					<li>
-						padding
-						<select
-							ng-init="element.padding = 'false'"
-							ng-model="element.padding">
-							<option value="false">false</option>
-							<option value="p-0">p-0</option>
-							<option value="p-1">p-1</option>
-							<option value="p-2">p-2</option>
-							<option value="p-3">p-3</option>
-							<option value="p-4">p-4</option>
-						</select>
+					<li ng-init="element.paddingpos = 'p'" class="mb-1">
+						<div class="btn-group clearfix">
+							<a class="btn" ng-click="element.paddingpos = 'p'" ng-class="{ 'active': element.paddingpos === 'p' }">p</a>
+							<a class="btn" ng-click="element.paddingpos = 'ph'" ng-class="{ 'active': element.paddingpos === 'ph' }">ph</a>
+							<a class="btn" ng-click="element.paddingpos = 'pv'" ng-class="{ 'active': element.paddingpos === 'pv' }">pv</a>
+							<a class="btn" ng-click="element.paddingpos = 'pl'" ng-class="{ 'active': element.paddingpos === 'pl' }">pl</a>
+							<a class="btn" ng-click="element.paddingpos = 'pr'" ng-class="{ 'active': element.paddingpos === 'pr' }">pr</a>
+							<a class="btn" ng-click="element.paddingpos = 'pb'" ng-class="{ 'active': element.paddingpos === 'pb' }">pb</a>
+							<a class="btn" ng-click="element.paddingpos = 'pt'" ng-class="{ 'active': element.paddingpos === 'pt' }">pt</a>
+						</div>
 					</li>
 				</ul>
 			</div>
@@ -246,18 +234,18 @@
 			<em>&rarr;</em>&lt;div class="<span>grid</span><b
 						ng-if="value"
 						ng-repeat="(class, value) in grid.options"> grid--{{ class }}</b><b
-						ng-if="grid.align !== 'false'"> grid--{{ grid.align }}</b><b
-						ng-if="grid.center !== 'false'"> grid--{{ grid.center }}</b><b
-						ng-if="grid.justify !== 'false'"> grid--{{ grid.justify }}</b>"&gt;<br>
+						ng-if="grid.align"> grid--{{ grid.align }}</b><b
+						ng-if="grid.center"> grid--{{ grid.center }}</b><b
+						ng-if="grid.justify"> grid--{{ grid.justify }}</b>"&gt;<br>
 					<em>&rarr;</em><em>&rarr;</em>&lt;div class="<b
-						ng-if="element.grow !== 'false'">grow-{{ element.grow }} </b><b
-						ng-if="element.order !== 'false'">order-{{ element.order }} </b><b
-						ng-if="element.align !== 'false'">self--{{ element.align }} </b><b
-						ng-if="element.margin !== 'false'">{{ element.margin }} </b><b
-						ng-if="element.padding !== 'false'">{{ element.padding }}</b>"&gt;&lt;/div&gt;<br>
+						ng-if="element.grow">grow-{{ element.grow }} </b><b
+						ng-if="element.order">order-{{ element.order }} </b><b
+						ng-if="element.align">self--{{ element.align }} </b><b
+						ng-if="element.margin">{{ element.marginpos }}-{{ element.margin }} </b><b
+						ng-if="element.padding">{{ element.paddingpos }}-{{ element.padding }}</b>"&gt;&lt;/div&gt;<br>
 					<div
 						ng-repeat="x in ((x = []) && (x.length=elementCount) && x) track by $index">
-						<em>&rarr;</em><em>&rarr;</em>&lt;div class="<b ng-if="element.grow !== 'false'">grow-1</b>"</span>&gt;&lt;/div&gt;</div>
+						<em>&rarr;</em><em>&rarr;</em>&lt;div class="<b ng-if="element.grow">grow-1</b>"</span>&gt;&lt;/div&gt;</div>
 					<em>&rarr;</em>&lt;/div&gt;<br>
 			&lt;/div&gt;
 		</pre>
