@@ -1,3 +1,3 @@
 # fractures
 
-Opinionated, atomic CSS toolkit.
+Opinionated, atomic CSS toolkit. A WIP.
