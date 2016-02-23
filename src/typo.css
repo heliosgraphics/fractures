@@ -6,13 +6,13 @@ h4, .h4 { font-size: var(--h4); }
 h5, .h5 { font-size: var(--h5); }
 h6, .h6 { font-size: var(--h6); }
 
-h1, .h1,
-h2, .h2,
-h3, .h3 { margin-bottom: calc(var(--font-size) / 2); }
+.format h1, .format .h1,
+.format h2, .format .h2,
+.format h3, .format .h3 { margin-bottom: calc(var(--font-size) / 2); }
 
-h4, .h4,
-h5, .h5,
-h6, .h6 { margin-bottom: calc(var(--font-size) / 4); }
+.format h4, .format .h4,
+.format h5, .format .h5,
+.format h6, .format .h6 { margin-bottom: calc(var(--font-size) / 4); }
 
 /*Defaults*/
 pre {
