@@ -1,3 +1,4 @@
+var autoprefixer = require("autoprefixer");
 var gulp = require("gulp");
 var postcss = require("gulp-postcss");
 var postcssimport = require("postcss-import");
@@ -10,27 +11,29 @@ var size = require("gulp-size");
 var files = [ "./src/fractures.css" ];
 var postcssProcessors = [
 	postcssimport(),
-	cssnext()
+	cssnext(),
+	autoprefixer({ browsers: ["last 1 version"] })
 ];
 
 gulp.task("default", function() {
 	return gulp.src(files)
 		.pipe(postcss(postcssProcessors))
-		.pipe(gulp.dest("./dist"));
+		.pipe(gulp.dest("./dist"))
+		.pipe(size({ showFiles: true }));
 });
 
 gulp.task("build", function() {
 	return gulp.src(files)
 		.pipe(postcss(postcssProcessors))
-		.pipe(size())
 		.pipe(nano())
-		.pipe(size())
 		.pipe(rename("fractures.min.css"))
 		.pipe(gulp.dest("./dist"))
+		.pipe(size({ showFiles: true }))
+
 		.pipe(gzip())
-		.pipe(size())
 		.pipe(rename("fractures.min.css.gz"))
-		.pipe(gulp.dest("./dist"));
+		.pipe(gulp.dest("./dist"))
+		.pipe(size({ showFiles: true, gzip: true }));
 });
 
 gulp.task("watch", function() {

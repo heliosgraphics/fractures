@@ -66,10 +66,10 @@ li { list-style-type: none; }
 .container.container--small { width: 480px; }
 
 @media (max-width: 720px) {
-	.grid--collapse.grid { -webkit-box-orient: vertical; -webkit-box-direction: normal; -webkit-flex-direction: column; -ms-flex-direction: column; flex-direction: column; }
+	.grid--collapse.grid { flex-direction: column; }
 
 	.grid--collapse.grid.grid--reverse,
-	.grid--collapse.grid.grid--reverse.grid--column { -webkit-box-orient: vertical; -webkit-box-direction: reverse; -webkit-flex-direction: column-reverse; -ms-flex-direction: column-reverse; flex-direction: column-reverse; }
+	.grid--collapse.grid.grid--reverse.grid--column { flex-direction: column-reverse; }
 
 	/*Prepare direct child elements for responsive layout*/
 	.grid--collapse > * {
@@ -82,51 +82,46 @@ li { list-style-type: none; }
 	.grid--collapse .grow-2,
 	.grid--collapse .grow-3,
 	.grid--collapse .grow-4,
-	.grid--collapse .grow-5 { -webkit-flex-basis: auto; -ms-flex-preferred-size: auto; flex-basis: auto; }
+	.grid--collapse .grow-5 { flex-basis: auto; }
 }
 
 .grid { display: -webkit-box; display: -webkit-flex; display: -ms-flexbox; display: flex; }
 
 /*Wrap*/
 
-.grid--wrap { -webkit-flex-wrap: wrap; -ms-flex-wrap: wrap; flex-wrap: wrap; }
+.grid--wrap { flex-wrap: wrap; }
 
 /*Directions*/
 
-.grid--reverse { -webkit-box-orient: horizontal; -webkit-box-direction: reverse; -webkit-flex-direction: row-reverse; -ms-flex-direction: row-reverse; flex-direction: row-reverse; }
+.grid--reverse { flex-direction: row-reverse; }
 
-.grid--reverse.grid--column { -webkit-box-orient: vertical; -webkit-box-direction: reverse; -webkit-flex-direction: column-reverse; -ms-flex-direction: column-reverse; flex-direction: column-reverse; }
+.grid--reverse.grid--column { flex-direction: column-reverse; }
 
-.grid--column { -webkit-box-orient: vertical; -webkit-box-direction: normal; -webkit-flex-direction: column; -ms-flex-direction: column; flex-direction: column; }
+.grid--column { flex-direction: column; }
 
 /*Positions*/
 
 .grid--center {
-	-webkit-box-align: center;
-	-webkit-align-items: center;
-	    -ms-flex-align: center;
+	    -ms-grid-row-align: center;
 	        align-items: center;
-	-webkit-box-pack: center;
-	-webkit-justify-content: center;
-	    -ms-flex-pack: center;
-	        justify-content: center;
+	justify-content: center;
 }
 
-.grid--hcenter { -webkit-box-align: center; -webkit-align-items: center; -ms-flex-align: center; align-items: center; }
+.grid--hcenter { -ms-grid-row-align: center; align-items: center; }
 
-.grid--vcenter { -webkit-box-pack: center; -webkit-justify-content: center; -ms-flex-pack: center; justify-content: center; }
+.grid--vcenter { justify-content: center; }
 
-.grid--around { -webkit-justify-content: space-around; -ms-flex-pack: distribute; justify-content: space-around; }
+.grid--around { justify-content: space-around; }
 
-.grid--between { -webkit-box-pack: justify; -webkit-justify-content: space-between; -ms-flex-pack: justify; justify-content: space-between; }
+.grid--between { justify-content: space-between; }
 
-.grid--right { -webkit-box-pack: end; -webkit-justify-content: flex-end; -ms-flex-pack: end; justify-content: flex-end; }
+.grid--right { justify-content: flex-end; }
 
-.grid--baseline { -webkit-box-align: baseline; -webkit-align-items: baseline; -ms-flex-align: baseline; align-items: baseline; }
+.grid--baseline { -ms-grid-row-align: baseline; align-items: baseline; }
 
-.grid--end { -webkit-box-align: end; -webkit-align-items: flex-end; -ms-flex-align: end; align-items: flex-end; }
+.grid--end { -ms-grid-row-align: flex-end; align-items: flex-end; }
 
-.grid--start { -webkit-box-align: start; -webkit-align-items: flex-start; -ms-flex-align: start; align-items: flex-start; }
+.grid--start { -ms-grid-row-align: flex-start; align-items: flex-start; }
 
 /*Helpers*/
 
@@ -141,25 +136,25 @@ li { list-style-type: none; }
 
 /*Self*/
 
-.self--center { -webkit-align-self: center; -ms-flex-item-align: center; align-self: center; }
+.self--center { align-self: center; }
 
-.self--start { -webkit-align-self: flex-start; -ms-flex-item-align: start; align-self: flex-start; }
+.self--start { align-self: flex-start; }
 
-.self--end { -webkit-align-self: flex-end; -ms-flex-item-align: end; align-self: flex-end; }
+.self--end { align-self: flex-end; }
 
-.self--baseline { -webkit-align-self: baseline; -ms-flex-item-align: baseline; align-self: baseline; }
+.self--baseline { align-self: baseline; }
 
 /*Grow*/
 
-.grow-1 { -webkit-box-flex: 1; -webkit-flex-grow: 1; -ms-flex-positive: 1; flex-grow: 1; }
+.grow-1 { flex-grow: 1; }
 
-.grow-2 { -webkit-box-flex: 2; -webkit-flex-grow: 2; -ms-flex-positive: 2; flex-grow: 2; }
+.grow-2 { flex-grow: 2; }
 
-.grow-3 { -webkit-box-flex: 3; -webkit-flex-grow: 3; -ms-flex-positive: 3; flex-grow: 3; }
+.grow-3 { flex-grow: 3; }
 
-.grow-4 { -webkit-box-flex: 4; -webkit-flex-grow: 4; -ms-flex-positive: 4; flex-grow: 4; }
+.grow-4 { flex-grow: 4; }
 
-.grow-5 { -webkit-box-flex: 5; -webkit-flex-grow: 5; -ms-flex-positive: 5; flex-grow: 5; }
+.grow-5 { flex-grow: 5; }
 
 /*Grid intentions*/
 
@@ -167,19 +162,19 @@ li { list-style-type: none; }
 .grow-2,
 .grow-3,
 .grow-4,
-.grow-5 { -webkit-flex-basis: 0; -ms-flex-preferred-size: 0; flex-basis: 0; }
+.grow-5 { flex-basis: 0; }
 
 /*Order*/
 
-.order-1 { -webkit-box-ordinal-group: 2; -webkit-order: 1; -ms-flex-order: 1; order: 1; }
+.order-1 { order: 1; }
 
-.order-2 { -webkit-box-ordinal-group: 3; -webkit-order: 2; -ms-flex-order: 2; order: 2; }
+.order-2 { order: 2; }
 
-.order-3 { -webkit-box-ordinal-group: 4; -webkit-order: 3; -ms-flex-order: 3; order: 3; }
+.order-3 { order: 3; }
 
-.order-4 { -webkit-box-ordinal-group: 5; -webkit-order: 4; -ms-flex-order: 4; order: 4; }
+.order-4 { order: 4; }
 
-.order-5 { -webkit-box-ordinal-group: 6; -webkit-order: 5; -ms-flex-order: 5; order: 5; }
+.order-5 { order: 5; }
 
 /*Element helpers*/
 
