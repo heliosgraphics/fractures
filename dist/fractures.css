@@ -24,19 +24,8 @@
 *:before,
 *:after { box-sizing: border-box; }
 
-li { list-style-type: none; }
-
-a { text-decoration: none; }
-
-img { max-width: 100%; }
-
 html,
-body {
-	position: relative;
-
-	font-size: 16px;
-	line-height: 1.5;
-}
+body { position: relative; }
 
 html { overflow-y: scroll; }
 
@@ -417,6 +406,19 @@ html { overflow-y: scroll; }
 	padding-right: 64px;
 }
 
+/* NOTE: will be removed */
+
+body {
+	font-size: 16px;
+	line-height: 1.5;
+}
+
+img { max-width: 100%; }
+
+li { list-style-type: none; }
+
+a { text-decoration: none; }
+
 /*Headers*/
 
 h1, .h1 { font-size: 36px; font-size: 2.25rem; }
@@ -431,14 +433,6 @@ h5, .h5 { font-size: 20px; font-size: 1.25rem; }
 
 h6, .h6 { font-size: 16px; font-size: 1rem; }
 
-.format h1, .format .h1,
-.format h2, .format .h2,
-.format h3, .format .h3 { margin-bottom: 8px; }
-
-.format h4, .format .h4,
-.format h5, .format .h5,
-.format h6, .format .h6 { margin-bottom: 4px; }
-
 /*Defaults*/
 
 pre {
@@ -446,14 +440,8 @@ pre {
 	word-wrap: break-word;
 }
 
-hr {
-	padding: 0;
-
-	border: 0;
-	border-top: 1px solid lightgray;
-}
-
-b { font-weight: bold; }
+b,
+strong { font-weight: bold; }
 
 blockquote,
 i,
@@ -462,23 +450,6 @@ em { font-style: italic; }
 blockquote { font-size: 20px; font-size: 1.25rem; }
 
 small { font-size: 12px; font-size: 0.75rem; }
-
-/*Formatted content*/
-
-.format p,
-.format hr,
-.format blockquote,
-.format ul,
-.format ol { margin-bottom: 24px; }
-
-.format ul,
-.format ol { margin-left: 24px; }
-
-.format ul > li { list-style-type: disc; }
-
-.format ol > li { list-style-type: decimal; }
-
-.format a { font-weight: bold; }
 
 /*Utility*/
 
@@ -499,3 +470,28 @@ small { font-size: 12px; font-size: 0.75rem; }
 .right { text-align: right; }
 
 .uppercase { text-transform: uppercase; }
+
+/* Formatted content */
+
+.format h1, .format .h1,
+.format h2, .format .h2,
+.format h3, .format .h3 { margin-bottom: 8px; margin-bottom: .5rem; }
+
+.format h4, .format .h4,
+.format h5, .format .h5,
+.format h6, .format .h6 { margin-bottom: 4px; margin-bottom: .25rem; }
+
+.format p,
+.format hr,
+.format blockquote,
+.format ul,
+.format ol { margin-bottom: 24px; margin-bottom: 1.5rem; }
+
+.format ul,
+.format ol { margin-left: 24px; margin-left: 1.5rem; }
+
+.format ul > li { list-style-type: disc; }
+
+.format ol > li { list-style-type: decimal; }
+
+.format a { font-weight: bold; }

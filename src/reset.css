@@ -24,17 +24,6 @@
 *:before,
 *:after { box-sizing: border-box; }
 
-li { list-style-type: none; }
-a { text-decoration: none; }
-
-img { max-width: 100%; }
-
 html,
-body {
-	position: relative;
-
-	font-size: var(--font-size);
-	line-height: var(--line-height);
-}
-
+body { position: relative; }
 html { overflow-y: scroll; }

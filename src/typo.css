@@ -1,18 +1,22 @@
+/* NOTE: will be removed */
+
+body {
+	font-size: 16px;
+	line-height: 1.5;
+}
+
+img { max-width: 100%; }
+
+li { list-style-type: none; }
+a { text-decoration: none; }
+
 /*Headers*/
-h1, .h1 { font-size: var(--h1); }
-h2, .h2 { font-size: var(--h2); }
-h3, .h3 { font-size: var(--h3); }
-h4, .h4 { font-size: var(--h4); }
-h5, .h5 { font-size: var(--h5); }
-h6, .h6 { font-size: var(--h6); }
-
-.format h1, .format .h1,
-.format h2, .format .h2,
-.format h3, .format .h3 { margin-bottom: calc(var(--font-size) / 2); }
-
-.format h4, .format .h4,
-.format h5, .format .h5,
-.format h6, .format .h6 { margin-bottom: calc(var(--font-size) / 4); }
+h1, .h1 { font-size: 2.25rem; }
+h2, .h2 { font-size: 2rem; }
+h3, .h3 { font-size: 1.75rem; }
+h4, .h4 { font-size: 1.5rem; }
+h5, .h5 { font-size: 1.25rem; }
+h6, .h6 { font-size: 1rem; }
 
 /*Defaults*/
 pre {
@@ -20,38 +24,19 @@ pre {
 	word-wrap: break-word;
 }
 
-hr {
-	padding: 0;
+b,
+strong { font-weight: bold; }
 
-	border: 0;
-	border-top: 1px solid lightgray;
-}
-
-b { font-weight: var(--bold); }
 blockquote,
 i,
 em { font-style: italic; }
 
-blockquote { font-size: var(--h5); }
-small { font-size: var(--h7); }
-
-/*Formatted content*/
-.format p,
-.format hr,
-.format blockquote,
-.format ul,
-.format ol { margin-bottom: calc(var(--font-size) * var(--line-height)); }
-
-.format ul,
-.format ol { margin-left: calc(var(--font-size) * var(--line-height)); }
-
-.format ul > li { list-style-type: disc; }
-.format ol > li { list-style-type: decimal; }
-.format a { font-weight: var(--bold); }
+blockquote { font-size: 1.25rem; }
+small { font-size: 0.75rem; }
 
 /*Utility*/
 .normal { font-weight: normal; }
-.bold { font-weight: var(--bold); }
+.bold { font-weight: bold; }
 
 .italic { font-style: italic; }
 
@@ -63,3 +48,25 @@ small { font-size: var(--h7); }
 .right { text-align: right; }
 
 .uppercase { text-transform: uppercase; }
+
+/* Formatted content */
+.format h1, .format .h1,
+.format h2, .format .h2,
+.format h3, .format .h3 { margin-bottom: .5rem; }
+
+.format h4, .format .h4,
+.format h5, .format .h5,
+.format h6, .format .h6 { margin-bottom: .25rem; }
+
+.format p,
+.format hr,
+.format blockquote,
+.format ul,
+.format ol { margin-bottom: 1.5rem; }
+
+.format ul,
+.format ol { margin-left: 1.5rem; }
+
+.format ul > li { list-style-type: disc; }
+.format ol > li { list-style-type: decimal; }
+.format a { font-weight: bold; }
