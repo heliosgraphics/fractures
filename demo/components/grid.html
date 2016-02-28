@@ -48,8 +48,7 @@
 				'self--center': element.align === 'center',
 				'self--start': element.align === 'start',
 				'self--end': element.align === 'end',
-				'self--baseline': element.align === 'baseline',
-				'self--stretch': element.align === 'stretch',
+				'self--baseline': element.align === 'baseline'
 			}"
 			class="{{ element.marginpos }}-{{ element.margin }} {{ element.paddingpos }}-{{ element.padding }}">
 				<span>1</span>
@@ -79,15 +78,6 @@
 		<div class="grid grid--collapse my-2">
 			<div class="grow-1 mr-1 mb-2">
 
-				<!-- Container options -->
-				<h4 class="normal">Container</h4>
-				<ul class="mb-3">
-					<li>
-						<input ng-model="container.small" type="checkbox" id="containerSmall">
-						<label for="containerSmall">small</label>
-					</li>
-				</ul>
-
 				<!-- Grid options -->
 				<h4 class="normal">Grid</h4>
 				<ul class="mb-3">
@@ -111,15 +101,15 @@
 					</li>
 					<li ng-init="grid.center = false">
 						<div class="btn-group clearfix">
-							<a class="btn active">center helpers &rarr;</a>
+							<a class="btn active">center &rarr;</a>
 							<a class="btn" ng-click="grid.center = false" ng-class="{ 'active': !grid.center }">none</a>
-							<a class="btn" ng-click="grid.center = 'center'" ng-class="{ 'active': grid.center === 'center' }">center</a>
+							<a class="btn" ng-click="grid.center = 'center'" ng-class="{ 'active': grid.center === 'center' }">center *</a>
 							<a class="btn" ng-click="grid.center = 'hcenter'" ng-class="{ 'active': grid.center === 'hcenter' }">hcenter</a>
 							<a class="btn" ng-click="grid.center = 'vcenter'" ng-class="{ 'active': grid.center === 'vcenter' }">vcenter</a>
 						</div>
 					</li>
 				</ul>
-				<ul>
+				<ul class="mb-3">
 					<li>
 						<input ng-model="grid.options.collapse" type="checkbox" id="grid.options.collapse">
 						<label for="grid.options.collapse">responsive</label>
@@ -138,18 +128,28 @@
 					</li>
 					<li>
 						<input ng-model="grid.options.screen" type="checkbox" id="grid.options.screen">
-						<label for="grid.options.screen">size = screen</label>
+						<label for="grid.options.screen">size = screen *</label>
+					</li>
+				</ul>
+
+				<!-- Container options -->
+				<h4 class="normal">Container</h4>
+				<ul class="mb-3">
+					<li>
+						<input ng-model="container.small" type="checkbox" id="containerSmall">
+						<label for="containerSmall">small</label>
 					</li>
 				</ul>
 			</div>
 
 			<!-- Element options -->
 			<div class="grow-1 mb-2">
-				<h4 class="normal">element</h4>
+				<h4 class="normal">Element</h4>
 				<ul class="mb-3">
 					<li ng-init="element.grow = false" class="mb-1">
 						<div class="btn-group clearfix">
-							<a class="btn" ng-click="element.grow = false" ng-class="{ 'active': !element.grow }">Grow: -</a>
+							<a class="btn active">flex-grow &rarr;</a>
+							<a class="btn" ng-click="element.grow = false" ng-class="{ 'active': !element.grow }">none</a>
 							<a class="btn" ng-click="element.grow = 1" ng-class="{ 'active': element.grow === 1 }">1</a>
 							<a class="btn" ng-click="element.grow = 2" ng-class="{ 'active': element.grow === 2 }">2</a>
 							<a class="btn" ng-click="element.grow = 3" ng-class="{ 'active': element.grow === 3 }">3</a>
@@ -158,7 +158,8 @@
 					</li>
 					<li ng-init="element.order = false" class="mb-1">
 						<div class="btn-group clearfix">
-							<a class="btn" ng-click="element.order = false" ng-class="{ 'active': !element.order }">Order: -</a>
+							<a class="btn active">order &rarr;</a>
+							<a class="btn" ng-click="element.order = false" ng-class="{ 'active': !element.order }">none</a>
 							<a class="btn" ng-click="element.order = 1" ng-class="{ 'active': element.order === 1 }">1</a>
 							<a class="btn" ng-click="element.order = 2" ng-class="{ 'active': element.order === 2 }">2</a>
 							<a class="btn" ng-click="element.order = 3" ng-class="{ 'active': element.order === 3 }">3</a>
@@ -167,19 +168,23 @@
 					</li>
 					<li ng-init="element.align = false" class="mb-1">
 						<div class="btn-group clearfix">
-							<a class="btn" ng-click="element.align = false" ng-class="{ 'active': !element.align }">Align: -</a>
-							<a class="btn" ng-click="element.align = 'center'" ng-class="{ 'active': element.align === 'center' }">center</a>
-							<a class="btn" ng-click="element.align = 'start'" ng-class="{ 'active': element.align === 'start' }">start</a>
-							<a class="btn" ng-click="element.align = 'end'" ng-class="{ 'active': element.align === 'end' }">end</a>
+							<a class="btn active">align-self &rarr;</a>
+							<a class="btn" ng-click="element.align = false" ng-class="{ 'active': !element.align }">stretch</a>
 							<a class="btn" ng-click="element.align = 'baseline'" ng-class="{ 'active': element.align === 'baseline' }">baseline</a>
-							<a class="btn" ng-click="element.align = 'stretch'" ng-class="{ 'active': element.align === 'stretch' }">stretch</a>
+							<a class="btn" ng-click="element.align = 'start'" ng-class="{ 'active': element.align === 'start' }">flex-start</a>
+							<a class="btn" ng-click="element.align = 'center'" ng-class="{ 'active': element.align === 'center' }">center</a>
+							<a class="btn" ng-click="element.align = 'end'" ng-class="{ 'active': element.align === 'end' }">flex-end</a>
 						</div>
 					</li>
 				</ul>
+
+				<!-- Box -->
+				<h4 class="normal">Box</h4>
 				<ul class="mb-3">
 					<li ng-init="element.margin = false" class="mb-1">
 						<div class="btn-group clearfix">
-							<a class="btn" ng-click="element.margin = false" ng-class="{ 'active': !element.margin }">Margin: -</a>
+							<a class="btn active">margin &rarr;</a>
+							<a class="btn" ng-click="element.margin = false" ng-class="{ 'active': !element.margin }">none</a>
 							<a class="btn" ng-click="element.margin = '0'" ng-class="{ 'active': element.margin === '0' }">0</a>
 							<a class="btn" ng-click="element.margin = 1" ng-class="{ 'active': element.margin === 1 }">1</a>
 							<a class="btn" ng-click="element.margin = 2" ng-class="{ 'active': element.margin === 2 }">2</a>
@@ -189,6 +194,7 @@
 					</li>
 					<li ng-init="element.marginpos = 'm'" class="mb-1">
 						<div class="btn-group clearfix">
+							<a class="btn active">margin position &rarr;</a>
 							<a class="btn" ng-click="element.marginpos = 'm'" ng-class="{ 'active': element.marginpos === 'm' }">m</a>
 							<a class="btn" ng-click="element.marginpos = 'mx'" ng-class="{ 'active': element.marginpos === 'mx' }">mx</a>
 							<a class="btn" ng-click="element.marginpos = 'my'" ng-class="{ 'active': element.marginpos === 'my' }">my</a>
@@ -202,7 +208,8 @@
 				<ul>
 					<li ng-init="element.padding = false" class="mb-1">
 						<div class="btn-group clearfix">
-							<a class="btn" ng-click="element.padding = false" ng-class="{ 'active': !element.padding }">Padding: -</a>
+							<a class="btn active">padding &rarr;</a>
+							<a class="btn" ng-click="element.padding = false" ng-class="{ 'active': !element.padding }">none</a>
 							<a class="btn" ng-click="element.padding = '0'" ng-class="{ 'active': element.padding === '0' }">0</a>
 							<a class="btn" ng-click="element.padding = 1" ng-class="{ 'active': element.padding === 1 }">1</a>
 							<a class="btn" ng-click="element.padding = 2" ng-class="{ 'active': element.padding === 2 }">2</a>
@@ -212,6 +219,7 @@
 					</li>
 					<li ng-init="element.paddingpos = 'p'" class="mb-1">
 						<div class="btn-group clearfix">
+							<a class="btn active">padding position &rarr;</a>
 							<a class="btn" ng-click="element.paddingpos = 'p'" ng-class="{ 'active': element.paddingpos === 'p' }">p</a>
 							<a class="btn" ng-click="element.paddingpos = 'px'" ng-class="{ 'active': element.paddingpos === 'px' }">px</a>
 							<a class="btn" ng-click="element.paddingpos = 'py'" ng-class="{ 'active': element.paddingpos === 'py' }">py</a>
@@ -250,6 +258,11 @@
 					<em>&rarr;</em>&lt;/div&gt;<br>
 			&lt;/div&gt;
 		</pre>
+
+		<!-- Notes -->
+		<div class="my-2">
+			<small>* A non-atomic helper class.</small>
+		</div>
 
 		<!-- TODO Element helpers -->
 		<!-- TODO Breakpoints -->

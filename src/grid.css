@@ -61,7 +61,6 @@
 .self--start { align-self: flex-start; }
 .self--end { align-self: flex-end; }
 .self--baseline { align-self: baseline; }
-.self--stretch { align-self: stretch; }
 
 /*Grow*/
 .grow-1 { flex-grow: 1; }

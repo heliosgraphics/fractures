@@ -1,3 +1,5 @@
+/*@custom-media --hd (min-width: 1280px);*/
+
 /*
 	Reset
 
@@ -146,8 +148,6 @@ li { list-style-type: none; }
 .self--end { -webkit-align-self: flex-end; -ms-flex-item-align: end; align-self: flex-end; }
 
 .self--baseline { -webkit-align-self: baseline; -ms-flex-item-align: baseline; align-self: baseline; }
-
-.self--stretch { -webkit-align-self: stretch; -ms-flex-item-align: stretch; align-self: stretch; }
 
 /*Grow*/
 
