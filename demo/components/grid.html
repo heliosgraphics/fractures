@@ -20,8 +20,8 @@
 			'grid--baseline': grid.align === 'baseline',
 
 			'grid--center': grid.center === 'center',
-			'grid--hcenter': grid.center === 'hcenter',
-			'grid--vcenter': grid.center === 'vcenter',
+			'grid--ycenter': grid.center === 'ycenter',
+			'grid--xcenter': grid.center === 'xcenter',
 
 			'grid--around': grid.justify === 'around',
 			'grid--between': grid.justify === 'between',
@@ -104,8 +104,8 @@
 							<a class="btn active">center &rarr;</a>
 							<a class="btn" ng-click="grid.center = false" ng-class="{ 'active': !grid.center }">none</a>
 							<a class="btn" ng-click="grid.center = 'center'" ng-class="{ 'active': grid.center === 'center' }">center *</a>
-							<a class="btn" ng-click="grid.center = 'hcenter'" ng-class="{ 'active': grid.center === 'hcenter' }">hcenter</a>
-							<a class="btn" ng-click="grid.center = 'vcenter'" ng-class="{ 'active': grid.center === 'vcenter' }">vcenter</a>
+							<a class="btn" ng-click="grid.center = 'ycenter'" ng-class="{ 'active': grid.center === 'ycenter' }">ycenter</a>
+							<a class="btn" ng-click="grid.center = 'xcenter'" ng-class="{ 'active': grid.center === 'xcenter' }">xcenter</a>
 						</div>
 					</li>
 				</ul>

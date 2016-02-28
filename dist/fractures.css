@@ -107,9 +107,9 @@ li { list-style-type: none; }
 	justify-content: center;
 }
 
-.grid--hcenter { -ms-grid-row-align: center; align-items: center; }
+.grid--ycenter { -ms-grid-row-align: center; align-items: center; }
 
-.grid--vcenter { justify-content: center; }
+.grid--xcenter { justify-content: center; }
 
 .grid--around { justify-content: space-around; }
 

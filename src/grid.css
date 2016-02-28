@@ -35,8 +35,8 @@
 	justify-content: center;
 }
 
-.grid--hcenter { align-items: center; }
-.grid--vcenter { justify-content: center; }
+.grid--ycenter { align-items: center; }
+.grid--xcenter { justify-content: center; }
 
 .grid--around { justify-content: space-around; }
 .grid--between { justify-content: space-between; }
