@@ -77,44 +77,45 @@
 
 		<!-- Options -->
 		<div class="grid grid--collapse my-2">
-
-			<!-- Container options -->
 			<div class="grow-1 mr-1 mb-2">
+
+				<!-- Container options -->
 				<h4 class="normal">Container</h4>
-				<ul>
+				<ul class="mb-3">
 					<li>
 						<input ng-model="container.small" type="checkbox" id="containerSmall">
 						<label for="containerSmall">small</label>
 					</li>
 				</ul>
-			</div>
 
-			<!-- Grid options -->
-			<div class="grow-2 mr-1 mb-2">
+				<!-- Grid options -->
 				<h4 class="normal">Grid</h4>
 				<ul class="mb-3">
-					<li ng-init="grid.center = false" class="mb-1">
+					<li ng-init="grid.justify = false" class="mb-1">
 						<div class="btn-group clearfix">
-							<a class="btn" ng-click="grid.center = false" ng-class="{ 'active': !grid.center }">Center: -</a>
+							<a class="btn active">justify-content &rarr;</a>
+							<a class="btn" ng-click="grid.justify = false" ng-class="{ 'active': !grid.justify }">flex-start</a>
+							<a class="btn" ng-click="grid.justify = 'right'" ng-class="{ 'active': grid.justify === 'right' }">flex-end</a>
+							<a class="btn" ng-click="grid.justify = 'around'" ng-class="{ 'active': grid.justify === 'around' }">around</a>
+							<a class="btn" ng-click="grid.justify = 'between'" ng-class="{ 'active': grid.justify === 'between' }">between</a>
+						</div>
+					</li>
+					<li ng-init="grid.align = false" class="mb-1">
+						<div class="btn-group clearfix">
+							<a class="btn active">align-items &rarr;</a>
+							<a class="btn" ng-click="grid.align = false" ng-class="{ 'active': !grid.align }">stretch</a>
+							<a class="btn" ng-click="grid.align = 'baseline'" ng-class="{ 'active': grid.align === 'baseline' }">baseline</a>
+							<a class="btn" ng-click="grid.align = 'start'" ng-class="{ 'active': grid.align === 'start' }">flex-start</a>
+							<a class="btn" ng-click="grid.align = 'end'" ng-class="{ 'active': grid.align === 'end' }">flex-end</a>
+						</div>
+					</li>
+					<li ng-init="grid.center = false">
+						<div class="btn-group clearfix">
+							<a class="btn active">center helpers &rarr;</a>
+							<a class="btn" ng-click="grid.center = false" ng-class="{ 'active': !grid.center }">none</a>
 							<a class="btn" ng-click="grid.center = 'center'" ng-class="{ 'active': grid.center === 'center' }">center</a>
 							<a class="btn" ng-click="grid.center = 'hcenter'" ng-class="{ 'active': grid.center === 'hcenter' }">hcenter</a>
 							<a class="btn" ng-click="grid.center = 'vcenter'" ng-class="{ 'active': grid.center === 'vcenter' }">vcenter</a>
-						</div>
-					</li>
-					<li ng-init="grid.justify = false" class="mb-1">
-						<div class="btn-group clearfix">
-							<a class="btn" ng-click="grid.justify = false" ng-class="{ 'active': !grid.justify }">Justify: -</a>
-							<a class="btn" ng-click="grid.justify = 'around'" ng-class="{ 'active': grid.justify === 'around' }">around</a>
-							<a class="btn" ng-click="grid.justify = 'between'" ng-class="{ 'active': grid.justify === 'between' }">between</a>
-							<a class="btn" ng-click="grid.justify = 'right'" ng-class="{ 'active': grid.justify === 'right' }">right</a>
-						</div>
-					</li>
-					<li ng-init="grid.align = false">
-						<div class="btn-group clearfix">
-							<a class="btn" ng-click="grid.align = false" ng-class="{ 'active': !grid.align }">Align: -</a>
-							<a class="btn" ng-click="grid.align = 'baseline'" ng-class="{ 'active': grid.align === 'baseline' }">baseline</a>
-							<a class="btn" ng-click="grid.align = 'start'" ng-class="{ 'active': grid.align === 'start' }">start</a>
-							<a class="btn" ng-click="grid.align = 'end'" ng-class="{ 'active': grid.align === 'end' }">end</a>
 						</div>
 					</li>
 				</ul>
@@ -143,7 +144,7 @@
 			</div>
 
 			<!-- Element options -->
-			<div class="grow-2 mb-2">
+			<div class="grow-1 mb-2">
 				<h4 class="normal">element</h4>
 				<ul class="mb-3">
 					<li ng-init="element.grow = false" class="mb-1">

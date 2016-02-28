@@ -20,7 +20,7 @@ body {
 	-webkit-user-select: none;
 
 	font-family: "Arimo", Arial;
-	font-size: 16px;
+	font-size: 18px;
 	line-height: 1.5;
 }
 
@@ -110,13 +110,12 @@ a { color: #3C3C50; }
 }
 
 .btn:hover { background-color: #EDEEF0; }
-.btn.active {
-	background-color: #DFE0E6;
+.btn.active { background-color: #DFE0E6; }
 
-}
 .btn.disabled {
-	color: #A2A2AD;
+	opacity: .5;
 
+	background-color: #DFE0E6;
 	pointer-events: none;
 }
 
