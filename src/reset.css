@@ -27,3 +27,6 @@
 html,
 body { position: relative; }
 html { overflow-y: scroll; }
+
+a { text-decoration: none; }
+li { list-style-type: none; }
