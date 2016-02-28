@@ -256,52 +256,52 @@ html { overflow-y: scroll; }
 
 .mr-4 { margin-right: 64px; }
 
-.mh-0 {
+.my-0 {
 	margin-bottom: 0;
 	margin-top: 0;
 }
 
-.mh-1 {
+.my-1 {
 	margin-bottom: 8px;
 	margin-top: 8px;
 }
 
-.mh-2 {
+.my-2 {
 	margin-bottom: 16px;
 	margin-top: 16px;
 }
 
-.mh-3 {
+.my-3 {
 	margin-bottom: 32px;
 	margin-top: 32px;
 }
 
-.mh-4 {
+.my-4 {
 	margin-bottom: 64px;
 	margin-top: 64px;
 }
 
-.mv-0 {
+.mx-0 {
 	margin-left: 0;
 	margin-right: 0;
 }
 
-.mv-1 {
+.mx-1 {
 	margin-left: 8px;
 	margin-right: 8px;
 }
 
-.mv-2 {
+.mx-2 {
 	margin-left: 16px;
 	margin-right: 16px;
 }
 
-.mv-3 {
+.mx-3 {
 	margin-left: 32px;
 	margin-right: 32px;
 }
 
-.mv-4 {
+.mx-4 {
 	margin-left: 64px;
 	margin-right: 64px;
 }
@@ -356,52 +356,52 @@ html { overflow-y: scroll; }
 
 .pr-4 { padding-right: 64px; }
 
-.ph-0 {
+.py-0 {
 	padding-bottom: 0;
 	padding-top: 0;
 }
 
-.ph-1 {
+.py-1 {
 	padding-bottom: 8px;
 	padding-top: 8px;
 }
 
-.ph-2 {
+.py-2 {
 	padding-bottom: 16px;
 	padding-top: 16px;
 }
 
-.ph-3 {
+.py-3 {
 	padding-bottom: 32px;
 	padding-top: 32px;
 }
 
-.ph-4 {
+.py-4 {
 	padding-bottom: 64px;
 	padding-top: 64px;
 }
 
-.pv-0 {
+.px-0 {
 	padding-left: 0;
 	padding-right: 0;
 }
 
-.pv-1 {
+.px-1 {
 	padding-left: 8px;
 	padding-right: 8px;
 }
 
-.pv-2 {
+.px-2 {
 	padding-left: 16px;
 	padding-right: 16px;
 }
 
-.pv-3 {
+.px-3 {
 	padding-left: 32px;
 	padding-right: 32px;
 }
 
-.pv-4 {
+.px-4 {
 	padding-left: 64px;
 	padding-right: 64px;
 }
