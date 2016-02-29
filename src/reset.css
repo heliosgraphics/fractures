@@ -30,3 +30,4 @@ html { overflow-y: scroll; }
 
 a { text-decoration: none; }
 li { list-style-type: none; }
+img { max-width: 100%; }
