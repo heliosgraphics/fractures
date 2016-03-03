@@ -7,6 +7,7 @@
 /*Float helpers*/
 .float-left { float: left; }
 .float-right { float: right; }
+.float-none { float: none; }
 
 .clearfix:before,
 .clearfix:after {

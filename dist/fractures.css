@@ -194,6 +194,8 @@ img { max-width: 100%; }
 
 .float-right { float: right; }
 
+.float-none { float: none; }
+
 .clearfix:before,
 .clearfix:after {
 	display: block;
