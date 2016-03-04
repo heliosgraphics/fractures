@@ -447,21 +447,16 @@ small { font-size: 0.75em; }
 
 /* Formatted content */
 
-.format h1,
-.format h2,
-.format h3 { margin-bottom: .5em; }
-
-.format h4,
-.format h5,
-.format h6 { margin-bottom: .25em; }
-
 .format p,
 .format blockquote,
 .format ul,
-.format ol { margin-bottom: 1.5em; }
+.format ol {
+	padding-bottom: .75em;
+	padding-top: .75em;
+}
 
 .format ul,
-.format ol { margin-left: 1.5em; }
+.format ol { margin-left: 2.5em; }
 
 .format ul > li { list-style-type: disc; }
 

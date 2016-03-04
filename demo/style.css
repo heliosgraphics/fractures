@@ -16,8 +16,8 @@ body {
 	background-color: white;
 	color: #3C3C50;
 
-	user-select: none;
-	-webkit-user-select: none;
+	/*user-select: none;
+	-webkit-user-select: none;*/
 
 	font-family: "Arimo", Arial;
 	font-size: 18px;
@@ -57,19 +57,34 @@ a { color: #3C3C50; }
 .main.ng-enter-active { transform: translateY(-1rem); }
 .main.ng-animate { opacity: 0; }
 
-/*Demo grid*/
-*[data-grid] {
+/*Demo grids*/
+.demo {
 	padding: .5rem;
 
 	border-radius: 3px;
 	box-shadow: inset 0 0 0 1px #DFE0E6;
 }
 
-.grid[data-grid] { min-height: 11rem; }
-.grid[data-grid].grid--screen { pointer-events: none; }
+.demo--grid { min-height: 11rem; }
+.demo--grid.grid--screen { pointer-events: none; }
+
+.demo--format {
+	padding: 0;
+
+	background-image: linear-gradient(0deg,
+		white 0%,
+		white 50%,
+		#ededed 50%,
+		#ededed 55%,
+		white 55%,
+		white 100%
+	);
+	background-size: 16px 16px;
+	background-position: 0 8px, 0 0;
+}
 
 /*Demo element*/
-.grid[data-grid] > * {
+.demo--grid > * {
 	height: 5rem;
 	width: 5rem;
 
@@ -81,7 +96,7 @@ a { color: #3C3C50; }
 	text-align: center;
 }
 
-.grid[data-grid] > * > span {
+.demo--grid > * > span {
 	float: left;
 	height: 100%;
 	width: 100%;
@@ -89,7 +104,7 @@ a { color: #3C3C50; }
 	box-shadow: inset 0 0 0 2px #3BAE7A;
 }
 
-.grid[data-grid] > *:first-child {
+.demo--grid > *:first-child {
 	background-color: #50E1A0;
 	color: white;
 }
