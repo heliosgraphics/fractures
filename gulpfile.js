@@ -7,6 +7,7 @@ var nano = require("gulp-cssnano");
 var rename = require("gulp-rename");
 var gzip = require("gulp-gzip");
 var size = require("gulp-size");
+var csslint = require("gulp-csslint");
 
 var files = [ "./src/fractures.css" ];
 var postcssProcessors = [
@@ -34,6 +35,12 @@ gulp.task("build", function() {
 		.pipe(rename("fractures.min.css.gz"))
 		.pipe(gulp.dest("./dist"))
 		.pipe(size({ showFiles: true, gzip: true }));
+});
+
+gulp.task("test", ["build"], function() {
+	return gulp.src("./dist/fractures.css")
+		.pipe(csslint("./csslintrc.json"))
+		.pipe(csslint.reporter());
 });
 
 gulp.task("watch", function() {

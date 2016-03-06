@@ -16,20 +16,21 @@
 	"scripts": {
 		"start": "concurrently \"lite-server\" \"npm run watch\"",
 		"build": "gulp build",
-		"watch": "gulp watch"
+		"watch": "gulp watch",
+		"test": "gulp test"
 	},
 	"devDependencies": {
 		"autoprefixer": "^6.3.3",
 		"cssnext": "^1.8.4",
-		"cssnext": "^1.8.4",
+		"concurrently": "^2.0.0",
 		"gulp": "^3.9.1",
 		"gulp-cssnano": "^2.1.1",
+		"gulp-gzip": "^1.2.0",
+		"gulp-csslint": "latest",
 		"gulp-postcss": "^6.1.0",
 		"gulp-rename": "^1.2.2",
-		"gulp-gzip": "^1.2.0",
 		"gulp-size": "^2.0.0",
-		"postcss-import": "^8.0.2",
 		"lite-server": "^2.1.0",
-		"concurrently": "^2.0.0"
+		"postcss-import": "^8.0.2"
 	}
 }
