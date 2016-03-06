@@ -23,7 +23,7 @@ gulp.task("default", function() {
 		.pipe(size({ showFiles: true }));
 });
 
-gulp.task("build", function() {
+gulp.task("build", ["default"], function() {
 	return gulp.src(files)
 		.pipe(postcss(postcssProcessors))
 		.pipe(nano())
@@ -44,5 +44,5 @@ gulp.task("test", ["build"], function() {
 });
 
 gulp.task("watch", function() {
-	return gulp.watch("./src/*.css", ["default", "build"]);
+	return gulp.watch("./src/*.css", ["default"]);
 });
