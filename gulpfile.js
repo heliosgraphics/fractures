@@ -13,7 +13,7 @@ var files = [ "./src/fractures.css" ];
 var postcssProcessors = [
 	postcssimport(),
 	postcsscssnext(),
-	autoprefixer({ browsers: ["last 1 version"] })
+	autoprefixer({ browsers: [] })
 ];
 
 gulp.task("default", function() {
