@@ -29,7 +29,7 @@
 		"gulp-csslint": "latest",
 		"gulp-postcss": "^6.1.0",
 		"gulp-rename": "^1.2.2",
-		"gulp-size": "^2.0.0",
+		"gulp-size": "^2.1.0",
 		"lite-server": "^2.1.0",
 		"postcss-import": "^8.0.2"
 	}
