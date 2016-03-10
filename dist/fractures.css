@@ -410,7 +410,7 @@ img { max-width: 100%; }
 	padding-right: 64px;
 }
 
-/*Headers*/
+/* Headings, formatted relatively */
 
 h1 { font-size: 2.25em; }
 
@@ -426,7 +426,7 @@ h6 { font-size: 1em; }
 
 small { font-size: 0.75em; }
 
-/*Utility*/
+/* Utility */
 
 .normal { font-weight: normal; }
 
@@ -449,11 +449,12 @@ small { font-size: 0.75em; }
 /* Formatted content */
 
 .format p,
+.format hr,
 .format blockquote,
 .format ul,
 .format ol {
-	padding-bottom: .75em;
-	padding-top: .75em;
+	padding-bottom: 1em;
+	padding-top: 1em;
 }
 
 .format ul,
@@ -464,3 +465,9 @@ small { font-size: 0.75em; }
 .format ol > li { list-style-type: decimal; }
 
 .format a { font-weight: bold; }
+
+.format hr {
+	border-bottom-color: inherit;
+	border-bottom-style: solid;
+	border-bottom-width: 1px;
+}

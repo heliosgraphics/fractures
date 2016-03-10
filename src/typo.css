@@ -1,4 +1,4 @@
-/*Headers*/
+/* Headings, formatted relatively */
 h1 { font-size: 2.25em; }
 h2 { font-size: 2em; }
 h3 { font-size: 1.75em; }
@@ -7,7 +7,7 @@ h5 { font-size: 1.25em; }
 h6 { font-size: 1em; }
 small { font-size: 0.75em; }
 
-/*Utility*/
+/* Utility */
 .normal { font-weight: normal; }
 .bold { font-weight: bold; }
 
@@ -24,11 +24,12 @@ small { font-size: 0.75em; }
 
 /* Formatted content */
 .format p,
+.format hr,
 .format blockquote,
 .format ul,
 .format ol {
-	padding-bottom: .75em;
-	padding-top: .75em;
+	padding-bottom: 1em;
+	padding-top: 1em;
 }
 
 .format ul,
@@ -37,3 +38,9 @@ small { font-size: 0.75em; }
 .format ul > li { list-style-type: disc; }
 .format ol > li { list-style-type: decimal; }
 .format a { font-weight: bold; }
+
+.format hr {
+	border-bottom-color: inherit;
+	border-bottom-style: solid;
+	border-bottom-width: 1px;
+}
