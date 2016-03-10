@@ -54,12 +54,12 @@
 			<div
 				ng-init="format = true"
 				class="btn-group clearfix mb-2">
-				<a class="btn active">format class &rarr;</a>
+				<a class="btn active">format* &rarr;</a>
 				<a class="btn" ng-click="format = true" ng-class="{ 'active': format }">on</a>
 				<a class="btn" ng-click="format = false" ng-class="{ 'active': !format }">off</a>
 			</div>
 			<div
-				ng-init="helpers = true"
+				ng-init="helpers = false"
 				class="btn-group clearfix mb-2">
 				<a class="btn active">helpers &rarr;</a>
 				<a class="btn" ng-click="helpers = true" ng-class="{ 'active': helpers }">on</a>
@@ -111,5 +111,10 @@
 				<em>&rarr;</em>&lt;span class="uppercase"&gt;&lt;/span&gt;<br>
 			&lt;/div&gt;
 		</pre>
+
+		<!-- Notes -->
+		<div class="my-2">
+			<small>* A non-atomic helper class.</small>
+		</div>
 	</div>
 </div>

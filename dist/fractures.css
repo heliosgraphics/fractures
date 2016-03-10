@@ -105,12 +105,11 @@ img { max-width: 100%; }
 /*Positions*/
 
 .grid--center {
-	    -ms-grid-row-align: center;
-	        align-items: center;
+align-items: center;
 	justify-content: center;
 }
 
-.grid--ycenter { -ms-grid-row-align: center; align-items: center; }
+.grid--ycenter { align-items: center; }
 
 .grid--xcenter { justify-content: center; }
 
@@ -120,11 +119,11 @@ img { max-width: 100%; }
 
 .grid--right { justify-content: flex-end; }
 
-.grid--baseline { -ms-grid-row-align: baseline; align-items: baseline; }
+.grid--baseline { align-items: baseline; }
 
-.grid--end { -ms-grid-row-align: flex-end; align-items: flex-end; }
+.grid--end { align-items: flex-end; }
 
-.grid--start { -ms-grid-row-align: flex-start; align-items: flex-start; }
+.grid--start { align-items: flex-start; }
 
 /*Helpers*/
 
