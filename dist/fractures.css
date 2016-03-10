@@ -105,8 +105,8 @@ img { max-width: 100%; }
 /*Positions*/
 
 .grid--center {
-	    -ms-grid-row-align: center;
-	        align-items: center;
+	-ms-grid-row-align: center;
+align-items: center;
 	justify-content: center;
 }
 

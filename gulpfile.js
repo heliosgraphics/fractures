@@ -2,7 +2,7 @@ var autoprefixer = require("autoprefixer");
 var gulp = require("gulp");
 var postcss = require("gulp-postcss");
 var postcssimport = require("postcss-import");
-var cssnext = require("cssnext");
+var postcsscssnext = require("postcss-cssnext");
 var nano = require("gulp-cssnano");
 var rename = require("gulp-rename");
 var gzip = require("gulp-gzip");
@@ -12,7 +12,7 @@ var csslint = require("gulp-csslint");
 var files = [ "./src/fractures.css" ];
 var postcssProcessors = [
 	postcssimport(),
-	cssnext(),
+	postcsscssnext(),
 	autoprefixer({ browsers: ["last 1 version"] })
 ];
 
