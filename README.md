@@ -1,5 +1,5 @@
 # fractures
 
-![](https://travis-ci.org/krisztianpuska/fractures.svg?branch=master)
+![](https://travis-ci.org/krisztianpuska/fractures.svg)
 
 Opinionated, atomic CSS toolkit. A WIP.
