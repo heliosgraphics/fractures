@@ -50,7 +50,9 @@ a { color: #3C3C50; }
 	padding-top: 6rem;
 
 	transform: translateY(0);
-	transition: transform 260ms ease;
+	transition:
+		opacity 160ms ease,
+		transform 160ms ease;
 }
 
 .main.ng-enter,
