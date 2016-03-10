@@ -16,7 +16,6 @@
 
 	background: transparent;
 	border: 0;
-	outline: 0;
 
 	font-size: 100%;
 	vertical-align: baseline;
@@ -25,6 +24,8 @@
 *,
 *:before,
 *:after { box-sizing: border-box; }
+
+*:focus { outline: 0; }
 
 html,
 body { position: relative; }
@@ -409,7 +410,7 @@ img { max-width: 100%; }
 	padding-right: 64px;
 }
 
-/*Headers*/
+/* Headings, formatted relatively */
 
 h1 { font-size: 2.25em; }
 
@@ -425,7 +426,7 @@ h6 { font-size: 1em; }
 
 small { font-size: 0.75em; }
 
-/*Utility*/
+/* Utility */
 
 .normal { font-weight: normal; }
 
@@ -447,24 +448,26 @@ small { font-size: 0.75em; }
 
 /* Formatted content */
 
-.format h1,
-.format h2,
-.format h3 { margin-bottom: .5em; }
-
-.format h4,
-.format h5,
-.format h6 { margin-bottom: .25em; }
-
 .format p,
+.format hr,
 .format blockquote,
 .format ul,
-.format ol { margin-bottom: 1.5em; }
+.format ol {
+	padding-bottom: 1em;
+	padding-top: 1em;
+}
 
 .format ul,
-.format ol { margin-left: 1.5em; }
+.format ol { margin-left: 2.5em; }
 
 .format ul > li { list-style-type: disc; }
 
 .format ol > li { list-style-type: decimal; }
 
 .format a { font-weight: bold; }
+
+.format hr {
+	border-bottom-color: inherit;
+	border-bottom-style: solid;
+	border-bottom-width: 1px;
+}

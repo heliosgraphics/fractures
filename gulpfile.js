@@ -7,6 +7,7 @@ var nano = require("gulp-cssnano");
 var rename = require("gulp-rename");
 var gzip = require("gulp-gzip");
 var size = require("gulp-size");
+var csslint = require("gulp-csslint");
 
 var files = [ "./src/fractures.css" ];
 var postcssProcessors = [
@@ -22,7 +23,7 @@ gulp.task("default", function() {
 		.pipe(size({ showFiles: true }));
 });
 
-gulp.task("build", function() {
+gulp.task("build", ["default"], function() {
 	return gulp.src(files)
 		.pipe(postcss(postcssProcessors))
 		.pipe(nano())
@@ -36,6 +37,12 @@ gulp.task("build", function() {
 		.pipe(size({ showFiles: true, gzip: true }));
 });
 
+gulp.task("test", ["build"], function() {
+	return gulp.src("./dist/fractures.css")
+		.pipe(csslint("./csslintrc.json"))
+		.pipe(csslint.reporter());
+});
+
 gulp.task("watch", function() {
-	return gulp.watch("./src/*.css", ["default", "build"]);
+	return gulp.watch("./src/*.css", ["default"]);
 });
