@@ -1,39 +1,32 @@
 <!DOCTYPE html>
 <html ng-app="app">
 	<head>
+		<base href="/">
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
-		<title>Fractures</title>
+		<title>fractures</title>
 		<link href="https://fonts.googleapis.com/css?family=Source+Code+Pro|Arimo:400,700" rel="stylesheet" type="text/css">
 		<link rel="stylesheet" href="./dist/fractures.css">
 		<link rel="stylesheet" href="./demo/style.css">
+		<script src="https://code.angularjs.org/2.0.0-beta.9/angular2-polyfills.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/systemjs/0.19.24/system.js"></script>
+		<script src="https://code.angularjs.org/2.0.0-beta.9/Rx.min.js"></script>
+		<script src="https://code.angularjs.org/2.0.0-beta.9/angular2.min.js"></script>
+		<script src="https://code.angularjs.org/2.0.0-beta.9/router.js"></script>
+		<script>
+			System.config({
+				packages: {
+					app: {
+						format: "register",
+						defaultExtension: "js"
+					}
+				}
+			});
+			System.import("app/main")
+				.then(null, console.error.bind(console));
+		</script>
 	</head>
 	<body>
-		<nav class="nav-top bold">
-			<div class="container">
-				<a ui-sref="index" ui-sref-active="active" class="float-left p-2">About</a>
-				<a ui-sref="grid" ui-sref-active="active" class="float-left p-2">Grid</a>
-				<a ui-sref="typo" ui-sref-active="active" class="float-left p-2">Typo</a>
-				<a
-					class="float-right p-2"
-					href="https://github.com/krisztianpuska/fractures"
-					rel="me">Github</a>
-			</div>
-		</nav>
-		<main ui-view autoscroll class="main"></main>
-		<script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.0-rc.0/angular.min.js"></script>
-		<script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.0-rc.0/angular-animate.min.js"></script>
-		<script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.2.15/angular-ui-router.js"></script>
-		<script type="text/javascript">
-			angular.module("app", ["ui.router", "ngAnimate"])
-			.config(function($stateProvider, $urlRouterProvider) {
-				$stateProvider
-					.state("index", { url: "/", templateUrl: "./demo/components/index.html" })
-					.state("grid", { url: "/grid/", templateUrl: "./demo/components/grid.html" })
-					.state("typo", { url: "/typo/", templateUrl: "./demo/components/typo.html" })
-
-				$urlRouterProvider.otherwise("/");
-			});
-		</script>
+		<app></app>
 	</body>
 </html>

@@ -1,0 +1,14 @@
+<nav class="nav-top bold">
+	<div class="container">
+		<a [routerLink]="['Index']" class="float-left p-2">About</a>
+		<a [routerLink]="['Grid']" class="float-left p-2">Grid</a>
+		<a [routerLink]="['Typo']" class="float-left p-2">Typo</a>
+		<a
+			class="float-right p-2"
+			href="https://github.com/krisztianpuska/fractures"
+			rel="me">Github</a>
+	</div>
+</nav>
+<main>
+	<router-outlet></router-outlet>
+</main>
