@@ -11,26 +11,30 @@ System.register(["angular2/core"], function(exports_1, context_1) {
         if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
     };
     var core_1;
-    var GridComponent;
+    var TypoComponent;
     return {
         setters:[
             function (core_1_1) {
                 core_1 = core_1_1;
             }],
         execute: function() {
-            GridComponent = (function () {
-                function GridComponent() {
+            TypoComponent = (function () {
+                function TypoComponent() {
+                    this.helpers = false;
+                    this.fontSize = 16;
+                    this.format = true;
                 }
-                GridComponent = __decorate([
+                TypoComponent = __decorate([
                     core_1.Component({
-                        selector: "grid",
-                        templateUrl: "app/grid/grid.component.html",
+                        selector: "typo",
+                        templateUrl: "app/components/typo/typo.component.html",
+                        styleUrls: ["app/components/typo/typo.component.css"]
                     }), 
                     __metadata('design:paramtypes', [])
-                ], GridComponent);
-                return GridComponent;
+                ], TypoComponent);
+                return TypoComponent;
             }());
-            exports_1("GridComponent", GridComponent);
+            exports_1("TypoComponent", TypoComponent);
         }
     }
 });

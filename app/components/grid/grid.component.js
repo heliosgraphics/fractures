@@ -1,4 +1,4 @@
-System.register(["angular2/core"], function(exports_1, context_1) {
+System.register(["angular2/core", "angular2/common"], function(exports_1, context_1) {
     "use strict";
     var __moduleName = context_1 && context_1.id;
     var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
@@ -10,27 +10,37 @@ System.register(["angular2/core"], function(exports_1, context_1) {
     var __metadata = (this && this.__metadata) || function (k, v) {
         if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
     };
-    var core_1;
-    var TypoComponent;
+    var core_1, common_1;
+    var GridComponent;
     return {
         setters:[
             function (core_1_1) {
                 core_1 = core_1_1;
+            },
+            function (common_1_1) {
+                common_1 = common_1_1;
             }],
         execute: function() {
-            TypoComponent = (function () {
-                function TypoComponent() {
+            GridComponent = (function () {
+                function GridComponent() {
+                    this.elementCount = 1;
+                    this.container = {};
+                    this.grid = {};
+                    this.grid.options = {};
+                    this.element = {};
                 }
-                TypoComponent = __decorate([
+                GridComponent = __decorate([
                     core_1.Component({
-                        selector: "typo",
-                        templateUrl: "app/typo/typo.component.html",
+                        selector: "grid",
+                        directives: [common_1.FORM_DIRECTIVES],
+                        templateUrl: "app/components/grid/grid.component.html",
+                        styleUrls: ["app/components/grid/grid.component.css"]
                     }), 
                     __metadata('design:paramtypes', [])
-                ], TypoComponent);
-                return TypoComponent;
+                ], GridComponent);
+                return GridComponent;
             }());
-            exports_1("TypoComponent", TypoComponent);
+            exports_1("GridComponent", GridComponent);
         }
     }
 });

@@ -37,9 +37,14 @@ System.register(["angular2/core", "angular2/router", "../index/index.component",
                 AppComponent = __decorate([
                     core_1.Component({
                         selector: "app",
-                        templateUrl: "app/app/app.component.html",
+                        templateUrl: "app/components/app/app.component.html",
                         directives: [router_1.ROUTER_DIRECTIVES],
-                        styleUrls: ["app/app/app.component.css"],
+                        styleUrls: [
+                            "app/components/app/app.component.css",
+                            "app/shared/styles/body.css",
+                            "app/shared/styles/btn.css",
+                            "app/shared/styles/output.css"
+                        ],
                         providers: [router_1.ROUTER_PROVIDERS],
                         encapsulation: core_1.ViewEncapsulation.None
                     }),

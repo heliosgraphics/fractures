@@ -1,22 +1,15 @@
-<style
-	ng-if="!helpers"
-	media="screen">
-	.demo--format,
-	.demo--format > * { background: transparent !important; }
-</style>
 <div class="mb-4">
 	<div class="container">
 		<h1>Typo</h1>
 	</div>
 	<div class="container">
 		<div
-			ng-style="{
-				'font-size': fontSize + 'px' || '16px',
-				'background-size': fontSize + 'px ' + fontSize + 'px',
-				'background-position': '0 ' + fontSize/2 + 'px, 0 0',
+			[ngClass]="{
+				'format': format,
+				'demo--helpers': helpers
 			}"
-			ng-class="{ 'format': format }"
-			class="demo demo--format">
+			[style.font-size.px]="fontSize"
+			class="demo">
 			<h1 class="normal px-1">Header</h1>
 			<ul class="px-1">
 				<li>establish a dictatorship</li>
@@ -51,31 +44,25 @@
 			</div>
 		</div>
 		<div class="clearfix py-4">
-			<div
-				ng-init="format = true"
-				class="btn-group clearfix mb-2">
+			<div class="btn-group clearfix mb-2">
 				<a class="btn active">format* &rarr;</a>
-				<a class="btn" ng-click="format = true" ng-class="{ 'active': format }">on</a>
-				<a class="btn" ng-click="format = false" ng-class="{ 'active': !format }">off</a>
+				<a class="btn" (click)="format = true" [ngClass]="{ 'active': format }">on</a>
+				<a class="btn" (click)="format = false" [ngClass]="{ 'active': !format }">off</a>
 			</div>
-			<div
-				ng-init="helpers = false"
-				class="btn-group clearfix mb-2">
+			<div class="btn-group clearfix mb-2">
 				<a class="btn active">helpers &rarr;</a>
-				<a class="btn" ng-click="helpers = true" ng-class="{ 'active': helpers }">on</a>
-				<a class="btn" ng-click="helpers = false" ng-class="{ 'active': !helpers }">off</a>
+				<a class="btn" (click)="helpers = true" [ngClass]="{ 'active': helpers }">on</a>
+				<a class="btn" (click)="helpers = false" [ngClass]="{ 'active': !helpers }">off</a>
 			</div>
-			<div
-				ng-init="fontSize = 16"
-				class="btn-group clearfix">
+			<div class="btn-group clearfix">
 				<a class="btn active">font-size &rarr;</a>
-				<a class="btn" ng-click="fontSize = 12" ng-class="{ 'active': fontSize === 12 }">12px</a>
-				<a class="btn" ng-click="fontSize = 14" ng-class="{ 'active': fontSize === 14 }">14px</a>
-				<a class="btn" ng-click="fontSize = 16" ng-class="{ 'active': fontSize === 16 }">16px</a>
-				<a class="btn" ng-click="fontSize = 18" ng-class="{ 'active': fontSize === 18 }">18px</a>
-				<a class="btn" ng-click="fontSize = 20" ng-class="{ 'active': fontSize === 20 }">20px</a>
-				<a class="btn" ng-click="fontSize = 22" ng-class="{ 'active': fontSize === 22 }">22px</a>
-				<a class="btn" ng-click="fontSize = 24" ng-class="{ 'active': fontSize === 24 }">24px</a>
+				<a class="btn" (click)="fontSize = 12" [ngClass]="{ 'active': fontSize === 12 }">12px</a>
+				<a class="btn" (click)="fontSize = 14" [ngClass]="{ 'active': fontSize === 14 }">14px</a>
+				<a class="btn" (click)="fontSize = 16" [ngClass]="{ 'active': fontSize === 16 }">16px</a>
+				<a class="btn" (click)="fontSize = 18" [ngClass]="{ 'active': fontSize === 18 }">18px</a>
+				<a class="btn" (click)="fontSize = 20" [ngClass]="{ 'active': fontSize === 20 }">20px</a>
+				<a class="btn" (click)="fontSize = 22" [ngClass]="{ 'active': fontSize === 22 }">22px</a>
+				<a class="btn" (click)="fontSize = 24" [ngClass]="{ 'active': fontSize === 24 }">24px</a>
 			</div>
 		</div>
 

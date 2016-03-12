@@ -24,7 +24,8 @@ System.register(["angular2/core"], function(exports_1, context_1) {
                 IndexComponent = __decorate([
                     core_1.Component({
                         selector: "index",
-                        templateUrl: "app/index/index.component.html",
+                        templateUrl: "app/components/index/index.component.html",
+                        styleUrls: ["app/components/index/index.component.css"]
                     }), 
                     __metadata('design:paramtypes', [])
                 ], IndexComponent);

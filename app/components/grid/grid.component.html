@@ -1,0 +1,268 @@
+<div class="mb-4">
+	<div class="container">
+		<h1>Grid</h1>
+	</div>
+
+	<!-- Playground grid -->
+	<div
+		[ngClass]="{ 'container--small': container.small }"
+		class="container">
+		<div [ngClass]="{
+			'grid--collapse': grid.options.collapse,
+			'grid--column': grid.options.column,
+			'grid--reverse': grid.options.reverse,
+			'grid--wrap': grid.options.wrap,
+			'grid--screen': grid.options.screen,
+
+			'grid--start': grid.align === 'start',
+			'grid--end': grid.align === 'end',
+			'grid--baseline': grid.align === 'baseline',
+
+			'grid--center': grid.center === 'center',
+			'grid--ycenter': grid.center === 'ycenter',
+			'grid--xcenter': grid.center === 'xcenter',
+
+			'grid--around': grid.justify === 'around',
+			'grid--between': grid.justify === 'between',
+			'grid--right': grid.justify === 'right'
+		}"
+		class="grid demo demo--grid p-1">
+
+			<!-- Elements -->
+			<div [ngClass]="{
+				'grow-1': element.grow === 1,
+				'grow-2': element.grow === 2,
+				'grow-3': element.grow === 3,
+				'grow-4': element.grow === 4,
+				'grow-5': element.grow === 5,
+
+				'order-1': element.order === 1,
+				'order-2': element.order === 2,
+				'order-3': element.order === 3,
+				'order-4': element.order === 4,
+				'order-5': element.order === 5,
+
+				'self--center': element.align === 'center',
+				'self--start': element.align === 'start',
+				'self--end': element.align === 'end',
+				'self--baseline': element.align === 'baseline'
+			}"
+			class="{{ element.marginpos }}-{{ element.margin }} {{ element.paddingpos }}-{{ element.padding }}">
+				<span>1</span>
+			</div>
+			<div
+				[ngClass]="{
+					'grow-1': element.grow,
+					'element--sized': demo.elementSize
+				}"
+				*ngFor="#x in ((x = []) && (x.length=elementCount) && x) track by $index">{{ $index + 2 }}</div>
+		</div>
+
+		<!-- Grid options -->
+		<div class="clearfix pt-1">
+			<div class="btn-group float-right">
+				<a class="btn" (click)="elementCount = elementCount - 1" [ngClass]="{ 'disabled': elementCount <= 1 }">less</a>
+				<a class="btn" (click)="elementCount = elementCount + 1" [ngClass]="{ 'disabled': elementCount >= 14 }">more</a>
+			</div>
+		</div>
+	</div>
+	<div class="container">
+
+		<!-- Options -->
+		<div class="grid grid--collapse my-2">
+			<div class="grow-1 mr-1 mb-2">
+
+				<!-- Grid options -->
+				<h4 class="normal">Grid</h4>
+				<ul class="mb-3">
+					<li ng-init="grid.justify = false" class="mb-1">
+						<div class="btn-group clearfix">
+							<a class="btn active">justify-content &rarr;</a>
+							<a class="btn" (click)="grid.justify = false" [ngClass]="{ 'active': !grid.justify }">flex-start</a>
+							<a class="btn" (click)="grid.justify = 'right'" [ngClass]="{ 'active': grid.justify === 'right' }">flex-end</a>
+							<a class="btn" (click)="grid.justify = 'around'" [ngClass]="{ 'active': grid.justify === 'around' }">around</a>
+							<a class="btn" (click)="grid.justify = 'between'" [ngClass]="{ 'active': grid.justify === 'between' }">between</a>
+						</div>
+					</li>
+					<li ng-init="grid.align = false" class="mb-1">
+						<div class="btn-group clearfix">
+							<a class="btn active">align-items &rarr;</a>
+							<a class="btn" (click)="grid.align = false" [ngClass]="{ 'active': !grid.align }">stretch</a>
+							<a class="btn" (click)="grid.align = 'baseline'" [ngClass]="{ 'active': grid.align === 'baseline' }">baseline</a>
+							<a class="btn" (click)="grid.align = 'start'" [ngClass]="{ 'active': grid.align === 'start' }">flex-start</a>
+							<a class="btn" (click)="grid.align = 'end'" [ngClass]="{ 'active': grid.align === 'end' }">flex-end</a>
+						</div>
+					</li>
+					<li ng-init="grid.center = false">
+						<div class="btn-group clearfix">
+							<a class="btn active">center &rarr;</a>
+							<a class="btn" (click)="grid.center = false" [ngClass]="{ 'active': !grid.center }">none</a>
+							<a class="btn" (click)="grid.center = 'center'" [ngClass]="{ 'active': grid.center === 'center' }">center *</a>
+							<a class="btn" (click)="grid.center = 'ycenter'" [ngClass]="{ 'active': grid.center === 'ycenter' }">ycenter</a>
+							<a class="btn" (click)="grid.center = 'xcenter'" [ngClass]="{ 'active': grid.center === 'xcenter' }">xcenter</a>
+						</div>
+					</li>
+				</ul>
+				<ul class="mb-3">
+					<li>
+						<input [(ngModel)]="grid.options.collapse" type="checkbox" id="grid.options.collapse">
+						<label for="grid.options.collapse">responsive</label>
+					</li>
+					<li>
+						<input [(ngModel)]="grid.options.column" type="checkbox" id="grid.options.column">
+						<label for="grid.options.column">column direction</label>
+					</li>
+					<li>
+						<input [(ngModel)]="grid.options.reverse" type="checkbox" id="grid.options.reverse">
+						<label for="grid.options.reverse">reverse order</label>
+					</li>
+					<li>
+						<input [(ngModel)]="grid.options.wrap" type="checkbox" id="grid.options.wrap">
+						<label for="grid.options.wrap">wrap elements</label>
+					</li>
+					<li>
+						<input [(ngModel)]="grid.options.screen" type="checkbox" id="grid.options.screen">
+						<label for="grid.options.screen">size = screen *</label>
+					</li>
+				</ul>
+
+				<!-- Container options -->
+				<h4 class="normal">Container</h4>
+				<ul class="mb-3">
+					<li>
+						<input [(ngModel)]="container.small" type="checkbox" id="containerSmall">
+						<label for="containerSmall">small</label>
+					</li>
+				</ul>
+			</div>
+
+			<!-- Element options -->
+			<div class="grow-1 mb-2">
+				<h4 class="normal">Element</h4>
+				<ul class="mb-3">
+					<li ng-init="element.grow = false" class="mb-1">
+						<div class="btn-group clearfix">
+							<a class="btn active">flex-grow &rarr;</a>
+							<a class="btn" (click)="element.grow = false" [ngClass]="{ 'active': !element.grow }">none</a>
+							<a class="btn" (click)="element.grow = 1" [ngClass]="{ 'active': element.grow === 1 }">1</a>
+							<a class="btn" (click)="element.grow = 2" [ngClass]="{ 'active': element.grow === 2 }">2</a>
+							<a class="btn" (click)="element.grow = 3" [ngClass]="{ 'active': element.grow === 3 }">3</a>
+							<a class="btn" (click)="element.grow = 4" [ngClass]="{ 'active': element.grow === 4 }">4</a>
+						</div>
+					</li>
+					<li ng-init="element.order = false" class="mb-1">
+						<div class="btn-group clearfix">
+							<a class="btn active">order &rarr;</a>
+							<a class="btn" (click)="element.order = false" [ngClass]="{ 'active': !element.order }">none</a>
+							<a class="btn" (click)="element.order = 1" [ngClass]="{ 'active': element.order === 1 }">1</a>
+							<a class="btn" (click)="element.order = 2" [ngClass]="{ 'active': element.order === 2 }">2</a>
+							<a class="btn" (click)="element.order = 3" [ngClass]="{ 'active': element.order === 3 }">3</a>
+							<a class="btn" (click)="element.order = 4" [ngClass]="{ 'active': element.order === 4 }">4</a>
+						</div>
+					</li>
+					<li ng-init="element.align = false" class="mb-1">
+						<div class="btn-group clearfix">
+							<a class="btn active">align-self &rarr;</a>
+							<a class="btn" (click)="element.align = false" [ngClass]="{ 'active': !element.align }">stretch</a>
+							<a class="btn" (click)="element.align = 'baseline'" [ngClass]="{ 'active': element.align === 'baseline' }">baseline</a>
+							<a class="btn" (click)="element.align = 'start'" [ngClass]="{ 'active': element.align === 'start' }">flex-start</a>
+							<a class="btn" (click)="element.align = 'center'" [ngClass]="{ 'active': element.align === 'center' }">center</a>
+							<a class="btn" (click)="element.align = 'end'" [ngClass]="{ 'active': element.align === 'end' }">flex-end</a>
+						</div>
+					</li>
+				</ul>
+
+				<!-- Box -->
+				<h4 class="normal">Box</h4>
+				<ul class="mb-3">
+					<li ng-init="element.margin = false" class="mb-1">
+						<div class="btn-group clearfix">
+							<a class="btn active">margin &rarr;</a>
+							<a class="btn" (click)="element.margin = false" [ngClass]="{ 'active': !element.margin }">none</a>
+							<a class="btn" (click)="element.margin = '0'" [ngClass]="{ 'active': element.margin === '0' }">0</a>
+							<a class="btn" (click)="element.margin = 1" [ngClass]="{ 'active': element.margin === 1 }">1</a>
+							<a class="btn" (click)="element.margin = 2" [ngClass]="{ 'active': element.margin === 2 }">2</a>
+							<a class="btn" (click)="element.margin = 3" [ngClass]="{ 'active': element.margin === 3 }">3</a>
+							<a class="btn" (click)="element.margin = 4" [ngClass]="{ 'active': element.margin === 4 }">4</a>
+						</div>
+					</li>
+					<li ng-init="element.marginpos = 'm'" class="mb-1">
+						<div class="btn-group clearfix">
+							<a class="btn active">margin position &rarr;</a>
+							<a class="btn" (click)="element.marginpos = 'm'" [ngClass]="{ 'active': element.marginpos === 'm' }">m</a>
+							<a class="btn" (click)="element.marginpos = 'mx'" [ngClass]="{ 'active': element.marginpos === 'mx' }">mx</a>
+							<a class="btn" (click)="element.marginpos = 'my'" [ngClass]="{ 'active': element.marginpos === 'my' }">my</a>
+							<a class="btn" (click)="element.marginpos = 'ml'" [ngClass]="{ 'active': element.marginpos === 'ml' }">ml</a>
+							<a class="btn" (click)="element.marginpos = 'mr'" [ngClass]="{ 'active': element.marginpos === 'mr' }">mr</a>
+							<a class="btn" (click)="element.marginpos = 'mb'" [ngClass]="{ 'active': element.marginpos === 'mb' }">mb</a>
+							<a class="btn" (click)="element.marginpos = 'mt'" [ngClass]="{ 'active': element.marginpos === 'mt' }">mt</a>
+						</div>
+					</li>
+				</ul>
+				<ul>
+					<li ng-init="element.padding = false" class="mb-1">
+						<div class="btn-group clearfix">
+							<a class="btn active">padding &rarr;</a>
+							<a class="btn" (click)="element.padding = false" [ngClass]="{ 'active': !element.padding }">none</a>
+							<a class="btn" (click)="element.padding = '0'" [ngClass]="{ 'active': element.padding === '0' }">0</a>
+							<a class="btn" (click)="element.padding = 1" [ngClass]="{ 'active': element.padding === 1 }">1</a>
+							<a class="btn" (click)="element.padding = 2" [ngClass]="{ 'active': element.padding === 2 }">2</a>
+							<a class="btn" (click)="element.padding = 3" [ngClass]="{ 'active': element.padding === 3 }">3</a>
+							<a class="btn" (click)="element.padding = 4" [ngClass]="{ 'active': element.padding === 4 }">4</a>
+						</div>
+					</li>
+					<li ng-init="element.paddingpos = 'p'" class="mb-1">
+						<div class="btn-group clearfix">
+							<a class="btn active">padding position &rarr;</a>
+							<a class="btn" (click)="element.paddingpos = 'p'" [ngClass]="{ 'active': element.paddingpos === 'p' }">p</a>
+							<a class="btn" (click)="element.paddingpos = 'px'" [ngClass]="{ 'active': element.paddingpos === 'px' }">px</a>
+							<a class="btn" (click)="element.paddingpos = 'py'" [ngClass]="{ 'active': element.paddingpos === 'py' }">py</a>
+							<a class="btn" (click)="element.paddingpos = 'pl'" [ngClass]="{ 'active': element.paddingpos === 'pl' }">pl</a>
+							<a class="btn" (click)="element.paddingpos = 'pr'" [ngClass]="{ 'active': element.paddingpos === 'pr' }">pr</a>
+							<a class="btn" (click)="element.paddingpos = 'pb'" [ngClass]="{ 'active': element.paddingpos === 'pb' }">pb</a>
+							<a class="btn" (click)="element.paddingpos = 'pt'" [ngClass]="{ 'active': element.paddingpos === 'pt' }">pt</a>
+						</div>
+					</li>
+				</ul>
+			</div>
+		</div>
+
+		<!-- FIXME Output -->
+		<h2>Output</h2>
+		<pre class="p-1">
+			&lt;div class="<span>container</span><b
+				*ngIf="value"
+				ngFor="(class, value) in container"> container--{{ class }}
+			</b>"&gt;<br>
+			<em>&rarr;</em>&lt;div class="<span>grid</span><b
+						ng-if="value"
+						ng-repeat="(class, value) in grid.options"> grid--{{ class }}</b><b
+						ng-if="grid.align"> grid--{{ grid.align }}</b><b
+						ng-if="grid.center"> grid--{{ grid.center }}</b><b
+						ng-if="grid.justify"> grid--{{ grid.justify }}</b>"&gt;<br>
+					<em>&rarr;</em><em>&rarr;</em>&lt;div class="<b
+						ng-if="element.grow">grow-{{ element.grow }} </b><b
+						ng-if="element.order">order-{{ element.order }} </b><b
+						ng-if="element.align">self--{{ element.align }} </b><b
+						ng-if="element.margin">{{ element.marginpos }}-{{ element.margin }} </b><b
+						ng-if="element.padding">{{ element.paddingpos }}-{{ element.padding }}</b>"&gt;&lt;/div&gt;<br>
+					<div
+						ngFor="#x in ((x = []) && (x.length=elementCount) && x) track by $index">
+						<em>&rarr;</em><em>&rarr;</em>&lt;div class="<b ng-if="element.grow">grow-1</b>"&gt;&lt;/div&gt;</div>
+					<em>&rarr;</em>&lt;/div&gt;<br>
+			&lt;/div&gt;
+		</pre>
+
+		<!-- Notes -->
+		<div class="my-2">
+			<small>* A non-atomic helper class.</small>
+		</div>
+
+		<!-- TODO Element helpers -->
+		<!-- TODO Breakpoints -->
+		<!-- TODO Atom size -->
+		<!-- TODO Add docs -->
+		<!-- TODO Usage -->
+		<!-- Basic flex utility with predefined, responsive breakpoints. -->
+	</div>
+</div>

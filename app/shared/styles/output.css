@@ -1,0 +1,23 @@
+pre {
+	background-color: #DFE0E6;
+	border-radius: 2px;
+	user-select: all;
+	-webkit-user-select: all;
+
+	font-size: 0.75rem;
+	font-family: "Source Code Pro", monospace;
+	tab-size: 4;
+	white-space: normal;
+}
+
+pre span { color: blue; }
+pre b { color: red; }
+
+pre em {
+	float: left;
+	opacity: 0;
+	width: 1.5rem;
+
+	user-select: none;
+	-webkit-user-select: none;
+}
