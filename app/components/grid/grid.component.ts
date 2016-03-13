@@ -1,10 +1,10 @@
 import { Component } from "angular2/core";
-import { NgClass, NgFor } from "angular2/common";
+import { NgClass, NgFor, NgSwitch, NgSwitchWhen, NgSwitchDefault } from "angular2/common";
 
-import { MapToIterable } from "../../shared/pipes/MapToIterable";
+import { OptionsToggleComponent } from "./options-toggle.component";
 
 @Component({
-	pipes: [ MapToIterable ],
+	directives: [ OptionsToggleComponent ],
 	selector: "grid",
 	styleUrls: [ "app/components/grid/grid.component.css" ],
 	templateUrl: "app/components/grid/grid.component.html"
@@ -94,55 +94,148 @@ export class GridComponent {
 					"order-2",
 					"order-3",
 				]
-			}
+			},
+			margin: {
+					selected: false,
+					options: [
+						"m-0",
+						"m-1",
+						"m-2",
+						"m-3",
+						"m-4"
+					]
+				},
+				marginXAxis: {
+					selected: false,
+					options: [
+						"mx-0",
+						"mx-1",
+						"mx-2",
+						"mx-3",
+						"mx-4"
+					]
+				},
+				marginYAxis: {
+					selected: false,
+					options: [
+						"my-0",
+						"my-1",
+						"my-2",
+						"my-3",
+						"my-4"
+					]
+				},
+				marginLeft: {
+					selected: false,
+					options: [
+						"ml-0",
+						"ml-1",
+						"ml-2",
+						"ml-3",
+						"ml-4"
+					]
+				},
+				marginRight: {
+					selected: false,
+					options: [
+						"mr-0",
+						"mr-1",
+						"mr-2",
+						"mr-3",
+						"mr-4"
+					]
+				},
+				marginTop: {
+					selected: false,
+					options: [
+						"mt-0",
+						"mt-1",
+						"mt-2",
+						"mt-3",
+						"mt-4"
+					]
+				},
+				marginBottom: {
+					selected: false,
+					options: [
+						"mb-0",
+						"mb-1",
+						"mb-2",
+						"mb-3",
+						"mb-4"
+					]
+				},
+				padding: {
+					selected: false,
+					options: [
+						"p-0",
+						"p-1",
+						"p-2",
+						"p-3",
+						"p-4"
+					]
+				},
+				paddingXAxis: {
+					selected: false,
+					options: [
+						"px-0",
+						"px-1",
+						"px-2",
+						"px-3",
+						"px-4"
+					]
+				},
+				paddingYAxis: {
+					selected: false,
+					options: [
+						"py-0",
+						"py-1",
+						"py-2",
+						"py-3",
+						"py-4"
+					]
+				},
+				paddingLeft: {
+					selected: false,
+					options: [
+						"pl-0",
+						"pl-1",
+						"pl-2",
+						"pl-3",
+						"pl-4"
+					]
+				},
+				paddingRight: {
+					selected: false,
+					options: [
+						"pr-0",
+						"pr-1",
+						"pr-2",
+						"pr-3",
+						"pr-4"
+					]
+				},
+				paddingTop: {
+					selected: false,
+					options: [
+						"pt-0",
+						"pt-1",
+						"pt-2",
+						"pt-3",
+						"pt-4"
+					]
+				},
+				paddingBottom: {
+					selected: false,
+					options: [
+						"pb-0",
+						"pb-1",
+						"pb-2",
+						"pb-3",
+						"pb-4"
+					]
+				}
 		};
-
-		this.marginOptions = {
-			marginPosition: {
-				selected: false,
-				options: [
-					"m",
-					"mx",
-					"my",
-					"mt",
-					"mb",
-					"ml",
-					"mr",
-				]
-			},
-			marginSize: {
-				selected: false,
-				options: [
-					"0",
-					"1",
-					"2",
-					"3",
-					"4",
-				]
-			},
-			paddingPosition: {
-				selected: false,
-				options: [
-					"p",
-					"px",
-					"py",
-					"pt",
-					"pb",
-					"pl",
-					"pr",
-				]
-			},
-			paddingSize: {
-				selected: false,
-				options: [
-					"0",
-					"1",
-					"2",
-					"3",
-					"4",
-				]
-			}
-		}
 	}
 
 	// Set extra elements length
@@ -153,22 +246,4 @@ export class GridComponent {
 			return this.elementArray.splice(1, 1);
 	}
 
-	// Control grid classes
-	toggleGridClass(selected, set) {
-
-		// Remove all setitem from classes array
-		for(let option of this.gridOptions[set].options) {
-			let optionIndex = this.gridClasses.indexOf(option);
-
-			if(optionIndex !== -1)
-				this.gridClasses.splice(optionIndex, 1);
-		}
-
-		// Add new class to array
-		if(selected[1])
-			this.gridClasses.push(selected[1]);
-
-		// Set selected on options
-		this.gridOptions[set].selected = selected[0];
-	}
 }

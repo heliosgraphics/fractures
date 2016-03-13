@@ -8,61 +8,70 @@
 		[ngClass]="{ 'container--small': containerSmall }"
 		class="container">
 
-		<!-- Grid -->
-		<div
-			[ngClass]="gridClasses"
-			class="grid demo demo--grid p-1">
-
-			<!-- Elements -->
-			<div
-				[ngClass]="'false'"
-				class="">
-				<span>1</span>
-			</div>
-
-			<!-- More elements -->
-			<div
-
-				*ngFor="#x of elementArray; #i = index">{{ i + 2 }}</div>
-		</div>
-
-		<!-- Grid options -->
-		<div class="clearfix pt-1">
+		<!-- Demo options -->
+		<div class="clearfix mb-1">
 			<div class="btn-group float-right">
 				<a class="btn" (click)="elementCountUpdate(false)" [ngClass]="{ 'disabled': elementArray.length <= 1 }">less</a>
 				<a class="btn" (click)="elementCountUpdate(true)" [ngClass]="{ 'disabled': elementArray.length >= 14 }">more</a>
 			</div>
+			<div class="float-right mr-1">
+				<a class="btn" (click)="output = !output" [ngClass]="{ 'active': output }">code</a>
+			</div>
 		</div>
+
+		<!-- Demo -->
+		<div [ngSwitch]="output">
+
+			<!-- View -->
+			<template [ngSwitchWhen]="true">
+				<pre class="p-1">
+					&lt;div class="<span>container</span><b *ngIf="containerSmall"> container--small</b>"&gt;<br>
+					<em>&rarr;</em>&lt;div class="<span>grid</span><b
+								*ngFor="#class of gridClasses"> {{ class }}</b>"&gt;<br>
+							<em>&rarr;</em><em>&rarr;</em>&lt;div<i *ngIf="elementClasses.length"> class="</i><b *ngFor="#class of elementClasses; #i = index">{{ class }} </b><i *ngIf="elementClasses.length">"</i>&gt;&lt;/div&gt;<br>
+							<div
+								*ngFor="#x of elementArray; #i = index">
+								<em>&rarr;</em><em>&rarr;</em>&lt;div&gt;&lt;/div&gt;</div>
+							<em>&rarr;</em>&lt;/div&gt;<br>
+					&lt;/div&gt;
+				</pre>
+			</template>
+
+			<!-- Code -->
+			<template ngSwitchDefault>
+				<div
+					[ngClass]="gridClasses"
+					class="grid demo demo--grid p-1">
+
+					<!-- Elements -->
+					<div [ngClass]="elementClasses">
+						<span>1</span>
+					</div>
+
+					<!-- More elements -->
+					<div
+						[ngClass]="{
+							'grow-1': elementClasses.length,
+							'order-1': elementClasses.length
+						}"
+						*ngFor="#x of elementArray; #i = index">{{ i + 2 }}</div>
+				</div>
+			</template>
+		</div>
+
 	</div>
 	<div class="container">
 
 		<!-- Options -->
-		<div class="grid grid--collapse my-2">
+		<div class="grid grid--collapse pt-2">
 			<div class="grow-1 mr-1 mb-2">
 
 				<!-- Grid options -->
 				<h4 class="normal">Grid</h4>
-				<ul class="mb-3">
-					<li
-						*ngFor="#set of gridOptions | MapToIterable"
-						class="mb-1">
-						<div class="btn-group clearfix">
-							<a class="btn active">{{ set.key }}</a>
-							<a
-								(click)="toggleGridClass([false], set.key)"
-								[ngClass]="{ 'active': set.val.selected === false }"
-								class="btn">-</a>
-							<a
-								*ngFor="#option of set.val.options; #i = index"
-								(click)="toggleGridClass([i, option], set.key)"
-								[ngClass]="{ 'active': i === set.val.selected }"
-								class="btn">{{ option }}</a>
-						</div>
-					</li>
-				</ul>
+				<options-toggle [classes]="gridClasses" [options]="gridOptions"></options-toggle>
 
 				<!-- Container options -->
-				<h4 class="normal">Container</h4>
+				<h4 class="mt-3 normal">Container</h4>
 				<ul class="mb-3">
 					<li>
 						<input [(ngModel)]="containerSmall" type="checkbox" id="containerSmall">
@@ -74,107 +83,9 @@
 			<!-- Element options -->
 			<div class="grow-1 mb-2">
 				<h4 class="normal">Element</h4>
-				<!-- <ul class="mb-3">
-					<li ng-init="element.grow = false" class="mb-1">
-						<div class="btn-group clearfix">
-							<a class="btn active">flex-grow &rarr;</a>
-							<a class="btn" (click)="element.grow = false" [ngClass]="{ 'active': !element.grow }">none</a>
-							<a class="btn" (click)="element.grow = 1" [ngClass]="{ 'active': element.grow === 1 }">1</a>
-							<a class="btn" (click)="element.grow = 2" [ngClass]="{ 'active': element.grow === 2 }">2</a>
-							<a class="btn" (click)="element.grow = 3" [ngClass]="{ 'active': element.grow === 3 }">3</a>
-							<a class="btn" (click)="element.grow = 4" [ngClass]="{ 'active': element.grow === 4 }">4</a>
-						</div>
-					</li>
-					<li ng-init="element.order = false" class="mb-1">
-						<div class="btn-group clearfix">
-							<a class="btn active">order &rarr;</a>
-							<a class="btn" (click)="element.order = false" [ngClass]="{ 'active': !element.order }">none</a>
-							<a class="btn" (click)="element.order = 1" [ngClass]="{ 'active': element.order === 1 }">1</a>
-							<a class="btn" (click)="element.order = 2" [ngClass]="{ 'active': element.order === 2 }">2</a>
-							<a class="btn" (click)="element.order = 3" [ngClass]="{ 'active': element.order === 3 }">3</a>
-							<a class="btn" (click)="element.order = 4" [ngClass]="{ 'active': element.order === 4 }">4</a>
-						</div>
-					</li>
-					<li ng-init="element.align = false" class="mb-1">
-						<div class="btn-group clearfix">
-							<a class="btn active">align-self &rarr;</a>
-							<a class="btn" (click)="element.align = false" [ngClass]="{ 'active': !element.align }">stretch</a>
-							<a class="btn" (click)="element.align = 'baseline'" [ngClass]="{ 'active': element.align === 'baseline' }">baseline</a>
-							<a class="btn" (click)="element.align = 'start'" [ngClass]="{ 'active': element.align === 'start' }">flex-start</a>
-							<a class="btn" (click)="element.align = 'center'" [ngClass]="{ 'active': element.align === 'center' }">center</a>
-							<a class="btn" (click)="element.align = 'end'" [ngClass]="{ 'active': element.align === 'end' }">flex-end</a>
-						</div>
-					</li>
-				</ul> -->
-
-				<!-- Box -->
-				<h4 class="normal">Box</h4>
-				<!-- <ul class="mb-3">
-					<li ng-init="element.margin = false" class="mb-1">
-						<div class="btn-group clearfix">
-							<a class="btn active">margin &rarr;</a>
-							<a class="btn" (click)="element.margin = false" [ngClass]="{ 'active': !element.margin }">none</a>
-							<a class="btn" (click)="element.margin = '0'" [ngClass]="{ 'active': element.margin === '0' }">0</a>
-							<a class="btn" (click)="element.margin = 1" [ngClass]="{ 'active': element.margin === 1 }">1</a>
-							<a class="btn" (click)="element.margin = 2" [ngClass]="{ 'active': element.margin === 2 }">2</a>
-							<a class="btn" (click)="element.margin = 3" [ngClass]="{ 'active': element.margin === 3 }">3</a>
-							<a class="btn" (click)="element.margin = 4" [ngClass]="{ 'active': element.margin === 4 }">4</a>
-						</div>
-					</li>
-					<li ng-init="element.marginpos = 'm'" class="mb-1">
-						<div class="btn-group clearfix">
-							<a class="btn active">margin position &rarr;</a>
-							<a class="btn" (click)="element.marginpos = 'm'" [ngClass]="{ 'active': element.marginpos === 'm' }">m</a>
-							<a class="btn" (click)="element.marginpos = 'mx'" [ngClass]="{ 'active': element.marginpos === 'mx' }">mx</a>
-							<a class="btn" (click)="element.marginpos = 'my'" [ngClass]="{ 'active': element.marginpos === 'my' }">my</a>
-							<a class="btn" (click)="element.marginpos = 'ml'" [ngClass]="{ 'active': element.marginpos === 'ml' }">ml</a>
-							<a class="btn" (click)="element.marginpos = 'mr'" [ngClass]="{ 'active': element.marginpos === 'mr' }">mr</a>
-							<a class="btn" (click)="element.marginpos = 'mb'" [ngClass]="{ 'active': element.marginpos === 'mb' }">mb</a>
-							<a class="btn" (click)="element.marginpos = 'mt'" [ngClass]="{ 'active': element.marginpos === 'mt' }">mt</a>
-						</div>
-					</li>
-				</ul>
-				<ul>
-					<li ng-init="element.padding = false" class="mb-1">
-						<div class="btn-group clearfix">
-							<a class="btn active">padding &rarr;</a>
-							<a class="btn" (click)="element.padding = false" [ngClass]="{ 'active': !element.padding }">none</a>
-							<a class="btn" (click)="element.padding = '0'" [ngClass]="{ 'active': element.padding === '0' }">0</a>
-							<a class="btn" (click)="element.padding = 1" [ngClass]="{ 'active': element.padding === 1 }">1</a>
-							<a class="btn" (click)="element.padding = 2" [ngClass]="{ 'active': element.padding === 2 }">2</a>
-							<a class="btn" (click)="element.padding = 3" [ngClass]="{ 'active': element.padding === 3 }">3</a>
-							<a class="btn" (click)="element.padding = 4" [ngClass]="{ 'active': element.padding === 4 }">4</a>
-						</div>
-					</li>
-					<li ng-init="element.paddingpos = 'p'" class="mb-1">
-						<div class="btn-group clearfix">
-							<a class="btn active">padding position &rarr;</a>
-							<a class="btn" (click)="element.paddingpos = 'p'" [ngClass]="{ 'active': element.paddingpos === 'p' }">p</a>
-							<a class="btn" (click)="element.paddingpos = 'px'" [ngClass]="{ 'active': element.paddingpos === 'px' }">px</a>
-							<a class="btn" (click)="element.paddingpos = 'py'" [ngClass]="{ 'active': element.paddingpos === 'py' }">py</a>
-							<a class="btn" (click)="element.paddingpos = 'pl'" [ngClass]="{ 'active': element.paddingpos === 'pl' }">pl</a>
-							<a class="btn" (click)="element.paddingpos = 'pr'" [ngClass]="{ 'active': element.paddingpos === 'pr' }">pr</a>
-							<a class="btn" (click)="element.paddingpos = 'pb'" [ngClass]="{ 'active': element.paddingpos === 'pb' }">pb</a>
-							<a class="btn" (click)="element.paddingpos = 'pt'" [ngClass]="{ 'active': element.paddingpos === 'pt' }">pt</a>
-						</div>
-					</li>
-				</ul> -->
+				<options-toggle [classes]="elementClasses" [options]="elementOptions"></options-toggle>
 			</div>
 		</div>
-
-		<!-- Output -->
-		<h2>Output</h2>
-		<pre class="p-1">
-			&lt;div class="<span>container</span><b *ngIf="containerSmall"> container--small</b>"&gt;<br>
-			<em>&rarr;</em>&lt;div class="<span>grid</span><b
-						*ngFor="#class of gridClasses"> {{ class }}</b>"&gt;<br>
-					<em>&rarr;</em><em>&rarr;</em>&lt;div class=""&gt;&lt;/div&gt;<br>
-					<div
-						*ngFor="#x of elementArray; #i = index">
-						<em>&rarr;</em><em>&rarr;</em>&lt;div class=""&gt;&lt;/div&gt;</div>
-					<em>&rarr;</em>&lt;/div&gt;<br>
-			&lt;/div&gt;
-		</pre>
 
 		<!-- TODO Notes -->
 		<!-- <div class="my-2">

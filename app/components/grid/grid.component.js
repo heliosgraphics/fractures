@@ -1,4 +1,4 @@
-System.register(["angular2/core", "../../shared/pipes/MapToIterable"], function(exports_1, context_1) {
+System.register(["angular2/core", "./options-toggle.component"], function(exports_1, context_1) {
     "use strict";
     var __moduleName = context_1 && context_1.id;
     var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
@@ -10,15 +10,15 @@ System.register(["angular2/core", "../../shared/pipes/MapToIterable"], function(
     var __metadata = (this && this.__metadata) || function (k, v) {
         if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
     };
-    var core_1, MapToIterable_1;
+    var core_1, options_toggle_component_1;
     var GridComponent;
     return {
         setters:[
             function (core_1_1) {
                 core_1 = core_1_1;
             },
-            function (MapToIterable_1_1) {
-                MapToIterable_1 = MapToIterable_1_1;
+            function (options_toggle_component_1_1) {
+                options_toggle_component_1 = options_toggle_component_1_1;
             }],
         execute: function() {
             GridComponent = (function () {
@@ -96,51 +96,145 @@ System.register(["angular2/core", "../../shared/pipes/MapToIterable"], function(
                                 "order-2",
                                 "order-3",
                             ]
-                        }
-                    };
-                    this.marginOptions = {
-                        marginPosition: {
+                        },
+                        margin: {
                             selected: false,
                             options: [
-                                "m",
-                                "mx",
-                                "my",
-                                "mt",
-                                "mb",
-                                "ml",
-                                "mr",
+                                "m-0",
+                                "m-1",
+                                "m-2",
+                                "m-3",
+                                "m-4"
                             ]
                         },
-                        marginSize: {
+                        marginXAxis: {
                             selected: false,
                             options: [
-                                "0",
-                                "1",
-                                "2",
-                                "3",
-                                "4",
+                                "mx-0",
+                                "mx-1",
+                                "mx-2",
+                                "mx-3",
+                                "mx-4"
                             ]
                         },
-                        paddingPosition: {
+                        marginYAxis: {
                             selected: false,
                             options: [
-                                "p",
-                                "px",
-                                "py",
-                                "pt",
-                                "pb",
-                                "pl",
-                                "pr",
+                                "my-0",
+                                "my-1",
+                                "my-2",
+                                "my-3",
+                                "my-4"
                             ]
                         },
-                        paddingSize: {
+                        marginLeft: {
                             selected: false,
                             options: [
-                                "0",
-                                "1",
-                                "2",
-                                "3",
-                                "4",
+                                "ml-0",
+                                "ml-1",
+                                "ml-2",
+                                "ml-3",
+                                "ml-4"
+                            ]
+                        },
+                        marginRight: {
+                            selected: false,
+                            options: [
+                                "mr-0",
+                                "mr-1",
+                                "mr-2",
+                                "mr-3",
+                                "mr-4"
+                            ]
+                        },
+                        marginTop: {
+                            selected: false,
+                            options: [
+                                "mt-0",
+                                "mt-1",
+                                "mt-2",
+                                "mt-3",
+                                "mt-4"
+                            ]
+                        },
+                        marginBottom: {
+                            selected: false,
+                            options: [
+                                "mb-0",
+                                "mb-1",
+                                "mb-2",
+                                "mb-3",
+                                "mb-4"
+                            ]
+                        },
+                        padding: {
+                            selected: false,
+                            options: [
+                                "p-0",
+                                "p-1",
+                                "p-2",
+                                "p-3",
+                                "p-4"
+                            ]
+                        },
+                        paddingXAxis: {
+                            selected: false,
+                            options: [
+                                "px-0",
+                                "px-1",
+                                "px-2",
+                                "px-3",
+                                "px-4"
+                            ]
+                        },
+                        paddingYAxis: {
+                            selected: false,
+                            options: [
+                                "py-0",
+                                "py-1",
+                                "py-2",
+                                "py-3",
+                                "py-4"
+                            ]
+                        },
+                        paddingLeft: {
+                            selected: false,
+                            options: [
+                                "pl-0",
+                                "pl-1",
+                                "pl-2",
+                                "pl-3",
+                                "pl-4"
+                            ]
+                        },
+                        paddingRight: {
+                            selected: false,
+                            options: [
+                                "pr-0",
+                                "pr-1",
+                                "pr-2",
+                                "pr-3",
+                                "pr-4"
+                            ]
+                        },
+                        paddingTop: {
+                            selected: false,
+                            options: [
+                                "pt-0",
+                                "pt-1",
+                                "pt-2",
+                                "pt-3",
+                                "pt-4"
+                            ]
+                        },
+                        paddingBottom: {
+                            selected: false,
+                            options: [
+                                "pb-0",
+                                "pb-1",
+                                "pb-2",
+                                "pb-3",
+                                "pb-4"
                             ]
                         }
                     };
@@ -152,24 +246,9 @@ System.register(["angular2/core", "../../shared/pipes/MapToIterable"], function(
                     else
                         return this.elementArray.splice(1, 1);
                 };
-                // Control grid classes
-                GridComponent.prototype.toggleGridClass = function (selected, set) {
-                    // Remove all setitem from classes array
-                    for (var _i = 0, _a = this.gridOptions[set].options; _i < _a.length; _i++) {
-                        var option = _a[_i];
-                        var optionIndex = this.gridClasses.indexOf(option);
-                        if (optionIndex !== -1)
-                            this.gridClasses.splice(optionIndex, 1);
-                    }
-                    // Add new class to array
-                    if (selected[1])
-                        this.gridClasses.push(selected[1]);
-                    // Set selected on options
-                    this.gridOptions[set].selected = selected[0];
-                };
                 GridComponent = __decorate([
                     core_1.Component({
-                        pipes: [MapToIterable_1.MapToIterable],
+                        directives: [options_toggle_component_1.OptionsToggleComponent],
                         selector: "grid",
                         styleUrls: ["app/components/grid/grid.component.css"],
                         templateUrl: "app/components/grid/grid.component.html"
