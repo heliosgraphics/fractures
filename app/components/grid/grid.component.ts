@@ -1,5 +1,5 @@
 import { Component } from "angular2/core";
-import { NgClass, NgFor, NgSwitch, NgSwitchWhen, NgSwitchDefault } from "angular2/common";
+import { NgClass, NgFor, NgIf } from "angular2/common";
 
 import { OptionsToggleComponent } from "./options-toggle.component";
 

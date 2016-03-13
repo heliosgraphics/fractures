@@ -20,44 +20,38 @@
 		</div>
 
 		<!-- Demo -->
-		<div [ngSwitch]="output">
+		<div
+			[ngClass]="gridClasses"
+			class="grid demo demo--grid p-1">
 
-			<!-- View -->
-			<template [ngSwitchWhen]="true">
-				<pre class="p-1">
-					&lt;div class="<span>container</span><b *ngIf="containerSmall"> container--small</b>"&gt;<br>
-					<em>&rarr;</em>&lt;div class="<span>grid</span><b
-								*ngFor="#class of gridClasses"> {{ class }}</b>"&gt;<br>
-							<em>&rarr;</em><em>&rarr;</em>&lt;div<i *ngIf="elementClasses.length"> class="</i><b *ngFor="#class of elementClasses; #i = index">{{ class }} </b><i *ngIf="elementClasses.length">"</i>&gt;&lt;/div&gt;<br>
-							<div
-								*ngFor="#x of elementArray; #i = index">
-								<em>&rarr;</em><em>&rarr;</em>&lt;div&gt;&lt;/div&gt;</div>
-							<em>&rarr;</em>&lt;/div&gt;<br>
-					&lt;/div&gt;
-				</pre>
-			</template>
+			<!-- Elements -->
+			<div [ngClass]="elementClasses">
+				<span>1</span>
+			</div>
 
-			<!-- Code -->
-			<template ngSwitchDefault>
-				<div
-					[ngClass]="gridClasses"
-					class="grid demo demo--grid p-1">
-
-					<!-- Elements -->
-					<div [ngClass]="elementClasses">
-						<span>1</span>
-					</div>
-
-					<!-- More elements -->
-					<div
-						[ngClass]="{
-							'grow-1': elementClasses.length,
-							'order-1': elementClasses.length
-						}"
-						*ngFor="#x of elementArray; #i = index">{{ i + 2 }}</div>
-				</div>
-			</template>
+			<!-- More elements -->
+			<div
+				[ngClass]="{
+					'grow-1': elementClasses.length,
+					'order-1': elementClasses.length
+				}"
+				*ngFor="#x of elementArray; #i = index">{{ i + 2 }}</div>
 		</div>
+
+		<!-- Code -->
+		<pre
+			*ngIf="output"
+			class="p-1">
+			&lt;div class="<span>container</span><b *ngIf="containerSmall"> container--small</b>"&gt;<br>
+			<em>&rarr;</em>&lt;div class="<span>grid</span><b
+						*ngFor="#class of gridClasses"> {{ class }}</b>"&gt;<br>
+					<em>&rarr;</em><em>&rarr;</em>&lt;div<i *ngIf="elementClasses.length"> class="</i><b *ngFor="#class of elementClasses; #i = index">{{ class }} </b><i *ngIf="elementClasses.length">"</i>&gt;&lt;/div&gt;<br>
+					<div
+						*ngFor="#x of elementArray; #i = index">
+						<em>&rarr;</em><em>&rarr;</em>&lt;div&gt;&lt;/div&gt;</div>
+					<em>&rarr;</em>&lt;/div&gt;<br>
+			&lt;/div&gt;
+		</pre>
 
 	</div>
 	<div class="container">

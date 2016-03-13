@@ -2,13 +2,11 @@
 	<li
 		*ngFor="#set of options | MapToIterable"
 		class="mb-1">
-		<small>{{ set.key }}</small>
 		<div class="btn-group clearfix">
-
 			<a
 				(click)="toggleGridClass([false], set.key)"
 				[ngClass]="{ 'active': set.val.selected === false }"
-				class="btn">-</a>
+				class="btn">{{ set.key }} &rarr;</a>
 			<a
 				*ngFor="#option of set.val.options; #i = index"
 				(click)="toggleGridClass([i, option], set.key)"
