@@ -25,10 +25,10 @@ System.register(["angular2/core", "../../shared/components/options-toggle/option
                 function TypoComponent() {
                     this.helpers = false;
                     this.fontSize = 16;
-                    this.formatClasses = [];
+                    this.formatClasses = ["format"];
                     this.formatOptions = {
                         format: {
-                            selected: false,
+                            selected: 0,
                             options: [
                                 "format"
                             ]

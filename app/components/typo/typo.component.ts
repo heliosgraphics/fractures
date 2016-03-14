@@ -20,10 +20,10 @@ export class TypoComponent {
 		this.helpers = false;
 		this.fontSize = 16;
 
-		this.formatClasses = [];
+		this.formatClasses = [ "format" ];
 		this.formatOptions = {
 			format: {
-				selected: false,
+				selected: 0,
 				options: [
 					"format"
 				]
