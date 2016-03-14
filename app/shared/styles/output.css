@@ -1,0 +1,13 @@
+.output {
+	background-color: #EDEEF0;
+	color: #A2A2AD;
+	user-select: all;
+	-webkit-user-select: all;
+
+	font-size: 0.75rem;
+	font-family: "Source Code Pro", monospace;
+	tab-size: 4;
+	white-space: normal;
+}
+
+.output .class { color: #FF5656; }

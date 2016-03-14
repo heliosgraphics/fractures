@@ -2,4 +2,6 @@
 
 ![](https://travis-ci.org/krisztianpuska/fractures.svg)
 
-Opinionated, atomic CSS toolkit. A WIP.
+An opinionated CSS toolkit. Atomic, non-blocking classes providing *basic* utility.
+
+- WIP

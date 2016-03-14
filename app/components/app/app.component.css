@@ -1,0 +1,13 @@
+.nav-top {
+	top: 0;
+	position: fixed;
+	z-index: 1;
+
+	width: 100%;
+
+	background: white;
+}
+
+.nav-top .router-link-active { color: #50E1A0; }
+
+.main { padding-top: 6rem; }

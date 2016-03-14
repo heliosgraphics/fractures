@@ -1,6 +1,6 @@
 {
 	"name": "fractures",
-	"version": "0.1.19",
+	"version": "0.1.21",
 	"author": "Krisztian Puska",
 	"description": "Atomic CSS toolkit.",
 	"keywords": [ "CSS" ],
@@ -14,23 +14,33 @@
 	},
 	"homepage": "http://fractures.space",
 	"scripts": {
-		"start": "concurrently \"lite-server\" \"npm run watch\"",
+		"start": "concurrently \"lite-server\" \"npm run watch\" \"tsc -w\"",
 		"build": "gulp build",
 		"watch": "gulp watch",
-		"test": "gulp test"
+		"test": "gulp test",
+		"typings": "typings"
+	},
+	"dependencies": {
+		"angular2": "2.0.0-beta.9",
+		"es6-promise": "^3.0.2",
+		"es6-shim": "^0.33.3",
+		"reflect-metadata": "0.1.2",
+		"rxjs": "5.0.0-beta.2",
+		"systemjs": "0.19.24"
 	},
 	"devDependencies": {
-		"autoprefixer": "^6.3.3",
-		"postcss-cssnext": "^2.4.0",
 		"concurrently": "^2.0.0",
 		"gulp": "^3.9.1",
 		"gulp-cssnano": "^2.1.1",
 		"gulp-gzip": "^1.2.0",
-		"gulp-csslint": "latest",
+		"gulp-csslint": "^0.2.2",
 		"gulp-postcss": "^6.1.0",
 		"gulp-rename": "^1.2.2",
 		"gulp-size": "^2.1.0",
 		"lite-server": "^2.1.0",
-		"postcss-import": "^8.0.2"
+		"postcss-cssnext": "^2.5.1",
+		"postcss-import": "^8.0.2",
+		"typescript": "^1.8.7",
+		"typings":"^0.7.9"
 	}
 }
