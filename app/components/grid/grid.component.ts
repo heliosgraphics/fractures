@@ -11,6 +11,8 @@ import { OptionsToggleComponent } from "./options-toggle.component";
 })
 
 export class GridComponent {
+	public boxClasses: any;
+	public boxOptions: any;
 	public elementArray: any;
 	public elementClasses: any;
 	public elementOptions: any;
@@ -19,6 +21,7 @@ export class GridComponent {
 	public marginOptions: any;
 
 	constructor() {
+		this.boxClasses = []
 		this.elementArray = [{}]
 		this.elementClasses = [];
 		this.gridClasses = [];
@@ -94,7 +97,10 @@ export class GridComponent {
 					"order-2",
 					"order-3",
 				]
-			},
+			}
+		}
+
+		this.boxOptions = {
 			margin: {
 					selected: false,
 					options: [

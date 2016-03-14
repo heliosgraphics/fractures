@@ -23,6 +23,7 @@ System.register(["angular2/core", "./options-toggle.component"], function(export
         execute: function() {
             GridComponent = (function () {
                 function GridComponent() {
+                    this.boxClasses = [];
                     this.elementArray = [{}];
                     this.elementClasses = [];
                     this.gridClasses = [];
@@ -96,7 +97,9 @@ System.register(["angular2/core", "./options-toggle.component"], function(export
                                 "order-2",
                                 "order-3",
                             ]
-                        },
+                        }
+                    };
+                    this.boxOptions = {
                         margin: {
                             selected: false,
                             options: [

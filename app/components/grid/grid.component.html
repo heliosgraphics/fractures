@@ -25,7 +25,7 @@
 			class="grid demo demo--grid p-1">
 
 			<!-- Elements -->
-			<div [ngClass]="elementClasses">
+			<div [ngClass]="elementClasses.concat(boxClasses)">
 				<span>1</span>
 			</div>
 
@@ -45,14 +45,13 @@
 			&lt;div class="<span>container</span><b *ngIf="containerSmall"> container--small</b>"&gt;<br>
 			<em>&rarr;</em>&lt;div class="<span>grid</span><b
 						*ngFor="#class of gridClasses"> {{ class }}</b>"&gt;<br>
-					<em>&rarr;</em><em>&rarr;</em>&lt;div<i *ngIf="elementClasses.length"> class="</i><b *ngFor="#class of elementClasses; #i = index">{{ class }} </b><i *ngIf="elementClasses.length">"</i>&gt;&lt;/div&gt;<br>
+					<em>&rarr;</em><em>&rarr;</em>&lt;div<i *ngIf="elementClasses.concat(boxClasses).length"> class="</i><b *ngFor="#class of elementClasses.concat(boxClasses); #i = index">{{ class }} </b><i *ngIf="elementClasses.concat(boxClasses).length">"</i>&gt;&lt;/div&gt;<br>
 					<div
 						*ngFor="#x of elementArray; #i = index">
 						<em>&rarr;</em><em>&rarr;</em>&lt;div&gt;&lt;/div&gt;</div>
 					<em>&rarr;</em>&lt;/div&gt;<br>
 			&lt;/div&gt;
 		</pre>
-
 	</div>
 	<div class="container">
 
@@ -63,6 +62,8 @@
 				<!-- Grid options -->
 				<h4 class="normal">Grid</h4>
 				<options-toggle [classes]="gridClasses" [options]="gridOptions"></options-toggle>
+				<h4 class="normal mt-2">Element</h4>
+				<options-toggle [classes]="elementClasses" [options]="elementOptions"></options-toggle>
 
 				<!-- Container options -->
 				<h4 class="mt-3 normal">Container</h4>
@@ -76,8 +77,8 @@
 
 			<!-- Element options -->
 			<div class="grow-1 mb-2">
-				<h4 class="normal">Element</h4>
-				<options-toggle [classes]="elementClasses" [options]="elementOptions"></options-toggle>
+				<h4 class="normal">Box</h4>
+				<options-toggle [classes]="boxClasses" [options]="boxOptions"></options-toggle>
 			</div>
 		</div>
 
