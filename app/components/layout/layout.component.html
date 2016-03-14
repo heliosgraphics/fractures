@@ -1,6 +1,6 @@
 <div class="mb-4">
 	<div class="container">
-		<h1>Grid</h1>
+		<h1>Layout</h1>
 	</div>
 
 	<!-- Container -->
@@ -10,12 +10,13 @@
 
 		<!-- Demo options -->
 		<div class="clearfix mb-1">
+			<div class="float-right ml-1">
+				<a class="btn mr-1" (click)="elementDimensions = !elementDimensions" [ngClass]="{ 'active': !elementDimensions }">dimensions</a>
+				<a class="btn" (click)="output = !output" [ngClass]="{ 'active': !output }">code</a>
+			</div>
 			<div class="btn-group float-right">
 				<a class="btn" (click)="elementCountUpdate(false)" [ngClass]="{ 'disabled': elementArray.length <= 1 }">less</a>
 				<a class="btn" (click)="elementCountUpdate(true)" [ngClass]="{ 'disabled': elementArray.length >= 14 }">more</a>
-			</div>
-			<div class="float-right mr-1">
-				<a class="btn" (click)="output = !output" [ngClass]="{ 'active': !output }">code</a>
 			</div>
 			<div class="float-right mr-1">
 				<a class="btn disabled">16px</a>
@@ -25,10 +26,12 @@
 		<!-- Demo -->
 		<div
 			[ngClass]="gridClasses"
-			class="grid demo demo--grid p-1">
+			class="grid demo p-1">
 
 			<!-- Elements -->
-			<div [ngClass]="elementClasses.concat(boxClasses)">
+			<div
+				[ngClass]="elementClasses.concat(boxClasses)"
+				class="element {{ elementDimensions ? '' : 'element--dimensions' }}">
 				<span>1</span>
 			</div>
 
@@ -36,9 +39,11 @@
 			<div
 				[ngClass]="{
 					'grow-1': elementClasses.length,
-					'order-1': elementClasses.length
+					'order-1': elementClasses.length,
+					'element--dimensions': !elementDimensions
 				}"
-				*ngFor="#x of elementArray; #i = index">{{ i + 2 }}</div>
+				*ngFor="#x of elementArray; #i = index"
+				class="element">{{ i + 2 }}</div>
 		</div>
 
 		<!-- Code -->
@@ -88,7 +93,6 @@
 		</div>
 
 		<!-- TODO Notes -->
-		<!-- TODO Element helpers -->
 		<!-- TODO Breakpoints -->
 		<!-- TODO Add docs -->
 		<!-- TODO Usage -->
