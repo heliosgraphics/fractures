@@ -1,8 +1,3 @@
-.demo {
-	border-radius: 3px;
-	box-shadow: inset 0 0 0 1px #DFE0E6;
-}
-
 .demo--grid { min-height: 11rem; }
 .demo--grid.grid--screen { pointer-events: none; }
 

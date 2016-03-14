@@ -1,6 +1,6 @@
-pre {
-	background-color: #DFE0E6;
-	border-radius: 2px;
+.output {
+	background-color: #EDEEF0;
+	color: #A2A2AD;
 	user-select: all;
 	-webkit-user-select: all;
 
@@ -10,14 +10,4 @@ pre {
 	white-space: normal;
 }
 
-pre span { color: blue; }
-pre b { color: red; }
-
-pre em {
-	float: left;
-	opacity: 0;
-	width: 1.5rem;
-
-	user-select: none;
-	-webkit-user-select: none;
-}
+.output .class { color: #FF5656; }

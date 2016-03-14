@@ -15,6 +15,7 @@ enableProdMode();
 		"app/components/app/app.component.css",
 		"app/shared/styles/body.css",
 		"app/shared/styles/btn.css",
+		"app/shared/styles/demo.css",
 		"app/shared/styles/output.css"
 	],
 	providers: [ ROUTER_PROVIDERS ],

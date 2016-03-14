@@ -41,15 +41,17 @@
 		<!-- Code -->
 		<pre
 			*ngIf="output"
-			class="p-1">
-			&lt;div class="<span>container</span><b *ngIf="containerSmall"> container--small</b>"&gt;<br>
-			<em>&rarr;</em>&lt;div class="<span>grid</span><b
-						*ngFor="#class of gridClasses"> {{ class }}</b>"&gt;<br>
-					<em>&rarr;</em><em>&rarr;</em>&lt;div<i *ngIf="elementClasses.concat(boxClasses).length"> class="</i><b *ngFor="#class of elementClasses.concat(boxClasses); #i = index">{{ class }} </b><i *ngIf="elementClasses.concat(boxClasses).length">"</i>&gt;&lt;/div&gt;<br>
-					<div
-						*ngFor="#x of elementArray; #i = index">
-						<em>&rarr;</em><em>&rarr;</em>&lt;div&gt;&lt;/div&gt;</div>
-					<em>&rarr;</em>&lt;/div&gt;<br>
+			class="output p-1">
+			<div>&lt;div class="<span class="class">container</span><span *ngIf="containerSmall" class="class"> container--small</span>"&gt;</div>
+			<div class="pl-2">&lt;div class="<span class="class">grid</span><span *ngFor="#class of gridClasses" class="class"> {{ class }}</span>"&gt;</div>
+			<div class="pl-3">&lt;div<span *ngIf="elementClasses.concat(boxClasses).length"> class="</span><span
+				*ngFor="#class of elementClasses.concat(boxClasses); #i = index"
+				class="class">{{ class }}<span *ngIf="i !== elementClasses.concat(boxClasses).length - 1"> </span></span><span *ngIf="elementClasses.concat(boxClasses).length">"</span>&gt;&lt;/div&gt;
+			</div>
+			<div *ngFor="#x of elementArray; #i = index" class="pl-3">
+				&lt;div<span *ngIf="elementClasses.length"> class="<span class="class">grow-1 order-1</span>"</span>&gt;&lt;/div&gt;
+			</div>
+			<div class="pl-2">&lt;/div&gt;</div>
 			&lt;/div&gt;
 		</pre>
 	</div>
