@@ -15,7 +15,10 @@
 				<a class="btn" (click)="elementCountUpdate(true)" [ngClass]="{ 'disabled': elementArray.length >= 14 }">more</a>
 			</div>
 			<div class="float-right mr-1">
-				<a class="btn" (click)="output = !output" [ngClass]="{ 'active': output }">code</a>
+				<a class="btn" (click)="output = !output" [ngClass]="{ 'active': !output }">code</a>
+			</div>
+			<div class="float-right mr-1">
+				<a class="btn disabled">16px</a>
 			</div>
 		</div>
 
@@ -40,7 +43,7 @@
 
 		<!-- Code -->
 		<pre
-			*ngIf="output"
+			*ngIf="!output"
 			class="output p-1">
 			<div>&lt;div class="<span class="class">container</span><span *ngIf="containerSmall" class="class"> container--small</span>"&gt;</div>
 			<div class="pl-2">&lt;div class="<span class="class">grid</span><span *ngFor="#class of gridClasses" class="class"> {{ class }}</span>"&gt;</div>
@@ -85,15 +88,9 @@
 		</div>
 
 		<!-- TODO Notes -->
-		<!-- <div class="my-2">
-			<small>* A non-atomic helper class.</small>
-		</div> -->
-
 		<!-- TODO Element helpers -->
 		<!-- TODO Breakpoints -->
-		<!-- TODO Atom size -->
 		<!-- TODO Add docs -->
 		<!-- TODO Usage -->
-		<!-- Basic flex utility with predefined, responsive breakpoints. -->
 	</div>
 </div>

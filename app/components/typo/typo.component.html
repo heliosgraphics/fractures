@@ -16,7 +16,7 @@
 				<a class="btn" (click)="fontSize = 24" [ngClass]="{ 'active': fontSize === 24 }">24px</a>
 			</div>
 			<div class="float-right mr-1">
-				<a class="btn" (click)="output = !output" [ngClass]="{ 'active': output }">code</a>
+				<a class="btn" (click)="output = !output" [ngClass]="{ 'active': !output }">code</a>
 			</div>
 		</div>
 
@@ -61,7 +61,7 @@
 
 		<!-- Code -->
 		<pre
-			*ngIf="output"
+			*ngIf="!output"
 			class="output p-1">
 			<div>&lt;div<span *ngIf="formatOptions.format.selected === 0"> class="<span class="class">format</span>"</span>&gt;</div>
 			<div class="pl-2">&lt;h1&gt;&lt;/h1&gt;</div>
