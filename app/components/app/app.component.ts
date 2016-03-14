@@ -2,7 +2,7 @@ import { Component, enableProdMode, ViewEncapsulation } from "angular2/core";
 import { RouteConfig, ROUTER_DIRECTIVES, ROUTER_PROVIDERS } from "angular2/router";
 
 import { IndexComponent } from "../index/index.component";
-import { GridComponent } from "../grid/grid.component";
+import { LayoutComponent } from "../layout/layout.component";
 import { TypoComponent } from "../typo/typo.component";
 
 enableProdMode();
@@ -23,7 +23,7 @@ enableProdMode();
 
 @RouteConfig([
 	{ path: "/", name: "Index", component: IndexComponent, useAsDefault: true },
-	{ path: "/grid", name: "Grid", component: GridComponent },
+	{ path: "/layout", name: "Layout", component: LayoutComponent },
 	{ path: "/typo", name: "Typo", component: TypoComponent }
 ])
 

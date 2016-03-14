@@ -44,7 +44,7 @@ System.register(["angular2/core", "../../shared/pipes/MapToIterable"], function(
                         inputs: ["classes", "options"],
                         pipes: [MapToIterable_1.MapToIterable],
                         selector: "options-toggle",
-                        templateUrl: "app/components/grid/options-toggle.component.html"
+                        templateUrl: "app/components/layout/options-toggle.component.html"
                     }), 
                     __metadata('design:paramtypes', [])
                 ], OptionsToggleComponent);

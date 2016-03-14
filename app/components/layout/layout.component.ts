@@ -5,12 +5,12 @@ import { OptionsToggleComponent } from "./options-toggle.component";
 
 @Component({
 	directives: [ OptionsToggleComponent ],
-	selector: "grid",
-	styleUrls: [ "app/components/grid/grid.component.css" ],
-	templateUrl: "app/components/grid/grid.component.html"
+	selector: "layout",
+	styleUrls: [ "app/components/layout/layout.component.css" ],
+	templateUrl: "app/components/layout/layout.component.html"
 })
 
-export class GridComponent {
+export class LayoutComponent {
 	public boxClasses: any;
 	public boxOptions: any;
 	public elementArray: any;

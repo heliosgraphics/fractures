@@ -7,7 +7,7 @@ import { MapToIterable } from "../../shared/pipes/MapToIterable";
 	inputs: [ "classes", "options" ],
 	pipes: [ MapToIterable ],
 	selector: "options-toggle",
-	templateUrl: "app/components/grid/options-toggle.component.html"
+	templateUrl: "app/components/layout/options-toggle.component.html"
 })
 
 export class OptionsToggleComponent {

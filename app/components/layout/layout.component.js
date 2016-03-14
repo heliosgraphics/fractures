@@ -11,7 +11,7 @@ System.register(["angular2/core", "./options-toggle.component"], function(export
         if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
     };
     var core_1, options_toggle_component_1;
-    var GridComponent;
+    var LayoutComponent;
     return {
         setters:[
             function (core_1_1) {
@@ -21,8 +21,8 @@ System.register(["angular2/core", "./options-toggle.component"], function(export
                 options_toggle_component_1 = options_toggle_component_1_1;
             }],
         execute: function() {
-            GridComponent = (function () {
-                function GridComponent() {
+            LayoutComponent = (function () {
+                function LayoutComponent() {
                     this.boxClasses = [];
                     this.elementArray = [{}];
                     this.elementClasses = [];
@@ -243,24 +243,24 @@ System.register(["angular2/core", "./options-toggle.component"], function(export
                     };
                 }
                 // Set extra elements length
-                GridComponent.prototype.elementCountUpdate = function (direction) {
+                LayoutComponent.prototype.elementCountUpdate = function (direction) {
                     if (direction)
                         return this.elementArray.push({});
                     else
                         return this.elementArray.splice(1, 1);
                 };
-                GridComponent = __decorate([
+                LayoutComponent = __decorate([
                     core_1.Component({
                         directives: [options_toggle_component_1.OptionsToggleComponent],
-                        selector: "grid",
-                        styleUrls: ["app/components/grid/grid.component.css"],
-                        templateUrl: "app/components/grid/grid.component.html"
+                        selector: "layout",
+                        styleUrls: ["app/components/layout/layout.component.css"],
+                        templateUrl: "app/components/layout/layout.component.html"
                     }), 
                     __metadata('design:paramtypes', [])
-                ], GridComponent);
-                return GridComponent;
+                ], LayoutComponent);
+                return LayoutComponent;
             }());
-            exports_1("GridComponent", GridComponent);
+            exports_1("LayoutComponent", LayoutComponent);
         }
     }
 });
