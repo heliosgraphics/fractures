@@ -1,6 +1,6 @@
 {
 	"name": "fractures",
-	"version": "0.1.20",
+	"version": "0.1.21",
 	"author": "Krisztian Puska",
 	"description": "Atomic CSS toolkit.",
 	"keywords": [ "CSS" ],
@@ -29,7 +29,6 @@
 		"systemjs": "0.19.24"
 	},
 	"devDependencies": {
-		"autoprefixer": "^6.3.3",
 		"concurrently": "^2.0.0",
 		"gulp": "^3.9.1",
 		"gulp-cssnano": "^2.1.1",

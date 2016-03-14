@@ -1,4 +1,3 @@
-var autoprefixer = require("autoprefixer");
 var gulp = require("gulp");
 var postcss = require("gulp-postcss");
 var postcssimport = require("postcss-import");
@@ -12,8 +11,7 @@ var csslint = require("gulp-csslint");
 var files = [ "./src/fractures.css" ];
 var postcssProcessors = [
 	postcssimport(),
-	postcsscssnext(),
-	autoprefixer({ browsers: [] })
+	postcsscssnext({ browsers: ["last 2 versions"] })
 ];
 
 gulp.task("default", function() {
