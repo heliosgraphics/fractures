@@ -10,6 +10,8 @@
 	font-weight: bold;
 	line-height: 2.5rem;
 	text-align: center;
+	user-select: none;
+	-webkit-user-select: none;
 }
 
 .btn:hover { background-color: #EDEEF0; }
