@@ -18,17 +18,11 @@
 			<div class="float-right mr-1">
 				<a class="btn" (click)="output = !output" [ngClass]="{ 'active': output }">code</a>
 			</div>
-			<div class="float-right mr-1">
-				<a class="btn" (click)="helpers = !helpers" [ngClass]="{ 'active': helpers }">helpers</a>
-			</div>
 		</div>
 
 		<!-- Demo -->
 		<div
-			[ngClass]="{
-				'format': format,
-				'demo--helpers': helpers
-			}"
+			[ngClass]="formatClasses"
 			[style.font-size.px]="fontSize"
 			class="demo">
 			<h1 class="normal px-1">Header</h1>
@@ -69,7 +63,7 @@
 		<pre
 			*ngIf="output"
 			class="p-1">
-			&lt;div class="format"&gt;<br>
+			&lt;div<span *ngIf="formatOptions.format.selected === 0"> class="format"</span>&gt;<br>
 				<em>&rarr;</em>&lt;h1&gt;&lt;/h1&gt;<br>
 				<em>&rarr;</em>&lt;ul&gt;<br>
 					<em>&rarr;</em><em>&rarr;</em>&lt;li&gt;&lt;/li&gt;<br>
@@ -103,11 +97,8 @@
 
 		<!-- Options -->
 		<div class="pt-2">
-			<div class="btn-group clearfix mb-2">
-				<a class="btn active">format* &rarr;</a>
-				<a class="btn" (click)="format = true" [ngClass]="{ 'active': format }">on</a>
-				<a class="btn" (click)="format = false" [ngClass]="{ 'active': !format }">off</a>
-			</div>
+			<h4 class="normal">Options</h4>
+			<options-toggle [classes]="formatClasses" [options]="formatOptions"></options-toggle>
 		</div>
 
 		<!-- TODO Notes -->

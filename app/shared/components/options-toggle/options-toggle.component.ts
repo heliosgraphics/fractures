@@ -1,13 +1,13 @@
 import { Component } from "angular2/core";
 import { NgClass, NgFor } from "angular2/common";
 
-import { MapToIterable } from "../../shared/pipes/MapToIterable";
+import { MapToIterable } from "../../pipes/MapToIterable";
 
 @Component({
 	inputs: [ "classes", "options" ],
 	pipes: [ MapToIterable ],
 	selector: "options-toggle",
-	templateUrl: "app/components/layout/options-toggle.component.html"
+	templateUrl: "app/shared/components/options-toggle/options-toggle.component.html"
 })
 
 export class OptionsToggleComponent {

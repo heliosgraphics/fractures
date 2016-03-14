@@ -1,4 +1,4 @@
-System.register(["angular2/core", "../../shared/pipes/MapToIterable"], function(exports_1, context_1) {
+System.register(["angular2/core", "../../pipes/MapToIterable"], function(exports_1, context_1) {
     "use strict";
     var __moduleName = context_1 && context_1.id;
     var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
@@ -44,7 +44,7 @@ System.register(["angular2/core", "../../shared/pipes/MapToIterable"], function(
                         inputs: ["classes", "options"],
                         pipes: [MapToIterable_1.MapToIterable],
                         selector: "options-toggle",
-                        templateUrl: "app/components/layout/options-toggle.component.html"
+                        templateUrl: "app/shared/components/options-toggle/options-toggle.component.html"
                     }), 
                     __metadata('design:paramtypes', [])
                 ], OptionsToggleComponent);
