@@ -26,4 +26,4 @@
 	width: var(--width);
 }
 
-.container.container--small { width: var(--width-small); }
+.container--small { width: var(--width-small); }

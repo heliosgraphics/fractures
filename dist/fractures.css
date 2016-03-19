@@ -1,15 +1,5 @@
 /*@custom-media --hd (min-width: 1280px);*/
 
-/*
-	Reset
-
-	Resets the box model, handles font-size and base line-height.
-	Also turns on scrollbar on html, to avoid page jump.
-
-	- no edge cases
-	- no old browser support
-*/
-
 * {
 	margin: 0;
 	padding: 0;
@@ -66,7 +56,28 @@ img { max-width: 100%; }
 	width: 960px;
 }
 
-.container.container--small { width: 480px; }
+.container--small { width: 480px; }
+
+.block { display: block; }
+
+.inline { display: inline; }
+
+.inline-block { display: inline-block; }
+
+.none { display: none; }
+
+.float-left { float: left; }
+
+.float-right { float: right; }
+
+.clearfix:after { clear: both; }
+
+.clearfix:after,
+.clearfix:before {
+	display: block;
+
+	content: " ";
+}
 
 @media (max-width: 720px) {
 	.grid--collapse.grid { -webkit-flex-direction: column; -ms-flex-direction: column; flex-direction: column; }
@@ -182,37 +193,6 @@ img { max-width: 100%; }
 .order-4 { -webkit-order: 4; -ms-flex-order: 4; order: 4; }
 
 .order-5 { -webkit-order: 5; -ms-flex-order: 5; order: 5; }
-
-/*Element helpers*/
-
-.block { display: block; }
-
-.none { display: none; }
-
-.inline { display: inline; }
-
-.inline-block { display: inline-block; }
-
-/*Float helpers*/
-
-.float-left { float: left; }
-
-.float-right { float: right; }
-
-.float-none { float: none; }
-
-.clearfix:before,
-.clearfix:after {
-	display: block;
-	height: 0;
-	overflow: hidden;
-
-	content: "\0020";
-}
-
-.clearfix:after { clear: both; }
-
-.clearfix { zoom: 1; }
 
 .m-0 { margin: 0; }
 

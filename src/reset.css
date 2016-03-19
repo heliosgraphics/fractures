@@ -1,13 +1,3 @@
-/*
-	Reset
-
-	Resets the box model, handles font-size and base line-height.
-	Also turns on scrollbar on html, to avoid page jump.
-
-	- no edge cases
-	- no old browser support
-*/
-
 * {
 	margin: 0;
 	padding: 0;

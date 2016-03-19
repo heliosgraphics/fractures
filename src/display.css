@@ -1,0 +1,15 @@
+.block { display: block; }
+.inline { display: inline; }
+.inline-block { display: inline-block; }
+.none { display: none; }
+
+.float-left { float: left; }
+.float-right { float: right; }
+
+.clearfix:after { clear: both; }
+.clearfix:after,
+.clearfix:before {
+	display: block;
+
+	content: " ";
+}
