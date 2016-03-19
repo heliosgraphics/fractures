@@ -69,7 +69,8 @@ System.register(["angular2/core", "../../shared/components/options-toggle/option
                         wrap: {
                             selected: false,
                             options: [
-                                "grid--wrap"
+                                "grid--wrap",
+                                "grid--wrap-reverse"
                             ]
                         },
                         column: {
@@ -88,14 +89,25 @@ System.register(["angular2/core", "../../shared/components/options-toggle/option
                                 "grow-3",
                                 "grow-4",
                                 "grow-5",
+                                "grow-6"
                             ]
                         },
                         order: {
                             selected: false,
                             options: [
+                                "order-first",
                                 "order-1",
                                 "order-2",
                                 "order-3",
+                                "order-last"
+                            ]
+                        },
+                        shrink: {
+                            selected: false,
+                            options: [
+                                "shrink-1",
+                                "shrink-2",
+                                "shrink-3"
                             ]
                         }
                     };
