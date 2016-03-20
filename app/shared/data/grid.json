@@ -1,0 +1,52 @@
+{
+	"align": {
+		"selected": false,
+		"options": [
+			"grid--start",
+			"grid--end",
+			"grid--baseline"
+		]
+	},
+	"center": {
+		"selected": false,
+		"options": [
+			"grid--center",
+			"grid--ycenter",
+			"grid--xcenter"
+		]
+	},
+	"justify": {
+		"selected": false,
+		"options": [
+			"grid--around",
+			"grid--between",
+			"grid--right"
+		]
+	},
+	"responsive": {
+		"selected": false,
+		"options": [
+			"grid--collapse",
+			"grid--screen"
+		]
+	},
+	"reverse": {
+		"selected": false,
+		"options": [
+			"grid--reverse"
+		]
+	},
+	"wrap": {
+		"selected": false,
+		"options": [
+			"grid--wrap",
+			"grid--wrap-reverse"
+		]
+	},
+	"column": {
+		"selected": false,
+		"options": [
+			"grid--column"
+		]
+	}
+}

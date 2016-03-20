@@ -65,9 +65,9 @@
 
 			<!-- Grid options -->
 			<h4 class="normal">Grid</h4>
-			<options-toggle [classes]="gridClasses" [options]="gridOptions"></options-toggle>
+			<options-toggle [classes]="gridClasses" [options]="optionsArray['grid']"></options-toggle>
 			<h4 class="normal mt-2">Element</h4>
-			<options-toggle [classes]="elementClasses" [options]="elementOptions"></options-toggle>
+			<options-toggle [classes]="elementClasses" [options]="optionsArray['gridelement']"></options-toggle>
 
 			<!-- Container options -->
 			<h4 class="mt-3 normal">Container</h4>
@@ -82,7 +82,7 @@
 		<!-- Element options -->
 		<div class="grow-1 mb-2">
 			<h4 class="normal">Box</h4>
-			<options-toggle [classes]="boxClasses" [options]="boxOptions"></options-toggle>
+			<options-toggle [classes]="boxClasses" [options]="optionsArray['box']"></options-toggle>
 		</div>
 	</div>
 </div>
