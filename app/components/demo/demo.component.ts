@@ -20,7 +20,7 @@ export class DemoComponent implements OnInit {
 	public formatClasses: any;
 	public gridClasses: any;
 
-	public optionsStrings: any = [ "box", "grid", "gridelement", "format" ];
+	public optionsStrings: any = [ "margin", "padding", "grid", "gridelement", "format" ];
 	public optionsArray: any = [];
 
 	// TODO: A naïve implementation

@@ -27,7 +27,7 @@ System.register(["angular2/core", "../../shared/services/options.service", "../.
             DemoComponent = (function () {
                 function DemoComponent(OptionsService) {
                     this.OptionsService = OptionsService;
-                    this.optionsStrings = ["box", "grid", "gridelement", "format"];
+                    this.optionsStrings = ["margin", "padding", "grid", "gridelement", "format"];
                     this.optionsArray = [];
                     this.boxClasses = [];
                     this.elementArray = [{}];
