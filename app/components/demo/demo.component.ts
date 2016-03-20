@@ -14,13 +14,14 @@ import { OptionsToggleComponent } from "../../shared/components/options-toggle/o
 
 export class DemoComponent implements OnInit {
 	public boxClasses: any;
+	public containerClasses: any;
 	public elementArray: any;
 	public elementClasses: any;
 	public fontSize: number;
 	public formatClasses: any;
 	public gridClasses: any;
 
-	public optionsStrings: any = [ "margin", "padding", "grid", "gridelement", "format" ];
+	public optionsStrings: any = [ "container", "margin", "padding", "grid", "gridelement", "format" ];
 	public optionsArray: any = [];
 
 	// TODO: A naïve implementation
@@ -36,6 +37,7 @@ export class DemoComponent implements OnInit {
 
 	constructor(private OptionsService: OptionsService) {
 		this.boxClasses = [];
+		this.containerClasses = [];
 		this.elementArray = [{}];
 		this.elementClasses = [];
 		this.gridClasses = [];
