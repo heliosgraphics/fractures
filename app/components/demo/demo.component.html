@@ -1,5 +1,161 @@
-<div class="mb-4">
-	<grid></grid>
-	<hr class="mt-4">
-	<format></format>
+<div
+	[ngClass]="{ 'container--small': containerSmall }"
+	class="container">
+
+	<!-- Demo settings -->
+	<div class="clearfix mb-1">
+		<div class="float-right ml-1">
+			<a class="btn mr-1" (click)="elementDimensions = !elementDimensions" [ngClass]="{ 'active': !elementDimensions }">dimensions</a>
+			<a class="btn" (click)="output = !output" [ngClass]="{ 'active': output }">code</a>
+		</div>
+		<div class="btn-group float-right">
+			<a class="btn" (click)="elementCountUpdate(false)" [ngClass]="{ 'disabled': elementArray.length <= 1 }">less</a>
+			<a class="btn" (click)="elementCountUpdate(true)" [ngClass]="{ 'disabled': elementArray.length >= 14 }">more</a>
+		</div>
+		<div class="float-right mr-1">
+			<a class="btn disabled">16px</a>
+		</div>
+	</div>
+
+	<!-- Demo -->
+	<div
+		[ngClass]="gridClasses"
+		class="grid demo p-1">
+		<div
+			[ngClass]="elementClasses.concat(boxClasses)"
+			class="element {{ elementDimensions ? '' : 'element--dimensions' }}">
+			<span>1</span>
+		</div>
+		<div
+			[ngClass]="{
+				'grow-1': elementClasses.length,
+				'order-1': elementClasses.length,
+				'element--dimensions': !elementDimensions
+			}"
+			*ngFor="#x of elementArray; #i = index"
+			class="element">{{ i + 2 }}</div>
+	</div>
+
+	<!-- Code -->
+	<pre
+		*ngIf="output"
+		class="output p-1">
+		<div>&lt;div class="<span class="class">container</span><span *ngIf="containerSmall" class="class"> container--small</span>"&gt;</div>
+		<div class="pl-2">&lt;div class="<span class="class">grid</span><span *ngFor="#class of gridClasses" class="class"> {{ class }}</span>"&gt;</div>
+		<div class="pl-3">&lt;div<span *ngIf="elementClasses.concat(boxClasses).length"> class="</span><span
+			*ngFor="#class of elementClasses.concat(boxClasses); #i = index"
+			class="class">{{ class }}<span *ngIf="i !== elementClasses.concat(boxClasses).length - 1"> </span></span><span *ngIf="elementClasses.concat(boxClasses).length">"</span>&gt;&lt;/div&gt;
+		</div>
+		<div *ngFor="#x of elementArray; #i = index" class="pl-3">
+			&lt;div<span *ngIf="elementClasses.length"> class="<span class="class">grow-1 order-1</span>"</span>&gt;&lt;/div&gt;
+		</div>
+		<div class="pl-2">&lt;/div&gt;</div>
+		&lt;/div&gt;
+	</pre>
+</div>
+<div class="container">
+	<div class="grid grid--collapse pt-3">
+		<div class="grow-1 mr-1 mb-2">
+
+			<!-- Options -->
+			<h4 class="normal">Grid</h4>
+			<options-toggle [classes]="gridClasses" [options]="optionsArray['grid']"></options-toggle>
+			<h4 class="normal mt-2">Element</h4>
+			<options-toggle [classes]="elementClasses" [options]="optionsArray['gridelement']"></options-toggle>
+
+			<!-- Container options -->
+			<h4 class="mt-3 normal">Container</h4>
+			<ul class="mb-3">
+				<li>
+					<input [(ngModel)]="containerSmall" type="checkbox" id="containerSmall">
+					<label for="containerSmall">small</label>
+				</li>
+			</ul>
+		</div>
+
+		<!-- Element options -->
+		<div class="grow-1 mb-2">
+			<h4 class="normal">Box</h4>
+			<options-toggle [classes]="boxClasses" [options]="optionsArray['box']"></options-toggle>
+		</div>
+	</div>
+</div>
+
+<!-- Format -->
+<div class="mt-4 container">
+
+	<!-- Demo settings -->
+	<div class="clearfix mb-1">
+		<div class="float-right ml-1">
+			<a class="btn" (click)="output = !output" [ngClass]="{ 'active': output }">code</a>
+		</div>
+		<div class="btn-group float-right">
+			<a class="btn" (click)="fontSize = 12" [ngClass]="{ 'active': fontSize === 12 }">12px</a>
+			<a class="btn" (click)="fontSize = 14" [ngClass]="{ 'active': fontSize === 14 }">14px</a>
+			<a class="btn" (click)="fontSize = 16" [ngClass]="{ 'active': fontSize === 16 }">16px</a>
+			<a class="btn" (click)="fontSize = 18" [ngClass]="{ 'active': fontSize === 18 }">18px</a>
+			<a class="btn" (click)="fontSize = 20" [ngClass]="{ 'active': fontSize === 20 }">20px</a>
+			<a class="btn" (click)="fontSize = 22" [ngClass]="{ 'active': fontSize === 22 }">22px</a>
+			<a class="btn" (click)="fontSize = 24" [ngClass]="{ 'active': fontSize === 24 }">24px</a>
+		</div>
+	</div>
+
+	<!-- Demo -->
+	<div
+		[ngClass]="formatClasses"
+		[style.font-size.px]="fontSize"
+		class="demo p-1">
+		<h1 class="normal px-1">Snare ocean truth joy society deceptions.</h1>
+		<ul class="px-1">
+			<li>Law battle</li>
+			<li>Noble enlightenment</li>
+		</ul>
+		<ol class="px-1">
+			<li>Value horror christianity</li>
+			<li>Against marvelous convictions</li>
+		</ol>
+		<p class="px-1">Hope battle reason burying madness hatred overcome grandeur of. Self self battle sexuality burying pious convictions against decieve ultimate morality passion faithful.</p>
+		<p class="px-1">Horror endless faithful victorious superiority hope aversion suicide. Prejudice suicide transvaluation philosophy chaos sea joy fearful chaos contradict hatred.</p>
+		<h1 class="px-1">Fearful transvaluation play zarathustra moral enlightenment christianity war.</h1>
+		<h2 class="px-1">Fearful transvaluation play zarathustra moral enlightenment christianity war.</h2>
+		<h3 class="px-1">Fearful transvaluation play zarathustra moral enlightenment christianity war.</h3>
+		<h4 class="px-1">Fearful transvaluation play zarathustra moral enlightenment christianity war.</h4>
+		<h5 class="px-1">Fearful transvaluation play zarathustra moral enlightenment christianity war.</h5>
+		<h6 class="px-1">Fearful transvaluation play zarathustra moral enlightenment christianity war.</h6>
+		<hr>
+		<small class="px-1 block">Fearful love abstract ultimate holiest ubermensch superiority pinnacle faithful snare.</small>
+	</div>
+
+	<!-- Code -->
+	<pre
+		*ngIf="output"
+		class="output p-1">
+		<div>&lt;div<span *ngIf="optionsArray['format'].format.selected === 0"> class="<span class="class">format</span>"</span>&gt;</div>
+		<div class="pl-2">&lt;h1&gt;&lt;/h1&gt;</div>
+		<div class="pl-2">&lt;ul&gt;</div>
+		<div class="pl-3">&lt;li&gt;&lt;/li&gt;</div>
+		<div class="pl-3">&lt;li&gt;&lt;/li&gt;</div>
+		<div class="pl-2">&lt;/ul&gt;</div>
+		<div class="pl-2">&lt;ol&gt;</div>
+		<div class="pl-3">&lt;li&gt;&lt;/li&gt;</div>
+		<div class="pl-3">&lt;li&gt;&lt;/li&gt;</div>
+		<div class="pl-2">&lt;/ol&gt;</div>
+		<div class="pl-2">&lt;p&gt;&lt;/p&gt;</div>
+		<div class="pl-2">&lt;p&gt;&lt;/p&gt;</div>
+		<div class="pl-2">&lt;h1&gt;&lt;/h1&gt;</div>
+		<div class="pl-2">&lt;h2&gt;&lt;/h2&gt;</div>
+		<div class="pl-2">&lt;h3&gt;&lt;/h3&gt;</div>
+		<div class="pl-2">&lt;h4&gt;&lt;/h4&gt;</div>
+		<div class="pl-2">&lt;h5&gt;&lt;/h5&gt;</div>
+		<div class="pl-2">&lt;h6&gt;&lt;/h6&gt;</div>
+		<div class="pl-2">&lt;hr&gt;</div>
+		<div class="pl-2">&lt;small&gt;&lt;/small&gt;</div>
+		<div>&lt;/div&gt;</div>
+	</pre>
+
+	<!-- Options -->
+	<div class="pt-3">
+		<h4 class="normal">Options</h4>
+		<options-toggle [classes]="formatClasses" [options]="optionsArray['format']"></options-toggle>
+	</div>
 </div>

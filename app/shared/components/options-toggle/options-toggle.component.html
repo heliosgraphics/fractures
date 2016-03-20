@@ -6,12 +6,12 @@
 			<a
 				[ngClass]="{ 'active': set.val.selected === false }"
 				(click)="toggleGridClass([false], set.key)"
-				class="btn">{{ set.key }} &rarr;</a>
+				class="btn btn-primary">{{ set.key }} &rarr;</a>
 			<a
 				*ngFor="#option of set.val.options; #i = index"
 				[ngClass]="{ 'active': i === set.val.selected }"
 				(click)="toggleGridClass([i, option], set.key)"
-				class="btn">{{ option }}</a>
+				class="btn btn-primary">{{ option }}</a>
 		</div>
 	</li>
 </ul>

@@ -1,3 +1,5 @@
+/* TODO: Needs proper design */
+
 .btn {
 	float: left;
 	padding: 0 .75rem;
@@ -20,9 +22,19 @@
 .btn.disabled {
 	opacity: .5;
 
-	background-color: #DFE0E6;
 	pointer-events: none;
 }
+
+.btn-primary {
+	background-color: #50E1A0;
+	box-shadow: inset 0 0 0 1px rgba(0, 0, 0, 0);
+
+	color: white;
+}
+
+.btn-primary.btn.active,
+.btn-primary.btn.active:hover { background-color: #3BAE7A; }
+.btn-primary.btn:hover { background-color: #3C3C50; }
 
 .btn-group .btn { border-radius: 0; }
 .btn-group .btn:first-child { border-radius: 3px 0 0 3px; }
