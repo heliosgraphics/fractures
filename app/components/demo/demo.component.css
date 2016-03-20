@@ -1,4 +1,9 @@
-.demo { min-height: 11rem; }
+.demo {
+	min-height: 11rem;
+
+	background-color: white;
+	border-radius: 3px;
+}
 .demo.grid--screen { pointer-events: none; }
 
 .element {
