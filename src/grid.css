@@ -20,16 +20,13 @@
 
 .grid { display: flex; }
 
-/*Wrap*/
 .grid--wrap { flex-wrap: wrap; }
+.grid--wrap-reverse { flex-wrap: wrap-reverse; }
 
-/*Directions*/
 .grid--reverse { flex-direction: row-reverse; }
 .grid--reverse.grid--column { flex-direction: column-reverse; }
-
 .grid--column { flex-direction: column; }
 
-/*Positions*/
 .grid--center {
 	align-items: center;
 	justify-content: center;
@@ -46,7 +43,6 @@
 .grid--end { align-items: flex-end; }
 .grid--start { align-items: flex-start; }
 
-/*Helpers*/
 .grid--screen {
 	left: 0;
 	position: absolute;
@@ -56,29 +52,34 @@
 	width: 100%;
 }
 
-/*Self*/
-.self--center { align-self: center; }
-.self--start { align-self: flex-start; }
-.self--end { align-self: flex-end; }
-.self--baseline { align-self: baseline; }
+.self-center { align-self: center; }
+.self-start { align-self: flex-start; }
+.self-end { align-self: flex-end; }
+.self-baseline { align-self: baseline; }
 
-/*Grow*/
+.shrink-2 { flex-shrink: 2; }
+.shrink-3 { flex-shrink: 3; }
+.shrink-4 { flex-shrink: 4; }
+.shrink-5 { flex-shrink: 5; }
+.shrink-6 { flex-shrink: 6; }
+
 .grow-1 { flex-grow: 1; }
 .grow-2 { flex-grow: 2; }
 .grow-3 { flex-grow: 3; }
 .grow-4 { flex-grow: 4; }
 .grow-5 { flex-grow: 5; }
 
-/*Grid intentions*/
+/* REVIEW */
+/* Auto will distribute extra space based on grow. */
 .grow-1,
 .grow-2,
 .grow-3,
 .grow-4,
-.grow-5 { flex-basis: 0; }
+.grow-5,
+.grow-6 { flex-basis: auto; }
 
-/*Order*/
+.order-first { order: -1; }
 .order-1 { order: 1; }
 .order-2 { order: 2; }
 .order-3 { order: 3; }
-.order-4 { order: 4; }
-.order-5 { order: 5; }
+.order-last { order: 9999; }

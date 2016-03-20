@@ -2,8 +2,8 @@ import { Component, enableProdMode, ViewEncapsulation } from "angular2/core";
 import { RouteConfig, ROUTER_DIRECTIVES, ROUTER_PROVIDERS } from "angular2/router";
 
 import { IndexComponent } from "../index/index.component";
-import { LayoutComponent } from "../layout/layout.component";
-import { TypoComponent } from "../typo/typo.component";
+import { DemoComponent } from "../demo/demo.component";
+import { DocsComponent } from "../docs/docs.component";
 
 enableProdMode();
 
@@ -24,8 +24,8 @@ enableProdMode();
 
 @RouteConfig([
 	{ path: "/", name: "Index", component: IndexComponent, useAsDefault: true },
-	{ path: "/layout", name: "Layout", component: LayoutComponent },
-	{ path: "/typo", name: "Typo", component: TypoComponent }
+	{ path: "/demo", name: "Demo", component: DemoComponent },
+	{ path: "/docs", name: "Docs", component: DocsComponent }
 ])
 
 export class AppComponent {}

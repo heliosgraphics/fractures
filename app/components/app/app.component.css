@@ -5,7 +5,7 @@
 
 	width: 100%;
 
-	background: white;
+	background-color: white;
 }
 
 .nav-top .router-link-active { color: #50E1A0; }
