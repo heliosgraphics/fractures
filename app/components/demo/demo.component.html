@@ -5,15 +5,15 @@
 	<!-- Demo settings -->
 	<div class="clearfix mb-1">
 		<div class="float-right ml-1">
-			<a class="btn mr-1" (click)="elementDimensions = !elementDimensions" [ngClass]="{ 'active': !elementDimensions }">dimensions</a>
-			<a class="btn" (click)="output = !output" [ngClass]="{ 'active': output }">code</a>
+			<a class="btn btn-link mr-1" (click)="elementDimensions = !elementDimensions" [ngClass]="{ 'active': !elementDimensions }">dimensions</a>
+			<a class="btn btn-link" (click)="output = !output" [ngClass]="{ 'active': output }">code</a>
 		</div>
 		<div class="btn-group float-right">
-			<a class="btn" (click)="elementCountUpdate(false)" [ngClass]="{ 'disabled': elementArray.length <= 1 }">less</a>
-			<a class="btn" (click)="elementCountUpdate(true)" [ngClass]="{ 'disabled': elementArray.length >= 14 }">more</a>
+			<a class="btn btn-link" (click)="elementCountUpdate(false)" [ngClass]="{ 'disabled': elementArray.length <= 1 }">less</a>
+			<a class="btn btn-link" (click)="elementCountUpdate(true)" [ngClass]="{ 'disabled': elementArray.length >= 14 }">more</a>
 		</div>
 		<div class="float-right mr-1">
-			<a class="btn disabled">16px</a>
+			<a class="btn btn-link disabled">16px</a>
 		</div>
 	</div>
 
@@ -84,7 +84,7 @@
 	<!-- Demo settings -->
 	<div class="clearfix mb-1">
 		<div class="float-right ml-1">
-			<a class="btn" (click)="output = !output" [ngClass]="{ 'active': output }">code</a>
+			<a class="btn btn-link" (click)="output = !output" [ngClass]="{ 'active': output }">code</a>
 		</div>
 	</div>
 
@@ -126,16 +126,16 @@
 	<!-- Demo settings -->
 	<div class="clearfix mb-1">
 		<div class="float-right ml-1">
-			<a class="btn" (click)="output = !output" [ngClass]="{ 'active': output }">code</a>
+			<a class="btn btn-link" (click)="output = !output" [ngClass]="{ 'active': output }">code</a>
 		</div>
 		<div class="btn-group float-right">
-			<a class="btn" (click)="fontSize = 12" [ngClass]="{ 'active': fontSize === 12 }">12px</a>
-			<a class="btn" (click)="fontSize = 14" [ngClass]="{ 'active': fontSize === 14 }">14px</a>
-			<a class="btn" (click)="fontSize = 16" [ngClass]="{ 'active': fontSize === 16 }">16px</a>
-			<a class="btn" (click)="fontSize = 18" [ngClass]="{ 'active': fontSize === 18 }">18px</a>
-			<a class="btn" (click)="fontSize = 20" [ngClass]="{ 'active': fontSize === 20 }">20px</a>
-			<a class="btn" (click)="fontSize = 22" [ngClass]="{ 'active': fontSize === 22 }">22px</a>
-			<a class="btn" (click)="fontSize = 24" [ngClass]="{ 'active': fontSize === 24 }">24px</a>
+			<a class="btn btn-link" (click)="fontSize = 12" [ngClass]="{ 'active': fontSize === 12 }">12px</a>
+			<a class="btn btn-link" (click)="fontSize = 14" [ngClass]="{ 'active': fontSize === 14 }">14px</a>
+			<a class="btn btn-link" (click)="fontSize = 16" [ngClass]="{ 'active': fontSize === 16 }">16px</a>
+			<a class="btn btn-link" (click)="fontSize = 18" [ngClass]="{ 'active': fontSize === 18 }">18px</a>
+			<a class="btn btn-link" (click)="fontSize = 20" [ngClass]="{ 'active': fontSize === 20 }">20px</a>
+			<a class="btn btn-link" (click)="fontSize = 22" [ngClass]="{ 'active': fontSize === 22 }">22px</a>
+			<a class="btn btn-link" (click)="fontSize = 24" [ngClass]="{ 'active': fontSize === 24 }">24px</a>
 		</div>
 	</div>
 

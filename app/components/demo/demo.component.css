@@ -2,7 +2,7 @@
 .demo.grid--screen { pointer-events: none; }
 
 .element {
-	background-color: #DFE0E6;
+	background-color: #D5D6E0;
 	color: #A2A2AD;
 
 	font-weight: bold;
@@ -26,9 +26,10 @@
 	height: 100%;
 	width: 100%;
 
+	background-color: #3C3C50;
 }
 
 .element:first-child {
-	background-color: #3C3C50;
+	background-color: #5D6FBA;
 	color: white;
 }
