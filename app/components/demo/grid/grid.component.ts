@@ -1,16 +1,16 @@
 import { Component } from "angular2/core";
 import { NgClass, NgFor, NgIf } from "angular2/common";
 
-import { OptionsToggleComponent } from "../../shared/components/options-toggle/options-toggle.component";
+import { OptionsToggleComponent } from "../../../shared/components/options-toggle/options-toggle.component";
 
 @Component({
 	directives: [ OptionsToggleComponent ],
-	selector: "layout",
-	styleUrls: [ "app/components/layout/layout.component.css" ],
-	templateUrl: "app/components/layout/layout.component.html"
+	selector: "grid",
+	styleUrls: [ "app/components/demo/grid/grid.component.css" ],
+	templateUrl: "app/components/demo/grid/grid.component.html"
 })
 
-export class LayoutComponent {
+export class GridComponent {
 	public boxClasses: any;
 	public boxOptions: any;
 	public elementArray: any;

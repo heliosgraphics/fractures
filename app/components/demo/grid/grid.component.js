@@ -1,4 +1,4 @@
-System.register(["angular2/core", "../../shared/components/options-toggle/options-toggle.component"], function(exports_1, context_1) {
+System.register(["angular2/core", "../../../shared/components/options-toggle/options-toggle.component"], function(exports_1, context_1) {
     "use strict";
     var __moduleName = context_1 && context_1.id;
     var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
@@ -11,7 +11,7 @@ System.register(["angular2/core", "../../shared/components/options-toggle/option
         if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
     };
     var core_1, options_toggle_component_1;
-    var LayoutComponent;
+    var GridComponent;
     return {
         setters:[
             function (core_1_1) {
@@ -21,8 +21,8 @@ System.register(["angular2/core", "../../shared/components/options-toggle/option
                 options_toggle_component_1 = options_toggle_component_1_1;
             }],
         execute: function() {
-            LayoutComponent = (function () {
-                function LayoutComponent() {
+            GridComponent = (function () {
+                function GridComponent() {
                     this.boxClasses = [];
                     this.elementArray = [{}];
                     this.elementClasses = [];
@@ -255,24 +255,24 @@ System.register(["angular2/core", "../../shared/components/options-toggle/option
                     };
                 }
                 // Set extra elements length
-                LayoutComponent.prototype.elementCountUpdate = function (direction) {
+                GridComponent.prototype.elementCountUpdate = function (direction) {
                     if (direction)
                         return this.elementArray.push({});
                     else
                         return this.elementArray.splice(1, 1);
                 };
-                LayoutComponent = __decorate([
+                GridComponent = __decorate([
                     core_1.Component({
                         directives: [options_toggle_component_1.OptionsToggleComponent],
-                        selector: "layout",
-                        styleUrls: ["app/components/layout/layout.component.css"],
-                        templateUrl: "app/components/layout/layout.component.html"
+                        selector: "grid",
+                        styleUrls: ["app/components/demo/grid/grid.component.css"],
+                        templateUrl: "app/components/demo/grid/grid.component.html"
                     }), 
                     __metadata('design:paramtypes', [])
-                ], LayoutComponent);
-                return LayoutComponent;
+                ], GridComponent);
+                return GridComponent;
             }());
-            exports_1("LayoutComponent", LayoutComponent);
+            exports_1("GridComponent", GridComponent);
         }
     }
 });

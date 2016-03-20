@@ -4,8 +4,8 @@
 	user-select: all;
 	-webkit-user-select: all;
 
-	font-size: 0.75rem;
 	font-family: "Source Code Pro", monospace;
+	font-size: 0.75rem;
 	tab-size: 4;
 	white-space: normal;
 }

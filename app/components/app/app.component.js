@@ -1,4 +1,4 @@
-System.register(["angular2/core", "angular2/router", "../index/index.component", "../layout/layout.component", "../typo/typo.component"], function(exports_1, context_1) {
+System.register(["angular2/core", "angular2/router", "../index/index.component", "../demo/demo.component", "../docs/docs.component"], function(exports_1, context_1) {
     "use strict";
     var __moduleName = context_1 && context_1.id;
     var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
@@ -10,7 +10,7 @@ System.register(["angular2/core", "angular2/router", "../index/index.component",
     var __metadata = (this && this.__metadata) || function (k, v) {
         if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
     };
-    var core_1, router_1, index_component_1, layout_component_1, typo_component_1;
+    var core_1, router_1, index_component_1, demo_component_1, docs_component_1;
     var AppComponent;
     return {
         setters:[
@@ -23,11 +23,11 @@ System.register(["angular2/core", "angular2/router", "../index/index.component",
             function (index_component_1_1) {
                 index_component_1 = index_component_1_1;
             },
-            function (layout_component_1_1) {
-                layout_component_1 = layout_component_1_1;
+            function (demo_component_1_1) {
+                demo_component_1 = demo_component_1_1;
             },
-            function (typo_component_1_1) {
-                typo_component_1 = typo_component_1_1;
+            function (docs_component_1_1) {
+                docs_component_1 = docs_component_1_1;
             }],
         execute: function() {
             core_1.enableProdMode();
@@ -51,8 +51,8 @@ System.register(["angular2/core", "angular2/router", "../index/index.component",
                     }),
                     router_1.RouteConfig([
                         { path: "/", name: "Index", component: index_component_1.IndexComponent, useAsDefault: true },
-                        { path: "/layout", name: "Layout", component: layout_component_1.LayoutComponent },
-                        { path: "/typo", name: "Typo", component: typo_component_1.TypoComponent }
+                        { path: "/demo", name: "Demo", component: demo_component_1.DemoComponent },
+                        { path: "/docs", name: "Docs", component: docs_component_1.DocsComponent }
                     ]), 
                     __metadata('design:paramtypes', [])
                 ], AppComponent);
