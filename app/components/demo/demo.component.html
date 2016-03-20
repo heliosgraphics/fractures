@@ -23,9 +23,7 @@
 		class="grid demo p-1">
 		<div
 			[ngClass]="elementClasses"
-			class="element {{ elementDimensions ? '' : 'element--dimensions' }}">
-			<span>1</span>
-		</div>
+			class="element {{ elementDimensions ? '' : 'element--dimensions' }}">1</div>
 		<div
 			[ngClass]="{
 				'grow-1': elementClasses.length,
@@ -91,11 +89,11 @@
 	</div>
 
 	<!-- Demo -->
-	<div class="grid demo p-1">
+	<div class="demo p-1">
 		<div
 			[ngClass]="boxClasses"
-			class="element element--dimensions">
-			<span>0</span>
+			class="element element--dimensions-xl">
+			<span></span>
 		</div>
 	</div>
 
