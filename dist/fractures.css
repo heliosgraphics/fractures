@@ -173,6 +173,13 @@ img { max-width: 100%; }
 
 .grow-5 { -webkit-flex-grow: 5; -ms-flex-positive: 5; flex-grow: 5; }
 
+.grow-1,
+.grow-2,
+.grow-3,
+.grow-4,
+.grow-5,
+.grow-6 { -webkit-flex-basis: 0; -ms-flex-preferred-size: 0; flex-basis: 0; }
+
 .order-first { -webkit-order: -1; -ms-flex-order: -1; order: -1; }
 
 .order-1 { -webkit-order: 1; -ms-flex-order: 1; order: 1; }
