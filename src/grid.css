@@ -9,13 +9,6 @@
 		margin-left: 0 !important;
 		margin-right: 0 !important;
 	}
-
-	/*Reset space*/
-	.grid--collapse .grow-1,
-	.grid--collapse .grow-2,
-	.grid--collapse .grow-3,
-	.grid--collapse .grow-4,
-	.grid--collapse .grow-5 { flex-basis: auto; }
 }
 
 .grid { display: flex; }
@@ -68,15 +61,6 @@
 .grow-3 { flex-grow: 3; }
 .grow-4 { flex-grow: 4; }
 .grow-5 { flex-grow: 5; }
-
-/* REVIEW */
-/* Auto will distribute extra space based on grow. */
-.grow-1,
-.grow-2,
-.grow-3,
-.grow-4,
-.grow-5,
-.grow-6 { flex-basis: auto; }
 
 .order-first { order: -1; }
 .order-1 { order: 1; }

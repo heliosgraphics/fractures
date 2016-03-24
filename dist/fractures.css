@@ -96,13 +96,6 @@ img { max-width: 100%; }
 		margin-left: 0 !important;
 		margin-right: 0 !important;
 	}
-
-	/*Reset space*/
-	.grid--collapse .grow-1,
-	.grid--collapse .grow-2,
-	.grid--collapse .grow-3,
-	.grid--collapse .grow-4,
-	.grid--collapse .grow-5 { -webkit-flex-basis: auto; -ms-flex-preferred-size: auto; flex-basis: auto; }
 }
 
 .grid { display: -webkit-flex; display: -ms-flexbox; display: flex; }
@@ -179,17 +172,6 @@ img { max-width: 100%; }
 .grow-4 { -webkit-flex-grow: 4; -ms-flex-positive: 4; flex-grow: 4; }
 
 .grow-5 { -webkit-flex-grow: 5; -ms-flex-positive: 5; flex-grow: 5; }
-
-/* REVIEW */
-
-/* Auto will distribute extra space based on grow. */
-
-.grow-1,
-.grow-2,
-.grow-3,
-.grow-4,
-.grow-5,
-.grow-6 { -webkit-flex-basis: auto; -ms-flex-preferred-size: auto; flex-basis: auto; }
 
 .order-first { -webkit-order: -1; -ms-flex-order: -1; order: -1; }
 
