@@ -66,6 +66,12 @@ img { max-width: 100%; }
 
 .none { display: none; }
 
+.table { display: table; }
+
+.table-cell { display: table-cell; }
+
+.table-row { display: table-row; }
+
 .float-left { float: left; }
 
 .float-right { float: right; }
