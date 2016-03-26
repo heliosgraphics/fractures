@@ -1,4 +1,4 @@
-/* Headings, formatted relatively */
+/* WIP Headings */
 h1 { font-size: 2.25em; }
 h2 { font-size: 2em; }
 h3 { font-size: 1.75em; }
@@ -25,7 +25,6 @@ small { font-size: 0.75em; }
 /* Formatted content */
 .format p,
 .format hr,
-.format blockquote,
 .format ul,
 .format ol {
 	padding-bottom: 1em;
