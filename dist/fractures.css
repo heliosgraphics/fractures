@@ -436,6 +436,12 @@ small { font-size: 0.75em; }
 	padding-top: 1em;
 }
 
+.format blockquote {
+	padding-left: 1em;
+
+	font-style: italic;
+}
+
 .format ul,
 .format ol { margin-left: 2.5em; }
 
