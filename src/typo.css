@@ -26,7 +26,8 @@ small { font-size: 0.75em; }
 .format p,
 .format hr,
 .format ul,
-.format ol {
+.format ol,
+.format iframe {
 	padding-bottom: 1em;
 	padding-top: 1em;
 }
