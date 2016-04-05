@@ -4,7 +4,7 @@
 	background-color: white;
 	border-radius: 3px;
 }
-.demo.grid--screen { pointer-events: none; }
+.demo.flex--screen { pointer-events: none; }
 
 .element {
 	background-color: #D5D6E0;

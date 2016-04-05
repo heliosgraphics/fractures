@@ -19,9 +19,9 @@ export class DemoComponent implements OnInit {
 	public elementClasses: any;
 	public fontSize: number;
 	public formatClasses: any;
-	public gridClasses: any;
+	public flexClasses: any;
 
-	public optionsStrings: any = [ "container", "margin", "padding", "grid", "gridelement", "format" ];
+	public optionsStrings: any = [ "container", "margin", "padding", "flex", "flexelement", "format" ];
 	public optionsArray: any = [];
 
 	// TODO: A naïve implementation
@@ -40,7 +40,7 @@ export class DemoComponent implements OnInit {
 		this.containerClasses = [];
 		this.elementArray = [{}];
 		this.elementClasses = [];
-		this.gridClasses = [];
+		this.flexClasses = [];
 		this.formatClasses = [ "format" ];
 		this.fontSize = 16;
 	}

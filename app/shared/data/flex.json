@@ -2,51 +2,51 @@
 	"align": {
 		"selected": false,
 		"options": [
-			"grid--start",
-			"grid--end",
-			"grid--baseline"
+			"flex--start",
+			"flex--end",
+			"flex--baseline"
 		]
 	},
 	"center": {
 		"selected": false,
 		"options": [
-			"grid--center",
-			"grid--ycenter",
-			"grid--xcenter"
+			"flex--center",
+			"flex--ycenter",
+			"flex--xcenter"
 		]
 	},
 	"justify": {
 		"selected": false,
 		"options": [
-			"grid--around",
-			"grid--between",
-			"grid--right"
+			"flex--around",
+			"flex--between",
+			"flex--right"
 		]
 	},
 	"responsive": {
 		"selected": false,
 		"options": [
-			"grid--collapse",
-			"grid--screen"
+			"flex--collapse",
+			"flex--screen"
 		]
 	},
 	"reverse": {
 		"selected": false,
 		"options": [
-			"grid--reverse"
+			"flex--reverse"
 		]
 	},
 	"wrap": {
 		"selected": false,
 		"options": [
-			"grid--wrap",
-			"grid--wrap-reverse"
+			"flex--wrap",
+			"flex--wrap-reverse"
 		]
 	},
 	"column": {
 		"selected": false,
 		"options": [
-			"grid--column"
+			"flex--column"
 		]
 	}
 }

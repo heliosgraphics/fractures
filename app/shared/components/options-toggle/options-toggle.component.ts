@@ -14,8 +14,8 @@ export class OptionsToggleComponent {
 	public classes: any;
 	public options: any;
 
-	// Control grid classes
-	toggleGridClass(selected, set) {
+	// Control flex classes
+	toggleClass(selected, set) {
 
 		// Remove all setitem from classes array
 		for(let option of this.options[set].options) {
