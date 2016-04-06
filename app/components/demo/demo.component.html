@@ -1,6 +1,4 @@
-<div
-	[ngClass]="containerClasses"
-	class="container">
+<div [ngClass]="containerClasses">
 
 	<!-- Demo settings -->
 	<div class="clearfix mb-1">
@@ -19,8 +17,8 @@
 
 	<!-- Demo -->
 	<div
-		[ngClass]="gridClasses"
-		class="grid demo p-1">
+		[ngClass]="flexClasses"
+		class="flex demo p-1">
 		<div
 			[ngClass]="elementClasses"
 			class="element {{ elementDimensions ? '' : 'element--dimensions' }}">1</div>
@@ -38,8 +36,8 @@
 	<pre
 		*ngIf="output"
 		class="output p-1">
-		<div>&lt;div class="<span class="class">container</span><span *ngFor="#class of containerClasses" class="class"> {{ class }}</span>"&gt;</div>
-		<div class="pl-2">&lt;div class="<span class="class">grid</span><span *ngFor="#class of gridClasses" class="class"> {{ class }}</span>"&gt;</div>
+		<div>&lt;div<span *ngIf="containerClasses.length"> class="<span *ngFor="#class of containerClasses" class="class">{{ class }}</span>"</span>&gt;</div>
+		<div class="pl-2">&lt;div class="<span class="class">flex</span><span *ngFor="#class of flexClasses" class="class"> {{ class }}</span>"&gt;</div>
 		<div class="pl-3">&lt;div<span *ngIf="elementClasses.length"> class="</span><span
 			*ngFor="#class of elementClasses; #i = index"
 			class="class">{{ class }}<span *ngIf="i !== elementClasses.length - 1"> </span></span><span *ngIf="elementClasses.length">"</span>&gt;&lt;/div&gt;
@@ -52,19 +50,19 @@
 	</pre>
 </div>
 <div class="container">
-	<div class="grid grid--collapse pt-3">
+	<div class="flex flex--collapse pt-3">
 		<div class="grow-1 mr-1 mb-2">
 
-			<!-- Grid options -->
-			<h4 class="normal">Grid</h4>
-			<options-toggle [classes]="gridClasses" [options]="optionsArray['grid']"></options-toggle>
+			<!-- Flex options -->
+			<h4 class="normal">Flex</h4>
+			<options-toggle [classes]="flexClasses" [options]="optionsArray['flex']"></options-toggle>
 		</div>
 
 		<div class="grow-1 mb-2">
 
 			<!-- Element options -->
 			<h4 class="normal mt-2">Element</h4>
-			<options-toggle [classes]="elementClasses" [options]="optionsArray['gridelement']"></options-toggle>
+			<options-toggle [classes]="elementClasses" [options]="optionsArray['flexelement']"></options-toggle>
 
 			<!-- Container options -->
 			<h4 class="mt-3 normal">Container</h4>
@@ -103,7 +101,7 @@
 	</pre>
 
 	<!-- Options -->
-	<div class="grid grid--collapse pt-3">
+	<div class="flex flex--collapse pt-3">
 		<div class="grow-1">
 			<h4 class="normal">Margin</h4>
 			<options-toggle [classes]="boxClasses" [options]="optionsArray['margin']"></options-toggle>

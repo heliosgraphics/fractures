@@ -11,6 +11,12 @@
 		padding-left: 1rem !important;
 		padding-right: 1rem !important;
 	}
+
+	.container-small {
+		padding-left: .5rem !important;
+		padding-right: .5rem !important;
+		width: 100% !important;
+	}
 }
 
 @media (--mobile) {
@@ -21,9 +27,13 @@
 }
 
 .container {
-	margin-left: auto !important;
-	margin-right: auto !important;
+	margin-left: auto;
+	margin-right: auto;
 	width: var(--width);
 }
 
-.container--small { width: var(--width-small); }
+.container-small {
+	margin-left: auto;
+	margin-right: auto;
+	width: var(--width-small);
+}

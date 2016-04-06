@@ -27,13 +27,13 @@ System.register(["angular2/core", "../../shared/services/options.service", "../.
             DemoComponent = (function () {
                 function DemoComponent(OptionsService) {
                     this.OptionsService = OptionsService;
-                    this.optionsStrings = ["container", "margin", "padding", "grid", "gridelement", "format"];
+                    this.optionsStrings = ["container", "margin", "padding", "flex", "flexelement", "format"];
                     this.optionsArray = [];
                     this.boxClasses = [];
-                    this.containerClasses = [];
+                    this.containerClasses = ["container"];
                     this.elementArray = [{}];
                     this.elementClasses = [];
-                    this.gridClasses = [];
+                    this.flexClasses = [];
                     this.formatClasses = ["format"];
                     this.fontSize = 16;
                 }

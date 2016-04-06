@@ -24,8 +24,8 @@ System.register(["angular2/core", "../../pipes/MapToIterable"], function(exports
             OptionsToggleComponent = (function () {
                 function OptionsToggleComponent() {
                 }
-                // Control grid classes
-                OptionsToggleComponent.prototype.toggleGridClass = function (selected, set) {
+                // Control flex classes
+                OptionsToggleComponent.prototype.toggleClass = function (selected, set) {
                     // Remove all setitem from classes array
                     for (var _i = 0, _a = this.options[set].options; _i < _a.length; _i++) {
                         var option = _a[_i];

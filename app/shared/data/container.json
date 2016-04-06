@@ -1,8 +1,9 @@
 {
 	"container": {
-		"selected": false,
+		"selected": 0,
 		"options": [
-			"container--small"
+			"container",
+			"container-small"
 		]
 	}
 }
