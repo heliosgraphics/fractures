@@ -30,7 +30,7 @@ System.register(["angular2/core", "../../shared/services/options.service", "../.
                     this.optionsStrings = ["container", "margin", "padding", "flex", "flexelement", "format"];
                     this.optionsArray = [];
                     this.boxClasses = [];
-                    this.containerClasses = [];
+                    this.containerClasses = ["container"];
                     this.elementArray = [{}];
                     this.elementClasses = [];
                     this.flexClasses = [];

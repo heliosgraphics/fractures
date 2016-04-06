@@ -37,7 +37,7 @@ export class DemoComponent implements OnInit {
 
 	constructor(private OptionsService: OptionsService) {
 		this.boxClasses = [];
-		this.containerClasses = [];
+		this.containerClasses = [ "container" ];
 		this.elementArray = [{}];
 		this.elementClasses = [];
 		this.flexClasses = [];
