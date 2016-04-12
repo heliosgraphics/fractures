@@ -96,10 +96,10 @@ img { max-width: 100%; }
 }
 
 @media (max-width: 720px) {
-	.flex--collapse.grid { -webkit-flex-direction: column; -ms-flex-direction: column; flex-direction: column; }
+	.flex--collapse.flex { -webkit-flex-direction: column; -ms-flex-direction: column; flex-direction: column; }
 
-	.flex--collapse.grid.grid--reverse,
-	.flex--collapse.grid.grid--reverse.flex--column { -webkit-flex-direction: column-reverse; -ms-flex-direction: column-reverse; flex-direction: column-reverse; }
+	.flex--collapse.flex.flex--reverse,
+	.flex--collapse.flex.flex--reverse.flex--column { -webkit-flex-direction: column-reverse; -ms-flex-direction: column-reverse; flex-direction: column-reverse; }
 
 	/*Prepare direct child elements for responsive layout*/
 	.flex--collapse > * {

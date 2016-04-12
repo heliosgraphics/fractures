@@ -1,8 +1,8 @@
 @media (--tablet) {
-	.flex--collapse.grid { flex-direction: column; }
+	.flex--collapse.flex { flex-direction: column; }
 
-	.flex--collapse.grid.grid--reverse,
-	.flex--collapse.grid.grid--reverse.flex--column { flex-direction: column-reverse; }
+	.flex--collapse.flex.flex--reverse,
+	.flex--collapse.flex.flex--reverse.flex--column { flex-direction: column-reverse; }
 
 	/*Prepare direct child elements for responsive layout*/
 	.flex--collapse > * {
