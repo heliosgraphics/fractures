@@ -67,7 +67,7 @@
 .grow-3,
 .grow-4,
 .grow-5,
-.grow-6 { flex-basis: 0; }
+.grow-6 { flex-basis: auto; }
 
 .order-first { order: -1; }
 .order-1 { order: 1; }
