@@ -9,6 +9,13 @@
 		margin-left: 0 !important;
 		margin-right: 0 !important;
 	}
+
+	.flex--collapse > .grow-1,
+	.flex--collapse > .grow-2,
+	.flex--collapse > .grow-3,
+	.flex--collapse > .grow-4,
+	.flex--collapse > .grow-5,
+	.flex--collapse > .grow-6 { flex-basis: auto; }
 }
 
 .flex { display: flex; }
@@ -67,7 +74,7 @@
 .grow-3,
 .grow-4,
 .grow-5,
-.grow-6 { flex-basis: auto; }
+.grow-6 { flex-basis: 0; }
 
 .order-first { order: -1; }
 .order-1 { order: 1; }
