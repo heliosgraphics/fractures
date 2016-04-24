@@ -1,14 +1,14 @@
 .w-25 { width: 25%; }
 .w-33 { width: calc(100%/3); }
 .w-50 { width: 50%; }
-.w-66 { width: calc(100%/3) * 2; }
+.w-66 { width: calc((100%/3) * 2); }
 .w-75 { width: 75%; }
 .w-100 { width: 100%; }
 
 .maxw-25 { max-width: 25%; }
 .maxw-33 { max-width: calc(100%/3); }
 .maxw-50 { max-width: 50%; }
-.maxw-66 { max-width: calc(100%/3) * 2; }
+.maxw-66 { max-width: calc((100%/3) * 2); }
 .maxw-75 { max-width: 75%; }
 .maxw-100 { max-width: 100%; }
 
@@ -22,20 +22,20 @@
 .h-25 { height: 25%; }
 .h-33 { height: calc(100%/3); }
 .h-50 { height: 50%; }
-.h-66 { height: calc(100%/3) * 2; }
+.h-66 { height: calc((100%/3) * 2); }
 .h-75 { height: 75%; }
 .h-100 { height: 100%; }
 
 .maxh-25 { max-height: 25%; }
 .maxh-33 { max-height: calc(100%/3); }
 .maxh-50 { max-height: 50%; }
-.maxh-66 { max-height: calc(100%/3) * 2; }
+.maxh-66 { max-height: calc((100%/3) * 2); }
 .maxh-75 { max-height: 75%; }
 .maxh-100 { max-height: 100%; }
 
 .minh-25 { min-height: 25%; }
 .minh-33 { min-height: calc(100%/3); }
 .minh-50 { min-height: 50%; }
-.minh-66 { min-height: calc(100%/3) * 2; }
+.minh-66 { min-height: calc((100%/3) * 2); }
 .minh-75 { min-height: 75%; }
 .minh-100 { min-height: 100%; }

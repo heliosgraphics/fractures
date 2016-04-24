@@ -1,72 +1,76 @@
-<div [ngClass]="containerClasses">
+<!-- Flex -->
+<div>
+	<div [ngClass]="containerClasses">
 
-	<!-- Demo settings -->
-	<div class="clearfix mb-1">
-		<div class="float-right ml-1">
-			<a class="btn btn-link mr-1" (click)="elementDimensions = !elementDimensions" [ngClass]="{ 'active': !elementDimensions }">dimensions</a>
-			<a class="btn btn-link" (click)="output = !output" [ngClass]="{ 'active': output }">code</a>
+		<!-- Demo settings -->
+		<div class="clearfix mb-1">
+			<div class="float-right ml-1">
+				<a class="btn btn-link mr-1" (click)="elementDimensions = !elementDimensions" [ngClass]="{ 'active': !elementDimensions }">dimensions</a>
+				<a class="btn btn-link" (click)="output = !output" [ngClass]="{ 'active': output }">code</a>
+			</div>
+			<div class="btn-group float-right">
+				<a class="btn btn-link" (click)="elementCountUpdate(false)" [ngClass]="{ 'disabled': elementArray.length <= 1 }">less</a>
+				<a class="btn btn-link" (click)="elementCountUpdate(true)" [ngClass]="{ 'disabled': elementArray.length >= 14 }">more</a>
+			</div>
+			<div class="float-right mr-1">
+				<a class="btn btn-link disabled">16px</a>
+			</div>
 		</div>
-		<div class="btn-group float-right">
-			<a class="btn btn-link" (click)="elementCountUpdate(false)" [ngClass]="{ 'disabled': elementArray.length <= 1 }">less</a>
-			<a class="btn btn-link" (click)="elementCountUpdate(true)" [ngClass]="{ 'disabled': elementArray.length >= 14 }">more</a>
+
+		<!-- Demo -->
+		<div
+			[ngClass]="flexClasses"
+			class="flex demo p-1">
+			<div
+				[ngClass]="elementClasses"
+				class="element {{ elementDimensions ? '' : 'element--dimensions' }}">1</div>
+			<div
+				[ngClass]="{
+					'grow-1': elementClasses.length,
+					'order-1': elementClasses.length,
+					'element--dimensions': !elementDimensions
+				}"
+				*ngFor="#x of elementArray; #i = index"
+				class="element">{{ i + 2 }}</div>
 		</div>
-		<div class="float-right mr-1">
-			<a class="btn btn-link disabled">16px</a>
-		</div>
+
+		<!-- Code -->
+		<pre
+			*ngIf="output"
+			class="output p-1">
+			<div>&lt;div<span *ngIf="containerClasses.length"> class="<span *ngFor="#class of containerClasses" class="class">{{ class }}</span>"</span>&gt;</div>
+			<div class="pl-2">&lt;div class="<span class="class">flex</span><span *ngFor="#class of flexClasses" class="class"> {{ class }}</span>"&gt;</div>
+			<div class="pl-3">&lt;div<span *ngIf="elementClasses.length"> class="</span><span
+				*ngFor="#class of elementClasses; #i = index"
+				class="class">{{ class }}<span *ngIf="i !== elementClasses.length - 1"> </span></span><span *ngIf="elementClasses.length">"</span>&gt;&lt;/div&gt;
+			</div>
+			<div *ngFor="#x of elementArray; #i = index" class="pl-3">
+				&lt;div<span *ngIf="elementClasses.length"> class="<span class="class">grow-1 order-1</span>"</span>&gt;&lt;/div&gt;
+			</div>
+			<div class="pl-2">&lt;/div&gt;</div>
+			&lt;/div&gt;
+		</pre>
 	</div>
 
-	<!-- Demo -->
-	<div
-		[ngClass]="flexClasses"
-		class="flex demo p-1">
-		<div
-			[ngClass]="elementClasses"
-			class="element {{ elementDimensions ? '' : 'element--dimensions' }}">1</div>
-		<div
-			[ngClass]="{
-				'grow-1': elementClasses.length,
-				'order-1': elementClasses.length,
-				'element--dimensions': !elementDimensions
-			}"
-			*ngFor="#x of elementArray; #i = index"
-			class="element">{{ i + 2 }}</div>
-	</div>
+	<div class="container pt-3">
+		<div class="flex flex--collapse">
+			<div class="grow-1 mr-1 mb-2">
 
-	<!-- Code -->
-	<pre
-		*ngIf="output"
-		class="output p-1">
-		<div>&lt;div<span *ngIf="containerClasses.length"> class="<span *ngFor="#class of containerClasses" class="class">{{ class }}</span>"</span>&gt;</div>
-		<div class="pl-2">&lt;div class="<span class="class">flex</span><span *ngFor="#class of flexClasses" class="class"> {{ class }}</span>"&gt;</div>
-		<div class="pl-3">&lt;div<span *ngIf="elementClasses.length"> class="</span><span
-			*ngFor="#class of elementClasses; #i = index"
-			class="class">{{ class }}<span *ngIf="i !== elementClasses.length - 1"> </span></span><span *ngIf="elementClasses.length">"</span>&gt;&lt;/div&gt;
-		</div>
-		<div *ngFor="#x of elementArray; #i = index" class="pl-3">
-			&lt;div<span *ngIf="elementClasses.length"> class="<span class="class">grow-1 order-1</span>"</span>&gt;&lt;/div&gt;
-		</div>
-		<div class="pl-2">&lt;/div&gt;</div>
-		&lt;/div&gt;
-	</pre>
-</div>
-<div class="container">
-	<div class="flex flex--collapse pt-3">
-		<div class="grow-1 mr-1 mb-2">
+				<!-- Flex options -->
+				<h4 class="normal">Flex</h4>
+				<options-toggle [classes]="flexClasses" [options]="optionsArray['flex']"></options-toggle>
+			</div>
 
-			<!-- Flex options -->
-			<h4 class="normal">Flex</h4>
-			<options-toggle [classes]="flexClasses" [options]="optionsArray['flex']"></options-toggle>
-		</div>
+			<div class="grow-1 mb-2">
 
-		<div class="grow-1 mb-2">
+				<!-- Element options -->
+				<h4 class="normal mt-2">Element</h4>
+				<options-toggle [classes]="elementClasses" [options]="optionsArray['flexelement']"></options-toggle>
 
-			<!-- Element options -->
-			<h4 class="normal mt-2">Element</h4>
-			<options-toggle [classes]="elementClasses" [options]="optionsArray['flexelement']"></options-toggle>
-
-			<!-- Container options -->
-			<h4 class="mt-3 normal">Container</h4>
-			<options-toggle [classes]="containerClasses" [options]="optionsArray['container']"></options-toggle>
+				<!-- Container options -->
+				<h4 class="mt-3 normal">Container</h4>
+				<options-toggle [classes]="containerClasses" [options]="optionsArray['container']"></options-toggle>
+			</div>
 		</div>
 	</div>
 </div>
@@ -109,6 +113,44 @@
 		<div class="grow-1">
 			<h4 class="normal">Padding</h4>
 			<options-toggle [classes]="boxClasses" [options]="optionsArray['padding']"></options-toggle>
+		</div>
+	</div>
+</div>
+
+<!-- Dimensions -->
+<div class="my-4 container">
+
+	<!-- Demo settings -->
+	<div class="clearfix mb-1">
+		<div class="float-right ml-1">
+			<a class="btn btn-link" (click)="output = !output" [ngClass]="{ 'active': output }">code</a>
+		</div>
+	</div>
+
+	<!-- Demo -->
+	<div class="demo relative">
+		<div
+			[ngClass]="dimensionClasses"
+			class="element p-1 absolute">
+			<span></span>
+		</div>
+	</div>
+
+	<!-- Code -->
+	<pre
+		*ngIf="output"
+		class="output p-1">
+		<div>&lt;div<span *ngIf="dimensionClasses.length"> class="</span><span
+			*ngFor="#class of dimensionClasses; #i = index"
+			class="class">{{ class }}<span *ngIf="i !== dimensionClasses.length - 1"> </span></span><span *ngIf="dimensionClasses.length">"</span>&gt;&lt;/div&gt;
+		</div>
+	</pre>
+
+	<!-- Options -->
+	<div class="flex flex--collapse pt-3">
+		<div class="grow-1">
+			<h4 class="normal">Dimensions</h4>
+			<options-toggle [classes]="dimensionClasses" [options]="optionsArray['dimension']"></options-toggle>
 		</div>
 	</div>
 </div>
@@ -187,7 +229,7 @@
 
 	<!-- Options -->
 	<div class="pt-3">
-		<h4 class="normal">Options</h4>
+		<h4 class="normal">Format</h4>
 		<options-toggle [classes]="formatClasses" [options]="optionsArray['format']"></options-toggle>
 	</div>
 </div>

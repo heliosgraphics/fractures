@@ -4,6 +4,8 @@
 	background-color: white;
 	border-radius: 3px;
 }
+
+.demo.relative { position: relative; }
 .demo.flex--screen { pointer-events: none; }
 
 .element {
@@ -13,6 +15,8 @@
 	font-weight: bold;
 	text-align: center;
 }
+
+.element.absolute { position: absolute; }
 
 .element--dimensions {
 	height: 5rem;

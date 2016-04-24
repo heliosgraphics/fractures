@@ -14,6 +14,7 @@ import { OptionsToggleComponent } from "../../shared/components/options-toggle/o
 
 export class DemoComponent implements OnInit {
 	public boxClasses: any;
+	public dimensionClasses: any;
 	public containerClasses: any;
 	public elementArray: any;
 	public elementClasses: any;
@@ -21,7 +22,7 @@ export class DemoComponent implements OnInit {
 	public formatClasses: any;
 	public flexClasses: any;
 
-	public optionsStrings: any = [ "container", "margin", "padding", "flex", "flexelement", "format" ];
+	public optionsStrings: any = [ "container", "dimension", "flex", "flexelement", "format", "margin", "padding" ];
 	public optionsArray: any = [];
 
 	// TODO: A naïve implementation
@@ -38,6 +39,7 @@ export class DemoComponent implements OnInit {
 	constructor(private OptionsService: OptionsService) {
 		this.boxClasses = [];
 		this.containerClasses = [ "container" ];
+		this.dimensionClasses = [];
 		this.elementArray = [{}];
 		this.elementClasses = [];
 		this.flexClasses = [];

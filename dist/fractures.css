@@ -74,7 +74,7 @@ img { max-width: 100%; }
 
 .w-50 { width: 50%; }
 
-.w-66 { width: 33.33333% * 2; }
+.w-66 { width: 66.66666%; }
 
 .w-75 { width: 75%; }
 
@@ -86,7 +86,7 @@ img { max-width: 100%; }
 
 .maxw-50 { max-width: 50%; }
 
-.maxw-66 { max-width: 33.33333% * 2; }
+.maxw-66 { max-width: 66.66666%; }
 
 .maxw-75 { max-width: 75%; }
 
@@ -110,7 +110,7 @@ img { max-width: 100%; }
 
 .h-50 { height: 50%; }
 
-.h-66 { height: 33.33333% * 2; }
+.h-66 { height: 66.66666%; }
 
 .h-75 { height: 75%; }
 
@@ -122,7 +122,7 @@ img { max-width: 100%; }
 
 .maxh-50 { max-height: 50%; }
 
-.maxh-66 { max-height: 33.33333% * 2; }
+.maxh-66 { max-height: 66.66666%; }
 
 .maxh-75 { max-height: 75%; }
 
@@ -134,7 +134,7 @@ img { max-width: 100%; }
 
 .minh-50 { min-height: 50%; }
 
-.minh-66 { min-height: 33.33333% * 2; }
+.minh-66 { min-height: 66.66666%; }
 
 .minh-75 { min-height: 75%; }
 
