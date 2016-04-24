@@ -24,19 +24,15 @@ System.register(["angular2/core", "../../pipes/MapToIterable"], function(exports
             OptionsToggleComponent = (function () {
                 function OptionsToggleComponent() {
                 }
-                // Control flex classes
                 OptionsToggleComponent.prototype.toggleClass = function (selected, set) {
-                    // Remove all setitem from classes array
                     for (var _i = 0, _a = this.options[set].options; _i < _a.length; _i++) {
                         var option = _a[_i];
                         var optionIndex = this.classes.indexOf(option);
                         if (optionIndex !== -1)
                             this.classes.splice(optionIndex, 1);
                     }
-                    // Add new class to array
                     if (selected[1])
                         this.classes.push(selected[1]);
-                    // Set selected on options
                     this.options[set].selected = selected[0];
                 };
                 OptionsToggleComponent = __decorate([

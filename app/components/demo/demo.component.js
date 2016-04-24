@@ -37,7 +37,6 @@ System.register(["angular2/core", "../../shared/services/options.service", "../.
                     this.formatClasses = ["format"];
                     this.fontSize = 16;
                 }
-                // TODO: A naïve implementation
                 DemoComponent.prototype.ngOnInit = function () {
                     var _this = this;
                     var _loop_1 = function(x) {
@@ -53,7 +52,6 @@ System.register(["angular2/core", "../../shared/services/options.service", "../.
                         _loop_1(x);
                     }
                 };
-                // Set extra elements length
                 DemoComponent.prototype.elementCountUpdate = function (direction) {
                     if (direction)
                         return this.elementArray.push({});

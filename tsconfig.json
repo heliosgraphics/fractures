@@ -1,13 +1,13 @@
 {
 	"compilerOptions": {
-		"target": "es5",
-		"module": "system",
-		"moduleResolution": "node",
-		"sourceMap": false,
 		"emitDecoratorMetadata": true,
 		"experimentalDecorators": true,
-		"removeComments": false,
-		"noImplicitAny": false
+		"module": "system",
+		"moduleResolution": "node",
+		"noImplicitAny": false,
+		"removeComments": true,
+		"sourceMap": false,
+		"target": "es5"
 	},
 	"formatCodeOptions": {
 		"indentSize": 4,

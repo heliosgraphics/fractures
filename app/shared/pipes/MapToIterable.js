@@ -1,4 +1,3 @@
-// NOTE: Iterator helper for https://github.com/angular/angular/issues/2246
 System.register(["angular2/core"], function(exports_1, context_1) {
     "use strict";
     var __moduleName = context_1 && context_1.id;
