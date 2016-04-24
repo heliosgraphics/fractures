@@ -1,0 +1,10 @@
+{
+	"position": {
+		"selected": false,
+		"options": [
+			"absolute",
+			"fixed",
+			"relative"
+		]
+	}
+}

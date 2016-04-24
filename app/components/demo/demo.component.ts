@@ -13,6 +13,8 @@ import { OptionsToggleComponent } from "../../shared/components/options-toggle/o
 })
 
 export class DemoComponent implements OnInit {
+
+	// TODO fix the init mess
 	public boxClasses: any;
 	public dimensionClasses: any;
 	public containerClasses: any;
@@ -22,7 +24,9 @@ export class DemoComponent implements OnInit {
 	public formatClasses: any;
 	public flexClasses: any;
 
-	public optionsStrings: any = [ "container", "dimension", "flex", "flexelement", "format", "margin", "padding" ];
+	public optionsStrings: any = [
+		"container", "dimension", "flex", "flexelement", "format", "margin", "padding"
+	];
 	public optionsArray: any = [];
 
 	// TODO: A naïve implementation
@@ -43,8 +47,8 @@ export class DemoComponent implements OnInit {
 		this.elementArray = [{}];
 		this.elementClasses = [];
 		this.flexClasses = [];
-		this.formatClasses = [ "format" ];
 		this.fontSize = 16;
+		this.formatClasses = [ "format" ];
 	}
 
 	// Set extra elements length

@@ -2,9 +2,10 @@
 @import url(./reset.css);
 
 @import url(./container.css);
-@import url(./dimensions.css);
+@import url(./dimension.css);
 @import url(./display.css);
 @import url(./flex.css);
 @import url(./margin.css);
 @import url(./padding.css);
+@import url(./position.css);
 @import url(./typo.css);

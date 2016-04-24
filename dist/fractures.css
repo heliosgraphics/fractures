@@ -479,6 +479,12 @@ img { max-width: 100%; }
 	padding-right: 64px;
 }
 
+.absolute { position: absolute; }
+
+.fixed { position: fixed; }
+
+.relative { position: relative; }
+
 /* WIP Headings */
 
 h1 { font-size: 2.25em; }

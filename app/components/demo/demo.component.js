@@ -27,7 +27,9 @@ System.register(["angular2/core", "../../shared/services/options.service", "../.
             DemoComponent = (function () {
                 function DemoComponent(OptionsService) {
                     this.OptionsService = OptionsService;
-                    this.optionsStrings = ["container", "dimension", "flex", "flexelement", "format", "margin", "padding"];
+                    this.optionsStrings = [
+                        "container", "dimension", "flex", "flexelement", "format", "margin", "padding"
+                    ];
                     this.optionsArray = [];
                     this.boxClasses = [];
                     this.containerClasses = ["container"];
@@ -35,8 +37,8 @@ System.register(["angular2/core", "../../shared/services/options.service", "../.
                     this.elementArray = [{}];
                     this.elementClasses = [];
                     this.flexClasses = [];
-                    this.formatClasses = ["format"];
                     this.fontSize = 16;
+                    this.formatClasses = ["format"];
                 }
                 DemoComponent.prototype.ngOnInit = function () {
                     var _this = this;
