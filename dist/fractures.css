@@ -68,6 +68,78 @@ img { max-width: 100%; }
 	width: 480px;
 }
 
+.w-25 { width: 25%; }
+
+.w-33 { width: 33.33333%; }
+
+.w-50 { width: 50%; }
+
+.w-66 { width: 33.33333% * 2; }
+
+.w-75 { width: 75%; }
+
+.w-100 { width: 100%; }
+
+.maxw-25 { max-width: 25%; }
+
+.maxw-33 { max-width: 33.33333%; }
+
+.maxw-50 { max-width: 50%; }
+
+.maxw-66 { max-width: 33.33333% * 2; }
+
+.maxw-75 { max-width: 75%; }
+
+.maxw-100 { max-width: 100%; }
+
+.minw-25 { min-width: 25%; }
+
+.minw-33 { min-width: 33.33333%; }
+
+.minw-50 { min-width: 50%; }
+
+.minw-66 { min-width: 33.33333% * 2; }
+
+.minw-75 { min-width: 75%; }
+
+.minw-100 { min-width: 100%; }
+
+.h-25 { height: 25%; }
+
+.h-33 { height: 33.33333%; }
+
+.h-50 { height: 50%; }
+
+.h-66 { height: 33.33333% * 2; }
+
+.h-75 { height: 75%; }
+
+.h-100 { height: 100%; }
+
+.maxh-25 { max-height: 25%; }
+
+.maxh-33 { max-height: 33.33333%; }
+
+.maxh-50 { max-height: 50%; }
+
+.maxh-66 { max-height: 33.33333% * 2; }
+
+.maxh-75 { max-height: 75%; }
+
+.maxh-100 { max-height: 100%; }
+
+.minh-25 { min-height: 25%; }
+
+.minh-33 { min-height: 33.33333%; }
+
+.minh-50 { min-height: 50%; }
+
+.minh-66 { min-height: 33.33333% * 2; }
+
+.minh-75 { min-height: 75%; }
+
+.minh-100 { min-height: 100%; }
+
 .block { display: block; }
 
 .inline { display: inline; }

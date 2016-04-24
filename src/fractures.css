@@ -2,6 +2,7 @@
 @import url(./reset.css);
 
 @import url(./container.css);
+@import url(./dimensions.css);
 @import url(./display.css);
 @import url(./flex.css);
 @import url(./margin.css);
