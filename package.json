@@ -21,7 +21,6 @@
 		"typings": "typings"
 	},
 	"devDependencies": {
-		"angular2": "2.0.0-beta.13",
 		"concurrently": "^2.0.0",
 		"es6-shim": "^0.35.0",
 		"gulp": "^3.9.1",
