@@ -1,0 +1,73 @@
+<div [ngClass]="containerClasses">
+
+	<!-- Demo settings -->
+	<div class="clearfix mb-1">
+		<div class="float-right ml-1">
+			<a class="btn btn-link mr-1" (click)="elementDimensions = !elementDimensions" [ngClass]="{ 'active': !elementDimensions }">dimensions</a>
+			<a class="btn btn-link" (click)="output = !output" [ngClass]="{ 'active': output }">code</a>
+		</div>
+		<div class="btn-group float-right">
+			<a class="btn btn-link" (click)="elementCountUpdate(false)" [ngClass]="{ 'disabled': elementArray.length <= 1 }">less</a>
+			<a class="btn btn-link" (click)="elementCountUpdate(true)" [ngClass]="{ 'disabled': elementArray.length >= 14 }">more</a>
+		</div>
+		<div class="float-right mr-1">
+			<a class="btn btn-link disabled">16px</a>
+		</div>
+	</div>
+
+	<!-- Demo -->
+	<div
+		[ngClass]="flexClasses"
+		class="flex demo p-1">
+		<div
+			[ngClass]="elementClasses"
+			class="element {{ elementDimensions ? '' : 'element--dimensions' }}">1</div>
+		<div
+			[ngClass]="{
+				'grow-1': elementClasses.length,
+				'order-1': elementClasses.length,
+				'element--dimensions': !elementDimensions
+			}"
+			*ngFor="#x of elementArray; #i = index"
+			class="element">{{ i + 2 }}</div>
+	</div>
+
+	<!-- Code -->
+	<pre
+		*ngIf="output"
+		class="output p-1">
+		<div>&lt;div<span *ngIf="containerClasses.length"> class="<span *ngFor="#class of containerClasses" class="class">{{ class }}</span>"</span>&gt;</div>
+		<div class="pl-2">&lt;div class="<span class="class">flex</span><span *ngFor="#class of flexClasses" class="class"> {{ class }}</span>"&gt;</div>
+		<div class="pl-3">&lt;div<span *ngIf="elementClasses.length"> class="</span><span
+			*ngFor="#class of elementClasses; #i = index"
+			class="class">{{ class }}<span *ngIf="i !== elementClasses.length - 1"> </span></span><span *ngIf="elementClasses.length">"</span>&gt;&lt;/div&gt;
+		</div>
+		<div *ngFor="#x of elementArray; #i = index" class="pl-3">
+			&lt;div<span *ngIf="elementClasses.length"> class="<span class="class">grow-1 order-1</span>"</span>&gt;&lt;/div&gt;
+		</div>
+		<div class="pl-2">&lt;/div&gt;</div>
+		&lt;/div&gt;
+	</pre>
+</div>
+
+<div class="container pt-3">
+	<div class="flex flex--collapse">
+		<div class="grow-1 mr-1 mb-2">
+
+			<!-- Flex options -->
+			<h4 class="normal">Flex</h4>
+			<flex-options [classes]="flexClasses" [options]="fracturesArray['flex']"></flex-options>
+		</div>
+
+		<div class="grow-1 mb-2">
+
+			<!-- Element options -->
+			<h4 class="normal mt-2">Element</h4>
+			<flex-options [classes]="elementClasses" [options]="fracturesArray['flexelement']"></flex-options>
+
+			<!-- Container options -->
+			<h4 class="mt-3 normal">Container</h4>
+			<flex-options [classes]="containerClasses" [options]="fracturesArray['container']"></flex-options>
+		</div>
+	</div>
+</div>

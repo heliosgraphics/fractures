@@ -1,4 +1,4 @@
-System.register(["angular2/core", "../../pipes/MapToIterable"], function(exports_1, context_1) {
+System.register(["angular2/core", "../../shared/pipes/MapToIterable"], function(exports_1, context_1) {
     "use strict";
     var __moduleName = context_1 && context_1.id;
     var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
@@ -11,7 +11,7 @@ System.register(["angular2/core", "../../pipes/MapToIterable"], function(exports
         if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
     };
     var core_1, MapToIterable_1;
-    var OptionsToggleComponent;
+    var FlexOptionsComponent;
     return {
         setters:[
             function (core_1_1) {
@@ -21,10 +21,10 @@ System.register(["angular2/core", "../../pipes/MapToIterable"], function(exports
                 MapToIterable_1 = MapToIterable_1_1;
             }],
         execute: function() {
-            OptionsToggleComponent = (function () {
-                function OptionsToggleComponent() {
+            FlexOptionsComponent = (function () {
+                function FlexOptionsComponent() {
                 }
-                OptionsToggleComponent.prototype.toggleClass = function (selected, set) {
+                FlexOptionsComponent.prototype.toggleClass = function (selected, set) {
                     for (var _i = 0, _a = this.options[set].options; _i < _a.length; _i++) {
                         var option = _a[_i];
                         var optionIndex = this.classes.indexOf(option);
@@ -35,18 +35,18 @@ System.register(["angular2/core", "../../pipes/MapToIterable"], function(exports
                         this.classes.push(selected[1]);
                     this.options[set].selected = selected[0];
                 };
-                OptionsToggleComponent = __decorate([
+                FlexOptionsComponent = __decorate([
                     core_1.Component({
                         inputs: ["classes", "options"],
                         pipes: [MapToIterable_1.MapToIterable],
-                        selector: "options-toggle",
-                        templateUrl: "app/shared/components/options-toggle/options-toggle.component.html"
+                        selector: "flex-options",
+                        templateUrl: "app/components/flex-options/flex-options.component.html"
                     }), 
                     __metadata('design:paramtypes', [])
-                ], OptionsToggleComponent);
-                return OptionsToggleComponent;
+                ], FlexOptionsComponent);
+                return FlexOptionsComponent;
             }());
-            exports_1("OptionsToggleComponent", OptionsToggleComponent);
+            exports_1("FlexOptionsComponent", FlexOptionsComponent);
         }
     }
 });

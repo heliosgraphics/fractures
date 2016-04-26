@@ -1,4 +1,4 @@
-System.register(["angular2/core", "../../shared/services/options.service", "../../shared/components/options-toggle/options-toggle.component"], function(exports_1, context_1) {
+System.register(["angular2/core", "../../shared/services/options.service", "../flex-options/flex-options.component"], function(exports_1, context_1) {
     "use strict";
     var __moduleName = context_1 && context_1.id;
     var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
@@ -10,8 +10,8 @@ System.register(["angular2/core", "../../shared/services/options.service", "../.
     var __metadata = (this && this.__metadata) || function (k, v) {
         if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
     };
-    var core_1, options_service_1, options_toggle_component_1;
-    var DemoComponent;
+    var core_1, options_service_1, flex_options_component_1;
+    var FlexComponent;
     return {
         setters:[
             function (core_1_1) {
@@ -20,60 +20,54 @@ System.register(["angular2/core", "../../shared/services/options.service", "../.
             function (options_service_1_1) {
                 options_service_1 = options_service_1_1;
             },
-            function (options_toggle_component_1_1) {
-                options_toggle_component_1 = options_toggle_component_1_1;
+            function (flex_options_component_1_1) {
+                flex_options_component_1 = flex_options_component_1_1;
             }],
         execute: function() {
-            DemoComponent = (function () {
-                function DemoComponent(OptionsService) {
+            FlexComponent = (function () {
+                function FlexComponent(OptionsService) {
                     this.OptionsService = OptionsService;
-                    this.optionsStrings = [
-                        "container", "dimension", "flex", "flexelement", "format", "margin", "padding"
-                    ];
-                    this.optionsArray = [];
-                    this.boxClasses = [];
                     this.containerClasses = ["container"];
-                    this.dimensionClasses = [];
                     this.elementArray = [{}];
                     this.elementClasses = [];
                     this.flexClasses = [];
-                    this.fontSize = 16;
-                    this.formatClasses = ["format"];
+                    this.fracturesArray = [];
+                    this.fracturesStrings = ["container", "dimension", "flex", "flexelement", "format", "margin", "padding"];
                 }
-                DemoComponent.prototype.ngOnInit = function () {
+                FlexComponent.prototype.ngOnInit = function () {
                     var _this = this;
-                    var _loop_1 = function(x) {
+                    var _loop_1 = function(fracture) {
                         this_1.OptionsService
-                            .getOptions(x)
+                            .getOptions(fracture)
                             .subscribe(function (data) {
-                            _this.optionsArray[x] = data;
+                            _this.fracturesArray[fracture] = data;
                         });
                     };
                     var this_1 = this;
-                    for (var _i = 0, _a = this.optionsStrings; _i < _a.length; _i++) {
-                        var x = _a[_i];
-                        _loop_1(x);
+                    for (var _i = 0, _a = this.fracturesStrings; _i < _a.length; _i++) {
+                        var fracture = _a[_i];
+                        _loop_1(fracture);
                     }
                 };
-                DemoComponent.prototype.elementCountUpdate = function (direction) {
+                FlexComponent.prototype.elementCountUpdate = function (direction) {
                     if (direction)
                         return this.elementArray.push({});
                     else
                         return this.elementArray.splice(1, 1);
                 };
-                DemoComponent = __decorate([
+                FlexComponent = __decorate([
                     core_1.Component({
-                        directives: [options_toggle_component_1.OptionsToggleComponent],
+                        directives: [flex_options_component_1.FlexOptionsComponent],
                         providers: [options_service_1.OptionsService],
-                        selector: "demo",
-                        styleUrls: ["app/components/demo/demo.component.css"],
-                        templateUrl: "app/components/demo/demo.component.html"
+                        selector: "flex",
+                        styleUrls: ["app/components/flex/flex.component.css"],
+                        templateUrl: "app/components/flex/flex.component.html"
                     }), 
                     __metadata('design:paramtypes', [options_service_1.OptionsService])
-                ], DemoComponent);
-                return DemoComponent;
+                ], FlexComponent);
+                return FlexComponent;
             }());
-            exports_1("DemoComponent", DemoComponent);
+            exports_1("FlexComponent", FlexComponent);
         }
     }
 });

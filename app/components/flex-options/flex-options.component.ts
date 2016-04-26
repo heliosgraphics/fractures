@@ -1,16 +1,16 @@
 import { Component } from "angular2/core";
 import { NgClass, NgFor } from "angular2/common";
 
-import { MapToIterable } from "../../pipes/MapToIterable";
+import { MapToIterable } from "../../shared/pipes/MapToIterable";
 
 @Component({
 	inputs: [ "classes", "options" ],
 	pipes: [ MapToIterable ],
-	selector: "options-toggle",
-	templateUrl: "app/shared/components/options-toggle/options-toggle.component.html"
+	selector: "flex-options",
+	templateUrl: "app/components/flex-options/flex-options.component.html"
 })
 
-export class OptionsToggleComponent {
+export class FlexOptionsComponent {
 	public classes: any;
 	public options: any;
 
