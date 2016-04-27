@@ -4,6 +4,7 @@ import { Observable } from "rxjs/Rx";
 
 @Injectable()
 export class OptionsService {
+	public blocks: any = [];
 
 	constructor(private http: Http) {
 		this.http = http;

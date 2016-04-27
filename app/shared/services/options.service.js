@@ -24,6 +24,7 @@ System.register(["angular2/core", "angular2/http"], function(exports_1, context_
             OptionsService = (function () {
                 function OptionsService(http) {
                     this.http = http;
+                    this.blocks = [];
                     this.http = http;
                 }
                 OptionsService.prototype.getOptions = function (block) {

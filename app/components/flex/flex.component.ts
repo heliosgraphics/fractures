@@ -1,4 +1,4 @@
-import { Component, OnInit } from "angular2/core";
+import { Component } from "angular2/core";
 import { NgClass, NgFor, NgIf } from "angular2/common";
 
 import { OptionsService } from "../../shared/services/options.service";
@@ -6,33 +6,22 @@ import { FlexOptionsComponent } from "../flex-options/flex-options.component";
 
 @Component({
 	directives: [ FlexOptionsComponent ],
-	providers: [ OptionsService ],
 	selector: "flex",
 	styleUrls: [ "app/components/flex/flex.component.css" ],
 	templateUrl: "app/components/flex/flex.component.html"
 })
 
-export class FlexComponent implements OnInit {
+export class FlexComponent {
 	public containerClasses: any = ["container"];
 	public elementArray: any = [{}];
 	public elementClasses: any = [];
 	public flexClasses: any = [];
 	public fracturesArray: any = [];
-	public fracturesStrings: any = ["container", "dimension", "flex", "flexelement", "format", "margin", "padding"];
 
 	constructor(
 		private OptionsService: OptionsService
-	) {}
-
-	// TODO: A naïve implementation
-	ngOnInit() {
-		for(let fracture of this.fracturesStrings) {
-			this.OptionsService
-				.getOptions(fracture)
-				.subscribe(data => {
-					this.fracturesArray[fracture] = data;
-				});
-		}
+	) {
+		this.fracturesArray = this.OptionsService.blocks;
 	}
 
 	// Sets extra elements length

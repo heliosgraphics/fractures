@@ -1,4 +1,4 @@
-System.register(["angular2/core", "angular2/router", "../index/index.component", "../flex/flex.component", "../docs/docs.component"], function(exports_1, context_1) {
+System.register(["angular2/core", "angular2/router", "../index/index.component", "../flex/flex.component", "../docs/docs.component", "../../shared/services/options.service"], function(exports_1, context_1) {
     "use strict";
     var __moduleName = context_1 && context_1.id;
     var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
@@ -10,7 +10,7 @@ System.register(["angular2/core", "angular2/router", "../index/index.component",
     var __metadata = (this && this.__metadata) || function (k, v) {
         if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
     };
-    var core_1, router_1, index_component_1, flex_component_1, docs_component_1;
+    var core_1, router_1, index_component_1, flex_component_1, docs_component_1, options_service_1;
     var AppComponent;
     return {
         setters:[
@@ -28,12 +28,34 @@ System.register(["angular2/core", "angular2/router", "../index/index.component",
             },
             function (docs_component_1_1) {
                 docs_component_1 = docs_component_1_1;
+            },
+            function (options_service_1_1) {
+                options_service_1 = options_service_1_1;
             }],
         execute: function() {
             core_1.enableProdMode();
             AppComponent = (function () {
-                function AppComponent() {
+                function AppComponent(OptionsService) {
+                    this.OptionsService = OptionsService;
+                    this.fracturesStrings = [
+                        "container", "dimension", "flex", "flexelement", "format", "margin", "padding"
+                    ];
                 }
+                AppComponent.prototype.ngOnInit = function () {
+                    var _this = this;
+                    var _loop_1 = function(fracture) {
+                        this_1.OptionsService
+                            .getOptions(fracture)
+                            .subscribe(function (data) {
+                            _this.OptionsService.blocks[fracture] = data;
+                        });
+                    };
+                    var this_1 = this;
+                    for (var _i = 0, _a = this.fracturesStrings; _i < _a.length; _i++) {
+                        var fracture = _a[_i];
+                        _loop_1(fracture);
+                    }
+                };
                 AppComponent = __decorate([
                     core_1.Component({
                         selector: "app",
@@ -44,7 +66,7 @@ System.register(["angular2/core", "angular2/router", "../index/index.component",
                             "app/shared/styles/body.css",
                             "app/shared/styles/btn.css"
                         ],
-                        providers: [router_1.ROUTER_PROVIDERS],
+                        providers: [options_service_1.OptionsService, router_1.ROUTER_PROVIDERS],
                         encapsulation: core_1.ViewEncapsulation.None
                     }),
                     router_1.RouteConfig([
@@ -52,7 +74,7 @@ System.register(["angular2/core", "angular2/router", "../index/index.component",
                         { path: "/flex", name: "Flex", component: flex_component_1.FlexComponent },
                         { path: "/docs", name: "Docs", component: docs_component_1.DocsComponent }
                     ]), 
-                    __metadata('design:paramtypes', [])
+                    __metadata('design:paramtypes', [options_service_1.OptionsService])
                 ], AppComponent);
                 return AppComponent;
             }());

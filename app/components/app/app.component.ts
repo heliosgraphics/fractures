@@ -1,9 +1,11 @@
-import { Component, enableProdMode, ViewEncapsulation } from "angular2/core";
+import { Component, OnInit, enableProdMode, ViewEncapsulation } from "angular2/core";
 import { RouteConfig, ROUTER_DIRECTIVES, ROUTER_PROVIDERS } from "angular2/router";
 
 import { IndexComponent } from "../index/index.component";
 import { FlexComponent } from "../flex/flex.component";
 import { DocsComponent } from "../docs/docs.component";
+
+import { OptionsService } from "../../shared/services/options.service";
 
 enableProdMode();
 
@@ -16,7 +18,7 @@ enableProdMode();
 		"app/shared/styles/body.css",
 		"app/shared/styles/btn.css"
 	],
-	providers: [ ROUTER_PROVIDERS ],
+	providers: [ OptionsService, ROUTER_PROVIDERS ],
 	encapsulation: ViewEncapsulation.None
 })
 
@@ -26,4 +28,22 @@ enableProdMode();
 	{ path: "/docs", name: "Docs", component: DocsComponent }
 ])
 
-export class AppComponent {}
+export class AppComponent implements OnInit {
+	public fracturesStrings: any = [
+		"container", "dimension", "flex", "flexelement", "format", "margin", "padding"
+	];
+
+	constructor(
+		public OptionsService: OptionsService
+	) {}
+
+	ngOnInit() {
+		for(let fracture of this.fracturesStrings) {
+			this.OptionsService
+				.getOptions(fracture)
+				.subscribe(data => {
+					this.OptionsService.blocks[fracture] = data;
+				});
+		}
+	}
+}

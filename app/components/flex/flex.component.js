@@ -32,23 +32,8 @@ System.register(["angular2/core", "../../shared/services/options.service", "../f
                     this.elementClasses = [];
                     this.flexClasses = [];
                     this.fracturesArray = [];
-                    this.fracturesStrings = ["container", "dimension", "flex", "flexelement", "format", "margin", "padding"];
+                    this.fracturesArray = this.OptionsService.blocks;
                 }
-                FlexComponent.prototype.ngOnInit = function () {
-                    var _this = this;
-                    var _loop_1 = function(fracture) {
-                        this_1.OptionsService
-                            .getOptions(fracture)
-                            .subscribe(function (data) {
-                            _this.fracturesArray[fracture] = data;
-                        });
-                    };
-                    var this_1 = this;
-                    for (var _i = 0, _a = this.fracturesStrings; _i < _a.length; _i++) {
-                        var fracture = _a[_i];
-                        _loop_1(fracture);
-                    }
-                };
                 FlexComponent.prototype.elementCountUpdate = function (direction) {
                     if (direction)
                         return this.elementArray.push({});
@@ -58,7 +43,6 @@ System.register(["angular2/core", "../../shared/services/options.service", "../f
                 FlexComponent = __decorate([
                     core_1.Component({
                         directives: [flex_options_component_1.FlexOptionsComponent],
-                        providers: [options_service_1.OptionsService],
                         selector: "flex",
                         styleUrls: ["app/components/flex/flex.component.css"],
                         templateUrl: "app/components/flex/flex.component.html"
