@@ -1,32 +1,14 @@
 {
 	"grow": {
 		"selected": false,
-		"options": [
-			"grow-1",
-			"grow-2",
-			"grow-3",
-			"grow-4",
-			"grow-5"
-		]
+		"options": ["grow-1", "grow-2", "grow-3", "grow-4", "grow-5"]
 	},
 	"order": {
 		"selected": false,
-		"options": [
-			"order-first",
-			"order-1",
-			"order-2",
-			"order-3",
-			"order-last"
-		]
+		"options": ["order-first", "order-1", "order-2", "order-3", "order-last"]
 	},
 	"shrink": {
 		"selected": false,
-		"options": [
-			"shrink-2",
-			"shrink-3",
-			"shrink-4",
-			"shrink-5",
-			"shrink-6"
-		]
+		"options": ["shrink-2", "shrink-3", "shrink-4", "shrink-5", "shrink-6"]
 	}
 }

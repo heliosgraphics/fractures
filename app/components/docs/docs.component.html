@@ -1,14 +1,19 @@
 <div class="mb-4">
 	<div class="container">
-		<h1>WIP</h1>
+		<h1>List of tools</h1>
 	</div>
 	<div class="container">
-		<!-- <h2>What it does</h2> -->
-		<!-- <h2>List of utility</h2> -->
-		<!-- <h2>How to use it</h2> -->
-		<!-- TODO Notes -->
-		<!-- TODO Breakpoints -->
-		<!-- TODO Add docs -->
-		<!-- TODO Usage -->
+		<div
+			*ngFor="#x of fracturesArray | MapToIterable"
+			class="mb-2">
+			<h4 class="normal">{{ x.key }}</h4>
+			<div
+				*ngFor="#option of x.val | MapToIterable"
+				class="clearfix">
+				<div
+					*ngFor="#class of option.val.options | MapToIterable"
+					class="float-left">{{ class.val }}</div>
+			</div>
+		</div>
 	</div>
 </div>

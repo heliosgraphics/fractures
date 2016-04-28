@@ -14,7 +14,6 @@ export class FlexOptionsComponent {
 	public classes: any;
 	public options: any;
 
-	// Control flex classes
 	toggleClass(selected, set) {
 
 		// Remove all setitem from classes array
@@ -25,11 +24,13 @@ export class FlexOptionsComponent {
 				this.classes.splice(optionIndex, 1);
 		}
 
+		// None selected, keeps the set clean
+		if(!selected) return this.options[set].selected = false;
+
 		// Add new class to array
-		if(selected[1])
-			this.classes.push(selected[1]);
+		this.classes.push(selected);
 
 		// Set selected on options
-		this.options[set].selected = selected[0];
+		this.options[set].selected = this.options[set].options.indexOf(selected);
 	}
 }

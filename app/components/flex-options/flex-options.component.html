@@ -5,13 +5,13 @@
 		<div class="btn-group clearfix">
 			<a
 				[ngClass]="{ 'active': set.val.selected === false }"
-				(click)="toggleClass([false], set.key)"
-				class="btn btn-primary">{{ set.key }} &rarr;</a>
+				(click)="toggleClass(false, set.key)"
+				class="btn btn-primary">&mdash;</a>
 			<a
-				*ngFor="#option of set.val.options; #i = index"
+				*ngFor="#class of set.val.options; #i = index"
 				[ngClass]="{ 'active': i === set.val.selected }"
-				(click)="toggleClass([i, option], set.key)"
-				class="btn btn-primary">{{ option }}</a>
+				(click)="toggleClass(class, set.key)"
+				class="btn btn-primary">{{ class }}</a>
 		</div>
 	</li>
 </ul>

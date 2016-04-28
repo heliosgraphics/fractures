@@ -13,7 +13,7 @@ import { FlexOptionsComponent } from "../flex-options/flex-options.component";
 
 export class FlexComponent {
 	public containerClasses: any = ["container"];
-	public elementArray: any = [{}];
+	public elementArray: any = [];
 	public elementClasses: any = [];
 	public flexClasses: any = [];
 	public fracturesArray: any = [];
@@ -22,6 +22,7 @@ export class FlexComponent {
 		private OptionsService: OptionsService
 	) {
 		this.fracturesArray = this.OptionsService.blocks;
+		this.elementCountUpdate(true);
 	}
 
 	// Sets extra elements length
@@ -29,7 +30,7 @@ export class FlexComponent {
 		if(direction)
 			return this.elementArray.push({});
 		else
-			return this.elementArray.splice(1, 1);
+			return this.elementArray.splice(0, 1);
 	}
 
 }

@@ -1,72 +1,30 @@
 {
 	"margin": {
 		"selected": false,
-		"options": [
-			"m-0",
-			"m-1",
-			"m-2",
-			"m-3",
-			"m-4"
-		]
+		"options": ["m-0", "m-1", "m-2", "m-3", "m-4"]
 	},
 	"marginXAxis": {
 		"selected": false,
-		"options": [
-			"mx-0",
-			"mx-1",
-			"mx-2",
-			"mx-3",
-			"mx-4"
-		]
+		"options": ["mx-0", "mx-1", "mx-2", "mx-3", "mx-4"]
 	},
 	"marginYAxis": {
 		"selected": false,
-		"options": [
-			"my-0",
-			"my-1",
-			"my-2",
-			"my-3",
-			"my-4"
-		]
+		"options": ["my-0", "my-1", "my-2", "my-3", "my-4"]
 	},
 	"marginLeft": {
 		"selected": false,
-		"options": [
-			"ml-0",
-			"ml-1",
-			"ml-2",
-			"ml-3",
-			"ml-4"
-		]
+		"options": ["ml-0", "ml-1", "ml-2", "ml-3", "ml-4"]
 	},
 	"marginRight": {
 		"selected": false,
-		"options": [
-			"mr-0",
-			"mr-1",
-			"mr-2",
-			"mr-3",
-			"mr-4"
-		]
+		"options": [ "mr-0", "mr-1", "mr-2", "mr-3", "mr-4"]
 	},
 	"marginTop": {
 		"selected": false,
-		"options": [
-			"mt-0",
-			"mt-1",
-			"mt-2",
-			"mt-3",
-			"mt-4"
-		]
+		"options": [ "mt-0", "mt-1", "mt-2", "mt-3", "mt-4"]
 	},
 	"marginBottom": {
 		"selected": false,
-		"options": [
-			"mb-0",
-			"mb-1",
-			"mb-2",
-			"mb-3",
-			"mb-4"
-		]
+		"options": [ "mb-0", "mb-1", "mb-2", "mb-3", "mb-4"]
 	}
 }

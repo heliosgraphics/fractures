@@ -7,7 +7,7 @@
 			<a class="btn btn-link" (click)="output = !output" [ngClass]="{ 'active': output }">code</a>
 		</div>
 		<div class="btn-group float-right">
-			<a class="btn btn-link" (click)="elementCountUpdate(false)" [ngClass]="{ 'disabled': elementArray.length <= 1 }">less</a>
+			<a class="btn btn-link" (click)="elementCountUpdate(false)" [ngClass]="{ 'disabled': elementArray.length <= 0 }">less</a>
 			<a class="btn btn-link" (click)="elementCountUpdate(true)" [ngClass]="{ 'disabled': elementArray.length >= 14 }">more</a>
 		</div>
 		<div class="float-right mr-1">

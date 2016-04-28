@@ -1,52 +1,30 @@
 {
 	"align": {
 		"selected": false,
-		"options": [
-			"flex--start",
-			"flex--end",
-			"flex--baseline"
-		]
+		"options": ["flex--start", "flex--end", "flex--baseline"]
 	},
 	"center": {
 		"selected": false,
-		"options": [
-			"flex--center",
-			"flex--ycenter",
-			"flex--xcenter"
-		]
+		"options": ["flex--center", "flex--ycenter", "flex--xcenter"]
 	},
 	"justify": {
 		"selected": false,
-		"options": [
-			"flex--around",
-			"flex--between",
-			"flex--right"
-		]
+		"options": ["flex--around", "flex--between", "flex--right"]
 	},
 	"responsive": {
 		"selected": false,
-		"options": [
-			"flex--collapse",
-			"flex--screen"
-		]
+		"options": ["flex--collapse", "flex--screen"]
 	},
 	"reverse": {
 		"selected": false,
-		"options": [
-			"flex--reverse"
-		]
+		"options": ["flex--reverse"]
 	},
 	"wrap": {
 		"selected": false,
-		"options": [
-			"flex--wrap",
-			"flex--wrap-reverse"
-		]
+		"options": ["flex--wrap", "flex--wrap-reverse"]
 	},
 	"column": {
 		"selected": false,
-		"options": [
-			"flex--column"
-		]
+		"options": ["flex--column"]
 	}
 }

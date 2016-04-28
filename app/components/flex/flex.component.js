@@ -28,17 +28,18 @@ System.register(["angular2/core", "../../shared/services/options.service", "../f
                 function FlexComponent(OptionsService) {
                     this.OptionsService = OptionsService;
                     this.containerClasses = ["container"];
-                    this.elementArray = [{}];
+                    this.elementArray = [];
                     this.elementClasses = [];
                     this.flexClasses = [];
                     this.fracturesArray = [];
                     this.fracturesArray = this.OptionsService.blocks;
+                    this.elementCountUpdate(true);
                 }
                 FlexComponent.prototype.elementCountUpdate = function (direction) {
                     if (direction)
                         return this.elementArray.push({});
                     else
-                        return this.elementArray.splice(1, 1);
+                        return this.elementArray.splice(0, 1);
                 };
                 FlexComponent = __decorate([
                     core_1.Component({

@@ -31,9 +31,10 @@ System.register(["angular2/core", "../../shared/pipes/MapToIterable"], function(
                         if (optionIndex !== -1)
                             this.classes.splice(optionIndex, 1);
                     }
-                    if (selected[1])
-                        this.classes.push(selected[1]);
-                    this.options[set].selected = selected[0];
+                    if (!selected)
+                        return this.options[set].selected = false;
+                    this.classes.push(selected);
+                    this.options[set].selected = this.options[set].options.indexOf(selected);
                 };
                 FlexOptionsComponent = __decorate([
                     core_1.Component({
