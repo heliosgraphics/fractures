@@ -7,6 +7,7 @@ import { MapToIterable } from "../../shared/pipes/MapToIterable";
 @Component({
 	selector: "docs",
 	pipes: [ MapToIterable ],
+	styleUrls: ["app/components/docs/docs.component.css"],
 	templateUrl: "app/components/docs/docs.component.html"
 })
 

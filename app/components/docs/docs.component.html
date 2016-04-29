@@ -1,6 +1,6 @@
 <div class="mb-4">
 	<div class="container">
-		<h1>List of tools</h1>
+		<h1>List of classes</h1>
 	</div>
 	<div class="container">
 		<div
@@ -12,7 +12,7 @@
 				class="clearfix">
 				<div
 					*ngFor="#class of option.val.options | MapToIterable"
-					class="float-left">{{ class.val }}</div>
+					class="btn btn-tag">{{ class.val }}</div>
 			</div>
 		</div>
 	</div>

@@ -35,6 +35,7 @@ System.register(["angular2/core", "../../shared/services/options.service", "../.
                     core_1.Component({
                         selector: "docs",
                         pipes: [MapToIterable_1.MapToIterable],
+                        styleUrls: ["app/components/docs/docs.component.css"],
                         templateUrl: "app/components/docs/docs.component.html"
                     }), 
                     __metadata('design:paramtypes', [options_service_1.OptionsService])
