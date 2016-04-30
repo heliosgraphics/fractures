@@ -48,7 +48,7 @@
 .btn-primary.btn:hover { background-color: #D5D6E0; }
 
 /*Group*/
-.btn-group .btn { border-radius: 0; }
-.btn-group .btn:first-child { border-radius: 2px 0 0 2px; }
-.btn-group .btn:last-child { border-radius: 0 2px 2px 0; }
+.btn-group .btn:not(:first-child):not(:last-child) { border-radius: 0; }
+.btn-group .btn:first-child:not(:last-child) { border-radius: 2px 0 0 2px; }
+.btn-group .btn:last-child:not(:first-child) { border-radius: 0 2px 2px 0; }
 .btn-group .btn:not(:first-child) { margin-left: -1px; }

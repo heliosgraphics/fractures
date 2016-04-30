@@ -2,7 +2,7 @@
 	min-height: 11rem;
 
 	background-color: white;
-	border-radius: 3px;
+	border-radius: 2px;
 	box-shadow: inset 0 0 0 1px #D5D6E0;
 }
 
@@ -12,9 +12,6 @@
 .element {
 	background-color: #ECEEF5;
 	color: #A2A2AD;
-
-	font-weight: bold;
-	text-align: center;
 }
 
 .element--dimensions {
@@ -27,14 +24,6 @@
 .element--dimensions-xl {
 	height: 10rem;
 	width: 10rem;
-}
-
-.element:first-child span {
-	float: left;
-	height: 100%;
-	width: 100%;
-
-	background-color: #3C3C50;
 }
 
 .element:first-child {

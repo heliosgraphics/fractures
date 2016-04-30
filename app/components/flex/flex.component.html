@@ -21,7 +21,7 @@
 		class="flex demo p-1">
 		<div
 			[ngClass]="elementClasses"
-			class="element {{ elementDimensions ? '' : 'element--dimensions' }}">1</div>
+			class="element center {{ elementDimensions ? '' : 'element--dimensions' }}">1</div>
 		<div
 			[ngClass]="{
 				'grow-1': elementClasses.length,
@@ -29,7 +29,7 @@
 				'element--dimensions': !elementDimensions
 			}"
 			*ngFor="#x of elementArray; #i = index"
-			class="element">{{ i + 2 }}</div>
+			class="element center">{{ i + 2 }}</div>
 	</div>
 
 	<!-- Code -->
