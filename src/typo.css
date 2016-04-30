@@ -1,12 +1,34 @@
-.normal { font-weight: normal; }
-.bold { font-weight: bold; }
-.italic { font-style: italic; }
+.ellipsis {
+	overflow: hidden;
+	max-width: 100%;
 
-.nowrap { white-space: nowrap; }
-.pre-line { white-space: pre-line; }
+	text-overflow: ellipsis;
+	white-space: nowrap;
+}
+
+.italic { font-style: italic; }
+.normal { font-style: normal; }
+.oblique { font-style: oblique; }
+
+.bold { font-weight: bold; }
+.bolder { font-weight: bolder; }
+.lighter { font-weight: lighter; }
+.regular { font-weight: normal; }
 
 .center { text-align: center; }
+.justify { text-align: justify; }
 .left { text-align: left; }
 .right { text-align: right; }
 
+.line-through { text-decoration: line-through; }
+.overline { text-decoration: overline; }
+.underline { text-decoration: underline; }
+
+.capitalize { text-transform: capitalize; }
+.lowercase { text-transform: lowercase; }
 .uppercase { text-transform: uppercase; }
+
+.pre { white-space: pre; }
+.pre-line { white-space: pre-line; }
+.pre-wrap { white-space: pre-wrap; }
+.nowrap { white-space: nowrap; }

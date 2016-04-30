@@ -55,6 +55,12 @@
 		"position": ["absolute", "fixed", "relative"]
 	},
 	"typo": {
-		"helpers": ["normal", "bold", "italic", "nowrap", "pre-line", "center", "left", "right", "uppercase"]
+		"ellipsis": ["ellipsis"],
+		"fontStyle": ["italic", "normal", "oblique"],
+		"fontWeight": ["bold", "bolder", "lighter", "regular"],
+		"textAlign": ["center", "justify", "left", "right"],
+		"textDecoration": ["line-through", "overline", "underline"],
+		"textTransform": ["capitalize", "lowercase", "uppercase"],
+		"whiteSpace": ["pre", "pre-line", "pre-wrap", "nowrap"]
 	}
 }
