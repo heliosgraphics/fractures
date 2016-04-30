@@ -27,9 +27,9 @@ System.register(["angular2/core", "angular2/http"], function(exports_1, context_
                     this.blocks = [];
                     this.http = http;
                 }
-                OptionsService.prototype.getOptions = function (block) {
+                OptionsService.prototype.getOptions = function () {
                     return this.http
-                        .get("app/shared/data/" + block + ".json")
+                        .get("app/shared/data/blocks.json")
                         .map(function (res) { return res.json(); });
                 };
                 OptionsService = __decorate([

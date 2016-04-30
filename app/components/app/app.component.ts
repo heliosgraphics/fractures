@@ -29,21 +29,16 @@ enableProdMode();
 ])
 
 export class AppComponent implements OnInit {
-	public fracturesStrings: any = [
-		"container", "dimension", "flex", "flexelement", "format", "margin", "padding"
-	];
 
 	constructor(
 		public OptionsService: OptionsService
 	) {}
 
 	ngOnInit() {
-		for(let fracture of this.fracturesStrings) {
-			this.OptionsService
-				.getOptions(fracture)
-				.subscribe(data => {
-					this.OptionsService.blocks[fracture] = data;
-				});
-		}
+		this.OptionsService
+			.getOptions()
+			.subscribe(data => {
+				this.OptionsService.blocks = data;
+			});
 	}
 }

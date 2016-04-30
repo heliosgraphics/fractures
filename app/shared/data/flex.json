@@ -1,9 +1,0 @@
-{
-	"align": ["flex--start", "flex--end", "flex--baseline"],
-	"center": ["flex--center", "flex--ycenter", "flex--xcenter"],
-	"justify": ["flex--around", "flex--between", "flex--right"],
-	"responsive": ["flex--collapse", "flex--screen"],
-	"reverse": ["flex--reverse"],
-	"wrap": ["flex--wrap", "flex--wrap-reverse"],
-	"column": ["flex--column"]
-}

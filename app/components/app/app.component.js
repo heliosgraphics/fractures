@@ -37,24 +37,14 @@ System.register(["angular2/core", "angular2/router", "../index/index.component",
             AppComponent = (function () {
                 function AppComponent(OptionsService) {
                     this.OptionsService = OptionsService;
-                    this.fracturesStrings = [
-                        "container", "dimension", "flex", "flexelement", "format", "margin", "padding"
-                    ];
                 }
                 AppComponent.prototype.ngOnInit = function () {
                     var _this = this;
-                    var _loop_1 = function(fracture) {
-                        this_1.OptionsService
-                            .getOptions(fracture)
-                            .subscribe(function (data) {
-                            _this.OptionsService.blocks[fracture] = data;
-                        });
-                    };
-                    var this_1 = this;
-                    for (var _i = 0, _a = this.fracturesStrings; _i < _a.length; _i++) {
-                        var fracture = _a[_i];
-                        _loop_1(fracture);
-                    }
+                    this.OptionsService
+                        .getOptions()
+                        .subscribe(function (data) {
+                        _this.OptionsService.blocks = data;
+                    });
                 };
                 AppComponent = __decorate([
                     core_1.Component({
