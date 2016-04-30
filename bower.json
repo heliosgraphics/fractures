@@ -1,0 +1,14 @@
+{
+	"name": "fractures",
+	"description": "Atomic CSS toolkit.",
+	"main": "dist/fractures.min.js",
+	"authors": [
+		"Krisztian Puska"
+	],
+	"license": "MIT",
+	"keywords": [
+		"CSS"
+	],
+	"homepage": "https://github.com/krisztianpuska/fractures",
+	"moduleType": []
+}
