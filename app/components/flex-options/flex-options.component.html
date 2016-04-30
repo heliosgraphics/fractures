@@ -4,12 +4,8 @@
 		class="mb-1">
 		<div class="btn-group clearfix">
 			<a
-				[ngClass]="{ 'active': set.val.selected === false }"
-				(click)="toggleClass(false, set.key)"
-				class="btn btn-primary">&mdash;</a>
-			<a
-				*ngFor="#class of set.val.options; #i = index"
-				[ngClass]="{ 'active': i === set.val.selected }"
+				*ngFor="#class of set.val; #i = index"
+				[ngClass]="{ 'active': classes.includes(class) }"
 				(click)="toggleClass(class, set.key)"
 				class="btn btn-primary">{{ class }}</a>
 		</div>

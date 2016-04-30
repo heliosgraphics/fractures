@@ -29,7 +29,6 @@ System.register(["angular2/core", "../../shared/services/options.service", "../.
                     this.OptionsService = OptionsService;
                     this.fracturesArray = [];
                     this.fracturesArray = this.OptionsService.blocks;
-                    console.log(this.fracturesArray);
                 }
                 DocsComponent = __decorate([
                     core_1.Component({

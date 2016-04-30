@@ -1,26 +1,8 @@
 {
-	"width": {
-		"selected": false,
-		"options": ["w-25", "w-33", "w-50", "w-66", "w-75", "w-100"]
-	},
-	"max-width": {
-		"selected": false,
-		"options": ["maxw-25", "maxw-33", "maxw-50", "maxw-66", "maxw-75", "maxw-100"]
-	},
-	"min-width": {
-		"selected": false,
-		"options": ["minw-25", "minw-33", "minw-50", "minw-66", "minw-75", "minw-100"]
-	},
-	"height": {
-		"selected": false,
-		"options": ["h-25", "h-33", "h-50", "h-66", "h-75", "h-100"]
-	},
-	"max-height": {
-		"selected": false,
-		"options": ["maxh-25", "maxh-33", "maxh-50", "maxh-66", "maxh-75", "maxh-100"]
-	},
-	"min-height": {
-		"selected": false,
-		"options": ["minh-25", "minh-33", "minh-50", "minh-66", "minh-75", "minh-100"]
-	}
+	"width": ["w-25", "w-33", "w-50", "w-66", "w-75", "w-100"],
+	"max-width": ["maxw-25", "maxw-33", "maxw-50", "maxw-66", "maxw-75", "maxw-100"],
+	"min-width": ["minw-25", "minw-33", "minw-50", "minw-66", "minw-75", "minw-100"],
+	"height": ["h-25", "h-33", "h-50", "h-66", "h-75", "h-100"],
+	"max-height": ["maxh-25", "maxh-33", "maxh-50", "maxh-66", "maxh-75", "maxh-100"],
+	"min-height": ["minh-25", "minh-33", "minh-50", "minh-66", "minh-75", "minh-100"]
 }

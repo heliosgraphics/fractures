@@ -11,7 +11,7 @@
 				*ngFor="#option of x.val | MapToIterable"
 				class="clearfix">
 				<div
-					*ngFor="#class of option.val.options | MapToIterable"
+					*ngFor="#class of option.val | MapToIterable"
 					class="btn btn-tag">{{ class.val }}</div>
 			</div>
 		</div>

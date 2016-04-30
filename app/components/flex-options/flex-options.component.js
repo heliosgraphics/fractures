@@ -25,16 +25,17 @@ System.register(["angular2/core", "../../shared/pipes/MapToIterable"], function(
                 function FlexOptionsComponent() {
                 }
                 FlexOptionsComponent.prototype.toggleClass = function (selected, set) {
-                    for (var _i = 0, _a = this.options[set].options; _i < _a.length; _i++) {
+                    for (var _i = 0, _a = this.options[set]; _i < _a.length; _i++) {
                         var option = _a[_i];
                         var optionIndex = this.classes.indexOf(option);
-                        if (optionIndex !== -1)
+                        if (optionIndex !== -1) {
                             this.classes.splice(optionIndex, 1);
+                            if (selected === option)
+                                return false;
+                        }
                     }
-                    if (!selected)
-                        return this.options[set].selected = false;
-                    this.classes.push(selected);
-                    this.options[set].selected = this.options[set].options.indexOf(selected);
+                    if (selected)
+                        this.classes.push(selected);
                 };
                 FlexOptionsComponent = __decorate([
                     core_1.Component({

@@ -18,6 +18,5 @@ export class DocsComponent {
 		private OptionsService: OptionsService
 	) {
 		this.fracturesArray = this.OptionsService.blocks;
-		console.log(this.fracturesArray);
 	}
 }

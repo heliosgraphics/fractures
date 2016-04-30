@@ -16,21 +16,24 @@ export class FlexOptionsComponent {
 
 	toggleClass(selected, set) {
 
-		// Remove all setitem from classes array
-		for(let option of this.options[set].options) {
+		// Remove setitems from classes array
+		for(let option of this.options[set]) {
 			let optionIndex = this.classes.indexOf(option);
 
-			if(optionIndex !== -1)
+			// Matches for set item
+			if(optionIndex !== -1) {
+
+				// Removes class
 				this.classes.splice(optionIndex, 1);
+
+				// This is a toggle action, exits
+				if(selected === option) return false;
+			}
 		}
 
-		// None selected, keeps the set clean
-		if(!selected) return this.options[set].selected = false;
-
 		// Add new class to array
-		this.classes.push(selected);
-
-		// Set selected on options
-		this.options[set].selected = this.options[set].options.indexOf(selected);
+		if(selected)
+			this.classes.push(selected);
 	}
+
 }
