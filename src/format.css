@@ -1,0 +1,27 @@
+.format p,
+.format hr,
+.format ul,
+.format ol,
+.format iframe {
+	padding-bottom: 1em;
+	padding-top: 1em;
+}
+
+.format blockquote {
+	padding-left: 1em;
+
+	font-style: italic;
+}
+
+.format ul,
+.format ol { margin-left: 2.5em; }
+
+.format ul > li { list-style-type: disc; }
+.format ol > li { list-style-type: decimal; }
+.format a { font-weight: bold; }
+
+.format hr {
+	border-bottom-color: inherit;
+	border-bottom-style: solid;
+	border-bottom-width: 1px;
+}

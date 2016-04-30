@@ -10,6 +10,11 @@
 		"min-width": ["minw-25", "minw-33", "minw-50", "minw-66", "minw-75", "minw-100"],
 		"width": ["w-25", "w-33", "w-50", "w-66", "w-75", "w-100"]
 	},
+	"display": {
+		"clearfix": ["clearfix"],
+		"display": ["block", "inline", "inline-block", "none", "table", "table-cell", "table-row"],
+		"floats": ["float-left", "float-right"]
+	},
 	"flex": {
 		"align": ["flex--start", "flex--end", "flex--baseline"],
 		"center": ["flex--center", "flex--ycenter", "flex--xcenter"],
@@ -22,6 +27,7 @@
 	"flexelement": {
 		"grow": ["grow-1", "grow-2", "grow-3", "grow-4", "grow-5"],
 		"order": ["order-first", "order-1", "order-2", "order-3", "order-last"],
+		"self": ["self-center", "self-start", "self-end", "self-baseline"],
 		"shrink": ["shrink-2", "shrink-3", "shrink-4", "shrink-5", "shrink-6"]
 	},
 	"format": {
@@ -47,5 +53,8 @@
 	},
 	"position": {
 		"position": ["absolute", "fixed", "relative"]
+	},
+	"typo": {
+		"helpers": ["normal", "bold", "italic", "nowrap", "pre-line", "center", "left", "right", "uppercase"]
 	}
 }
