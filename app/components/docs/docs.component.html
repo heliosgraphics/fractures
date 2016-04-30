@@ -15,14 +15,14 @@
 		</div>
 		<h1>List of classes</h1>
 		<div
-			*ngFor="#x of fracturesArray | MapToIterable"
+			*ngFor="let x of fracturesArray | MapToIterable"
 			class="mb-2">
 			<h4 class="normal">{{ x.key }}</h4>
 			<div
-				*ngFor="#option of x.val | MapToIterable"
+				*ngFor="let option of x.val | MapToIterable"
 				class="clearfix">
 				<div
-					*ngFor="#class of option.val | MapToIterable"
+					*ngFor="let class of option.val | MapToIterable"
 					class="btn btn-tag">{{ class.val }}</div>
 			</div>
 		</div>
