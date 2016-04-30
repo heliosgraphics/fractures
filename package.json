@@ -4,6 +4,10 @@
 	"author": "Krisztian Puska",
 	"description": "Atomic CSS toolkit.",
 	"keywords": [ "CSS" ],
+	"engines": {
+		"node": "6.0.0",
+		"npm": "3.8.6"
+	},
 	"repository": {
 		"type": "git",
 		"url": "https://github.com/krisztianpuska/fractures"
