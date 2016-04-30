@@ -1,5 +1,6 @@
 {
 	"name": "fractures",
+	"version": "0.3.6",
 	"description": "Atomic CSS toolkit.",
 	"main": "dist/fractures.min.js",
 	"authors": [
