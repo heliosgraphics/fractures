@@ -1,0 +1,13 @@
+<ul>
+	<li
+		*ngFor="let set of options | MapToIterable"
+		class="mb-1">
+		<div class="btn-group clearfix">
+			<a
+				*ngFor="let class of set.val; let i = index"
+				[ngClass]="{ 'active': classes.includes(class) }"
+				(click)="toggleClass(class, set.key)"
+				class="btn btn-primary">{{ class }}</a>
+		</div>
+	</li>
+</ul>

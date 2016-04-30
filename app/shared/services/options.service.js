@@ -24,18 +24,20 @@ System.register(["angular2/core", "angular2/http"], function(exports_1, context_
             OptionsService = (function () {
                 function OptionsService(http) {
                     this.http = http;
+                    this.blocks = [];
                     this.http = http;
                 }
-                OptionsService.prototype.getOptions = function (block) {
+                OptionsService.prototype.getOptions = function () {
                     return this.http
-                        .get("app/shared/data/" + block + ".json")
+                        .get("app/shared/data/blocks.json")
                         .map(function (res) { return res.json(); });
                 };
                 OptionsService = __decorate([
                     core_1.Injectable(), 
-                    __metadata('design:paramtypes', [http_1.Http])
+                    __metadata('design:paramtypes', [(typeof (_a = typeof http_1.Http !== 'undefined' && http_1.Http) === 'function' && _a) || Object])
                 ], OptionsService);
                 return OptionsService;
+                var _a;
             }());
             exports_1("OptionsService", OptionsService);
         }

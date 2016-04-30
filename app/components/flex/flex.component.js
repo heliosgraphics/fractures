@@ -1,4 +1,4 @@
-System.register(["angular2/core", "../../shared/services/options.service", "../../shared/pipes/MapToIterable"], function(exports_1, context_1) {
+System.register(["angular2/core", "../../shared/services/options.service", "../flex-options/flex-options.component"], function(exports_1, context_1) {
     "use strict";
     var __moduleName = context_1 && context_1.id;
     var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
@@ -10,8 +10,8 @@ System.register(["angular2/core", "../../shared/services/options.service", "../.
     var __metadata = (this && this.__metadata) || function (k, v) {
         if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
     };
-    var core_1, options_service_1, MapToIterable_1;
-    var DocsComponent;
+    var core_1, options_service_1, flex_options_component_1;
+    var FlexComponent;
     return {
         setters:[
             function (core_1_1) {
@@ -20,28 +20,39 @@ System.register(["angular2/core", "../../shared/services/options.service", "../.
             function (options_service_1_1) {
                 options_service_1 = options_service_1_1;
             },
-            function (MapToIterable_1_1) {
-                MapToIterable_1 = MapToIterable_1_1;
+            function (flex_options_component_1_1) {
+                flex_options_component_1 = flex_options_component_1_1;
             }],
         execute: function() {
-            DocsComponent = (function () {
-                function DocsComponent(OptionsService) {
+            FlexComponent = (function () {
+                function FlexComponent(OptionsService) {
                     this.OptionsService = OptionsService;
+                    this.containerClasses = ["container"];
+                    this.elementArray = [];
+                    this.elementClasses = [];
+                    this.flexClasses = [];
                     this.fracturesArray = [];
                     this.fracturesArray = this.OptionsService.blocks;
+                    this.elementCountUpdate(true);
                 }
-                DocsComponent = __decorate([
+                FlexComponent.prototype.elementCountUpdate = function (direction) {
+                    if (direction)
+                        return this.elementArray.push({});
+                    else
+                        return this.elementArray.splice(0, 1);
+                };
+                FlexComponent = __decorate([
                     core_1.Component({
-                        selector: "docs",
-                        pipes: [MapToIterable_1.MapToIterable],
-                        styleUrls: ["app/components/docs/docs.component.css"],
-                        templateUrl: "app/components/docs/docs.component.html"
+                        directives: [flex_options_component_1.FlexOptionsComponent],
+                        selector: "flex",
+                        styleUrls: ["app/components/flex/flex.component.css"],
+                        templateUrl: "app/components/flex/flex.component.html"
                     }), 
                     __metadata('design:paramtypes', [options_service_1.OptionsService])
-                ], DocsComponent);
-                return DocsComponent;
+                ], FlexComponent);
+                return FlexComponent;
             }());
-            exports_1("DocsComponent", DocsComponent);
+            exports_1("FlexComponent", FlexComponent);
         }
     }
 });

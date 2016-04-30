@@ -4,14 +4,15 @@ import { Observable } from "rxjs/Rx";
 
 @Injectable()
 export class OptionsService {
+	public blocks: any = [];
 
 	constructor(private http: Http) {
 		this.http = http;
 	}
 
-	getOptions(block) {
+	getOptions() {
 		return this.http
-			.get(`app/shared/data/${ block }.json`)
+			.get(`app/shared/data/blocks.json`)
 			.map((res:Response) => res.json());
 	}
 }

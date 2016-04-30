@@ -1,14 +1,30 @@
 <div class="mb-4">
 	<div class="container">
-		<h1>WIP</h1>
-	</div>
-	<div class="container">
-		<!-- <h2>What it does</h2> -->
-		<!-- <h2>List of utility</h2> -->
-		<!-- <h2>How to use it</h2> -->
-		<!-- TODO Notes -->
-		<!-- TODO Breakpoints -->
-		<!-- TODO Add docs -->
-		<!-- TODO Usage -->
+		<h1 class="mb-1">Usage</h1>
+		<div class="mb-3">
+			<p class="mb-2">For the typescale to work properly, you must define font-size and line-height on body.<br>16px/1.5 should work on most cases just fine.</p>
+			<p class="mb-2">Dimension blocks are locked to 16px (for now) &mdash; you can overwrite settings in src/variables and build your version with gulp build.</p>
+		</div>
+		<h1 class="mb-1">Install</h1>
+		<div class="mb-3">
+			<ul>
+				<li>grab a copy <a href="/dist/fractures.min.css"><b>fractures.min.css</b> <small>(2.04 kB gzipped)</small></a></li>
+				<li>npm install fractures</li>
+				<li>git clone <a href="https://github.com/krisztianpuska/fractures.git"><b>https://github.com/krisztianpuska/fractures.git</b></a></li>
+			</ul>
+		</div>
+		<h1>List of classes</h1>
+		<div
+			*ngFor="let x of fracturesArray | MapToIterable"
+			class="mb-2">
+			<h4 class="normal">{{ x.key }}</h4>
+			<div
+				*ngFor="let option of x.val | MapToIterable"
+				class="clearfix">
+				<div
+					*ngFor="let class of option.val | MapToIterable"
+					class="btn btn-tag">{{ class.val }}</div>
+			</div>
+		</div>
 	</div>
 </div>
