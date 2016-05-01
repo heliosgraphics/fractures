@@ -1,17 +1,9 @@
-.white { color: white; }
-.white-25 { color: rgba(255, 255, 255, .25); }
-.white-50 { color: rgba(255, 255, 255, .5); }
-.white-75 { color: rgba(255, 255, 255, .75); }
 .black { color: black; }
-.black-25 { color: rgba(0, 0, 0, .25); }
-.black-50 { color: rgba(0, 0, 0, .5); }
-.black-75 { color: rgba(0, 0, 0, .75); }
+.gray { color: #808080; }
+.silver { color: #C0C0C0; }
+.white { color: white; }
 
-.bg-white { background-color: white; }
-.bg-white-25 { background-color: rgba(255, 255, 255, .25); }
-.bg-white-50 { background-color: rgba(255, 255, 255, .5); }
-.bg-white-75 { background-color: rgba(255, 255, 255, .75); }
 .bg-black { background-color: black; }
-.bg-black-25 { background-color: rgba(0, 0, 0, .25); }
-.bg-black-50 { background-color: rgba(0, 0, 0, .5); }
-.bg-black-75 { background-color: rgba(0, 0, 0, .75); }
+.bg-gray { background-color: #808080; }
+.bg-silver { background-color: #C0C0C0; }
+.bg-white { background-color: white; }
