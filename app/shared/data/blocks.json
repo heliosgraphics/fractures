@@ -4,7 +4,7 @@
 		"background-color": ["bg-white", "bg-white-25", "bg-white-50", "bg-white-75", "bg-black", "bg-black-25", "bg-black-50", "bg-black-75"]
 	},
 	"container": {
-		"container": ["container", "container-small"]
+		"container": ["container", "container-small", "container-large"]
 	},
 	"dimension": {
 		"height": ["h-25", "h-33", "h-50", "h-66", "h-75", "h-100"],

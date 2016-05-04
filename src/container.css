@@ -1,5 +1,10 @@
+@media (--hd) {
+	.container-large { width: var(--width) !important; }
+}
+
 @media (--desktop) {
-	.container {
+	.container,
+	.container-large {
 		padding-left: 1.5rem !important;
 		padding-right: 1.5rem !important;
 		width: 100% !important;
@@ -7,7 +12,8 @@
 }
 
 @media (--tablet) {
-	.container {
+	.container,
+	.container-large {
 		padding-left: 1rem !important;
 		padding-right: 1rem !important;
 	}
@@ -21,19 +27,18 @@
 
 @media (--mobile) {
 	.container {
-		padding-left: 0.5rem !important;
-		padding-right: 0.5rem !important;
+		padding-left: .5rem !important;
+		padding-right: .5rem !important;
 	}
 }
 
-.container {
+.container,
+.container-small,
+.container-large {
 	margin-left: auto;
 	margin-right: auto;
-	width: var(--width);
 }
 
-.container-small {
-	margin-left: auto;
-	margin-right: auto;
-	width: var(--width-small);
-}
+.container { width: var(--width); }
+.container-small { width: var(--width-small); }
+.container-large { width: var(--width-large); }
