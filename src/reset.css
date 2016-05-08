@@ -1,12 +1,12 @@
-.reset,
-.reset body { position: relative; }
-.reset { overflow-y: scroll; }
+.reset {
+	box-sizing: border-box;
+	overflow-y: scroll;
+}
 
 .reset * {
 	margin: 0;
 	padding: 0;
 
-	background: transparent;
 	border: 0;
 
 	font-size: 100%;
@@ -15,11 +15,13 @@
 
 .reset *,
 .reset *:before,
-.reset *:after { box-sizing: border-box; }
-.reset *:focus { outline: 0; }
+.reset *:after { box-sizing: inherit; }
+
+.reset,
+.reset body { position: relative; }
 
 .reset a { text-decoration: none; }
-.reset li { list-style-type: none; }
+.reset ul { list-style: none; }
 .reset img { max-width: 100%; }
 
 .reset h1 { font-size: 2.25em; }
