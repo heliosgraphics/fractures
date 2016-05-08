@@ -12,7 +12,12 @@
 	--width-large: 1248px;
 }
 
-* {
+.reset,
+.reset body { position: relative; }
+
+.reset { overflow-y: scroll; }
+
+.reset * {
 	margin: 0;
 	padding: 0;
 
@@ -23,38 +28,31 @@
 	vertical-align: baseline;
 }
 
-*,
-*:before,
-*:after { box-sizing: border-box; }
+.reset *,
+.reset *:before,
+.reset *:after { box-sizing: border-box; }
 
-*:focus { outline: 0; }
+.reset *:focus { outline: 0; }
 
-html,
-body { position: relative; }
+.reset a { text-decoration: none; }
 
-html { overflow-y: scroll; }
+.reset li { list-style-type: none; }
 
-a { text-decoration: none; }
+.reset img { max-width: 100%; }
 
-li { list-style-type: none; }
+.reset h1 { font-size: 2.25em; }
 
-img { max-width: 100%; }
+.reset h2 { font-size: 2em; }
 
-/* WIP Headings */
+.reset h3 { font-size: 1.75em; }
 
-h1 { font-size: 2.25em; }
+.reset h4 { font-size: 1.5em; }
 
-h2 { font-size: 2em; }
+.reset h5 { font-size: 1.25em; }
 
-h3 { font-size: 1.75em; }
+.reset h6 { font-size: 1em; }
 
-h4 { font-size: 1.5em; }
-
-h5 { font-size: 1.25em; }
-
-h6 { font-size: 1em; }
-
-small { font-size: 0.75em; }
+.reset small { font-size: 0.75em; }
 
 .black { color: black; }
 
