@@ -1,7 +1,7 @@
 {
 	"color": {
-		"color": ["white", "white-25", "white-50", "white-75", "black", "black-25", "black-50", "black-75"],
-		"background-color": ["bg-white", "bg-white-25", "bg-white-50", "bg-white-75", "bg-black", "bg-black-25", "bg-black-50", "bg-black-75"]
+		"color": ["black", "gray", "silver", "white"],
+		"background-color": ["bg-black", "bg-gray", "bg-silver", "bg-white"]
 	},
 	"container": {
 		"container": ["container", "container-small", "container-large"]
