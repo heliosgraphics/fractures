@@ -5,7 +5,7 @@
 	"description": "Atomic CSS toolkit.",
 	"keywords": [ "CSS" ],
 	"engines": {
-		"node": "6.0.0",
+		"node": "6.1.0",
 		"npm": "3.8.6"
 	},
 	"repository": {
