@@ -37,6 +37,9 @@
 	"format": {
 		"format": ["format"]
 	},
+	"list": {
+		"list-style-type": ["list-circle", "list-disc", "list-square", "list-none", "list-lower-latin", "list-lower-roman", "list-upper-latin", "list-upper-roman"]
+	},
 	"margin": {
 		"margin": ["m-0", "m-1", "m-2", "m-3", "m-4"],
 		"margin-bottom": [ "mb-0", "mb-1", "mb-2", "mb-3", "mb-4"],

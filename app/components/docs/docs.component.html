@@ -1,20 +1,20 @@
 <div class="mb-4">
 	<div class="container pb-3">
 		<h1 class="mb-1">Usage</h1>
-		<div class="mb-3">
-			<p class="mb-2">For the typescale to work properly, you must define font-size and line-height on body.<br>16px/1.5 should work on most cases just fine.</p>
-			<p class="mb-2">For a basic type-scale and element reset, you might want to add .reset class to your html tag.</p>
-			<p class="mb-2">Dimension blocks are built as 16px &mdash; you can overwrite settings in src/variables and build your version with gulp build.</p>
-		</div>
+		<ul class="list-disc ml-3 mb-3">
+			<li>For the typescale to work properly, you must define font-size and line-height on body.<br>16px/1.5 should work on most cases just fine.</li>
+			<li>For a basic type-scale and element reset, you might want to add .reset class to your html tag.</li>
+			<li>Dimension blocks are built as 16px &mdash; you can overwrite settings in src/variables and build your version with gulp build.</li>
+		</ul>
+
 		<h1 class="mb-1">Install</h1>
-		<div class="mb-3">
-			<ul>
-				<li>npm install fractures</li>
-				<li>git clone <a href="https://github.com/krisztianpuska/fractures.git"><b>https://github.com/krisztianpuska/fractures.git</b></a></li>
-				<li>download vanilla &rarr; <a href="/dist/fractures.min.css"><b>fractures.min.css</b> <small>(2.16 kB gzipped)</small></a></li>
-				<li>download prefixed for latest 2 browser version &rarr; <a href="/dist/fractures.prefixed.min.css"><b>fractures.prefixed.min.css</b> <small>(2.22 kB gzipped)</small></a></li>
-			</ul>
-		</div>
+		<ul class="list-disc ml-3 mb-3">
+			<li>npm install fractures</li>
+			<li>git clone <a href="https://github.com/krisztianpuska/fractures.git"><b>https://github.com/krisztianpuska/fractures.git</b></a></li>
+			<li>download vanilla &rarr; <a href="/dist/fractures.min.css"><b>fractures.min.css</b> <small>(2.16 kB gzipped)</small></a></li>
+			<li>download prefixed for latest 2 browser version &rarr; <a href="/dist/fractures.prefixed.min.css"><b>fractures.prefixed.min.css</b> <small>(2.22 kB gzipped)</small></a></li>
+		</ul>
+
 		<h1>List of classes</h1>
 		<div
 			*ngFor="let x of fracturesArray | MapToIterable"

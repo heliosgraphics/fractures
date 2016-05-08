@@ -1,0 +1,9 @@
+.list-circle li {  list-style-type: circle;  }
+.list-disc li { list-style-type: disc; }
+.list-square li { list-style-type: square; }
+.list-none li { list-style-type: none; }
+
+.list-lower-latin li { list-style-type: lower-latin; }
+.list-lower-roman li { list-style-type: lower-roman; }
+.list-upper-latin li { list-style-type: upper-latin; }
+.list-upper-roman li { list-style-type: upper-roman; }
