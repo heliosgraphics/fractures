@@ -21,7 +21,8 @@
 .reset body { position: relative; }
 
 .reset a { text-decoration: none; }
-.reset ul { list-style: none; }
+.reset ul,
+.reset ol { list-style: none; }
 .reset img { max-width: 100%; }
 
 .reset h1 { font-size: 2.25em; }
