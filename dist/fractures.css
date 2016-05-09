@@ -63,7 +63,8 @@ body {
 .reset h3,
 .reset h4,
 .reset h5,
-.reset h6 {
+.reset h6,
+.reset p {
 	margin-bottom: 0;
 	margin-top: 0;
 }
