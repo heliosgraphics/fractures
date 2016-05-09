@@ -12,19 +12,11 @@
 	--width-large: 1248px;
 }
 
+html { font-size: 100%; }
+
 .reset {
 	box-sizing: border-box;
 	overflow-y: scroll;
-}
-
-.reset * {
-	margin: 0;
-	padding: 0;
-
-	border: 0;
-
-	font-size: 100%;
-	vertical-align: baseline;
 }
 
 .reset *,
