@@ -35,7 +35,12 @@ body {
 .reset a { text-decoration: none; }
 
 .reset ul,
-.reset ol { list-style: none; }
+.reset ol {
+	margin: 0;
+	padding: 0;
+
+	list-style: none;
+}
 
 .reset img { max-width: 100%; }
 
