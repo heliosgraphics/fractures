@@ -1,53 +1,35 @@
-html { font-size: 100%; }
+* {
+	margin: 0;
+	padding: 0;
+
+	background: transparent;
+	border: 0;
+
+	font-size: 100%;
+	vertical-align: baseline;
+}
+
+*,
+*:before,
+*:after { box-sizing: border-box; }
+*:focus { outline: 0; }
 
 html,
-body {
-	margin: 0;
-	padding: 0;
-}
+body { position: relative; }
+html { overflow-y: scroll; }
 
-.reset {
-	box-sizing: border-box;
-	overflow-y: scroll;
-}
+a { text-decoration: none; }
+ul,
+ol { list-style: none; }
+img { max-width: 100%; }
 
-.reset *,
-.reset *:before,
-.reset *:after { box-sizing: inherit; }
+h1 { font-size: 2.25em; }
+h2 { font-size: 2em; }
+h3 { font-size: 1.75em; }
+h4 { font-size: 1.5em; }
+h5 { font-size: 1.25em; }
+h6 { font-size: 1em; }
+small { font-size: 0.75em; }
 
-.reset,
-.reset body { position: relative; }
-
-.reset a { text-decoration: none; }
-
-.reset ul,
-.reset ol {
-	margin: 0;
-	padding: 0;
-
-	list-style: none;
-}
-
-.reset img { max-width: 100%; }
-
-.reset h1 { font-size: 2.25em; }
-.reset h2 { font-size: 2em; }
-.reset h3 { font-size: 1.75em; }
-.reset h4 { font-size: 1.5em; }
-.reset h5 { font-size: 1.25em; }
-.reset h6 { font-size: 1em; }
-.reset small { font-size: 0.75em; }
-
-.reset h1,
-.reset h2,
-.reset h3,
-.reset h4,
-.reset h5,
-.reset h6,
-.reset p {
-	margin-bottom: 0;
-	margin-top: 0;
-}
-
-.reset input:focus,
-.reset textarea:focus { outline: none; }
+input:focus,
+textarea:focus { outline: none; }
