@@ -32,3 +32,6 @@
 .reset h5 { font-size: 1.25em; }
 .reset h6 { font-size: 1em; }
 .reset small { font-size: 0.75em; }
+
+.reset input:focus,
+.reset textarea:focus { outline: none; }

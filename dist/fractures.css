@@ -55,6 +55,9 @@
 
 .reset small { font-size: 0.75em; }
 
+.reset input:focus,
+.reset textarea:focus { outline: none; }
+
 .black { color: black; }
 
 .gray { color: #808080; }
