@@ -38,5 +38,15 @@ body {
 .reset h6 { font-size: 1em; }
 .reset small { font-size: 0.75em; }
 
+.reset h1,
+.reset h2,
+.reset h3,
+.reset h4,
+.reset h5,
+.reset h6 {
+	margin-bottom: 0;
+	margin-top: 0;
+}
+
 .reset input:focus,
 .reset textarea:focus { outline: none; }
