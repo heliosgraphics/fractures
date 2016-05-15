@@ -1,6 +1,17 @@
-.logo {
+.index {
+
+
+	background: #5D6FBA;
+	background: -webkit-linear-gradient(45deg, #5D6FBA , #60BBF3);
+	background: linear-gradient(45deg, #5D6FBA , #60BBF3);
+}
+
+.index-hero { margin-top: 3.5rem; }
+.index-hero .logo {
 	height: 7.5rem;
 	width: 7.5rem;
 }
 
-p { color: #A2A2AD; }
+.index-hero p { color: #D5D6E0; }
+
+.index-points { background-color: #ECEEF5; }
