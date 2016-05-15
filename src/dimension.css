@@ -5,33 +5,19 @@
 .h-75 { height: 75%; }
 .h-100 { height: 100%; }
 
-.maxh-25 { max-height: 25%; }
-.maxh-33 { max-height: calc(100%/3); }
-.maxh-50 { max-height: 50%; }
-.maxh-66 { max-height: calc((100%/3) * 2); }
-.maxh-75 { max-height: 75%; }
-.maxh-100 { max-height: 100%; }
+.minvh-25 { min-height: 25vh; }
+.minvh-33 { min-height: calc(100/3)vh; }
+.minvh-50 { min-height: 50vh; }
+.minvh-66 { min-height: calc((100/3) * 2)vh; }
+.minvh-75 { min-height: 75vh; }
+.minvh-100 { min-height: 100vh; }
 
-.maxw-25 { max-width: 25%; }
-.maxw-33 { max-width: calc(100%/3); }
-.maxw-50 { max-width: 50%; }
-.maxw-66 { max-width: calc((100%/3) * 2); }
-.maxw-75 { max-width: 75%; }
-.maxw-100 { max-width: 100%; }
-
-.minh-25 { min-height: 25%; }
-.minh-33 { min-height: calc(100%/3); }
-.minh-50 { min-height: 50%; }
-.minh-66 { min-height: calc((100%/3) * 2); }
-.minh-75 { min-height: 75%; }
-.minh-100 { min-height: 100%; }
-
-.minw-25 { min-width: 25%; }
-.minw-33 { min-width: calc(100%/3); }
-.minw-50 { min-width: 50%; }
-.minw-66 { min-width: calc(100%/3) * 2; }
-.minw-75 { min-width: 75%; }
-.minw-100 { min-width: 100%; }
+.minvw-25 { min-width: 25vw; }
+.minvw-33 { min-width: calc(100/3)vw; }
+.minvw-50 { min-width: 50vw; }
+.minvw-66 { min-width: calc((100/3) * 2)vw; }
+.minvw-75 { min-width: 75vw; }
+.minvw-100 { min-width: 100vw; }
 
 .w-25 { width: 25%; }
 .w-33 { width: calc(100%/3); }

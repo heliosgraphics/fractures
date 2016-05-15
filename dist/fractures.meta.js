@@ -1,1 +1,1 @@
-exports.meta = { size: 2.177 };
+exports.meta = { size: 2.137 };

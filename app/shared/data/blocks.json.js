@@ -15,10 +15,8 @@ System.register([], function(exports_1, context_1) {
                 },
                 "dimension": {
                     "height": ["h-25", "h-33", "h-50", "h-66", "h-75", "h-100"],
-                    "max-height": ["maxh-25", "maxh-33", "maxh-50", "maxh-66", "maxh-75", "maxh-100"],
-                    "max-width": ["maxw-25", "maxw-33", "maxw-50", "maxw-66", "maxw-75", "maxw-100"],
-                    "min-height": ["minh-25", "minh-33", "minh-50", "minh-66", "minh-75", "minh-100"],
-                    "min-width": ["minw-25", "minw-33", "minw-50", "minw-66", "minw-75", "minw-100"],
+                    "min-height": ["minvh-25", "minvh-33", "minvh-50", "minvh-66", "minvh-75", "minvh-100"],
+                    "min-width": ["minvw-25", "minvw-33", "minvw-50", "minvw-66", "minvw-75", "minvw-100"],
                     "width": ["w-25", "w-33", "w-50", "w-66", "w-75", "w-100"]
                 },
                 "display": {
@@ -67,6 +65,7 @@ System.register([], function(exports_1, context_1) {
                 },
                 "position": {
                     "position": ["absolute", "fixed", "relative"],
+                    "side": ["bottom-0", "left-0", "right-0", "top-0"],
                     "z-index": ["z-0", "z-1", "z-2", "z-3", "z-4", "z-5", "z-6", "z-7", "z-8", "z-9", "z-10"]
                 },
                 "typo": {
