@@ -31,7 +31,7 @@ System.register([], function(exports_1, context_1) {
                     "center": ["flex--center", "flex--ycenter", "flex--xcenter"],
                     "column": ["flex--column"],
                     "justify": ["flex--around", "flex--between", "flex--right"],
-                    "responsive": ["flex--collapse", "flex--screen"],
+                    "responsive": ["flex--collapse"],
                     "reverse": ["flex--reverse"],
                     "wrap": ["flex--wrap", "flex--wrap-reverse"]
                 },

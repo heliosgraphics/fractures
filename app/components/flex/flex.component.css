@@ -8,7 +8,6 @@
 	box-shadow: inset 0 0 0 1px #D5D6E0;
 }
 
-.demo.flex--screen { pointer-events: none; }
 .demo.flex--column .element { transform: rotate(90deg); }
 
 .element {

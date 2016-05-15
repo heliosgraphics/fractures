@@ -42,12 +42,3 @@
 .flex--baseline { align-items: baseline; }
 .flex--end { align-items: flex-end; }
 .flex--start { align-items: flex-start; }
-
-.flex--screen {
-	left: 0;
-	position: absolute;
-	top: 0;
-
-	height: 100vh;
-	width: 100%;
-}
