@@ -1,4 +1,4 @@
-System.register(["angular2/core", "../../shared/pipes/MapToIterable", "/app/shared/data/blocks.json"], function(exports_1, context_1) {
+System.register(["angular2/core", "../../shared/pipes/MapToIterable", "/app/shared/data/blocks.json", "/dist/fractures.meta.js"], function(exports_1, context_1) {
     "use strict";
     var __moduleName = context_1 && context_1.id;
     var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
@@ -10,7 +10,7 @@ System.register(["angular2/core", "../../shared/pipes/MapToIterable", "/app/shar
     var __metadata = (this && this.__metadata) || function (k, v) {
         if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
     };
-    var core_1, MapToIterable_1, blocks_json_1;
+    var core_1, MapToIterable_1, blocks_json_1, fractures_meta_js_1;
     var DocsComponent;
     return {
         setters:[
@@ -22,11 +22,15 @@ System.register(["angular2/core", "../../shared/pipes/MapToIterable", "/app/shar
             },
             function (blocks_json_1_1) {
                 blocks_json_1 = blocks_json_1_1;
+            },
+            function (fractures_meta_js_1_1) {
+                fractures_meta_js_1 = fractures_meta_js_1_1;
             }],
         execute: function() {
             DocsComponent = (function () {
                 function DocsComponent() {
                     this.fracturesArray = blocks_json_1.default;
+                    this.meta = fractures_meta_js_1.default.meta;
                 }
                 DocsComponent = __decorate([
                     core_1.Component({

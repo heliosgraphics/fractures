@@ -3,6 +3,7 @@ import { NgFor } from "angular2/common";
 
 import { MapToIterable } from "../../shared/pipes/MapToIterable";
 import blocks from "/app/shared/data/blocks.json";
+import meta from "/dist/fractures.meta.js";
 
 @Component({
 	selector: "docs",
@@ -12,4 +13,5 @@ import blocks from "/app/shared/data/blocks.json";
 
 export class DocsComponent {
 	public fracturesArray: any = blocks;
+	public meta: any = meta.meta;
 }

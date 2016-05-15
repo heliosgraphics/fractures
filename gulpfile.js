@@ -1,5 +1,6 @@
 "use strict";
 
+let fs = require("fs");
 let gulp = require("gulp");
 let postcss = require("gulp-postcss");
 let postcssimport = require("postcss-import");
@@ -20,22 +21,22 @@ let postcssAutoprefix = [
 	postcsscssnext({ browsers: ["last 2 versions"] })
 ];
 
-// Builds fractures.css
-gulp.task("default", () => {
-	return gulp.src(files)
-		.pipe(postcss(postcssVanilla))
-		.pipe(gulp.dest("./dist"))
-		.pipe(size({ showFiles: true }));
-});
-
 // Build
 gulp.task("build", [
 	"default",
 	"build: vanilla",
+	"build: vanilla-size",
 	"build: autoprefixed"
 ]);
 
-// Build vanilla
+// Build only fractures.css
+gulp.task("default", () => {
+	return gulp.src(files)
+		.pipe(postcss(postcssVanilla))
+		.pipe(gulp.dest("./dist"));
+});
+
+// Build without autoprefixing
 gulp.task("build: vanilla", () => {
 	return gulp.src(files)
 		.pipe(postcss(postcssVanilla))
@@ -63,6 +64,20 @@ gulp.task("build: autoprefixed", () => {
 		.pipe(rename("fractures.prefixed.min.css.gz"))
 		.pipe(gulp.dest("./dist"))
 		.pipe(size({ showFiles: true, gzip: true }));
+});
+
+// Report vanilla file size
+gulp.task("build: vanilla-size", ["build: vanilla"], () => {
+	let file = "./dist/fractures.min.css.gz";
+
+	fs.stat(file, (error, stat) => {
+		if(error) return console.log("vanilla-size failed");
+
+		let sizeContent = `exports.meta = { size: ${ stat.size / 1000 } };`;
+		let sizeFile = "./dist/fractures.meta.js";
+
+		return fs.writeFile(sizeFile, sizeContent);
+	});
 });
 
 // Report csslint after a build
