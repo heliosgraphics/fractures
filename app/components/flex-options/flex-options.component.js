@@ -42,7 +42,7 @@ System.register(["angular2/core", "../../shared/pipes/MapToIterable"], function(
                         inputs: ["classes", "options"],
                         pipes: [MapToIterable_1.MapToIterable],
                         selector: "flex-options",
-                        templateUrl: "app/components/flex-options/flex-options.component.html"
+                        template: "\n\t\t<ul>\n\t\t\t<li\n\t\t\t\t*ngFor=\"let set of options | MapToIterable\"\n\t\t\t\tclass=\"mb-1\">\n\t\t\t\t<div class=\"btn-group clearfix\">\n\t\t\t\t\t<a\n\t\t\t\t\t\t*ngFor=\"let class of set.val; let i = index\"\n\t\t\t\t\t\t[ngClass]=\"{ 'active': classes.includes(class) }\"\n\t\t\t\t\t\t(click)=\"toggleClass(class, set.key)\"\n\t\t\t\t\t\tclass=\"btn btn-link\">{{ class }}</a>\n\t\t\t\t</div>\n\t\t\t</li>\n\t\t</ul>\n\t"
                     }), 
                     __metadata('design:paramtypes', [])
                 ], FlexOptionsComponent);

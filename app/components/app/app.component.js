@@ -34,13 +34,13 @@ System.register(["angular2/core", "../docs/docs.component", "../index/index.comp
                 AppComponent = __decorate([
                     core_1.Component({
                         selector: "app",
-                        templateUrl: "app/components/app/app.component.html",
                         directives: [docs_component_1.DocsComponent, index_component_1.IndexComponent, flex_component_1.FlexComponent],
                         styleUrls: [
                             "app/shared/styles/body.css",
                             "app/shared/styles/btn.css"
                         ],
-                        encapsulation: core_1.ViewEncapsulation.None
+                        encapsulation: core_1.ViewEncapsulation.None,
+                        template: "\n\t\t<main class=\"main\">\n\t\t\t<index></index>\n\t\t\t<flex></flex>\n\t\t\t<docs></docs>\n\t\t</main>\n\t"
                     }), 
                     __metadata('design:paramtypes', [])
                 ], AppComponent);

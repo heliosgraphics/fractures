@@ -7,7 +7,21 @@ import { MapToIterable } from "../../shared/pipes/MapToIterable";
 	inputs: [ "classes", "options" ],
 	pipes: [ MapToIterable ],
 	selector: "flex-options",
-	templateUrl: "app/components/flex-options/flex-options.component.html"
+	template: `
+		<ul>
+			<li
+				*ngFor="let set of options | MapToIterable"
+				class="mb-1">
+				<div class="btn-group clearfix">
+					<a
+						*ngFor="let class of set.val; let i = index"
+						[ngClass]="{ 'active': classes.includes(class) }"
+						(click)="toggleClass(class, set.key)"
+						class="btn btn-link">{{ class }}</a>
+				</div>
+			</li>
+		</ul>
+	`
 })
 
 export class FlexOptionsComponent {

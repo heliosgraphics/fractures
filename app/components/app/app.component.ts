@@ -8,13 +8,19 @@ enableProdMode();
 
 @Component({
 	selector: "app",
-	templateUrl: "app/components/app/app.component.html",
 	directives: [ DocsComponent, IndexComponent, FlexComponent ],
 	styleUrls: [
 		"app/shared/styles/body.css",
 		"app/shared/styles/btn.css"
 	],
-	encapsulation: ViewEncapsulation.None
+	encapsulation: ViewEncapsulation.None,
+	template: `
+		<main class="main">
+			<index></index>
+			<flex></flex>
+			<docs></docs>
+		</main>
+	`
 })
 
 export class AppComponent {}
