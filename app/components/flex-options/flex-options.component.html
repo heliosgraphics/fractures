@@ -7,7 +7,7 @@
 				*ngFor="let class of set.val; let i = index"
 				[ngClass]="{ 'active': classes.includes(class) }"
 				(click)="toggleClass(class, set.key)"
-				class="btn btn-primary">{{ class }}</a>
+				class="btn btn-link">{{ class }}</a>
 		</div>
 	</li>
 </ul>

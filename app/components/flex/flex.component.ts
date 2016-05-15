@@ -1,8 +1,8 @@
 import { Component } from "angular2/core";
 import { NgClass, NgFor, NgIf } from "angular2/common";
 
-import { OptionsService } from "../../shared/services/options.service";
 import { FlexOptionsComponent } from "../flex-options/flex-options.component";
+import blocks from "/app/shared/data/blocks.json";
 
 @Component({
 	directives: [ FlexOptionsComponent ],
@@ -16,12 +16,11 @@ export class FlexComponent {
 	public elementArray: any = [];
 	public elementClasses: any = [];
 	public flexClasses: any = [];
-	public fracturesArray: any = [];
+	public fracturesArray: any = blocks;
 
-	constructor(
-		private OptionsService: OptionsService
-	) {
-		this.fracturesArray = this.OptionsService.blocks;
+	constructor() {
+
+		// Creates the second flex demo element
 		this.elementCountUpdate(true);
 	}
 

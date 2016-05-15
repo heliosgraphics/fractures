@@ -22,6 +22,8 @@
 
 /*Tag*/
 .btn-tag {
+	margin: 0 .125rem .125rem 0;
+
 	background-color: #ECEEF5;
 	cursor: default;
 }
@@ -34,18 +36,7 @@
 
 .btn-link:hover { background-color: #ECEEF5; }
 .btn-link.active { background-color: #D5D6E0; }
-
 .btn-link.disabled { background-color: #ECEEF5; }
-
-/*Primary*/
-.btn-primary { background-color: #ECEEF5; }
-.btn-primary.btn.active,
-.btn-primary.btn.active:hover {
-	background-color: #5D6FBA;
-	color: white;
-}
-
-.btn-primary.btn:hover { background-color: #D5D6E0; }
 
 /*Group*/
 .btn-group .btn:not(:first-child):not(:last-child) { border-radius: 0; }

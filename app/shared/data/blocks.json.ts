@@ -1,3 +1,4 @@
+let blocks =
 {
 	"color": {
 		"color": ["black", "gray", "silver", "white"],
@@ -71,4 +72,6 @@
 		"text-transform": ["capitalize", "lowercase", "uppercase"],
 		"white-space": ["pre", "pre-line", "pre-wrap", "nowrap"]
 	}
-}
+};
+
+export default blocks;

@@ -1,4 +1,4 @@
-System.register(["angular2/core", "../../shared/services/options.service", "../flex-options/flex-options.component"], function(exports_1, context_1) {
+System.register(["angular2/core", "../flex-options/flex-options.component", "/app/shared/data/blocks.json"], function(exports_1, context_1) {
     "use strict";
     var __moduleName = context_1 && context_1.id;
     var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
@@ -10,29 +10,27 @@ System.register(["angular2/core", "../../shared/services/options.service", "../f
     var __metadata = (this && this.__metadata) || function (k, v) {
         if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
     };
-    var core_1, options_service_1, flex_options_component_1;
+    var core_1, flex_options_component_1, blocks_json_1;
     var FlexComponent;
     return {
         setters:[
             function (core_1_1) {
                 core_1 = core_1_1;
             },
-            function (options_service_1_1) {
-                options_service_1 = options_service_1_1;
-            },
             function (flex_options_component_1_1) {
                 flex_options_component_1 = flex_options_component_1_1;
+            },
+            function (blocks_json_1_1) {
+                blocks_json_1 = blocks_json_1_1;
             }],
         execute: function() {
             FlexComponent = (function () {
-                function FlexComponent(OptionsService) {
-                    this.OptionsService = OptionsService;
+                function FlexComponent() {
                     this.containerClasses = ["container"];
                     this.elementArray = [];
                     this.elementClasses = [];
                     this.flexClasses = [];
-                    this.fracturesArray = [];
-                    this.fracturesArray = this.OptionsService.blocks;
+                    this.fracturesArray = blocks_json_1.default;
                     this.elementCountUpdate(true);
                 }
                 FlexComponent.prototype.elementCountUpdate = function (direction) {
@@ -48,7 +46,7 @@ System.register(["angular2/core", "../../shared/services/options.service", "../f
                         styleUrls: ["app/components/flex/flex.component.css"],
                         templateUrl: "app/components/flex/flex.component.html"
                     }), 
-                    __metadata('design:paramtypes', [options_service_1.OptionsService])
+                    __metadata('design:paramtypes', [])
                 ], FlexComponent);
                 return FlexComponent;
             }());
