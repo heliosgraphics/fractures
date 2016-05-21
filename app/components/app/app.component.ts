@@ -1,4 +1,4 @@
-import { Component, enableProdMode, ViewEncapsulation } from "angular2/core";
+import { Component, enableProdMode, ViewEncapsulation } from "@angular/core";
 
 import { DocsComponent } from "../docs/docs.component";
 import { IndexComponent } from "../index/index.component";

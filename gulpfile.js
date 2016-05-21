@@ -73,8 +73,8 @@ gulp.task("build: vanilla-size", ["build: vanilla"], () => {
 	fs.stat(file, (error, stat) => {
 		if(error) return console.log("vanilla-size failed");
 
-		let sizeContent = `exports.meta = { size: ${ stat.size / 1000 } };`;
-		let sizeFile = "./dist/fractures.meta.js";
+		let sizeContent = `export default { size: ${ stat.size / 1000 } };`;
+		let sizeFile = "./dist/fractures.meta.ts";
 
 		return fs.writeFile(sizeFile, sizeContent);
 	});

@@ -1,6 +1,6 @@
 // NOTE: Iterator helper for https://github.com/angular/angular/issues/2246
 
-import { Pipe } from "angular2/core";
+import { Pipe } from "@angular/core";
 
 @Pipe({
 	name: "MapToIterable"

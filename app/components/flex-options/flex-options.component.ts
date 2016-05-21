@@ -1,5 +1,5 @@
-import { Component } from "angular2/core";
-import { NgClass, NgFor } from "angular2/common";
+import { Component } from "@angular/core";
+import { NgClass, NgFor } from "@angular/common";
 
 import { MapToIterable } from "../../shared/pipes/MapToIterable";
 
@@ -49,5 +49,4 @@ export class FlexOptionsComponent {
 		if(selected)
 			this.classes.push(selected);
 	}
-
 }

@@ -1,9 +1,9 @@
-import { Component } from "angular2/core";
-import { NgFor } from "angular2/common";
+import { Component } from "@angular/core";
+import { NgFor } from "@angular/common";
 
 import { MapToIterable } from "../../shared/pipes/MapToIterable";
-import blocks from "/app/shared/data/blocks.json";
-import meta from "/dist/fractures.meta.js";
+import blocks from "../../shared/data/blocks";
+import meta from "../../../dist/fractures.meta";
 
 @Component({
 	selector: "docs",
@@ -13,5 +13,5 @@ import meta from "/dist/fractures.meta.js";
 
 export class DocsComponent {
 	public fracturesArray: any = blocks;
-	public meta: any = meta.meta;
+	public meta: any = meta;
 }

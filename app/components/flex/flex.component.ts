@@ -1,8 +1,8 @@
-import { Component } from "angular2/core";
-import { NgClass, NgFor, NgIf } from "angular2/common";
+import { Component } from "@angular/core";
+import { NgClass, NgFor, NgIf } from "@angular/common";
 
 import { FlexOptionsComponent } from "../flex-options/flex-options.component";
-import blocks from "/app/shared/data/blocks.json";
+import blocks from "../../shared/data/blocks";
 
 @Component({
 	directives: [ FlexOptionsComponent ],
@@ -31,5 +31,4 @@ export class FlexComponent {
 		else
 			return this.elementArray.splice(0, 1);
 	}
-
 }
