@@ -24,13 +24,29 @@ import { Component } from "@angular/core";
 			</div>
 			<div class="py-3">
 				<div class="container flex flex--collapse">
-					<div class="grow-1 mb-2 mr-3">
-						<h3 class="regular">What it does?</h3>
-						<p>Helps you bootstrap design-systems and prototypes by providing a set of non-blocking, atomic, utility classes.</p>
+					<div class="flex grow-1 mb-2 mr-3">
+						<img
+							src="/app/components/index/images/browser.png"
+							style="
+								height: 125px;
+								width: 125px;"
+							class="mr-2">
+						<div class="grow-1">
+							<h3 class="regular">What it does?</h3>
+							<p>Helps you bootstrap design-systems and prototypes by providing a set of non-blocking, atomic, utility classes.</p>
+						</div>
 					</div>
-					<div class="grow-1 mb-2">
-						<h3 class="regular">That's it?</h3>
-						<p>It also soft resets HTML elements and sets a basic typescale. Leaves UI untouched.</p>
+					<div class="flex grow-1 mb-2">
+						<img
+							src="/app/components/index/images/reset.png"
+							style="
+								height: 125px;
+								width: 125px;"
+							class="mr-2">
+						<div class="grow-1">
+							<h3 class="regular">That's it?</h3>
+							<p>It also soft resets HTML elements and sets a basic typescale. Leaves UI untouched.</p>
+						</div>
 					</div>
 				</div>
 			</div>
