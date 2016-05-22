@@ -20,6 +20,20 @@
 	pointer-events: none;
 }
 
+/*White*/
+.btn-white {
+	background-color: white;
+	color: #3C3C50;
+}
+
+/*Dark*/
+.btn-dark {
+	background-color: #3C3C50;
+	color: white;
+}
+
+.btn-dark:hover { background-color: #2F2F38; }
+
 /*Tag*/
 .btn-tag {
 	margin: 0 .125rem .125rem 0;

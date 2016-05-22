@@ -1,26 +1,26 @@
 import { Component, enableProdMode, ViewEncapsulation } from "@angular/core";
 
-import { DocsComponent } from "../docs/docs.component";
-import { IndexComponent } from "../index/index.component";
 import { FlexComponent } from "../flex/flex.component";
+import { MapToIterable } from "../../shared/pipes/MapToIterable";
+
+import blocks from "../../shared/data/blocks";
+import meta from "../../../dist/fractures.meta";
 
 enableProdMode();
 
 @Component({
 	selector: "app",
-	directives: [ DocsComponent, IndexComponent, FlexComponent ],
+	directives: [ FlexComponent ],
 	styleUrls: [
 		"app/shared/styles/body.css",
 		"app/shared/styles/btn.css"
 	],
+	pipes: [ MapToIterable ],
 	encapsulation: ViewEncapsulation.None,
-	template: `
-		<main class="main">
-			<index></index>
-			<flex></flex>
-			<docs></docs>
-		</main>
-	`
+	templateUrl: "app/components/app/app.component.html"
 })
 
-export class AppComponent {}
+export class AppComponent {
+	public meta: any = meta;
+	public fracturesArray: any = blocks;
+}
