@@ -40749,23 +40749,27 @@
 	    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 	};
 	var core_1 = __webpack_require__(9);
-	var docs_component_1 = __webpack_require__(283);
-	var index_component_1 = __webpack_require__(286);
 	var flex_component_1 = __webpack_require__(288);
+	var MapToIterable_1 = __webpack_require__(284);
+	var blocks_1 = __webpack_require__(285);
+	var fractures_meta_1 = __webpack_require__(287);
 	core_1.enableProdMode();
 	var AppComponent = (function () {
 	    function AppComponent() {
+	        this.meta = fractures_meta_1.default;
+	        this.fracturesArray = blocks_1.default;
 	    }
 	    AppComponent = __decorate([
 	        core_1.Component({
 	            selector: "app",
-	            directives: [docs_component_1.DocsComponent, index_component_1.IndexComponent, flex_component_1.FlexComponent],
+	            directives: [flex_component_1.FlexComponent],
 	            styleUrls: [
 	                "app/shared/styles/body.css",
 	                "app/shared/styles/btn.css"
 	            ],
+	            pipes: [MapToIterable_1.MapToIterable],
 	            encapsulation: core_1.ViewEncapsulation.None,
-	            template: "\n\t\t<main class=\"main\">\n\t\t\t<index></index>\n\t\t\t<flex></flex>\n\t\t\t<docs></docs>\n\t\t</main>\n\t"
+	            templateUrl: "app/components/app/app.component.html"
 	        }), 
 	        __metadata('design:paramtypes', [])
 	    ], AppComponent);
@@ -40775,40 +40779,7 @@
 
 
 /***/ },
-/* 283 */
-/***/ function(module, exports, __webpack_require__) {
-
-	"use strict";
-	var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
-	    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
-	    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
-	    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
-	    return c > 3 && r && Object.defineProperty(target, key, r), r;
-	};
-	var __metadata = (this && this.__metadata) || function (k, v) {
-	    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
-	};
-	var core_1 = __webpack_require__(9);
-	var MapToIterable_1 = __webpack_require__(284);
-	var blocks_1 = __webpack_require__(285);
-	var DocsComponent = (function () {
-	    function DocsComponent() {
-	        this.fracturesArray = blocks_1.default;
-	    }
-	    DocsComponent = __decorate([
-	        core_1.Component({
-	            selector: "docs",
-	            pipes: [MapToIterable_1.MapToIterable],
-	            templateUrl: "app/components/docs/docs.component.html"
-	        }), 
-	        __metadata('design:paramtypes', [])
-	    ], DocsComponent);
-	    return DocsComponent;
-	}());
-	exports.DocsComponent = DocsComponent;
-
-
-/***/ },
+/* 283 */,
 /* 284 */
 /***/ function(module, exports, __webpack_require__) {
 
@@ -40932,38 +40903,7 @@
 
 
 /***/ },
-/* 286 */
-/***/ function(module, exports, __webpack_require__) {
-
-	"use strict";
-	var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
-	    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
-	    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
-	    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
-	    return c > 3 && r && Object.defineProperty(target, key, r), r;
-	};
-	var __metadata = (this && this.__metadata) || function (k, v) {
-	    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
-	};
-	var core_1 = __webpack_require__(9);
-	var fractures_meta_1 = __webpack_require__(287);
-	var IndexComponent = (function () {
-	    function IndexComponent() {
-	        this.meta = fractures_meta_1.default;
-	    }
-	    IndexComponent = __decorate([
-	        core_1.Component({
-	            selector: "index",
-	            templateUrl: "app/components/index/index.component.html"
-	        }), 
-	        __metadata('design:paramtypes', [])
-	    ], IndexComponent);
-	    return IndexComponent;
-	}());
-	exports.IndexComponent = IndexComponent;
-
-
-/***/ },
+/* 286 */,
 /* 287 */
 /***/ function(module, exports) {
 
