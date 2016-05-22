@@ -3,22 +3,16 @@ const webpack = require("webpack");
 module.exports = {
 	entry: "./app/main",
 	output: {
-		path: __dirname + "/app",
-		publicPath: "app/",
-		filename: "main.js"
+		path: __dirname + "/dist/",
+		publicPath: "/dist/",
+		filename: "demo.bundle.js"
 	},
 	resolve: {
 		extensions: ["", ".js", ".ts"]
 	},
 	module: {
 		loaders: [
-			{ test: /\.ts/, loaders: ["ts-loader"], exclude: /node_modules/ }
+			{ test: /\.ts/, loader: "ts-loader" }
 		]
-	},
-	plugins: [
-		new webpack.optimize.UglifyJsPlugin({
-			compressor: { warnings: false },
-			mangle: false
-		})
-	]
+	}
 };
