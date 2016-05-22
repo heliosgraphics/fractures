@@ -1,10 +1,10 @@
 import { Component, enableProdMode, ViewEncapsulation } from "@angular/core";
 
 import { FlexComponent } from "../flex/flex.component";
-import { MapToIterable } from "../../shared/pipes/MapToIterable";
+import { MapToIterable } from "../shared/pipes/MapToIterable";
 
-import blocks from "../../shared/data/blocks";
-import meta from "../../../dist/fractures.meta";
+import blocks from "../shared/data/blocks";
+import meta from "../../dist/fractures.meta";
 
 enableProdMode();
 
@@ -17,7 +17,7 @@ enableProdMode();
 	],
 	pipes: [ MapToIterable ],
 	encapsulation: ViewEncapsulation.None,
-	templateUrl: "app/components/app/app.component.html"
+	templateUrl: "app/app/app.component.html"
 })
 
 export class AppComponent {

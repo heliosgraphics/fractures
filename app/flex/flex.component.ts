@@ -2,13 +2,13 @@ import { Component } from "@angular/core";
 import { NgClass, NgFor, NgIf } from "@angular/common";
 
 import { FlexOptionsComponent } from "../flex-options/flex-options.component";
-import blocks from "../../shared/data/blocks";
+import blocks from "../shared/data/blocks";
 
 @Component({
 	directives: [ FlexOptionsComponent ],
 	selector: "flex",
-	styleUrls: [ "app/components/flex/flex.component.css" ],
-	templateUrl: "app/components/flex/flex.component.html"
+	styleUrls: [ "app/flex/flex.component.css" ],
+	templateUrl: "app/flex/flex.component.html"
 })
 
 export class FlexComponent {

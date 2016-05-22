@@ -1,7 +1,7 @@
 import { Component } from "@angular/core";
 import { NgClass, NgFor } from "@angular/common";
 
-import { MapToIterable } from "../../shared/pipes/MapToIterable";
+import { MapToIterable } from "../shared/pipes/MapToIterable";
 
 @Component({
 	inputs: [ "classes", "options" ],
