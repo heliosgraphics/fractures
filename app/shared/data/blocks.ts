@@ -58,7 +58,7 @@ let blocks =
 		"paddingYAxis": [ "py-0", "py-1", "py-2", "py-3", "py-4"]
 	},
 	"position": {
-		"position": ["absolute", "fixed", "relative"],
+		"position": ["absolute", "fixed", "relative", "sticky"],
 		"side": ["bottom-0", "left-0", "right-0", "top-0"],
 		"z-index": ["z-0", "z-1", "z-2", "z-3", "z-4", "z-5", "z-6", "z-7", "z-8", "z-9", "z-10"]
 	},

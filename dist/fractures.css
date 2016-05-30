@@ -546,6 +546,8 @@ textarea:focus { outline: none; }
 
 .relative { position: relative; }
 
+.sticky { position: sticky; }
+
 .bottom-0 { bottom: 0; }
 
 .left-0 { left: 0; }
