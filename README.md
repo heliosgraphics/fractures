@@ -7,10 +7,10 @@ Atomic CSS toolkit.
 
 -- 
 
-#### What it does?
+##### What it does?
 Helps you bootstrap design-systems and prototypes by providing a set of non-blocking, atomic, utility classes.
 
-#### That's it?
+##### That's it?
 It also soft resets HTML elements and sets a basic typescale. Leaves UI untouched.
 
 --
