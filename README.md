@@ -1,11 +1,8 @@
 # fractures
 Atomic CSS toolkit.  
-
-![](https://travis-ci.org/krisztianpuska/fractures.svg)
-
 *A work in progress, trying to find the balance between a framework and a html reset.*
 
---
+![](https://travis-ci.org/krisztianpuska/fractures.svg)
 
 #### What it does?
 Helps you bootstrap design-systems and prototypes by providing a set of non-blocking, atomic, utility classes.
