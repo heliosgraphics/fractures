@@ -1,14 +1,19 @@
 # fractures
+
+![](https://travis-ci.org/krisztianpuska/fractures.svg)
+
 Atomic CSS toolkit.  
 *A work in progress, trying to find the balance between a framework and a html reset.*
 
-![](https://travis-ci.org/krisztianpuska/fractures.svg)
+-- 
 
 #### What it does?
 Helps you bootstrap design-systems and prototypes by providing a set of non-blocking, atomic, utility classes.
 
 #### That's it?
 It also soft resets HTML elements and sets a basic typescale. Leaves UI untouched.
+
+--
 
 Goals:
 - Managable cognitive load
