@@ -15,13 +15,15 @@ It also soft resets HTML elements and sets a basic typescale. Leaves UI untouche
 
 --
 
+Example and details: [http://fractures.space/](http://fractures.space/)  
+Feedback: [https://github.com/krisztianpuska/fractures/issues](https://github.com/krisztianpuska/fractures/issues)
+
+--
+
 Goals:
 - Managable cognitive load
 - Small footprint
 - Up to date classes with w3
-
-Example and details: [http://fractures.space/](http://fractures.space/)  
-Feedback: [https://github.com/krisztianpuska/fractures/issues](https://github.com/krisztianpuska/fractures/issues)
 
 --
 
