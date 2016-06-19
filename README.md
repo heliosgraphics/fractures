@@ -22,3 +22,11 @@ Goals:
 
 Example and details: [http://fractures.space/](http://fractures.space/)  
 Feedback: [https://github.com/krisztianpuska/fractures/issues](https://github.com/krisztianpuska/fractures/issues)
+
+--
+
+Inspiration:
+
+- http://bradfrost.com/blog/post/atomic-web-design/
+- http://www.basscss.com/
+- http://tachyons.io/
