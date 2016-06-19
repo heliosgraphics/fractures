@@ -18,20 +18,21 @@
 	},
 	"homepage": "http://fractures.space",
 	"scripts": {
-		"start": "concurrently \"lite-server\" \"npm run watch\" \"webpack --progress --colors --watch\"",
+		"start": "lite-server",
 		"build": "gulp build",
 		"watch": "gulp watch",
 		"test": "gulp test",
-		"demo-build": "webpack --progress --colors --optimize-minimize"
+		"demo-build": "webpack --progress --colors --optimize-minimize",
+		"demo-watch": "webpack --progress --colors --watch",
+		"postinstall": "typings install"
 	},
 	"devDependencies": {
-		"@angular/common": "2.0.0-rc.1",
-		"@angular/compiler": "2.0.0-rc.1",
-		"@angular/core": "2.0.0-rc.1",
-		"@angular/platform-browser": "2.0.0-rc.1",
-		"@angular/platform-browser-dynamic": "2.0.0-rc.1",
-		"concurrently": "~2.1.0",
-		"es6-shim": "~0.35.1",
+		"@angular/common": "2.0.0-rc.2",
+		"@angular/compiler": "2.0.0-rc.2",
+		"@angular/core": "2.0.0-rc.2",
+		"@angular/platform-browser": "2.0.0-rc.2",
+		"@angular/platform-browser-dynamic": "2.0.0-rc.2",
+		"core-js": "~2.4.0",
 		"gulp": "~3.9.1",
 		"gulp-cssnano": "~2.1.2",
 		"gulp-csslint": "~0.3.0",
@@ -42,10 +43,10 @@
 		"lite-server": "~2.2.0",
 		"postcss-cssnext": "~2.5.2",
 		"postcss-import": "~8.1.2",
-		"reflect-metadata": "~0.1.3",
 		"rxjs": "5.0.0-beta.6",
 		"ts-loader": "~0.8.2",
 		"typescript": "~1.8.10",
+		"typings": "~1.3.0",
 		"webpack": "~1.13.1",
 		"zone.js": "~0.6.12"
 	}
