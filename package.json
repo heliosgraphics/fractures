@@ -1,6 +1,6 @@
 {
 	"name": "fractures",
-	"version": "0.4.14",
+	"version": "0.4.15",
 	"author": "Krisztian Puska",
 	"description": "Atomic CSS toolkit.",
 	"keywords": [ "CSS" ],
@@ -23,8 +23,7 @@
 		"watch": "gulp watch",
 		"test": "gulp test",
 		"demo-build": "webpack --progress --colors --optimize-minimize",
-		"demo-watch": "webpack --progress --colors --watch",
-		"postinstall": "typings install"
+		"demo-watch": "webpack --progress --colors --watch"
 	},
 	"devDependencies": {
 		"@angular/common": "2.0.0-rc.2",
