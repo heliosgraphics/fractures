@@ -294,6 +294,8 @@ textarea:focus { outline: none; }
 
 .shrink-6 { flex-shrink: 6; }
 
+.format { overflow: hidden; }
+
 .format p,
 .format hr,
 .format ul,
