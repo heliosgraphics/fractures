@@ -10,7 +10,12 @@
 .inline { display: inline; }
 .inline-block { display: inline-block; }
 .none { display: none; }
-.table { display: table; }
+.table {
+	display: table;
+
+	table-layout: fixed;
+}
+
 .table-cell { display: table-cell; }
 .table-row { display: table-row; }
 
