@@ -1,14 +1,15 @@
 {
 	"compileOnSave": false,
 	"compilerOptions": {
-		"target": "es6",
+		"target": "es5",
 		"module": "commonjs",
 		"moduleResolution": "node",
 		"sourceMap": true,
 		"emitDecoratorMetadata": true,
 		"experimentalDecorators": true,
 		"removeComments": false,
-		"noImplicitAny": false
+		"noImplicitAny": false,
+		"rootDir": "."
 	},
 	"typeRoots": [
 		"../node_modules/@types"
@@ -17,6 +18,7 @@
 		"node_modules"
 	],
 	"types": [
-		"core-js"
+		"core-js",
+		"node"
 	]
 }
