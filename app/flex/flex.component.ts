@@ -11,7 +11,7 @@ import blocks from "../shared/data/blocks";
 })
 
 export class FlexComponent {
-	public containerClasses: any = ["container"];
+	public containerClasses: any = ["container-large"];
 	public elementArray: any = [];
 	public elementClasses: any = [];
 	public flexClasses: any = [];

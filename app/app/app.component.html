@@ -4,7 +4,7 @@
 	<!-- Hero -->
 	<div class="flex flex--column">
 		<div
-			class="flex flex--center flex--column py-4 white center minvh-66 index-hero"
+			class="flex flex--center flex--column py-4 white center minvh-75 index-hero"
 			style="
 				background: -webkit-linear-gradient(45deg, #5D6FBA , #60BBF3);
 				background: linear-gradient(45deg, #5D6FBA , #60BBF3);
@@ -28,9 +28,9 @@
 				</a>
 			</div>
 		</div>
-		<div class="py-3">
-			<div class="container flex flex--collapse">
-				<div class="flex grow-1 mb-2 mr-3">
+		<div class="white py-3" style="background-color: #3C3C50;">
+			<div class="container-large flex flex--collapse">
+				<div class="flex flex--ycenter grow-1 mb-2 mr-3">
 					<img
 						src="/app/app/images/browser.png"
 						style="
@@ -39,10 +39,10 @@
 						class="mr-2">
 					<div class="grow-1">
 						<h3 class="regular">What it does?</h3>
-						<p>Helps you bootstrap design-systems and prototypes by providing a set of non-blocking, atomic, utility classes.</p>
+						<p class="silver">Helps you bootstrap design-systems and prototypes by providing a set of non-blocking, atomic, utility classes.</p>
 					</div>
 				</div>
-				<div class="flex grow-1 mb-2">
+				<div class="flex flex--ycenter grow-1 mb-2">
 					<img
 						src="/app/app/images/reset.png"
 						style="
@@ -51,7 +51,7 @@
 						class="mr-2">
 					<div class="grow-1">
 						<h3 class="regular">That's it?</h3>
-						<p>It also soft resets HTML elements and sets a basic typescale. Leaves UI untouched.</p>
+						<p class="silver">It also soft resets HTML elements and sets a basic typescale. Leaves UI untouched.</p>
 					</div>
 				</div>
 			</div>
@@ -62,43 +62,50 @@
 	<flex></flex>
 
 	<!-- Docs -->
-	<div class="py-3">
-		<div class="container">
-			<h1>Docs</h1>
-			<h4 class="regular mb-1">Usage</h4>
-			<ul class="list-disc ml-3 mb-2">
-				<li>For the typescale to work properly, you must define font-size and line-height on body.</li>
-				<li>Blocks of margin and padding are built as 16px &mdash; you can overwrite this in src/variables.</li>
-			</ul>
+	<div class="bg-white">
+		<div class="container-large flex flex--collapse py-3">
 
-			<h4 class="regular mb-1">Development</h4>
-			<ul class="list-disc ml-3 mb-2">
-				<li>git clone <a href="https://github.com/krisztianpuska/fractures.git"><b>https://github.com/krisztianpuska/fractures.git</b></a></li>
-				<li>npm install, start, watch</li>
-				<li>npm build, test</li>
-				<li>npm run demo-build <small>builds demo site</small></li>
-				<li>npm run demo-watch <small>watches demo site</small></li>
-			</ul>
+			<!-- Docs -->
+			<div class="grow-1 mr-3">
+				<h1>Docs</h1>
+				<h4 class="regular mb-1">Usage</h4>
+				<ul class="list-disc ml-3 mb-2">
+					<li>For the typescale to work properly, you must define font-size and line-height on body.</li>
+					<li>Blocks of margin and padding are built as 16px &mdash; you can overwrite this in src/variables.</li>
+				</ul>
 
-			<h4 class="regular mb-1">Download</h4>
-			<ul class="list-disc ml-3 mb-3">
-				<li>npm install fractures</li>
+				<h4 class="regular mb-1">Development</h4>
+				<ul class="list-disc ml-3 mb-2">
+					<li>git clone <a href="https://github.com/krisztianpuska/fractures.git"><b>https://github.com/krisztianpuska/fractures.git</b></a></li>
+					<li>npm install, start, watch</li>
+					<li>npm build, test</li>
+					<li>npm run demo-build <small>builds demo site</small></li>
+					<li>npm run demo-watch <small>watches demo site</small></li>
+				</ul>
 
-				<li>download vanilla &rarr; <a href="/dist/fractures.min.css"><b>fractures.min.css</b></a></li>
-				<li>download prefixed for latest 2 browser version &rarr; <a href="/dist/fractures.prefixed.min.css"><b>fractures.prefixed.min.css</b></a></li>
-			</ul>
+				<h4 class="regular mb-1">Download</h4>
+				<ul class="list-disc ml-3 mb-3">
+					<li>npm install fractures</li>
 
-			<h1>List of classes</h1>
-			<div
-				*ngFor="let x of fracturesArray | MapToIterable"
-				class="mb-2">
-				<h4 class="regular">{{ x.key }}</h4>
+					<li>download vanilla &rarr; <a href="/dist/fractures.min.css"><b>fractures.min.css</b></a></li>
+					<li>download prefixed for latest 2 browser version &rarr; <a href="/dist/fractures.prefixed.min.css"><b>fractures.prefixed.min.css</b></a></li>
+				</ul>
+			</div>
+
+			<!-- Class loop -->
+			<div class="grow-1">
+				<h1>List of classes</h1>
 				<div
-					*ngFor="let option of x.val | MapToIterable"
-					class="clearfix">
+					*ngFor="let x of fracturesArray | MapToIterable"
+					class="mb-2">
+					<h4 class="regular">{{ x.key }}</h4>
 					<div
-						*ngFor="let class of option.val | MapToIterable"
-						class="btn btn-tag">{{ class.val }}</div>
+						*ngFor="let option of x.val | MapToIterable"
+						class="clearfix">
+						<div
+							*ngFor="let class of option.val | MapToIterable"
+							class="btn btn-tag">{{ class.val }}</div>
+					</div>
 				</div>
 			</div>
 		</div>
