@@ -40,6 +40,8 @@
 
 	background-color: #ECEEF5;
 	cursor: default;
+	user-select: all;
+	-webkit-user-select: all;
 }
 
 /*Link*/
