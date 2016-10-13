@@ -84,7 +84,7 @@ gulp.task("build: vanilla-size", ["build: vanilla"], () => {
 gulp.task("test", ["build"], () => {
 	return gulp.src("./dist/fractures.css")
 		.pipe(csslint("./csslintrc.json"))
-		.pipe(csslint.reporter());
+		.pipe(csslint.formatter());
 });
 
 // Watch for css changes
