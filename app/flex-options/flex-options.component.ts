@@ -1,11 +1,8 @@
 import { Component } from "@angular/core";
 import { NgClass, NgFor } from "@angular/common";
 
-import { MapToIterable } from "../shared/pipes/MapToIterable";
-
 @Component({
 	inputs: [ "classes", "options" ],
-	pipes: [ MapToIterable ],
 	selector: "flex-options",
 	template: `
 		<ul>

@@ -1,8 +1,5 @@
 import { Component, enableProdMode, ViewEncapsulation } from "@angular/core";
 
-import { FlexComponent } from "../flex/flex.component";
-import { MapToIterable } from "../shared/pipes/MapToIterable";
-
 import blocks from "../shared/data/blocks";
 import meta from "../../dist/fractures.meta";
 
@@ -10,14 +7,12 @@ enableProdMode();
 
 @Component({
 	selector: "app",
-	directives: [ FlexComponent ],
+	templateUrl: "app/app/app.component.html",
+	encapsulation: ViewEncapsulation.None,
 	styleUrls: [
 		"app/shared/styles/body.css",
 		"app/shared/styles/btn.css"
-	],
-	pipes: [ MapToIterable ],
-	encapsulation: ViewEncapsulation.None,
-	templateUrl: "app/app/app.component.html"
+	]
 })
 
 export class AppComponent {

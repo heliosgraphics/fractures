@@ -5,7 +5,6 @@ import { FlexOptionsComponent } from "../flex-options/flex-options.component";
 import blocks from "../shared/data/blocks";
 
 @Component({
-	directives: [ FlexOptionsComponent ],
 	selector: "flex",
 	styleUrls: [ "app/flex/flex.component.css" ],
 	templateUrl: "app/flex/flex.component.html"

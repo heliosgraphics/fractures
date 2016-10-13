@@ -1,15 +1,15 @@
 "use strict";
 
-let fs = require("fs");
-let gulp = require("gulp");
-let postcss = require("gulp-postcss");
-let postcssimport = require("postcss-import");
-let postcsscssnext = require("postcss-cssnext");
-let nano = require("gulp-cssnano");
-let rename = require("gulp-rename");
-let gzip = require("gulp-gzip");
-let size = require("gulp-size");
-let csslint = require("gulp-csslint");
+const fs = require("fs");
+const gulp = require("gulp");
+const postcss = require("gulp-postcss");
+const postcssimport = require("postcss-import");
+const postcsscssnext = require("postcss-cssnext");
+const nano = require("gulp-cssnano");
+const rename = require("gulp-rename");
+const gzip = require("gulp-gzip");
+const size = require("gulp-size");
+const csslint = require("gulp-csslint");
 
 let files = ["./src/fractures.css"];
 let postcssVanilla = [
