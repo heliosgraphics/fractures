@@ -23,16 +23,16 @@
 /*White*/
 .btn-white {
 	background-color: white;
-	color: #3C3C50;
+	color: #3D4275;
 }
 
 /*Dark*/
 .btn-dark {
-	background-color: #3C3C50;
+	background-color: #3D4275;
 	color: white;
 }
 
-.btn-dark:hover { background-color: #2F2F38; }
+.btn-dark:hover { background-color: #353547; }
 
 /*Tag*/
 .btn-tag {
