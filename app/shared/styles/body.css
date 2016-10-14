@@ -1,10 +1,14 @@
 body {
 	background-color: #ECEEF5;
-	color: #3C3C50;
+	color: #575765;
 
 	font-family: "Arimo", Arial;
 	font-size: 16px; /* Fractures setup */
 	line-height: 1.5; /* Fractures setup */
 }
 
-a { color: #3C3C50; }
+a { color: #575765; }
+
+.color--light { color: #A2A2AD; }
+.bg--light { background-color: #AACCE1; }
+.bg--dark { background-color: #5D6FBA; }
