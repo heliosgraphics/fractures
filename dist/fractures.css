@@ -263,6 +263,8 @@ textarea:focus { outline: none; }
 
 .grow-5 { flex-grow: 5; }
 
+.grow-6 { flex-grow: 6; }
+
 .grow-1,
 .grow-2,
 .grow-3,
