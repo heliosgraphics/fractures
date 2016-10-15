@@ -28,7 +28,7 @@ let blocks =
 		"wrap": ["flex--wrap", "flex--wrap-reverse"]
 	},
 	"flexelement": {
-		"grow": ["grow-1", "grow-2", "grow-3", "grow-4", "grow-5"],
+		"grow": ["grow-1", "grow-2", "grow-3", "grow-4", "grow-5", "grow-6"],
 		"order": ["order-first", "order-1", "order-2", "order-3", "order-last"],
 		"self": ["self-center", "self-start", "self-end", "self-baseline"],
 		"shrink": ["shrink-2", "shrink-3", "shrink-4", "shrink-5", "shrink-6"]
