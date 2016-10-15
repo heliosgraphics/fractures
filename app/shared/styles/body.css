@@ -1,5 +1,5 @@
 body {
-	background-color: #ECEEF5;
+	background-color: white;
 	color: #575765;
 
 	font-family: "Arimo", Arial;
@@ -11,4 +11,3 @@ a { color: #575765; }
 
 .color--light { color: #A2A2AD; }
 .bg--light { background-color: #AACCE1; }
-.bg--dark { background-color: #5D6FBA; }

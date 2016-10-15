@@ -1,30 +1,25 @@
-<div class="py-3">
-	<div class="container-large">
-		<h1 class="mb-1">Flex playground</h1>
+<div class="pb-4">
+
+	<!-- Demo settings -->
+	<div class="clearfix p-2">
+		<div class="float-right ml-1">
+			<a class="btn btn-link mr-1" (click)="elementDimensions = !elementDimensions" [ngClass]="{ 'active': !elementDimensions }">dimensions</a>
+			<a class="btn btn-link" (click)="output = !output" [ngClass]="{ 'active': output }">code</a>
+		</div>
+		<div class="btn-group float-right">
+			<a class="btn btn-link" (click)="elementCountUpdate(false)" [ngClass]="{ 'disabled': elementArray.length <= 0 }">less</a>
+			<a class="btn btn-link" (click)="elementCountUpdate(true)" [ngClass]="{ 'disabled': elementArray.length >= 14 }">more</a>
+		</div>
+		<div class="float-right mr-1">
+			<a class="btn btn-link disabled">16px</a>
+		</div>
 	</div>
 
 	<!-- Start demo -->
 	<div [ngClass]="containerClasses">
-
-		<!-- Demo settings -->
-		<div class="clearfix mb-1">
-			<div class="float-right ml-1">
-				<a class="btn btn-link mr-1" (click)="elementDimensions = !elementDimensions" [ngClass]="{ 'active': !elementDimensions }">dimensions</a>
-				<a class="btn btn-link" (click)="output = !output" [ngClass]="{ 'active': output }">code</a>
-			</div>
-			<div class="btn-group float-right">
-				<a class="btn btn-link" (click)="elementCountUpdate(false)" [ngClass]="{ 'disabled': elementArray.length <= 0 }">less</a>
-				<a class="btn btn-link" (click)="elementCountUpdate(true)" [ngClass]="{ 'disabled': elementArray.length >= 14 }">more</a>
-			</div>
-			<div class="float-right mr-1">
-				<a class="btn btn-link disabled">16px</a>
-			</div>
-		</div>
-
-		<!-- Demo -->
 		<div
 			[ngClass]="flexClasses"
-			class="flex demo p-1">
+			class="flex demo">
 			<div
 				[ngClass]="elementClasses"
 				class="element center {{ elementDimensions ? '' : 'element--dimensions' }}">1</div>
@@ -41,7 +36,7 @@
 		<!-- Code -->
 		<pre
 			*ngIf="output"
-			class="output p-1">
+			class="output p-2">
 			<div>&lt;div<span *ngIf="containerClasses.length"> class="<span *ngFor="let class of containerClasses" class="class">{{ class }}</span>"</span>&gt;</div>
 			<div class="pl-2">&lt;div class="<span class="class">flex</span><span *ngFor="let class of flexClasses" class="class"> {{ class }}</span>"&gt;</div>
 			<div class="pl-3">&lt;div<span *ngIf="elementClasses.length"> class="</span><span
@@ -55,6 +50,8 @@
 			&lt;/div&gt;
 		</pre>
 	</div>
+
+
 
 	<!-- Handle classes -->
 	<div class="container-large pt-3">

@@ -1,36 +1,28 @@
 .demo {
-	min-height: 11rem;
+	min-height: 10rem;
 
-	background-color: white;
-	border-radius: 2px;
-	box-shadow: inset 0 0 0 1px #D5D6E0;
+	background-color: #ECEEF5;
 }
 
 .demo.flex--column .element { transform: rotate(90deg); }
 
 .element {
-	background-color: #ECEEF5;
-	color: #A2A2AD;
+	background-color: #AACCE1;
+	color: white;
 }
 
+.element:nth-child(odd) { background-color: #3D4275; }
 .element--dimensions {
 	height: 5rem;
 	width: 5rem;
 
+	font-family: "Source Code Pro", monospace;
 	line-height: 5rem;
 }
 
-.element--dimensions-xl {
-	height: 10rem;
-	width: 10rem;
-}
-
-.element:first-child {
-	background-color: #5D6FBA;
-	color: white;
-}
-
 .output {
+	border: .25rem solid #ECEEF5;
+	border-top: 0;
 	color: #A2A2AD;
 	user-select: all;
 	-webkit-user-select: all;
@@ -41,4 +33,4 @@
 	white-space: normal;
 }
 
-.output .class { color: #FF5656; }
+.output .class { color: #3D4275; }
