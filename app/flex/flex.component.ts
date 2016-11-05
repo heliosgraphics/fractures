@@ -2,7 +2,7 @@ import { Component } from "@angular/core";
 import { NgClass, NgFor, NgIf } from "@angular/common";
 
 import { FlexOptionsComponent } from "../flex-options/flex-options.component";
-import blocks from "../shared/data/blocks";
+import blocks from "../blocks";
 
 @Component({
 	selector: "flex",

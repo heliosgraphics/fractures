@@ -1,6 +1,6 @@
 import { Component, enableProdMode, ViewEncapsulation } from "@angular/core";
 
-import blocks from "../shared/data/blocks";
+import blocks from "../blocks";
 import meta from "../../dist/fractures.meta";
 
 enableProdMode();
@@ -9,10 +9,7 @@ enableProdMode();
 	selector: "app",
 	templateUrl: "app/app/app.component.html",
 	encapsulation: ViewEncapsulation.None,
-	styleUrls: [
-		"app/shared/styles/body.css",
-		"app/shared/styles/btn.css"
-	]
+	styleUrls: ["app/main.css"]
 })
 
 export class AppComponent {

@@ -1,3 +1,18 @@
+body {
+	background-color: white;
+	color: #575765;
+
+	font-family: "Arimo", Arial;
+	font-size: 16px; /* Fractures setup */
+	line-height: 1.5; /* Fractures setup */
+}
+
+a { color: #575765; }
+
+.color--light { color: #A2A2AD; }
+.bg--light { background-color: #AACCE1; }
+
+/*Buttons*/
 .btn {
 	float: left;
 	padding: 0 .625rem;
