@@ -332,6 +332,16 @@ textarea:focus { outline: none; }
 	border-bottom-width: 1px;
 }
 
+.gutter-1 > *[class*="grow-"]:not(:last-of-type) { margin-right: var(--box-1); }
+
+.gutter-2 > *[class*="grow-"]:not(:last-of-type) { margin-right: var(--box-2); }
+
+.gutter-3 > *[class*="grow-"]:not(:last-of-type) { margin-right: var(--box-3); }
+
+.gutter-4 > *[class*="grow-"]:not(:last-of-type) { margin-right: var(--box-4); }
+
+.gutter-5 > *[class*="grow-"]:not(:last-of-type) { margin-right: var(--box-5); }
+
 .list-circle > li {  list-style-type: circle;  }
 
 .list-disc > li { list-style-type: disc; }

@@ -36,6 +36,9 @@ let blocks =
 	"format": {
 		"format": ["format"]
 	},
+	"gutter": {
+		"gutter": ["gutter-1", "gutter-2", "gutter-3", "gutter-4", "gutter-5"]
+	},
 	"list": {
 		"list-style-type": ["list-circle", "list-disc", "list-square", "list-none", "list-lower-latin", "list-lower-roman", "list-upper-latin", "list-upper-roman"]
 	},

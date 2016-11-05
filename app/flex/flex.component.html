@@ -51,22 +51,23 @@
 		</pre>
 	</div>
 
-
-
 	<!-- Handle classes -->
 	<div class="container-large pt-3">
-		<div class="flex flex--collapse">
-			<div class="grow-1 mr-1 mb-2">
+		<div class="flex flex--collapse gutter-2">
+			<div class="grow-1 mb-2">
 
 				<!-- Flex options -->
 				<h4 class="regular">Flex</h4>
 				<flex-options [classes]="flexClasses" [options]="fracturesArray['flex']"></flex-options>
+
+				<h4 class="regular mt-3">Gutter</h4>
+				<flex-options [classes]="flexClasses" [options]="fracturesArray['gutter']"></flex-options>
 			</div>
 
 			<div class="grow-1 mb-2">
 
 				<!-- Element options -->
-				<h4 class="regular mt-2">Element</h4>
+				<h4 class="regular">Element</h4>
 				<flex-options [classes]="elementClasses" [options]="fracturesArray['flexelement']"></flex-options>
 
 				<!-- Container options -->
