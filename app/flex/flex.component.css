@@ -21,14 +21,12 @@
 }
 
 .output {
-	border: .25rem solid #ECEEF5;
+	border: 2px solid #ECEEF5;
 	border-top: 0;
 	color: #A2A2AD;
-	user-select: all;
-	-webkit-user-select: all;
 
 	font-family: "Source Code Pro", monospace;
-	font-size: 0.75rem;
+	font-size: .75rem;
 	tab-size: 4;
 	white-space: normal;
 }

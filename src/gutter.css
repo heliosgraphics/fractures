@@ -1,5 +1,5 @@
-.gutter-1 > *[class*="grow-"]:not(:last-of-type) { margin-right: var(--box-1); }
-.gutter-2 > *[class*="grow-"]:not(:last-of-type) { margin-right: var(--box-2); }
-.gutter-3 > *[class*="grow-"]:not(:last-of-type) { margin-right: var(--box-3); }
-.gutter-4 > *[class*="grow-"]:not(:last-of-type) { margin-right: var(--box-4); }
-.gutter-5 > *[class*="grow-"]:not(:last-of-type) { margin-right: var(--box-5); }
+.gutter-1 > *:not(:last-of-type) { margin-right: var(--box-1); }
+.gutter-2 > *:not(:last-of-type) { margin-right: var(--box-2); }
+.gutter-3 > *:not(:last-of-type) { margin-right: var(--box-3); }
+.gutter-4 > *:not(:last-of-type) { margin-right: var(--box-4); }
+.gutter-5 > *:not(:last-of-type) { margin-right: var(--box-5); }

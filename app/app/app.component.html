@@ -1,7 +1,7 @@
 <main class="main">
 
 	<!-- Hero -->
-	<div class="bg--light white">
+	<div class="hero white">
 		<div class="container-large">
 			<div class="flex flex--center flex--column py-4 center minvh-66">
 				<img src="/app/app/images/fractures.svg" style="height: 160px; width: 160px;" alt="fractures" class="mb-2">
@@ -12,20 +12,20 @@
 						href="https://github.com/krisztianpuska/fractures/releases"
 						class="btn btn-dark mr-1">
 						Download
-						<small class="regular color--light float-right ml-1">{{ meta.size }} kb</small>
+						<small class="regular float-right ml-1">{{ meta.size }} kb</small>
 					</a>
 					<a href="https://github.com/krisztianpuska/fractures" class="btn btn-dark">GitHub</a>
 				</div>
 			</div>
-			<div class="flex flex--collapse py-2">
-				<div class="flex flex--ycenter grow-1 mb-2 mr-3">
+			<div class="flex flex--collapse gutter-3 py-3">
+				<div class="flex flex--ycenter grow-1">
 					<img src="/app/app/images/browser.png" style="height: 125px; width: 125px;" class="mr-2">
 					<div class="grow-1">
 						<h3 class="regular">What it does?</h3>
 						<p>Helps you bootstrap design-systems and prototypes by providing a set of non-blocking, atomic, utility classes.</p>
 					</div>
 				</div>
-				<div class="flex flex--ycenter grow-1 mb-2">
+				<div class="flex flex--ycenter grow-1">
 					<img src="/app/app/images/reset.png" style="height: 125px; width: 125px;" class="mr-2">
 					<div class="grow-1">
 						<h3 class="regular">That's it?</h3>
@@ -44,7 +44,7 @@
 
 		<!-- Docs -->
 		<div class="grow-1">
-			<h1>Docs</h1>
+			<h2>Docs</h2>
 			<h4 class="regular mb-1">Usage</h4>
 			<ul class="list-disc ml-3 mb-2">
 				<li>There is a naïve, em-based typescale, for which you must define font-size and line-height on body.</li>
@@ -63,7 +63,6 @@
 			<h4 class="regular mb-1">Download</h4>
 			<ul class="list-disc ml-3 mb-3">
 				<li>npm install fractures</li>
-
 				<li>download vanilla &rarr; <a href="/dist/fractures.min.css"><b>fractures.min.css</b></a></li>
 				<li>download prefixed for latest 2 browser version &rarr; <a href="/dist/fractures.prefixed.min.css"><b>fractures.prefixed.min.css</b></a></li>
 			</ul>
@@ -79,11 +78,11 @@
 
 		<!-- Class loop -->
 		<div class="grow-1">
-			<h1>List of classes</h1>
+			<h2>List</h2>
 			<div
 				*ngFor="let x of fracturesArray | MapToIterable"
 				class="mb-2">
-				<h4 class="regular">{{ x.key }}</h4>
+				<h5 class="regular mb-1">{{ x.key }}</h5>
 				<div
 					*ngFor="let option of x.val | MapToIterable"
 					class="clearfix">

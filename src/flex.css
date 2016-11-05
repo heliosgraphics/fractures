@@ -4,18 +4,19 @@
 	.flex--collapse.flex.flex--reverse,
 	.flex--collapse.flex.flex--reverse.flex--column { flex-direction: column-reverse; }
 
-	/*Prepare direct child elements for responsive layout*/
-	.flex--collapse > * {
-		margin-left: 0 !important;
-		margin-right: 0 !important;
-	}
-
 	.flex--collapse > .grow-1,
 	.flex--collapse > .grow-2,
 	.flex--collapse > .grow-3,
 	.flex--collapse > .grow-4,
 	.flex--collapse > .grow-5,
 	.flex--collapse > .grow-6 { flex-basis: auto; }
+
+	.flex--collapse.flex[class*="gutter"] > * { margin-right: 0; }
+	.flex--collapse.gutter-1 > *:not(:last-of-type) { margin-bottom: var(--box-1); }
+	.flex--collapse.gutter-2 > *:not(:last-of-type) { margin-bottom: var(--box-2); }
+	.flex--collapse.gutter-3 > *:not(:last-of-type) { margin-bottom: var(--box-3); }
+	.flex--collapse.gutter-4 > *:not(:last-of-type) { margin-bottom: var(--box-4); }
+	.flex--collapse.gutter-5 > *:not(:last-of-type) { margin-bottom: var(--box-5); }
 }
 
 .flex { display: flex; }

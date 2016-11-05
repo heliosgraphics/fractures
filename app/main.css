@@ -3,21 +3,16 @@ body {
 	color: #575765;
 
 	font-family: "Arimo", Arial;
-	font-size: 16px; /* Fractures setup */
-	line-height: 1.5; /* Fractures setup */
+	font-size: 16px;
+	line-height: 1.5;
 }
 
 a { color: #575765; }
 
-.color--light { color: #A2A2AD; }
-.bg--light { background-color: #AACCE1; }
-
-/*Buttons*/
 .btn {
 	float: left;
 	padding: 0 .625rem;
 
-	border-radius: 2px;
 	cursor: pointer;
 
 	font-size: .875rem;
@@ -28,26 +23,24 @@ a { color: #575765; }
 	-webkit-user-select: none;
 }
 
-/*Disabled*/
 .btn.disabled {
 	opacity: .5;
 
 	pointer-events: none;
 }
 
-/*White*/
 .btn-white {
 	background-color: white;
 	color: #3D4275;
 }
 
-/*Dark*/
 .btn-dark {
 	background-color: #3D4275;
 	color: white;
 }
 
-/*Tag*/
+.btn-dark small { color: #A2A2AD; }
+
 .btn-tag {
 	margin: 0 .125rem .125rem 0;
 
@@ -57,7 +50,6 @@ a { color: #575765; }
 	-webkit-user-select: all;
 }
 
-/*Link*/
 .btn-link {
 	background-color: white;
 	box-shadow: inset 0 0 0 1px #D5D6E0;
@@ -67,8 +59,6 @@ a { color: #575765; }
 .btn-link.active { background-color: #D5D6E0; }
 .btn-link.disabled { background-color: #ECEEF5; }
 
-/*Group*/
-.btn-group .btn:not(:first-child):not(:last-child) { border-radius: 0; }
-.btn-group .btn:first-child:not(:last-child) { border-radius: 2px 0 0 2px; }
-.btn-group .btn:last-child:not(:first-child) { border-radius: 0 2px 2px 0; }
 .btn-group .btn:not(:first-child) { margin-left: -1px; }
+
+.hero { background-color: #AACCE1; }
