@@ -1,1 +1,1 @@
-export default { size: 2.274 };
+export default { size: 2.332 };

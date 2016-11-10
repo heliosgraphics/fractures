@@ -23,7 +23,7 @@ let blocks =
 		"center": ["flex--center", "flex--ycenter", "flex--xcenter"],
 		"column": ["flex--column"],
 		"justify": ["flex--around", "flex--between", "flex--right"],
-		"responsive": ["flex--collapse"],
+		"responsive": ["flex--rsp-m", "flex--rsp-l"],
 		"reverse": ["flex--reverse"],
 		"wrap": ["flex--wrap", "flex--wrap-reverse"]
 	},
