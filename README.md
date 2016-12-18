@@ -16,7 +16,7 @@ It also soft resets HTML elements and sets a basic typescale. Leaves UI untouche
 --
 
 Example and details: [http://fractures.space/](http://fractures.space/)  
-Feedback: [https://github.com/krisztianpuska/fractures/issues](https://github.com/krisztianpuska/fractures/issues)
+Feedback: [https://github.com/fractures-css/fractures/issues](https://github.com/krisztianpuska/fractures/issues)
 
 --
 
