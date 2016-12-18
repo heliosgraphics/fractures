@@ -5,8 +5,7 @@
 	"description": "Atomic CSS toolkit.",
 	"keywords": [ "CSS", "atomic" ],
 	"engines": {
-		"node": ">=6.0.0",
-		"npm": ">=3.10.8"
+		"node": ">=6.0.0"
 	},
 	"repository": {
 		"type": "git",
@@ -18,40 +17,20 @@
 	},
 	"homepage": "http://fractures.space",
 	"scripts": {
-		"start": "lite-server",
+		"start": "gulp watch",
 		"build": "gulp build",
 		"watch": "gulp watch",
-		"test": "gulp test",
-		"demo-build": "webpack --progress --colors --optimize-minimize",
-		"demo-watch": "webpack --progress --colors --watch"
+		"test": "gulp test"
 	},
 	"devDependencies": {
-		"@angular/common": "2.1.2",
-		"@angular/compiler": "2.1.2",
-		"@angular/core": "2.1.2",
-		"@angular/platform-browser": "2.1.2",
-		"@angular/platform-browser-dynamic": "2.1.2",
-		"@types/core-js": "0.9.34",
-		"@types/node": "6.0.46",
-		"@types/source-map": "0.1.29",
-		"@types/webpack": "1.12.35",
-		"@types/zone.js": "0.0.27",
-		"awesome-typescript-loader": "2.2.4",
-		"core-js": "2.4.1",
 		"gulp": "3.9.1",
 		"gulp-cssnano": "2.1.2",
-		"gulp-csslint": "1.0.0",
+		"gulp-stylelint": "latest",
 		"gulp-gzip": "1.4.0",
 		"gulp-postcss": "6.2.0",
 		"gulp-rename": "1.2.2",
 		"gulp-size": "2.1.0",
-		"lite-server": "2.2.2",
-		"postcss-cssnext": "2.8.0",
-		"postcss-import": "8.1.3",
-		"rxjs": "5.0.0-beta.12",
-		"typescript": "2.0.7",
-		"typings": "1.5.0",
-		"webpack": "1.13.3",
-		"zone.js": "0.6.26"
+		"postcss-cssnext": "2.9.0",
+		"postcss-import": "9.0.0"
 	}
 }

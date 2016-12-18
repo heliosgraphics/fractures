@@ -10,10 +10,10 @@
 .normal { font-style: normal; }
 .oblique { font-style: oblique; }
 
-.bold { font-weight: bold; }
-.bolder { font-weight: bolder; }
-.lighter { font-weight: lighter; }
-.regular { font-weight: normal; }
+.bold { font-weight: 700; }
+.bolder { font-weight: 900; }
+.lighter { font-weight: 300; }
+.regular { font-weight: 400; }
 
 .center { text-align: center; }
 .justify { text-align: justify; }

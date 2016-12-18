@@ -20,10 +20,8 @@
 
 .format ul > li { list-style-type: disc; }
 .format ol > li { list-style-type: decimal; }
-.format a { font-weight: bold; }
+.format a { font-weight: 700; }
 
 .format hr {
-	border-bottom-color: inherit;
-	border-bottom-style: solid;
-	border-bottom-width: 1px;
+	border-bottom: 1px solid inherit;
 }
