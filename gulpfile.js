@@ -8,7 +8,7 @@ const nano = require("gulp-cssnano");
 const rename = require("gulp-rename");
 const gzip = require("gulp-gzip");
 const size = require("gulp-size");
-const csslint = require("gulp-csslint");
+const stylelint = require("gulp-stylelint");
 
 let files = ["./src/fractures.css"];
 let postcssVanilla = [
@@ -31,7 +31,8 @@ gulp.task("build", [
 gulp.task("default", () => {
 	return gulp.src(files)
 		.pipe(postcss(postcssVanilla))
-		.pipe(gulp.dest("./dist"));
+		.pipe(gulp.dest("./dist"))
+		.pipe(size({ showFiles: true }));
 });
 
 // Build without autoprefixing
@@ -64,12 +65,16 @@ gulp.task("build: autoprefixed", () => {
 		.pipe(size({ showFiles: true, gzip: true }));
 });
 
-// Report csslint after a build
-gulp.task("test", ["build"], () => {
+// Lint
+gulp.task("lint", ["default"], () => {
 	return gulp.src("./dist/fractures.css")
-		.pipe(csslint("./csslintrc.json"))
-		.pipe(csslint.formatter());
+		.pipe(stylelint({
+			reporters: [{ formatter: "string", console: true }]
+		}));
 });
+
+// Report csslint after a build
+gulp.task("test", ["lint"]);
 
 // Watch for css changes
 gulp.task("watch", () => {

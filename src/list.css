@@ -1,4 +1,4 @@
-.list-circle > li {  list-style-type: circle;  }
+.list-circle > li { list-style-type: circle;  }
 .list-disc > li { list-style-type: disc; }
 .list-square > li { list-style-type: square; }
 .list-none > li { list-style-type: none; }

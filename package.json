@@ -20,19 +20,17 @@
 		"start": "gulp watch",
 		"build": "gulp build",
 		"watch": "gulp watch",
-		"test": "gulp test",
-		"demo-build": "webpack --progress --colors --optimize-minimize",
-		"demo-watch": "webpack --progress --colors --watch"
+		"test": "gulp test"
 	},
 	"devDependencies": {
 		"gulp": "3.9.1",
 		"gulp-cssnano": "2.1.2",
-		"gulp-csslint": "1.0.0",
+		"gulp-stylelint": "latest",
 		"gulp-gzip": "1.4.0",
 		"gulp-postcss": "6.2.0",
 		"gulp-rename": "1.2.2",
 		"gulp-size": "2.1.0",
-		"postcss-cssnext": "2.8.0",
-		"postcss-import": "8.1.3"
+		"postcss-cssnext": "2.9.0",
+		"postcss-import": "9.0.0"
 	}
 }
