@@ -6,11 +6,16 @@
     "globals": {
         "__dirname": true,
         "angular": true,
+        "API": true,
+        "canvas": true,
         "confirm": true,
         "console": true,
         "document": true,
         "process": true,
+        "Raven": true,
         "require": true,
+        "requestAnimationFrame": true,
+        "setTimeout": true,
         "window": true
     },
     "rules": {

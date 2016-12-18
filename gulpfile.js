@@ -1,6 +1,5 @@
 "use strict";
 
-const fs = require("fs");
 const gulp = require("gulp");
 const postcss = require("gulp-postcss");
 const postcssimport = require("postcss-import");
@@ -25,7 +24,6 @@ let postcssAutoprefix = [
 gulp.task("build", [
 	"default",
 	"build: vanilla",
-	"build: vanilla-size",
 	"build: autoprefixed"
 ]);
 
@@ -64,20 +62,6 @@ gulp.task("build: autoprefixed", () => {
 		.pipe(rename("fractures.prefixed.min.css.gz"))
 		.pipe(gulp.dest("./dist"))
 		.pipe(size({ showFiles: true, gzip: true }));
-});
-
-// Report vanilla file size
-gulp.task("build: vanilla-size", ["build: vanilla"], () => {
-	let file = "./dist/fractures.min.css.gz";
-
-	fs.stat(file, (error, stat) => {
-		if(error) return console.log("vanilla-size failed");
-
-		let sizeContent = `export default { size: ${ stat.size / 1000 } };`;
-		let sizeFile = "./dist/fractures.meta.ts";
-
-		return fs.writeFile(sizeFile, sizeContent);
-	});
 });
 
 // Report csslint after a build
