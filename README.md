@@ -1,6 +1,6 @@
 # fractures
 
-![](https://travis-ci.org/krisztianpuska/fractures.svg)
+![](https://travis-ci.org/fractures-css/fractures.svg)
 
 Atomic CSS toolkit.  
 *A work in progress, trying to find the balance between a framework and a html reset.*
