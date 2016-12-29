@@ -1,12 +1,12 @@
 :root {
-	--box: 16px;
+	--box: 8px;
 
 	/* Box sizes */
-	--box-1: calc(var(--box) / 2);
-	--box-2: var(--box);
-	--box-3: calc(var(--box-2) * 2);
-	--box-4: calc(var(--box-3) * 2);
-	--box-5: calc(var(--box-4) * 2);
+	--box-1: var(--box);
+	--box-2: calc(var(--box-2) * 2);
+	--box-3: calc(var(--box-2) * 4);
+	--box-4: calc(var(--box-2) * 8);
+	--box-5: calc(var(--box-2) * 16);
 
 	/* Widths */
 	--width: 960px;
