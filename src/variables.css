@@ -3,10 +3,10 @@
 
 	/* Box sizes */
 	--box-1: var(--box);
-	--box-2: calc(var(--box-2) * 2);
-	--box-3: calc(var(--box-2) * 4);
-	--box-4: calc(var(--box-2) * 8);
-	--box-5: calc(var(--box-2) * 16);
+	--box-2: calc(var(--box-1) * 2);
+	--box-3: calc(var(--box-1) * 4);
+	--box-4: calc(var(--box-1) * 8);
+	--box-5: calc(var(--box-1) * 16);
 
 	/* Widths */
 	--width: 960px;
