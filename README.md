@@ -2,33 +2,19 @@
 
 ![](https://travis-ci.org/fractures/fractures.svg)
 
-Atomic CSS toolkit.
-*A work in progress, trying to find the balance between a framework and a html reset.*
+The baseline atomic CSS toolkit.  
+[Demo.](http://fractures.space)
 
---
 
-##### What it does?
-Helps you bootstrap design-systems and prototypes by providing a set of non-blocking, atomic, utility classes.
+*Fractures helps you bootstrap design-systems and prototypes by providing a set of non-blocking, atomic, utility classes.*
 
-##### That's it?
-It also soft resets HTML elements and sets a basic typescale. Leaves UI untouched.
-
---
-
-Example and details: [http://fractures.space/](http://fractures.space/)
-Feedback: [https://github.com/fractures/fractures/issues](https://github.com/fractures/fractures/issues)
-
---
 
 Goals:
-- Managable cognitive load
-- Small footprint
-- Up to date classes with w3
+- You can design with — not around it. Leaves UI untouched.
+- Atomic, non blocking.
+- Managable cognitive load, with a small footprint.
+- Fast in every way.
 
---
-
-Inspiration:
-
-- http://bradfrost.com/blog/post/atomic-web-design/
-- http://www.basscss.com/
-- http://tachyons.io/
+Notes:
+- Blocks are built on a 8px scale &ndash; you can overwrite this in src/variables.
+- It also soft resets HTML elements and sets a basic typescale, which can be adjusted by setting the body font.
