@@ -1,9 +1,12 @@
 {
 	"name": "fractures",
-	"version": "0.4.25",
+	"version": "0.4.26",
 	"author": "Krisztian Puska",
 	"description": "Atomic CSS toolkit.",
-	"keywords": [ "CSS", "atomic" ],
+	"keywords": [
+		"CSS",
+		"atomic"
+	],
 	"engines": {
 		"node": ">=6.0.0"
 	},
@@ -25,12 +28,12 @@
 	"devDependencies": {
 		"gulp": "3.9.1",
 		"gulp-cssnano": "2.1.2",
-		"gulp-stylelint": "3.7.0",
 		"gulp-gzip": "1.4.0",
 		"gulp-postcss": "6.2.0",
 		"gulp-rename": "1.2.2",
 		"gulp-size": "2.1.0",
+		"gulp-stylelint": "3.7.0",
 		"postcss-cssnext": "2.9.0",
-		"postcss-import": "9.0.0"
+		"postcss-import": "^9.1.0"
 	}
 }

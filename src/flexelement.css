@@ -22,9 +22,3 @@
 .self-start { align-self: flex-start; }
 .self-end { align-self: flex-end; }
 .self-baseline { align-self: baseline; }
-
-.shrink-2 { flex-shrink: 2; }
-.shrink-3 { flex-shrink: 3; }
-.shrink-4 { flex-shrink: 4; }
-.shrink-5 { flex-shrink: 5; }
-.shrink-6 { flex-shrink: 6; }

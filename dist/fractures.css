@@ -314,16 +314,6 @@ textarea:focus { outline: none; }
 
 .self-baseline { align-self: baseline; }
 
-.shrink-2 { flex-shrink: 2; }
-
-.shrink-3 { flex-shrink: 3; }
-
-.shrink-4 { flex-shrink: 4; }
-
-.shrink-5 { flex-shrink: 5; }
-
-.shrink-6 { flex-shrink: 6; }
-
 .format { overflow: hidden; }
 
 .format p,

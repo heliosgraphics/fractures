@@ -2,12 +2,10 @@
 
 ![](https://travis-ci.org/fractures/fractures.svg)
 
-The baseline atomic CSS toolkit.  
+Baseline atomic CSS toolkit.
 [Demo.](http://fractures.space)
 
-
-*Fractures helps you bootstrap design-systems and prototypes by providing a set of non-blocking, atomic, utility classes.*
-
+Fractures helps you bootstrap design-systems and prototypes by providing a set of non-blocking, atomic, utility classes.
 
 Goals:
 - You can design with — not around it. Leaves UI untouched.
