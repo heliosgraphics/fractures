@@ -14,5 +14,5 @@ Goals:
 - Fast in every way.
 
 Notes:
-- Blocks are built on a 8px scale &ndash; you can overwrite this in src/variables.
-- It also soft resets HTML elements and sets a basic typescale, which can be adjusted by setting the body font.
+- Builing blocks are on a 8px scale &ndash; you can overwrite this in src/variables.
+- It also soft resets HTML elements and sets a basic typescale, which you can adjust by setting the body font.

@@ -1,0 +1,31 @@
+/*
+	Grid.
+	Experimental version, things will change.
+
+	TODO: Research usecases, unify flex & grid classes.
+	TODO: Use flex fallbacks with @support.
+*/
+
+.grid { display: grid; }
+
+/* Shorthand for: grid-row-gap & grid-column-gap. */
+.grid-gap-1 { grid-gap: var(--box-1); }
+.grid-gap-2 { grid-gap: var(--box-2); }
+.grid-gap-3 { grid-gap: var(--box-3); }
+.grid-gap-4 { grid-gap: var(--box-4); }
+.grid-gap-5 { grid-gap: var(--box-5); }
+
+/* Auto flow settings. */
+.grid-af-row-dense { grid-auto-flow: row dense; }
+.grid-af-column { grid-auto-flow: column; }
+.grid-af-column-dense { grid-auto-flow: column dense; }
+
+/* Test columns */
+.grid-tmp-columns--2 { grid-template-columns: 50% 50%; }
+.grid-tmp-columns--4 { grid-template-columns: 25% 25% 25% 25%; }
+.grid-tmp-columns--5 { grid-template-columns: 20% 20% 20% 20% 20%; }
+
+/* Test rows */
+.grid-tmp-rows--2 { grid-template-rows: 50% 50%; }
+.grid-tmp-rows--4 { grid-template-rows: 25% 25% 25% 25%; }
+.grid-tmp-rows--5 { grid-template-rows: 20% 20% 20% 20% 20%; }
