@@ -7,3 +7,6 @@
 .list-lower-roman > li { list-style-type: lower-roman; }
 .list-upper-latin > li { list-style-type: upper-latin; }
 .list-upper-roman > li { list-style-type: upper-roman; }
+
+.list-comma > * { display: inline-block; }
+.list-comma > *:not(:last-child):after { content: ", "; }

@@ -370,6 +370,10 @@ textarea:focus { outline: none; }
 
 .list-upper-roman > li { list-style-type: upper-roman; }
 
+.list-comma > * { display: inline-block; }
+
+.list-comma > *:not(:last-child):after { content: ", "; }
+
 .m-0 { margin: 0; }
 
 .m-1 { margin: var(--box-1); }
