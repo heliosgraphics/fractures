@@ -4,6 +4,7 @@
 .p-3 { padding: var(--box-3); }
 .p-4 { padding: var(--box-4); }
 .p-5 { padding: var(--box-5); }
+.p-6 { padding: var(--box-6); }
 
 .pb-0 { padding-bottom: 0; }
 .pb-1 { padding-bottom: var(--box-1); }
@@ -11,6 +12,7 @@
 .pb-3 { padding-bottom: var(--box-3); }
 .pb-4 { padding-bottom: var(--box-4); }
 .pb-5 { padding-bottom: var(--box-5); }
+.pb-6 { padding-bottom: var(--box-6); }
 
 .pl-0 { padding-left: 0; }
 .pl-1 { padding-left: var(--box-1); }
@@ -18,6 +20,7 @@
 .pl-3 { padding-left: var(--box-3); }
 .pl-4 { padding-left: var(--box-4); }
 .pl-5 { padding-left: var(--box-5); }
+.pl-6 { padding-left: var(--box-6); }
 
 .pr-0 { padding-right: 0; }
 .pr-1 { padding-right: var(--box-1); }
@@ -25,6 +28,7 @@
 .pr-3 { padding-right: var(--box-3); }
 .pr-4 { padding-right: var(--box-4); }
 .pr-5 { padding-right: var(--box-5); }
+.pr-6 { padding-right: var(--box-6); }
 
 .pt-0 { padding-top: 0; }
 .pt-1 { padding-top: var(--box-1); }
@@ -32,6 +36,7 @@
 .pt-3 { padding-top: var(--box-3); }
 .pt-4 { padding-top: var(--box-4); }
 .pt-5 { padding-top: var(--box-5); }
+.pt-6 { padding-top: var(--box-6); }
 
 .px-0 {
 	padding-left: 0;
@@ -63,6 +68,11 @@
 	padding-right: var(--box-5);
 }
 
+.px-6 {
+	padding-left: var(--box-6);
+	padding-right: var(--box-6);
+}
+
 .py-0 {
 	padding-bottom: 0;
 	padding-top: 0;
@@ -91,4 +101,9 @@
 .py-5 {
 	padding-bottom: var(--box-5);
 	padding-top: var(--box-5);
+}
+
+.py-6 {
+	padding-bottom: var(--box-6);
+	padding-top: var(--box-6);
 }
