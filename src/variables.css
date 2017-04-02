@@ -10,12 +10,12 @@
 	--box-6: calc(var(--box-1) * 16);
 
 	/* Widths */
-	--width: 960px;
 	--width-small: 480px;
+	--width: 960px;
 	--width-large: 1248px;
 }
 
-@custom-media --mobile (max-width: 360px);
-@custom-media --tablet (max-width: 720px);
-@custom-media --desktop (max-width: 1024px);
-@custom-media --hd (max-width: 1280px);
+@custom-media --mobile (width < 360px);
+@custom-media --tablet (width < 720px);
+@custom-media --desktop (width < 1024px);
+@custom-media --hd (width < 1280px);
