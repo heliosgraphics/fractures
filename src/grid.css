@@ -26,6 +26,6 @@
 .grid-tmp-columns--5 { grid-template-columns: 20% 20% 20% 20% 20%; }
 
 /* Test rows */
-.grid-tmp-rows--2 { grid-template-rows: 50% 50%; }
-.grid-tmp-rows--4 { grid-template-rows: 25% 25% 25% 25%; }
-.grid-tmp-rows--5 { grid-template-rows: 20% 20% 20% 20% 20%; }
+.grid-tpl-rows--2 { grid-template-rows: 1fr 1fr; }
+.grid-tpl-rows--4 { grid-template-rows: 25% 25% 25% 25%; }
+.grid-tpl-rows--5 { grid-template-rows: 20% 20% 20% 20% 20%; }

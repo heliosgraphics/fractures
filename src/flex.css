@@ -1,4 +1,4 @@
-@media (--desktop) {
+@media (--fr-desktop) {
 	.flex--rsp-l.flex { flex-direction: column; }
 
 	.flex--rsp-l.flex.flex--reverse,
@@ -20,7 +20,7 @@
 	.flex--rsp-l.gutter-6 > *:not(:last-of-type) { margin-bottom: var(--box-6); }
 }
 
-@media (--tablet) {
+@media (--fr-tablet) {
 	.flex--rsp-m.flex { flex-direction: column; }
 
 	.flex--rsp-m.flex.flex--reverse,
