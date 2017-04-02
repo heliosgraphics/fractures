@@ -1,6 +1,7 @@
 @import url("./variables.css");
 @import url("./reset.css");
 
+@import url("./border.css");
 @import url("./color.css");
 @import url("./container.css");
 @import url("./dimension.css");
