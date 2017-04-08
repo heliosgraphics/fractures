@@ -6,6 +6,9 @@
 	--box-4: calc(var(--box-1) * 4);
 	--box-5: calc(var(--box-1) * 8);
 	--box-6: calc(var(--box-1) * 16);
+	--box-n1: calc(var(--box-1) * -1);
+	--box-n2: calc(var(--box-1) * -2);
+	--box-n3: calc(var(--box-1) * -3);
 }
 * {
 	margin: 0;
@@ -122,8 +125,8 @@ textarea:focus { outline: none; }
 	content: " ";
 }
 .grid { display: grid; }
-.flex { display: flex; }
 .block { display: block; }
+.flex { display: flex; }
 .inline { display: inline; }
 .inline-block { display: inline-block; }
 .none { display: none; }
@@ -278,6 +281,9 @@ textarea:focus { outline: none; }
 .mb-4 { margin-bottom: var(--box-4); }
 .mb-5 { margin-bottom: var(--box-5); }
 .mb-6 { margin-bottom: var(--box-6); }
+.mb-n1 { margin-bottom: var(--box-n1); }
+.mb-n2 { margin-bottom: var(--box-n2); }
+.mb-n3 { margin-bottom: var(--box-n3); }
 .ml-0 { margin-left: 0; }
 .ml-1 { margin-left: var(--box-1); }
 .ml-2 { margin-left: var(--box-2); }
@@ -285,6 +291,9 @@ textarea:focus { outline: none; }
 .ml-4 { margin-left: var(--box-4); }
 .ml-5 { margin-left: var(--box-5); }
 .ml-6 { margin-left: var(--box-6); }
+.ml-n1 { margin-left: var(--box-n1); }
+.ml-n2 { margin-left: var(--box-n2); }
+.ml-n3 { margin-left: var(--box-n3); }
 .mr-0 { margin-right: 0; }
 .mr-1 { margin-right: var(--box-1); }
 .mr-2 { margin-right: var(--box-2); }
@@ -292,6 +301,9 @@ textarea:focus { outline: none; }
 .mr-4 { margin-right: var(--box-4); }
 .mr-5 { margin-right: var(--box-5); }
 .mr-6 { margin-right: var(--box-6); }
+.mr-n1 { margin-right: var(--box-n1); }
+.mr-n2 { margin-right: var(--box-n2); }
+.mr-n3 { margin-right: var(--box-n3); }
 .mt-0 { margin-top: 0; }
 .mt-1 { margin-top: var(--box-1); }
 .mt-2 { margin-top: var(--box-2); }
@@ -299,6 +311,9 @@ textarea:focus { outline: none; }
 .mt-4 { margin-top: var(--box-4); }
 .mt-5 { margin-top: var(--box-5); }
 .mt-6 { margin-top: var(--box-6); }
+.mt-n1 { margin-top: var(--box-n1); }
+.mt-n2 { margin-top: var(--box-n2); }
+.mt-n3 { margin-top: var(--box-n3); }
 .mx-0 {
 	margin-left: 0;
 	margin-right: 0;
@@ -486,10 +501,10 @@ textarea:focus { outline: none; }
 .italic { font-style: italic; }
 .normal { font-style: normal; }
 .oblique { font-style: oblique; }
+.light { font-weight: 300; }
+.regular { font-weight: 400; }
 .bold { font-weight: 700; }
 .bolder { font-weight: 900; }
-.lighter { font-weight: 300; }
-.regular { font-weight: 400; }
 .center { text-align: center; }
 .justify { text-align: justify; }
 .left { text-align: left; }

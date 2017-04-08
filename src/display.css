@@ -7,8 +7,8 @@
 }
 
 .grid { display: grid; }
-.flex { display: flex; }
 .block { display: block; }
+.flex { display: flex; }
 .inline { display: inline; }
 .inline-block { display: inline-block; }
 .none { display: none; }
