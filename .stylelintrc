@@ -21,7 +21,6 @@
 		"comment-whitespace-inside": "always",
 		"comment-word-blacklist": [],
 		"custom-media-pattern": "",
-		"custom-property-empty-line-before": "never",
 		"custom-property-pattern": "",
 		"declaration-bang-space-after": "never",
 		"declaration-bang-space-before": "always",

@@ -25,7 +25,6 @@
 .grid-cols-4.dense,
 .grid-cols-5.dense,
 .grid-cols-6.dense { grid-auto-flow: row dense; }
-.grid-cols-1 { grid-template-columns: 1fr; }
 .grid-cols-2 { grid-template-columns: repeat(2, 1fr); }
 .grid-cols-3 { grid-template-columns: repeat(3, 1fr); }
 .grid-cols-4 { grid-template-columns: repeat(4, 1fr); }
@@ -44,7 +43,6 @@
 .grid-rows-4.dense,
 .grid-rows-5.dense,
 .grid-rows-6.dense { grid-auto-flow: column dense; }
-.grid-rows-1 { grid-template-rows: 1fr; }
 .grid-rows-2 { grid-template-rows: repeat(2, 1fr); }
 .grid-rows-3 { grid-template-rows: repeat(3, 1fr); }
 .grid-rows-4 { grid-template-rows: repeat(4, 1fr); }

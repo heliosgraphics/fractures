@@ -1,9 +1,9 @@
-.black { color: black; }
-.gray { color: gray; }
-.silver { color: silver; }
-.white { color: white; }
+.black { color: var(--black); }
+.gray { color: var(--gray); }
+.silver { color: var(--silver); }
+.white { color: var(--white); }
 
-.bg-black { background-color: black; }
-.bg-gray { background-color: gray; }
-.bg-silver { background-color: silver; }
-.bg-white { background-color: white; }
+.bg-black { background-color: var(--black); }
+.bg-gray { background-color: var(--gray); }
+.bg-silver { background-color: var(--silver); }
+.bg-white { background-color: var(--white); }

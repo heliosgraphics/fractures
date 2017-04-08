@@ -9,6 +9,12 @@
 	--box-n1: calc(var(--box-1) * -1);
 	--box-n2: calc(var(--box-1) * -2);
 	--box-n3: calc(var(--box-1) * -3);
+
+	--black: black;
+	--gray: gray;
+	--silver: silver;
+	--white: white;
+
 	--fr-width-small: 480px;
 	--fr-width: 960px;
 	--fr-width-large: 1248px;
@@ -44,14 +50,14 @@ small { font-size: .75em; }
 input:focus,
 textarea:focus { outline: none; }
 .radius-100 { border-radius: 100%; }
-.black { color: black; }
-.gray { color: gray; }
-.silver { color: silver; }
-.white { color: white; }
-.bg-black { background-color: black; }
-.bg-gray { background-color: gray; }
-.bg-silver { background-color: silver; }
-.bg-white { background-color: white; }
+.black { color: var(--black); }
+.gray { color: var(--gray); }
+.silver { color: var(--silver); }
+.white { color: var(--white); }
+.bg-black { background-color: var(--black); }
+.bg-gray { background-color: var(--gray); }
+.bg-silver { background-color: var(--silver); }
+.bg-white { background-color: var(--white); }
 @media (max-width: 1279px) {
 	.fr-container-large { width: var(--fr-width) !important; }
 }
@@ -231,7 +237,6 @@ textarea:focus { outline: none; }
 .grid-cols-4.dense,
 .grid-cols-5.dense,
 .grid-cols-6.dense { grid-auto-flow: row dense; }
-.grid-cols-1 { grid-template-columns: 1fr; }
 .grid-cols-2 { grid-template-columns: repeat(2, 1fr); }
 .grid-cols-3 { grid-template-columns: repeat(3, 1fr); }
 .grid-cols-4 { grid-template-columns: repeat(4, 1fr); }
@@ -249,7 +254,6 @@ textarea:focus { outline: none; }
 .grid-rows-4.dense,
 .grid-rows-5.dense,
 .grid-rows-6.dense { grid-auto-flow: column dense; }
-.grid-rows-1 { grid-template-rows: 1fr; }
 .grid-rows-2 { grid-template-rows: repeat(2, 1fr); }
 .grid-rows-3 { grid-template-rows: repeat(3, 1fr); }
 .grid-rows-4 { grid-template-rows: repeat(4, 1fr); }
