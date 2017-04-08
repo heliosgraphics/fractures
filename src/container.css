@@ -1,9 +1,3 @@
-:root {
-	--fr-width-small: 480px;
-	--fr-width: 960px;
-	--fr-width-large: 1248px;
-}
-
 @custom-media --fr-mobile (width < 360px);
 @custom-media --fr-tablet (width < 720px);
 @custom-media --fr-desktop (width < 1024px);

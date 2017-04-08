@@ -33,7 +33,7 @@
 		"gulp-rename": "^1.2.2",
 		"gulp-size": "^2.1.0",
 		"gulp-stylelint": "^3.9.0",
-		"postcss-cssnext": "^2.10.0",
+		"postcss-cssnext": "2.9.0",
 		"postcss-import": "^9.1.0",
 		"eslint": "^3.18.0"
 	}
