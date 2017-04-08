@@ -6,6 +6,8 @@
 	content: " ";
 }
 
+.grid { display: grid; }
+.flex { display: flex; }
 .block { display: block; }
 .inline { display: inline; }
 .inline-block { display: inline-block; }
