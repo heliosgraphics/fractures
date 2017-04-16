@@ -23,13 +23,5 @@ ul,
 ol { list-style: none; }
 img { max-width: 100%; }
 
-h1 { font-size: 2.25em; }
-h2 { font-size: 2em; }
-h3 { font-size: 1.75em; }
-h4 { font-size: 1.5em; }
-h5 { font-size: 1.25em; }
-h6 { font-size: 1em; }
-small { font-size: .75em; }
-
 input:focus,
 textarea:focus { outline: none; }

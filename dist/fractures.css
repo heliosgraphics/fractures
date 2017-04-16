@@ -15,6 +15,33 @@
 	--silver: silver;
 	--white: white;
 
+	--h1: 36px;
+	--h2: 32px;
+	--h3: 28px;
+	--h4: 24px;
+	--h5: 20px;
+	--h6: 16px;
+	--p: 16px;
+	--small: 12px;
+
+	--line-h1: 52px;
+	--line-h2: 48px;
+	--line-h3: 40px;
+	--line-h4: 34px;
+	--line-h5: 30px;
+	--line-h6: 24px;
+	--line-p: 24px;
+	--line-small: 18px;
+
+	--light: 300;
+	--regular: 400;
+	--bold: 700;
+	--bolder: 900;
+
+	/*
+		Variables in custom media queries are not supported;
+		thus fr-container cannot be overwritten without direct edit.
+	*/
 	--fr-width-small: 480px;
 	--fr-width: 960px;
 	--fr-width-large: 1248px;
@@ -40,13 +67,6 @@ a { text-decoration: none; }
 ul,
 ol { list-style: none; }
 img { max-width: 100%; }
-h1 { font-size: 2.25em; }
-h2 { font-size: 2em; }
-h3 { font-size: 1.75em; }
-h4 { font-size: 1.5em; }
-h5 { font-size: 1.25em; }
-h6 { font-size: 1em; }
-small { font-size: .75em; }
 input:focus,
 textarea:focus { outline: none; }
 .radius-100 { border-radius: 100%; }
@@ -493,6 +513,38 @@ textarea:focus { outline: none; }
 .z-8 { z-index: 80; }
 .z-9 { z-index: 90; }
 .z-10 { z-index: 100; }
+h1 {
+	font-size: var(--h1);
+	line-height: var(--line-h1);
+}
+h2 {
+	font-size: var(--h2);
+	line-height: var(--line-h2);
+}
+h3 {
+	font-size: var(--h3);
+	line-height: var(--line-h3);
+}
+h4 {
+	font-size: var(--h4);
+	line-height: var(--line-h4);
+}
+h5 {
+	font-size: var(--h5);
+	line-height: var(--line-h5);
+}
+h6 {
+	font-size: var(--h6);
+	line-height: var(--line-h6);
+}
+p {
+	font-size: var(--p);
+	line-height: var(--line-p);
+}
+small {
+	font-size: var(--small);
+	line-height: var(--line-small);
+}
 .ellipsis {
 	overflow: hidden;
 	max-width: 100%;
@@ -503,10 +555,10 @@ textarea:focus { outline: none; }
 .italic { font-style: italic; }
 .normal { font-style: normal; }
 .oblique { font-style: oblique; }
-.light { font-weight: 300; }
-.regular { font-weight: 400; }
-.bold { font-weight: 700; }
-.bolder { font-weight: 900; }
+.light { font-weight: var(--light); }
+.regular { font-weight: var(--regular); }
+.bold { font-weight: var(--bold); }
+.bolder { font-weight: var(--bolder); }
 .center { text-align: center; }
 .justify { text-align: justify; }
 .left { text-align: left; }
