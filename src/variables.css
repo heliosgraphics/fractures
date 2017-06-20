@@ -1,14 +1,10 @@
 :root {
-	--box: 8px;
-	--box-1: var(--box);
-	--box-2: calc(var(--box-1) * 2);
-	--box-3: calc(var(--box-1) * 3);
-	--box-4: calc(var(--box-1) * 4);
-	--box-5: calc(var(--box-1) * 8);
-	--box-6: calc(var(--box-1) * 16);
-	--box-n1: calc(var(--box-1) * -1);
-	--box-n2: calc(var(--box-1) * -2);
-	--box-n3: calc(var(--box-1) * -3);
+	--box-1: 8px;
+	--box-2: 16px;
+	--box-3: 24px;
+	--box-4: 32px;
+	--box-5: 64px;
+	--box-6: 128px;
 
 	--black: black;
 	--gray: gray;
