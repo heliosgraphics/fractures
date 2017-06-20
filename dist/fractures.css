@@ -11,6 +11,9 @@
 	--silver: silver;
 	--white: white;
 
+	--basefont: 16px;
+	--baseline: 1.6;
+
 	--light: 300;
 	--regular: 400;
 	--bold: 700;
@@ -412,6 +415,18 @@ textarea:focus { outline: none; }
 .z-8 { z-index: 80; }
 .z-9 { z-index: 90; }
 .z-10 { z-index: 100; }
+body {
+	font-size: var(--basefont);
+	line-height: var(--baseline);
+}
+h1 { font-size: 3em; }
+h2 { font-size: 2.5em; }
+h3 { font-size: 2em; }
+h4 { font-size: 1.75em; }
+h5 { font-size: 1.5em; }
+p,
+h6 { font-size: 1em; }
+small { font-size: .75em; }
 .ellipsis {
 	overflow: hidden;
 	max-width: 100%;
