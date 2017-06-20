@@ -2,7 +2,7 @@
 .flex-wrap-reverse { flex-wrap: wrap-reverse; }
 
 .flex-reverse { flex-direction: row-reverse; }
-.flex-reverse.grid--column { flex-direction: column-reverse; }
+.flex-reverse.flex-column { flex-direction: column-reverse; }
 .flex-column { flex-direction: column; }
 
 .flex-center {
