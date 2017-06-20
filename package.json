@@ -12,11 +12,11 @@
 	},
 	"repository": {
 		"type": "git",
-		"url": "https://github.com/krisztianpuska/fractures"
+		"url": "https://github.com/fractures/fractures"
 	},
 	"license": "MIT",
 	"bugs": {
-		"url": "https://github.com/krisztianpuska/fractures/issues"
+		"url": "https://github.com/fractures/fractures/issues"
 	},
 	"homepage": "http://fractures.space",
 	"scripts": {
@@ -26,15 +26,15 @@
 		"test": "gulp test"
 	},
 	"devDependencies": {
+		"eslint": "^4.0.0",
 		"gulp": "^3.9.1",
 		"gulp-cssnano": "^2.1.2",
 		"gulp-gzip": "1.4.0",
-		"gulp-postcss": "^6.4.0",
+		"gulp-postcss": "^7.0.0",
 		"gulp-rename": "^1.2.2",
 		"gulp-size": "^2.1.0",
 		"gulp-stylelint": "^3.9.0",
 		"postcss-cssnext": "2.9.0",
-		"postcss-import": "^9.1.0",
-		"eslint": "^3.18.0"
+		"postcss-import": "^10.0.0"
 	}
 }
