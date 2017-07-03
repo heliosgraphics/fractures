@@ -1,6 +1,6 @@
 {
 	"name": "fractures",
-	"version": "0.5.2",
+	"version": "1.0.0-beta.1",
 	"author": "Krisztian Puska",
 	"description": "Atomic CSS toolkit.",
 	"scripts": {
