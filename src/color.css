@@ -1,9 +1,17 @@
-.black { color: var(--black); }
-.gray { color: var(--gray); }
-.silver { color: var(--silver); }
 .white { color: var(--white); }
+.smoke { color: var(--whitesmoke); }
+.light { color: var(--lightgray); }
+.silver { color: var(--silver); }
+.dark { color: var(--darkgray); }
+.gray,
+.grey { color: var(--gray); }
+.black { color: var(--black); }
 
-.bg-black { background-color: var(--black); }
-.bg-gray { background-color: var(--gray); }
-.bg-silver { background-color: var(--silver); }
 .bg-white { background-color: var(--white); }
+.bg-smoke { background-color: var(--whitesmoke); }
+.bg-light { background-color: var(--lightgray); }
+.bg-silver { background-color: var(--silver); }
+.bg-dark { background-color: var(--darkgray); }
+.bg-gray,
+.bg-grey { background-color: var(--gray); }
+.bg-black { background-color: var(--black); }
