@@ -1,10 +1,10 @@
 {
 	"name": "fractures",
-	"version": "1.0.0-beta.1",
+	"version": "1.0.0-beta.2",
 	"author": "Krisztian Puska",
 	"description": "Atomic CSS toolkit.",
 	"scripts": {
-		"prepublish": "gulp build",
+		"prepublish": "mkdir -p dist && gulp build",
 		"start": "gulp watch",
 		"build": "gulp build",
 		"watch": "gulp watch",
