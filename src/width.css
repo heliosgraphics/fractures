@@ -1,0 +1,21 @@
+.w-0 { width: 0; }
+.w-1 { width: var(--box-1); }
+.w-2 { width: var(--box-2); }
+.w-3 { width: var(--box-3); }
+.w-4 { width: var(--box-4); }
+.w-5 { width: var(--box-5); }
+.w-6 { width: var(--box-6); }
+
+.w-25 { width: 25%; }
+.w-33 { width: calc(100% / 3); }
+.w-50 { width: 50%; }
+.w-66 { width: calc((100% / 3) * 2); }
+.w-75 { width: 75%; }
+.w-100 { width: 100%; }
+
+.minvw-25 { min-width: 25vw; }
+.minvw-33 { min-width: calc(100 / 3)vw; }
+.minvw-50 { min-width: 50vw; }
+.minvw-66 { min-width: calc((100 / 3) * 2)vw; }
+.minvw-75 { min-width: 75vw; }
+.minvw-100 { min-width: 100vw; }

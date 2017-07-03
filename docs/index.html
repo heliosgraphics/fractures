@@ -4,44 +4,25 @@
 		<link href="../dist/fractures.css" rel="stylesheet">
 		<!-- <link href="https://unpkg.com/fractures@0.5.2/dist/fractures.css" rel="stylesheet"> -->
 
-		<!-- You don't need these.-->
-		<style media="screen">
-
-			/*
-				You can overwrite any root variable, like colors, or basic block sizes:
-				eg.: --box: 10px
-			*/
+		<style media="all">
 			:root {
-
-				 /*Blues for demo. */
-				/*--black: #3e3c75;
-				--gray: #7775A0;
-				--silver: #E0E1EA;*/
-
-				/* Or just add new ones. */
-				--fr-neon-green: #E5FEDD;
+				--black: #3e3c75;
+				--neon: #e5fedd;
 			}
 
 			body {
 				color: var(--black);
 
-				/* System default fonts */
 				font-family:
 					-apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
 					"Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
 			}
 
 			a {
-				background-color: var(--fr-neon-green);
-				color: var(--gray);
-			}
+				background-color: var(--neon);
+				color: var(--black);
 
-			img {
-				height: 5rem;
-				min-width: 5rem;
-				width: 5rem;
-
-				box-shadow: inset 0 0 0 .25rem var(--silver);
+				font-weight: bold;
 			}
 		</style>
 	</head>
@@ -49,13 +30,11 @@
 		<main class="p-3">
 
 			<!-- Intro -->
-			<header class="flex flex-ycenter py-2 gutter-2">
-				<div class="flex flex-ycenter">
+			<header class="flex flex-ycenter mb-5">
+				<div>
 					<img
 						src="http://fractures.space/images/fractures.svg"
-						class="p-1 radius-100" alt="fractures logo">
-				</div>
-				<div>
+						class="h-6 w-6" alt="fractures logo" />
 					<h1>fr·ctures</h1>
 					<p>
 						Atomic class regression center &mdash;
@@ -65,100 +44,22 @@
 				</div>
 			</header>
 
-			<!-- Grid -->
+			<!-- Border -->
 			<article class="py-5">
-				<h2>Grid</h2>
-				<pre class="mb-2 pre-line">grid grid-cols-2 gap-2</pre>
-				<div class="grid grid-cols-2 gap-2 mb-5">
-					<div class="bg-silver center p-1">Two equal column grid, with 2x gap</div>
-					<div class="bg-silver center p-1">2</div>
-					<div class="bg-silver center p-1">3</div>
-					<div class="bg-silver center p-1">4</div>
-					<div class="bg-silver center p-1">5</div>
-				</div>
-
-				<pre class="mb-2 pre-line">grid grid-rows-2 gap-x-1 gap-y-3</pre>
-				<div class="grid grid-rows-2 gap-x-1 gap-y-3">
-					<div class="bg-gray silver center p-1">Two equal row grid,<br>with 1x vertical and 3x horizontal gap</div>
-					<div class="bg-gray silver center p-1">2</div>
-					<div class="bg-gray silver center p-1">3</div>
-					<div class="bg-gray silver center p-1">4</div>
-					<div class="bg-gray silver center p-1">5</div>
-					<div class="bg-gray silver center p-1">6</div>
-				</div>
-			</article>
-
-			<!-- Flex -->
-			<article class="py-5">
-				<h2>Flex</h2>
-				<pre class="mb-2 pre-line">flex flex-around</pre>
-				<div class="flex flex-around mb-5">
-					<div class="bg-silver center p-1">Flex display with space around children.</div>
-					<div class="bg-silver center p-1">2</div>
-					<div class="bg-silver center p-1">3</div>
-				</div>
-
-				<pre class="mb-2 pre-line">flex gutter-2 / grow-2 / grow-1</pre>
-				<div class="flex gutter-2">
-					<div class="bg-silver center p-1 grow-2">Flex display with 2x gutter. This element takes 2/3 of free space.</div>
-					<div class="bg-silver center p-1 grow-1">This element takes 1/3 of free space.</div>
-					<div class="bg-silver center p-1">3</div>
-					<div class="bg-silver center p-1">4</div>
-				</div>
-			</article>
-
-			<!-- Boxes -->
-			<article class="py-5">
-				<h2 class="mb-1">Boxes</h2>
+				<h2>Border</h2>
+				<p class="mb-4">Border radius is important.</p>
 				<div class="grid grid-cols-7 gap-1">
-					<div class="bg-silver p-0">p-0</div>
-					<div class="bg-silver p-1">p-1</div>
-					<div class="bg-silver p-2">p-2</div>
-					<div class="bg-silver p-3">p-3</div>
-					<div class="bg-silver p-4">p-4</div>
-					<div class="bg-silver p-5">p-5</div>
-					<div class="bg-silver p-6">p-6</div>
-
-					<div class="bg-silver"><div class="bg-gray white m-0">m-0</div></div>
-					<div class="bg-silver"><div class="bg-gray white m-1">m-1</div></div>
-					<div class="bg-silver"><div class="bg-gray white m-2">m-2</div></div>
-					<div class="bg-silver"><div class="bg-gray white m-3">m-3</div></div>
-					<div class="bg-silver"><div class="bg-gray white m-4">m-4</div></div>
-					<div class="bg-silver"><div class="bg-gray white m-5">m-5</div></div>
-					<div class="bg-silver"><div class="bg-gray white m-6">m-6</div></div>
+					<div class="bg-smoke radius-0 h-6 w-6 flex flex-center">radius-0</div>
+					<div class="bg-light radius-1 h-6 w-6 flex flex-center">radius-1</div>
+					<div class="bg-light radius-2 h-6 w-6 flex flex-center">radius-2</div>
+					<div class="bg-light radius-3 h-6 w-6 flex flex-center">radius-3</div>
+					<div class="bg-black smoke radius-100 h-6 w-6 flex flex-center">radius-100</div>
 				</div>
 			</article>
 
-			<!-- Display -->
+			<!-- Color -->
 			<article class="py-5">
-				<h2>Display</h2>
-				<p class="mb-4">CSS display properties.</p>
-				<div class="grid grid-cols-6 gap-1">
-					<div class="bg-smoke p-1">block</div>
-					<div class="bg-smoke p-1">clearfix *</div>
-					<div class="bg-smoke p-1">flex</div>
-					<div class="bg-smoke p-1">float-left</div>
-					<div class="bg-smoke p-1">float-right</div>
-					<div class="bg-smoke p-1">grid</div>
-					<div class="bg-smoke p-1">inline-block</div>
-					<div class="bg-smoke p-1">inline-flex</div>
-					<div class="bg-smoke p-1">inline-table</div>
-					<div class="bg-smoke p-1">inline</div>
-					<div class="bg-smoke p-1">none</div>
-					<div class="bg-smoke p-1">table *</div>
-					<div class="bg-smoke p-1">table-cell</div>
-					<div class="bg-smoke p-1">table-column</div>
-					<div class="bg-smoke p-1">table-row</div>
-				</div>
-				<small class="block mt-4">
-					<b>clearfix</b> is an after-before-content hack for clearing floats.<br />
-					<b>table</b> has an extra attribute, layout: fixed.
-				</small>
-			</article>
-
-			<!-- Colors -->
-			<article class="py-5">
-				<h2>Colors</h2>
+				<h2>Color</h2>
 				<p class="mb-4">
 					Basic monochrome color scheme from CSS defaults.<br />
 					You can overwrite these, but don't.
@@ -181,6 +82,226 @@
 				</div>
 			</article>
 
+			<!-- Display -->
+			<article class="py-5">
+				<h2>Display</h2>
+				<p class="mb-4">CSS display properties.</p>
+				<div class="grid grid-cols-6 gap-1">
+					<div class="bg-smoke p-1">block</div>
+					<div class="bg-smoke p-1">clearfix<sup>*</sup></div>
+					<div class="bg-smoke p-1">flex</div>
+					<div class="bg-smoke p-1">float-left</div>
+					<div class="bg-smoke p-1">float-right</div>
+					<div class="bg-smoke p-1">grid</div>
+					<div class="bg-smoke p-1">inline-block</div>
+					<div class="bg-smoke p-1">inline-flex</div>
+					<div class="bg-smoke p-1">inline-table</div>
+					<div class="bg-smoke p-1">inline</div>
+					<div class="bg-smoke p-1">none</div>
+					<div class="bg-smoke p-1">table<sup>*</sup></div>
+					<div class="bg-smoke p-1">table-cell</div>
+					<div class="bg-smoke p-1">table-column</div>
+					<div class="bg-smoke p-1">table-row</div>
+				</div>
+				<small class="block mt-4">
+					<b>clearfix</b> is an after-before-content hack for clearing floats.<br />
+					<b>table</b> has an extra attribute, layout: fixed.
+				</small>
+			</article>
+
+			<!-- Flex -->
+			<article class="py-5">
+				<h2>Flex</h2>
+				<p class="mb-4">Flexbox related properties.</p>
+				<div class="grid grid-cols-8 gap-1">
+					<div class="bg-smoke p-1">flex-wrap</div>
+					<div class="bg-smoke p-1">flex-wrap-reverse</div>
+					<div class="bg-smoke p-1">flex-reverse</div>
+					<div class="bg-smoke p-1">flex-column</div>
+					<div class="bg-smoke p-1">flex-around</div>
+					<div class="bg-smoke p-1">flex-between</div>
+					<div class="bg-smoke p-1">flex-right</div>
+					<div class="bg-smoke p-1">flex-baseline</div>
+					<div class="bg-smoke p-1">flex-end</div>
+					<div class="bg-smoke p-1">flex-start</div>
+					<div class="bg-smoke p-1">flex-center<sup>*</sup></div>
+					<div class="bg-smoke p-1">flex-xcenter<sup>*</sup></div>
+					<div class="bg-smoke p-1">flex-ycenter<sup>*</sup></div>
+					<div class="bg-smoke p-1">grow-1</div>
+					<div class="bg-smoke p-1">grow-2</div>
+					<div class="bg-smoke p-1">grow-3</div>
+					<div class="bg-smoke p-1">grow-4</div>
+					<div class="bg-smoke p-1">grow-5</div>
+					<div class="bg-smoke p-1">grow-6</div>
+					<div class="bg-smoke p-1">self-center</div>
+					<div class="bg-smoke p-1">self-start</div>
+					<div class="bg-smoke p-1">self-end</div>
+					<div class="bg-smoke p-1">self-baseline</div>
+				</div>
+				<small class="block mt-4">
+					<b>grow-x</b> also resets flex-basis to 0. Should be used on flex children.<br />
+					<b>self-x</b> is align-self. Should be used on flex children.<br />
+					<b>flex-(x|y)center</b> does what is say. x-y is axis.
+				</small>
+			</article>
+
+			<!-- Grid -->
+			<article class="py-5">
+				<h2>Grid</h2>
+				<p class="mb-4">WIP.</p>
+				<div class="grid grid-cols-6 gap-1">
+					<div class="bg-smoke p-1">gap-1</div>
+					<div class="bg-smoke p-1">gap-2</div>
+					<div class="bg-smoke p-1">gap-3</div>
+					<div class="bg-smoke p-1">gap-4</div>
+					<div class="bg-smoke p-1">gap-5</div>
+					<div class="bg-smoke p-1">gap-6</div>
+					<div class="bg-smoke p-1">gap-x-1</div>
+					<div class="bg-smoke p-1">gap-x-2</div>
+					<div class="bg-smoke p-1">gap-x-3</div>
+					<div class="bg-smoke p-1">gap-x-4</div>
+					<div class="bg-smoke p-1">gap-x-5</div>
+					<div class="bg-smoke p-1">gap-x-6</div>
+					<div class="bg-smoke p-1">gap-y-1</div>
+					<div class="bg-smoke p-1">gap-y-2</div>
+					<div class="bg-smoke p-1">gap-y-3</div>
+					<div class="bg-smoke p-1">gap-y-4</div>
+					<div class="bg-smoke p-1">gap-y-5</div>
+					<div class="bg-smoke p-1">gap-y-6</div>
+					<div class="bg-smoke p-1">grid-cols</div>
+					<div class="bg-smoke p-1">grid-cols-2</div>
+					<div class="bg-smoke p-1">grid-cols-3</div>
+					<div class="bg-smoke p-1">grid-cols-4</div>
+					<div class="bg-smoke p-1">grid-cols-5</div>
+					<div class="bg-smoke p-1">grid-cols-6</div>
+					<div class="bg-smoke p-1">grid-cols-7</div>
+					<div class="bg-smoke p-1">grid-cols-8</div>
+					<div class="bg-smoke p-1">grid-rows</div>
+					<div class="bg-smoke p-1">grid-rows-2</div>
+					<div class="bg-smoke p-1">grid-rows-3</div>
+					<div class="bg-smoke p-1">grid-rows-4</div>
+					<div class="bg-smoke p-1">grid-rows-5</div>
+					<div class="bg-smoke p-1">grid-rows-6</div>
+					<div class="bg-smoke p-1">grid-rows-7</div>
+					<div class="bg-smoke p-1">grid-rows-8</div>
+				</div>
+				<small class="block mt-4">
+					<b>grid-(rows|cols)-x</b> are splitted with fr units.<br />
+					<b>grid-(rows|cols)-x</b> has a .dense class modifier
+				</small>
+			</article>
+
+			<!-- Height -->
+			<article class="py-5">
+				<h2>Height</h2>
+				<p class="mb-4">Common height options.</p>
+				<div class="grid grid-cols-7 gap-1">
+					<div class="bg-light h-0">h-0</div>
+					<div class="bg-light h-1">h-1</div>
+					<div class="bg-light h-2">h-2</div>
+					<div class="bg-light h-3">h-3</div>
+					<div class="bg-light h-4">h-4</div>
+					<div class="bg-light h-5">h-5</div>
+					<div class="bg-light h-6">h-6</div>
+					<div class="bg-smoke p-1">h-25</div>
+					<div class="bg-smoke p-1">h-33</div>
+					<div class="bg-smoke p-1">h-50</div>
+					<div class="bg-smoke p-1">h-66</div>
+					<div class="bg-smoke p-1">h-75</div>
+					<div class="bg-smoke p-1">h-100</div>
+					<div class="bg-smoke p-1">minvh-25</div>
+					<div class="bg-smoke p-1">minvh-33</div>
+					<div class="bg-smoke p-1">minvh-50</div>
+					<div class="bg-smoke p-1">minvh-66</div>
+					<div class="bg-smoke p-1">minvh-75</div>
+					<div class="bg-smoke p-1">minvh-100</div>
+				</div>
+				<small class="block mt-4">
+					<b>minvh-x</b> is minimum height in viewport height percentage.<br />
+				</small>
+			</article>
+
+			<!-- List -->
+			<article class="py-5">
+				<h2>List</h2>
+				<p class="mb-4">Common list styles for ul, ol.</p>
+				<div class="grid grid-cols-7 gap-1">
+					<div class="bg-smoke p-1">list-circle</div>
+					<div class="bg-smoke p-1">list-disc</div>
+					<div class="bg-smoke p-1">list-square</div>
+					<div class="bg-smoke p-1">list-none</div>
+					<div class="bg-smoke p-1">list-lower-latin</div>
+					<div class="bg-smoke p-1">list-lower-roman</div>
+					<div class="bg-smoke p-1">list-upper-latin</div>
+					<div class="bg-smoke p-1">list-upper-roman</div>
+					<div class="bg-smoke p-1">list-comma<sup>*</sup></div>
+				</div>
+				<small class="block mt-4">
+					<b>list-comma</b> is turning its content into a comma separated inline list.<br />
+				</small>
+			</article>
+
+			<!-- Margin -->
+			<article class="py-5">
+				<h2>Margin</h2>
+				<p class="mb-4">Margins based on overwriteable box sizes.</p>
+				<div class="grid grid-cols-7 gap-1">
+					<div class="bg-light m-0">m-0</div>
+					<div class="bg-light m-1">m-1</div>
+					<div class="bg-light m-2">m-2</div>
+					<div class="bg-light m-3">m-3</div>
+					<div class="bg-light m-4">m-4</div>
+					<div class="bg-light m-5">m-5</div>
+					<div class="bg-light m-6">m-6</div>
+					<div class="bg-smoke p-1">mb-0</div>
+					<div class="bg-smoke p-1">mb-1</div>
+					<div class="bg-smoke p-1">mb-2</div>
+					<div class="bg-smoke p-1">mb-3</div>
+					<div class="bg-smoke p-1">mb-4</div>
+					<div class="bg-smoke p-1">mb-5</div>
+					<div class="bg-smoke p-1">mb-6</div>
+					<div class="bg-smoke p-1">ml-0</div>
+					<div class="bg-smoke p-1">ml-1</div>
+					<div class="bg-smoke p-1">ml-2</div>
+					<div class="bg-smoke p-1">ml-3</div>
+					<div class="bg-smoke p-1">ml-4</div>
+					<div class="bg-smoke p-1">ml-5</div>
+					<div class="bg-smoke p-1">ml-6</div>
+					<div class="bg-smoke p-1">mr-0</div>
+					<div class="bg-smoke p-1">mr-1</div>
+					<div class="bg-smoke p-1">mr-2</div>
+					<div class="bg-smoke p-1">mr-3</div>
+					<div class="bg-smoke p-1">mr-4</div>
+					<div class="bg-smoke p-1">mr-5</div>
+					<div class="bg-smoke p-1">mr-6</div>
+					<div class="bg-smoke p-1">mt-0</div>
+					<div class="bg-smoke p-1">mt-1</div>
+					<div class="bg-smoke p-1">mt-2</div>
+					<div class="bg-smoke p-1">mt-3</div>
+					<div class="bg-smoke p-1">mt-4</div>
+					<div class="bg-smoke p-1">mt-5</div>
+					<div class="bg-smoke p-1">mt-6</div>
+					<div class="bg-smoke p-1">my-0</div>
+					<div class="bg-smoke p-1">my-1</div>
+					<div class="bg-smoke p-1">my-2</div>
+					<div class="bg-smoke p-1">my-3</div>
+					<div class="bg-smoke p-1">my-4</div>
+					<div class="bg-smoke p-1">my-5</div>
+					<div class="bg-smoke p-1">my-6</div>
+					<div class="bg-smoke p-1">mx-0</div>
+					<div class="bg-smoke p-1">mx-1</div>
+					<div class="bg-smoke p-1">mx-2</div>
+					<div class="bg-smoke p-1">mx-3</div>
+					<div class="bg-smoke p-1">mx-4</div>
+					<div class="bg-smoke p-1">mx-5</div>
+					<div class="bg-smoke p-1">mx-6</div>
+				</div>
+				<small class="block mt-4">
+					<b>mx-x</b> is margin on X axis.<br />
+					<b>my-x</b> is margin on Y axis.<br />
+				</small>
+			</article>
+
 			<!-- Opacity -->
 			<article class="py-5">
 				<h2>Opacity</h2>
@@ -200,16 +321,97 @@
 				</div>
 			</article>
 
-			<!-- Borders -->
+			<!-- Padding -->
 			<article class="py-5">
-				<h2>Border</h2>
-				<p class="mb-4">Border radius is important. It is either 100% (50) or define your own.</p>
-				<div>
-					<div class="bg-gray radius-100 h-6 w-6 flex flex-center">radius-100</div>
+				<h2>Padding</h2>
+				<p class="mb-4">Paddings based on overwriteable box sizes.</p>
+				<div class="grid grid-cols-7 gap-1">
+					<div class="bg-light p-0">p-0</div>
+					<div class="bg-light p-1">p-1</div>
+					<div class="bg-light p-2">p-2</div>
+					<div class="bg-light p-3">p-3</div>
+					<div class="bg-light p-4">p-4</div>
+					<div class="bg-light p-5">p-5</div>
+					<div class="bg-light p-6">p-6</div>
+					<div class="bg-smoke p-1">pb-0</div>
+					<div class="bg-smoke p-1">pb-1</div>
+					<div class="bg-smoke p-1">pb-2</div>
+					<div class="bg-smoke p-1">pb-3</div>
+					<div class="bg-smoke p-1">pb-4</div>
+					<div class="bg-smoke p-1">pb-5</div>
+					<div class="bg-smoke p-1">pb-6</div>
+					<div class="bg-smoke p-1">pl-0</div>
+					<div class="bg-smoke p-1">pl-1</div>
+					<div class="bg-smoke p-1">pl-2</div>
+					<div class="bg-smoke p-1">pl-3</div>
+					<div class="bg-smoke p-1">pl-4</div>
+					<div class="bg-smoke p-1">pl-5</div>
+					<div class="bg-smoke p-1">pl-6</div>
+					<div class="bg-smoke p-1">pr-0</div>
+					<div class="bg-smoke p-1">pr-1</div>
+					<div class="bg-smoke p-1">pr-2</div>
+					<div class="bg-smoke p-1">pr-3</div>
+					<div class="bg-smoke p-1">pr-4</div>
+					<div class="bg-smoke p-1">pr-5</div>
+					<div class="bg-smoke p-1">pr-6</div>
+					<div class="bg-smoke p-1">pt-0</div>
+					<div class="bg-smoke p-1">pt-1</div>
+					<div class="bg-smoke p-1">pt-2</div>
+					<div class="bg-smoke p-1">pt-3</div>
+					<div class="bg-smoke p-1">pt-4</div>
+					<div class="bg-smoke p-1">pt-5</div>
+					<div class="bg-smoke p-1">pt-6</div>
+					<div class="bg-smoke p-1">py-0</div>
+					<div class="bg-smoke p-1">py-1</div>
+					<div class="bg-smoke p-1">py-2</div>
+					<div class="bg-smoke p-1">py-3</div>
+					<div class="bg-smoke p-1">py-4</div>
+					<div class="bg-smoke p-1">py-5</div>
+					<div class="bg-smoke p-1">py-6</div>
+					<div class="bg-smoke p-1">px-0</div>
+					<div class="bg-smoke p-1">px-1</div>
+					<div class="bg-smoke p-1">px-2</div>
+					<div class="bg-smoke p-1">px-3</div>
+					<div class="bg-smoke p-1">px-4</div>
+					<div class="bg-smoke p-1">px-5</div>
+					<div class="bg-smoke p-1">px-6</div>
 				</div>
+				<small class="block mt-4">
+					<b>px-x</b> is padding on X axis.<br />
+					<b>py-x</b> is padding on Y axis.<br />
+				</small>
 			</article>
 
-			<!-- Typo -->
+			<!-- Position -->
+			<article class="py-5">
+				<h2>Position</h2>
+				<p class="mb-4">Position related classes.</p>
+				<div class="grid grid-cols-8 gap-1">
+					<div class="bg-smoke p-1">absolute</div>
+					<div class="bg-smoke p-1">fixed</div>
+					<div class="bg-smoke p-1">relative</div>
+					<div class="bg-smoke p-1">sticky</div>
+					<div class="bg-smoke p-1">bottom-0</div>
+					<div class="bg-smoke p-1">left-0</div>
+					<div class="bg-smoke p-1">right-0</div>
+					<div class="bg-smoke p-1">top-0</div>
+					<div class="bg-smoke p-1">z-0</div>
+					<div class="bg-smoke p-1">z-1</div>
+					<div class="bg-smoke p-1">z-2</div>
+					<div class="bg-smoke p-1">z-3</div>
+					<div class="bg-smoke p-1">z-4</div>
+					<div class="bg-smoke p-1">z-5</div>
+					<div class="bg-smoke p-1">z-6</div>
+					<div class="bg-smoke p-1">z-7</div>
+					<div class="bg-smoke p-1">z-9</div>
+					<div class="bg-smoke p-1">z-10</div>
+				</div>
+				<small class="block mt-4">
+					<b>z-x</b> is a z-index scale from 0-100, so it has some extra room.<br />
+				</small>
+			</article>
+
+			<!-- Type -->
 			<article class="py-5">
 				<h2>Typo</h2>
 				<p class="mb-4">This is WIP.</p>
@@ -223,6 +425,36 @@
 					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
 					<small>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</small>
 				</div>
+			</article>
+
+			<!-- Width -->
+			<article class="py-5">
+				<h2>Width</h2>
+				<p class="mb-4">Common width options.</p>
+				<div class="grid grid-cols-7 gap-1">
+					<div class="bg-light w-0">W-0</div>
+					<div class="bg-light w-1">w-1</div>
+					<div class="bg-light w-2">w-2</div>
+					<div class="bg-light w-3">w-3</div>
+					<div class="bg-light w-4">w-4</div>
+					<div class="bg-light w-5">w-5</div>
+					<div class="bg-light w-6">w-6</div>
+					<div class="bg-smoke p-1">w-25</div>
+					<div class="bg-smoke p-1">w-33</div>
+					<div class="bg-smoke p-1">w-50</div>
+					<div class="bg-smoke p-1">w-66</div>
+					<div class="bg-smoke p-1">w-75</div>
+					<div class="bg-smoke p-1">w-100</div>
+					<div class="bg-smoke p-1">minvw-25</div>
+					<div class="bg-smoke p-1">minvw-33</div>
+					<div class="bg-smoke p-1">minvw-50</div>
+					<div class="bg-smoke p-1">minvw-66</div>
+					<div class="bg-smoke p-1">minvw-75</div>
+					<div class="bg-smoke p-1">minvw-100</div>
+				</div>
+				<small class="block mt-4">
+					<b>minvw-x</b> is minimum width in viewport width percentage.<br />
+				</small>
 			</article>
 		</main>
 	</body>

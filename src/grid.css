@@ -24,27 +24,37 @@
 .grid-cols-3.dense,
 .grid-cols-4.dense,
 .grid-cols-5.dense,
-.grid-cols-6.dense { grid-auto-flow: row dense; }
+.grid-cols-6.dense,
+.grid-cols-7.dense,
+.grid-cols-8.dense { grid-auto-flow: row dense; }
 .grid-cols-2 { grid-template-columns: repeat(2, 1fr); }
 .grid-cols-3 { grid-template-columns: repeat(3, 1fr); }
 .grid-cols-4 { grid-template-columns: repeat(4, 1fr); }
 .grid-cols-5 { grid-template-columns: repeat(5, 1fr); }
 .grid-cols-6 { grid-template-columns: repeat(6, 1fr); }
+.grid-cols-7 { grid-template-columns: repeat(7, 1fr); }
+.grid-cols-8 { grid-template-columns: repeat(8, 1fr); }
 
 .grid-rows,
 .grid-rows-2,
 .grid-rows-3,
 .grid-rows-4,
 .grid-rows-5,
-.grid-rows-6 { grid-auto-flow: column; }
+.grid-rows-6,
+.grid-rows-7,
+.grid-rows-8 { grid-auto-flow: column; }
 .grid-rows.dense,
 .grid-rows-2.dense,
 .grid-rows-3.dense,
 .grid-rows-4.dense,
 .grid-rows-5.dense,
-.grid-rows-6.dense { grid-auto-flow: column dense; }
+.grid-rows-6.dense,
+.grid-rows-7.dense,
+.grid-rows-8.dense { grid-auto-flow: column dense; }
 .grid-rows-2 { grid-template-rows: repeat(2, 1fr); }
 .grid-rows-3 { grid-template-rows: repeat(3, 1fr); }
 .grid-rows-4 { grid-template-rows: repeat(4, 1fr); }
 .grid-rows-5 { grid-template-rows: repeat(5, 1fr); }
 .grid-rows-6 { grid-template-rows: repeat(6, 1fr); }
+.grid-rows-7 { grid-template-rows: repeat(7, 1fr); }
+.grid-rows-8 { grid-template-rows: repeat(8, 1fr); }
