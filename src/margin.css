@@ -73,6 +73,11 @@
 	margin-right: var(--box-6);
 }
 
+.mx-auto {
+	margin-left: auto;
+	margin-right: auto;
+}
+
 .my-0 {
 	margin-bottom: 0;
 	margin-top: 0;
@@ -106,9 +111,4 @@
 .my-6 {
 	margin-bottom: var(--box-6);
 	margin-top: var(--box-6);
-}
-
-.m-auto {
-	margin-left: auto;
-	margin-right: auto;
 }
