@@ -11,6 +11,8 @@
 .flex { display: flex; }
 .inline { display: inline; }
 .inline-block { display: inline-block; }
+.inline-flex { display: inline-flex; }
+.inline-table { display: inline-table; }
 .none { display: none; }
 .table {
 	display: table;
@@ -19,6 +21,7 @@
 }
 
 .table-cell { display: table-cell; }
+.table-column { display: table-column; }
 .table-row { display: table-row; }
 
 .float-left { float: left; }

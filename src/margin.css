@@ -13,9 +13,6 @@
 .mb-4 { margin-bottom: var(--box-4); }
 .mb-5 { margin-bottom: var(--box-5); }
 .mb-6 { margin-bottom: var(--box-6); }
-.mb-n1 { margin-bottom: var(--box-n1); }
-.mb-n2 { margin-bottom: var(--box-n2); }
-.mb-n3 { margin-bottom: var(--box-n3); }
 
 .ml-0 { margin-left: 0; }
 .ml-1 { margin-left: var(--box-1); }
@@ -24,9 +21,6 @@
 .ml-4 { margin-left: var(--box-4); }
 .ml-5 { margin-left: var(--box-5); }
 .ml-6 { margin-left: var(--box-6); }
-.ml-n1 { margin-left: var(--box-n1); }
-.ml-n2 { margin-left: var(--box-n2); }
-.ml-n3 { margin-left: var(--box-n3); }
 
 .mr-0 { margin-right: 0; }
 .mr-1 { margin-right: var(--box-1); }
@@ -35,9 +29,6 @@
 .mr-4 { margin-right: var(--box-4); }
 .mr-5 { margin-right: var(--box-5); }
 .mr-6 { margin-right: var(--box-6); }
-.mr-n1 { margin-right: var(--box-n1); }
-.mr-n2 { margin-right: var(--box-n2); }
-.mr-n3 { margin-right: var(--box-n3); }
 
 .mt-0 { margin-top: 0; }
 .mt-1 { margin-top: var(--box-1); }
@@ -46,9 +37,6 @@
 .mt-4 { margin-top: var(--box-4); }
 .mt-5 { margin-top: var(--box-5); }
 .mt-6 { margin-top: var(--box-6); }
-.mt-n1 { margin-top: var(--box-n1); }
-.mt-n2 { margin-top: var(--box-n2); }
-.mt-n3 { margin-top: var(--box-n3); }
 
 .mx-0 {
 	margin-left: 0;
@@ -83,6 +71,11 @@
 .mx-6 {
 	margin-left: var(--box-6);
 	margin-right: var(--box-6);
+}
+
+.mx-auto {
+	margin-left: auto;
+	margin-right: auto;
 }
 
 .my-0 {
