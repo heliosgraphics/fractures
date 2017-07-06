@@ -3,7 +3,6 @@
 ![](https://travis-ci.org/fractures/fractures.svg)
 
 Baseline atomic CSS toolkit.
-[Demo.](https://fractures.space)
 
 Fractures helps you bootstrap design-systems and prototypes by providing a set of non-blocking, atomic, utility classes.
 
