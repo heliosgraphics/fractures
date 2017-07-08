@@ -9,6 +9,6 @@ Fractures helps you bootstrap design-systems and prototypes by providing a set o
 Goals:
 - You can design with &mdash; not around it. Leaves UI untouched.
 - Atomic, non blocking.
-- Managable cognitive load, with a small footprint.
+- Manageable cognitive load, with a small footprint.
 - Fast in every way.
 - Framework agnostic.
