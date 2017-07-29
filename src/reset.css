@@ -12,7 +12,6 @@
 *,
 *:before,
 *:after { box-sizing: border-box; }
-*:focus { outline: 0; }
 
 html,
 body { position: relative; }
@@ -22,6 +21,3 @@ a { text-decoration: none; }
 ul,
 ol { list-style: none; }
 img { max-width: 100%; }
-
-input:focus,
-textarea:focus { outline: none; }
