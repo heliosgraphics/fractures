@@ -44,3 +44,5 @@ small { font-size: .75em; }
 .pre-line { white-space: pre-line; }
 .pre-wrap { white-space: pre-wrap; }
 .nowrap { white-space: nowrap; }
+
+.break-word { word-wrap: break-word; }
