@@ -2,7 +2,7 @@
 
 ![](https://travis-ci.org/fractures/fractures.svg)
 
-### Baseline atomic CSS toolkit.
+## Baseline atomic CSS toolkit.
 
 Fractures helps you bootstrap design-systems and prototypes by providing a set of non-blocking, atomic, utility classes.
 
@@ -10,7 +10,7 @@ Read the [docs](https://fractures.space/docs) for examples, or find out [more](h
 
 ---
 
-#### Goals
+### Goals
 
 - You can design with &mdash; not around it. Leaves UI untouched.
 - Atomic, non blocking.
@@ -20,7 +20,7 @@ Read the [docs](https://fractures.space/docs) for examples, or find out [more](h
 
 ---
 
-#### Resources and similar project
+### Resources and similar project
 
 The concept of functional CSS is not new. There are larger, more mature libraries out there you can choose from.
 
