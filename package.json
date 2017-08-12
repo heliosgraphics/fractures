@@ -10,7 +10,10 @@
 		"watch": "gulp watch",
 		"test": "gulp test"
 	},
-	"keywords": ["CSS", "atomic"],
+	"keywords": [
+		"CSS",
+		"atomic"
+	],
 	"engines": {
 		"node": ">=6.0.0"
 	},
@@ -30,8 +33,8 @@
 		"gulp-postcss": "^7.0.0",
 		"gulp-rename": "^1.2.2",
 		"gulp-size": "^2.1.0",
-		"gulp-stylelint": "^3.9.0",
-		"postcss-cssnext": "2.9.0",
+		"gulp-stylelint": "^4.0.0",
+		"postcss-cssnext": "^3.0.2",
 		"postcss-import": "^10.0.0"
 	}
 }
