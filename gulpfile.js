@@ -17,11 +17,7 @@ gulp.task("build", ["default", "build: vanilla", "build: autoprefixed"])
 
 // Build only fractures.css
 gulp.task("default", () => {
-	return gulp
-		.src(files)
-		.pipe(postcss(postcssVanilla))
-		.pipe(gulp.dest("./dist"))
-		.pipe(size({ showFiles: true }))
+	return gulp.src(files).pipe(postcss(postcssVanilla)).pipe(gulp.dest("./dist")).pipe(size({ showFiles: true }))
 })
 
 // Build without autoprefixing
