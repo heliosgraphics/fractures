@@ -21,19 +21,19 @@
 .flex-end { align-items: flex-end; }
 .flex-start { align-items: flex-start; }
 
-.flex-gap-1:not(.flex-column) > *:not(:last-of-type) { margin-right: var(--box-1); }
-.flex-gap-2:not(.flex-column) > *:not(:last-of-type) { margin-right: var(--box-2); }
-.flex-gap-3:not(.flex-column) > *:not(:last-of-type) { margin-right: var(--box-3); }
-.flex-gap-4:not(.flex-column) > *:not(:last-of-type) { margin-right: var(--box-4); }
-.flex-gap-5:not(.flex-column) > *:not(:last-of-type) { margin-right: var(--box-5); }
-.flex-gap-6:not(.flex-column) > *:not(:last-of-type) { margin-right: var(--box-6); }
+.flex-gap-1:not(.flex-column) > *:not(:last-child) { margin-right: var(--box-1); }
+.flex-gap-2:not(.flex-column) > *:not(:last-child) { margin-right: var(--box-2); }
+.flex-gap-3:not(.flex-column) > *:not(:last-child) { margin-right: var(--box-3); }
+.flex-gap-4:not(.flex-column) > *:not(:last-child) { margin-right: var(--box-4); }
+.flex-gap-5:not(.flex-column) > *:not(:last-child) { margin-right: var(--box-5); }
+.flex-gap-6:not(.flex-column) > *:not(:last-child) { margin-right: var(--box-6); }
 
-.flex-gap-1.flex-column > *:not(:last-of-type) { margin-bottom: var(--box-1); }
-.flex-gap-2.flex-column > *:not(:last-of-type) { margin-bottom: var(--box-2); }
-.flex-gap-3.flex-column > *:not(:last-of-type) { margin-bottom: var(--box-3); }
-.flex-gap-4.flex-column > *:not(:last-of-type) { margin-bottom: var(--box-4); }
-.flex-gap-5.flex-column > *:not(:last-of-type) { margin-bottom: var(--box-5); }
-.flex-gap-6.flex-column > *:not(:last-of-type) { margin-bottom: var(--box-6); }
+.flex-gap-1.flex-column > *:not(:last-child) { margin-bottom: var(--box-1); }
+.flex-gap-2.flex-column > *:not(:last-child) { margin-bottom: var(--box-2); }
+.flex-gap-3.flex-column > *:not(:last-child) { margin-bottom: var(--box-3); }
+.flex-gap-4.flex-column > *:not(:last-child) { margin-bottom: var(--box-4); }
+.flex-gap-5.flex-column > *:not(:last-child) { margin-bottom: var(--box-5); }
+.flex-gap-6.flex-column > *:not(:last-child) { margin-bottom: var(--box-6); }
 
 .grow-1,
 .grow-2,
