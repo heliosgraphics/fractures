@@ -12,6 +12,9 @@ p,
 h6 { font-size: 1em; }
 small { font-size: .75em; }
 
+sub { vertical-align: sub; }
+sup { vertical-align: super; }
+
 .ellipsis {
 	overflow: hidden;
 	max-width: 100%;
