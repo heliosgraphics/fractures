@@ -4,7 +4,7 @@
 	"author": "Krisztian Puska",
 	"description": "Atomic CSS toolkit.",
 	"scripts": {
-		"prepublish": "mkdir -p dist && gulp build",
+		"prepare": "mkdir -p dist && gulp build",
 		"start": "gulp watch",
 		"build": "gulp build",
 		"watch": "gulp watch",
