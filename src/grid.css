@@ -1,3 +1,5 @@
+@import url("./variables.css");
+
 .grid-gap-1 { grid-gap: var(--box-1); }
 .grid-gap-2 { grid-gap: var(--box-2); }
 .grid-gap-3 { grid-gap: var(--box-3); }

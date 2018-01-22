@@ -1,3 +1,5 @@
+@import url("./variables.css");
+
 .w-0 { width: 0; }
 .w-1 { width: var(--box-1); }
 .w-2 { width: var(--box-2); }
