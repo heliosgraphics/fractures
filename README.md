@@ -1,3 +1,5 @@
+<img src="https://fractures.space/static/badge-dark.svg" width="149" alt="Fractures badge" />
+
 # fractures
 
 ![](https://travis-ci.org/fractures/fractures.svg)
