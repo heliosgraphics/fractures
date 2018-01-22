@@ -1,4 +1,4 @@
-@import url("./variables.css");
+@import url("./variables/variables.css");
 
 .m-0 { margin: 0; }
 .m-1 { margin: var(--box-1); }

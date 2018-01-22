@@ -1,4 +1,4 @@
-@import url("./variables.css");
+@import url("./variables/variables.css");
 
 .h-0 { height: 0; }
 .h-1 { height: var(--box-1); }

@@ -1,4 +1,4 @@
-@import url("./variables.css");
+@import url("./variables/variables.css");
 
 sub { vertical-align: sub; }
 sup { vertical-align: super; }

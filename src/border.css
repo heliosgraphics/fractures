@@ -1,4 +1,4 @@
-@import url("./variables.css");
+@import url("./variables/variables.css");
 
 .radius-0 { border-radius: 0; }
 .radius-1 { border-radius: var(--box-1); }

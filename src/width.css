@@ -1,4 +1,4 @@
-@import url("./variables.css");
+@import url("./variables/variables.css");
 
 .w-0 { width: 0; }
 .w-1 { width: var(--box-1); }

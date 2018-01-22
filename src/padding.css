@@ -1,4 +1,4 @@
-@import url("./variables.css");
+@import url("./variables/variables.css");
 
 .p-0 { padding: 0; }
 .p-1 { padding: var(--box-1); }
