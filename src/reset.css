@@ -1,8 +1,6 @@
 * {
 	margin: 0;
 	padding: 0;
-
-	font-size: 100%;
 }
 
 *,
@@ -14,6 +12,7 @@ body { position: relative; }
 html { overflow-y: scroll; }
 
 a { text-decoration: none; }
+
 ul,
 ol { list-style: none; }
 img { max-width: 100%; }

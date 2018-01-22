@@ -14,9 +14,6 @@
 	--gray: gray;
 	--black: black;
 
-	--basefont: 16px;
-	--baseline: 1.6;
-
-	--regular: 400;
-	--bold: 700;
+	--normal: normal;
+	--bold: bold;
 }

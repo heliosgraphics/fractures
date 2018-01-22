@@ -1,17 +1,3 @@
-body {
-	font-size: var(--basefont);
-	line-height: var(--baseline);
-}
-
-h1 { font-size: 3em; }
-h2 { font-size: 2.5em; }
-h3 { font-size: 2em; }
-h4 { font-size: 1.75em; }
-h5 { font-size: 1.5em; }
-p,
-h6 { font-size: 1em; }
-small { font-size: .75em; }
-
 sub { vertical-align: sub; }
 sup { vertical-align: super; }
 
@@ -27,7 +13,7 @@ sup { vertical-align: super; }
 .normal { font-style: normal; }
 .oblique { font-style: oblique; }
 
-.regular { font-weight: var(--regular); }
+.regular { font-weight: var(--normal); }
 .bold { font-weight: var(--bold); }
 
 .center { text-align: center; }
