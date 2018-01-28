@@ -1,8 +1,9 @@
 {
 	"name": "fractures",
-	"version": "1.2.0",
+	"version": "1.2.1",
 	"author": "Krisztian Puska",
 	"description": "Atomic CSS toolkit.",
+	"main": "dist/fractures.css",
 	"scripts": {
 		"prepare": "mkdir -p dist && gulp build",
 		"start": "gulp watch",
