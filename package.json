@@ -1,39 +1,39 @@
 {
-	"name": "fractures",
-	"version": "1.2.1",
-	"author": "Krisztian Puska",
-	"description": "Atomic CSS toolkit.",
-	"main": "dist/fractures.css",
-	"scripts": {
-		"prepare": "mkdir -p dist && gulp build",
-		"start": "gulp watch",
-		"build": "gulp build",
-		"watch": "gulp watch",
-		"test": "gulp test"
-	},
-	"keywords": [
-		"CSS",
-		"atomic"
-	],
-	"repository": {
-		"type": "git",
-		"url": "https://github.com/fractures/fractures"
-	},
-	"license": "MIT",
-	"bugs": {
-		"url": "https://github.com/fractures/fractures/issues"
-	},
-	"homepage": "https://fractures.space",
-	"devDependencies": {
-		"gulp-cssnano": "^2.1.2",
-		"gulp-gzip": "^1.4.1",
-		"gulp-postcss": "^7.0.1",
-		"gulp-rename": "^1.2.2",
-		"gulp-size": "^3.0.0",
-		"gulp-stylelint": "^6.0.0",
-		"gulp": "^3.9.1",
-		"postcss-cssnext": "^3.0.2",
-		"postcss-import": "^11.0.0",
-		"stylelint": "^8.4.0"
-	}
+  "name": "fractures",
+  "version": "1.2.1",
+  "author": "Krisztian Puska",
+  "description": "Atomic CSS toolkit.",
+  "main": "dist/fractures.css",
+  "scripts": {
+    "prepare": "mkdir -p dist && gulp build",
+    "start": "gulp watch",
+    "build": "gulp build",
+    "watch": "gulp watch",
+    "test": "gulp test"
+  },
+  "keywords": [
+    "CSS",
+    "atomic"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/fractures/fractures"
+  },
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/fractures/fractures/issues"
+  },
+  "homepage": "https://fractures.space",
+  "devDependencies": {
+    "gulp-cssnano": "^2.1.2",
+    "gulp-gzip": "^1.4.2",
+    "gulp-postcss": "^7.0.1",
+    "gulp-rename": "^1.2.2",
+    "gulp-size": "^3.0.0",
+    "gulp-stylelint": "^6.0.0",
+    "gulp": "^3.9.1",
+    "postcss-cssnext": "^3.1.0",
+    "postcss-import": "^11.1.0",
+    "stylelint": "^9.1.1"
+  }
 }
