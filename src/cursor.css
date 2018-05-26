@@ -1,0 +1,11 @@
+.cursor-col-resize { cursor: col-resize; }
+.cursor-grab { cursor: grab; }
+.cursor-grabbing { cursor: grabbing; }
+.cursor-help { cursor: help; }
+.cursor-move { cursor: move; }
+.cursor-pointer { cursor: pointer; }
+.cursor-progress { cursor: progress; }
+.cursor-row-resize { cursor: row-resize; }
+.cursor-text { cursor: text; }
+.cursor-zoom-in { cursor: zoom-in; }
+.cursor-zoom-out { cursor: zoom-out; }
