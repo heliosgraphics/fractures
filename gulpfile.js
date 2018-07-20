@@ -10,7 +10,10 @@ const stylelint = require("gulp-stylelint")
 
 const files = ["./src/fractures.css"]
 const postcssVanilla = [postcssimport(), postcsscssnext({ browsers: [""] })]
-const postcssAutoprefix = [postcssimport(), postcsscssnext({ browsers: ["last 2 versions"] })]
+const postcssAutoprefix = [
+	postcssimport(),
+	postcsscssnext({ browsers: ["last 2 versions"] })
+]
 
 // Build
 gulp.task("build", ["default", "build: vanilla", "build: autoprefixed"])
@@ -58,7 +61,9 @@ gulp.task("build: autoprefixed", () =>
 gulp.task("lint", ["default"], () =>
 	gulp
 		.src("./dist/fractures.css")
-		.pipe(stylelint({ reporters: [{ formatter: "string", console: true }] }))
+		.pipe(
+			stylelint({ reporters: [{ formatter: "string", console: true }] })
+		)
 )
 
 // Report csslint after a build
