@@ -6,6 +6,7 @@
 	content: " ";
 }
 
+.contents { display: contents; }
 .grid { display: grid; }
 .block { display: block; }
 .flex { display: flex; }
