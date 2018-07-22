@@ -39,3 +39,4 @@ sup { vertical-align: super; }
 .break-word { word-wrap: break-word; }
 
 .unselectable { user-select: none; }
+.no-events { pointer-events: none; }
