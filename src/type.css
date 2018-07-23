@@ -20,7 +20,8 @@
 .left { text-align: left; }
 .right { text-align: right; }
 
-.line-through { text-decoration: line-through; }
+.line-through,
+.delete { text-decoration: line-through; }
 .overline { text-decoration: overline; }
 .underline { text-decoration: underline; }
 
