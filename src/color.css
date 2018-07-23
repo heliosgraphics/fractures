@@ -7,6 +7,7 @@
 .dark { color: var(--darkgray); }
 .gray,
 .grey { color: var(--gray); }
+.dim { color: var(--dimgray); }
 .black { color: var(--black); }
 
 .bg-white { background-color: var(--white); }
@@ -16,4 +17,5 @@
 .bg-dark { background-color: var(--darkgray); }
 .bg-gray,
 .bg-grey { background-color: var(--gray); }
+.bg-dim { background-color: var(--dimgray); }
 .bg-black { background-color: var(--black); }
