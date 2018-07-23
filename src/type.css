@@ -1,8 +1,5 @@
 @import url("./variables/variables.css");
 
-sub { vertical-align: sub; }
-sup { vertical-align: super; }
-
 .ellipsis {
 	overflow: hidden;
 	max-width: 100%;

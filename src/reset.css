@@ -16,3 +16,6 @@ a { text-decoration: none; }
 ul,
 ol { list-style: none; }
 img { max-width: 100%; }
+
+sub { vertical-align: sub; }
+sup { vertical-align: super; }
