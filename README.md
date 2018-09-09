@@ -8,7 +8,7 @@
 
 Fractures helps you bootstrap design-systems and prototypes by providing a set of non-blocking, atomic, utility classes.
 
-Read the [docs](https://fractures.space/docs) for examples, or find out [more](https://fractures.space/about).
+Read the [documentation](https://fractures.space/docs), see [examples](https://github.com/fractures/fractures-examples), or find out [more](https://fractures.space/about).
 
 ---
 
