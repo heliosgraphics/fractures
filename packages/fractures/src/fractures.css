@@ -1,0 +1,19 @@
+@import './reset.css';
+@import './config.css';
+
+@import './background.css';
+@import './border.css';
+@import './color.css';
+@import './cursor.css';
+@import './display.css';
+@import './flex.css';
+@import './grid.css';
+@import './height.css';
+@import './list.css';
+@import './margin.css';
+@import './opacity.css';
+@import './overflow.css';
+@import './padding.css';
+@import './position.css';
+@import './type.css';
+@import './width.css';

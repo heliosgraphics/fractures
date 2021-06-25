@@ -2,20 +2,17 @@
 
 # fractures
 
-![](https://travis-ci.org/fractures/fractures.svg)
+## Functional CSS, but only the good parts.
 
-## Baseline atomic CSS toolkit.
-
-Fractures helps you bootstrap design-systems and prototypes by providing a set of non-blocking, atomic, utility classes.
-
-Read the [documentation](https://fractures.space/docs), see [examples](https://github.com/fractures/fractures-examples), or find out [more](https://fractures.space/about).
+Fractures helps you create resilient design-systems and rapid prototypes by providing a set of non-blocking utility classes.
 
 ---
 
-### Goals
+## Goals
 
-- You can design with &mdash; not around it. Leaves UI untouched.
-- Atomic, non blocking.
-- Manageable cognitive load, with a small footprint.
-- Fast in every way.
-- Framework agnostic.
+- Atomic
+- Framework agnostic
+- No UI
+- Fast in every way
+- Manageable cognitive load
+- Small footprint

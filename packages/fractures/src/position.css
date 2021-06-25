@@ -1,0 +1,699 @@
+.absolute { position: absolute; }
+.fixed { position: fixed; }
+.relative { position: relative; }
+.static { position: static; }
+.sticky { position: sticky; }
+
+.z-0 { z-index: var(--z-index-0); }
+.z-10 { z-index: var(--z-index-10); }
+.z-20 { z-index: var(--z-index-20); }
+.z-30 { z-index: var(--z-index-30); }
+.z-40 { z-index: var(--z-index-40); }
+.z-50 { z-index: var(--z-index-50); }
+.z-60 { z-index: var(--z-index-60); }
+.z-70 { z-index: var(--z-index-70); }
+.z-80 { z-index: var(--z-index-80); }
+.z-90 { z-index: var(--z-index-90); }
+.z-100 { z-index: var(--z-index-100); }
+
+.bottom-0 { bottom: 0; }
+.bottom-px { bottom: var(--box-px); }
+.bottom-1 { bottom: var(--box-1); }
+.bottom-2 { bottom: var(--box-2); }
+.bottom-3 { bottom: var(--box-3); }
+.bottom-4 { bottom: var(--box-4); }
+.bottom-5 { bottom: var(--box-5); }
+.bottom-6 { bottom: var(--box-6); }
+.bottom-7 { bottom: var(--box-7); }
+.bottom-8 { bottom: var(--box-8); }
+.bottom-9 { bottom: var(--box-9); }
+.bottom-10 { bottom: var(--box-10); }
+.bottom-11 { bottom: var(--box-11); }
+.bottom-11 { bottom: var(--box-11); }
+.bottom-12 { bottom: var(--box-12); }
+.bottom-12 { bottom: var(--box-12); }
+.bottom-13 { bottom: var(--box-13); }
+.bottom-13 { bottom: var(--box-13); }
+.bottom-14 { bottom: var(--box-14); }
+.bottom-14 { bottom: var(--box-14); }
+.bottom-15 { bottom: var(--box-15); }
+.bottom-15 { bottom: var(--box-15); }
+.bottom-16 { bottom: var(--box-16); }
+.bottom-24 { bottom: var(--box-24); }
+.bottom-32 { bottom: var(--box-32); }
+.bottom-40 { bottom: var(--box-40); }
+.bottom-48 { bottom: var(--box-48); }
+
+.left-0 { left: 0; }
+.left-px { left: var(--box-px); }
+.left-1 { left: var(--box-1); }
+.left-2 { left: var(--box-2); }
+.left-3 { left: var(--box-3); }
+.left-4 { left: var(--box-4); }
+.left-5 { left: var(--box-5); }
+.left-6 { left: var(--box-6); }
+.left-7 { left: var(--box-7); }
+.left-8 { left: var(--box-8); }
+.left-9 { left: var(--box-9); }
+.left-10 { left: var(--box-10); }
+.left-11 { left: var(--box-11); }
+.left-11 { left: var(--box-11); }
+.left-12 { left: var(--box-12); }
+.left-12 { left: var(--box-12); }
+.left-13 { left: var(--box-13); }
+.left-13 { left: var(--box-13); }
+.left-14 { left: var(--box-14); }
+.left-14 { left: var(--box-14); }
+.left-15 { left: var(--box-15); }
+.left-15 { left: var(--box-15); }
+.left-16 { left: var(--box-16); }
+.left-24 { left: var(--box-24); }
+.left-32 { left: var(--box-32); }
+.left-40 { left: var(--box-40); }
+.left-48 { left: var(--box-48); }
+
+.right-0 { right: 0; }
+.right-px { right: var(--box-px); }
+.right-1 { right: var(--box-1); }
+.right-2 { right: var(--box-2); }
+.right-3 { right: var(--box-3); }
+.right-4 { right: var(--box-4); }
+.right-5 { right: var(--box-5); }
+.right-6 { right: var(--box-6); }
+.right-7 { right: var(--box-7); }
+.right-8 { right: var(--box-8); }
+.right-9 { right: var(--box-9); }
+.right-10 { right: var(--box-10); }
+.right-11 { right: var(--box-11); }
+.right-11 { right: var(--box-11); }
+.right-12 { right: var(--box-12); }
+.right-12 { right: var(--box-12); }
+.right-13 { right: var(--box-13); }
+.right-13 { right: var(--box-13); }
+.right-14 { right: var(--box-14); }
+.right-14 { right: var(--box-14); }
+.right-15 { right: var(--box-15); }
+.right-15 { right: var(--box-15); }
+.right-16 { right: var(--box-16); }
+.right-24 { right: var(--box-24); }
+.right-32 { right: var(--box-32); }
+.right-40 { right: var(--box-40); }
+.right-48 { right: var(--box-48); }
+
+.top-0 { top: 0; }
+.top-px { top: var(--box-px); }
+.top-1 { top: var(--box-1); }
+.top-2 { top: var(--box-2); }
+.top-3 { top: var(--box-3); }
+.top-4 { top: var(--box-4); }
+.top-5 { top: var(--box-5); }
+.top-6 { top: var(--box-6); }
+.top-7 { top: var(--box-7); }
+.top-8 { top: var(--box-8); }
+.top-9 { top: var(--box-9); }
+.top-10 { top: var(--box-10); }
+.top-11 { top: var(--box-11); }
+.top-11 { top: var(--box-11); }
+.top-12 { top: var(--box-12); }
+.top-12 { top: var(--box-12); }
+.top-13 { top: var(--box-13); }
+.top-13 { top: var(--box-13); }
+.top-14 { top: var(--box-14); }
+.top-14 { top: var(--box-14); }
+.top-15 { top: var(--box-15); }
+.top-15 { top: var(--box-15); }
+.top-16 { top: var(--box-16); }
+.top-24 { top: var(--box-24); }
+.top-32 { top: var(--box-32); }
+.top-40 { top: var(--box-40); }
+.top-48 { top: var(--box-48); }
+
+@media (max-width: 1360px) {
+    .xxl\:bottom-0 { bottom: 0; }
+    .xxl\:bottom-px { bottom: var(--box-px); }
+    .xxl\:bottom-1 { bottom: var(--box-1); }
+    .xxl\:bottom-2 { bottom: var(--box-2); }
+    .xxl\:bottom-3 { bottom: var(--box-3); }
+    .xxl\:bottom-4 { bottom: var(--box-4); }
+    .xxl\:bottom-5 { bottom: var(--box-5); }
+    .xxl\:bottom-6 { bottom: var(--box-6); }
+    .xxl\:bottom-7 { bottom: var(--box-7); }
+    .xxl\:bottom-8 { bottom: var(--box-8); }
+    .xxl\:bottom-9 { bottom: var(--box-9); }
+    .xxl\:bottom-10 { bottom: var(--box-10); }
+    .xxl\:bottom-11 { bottom: var(--box-11); }
+    .xxl\:bottom-11 { bottom: var(--box-11); }
+    .xxl\:bottom-12 { bottom: var(--box-12); }
+    .xxl\:bottom-12 { bottom: var(--box-12); }
+    .xxl\:bottom-13 { bottom: var(--box-13); }
+    .xxl\:bottom-13 { bottom: var(--box-13); }
+    .xxl\:bottom-14 { bottom: var(--box-14); }
+    .xxl\:bottom-14 { bottom: var(--box-14); }
+    .xxl\:bottom-15 { bottom: var(--box-15); }
+    .xxl\:bottom-15 { bottom: var(--box-15); }
+    .xxl\:bottom-16 { bottom: var(--box-16); }
+    .xxl\:bottom-24 { bottom: var(--box-24); }
+    .xxl\:bottom-32 { bottom: var(--box-32); }
+    .xxl\:bottom-40 { bottom: var(--box-40); }
+    .xxl\:bottom-48 { bottom: var(--box-48); }
+
+    .xxl\:left-0 { left: 0; }
+    .xxl\:left-px { left: var(--box-px); }
+    .xxl\:left-1 { left: var(--box-1); }
+    .xxl\:left-2 { left: var(--box-2); }
+    .xxl\:left-3 { left: var(--box-3); }
+    .xxl\:left-4 { left: var(--box-4); }
+    .xxl\:left-5 { left: var(--box-5); }
+    .xxl\:left-6 { left: var(--box-6); }
+    .xxl\:left-7 { left: var(--box-7); }
+    .xxl\:left-8 { left: var(--box-8); }
+    .xxl\:left-9 { left: var(--box-9); }
+    .xxl\:left-10 { left: var(--box-10); }
+    .xxl\:left-11 { left: var(--box-11); }
+    .xxl\:left-11 { left: var(--box-11); }
+    .xxl\:left-12 { left: var(--box-12); }
+    .xxl\:left-12 { left: var(--box-12); }
+    .xxl\:left-13 { left: var(--box-13); }
+    .xxl\:left-13 { left: var(--box-13); }
+    .xxl\:left-14 { left: var(--box-14); }
+    .xxl\:left-14 { left: var(--box-14); }
+    .xxl\:left-15 { left: var(--box-15); }
+    .xxl\:left-15 { left: var(--box-15); }
+    .xxl\:left-16 { left: var(--box-16); }
+    .xxl\:left-24 { left: var(--box-24); }
+    .xxl\:left-32 { left: var(--box-32); }
+    .xxl\:left-40 { left: var(--box-40); }
+    .xxl\:left-48 { left: var(--box-48); }
+
+    .xxl\:right-0 { right: 0; }
+    .xxl\:right-px { right: var(--box-px); }
+    .xxl\:right-1 { right: var(--box-1); }
+    .xxl\:right-2 { right: var(--box-2); }
+    .xxl\:right-3 { right: var(--box-3); }
+    .xxl\:right-4 { right: var(--box-4); }
+    .xxl\:right-5 { right: var(--box-5); }
+    .xxl\:right-6 { right: var(--box-6); }
+    .xxl\:right-7 { right: var(--box-7); }
+    .xxl\:right-8 { right: var(--box-8); }
+    .xxl\:right-9 { right: var(--box-9); }
+    .xxl\:right-10 { right: var(--box-10); }
+    .xxl\:right-11 { right: var(--box-11); }
+    .xxl\:right-11 { right: var(--box-11); }
+    .xxl\:right-12 { right: var(--box-12); }
+    .xxl\:right-12 { right: var(--box-12); }
+    .xxl\:right-13 { right: var(--box-13); }
+    .xxl\:right-13 { right: var(--box-13); }
+    .xxl\:right-14 { right: var(--box-14); }
+    .xxl\:right-14 { right: var(--box-14); }
+    .xxl\:right-15 { right: var(--box-15); }
+    .xxl\:right-15 { right: var(--box-15); }
+    .xxl\:right-16 { right: var(--box-16); }
+    .xxl\:right-24 { right: var(--box-24); }
+    .xxl\:right-32 { right: var(--box-32); }
+    .xxl\:right-40 { right: var(--box-40); }
+    .xxl\:right-48 { right: var(--box-48); }
+
+    .xxl\:top-0 { top: 0; }
+    .xxl\:top-px { top: var(--box-px); }
+    .xxl\:top-1 { top: var(--box-1); }
+    .xxl\:top-2 { top: var(--box-2); }
+    .xxl\:top-3 { top: var(--box-3); }
+    .xxl\:top-4 { top: var(--box-4); }
+    .xxl\:top-5 { top: var(--box-5); }
+    .xxl\:top-6 { top: var(--box-6); }
+    .xxl\:top-7 { top: var(--box-7); }
+    .xxl\:top-8 { top: var(--box-8); }
+    .xxl\:top-9 { top: var(--box-9); }
+    .xxl\:top-10 { top: var(--box-10); }
+    .xxl\:top-11 { top: var(--box-11); }
+    .xxl\:top-11 { top: var(--box-11); }
+    .xxl\:top-12 { top: var(--box-12); }
+    .xxl\:top-12 { top: var(--box-12); }
+    .xxl\:top-13 { top: var(--box-13); }
+    .xxl\:top-13 { top: var(--box-13); }
+    .xxl\:top-14 { top: var(--box-14); }
+    .xxl\:top-14 { top: var(--box-14); }
+    .xxl\:top-15 { top: var(--box-15); }
+    .xxl\:top-15 { top: var(--box-15); }
+    .xxl\:top-16 { top: var(--box-16); }
+    .xxl\:top-24 { top: var(--box-24); }
+    .xxl\:top-32 { top: var(--box-32); }
+    .xxl\:top-40 { top: var(--box-40); }
+    .xxl\:top-48 { top: var(--box-48); }
+}
+
+@media (max-width: 1032px) {
+    .xl\:bottom-0 { bottom: 0; }
+    .xl\:bottom-px { bottom: var(--box-px); }
+    .xl\:bottom-1 { bottom: var(--box-1); }
+    .xl\:bottom-2 { bottom: var(--box-2); }
+    .xl\:bottom-3 { bottom: var(--box-3); }
+    .xl\:bottom-4 { bottom: var(--box-4); }
+    .xl\:bottom-5 { bottom: var(--box-5); }
+    .xl\:bottom-6 { bottom: var(--box-6); }
+    .xl\:bottom-7 { bottom: var(--box-7); }
+    .xl\:bottom-8 { bottom: var(--box-8); }
+    .xl\:bottom-9 { bottom: var(--box-9); }
+    .xl\:bottom-10 { bottom: var(--box-10); }
+    .xl\:bottom-11 { bottom: var(--box-11); }
+    .xl\:bottom-11 { bottom: var(--box-11); }
+    .xl\:bottom-12 { bottom: var(--box-12); }
+    .xl\:bottom-12 { bottom: var(--box-12); }
+    .xl\:bottom-13 { bottom: var(--box-13); }
+    .xl\:bottom-13 { bottom: var(--box-13); }
+    .xl\:bottom-14 { bottom: var(--box-14); }
+    .xl\:bottom-14 { bottom: var(--box-14); }
+    .xl\:bottom-15 { bottom: var(--box-15); }
+    .xl\:bottom-15 { bottom: var(--box-15); }
+    .xl\:bottom-16 { bottom: var(--box-16); }
+    .xl\:bottom-24 { bottom: var(--box-24); }
+    .xl\:bottom-32 { bottom: var(--box-32); }
+    .xl\:bottom-40 { bottom: var(--box-40); }
+    .xl\:bottom-48 { bottom: var(--box-48); }
+
+    .xl\:left-0 { left: 0; }
+    .xl\:left-px { left: var(--box-px); }
+    .xl\:left-1 { left: var(--box-1); }
+    .xl\:left-2 { left: var(--box-2); }
+    .xl\:left-3 { left: var(--box-3); }
+    .xl\:left-4 { left: var(--box-4); }
+    .xl\:left-5 { left: var(--box-5); }
+    .xl\:left-6 { left: var(--box-6); }
+    .xl\:left-7 { left: var(--box-7); }
+    .xl\:left-8 { left: var(--box-8); }
+    .xl\:left-9 { left: var(--box-9); }
+    .xl\:left-10 { left: var(--box-10); }
+    .xl\:left-11 { left: var(--box-11); }
+    .xl\:left-11 { left: var(--box-11); }
+    .xl\:left-12 { left: var(--box-12); }
+    .xl\:left-12 { left: var(--box-12); }
+    .xl\:left-13 { left: var(--box-13); }
+    .xl\:left-13 { left: var(--box-13); }
+    .xl\:left-14 { left: var(--box-14); }
+    .xl\:left-14 { left: var(--box-14); }
+    .xl\:left-15 { left: var(--box-15); }
+    .xl\:left-15 { left: var(--box-15); }
+    .xl\:left-16 { left: var(--box-16); }
+    .xl\:left-24 { left: var(--box-24); }
+    .xl\:left-32 { left: var(--box-32); }
+    .xl\:left-40 { left: var(--box-40); }
+    .xl\:left-48 { left: var(--box-48); }
+
+    .xl\:right-0 { right: 0; }
+    .xl\:right-px { right: var(--box-px); }
+    .xl\:right-1 { right: var(--box-1); }
+    .xl\:right-2 { right: var(--box-2); }
+    .xl\:right-3 { right: var(--box-3); }
+    .xl\:right-4 { right: var(--box-4); }
+    .xl\:right-5 { right: var(--box-5); }
+    .xl\:right-6 { right: var(--box-6); }
+    .xl\:right-7 { right: var(--box-7); }
+    .xl\:right-8 { right: var(--box-8); }
+    .xl\:right-9 { right: var(--box-9); }
+    .xl\:right-10 { right: var(--box-10); }
+    .xl\:right-11 { right: var(--box-11); }
+    .xl\:right-11 { right: var(--box-11); }
+    .xl\:right-12 { right: var(--box-12); }
+    .xl\:right-12 { right: var(--box-12); }
+    .xl\:right-13 { right: var(--box-13); }
+    .xl\:right-13 { right: var(--box-13); }
+    .xl\:right-14 { right: var(--box-14); }
+    .xl\:right-14 { right: var(--box-14); }
+    .xl\:right-15 { right: var(--box-15); }
+    .xl\:right-15 { right: var(--box-15); }
+    .xl\:right-16 { right: var(--box-16); }
+    .xl\:right-24 { right: var(--box-24); }
+    .xl\:right-32 { right: var(--box-32); }
+    .xl\:right-40 { right: var(--box-40); }
+    .xl\:right-48 { right: var(--box-48); }
+
+    .xl\:top-0 { top: 0; }
+    .xl\:top-px { top: var(--box-px); }
+    .xl\:top-1 { top: var(--box-1); }
+    .xl\:top-2 { top: var(--box-2); }
+    .xl\:top-3 { top: var(--box-3); }
+    .xl\:top-4 { top: var(--box-4); }
+    .xl\:top-5 { top: var(--box-5); }
+    .xl\:top-6 { top: var(--box-6); }
+    .xl\:top-7 { top: var(--box-7); }
+    .xl\:top-8 { top: var(--box-8); }
+    .xl\:top-9 { top: var(--box-9); }
+    .xl\:top-10 { top: var(--box-10); }
+    .xl\:top-11 { top: var(--box-11); }
+    .xl\:top-11 { top: var(--box-11); }
+    .xl\:top-12 { top: var(--box-12); }
+    .xl\:top-12 { top: var(--box-12); }
+    .xl\:top-13 { top: var(--box-13); }
+    .xl\:top-13 { top: var(--box-13); }
+    .xl\:top-14 { top: var(--box-14); }
+    .xl\:top-14 { top: var(--box-14); }
+    .xl\:top-15 { top: var(--box-15); }
+    .xl\:top-15 { top: var(--box-15); }
+    .xl\:top-16 { top: var(--box-16); }
+    .xl\:top-24 { top: var(--box-24); }
+    .xl\:top-32 { top: var(--box-32); }
+    .xl\:top-40 { top: var(--box-40); }
+    .xl\:top-48 { top: var(--box-48); }
+}
+
+@media (max-width: 864px) {
+    .lg\:bottom-0 { bottom: 0; }
+    .lg\:bottom-px { bottom: var(--box-px); }
+    .lg\:bottom-1 { bottom: var(--box-1); }
+    .lg\:bottom-2 { bottom: var(--box-2); }
+    .lg\:bottom-3 { bottom: var(--box-3); }
+    .lg\:bottom-4 { bottom: var(--box-4); }
+    .lg\:bottom-5 { bottom: var(--box-5); }
+    .lg\:bottom-6 { bottom: var(--box-6); }
+    .lg\:bottom-7 { bottom: var(--box-7); }
+    .lg\:bottom-8 { bottom: var(--box-8); }
+    .lg\:bottom-9 { bottom: var(--box-9); }
+    .lg\:bottom-10 { bottom: var(--box-10); }
+    .lg\:bottom-11 { bottom: var(--box-11); }
+    .lg\:bottom-11 { bottom: var(--box-11); }
+    .lg\:bottom-12 { bottom: var(--box-12); }
+    .lg\:bottom-12 { bottom: var(--box-12); }
+    .lg\:bottom-13 { bottom: var(--box-13); }
+    .lg\:bottom-13 { bottom: var(--box-13); }
+    .lg\:bottom-14 { bottom: var(--box-14); }
+    .lg\:bottom-14 { bottom: var(--box-14); }
+    .lg\:bottom-15 { bottom: var(--box-15); }
+    .lg\:bottom-15 { bottom: var(--box-15); }
+    .lg\:bottom-16 { bottom: var(--box-16); }
+    .lg\:bottom-24 { bottom: var(--box-24); }
+    .lg\:bottom-32 { bottom: var(--box-32); }
+    .lg\:bottom-40 { bottom: var(--box-40); }
+    .lg\:bottom-48 { bottom: var(--box-48); }
+
+    .lg\:left-0 { left: 0; }
+    .lg\:left-px { left: var(--box-px); }
+    .lg\:left-1 { left: var(--box-1); }
+    .lg\:left-2 { left: var(--box-2); }
+    .lg\:left-3 { left: var(--box-3); }
+    .lg\:left-4 { left: var(--box-4); }
+    .lg\:left-5 { left: var(--box-5); }
+    .lg\:left-6 { left: var(--box-6); }
+    .lg\:left-7 { left: var(--box-7); }
+    .lg\:left-8 { left: var(--box-8); }
+    .lg\:left-9 { left: var(--box-9); }
+    .lg\:left-10 { left: var(--box-10); }
+    .lg\:left-11 { left: var(--box-11); }
+    .lg\:left-11 { left: var(--box-11); }
+    .lg\:left-12 { left: var(--box-12); }
+    .lg\:left-12 { left: var(--box-12); }
+    .lg\:left-13 { left: var(--box-13); }
+    .lg\:left-13 { left: var(--box-13); }
+    .lg\:left-14 { left: var(--box-14); }
+    .lg\:left-14 { left: var(--box-14); }
+    .lg\:left-15 { left: var(--box-15); }
+    .lg\:left-15 { left: var(--box-15); }
+    .lg\:left-16 { left: var(--box-16); }
+    .lg\:left-24 { left: var(--box-24); }
+    .lg\:left-32 { left: var(--box-32); }
+    .lg\:left-40 { left: var(--box-40); }
+    .lg\:left-48 { left: var(--box-48); }
+
+    .lg\:right-0 { right: 0; }
+    .lg\:right-px { right: var(--box-px); }
+    .lg\:right-1 { right: var(--box-1); }
+    .lg\:right-2 { right: var(--box-2); }
+    .lg\:right-3 { right: var(--box-3); }
+    .lg\:right-4 { right: var(--box-4); }
+    .lg\:right-5 { right: var(--box-5); }
+    .lg\:right-6 { right: var(--box-6); }
+    .lg\:right-7 { right: var(--box-7); }
+    .lg\:right-8 { right: var(--box-8); }
+    .lg\:right-9 { right: var(--box-9); }
+    .lg\:right-10 { right: var(--box-10); }
+    .lg\:right-11 { right: var(--box-11); }
+    .lg\:right-11 { right: var(--box-11); }
+    .lg\:right-12 { right: var(--box-12); }
+    .lg\:right-12 { right: var(--box-12); }
+    .lg\:right-13 { right: var(--box-13); }
+    .lg\:right-13 { right: var(--box-13); }
+    .lg\:right-14 { right: var(--box-14); }
+    .lg\:right-14 { right: var(--box-14); }
+    .lg\:right-15 { right: var(--box-15); }
+    .lg\:right-15 { right: var(--box-15); }
+    .lg\:right-16 { right: var(--box-16); }
+    .lg\:right-24 { right: var(--box-24); }
+    .lg\:right-32 { right: var(--box-32); }
+    .lg\:right-40 { right: var(--box-40); }
+    .lg\:right-48 { right: var(--box-48); }
+
+    .lg\:top-0 { top: 0; }
+    .lg\:top-px { top: var(--box-px); }
+    .lg\:top-1 { top: var(--box-1); }
+    .lg\:top-2 { top: var(--box-2); }
+    .lg\:top-3 { top: var(--box-3); }
+    .lg\:top-4 { top: var(--box-4); }
+    .lg\:top-5 { top: var(--box-5); }
+    .lg\:top-6 { top: var(--box-6); }
+    .lg\:top-7 { top: var(--box-7); }
+    .lg\:top-8 { top: var(--box-8); }
+    .lg\:top-9 { top: var(--box-9); }
+    .lg\:top-10 { top: var(--box-10); }
+    .lg\:top-11 { top: var(--box-11); }
+    .lg\:top-11 { top: var(--box-11); }
+    .lg\:top-12 { top: var(--box-12); }
+    .lg\:top-12 { top: var(--box-12); }
+    .lg\:top-13 { top: var(--box-13); }
+    .lg\:top-13 { top: var(--box-13); }
+    .lg\:top-14 { top: var(--box-14); }
+    .lg\:top-14 { top: var(--box-14); }
+    .lg\:top-15 { top: var(--box-15); }
+    .lg\:top-15 { top: var(--box-15); }
+    .lg\:top-16 { top: var(--box-16); }
+    .lg\:top-24 { top: var(--box-24); }
+    .lg\:top-32 { top: var(--box-32); }
+    .lg\:top-40 { top: var(--box-40); }
+    .lg\:top-48 { top: var(--box-48); }
+}
+
+@media (max-width: 696px) {
+    .md\:bottom-0 { bottom: 0; }
+    .md\:bottom-px { bottom: var(--box-px); }
+    .md\:bottom-1 { bottom: var(--box-1); }
+    .md\:bottom-2 { bottom: var(--box-2); }
+    .md\:bottom-3 { bottom: var(--box-3); }
+    .md\:bottom-4 { bottom: var(--box-4); }
+    .md\:bottom-5 { bottom: var(--box-5); }
+    .md\:bottom-6 { bottom: var(--box-6); }
+    .md\:bottom-7 { bottom: var(--box-7); }
+    .md\:bottom-8 { bottom: var(--box-8); }
+    .md\:bottom-9 { bottom: var(--box-9); }
+    .md\:bottom-10 { bottom: var(--box-10); }
+    .md\:bottom-11 { bottom: var(--box-11); }
+    .md\:bottom-11 { bottom: var(--box-11); }
+    .md\:bottom-12 { bottom: var(--box-12); }
+    .md\:bottom-12 { bottom: var(--box-12); }
+    .md\:bottom-13 { bottom: var(--box-13); }
+    .md\:bottom-13 { bottom: var(--box-13); }
+    .md\:bottom-14 { bottom: var(--box-14); }
+    .md\:bottom-14 { bottom: var(--box-14); }
+    .md\:bottom-15 { bottom: var(--box-15); }
+    .md\:bottom-15 { bottom: var(--box-15); }
+    .md\:bottom-16 { bottom: var(--box-16); }
+    .md\:bottom-24 { bottom: var(--box-24); }
+    .md\:bottom-32 { bottom: var(--box-32); }
+    .md\:bottom-40 { bottom: var(--box-40); }
+    .md\:bottom-48 { bottom: var(--box-48); }
+
+    .md\:left-0 { left: 0; }
+    .md\:left-px { left: var(--box-px); }
+    .md\:left-1 { left: var(--box-1); }
+    .md\:left-2 { left: var(--box-2); }
+    .md\:left-3 { left: var(--box-3); }
+    .md\:left-4 { left: var(--box-4); }
+    .md\:left-5 { left: var(--box-5); }
+    .md\:left-6 { left: var(--box-6); }
+    .md\:left-7 { left: var(--box-7); }
+    .md\:left-8 { left: var(--box-8); }
+    .md\:left-9 { left: var(--box-9); }
+    .md\:left-10 { left: var(--box-10); }
+    .md\:left-11 { left: var(--box-11); }
+    .md\:left-11 { left: var(--box-11); }
+    .md\:left-12 { left: var(--box-12); }
+    .md\:left-12 { left: var(--box-12); }
+    .md\:left-13 { left: var(--box-13); }
+    .md\:left-13 { left: var(--box-13); }
+    .md\:left-14 { left: var(--box-14); }
+    .md\:left-14 { left: var(--box-14); }
+    .md\:left-15 { left: var(--box-15); }
+    .md\:left-15 { left: var(--box-15); }
+    .md\:left-16 { left: var(--box-16); }
+    .md\:left-24 { left: var(--box-24); }
+    .md\:left-32 { left: var(--box-32); }
+    .md\:left-40 { left: var(--box-40); }
+    .md\:left-48 { left: var(--box-48); }
+
+    .md\:right-0 { right: 0; }
+    .md\:right-px { right: var(--box-px); }
+    .md\:right-1 { right: var(--box-1); }
+    .md\:right-2 { right: var(--box-2); }
+    .md\:right-3 { right: var(--box-3); }
+    .md\:right-4 { right: var(--box-4); }
+    .md\:right-5 { right: var(--box-5); }
+    .md\:right-6 { right: var(--box-6); }
+    .md\:right-7 { right: var(--box-7); }
+    .md\:right-8 { right: var(--box-8); }
+    .md\:right-9 { right: var(--box-9); }
+    .md\:right-10 { right: var(--box-10); }
+    .md\:right-11 { right: var(--box-11); }
+    .md\:right-11 { right: var(--box-11); }
+    .md\:right-12 { right: var(--box-12); }
+    .md\:right-12 { right: var(--box-12); }
+    .md\:right-13 { right: var(--box-13); }
+    .md\:right-13 { right: var(--box-13); }
+    .md\:right-14 { right: var(--box-14); }
+    .md\:right-14 { right: var(--box-14); }
+    .md\:right-15 { right: var(--box-15); }
+    .md\:right-15 { right: var(--box-15); }
+    .md\:right-16 { right: var(--box-16); }
+    .md\:right-24 { right: var(--box-24); }
+    .md\:right-32 { right: var(--box-32); }
+    .md\:right-40 { right: var(--box-40); }
+    .md\:right-48 { right: var(--box-48); }
+
+    .md\:top-0 { top: 0; }
+    .md\:top-px { top: var(--box-px); }
+    .md\:top-1 { top: var(--box-1); }
+    .md\:top-2 { top: var(--box-2); }
+    .md\:top-3 { top: var(--box-3); }
+    .md\:top-4 { top: var(--box-4); }
+    .md\:top-5 { top: var(--box-5); }
+    .md\:top-6 { top: var(--box-6); }
+    .md\:top-7 { top: var(--box-7); }
+    .md\:top-8 { top: var(--box-8); }
+    .md\:top-9 { top: var(--box-9); }
+    .md\:top-10 { top: var(--box-10); }
+    .md\:top-11 { top: var(--box-11); }
+    .md\:top-11 { top: var(--box-11); }
+    .md\:top-12 { top: var(--box-12); }
+    .md\:top-12 { top: var(--box-12); }
+    .md\:top-13 { top: var(--box-13); }
+    .md\:top-13 { top: var(--box-13); }
+    .md\:top-14 { top: var(--box-14); }
+    .md\:top-14 { top: var(--box-14); }
+    .md\:top-15 { top: var(--box-15); }
+    .md\:top-15 { top: var(--box-15); }
+    .md\:top-16 { top: var(--box-16); }
+    .md\:top-24 { top: var(--box-24); }
+    .md\:top-32 { top: var(--box-32); }
+    .md\:top-40 { top: var(--box-40); }
+    .md\:top-48 { top: var(--box-48); }
+}
+
+@media (max-width: 444px) {
+    .sm\:bottom-0 { bottom: 0; }
+    .sm\:bottom-px { bottom: var(--box-px); }
+    .sm\:bottom-1 { bottom: var(--box-1); }
+    .sm\:bottom-2 { bottom: var(--box-2); }
+    .sm\:bottom-3 { bottom: var(--box-3); }
+    .sm\:bottom-4 { bottom: var(--box-4); }
+    .sm\:bottom-5 { bottom: var(--box-5); }
+    .sm\:bottom-6 { bottom: var(--box-6); }
+    .sm\:bottom-7 { bottom: var(--box-7); }
+    .sm\:bottom-8 { bottom: var(--box-8); }
+    .sm\:bottom-9 { bottom: var(--box-9); }
+    .sm\:bottom-10 { bottom: var(--box-10); }
+    .sm\:bottom-11 { bottom: var(--box-11); }
+    .sm\:bottom-11 { bottom: var(--box-11); }
+    .sm\:bottom-12 { bottom: var(--box-12); }
+    .sm\:bottom-12 { bottom: var(--box-12); }
+    .sm\:bottom-13 { bottom: var(--box-13); }
+    .sm\:bottom-13 { bottom: var(--box-13); }
+    .sm\:bottom-14 { bottom: var(--box-14); }
+    .sm\:bottom-14 { bottom: var(--box-14); }
+    .sm\:bottom-15 { bottom: var(--box-15); }
+    .sm\:bottom-15 { bottom: var(--box-15); }
+    .sm\:bottom-16 { bottom: var(--box-16); }
+    .sm\:bottom-24 { bottom: var(--box-24); }
+    .sm\:bottom-32 { bottom: var(--box-32); }
+    .sm\:bottom-40 { bottom: var(--box-40); }
+    .sm\:bottom-48 { bottom: var(--box-48); }
+
+    .sm\:left-0 { left: 0; }
+    .sm\:left-px { left: var(--box-px); }
+    .sm\:left-1 { left: var(--box-1); }
+    .sm\:left-2 { left: var(--box-2); }
+    .sm\:left-3 { left: var(--box-3); }
+    .sm\:left-4 { left: var(--box-4); }
+    .sm\:left-5 { left: var(--box-5); }
+    .sm\:left-6 { left: var(--box-6); }
+    .sm\:left-7 { left: var(--box-7); }
+    .sm\:left-8 { left: var(--box-8); }
+    .sm\:left-9 { left: var(--box-9); }
+    .sm\:left-10 { left: var(--box-10); }
+    .sm\:left-11 { left: var(--box-11); }
+    .sm\:left-11 { left: var(--box-11); }
+    .sm\:left-12 { left: var(--box-12); }
+    .sm\:left-12 { left: var(--box-12); }
+    .sm\:left-13 { left: var(--box-13); }
+    .sm\:left-13 { left: var(--box-13); }
+    .sm\:left-14 { left: var(--box-14); }
+    .sm\:left-14 { left: var(--box-14); }
+    .sm\:left-15 { left: var(--box-15); }
+    .sm\:left-15 { left: var(--box-15); }
+    .sm\:left-16 { left: var(--box-16); }
+    .sm\:left-24 { left: var(--box-24); }
+    .sm\:left-32 { left: var(--box-32); }
+    .sm\:left-40 { left: var(--box-40); }
+    .sm\:left-48 { left: var(--box-48); }
+
+    .sm\:right-0 { right: 0; }
+    .sm\:right-px { right: var(--box-px); }
+    .sm\:right-1 { right: var(--box-1); }
+    .sm\:right-2 { right: var(--box-2); }
+    .sm\:right-3 { right: var(--box-3); }
+    .sm\:right-4 { right: var(--box-4); }
+    .sm\:right-5 { right: var(--box-5); }
+    .sm\:right-6 { right: var(--box-6); }
+    .sm\:right-7 { right: var(--box-7); }
+    .sm\:right-8 { right: var(--box-8); }
+    .sm\:right-9 { right: var(--box-9); }
+    .sm\:right-10 { right: var(--box-10); }
+    .sm\:right-11 { right: var(--box-11); }
+    .sm\:right-11 { right: var(--box-11); }
+    .sm\:right-12 { right: var(--box-12); }
+    .sm\:right-12 { right: var(--box-12); }
+    .sm\:right-13 { right: var(--box-13); }
+    .sm\:right-13 { right: var(--box-13); }
+    .sm\:right-14 { right: var(--box-14); }
+    .sm\:right-14 { right: var(--box-14); }
+    .sm\:right-15 { right: var(--box-15); }
+    .sm\:right-15 { right: var(--box-15); }
+    .sm\:right-16 { right: var(--box-16); }
+    .sm\:right-24 { right: var(--box-24); }
+    .sm\:right-32 { right: var(--box-32); }
+    .sm\:right-40 { right: var(--box-40); }
+    .sm\:right-48 { right: var(--box-48); }
+
+    .sm\:top-0 { top: 0; }
+    .sm\:top-px { top: var(--box-px); }
+    .sm\:top-1 { top: var(--box-1); }
+    .sm\:top-2 { top: var(--box-2); }
+    .sm\:top-3 { top: var(--box-3); }
+    .sm\:top-4 { top: var(--box-4); }
+    .sm\:top-5 { top: var(--box-5); }
+    .sm\:top-6 { top: var(--box-6); }
+    .sm\:top-7 { top: var(--box-7); }
+    .sm\:top-8 { top: var(--box-8); }
+    .sm\:top-9 { top: var(--box-9); }
+    .sm\:top-10 { top: var(--box-10); }
+    .sm\:top-11 { top: var(--box-11); }
+    .sm\:top-11 { top: var(--box-11); }
+    .sm\:top-12 { top: var(--box-12); }
+    .sm\:top-12 { top: var(--box-12); }
+    .sm\:top-13 { top: var(--box-13); }
+    .sm\:top-13 { top: var(--box-13); }
+    .sm\:top-14 { top: var(--box-14); }
+    .sm\:top-14 { top: var(--box-14); }
+    .sm\:top-15 { top: var(--box-15); }
+    .sm\:top-15 { top: var(--box-15); }
+    .sm\:top-16 { top: var(--box-16); }
+    .sm\:top-24 { top: var(--box-24); }
+    .sm\:top-32 { top: var(--box-32); }
+    .sm\:top-40 { top: var(--box-40); }
+    .sm\:top-48 { top: var(--box-48); }
+}

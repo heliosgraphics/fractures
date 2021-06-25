@@ -1,0 +1,26 @@
+:root {
+	--font-family-sans: "Inter", Arial, sans-serif;
+	--font-family-serif: "Georgia";
+	--font-family-mono: "IBM Plex Mono", monospace;
+
+	--font-weight-bold: 500;
+	--font-weight-bolder: 700;
+}
+
+html {
+	background-color: var(--gray-0);
+	color: var(--purple-900);
+}
+
+.fr-gradient--green-to-purple {
+	background: linear-gradient(
+		135deg,
+		var(--gray-25) 0%,
+		var(--purple-100) 100%
+	);
+}
+
+::selection {
+	background-color: var(--green-300);
+	color: var(--purple-900);
+}

@@ -1,0 +1,11 @@
+.radius-1 { border-radius: var(--box-1); }
+.radius-2 { border-radius: var(--box-2); }
+.radius-3 { border-radius: var(--box-3); }
+.radius-4 { border-radius: var(--box-4); }
+.radius-5 { border-radius: var(--box-5); }
+.radius-6 { border-radius: var(--box-6); }
+.radius-7 { border-radius: var(--box-7); }
+.radius-8 { border-radius: var(--box-8); }
+
+.radius-100 { border-radius: 100%; }
+.radius-max, .radius-pill { border-radius: 9999px; }
