@@ -2,7 +2,7 @@ import H0 from "../components/H0";
 import Layout from "../components/Layout";
 import Link from "next/link";
 import P from "../components/P";
-import PageContainer from "@components/PageContainer";
+import PageContainer from "../components/PageContainer";
 import Pre from "../components/Pre";
 import SectionBlock from "../components/SectionBlock";
 import SectionCode from "../components/SectionCode";

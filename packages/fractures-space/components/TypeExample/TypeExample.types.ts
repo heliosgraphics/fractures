@@ -1,5 +1,5 @@
 export interface TypeExampleProps {
-	fontSize: string;
-	lineHeight: string;
+	fontSize: number;
+	lineHeight: number;
 	classes?: string;
 }

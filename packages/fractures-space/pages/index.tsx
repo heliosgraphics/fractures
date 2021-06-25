@@ -8,7 +8,7 @@ import {
 } from "react-icons/hi";
 import Button from "../components/Button";
 import Fractures from "../components/Fractures";
-import fracturesPackage from "../../fractures/package.json";
+import fracturesPackage from "fractures/package.json";
 import H0 from "../components/H0";
 import Label from "../components/Label";
 import Layout from "../components/Layout";
