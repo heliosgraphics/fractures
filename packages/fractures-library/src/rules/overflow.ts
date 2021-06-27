@@ -1,23 +1,14 @@
 import type { FractureRuleType } from "../../types/css-rules";
 
+// prettier-ignore
 export const overflow: Array<FractureRuleType> = [
-	{ selector: "overflow-hidden", property: "overflow", value: "hidden" },
-	{ selector: "overflow-scroll", property: "overflow", value: "scroll" },
-	{ selector: "overflow-visible", property: "overflow", value: "visible" },
-
-	{ selector: "overflow-y-hidden", property: "overflow-y", value: "hidden" },
-	{ selector: "overflow-y-scroll", property: "overflow-y", value: "scroll" },
-	{
-		selector: "overflow-y-visible",
-		property: "overflow-y",
-		value: "visible",
-	},
-
-	{ selector: "overflow-x-hidden", property: "overflow-x", value: "hidden" },
-	{ selector: "overflow-x-scroll", property: "overflow-x", value: "scroll" },
-	{
-		selector: "overflow-x-visible",
-		property: "overflow-x",
-		value: "visible",
-	},
+	{ selector: ".overflow-hidden", declarations: {overflow: "hidden"} },
+	{ selector: ".overflow-scroll", declarations: {overflow: "scroll"} },
+	{ selector: ".overflow-visible", declarations: {overflow: "visible"} },
+	{ selector: ".overflow-y-hidden", declarations: {overflowY: "hidden"} },
+	{ selector: ".overflow-y-scroll", declarations: {overflowY: "scroll"} },
+	{ selector: ".overflow-y-visible", declarations: {overflowY: "visible"} },
+	{ selector: ".overflow-x-hidden", declarations: {overflowX: "hidden"} },
+	{ selector: ".overflow-x-scroll", declarations: {overflowX: "scroll"} },
+	{ selector: ".overflow-x-visible", declarations: {overflowX: "visible"} },
 ];

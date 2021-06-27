@@ -5,57 +5,70 @@ import type {
 	FractureFiles,
 } from "fractures-library/types/css-rules";
 
-export const generateOutput = async (
-	files: FractureFiles,
-	init: string,
-	output: string,
+export const makeFolder = (openFolder: string): string | void => {
+	if (!openFolder) return;
 
-	// TODO minify init too here
-	isMinified?: boolean
-) => {
-	console.log(
-		chalk.bold.green(
-			`⤓ Fractures — output: ${output} isMinified: ${!!isMinified}`
-		)
-	);
-
-	// Make folder
 	try {
-		const f: Array<string> = output.split("/");
-		f.pop();
+		const f: Array<string> = openFolder.split("/");
+		const fileName: string = f.pop() || "";
 		const folder: string = f.join("/");
 
 		if (!fs.existsSync(folder)) fs.mkdirSync(folder);
-	} catch (error) {
-		console.error(error);
-	}
 
-	// Generate CSS
+		return fileName;
+	} catch (error) {
+		return console.error(error);
+	}
+};
+
+export const generateOutput = async (
+	files: FractureFiles,
+	init: string,
+	folder: string,
+	isMinified?: boolean
+) => {
+	console.log(
+		chalk.bold.green(`⤓ Fractures — folder: ${folder} min: ${!!isMinified}`)
+	);
+
+	const fileName: string = makeFolder(folder) || ".";
 	let html: string = init || "";
 
 	for (const [key, value] of Object.entries(files)) {
 		console.log(chalk.yellow(`  ↘ Writing CSS for ${key}`));
 
 		value.forEach((declaration: FractureRuleType) => {
-			console.log(
-				chalk.gray(`    | rules for .${declaration.selector}.`)
-			);
+			console.log(chalk.gray(`    | rules for ${declaration.selector}.`));
 
-			const space: string = isMinified ? "" : " ";
-			const newLine: string = isMinified ? "" : "\n";
+			// prettier-ignore
+			const declarations: Array<[string, string]> = Object.entries(declaration.declarations);
+			const hasMultipleDeclarations: boolean = declarations.length > 1;
+			const declarationSpace: string = hasMultipleDeclarations
+				? "\n"
+				: "";
+			const declarationOutput: string = declarations
+				.map((prop) => {
+					const property: string = prop[0].replace(
+						/[A-Z]/g,
+						(letter) => `-${letter.toLowerCase()}`
+					);
 
-			html += `.${declaration.selector}${space}{${declaration.property}:${space}${declaration.value};}${newLine}`;
+					return `${property}: ${prop[1]};`;
+				})
+				.join(hasMultipleDeclarations ? "\n" : "");
+
+			html += `${declaration.selector} {${declarationSpace}${declarationOutput}${declarationSpace}};\n`;
 		});
 	}
 
-	await fs.writeFileSync(output, html);
-	await fs.stat(output, (err, stats) => {
-		if (err) {
-			console.log(`File doesn't exist.`);
-		} else {
-			const file: string | undefined = output?.split("/").pop();
+	const fractures: string = isMinified ? html.replace(/\s/g, "") : html;
 
-			console.log(chalk.green(`⤒ ${file}: ${stats?.size} bytes`));
+	fs.writeFileSync(folder, fractures);
+	fs.stat(folder, (error, stats) => {
+		if (error) {
+			console.log(chalk.red(`File doesn't exist.`));
+		} else {
+			console.log(chalk.green(`⤒ ${fileName}: ${stats?.size} bytes`));
 		}
 	});
 };

@@ -1,5 +1,4 @@
-export const root: string = `
-:root {
+export const root: string = `:root {
 	--box-px: 1px;
 	--box-1: 2px;
 	--box-2: 4px;
@@ -21,8 +20,6 @@ export const root: string = `
 	--box-32: 64px;
 	--box-40: 80px;
 	--box-48: 96px;
-
-	/* Type */
 
 	--font-size-h1: 36px;
 	--font-size-h2: 32px;
@@ -54,8 +51,6 @@ export const root: string = `
 	--font-weight-bold: bold;
 	--font-weight-bolder: bolder;
 
-	/* Z Position */
-
 	--z-index-0: 0;
 	--z-index-10: 100;
 	--z-index-20: 200;
@@ -67,8 +62,6 @@ export const root: string = `
 	--z-index-80: 800;
 	--z-index-90: 900;
 	--z-index-100: 1000;
-
-	/* Colors */
 
 	--gray-0: white;
 	--gray-25: #f9fafa;
@@ -143,5 +136,4 @@ export const root: string = `
 	--pink-700: #9d1667;
 	--pink-800: #701049;
 	--pink-900: #43092c;
-}
-`;
+}`;

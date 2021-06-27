@@ -8,15 +8,14 @@ export enum FractureBreakpoints {
 	sm = "444px",
 }
 
+export type { Properties };
+
 export interface FractureRuleType {
+	declarations: Properties;
 	description?: string;
 	hasBreakpoints?: boolean;
 	hasHover?: boolean;
-	property: string;
-	// property: keyof Properties;
-	// backgroundColor
 	selector: string;
-	value: string;
 }
 
 export interface FractureFiles {

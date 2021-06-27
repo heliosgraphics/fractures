@@ -2,55 +2,54 @@ import type { FractureRuleType } from "../../types/css-rules";
 
 // prettier-ignore
 export const type: Array<FractureRuleType> = [
-  // TODO Only these are responsive
-  // .h1 {font-size: var(--font-size-h1); line-height: var(--line-height-h1); }
-  // .h2 {font-size: var(--font-size-h2); line-height: var(--line-height-h2); }
-  // .h3 {font-size: var(--font-size-h3); line-height: var(--line-height-h3); }
-  // .h4 {font-size: var(--font-size-h4); line-height: var(--line-height-h4); }
-  // .h5 {font-size: var(--font-size-h5); line-height: var(--line-height-h5); }
-  // .h6 {font-size: var(--font-size-h6); line-height: var(--line-height-h6); }
-  // .p {font-size: var(--font-size-p); line-height: var(--line-height-p); }
-  // .small {font-size: var(--font-size-small); line-height: var(--line-height-small); }
-  // .tiny {font-size: var(--font-size-tiny); line-height: var(--line-height-tiny); }
+{ selector: '.h1', declarations: {fontSize: 'var(--font-size-h1)', lineHeight: 'var(--line-height-h1)'}, hasBreakpoints: true },
+{ selector: '.h2', declarations: {fontSize: 'var(--font-size-h2)', lineHeight: 'var(--line-height-h2)'}, hasBreakpoints: true },
+{ selector: '.h3', declarations: {fontSize: 'var(--font-size-h3)', lineHeight: 'var(--line-height-h3)'}, hasBreakpoints: true },
+{ selector: '.h4', declarations: {fontSize: 'var(--font-size-h4)', lineHeight: 'var(--line-height-h4)'}, hasBreakpoints: true },
+{ selector: '.h5', declarations: {fontSize: 'var(--font-size-h5)', lineHeight: 'var(--line-height-h5)'}, hasBreakpoints: true },
+{ selector: '.h6', declarations: {fontSize: 'var(--font-size-h6)', lineHeight: 'var(--line-height-h6)'}, hasBreakpoints: true },
+{ selector: '.p', declarations: {fontSize: 'var(--font-size-p)', lineHeight: 'var(--line-height-p)'}, hasBreakpoints: true },
+{ selector: '.small', declarations: {fontSize: 'var(--font-size-small)', lineHeight: 'var(--line-height-small)'}, hasBreakpoints: true },
+{ selector: '.tiny', declarations: {fontSize: 'var(--font-size-tiny)', lineHeight: 'var(--line-height-tiny)'}, hasBreakpoints: true },
 
-{ selector: 'sans', property: 'font-family', value: 'var(--font-family-sans)' },
-{ selector: 'serif', property: 'font-family', value: 'var(--font-family-serif)' },
-{ selector: 'mono', property: 'font-family', value: 'var(--font-family-mono)' },
+{ selector: '.sans', declarations: {fontFamily: 'var(--font-family-sans)'} },
+{ selector: '.serif', declarations: {fontFamily: 'var(--font-family-serif)'} },
+{ selector: '.mono', declarations: {fontFamily: 'var(--font-family-mono)'} },
 
-{ selector: 'lighter', property: 'font-weight', value: 'var(--font-weight-lighter)' },
-{ selector: 'light', property: 'font-weight', value: 'var(--font-weight-light)' },
-{ selector: 'normal', property: 'font-weight', value: 'var(--font-weight-normal)' },
-{ selector: 'bold', property: 'font-weight', value: 'var(--font-weight-bold)' },
-{ selector: 'bolder', property: 'font-weight', value: 'var(--font-weight-bolder)' },
+{ selector: '.lighter', declarations: {fontWeight: 'var(--font-weight-lighter)' as any} },
+{ selector: '.light', declarations: {fontWeight: 'var(--font-weight-light)' as any} },
+{ selector: '.normal', declarations: {fontWeight: 'var(--font-weight-normal)' as any} },
+{ selector: '.bold', declarations: {fontWeight: 'var(--font-weight-bold)' as any} },
+{ selector: '.bolder', declarations: {fontWeight: 'var(--font-weight-bolder)' as any} },
 
-{ selector: 'italic', property: 'font-style', value: 'italic' },
-{ selector: 'normal', property: 'font-style', value: 'normal' },
-{ selector: 'oblique', property: 'font-style', value: 'oblique' },
+{ selector: '.italic', declarations: {fontStyle: 'italic'} },
+{ selector: '.normal', declarations: {fontStyle: 'normal'} },
+{ selector: '.oblique', declarations: {fontStyle: 'oblique'} },
 
-{ selector: 'center', property: 'text-align', value: 'center' },
-{ selector: 'justify', property: 'text-align', value: 'justify' },
-{ selector: 'left', property: 'text-align', value: 'left' },
-{ selector: 'right', property: 'text-align', value: 'right' },
+{ selector: '.center', declarations: {textAlign: 'center'} },
+{ selector: '.justify', declarations: {textAlign: 'justify'} },
+{ selector: '.left', declarations: {textAlign: 'left'} },
+{ selector: '.right', declarations: {textAlign: 'right'} },
 
-{ selector: 'delete', property: 'text-decoration', value: 'line-through' },
-{ selector: 'overline', property: 'text-decoration', value: 'overline' },
-{ selector: 'underline', property: 'text-decoration', value: 'underline' },
-{ selector: 'capitalize', property: 'text-transform', value: 'capitalize' },
-{ selector: 'lowercase', property: 'text-transform', value: 'lowercase' },
-{ selector: 'uppercase', property: 'text-transform', value: 'uppercase' },
+{ selector: '.delete', declarations: {textDecoration: 'line-through'} },
+{ selector: '.overline', declarations: {textDecoration: 'overline'} },
+{ selector: '.underline', declarations: {textDecoration: 'underline'} },
+{ selector: '.capitalize', declarations: {textTransform: 'capitalize'} },
+{ selector: '.lowercase', declarations: {textTransform: 'lowercase'} },
+{ selector: '.uppercase', declarations: {textTransform: 'uppercase'} },
 
-{ selector: 'pre', property: 'white-space', value: 'pre' },
-{ selector: 'pre-line', property: 'white-space', value: 'pre-line' },
-{ selector: 'pre-wrap', property: 'white-space', value: 'pre-wrap' },
-{ selector: 'nowrap', property: 'white-space', value: 'nowrap' },
+{ selector: '.pre', declarations: {whiteSpace: 'pre'} },
+{ selector: '.pre-line', declarations: {whiteSpace: 'pre-line'} },
+{ selector: '.pre-wrap', declarations: {whiteSpace: 'pre-wrap'} },
+{ selector: '.nowrap', declarations: {whiteSpace: 'nowrap'} },
 
-{ selector: 'break-word', property: 'word-wrap', value: 'break-word' },
-{ selector: 'unselectable', property: 'user-select', value: 'none' },
+{ selector: '.break-word', declarations: {wordWrap: 'break-word'} },
+{ selector: '.unselectable', declarations: {userSelect: 'none'} },
 
-// .ellipsis {
-// 	overflow: hidden;
-// 	max-width: 100%;
-// 	text-overflow: ellipsis;
-// 	white-space: nowrap;
-// }
+{ selector: '.ellipsis', declarations: {
+  overflow: 'hidden',
+  maxWidth: '100%',
+  textOverflow: 'ellipsis',
+  whiteSpace: 'nowrap',
+} },
 ];

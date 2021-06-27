@@ -1,5 +1,4 @@
-export const reset: string = `
-* {
+export const reset: string = `* {
 	margin: 0;
 	padding: 0;
 }
@@ -30,5 +29,4 @@ ol {
 
 img { max-width: 100%; }
 sub { vertical-align: sub; }
-sup { vertical-align: super; }
-`;
+sup { vertical-align: super; }`;
