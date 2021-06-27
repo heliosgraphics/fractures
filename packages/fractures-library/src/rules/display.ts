@@ -1,0 +1,30 @@
+import type { FractureRuleType } from "../../types/css-rules";
+
+// prettier-ignore
+export const display: Array<FractureRuleType> = [
+	{ selector: "block", property: "display", value: "block", hasBreakpoints: true },
+	{ selector: "contents", property: "display", value: "contents", hasBreakpoints: true },
+	{ selector: "flex", property: "display", value: "flex", hasBreakpoints: true },
+	{ selector: "flow-root", property: "display", value: "flow-root", hasBreakpoints: true },
+	{ selector: "grid", property: "display", value: "grid", hasBreakpoints: true },
+	{ selector: "inline", property: "display", value: "inline", hasBreakpoints: true },
+	{ selector: "inline-block", property: "display", value: "inline-block", hasBreakpoints: true },
+	{ selector: "inline-flex", property: "display", value: "inline-flex", hasBreakpoints: true },
+	{ selector: "inline-grid", property: "display", value: "inline-grid", hasBreakpoints: true },
+	{ selector: "inline-table", property: "display", value: "inline-table", hasBreakpoints: true },
+	{ selector: "list-item", property: "display", value: "list-item", hasBreakpoints: true },
+	{ selector: "none", property: "display", value: "none", hasBreakpoints: true },
+	{ selector: "run-in", property: "display", value: "run-in", hasBreakpoints: true },
+	{ selector: "table", property: "display", value: "table", hasBreakpoints: true },
+	{ selector: "table-caption", property: "display", value: "table-caption", hasBreakpoints: true },
+	{ selector: "table-cell", property: "display", value: "table-cell", hasBreakpoints: true },
+	{ selector: "table-column", property: "display", value: "table-column", hasBreakpoints: true },
+	{ selector: "table-column-group", property: "display", value: "table-column-group", hasBreakpoints: true },
+	{ selector: "table-footer-group", property: "display", value: "table-footer-group", hasBreakpoints: true },
+	{ selector: "table-header-group", property: "display", value: "table-header-group", hasBreakpoints: true },
+	{ selector: "table-row", property: "display", value: "table-row", hasBreakpoints: true },
+	{ selector: "table-row-group", property: "display", value: "table-row-group", hasBreakpoints: true },
+	{ selector: "tabel-layout-fixed", property: "table-layout", value: "fixed", hasBreakpoints: true },
+	{ selector: "float-left", property: "float", value: "left", hasBreakpoints: true },
+	{ selector: "float-right", property: "float", value: "right", hasBreakpoints: true },
+];
