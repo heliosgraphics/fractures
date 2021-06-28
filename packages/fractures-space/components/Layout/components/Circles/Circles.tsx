@@ -69,18 +69,18 @@ const Circles: React.FC<CirclesProps> = (props) => {
 					<radialGradient id="greenYellow">
 						<stop
 							offset="00%"
-							stop-color={colorSet[0]}
+							stopColor={colorSet[0]}
 							stopOpacity="30%"
 						/>
-						<stop offset="100%" stop-color={colorSet[1]} />
+						<stop offset="100%" stopColor={colorSet[1]} />
 					</radialGradient>
 					<radialGradient id="blueMagenta">
 						<stop
 							offset="0%"
-							stop-color={colorSet[2]}
+							stopColor={colorSet[2]}
 							stopOpacity="30%"
 						/>
-						<stop offset="100%" stop-color={colorSet[3]} />
+						<stop offset="100%" stopColor={colorSet[3]} />
 					</radialGradient>
 				</defs>
 				<circle
@@ -88,7 +88,7 @@ const Circles: React.FC<CirclesProps> = (props) => {
 					cy={120}
 					r={240}
 					stroke="transparent"
-					stroke-width={0}
+					strokeWidth={0}
 					fill="url('#greenYellow')"
 					className="circle--green-yellow"
 				/>
@@ -97,7 +97,7 @@ const Circles: React.FC<CirclesProps> = (props) => {
 					cy={240}
 					r={240}
 					stroke="transparent"
-					stroke-width={0}
+					strokeWidth={0}
 					fill="url('#blueMagenta')"
 					className="circle--blue-magenta"
 				/>
