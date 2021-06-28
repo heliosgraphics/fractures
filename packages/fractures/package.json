@@ -1,6 +1,6 @@
 {
 	"name": "fractures",
-	"version": "2.0.0-alpha-1",
+	"version": "2.0.0-alpha-2",
 	"author": "Chris Puska <theta@hey.com>",
 	"description": "Functional CSS, but only the good parts.",
 	"main": "dist/fractures.css",
@@ -29,6 +29,7 @@
 	"devDependencies": {
 		"@types/node": "^15.12.4",
 		"chalk": "^4.1.1",
+		"gzip-size": "^6.0.0",
 		"ts-node": "^10.0.0"
 	}
 }
