@@ -28,10 +28,9 @@ const Index: React.FC<{}> = () => (
 					<mark>Functional CSS</mark>, but only the good parts.
 				</H0>
 				<h4 className="h4 normal">
-					Fractures is the <b>atomic CSS toolkit</b> that helps you
-					create resilient <u>design systems</u> and{" "}
-					<u>rapid prototypes</u> by providing a set of non-blocking
-					utility classes.
+					Fractures is the <b>atomic CSS toolkit</b> that helps you create
+					resilient <u>design systems</u> and <u>rapid prototypes</u> by
+					providing a set of non-blocking utility classes.
 				</h4>
 			</header>
 			<section className="flex flex-column flex-gap-8">
@@ -48,10 +47,7 @@ const Index: React.FC<{}> = () => (
 				<div className="flex flex-gap-4 flex-y-center">
 					<Small className="mono">
 						npm i fractures
-						<span className="unselectable">
-							{" "}
-							@ {fracturesPackage?.version}
-						</span>
+						<span className="unselectable"> @ {fracturesPackage?.version}</span>
 					</Small>
 					<Label text="Beta" />
 				</div>
@@ -106,9 +102,8 @@ const Index: React.FC<{}> = () => (
 					]}
 				>
 					<P>
-						No more class flooding. Do better than flex flex-wrap
-						items-baseline pl-52 -mt-6 -mr-6 -ml-52 py-6 pr-6
-						bg-black text-white.
+						No more class flooding. Do better than flex flex-wrap items-baseline
+						pl-52 -mt-6 -mr-6 -ml-52 py-6 pr-6 bg-black text-white.
 					</P>
 				</SectionCode>
 				<SectionCode
@@ -121,8 +116,8 @@ const Index: React.FC<{}> = () => (
 					]}
 				>
 					<P>
-						An <b>opinionated</b> breakpoint and <b>customizable</b>{" "}
-						color system built in. No javascript.
+						An <b>opinionated</b> breakpoint and <b>customizable</b> color
+						system built in. No javascript.
 					</P>
 				</SectionCode>
 				<SectionCode
@@ -138,26 +133,25 @@ const Index: React.FC<{}> = () => (
 				>
 					<P>
 						Fractures was created at the <b>CSS level</b>, and it's{" "}
-						<b>incomplete by design</b>. Configure CSS variables at
-						root level, and follow the patterns with your own code.
+						<b>incomplete by design</b>. Configure CSS variables at root level,
+						and follow the patterns with your own code.
 					</P>
 				</SectionCode>
 			</SectionBlock>
 			<SectionBlock title="Manifesto">
 				<P>
 					Fractures is a relaxed, long term take on design systems and
-					prototyping, trying to abstract away some complexities
-					interface design has to offer. You can build around it or on
-					top of it, but would not replace the work you have to do.
+					prototyping, trying to abstract away some complexities interface
+					design has to offer. You can build around it or on top of it, but
+					would not replace the work you have to do.
 					<br />
 					<br />
 					Ask a{" "}
 					<a href="https://github.com/fractures/fractures/discussions">
 						question
 					</a>{" "}
-					on GitHub, say hi on{" "}
-					<a href="http://twitter.com/pyx">twitter</a> or read my{" "}
-					<a href="http://pyx.sh/">old posts</a>.
+					on GitHub, say hi on <a href="http://twitter.com/pyx">twitter</a> or
+					read my <a href="http://pyx.sh/">old posts</a>.
 				</P>
 			</SectionBlock>
 		</PageContainer>
