@@ -116,15 +116,15 @@ const LayoutPage: React.FC<{}> = () => (
 			<H0>Layout</H0>
 			<SectionBlock title="Breakpoints">
 				<P>
-					Fractures has 5 predefined width modifier to help build
-					responsive layouts.
+					Fractures has 5 predefined width modifier to help build responsive
+					layouts.
 					<br />
 					Resize this page to see how they work.
 				</P>
 				<P>
 					<code>
-						sm:<em>class</em> md:<em>class</em> lg:<em>class</em>{" "}
-						xl:<em>class</em> xxl:<em>class</em>
+						sm:<em>class</em> md:<em>class</em> lg:<em>class</em> xl:
+						<em>class</em> xxl:<em>class</em>
 					</code>
 				</P>
 			</SectionBlock>
@@ -136,8 +136,8 @@ const LayoutPage: React.FC<{}> = () => (
 				<P>
 					Works with all 5 modifier. <br />
 					<code>
-						sm:<em>class</em> md:<em>class</em> lg:<em>class</em>{" "}
-						xl:<em>class</em> xxl:<em>class</em>
+						sm:<em>class</em> md:<em>class</em> lg:<em>class</em> xl:
+						<em>class</em> xxl:<em>class</em>
 					</code>
 				</P>
 			</SectionGrid>

@@ -14,11 +14,11 @@ const Config: React.FC<{}> = () => (
 			<H0>Get started</H0>
 			<SectionBlock title="Fundamentals">
 				<P>
-					Fractures does not try to replace your current systems.
-					Instead it provides a solid, immutable base to build on top
-					of. The point is <b>not to stop writing CSS</b>, but to keep
-					your custom CSS maintainable. It aims to be the baseline of
-					a system to enable fast moving teams to build better UIs.
+					Fractures does not try to replace your current systems. Instead it
+					provides a solid, immutable base to build on top of. The point is{" "}
+					<b>not to stop writing CSS</b>, but to keep your custom CSS
+					maintainable. It aims to be the baseline of a system to enable fast
+					moving teams to build better UIs.
 				</P>
 				<P>
 					It contains two essential concepts:{" "}
@@ -34,11 +34,11 @@ const Config: React.FC<{}> = () => (
 			</SectionBlock>
 			<SectionBlock title="Config">
 				<P>
-					Fractures works with empty <code>:root &#123;&#125;</code>{" "}
-					or with a fully customized one.
+					Fractures works with empty <code>:root &#123;&#125;</code> or with a
+					fully customized one.
 					<br />
-					<code>import 'fractures'</code> then set your variables. For
-					example, this page sets only:
+					<code>import 'fractures'</code> then set your variables. For example,
+					this page sets only:
 				</P>
 				<Pre
 					code={[
@@ -81,8 +81,8 @@ const Config: React.FC<{}> = () => (
 				>
 					<P>Initial fracture scale, goes from 1px to 96px.</P>
 					<Small>
-						Disclaimer: In beta these are still exposed, but will be
-						dropped from the final version.
+						Disclaimer: In beta these are still exposed, but will be dropped
+						from the final version.
 					</Small>
 				</SectionCode>
 				<SectionCode
