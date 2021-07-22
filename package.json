@@ -2,9 +2,8 @@
 	"author": "Chris Puska <theta@hey.com>",
 	"private": true,
 	"scripts": {
-		"fr:build": "yarn --cwd packages/fractures gulp build",
-		"fr:test": "yarn --cwd packages/fractures gulp test",
-		"fr:size": "yarn --cwd packages/fractures gzip -c ./dist/fractures.min.css | wc -c",
+		"fr:build": "yarn --cwd packages/fractures run build",
+		"fr:test": "yarn --cwd packages/fractures run test",
 		"docs:dev": "yarn --cwd packages/fractures-space next",
 		"docs:build": "yarn --cwd packages/fractures-space next build",
 		"docs:start": "yarn --cwd packages/fractures-space next start",

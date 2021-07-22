@@ -150,8 +150,7 @@ const Index: React.FC<{}> = () => (
 					<a href="https://github.com/fractures/fractures/discussions">
 						question
 					</a>{" "}
-					on GitHub, say hi on <a href="http://twitter.com/pyx">twitter</a> or
-					read my <a href="http://pyx.sh/">old posts</a>.
+					on GitHub, say hi on <a href="https://twitter.com/pyx">twitter</a>.
 				</P>
 			</SectionBlock>
 		</PageContainer>
