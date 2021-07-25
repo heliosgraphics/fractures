@@ -11,11 +11,20 @@ export enum FractureBreakpoints {
 export type { Properties };
 
 export interface FractureRuleType {
+	/** Declaration rules attached to the selector. */
 	declarations: Properties;
+	/** Demo: Description. */
 	description?: string;
+	/** Demo: Gets generated, but hidden from demo website. */
+	isHidden?: boolean;
+	/** Flag to generate breakpoints for this item. */
 	hasBreakpoints?: boolean;
+	/** Flag to generate hovers for this item. */
 	hasHover?: boolean;
+	/** Classname string. */
 	selector: string;
+	/** Demo: nice selector string for the demo. */
+	selectorNice?: string;
 }
 
 export interface FractureFiles {

@@ -1,12 +1,9 @@
 {
 	"name": "fractures",
-	"version": "2.0.0-alpha-2",
+	"version": "2.0.0-alpha-3",
 	"author": "Chris Puska <theta@hey.com>",
 	"description": "Functional CSS, but only the good parts.",
 	"main": "dist/fractures.css",
-	"meta": {
-		"published": "2021-07-01"
-	},
 	"scripts": {
 		"prepare": "ts-node ./src/build.ts",
 		"start": "ts-node ./src/build.ts",

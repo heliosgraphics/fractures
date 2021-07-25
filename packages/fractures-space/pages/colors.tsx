@@ -14,7 +14,7 @@ const Colors: React.FC<{}> = () => (
 			<H0>Colors</H0>
 			<SectionBlock title="Hover">
 				<P>
-					The <code>:hover</code> modifier is enabled for the customizable{" "}
+					The <code>hover:</code> prefix is enabled for the customizable{" "}
 					<code>color</code> and <code>background-color</code> properties.
 				</P>
 				<ColorsHover />
@@ -29,7 +29,7 @@ const Colors: React.FC<{}> = () => (
 					easily accessible directly from anywhere in the code with{" "}
 					<code>var(--green-500)</code>.
 				</P>
-				<Small>Final 2.0 release will support color opacity.</Small>
+				<Small>Final 2.0 release will support opacity.</Small>
 				<div className="grid grid-cols-4 grid-gap-12">
 					<ColorsScale
 						mode="color"

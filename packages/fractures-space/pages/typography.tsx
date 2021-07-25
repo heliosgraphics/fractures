@@ -4,37 +4,7 @@ import Layout from "../components/Layout";
 import PageContainer from "../components/PageContainer";
 import SectionBlock from "../components/SectionBlock";
 import SectionGrid from "../components/SectionGrid";
-
-const helperDescriptions: Array<[string, string]> = [
-	["sans", "Font family is sans."],
-	["serif", "Font family is serif."],
-	["mono", "Font family is mono."],
-	["lighter", "Lighter font weight."],
-	["light", "Light font weight."],
-	["normal", "Normal font weight."],
-	["bold", "Bold font weight."],
-	["bolder", "Bolder font weight."],
-	["italic", "Italic style font."],
-	["normal", "Normal style font."],
-	["oblique", "Oblique style font."],
-	["center", "Text center aligned."],
-	["justify", "Text justify aligned."],
-	["left", "Text left aligned."],
-	["right", "Text right aligned."],
-	["line-through delete", "Line-through text."],
-	["overline", "Overline text."],
-	["underline", "Underline text."],
-	["capitalize", "Capitalized text."],
-	["lowercase", "Lowercase text."],
-	["uppercase", "Uppercase text"],
-	["pre", "Pre text."],
-	["pre-line", "Pre-line text."],
-	["pre-wrap", "Pre-wrap text."],
-	["nowrap", "Nowrap text."],
-	["break-word", "Break the words in text."],
-	["unselectable", "Text is unselectable."],
-	["ellipsis", "Text is ellipsing out."],
-];
+import {type} from "fractures-library/src/rules/type";
 
 const About = () => (
 	<Layout title="Typography">
@@ -62,7 +32,7 @@ const About = () => (
 			</SectionBlock>
 			<SectionGrid
 				title="Type helpers"
-				items={helperDescriptions}
+				items={type}
 				isDemo={true}
 			/>
 		</PageContainer>

@@ -133,8 +133,8 @@ const Index: React.FC<{}> = () => (
 				>
 					<P>
 						Fractures was created at the <b>CSS level</b>, and it's{" "}
-						<b>incomplete by design</b>. Configure CSS variables at root level,
-						and follow the patterns with your own code.
+						<b>incomplete by design</b>. Configure CSS variables at :root
+						and follow the outlined patterns with your own code.
 					</P>
 				</SectionCode>
 			</SectionBlock>

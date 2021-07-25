@@ -80,10 +80,6 @@ const Config: React.FC<{}> = () => (
 					]}
 				>
 					<P>Initial fracture scale, goes from 1px to 96px.</P>
-					<Small>
-						Disclaimer: In beta these are still exposed, but will be dropped
-						from the final version.
-					</Small>
 				</SectionCode>
 				<SectionCode
 					title="Font size and Line height"
@@ -127,7 +123,8 @@ const Config: React.FC<{}> = () => (
 						`--font-weight-bold: <mark>bold</mark>;`,
 						`--font-weight-bolder: <mark>bolder</mark>;`,
 					]}
-				></SectionCode>
+				>
+				</SectionCode>
 				<SectionCode
 					title="Z indices"
 					code={[

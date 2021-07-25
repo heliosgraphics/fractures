@@ -1,11 +1,11 @@
 import type React from "react";
-
-export type SectionGridItem = [string, string];
+import type { FractureRuleType } from "fractures-library/types/css-rules";
 
 export interface SectionGridProps {
 	className?: string;
 	children?: React.ReactNodeArray | React.ReactNode;
 	title: string;
-	items: Array<SectionGridItem>;
+	isExperimental?: boolean;
+	items: Array<FractureRuleType>;
 	isDemo?: boolean;
 }
