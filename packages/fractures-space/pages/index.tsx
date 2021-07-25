@@ -35,7 +35,7 @@ const Index: React.FC<{}> = () => (
 			</header>
 			<section className="flex flex-column flex-gap-8">
 				<div className="flex flex-gap-8">
-					<Link href="/config">
+					<Link href="/setup">
 						<a>
 							<Button type="primary">Get started</Button>
 						</a>

@@ -8,8 +8,8 @@ import SectionBlock from "../components/SectionBlock";
 import SectionCode from "../components/SectionCode";
 import Small from "../components/Small";
 
-const Config: React.FC<{}> = () => (
-	<Layout title="Config">
+const GetStarted: React.FC<{}> = () => (
+	<Layout title="Get started">
 		<PageContainer>
 			<H0>Get started</H0>
 			<SectionBlock title="Fundamentals">
@@ -232,4 +232,4 @@ const Config: React.FC<{}> = () => (
 	</Layout>
 );
 
-export default Config;
+export default GetStarted;

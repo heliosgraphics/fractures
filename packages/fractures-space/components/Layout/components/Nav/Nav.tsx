@@ -9,7 +9,7 @@ import type { HeaderLinks, NavProps } from "./Nav.types";
 const HEADER_LINKS: HeaderLinks = [
 	{ name: "Fractures", url: "/" },
 	{ icon: <div className="grow-1" /> },
-	{ name: "Config", url: "/config" },
+	{ name: "Setup", url: "/setup" },
 	{ name: "Layout", url: "/layout" },
 	{ name: "Colors", url: "/colors" },
 	{ name: "Typography", url: "/typography" },
