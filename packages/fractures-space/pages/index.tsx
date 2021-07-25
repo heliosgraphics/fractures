@@ -44,12 +44,17 @@ const Index: React.FC<{}> = () => (
 						<Button type="secondary">GitHub</Button>
 					</a>
 				</div>
-				<div className="flex flex-gap-4 flex-y-center">
+				<div className='flex flex-gap-8'>
+					<div className="flex flex-gap-4 flex-y-center">
+						<Small className="mono">
+							npm i fractures
+							<span className="unselectable"> @ {fracturesPackage?.version}</span>
+						</Small>
+						<Label text="Beta" />
+					</div>
 					<Small className="mono">
-						npm i fractures
-						<span className="unselectable"> @ {fracturesPackage?.version}</span>
+						<a href='https://github.com/fractures/fractures/releases/tag/1.3.5'>Looking for v1?</a>
 					</Small>
-					<Label text="Beta" />
 				</div>
 			</section>
 			<SectionBlock title="Goals">

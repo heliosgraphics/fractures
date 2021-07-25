@@ -16,7 +16,7 @@ const HEADER_LINKS: HeaderLinks = [
 	{ name: "Tools", url: "/tools" },
 	{
 		url: "http://github.com/fractures/fractures",
-		icon: <AiFillGithub size={24} />,
+		icon: <AiFillGithub size={24} key='github-icon'/>,
 		isExternal: true,
 	},
 ];

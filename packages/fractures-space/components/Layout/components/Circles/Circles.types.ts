@@ -2,7 +2,7 @@ export type CircleColorSet = [string, string, string, string];
 
 export interface CircleColors {
 	"/": CircleColorSet;
-	"/config": CircleColorSet;
+	"/setup": CircleColorSet;
 	"/layout": CircleColorSet;
 	"/colors": CircleColorSet;
 	"/typography": CircleColorSet;

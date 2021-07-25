@@ -15,7 +15,7 @@ const circleColors: CircleColors = {
 		"rgba(46,43,238,1)",
 		"rgba(128,48,232,0)",
 	],
-	"/config": [
+	"/setup": [
 		"rgba(47,234,123,1)",
 		"rgba(18,213,18,0)",
 		"rgba(100,3,138,0)",
