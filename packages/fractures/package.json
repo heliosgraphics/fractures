@@ -24,9 +24,9 @@
 	},
 	"homepage": "https://fractures.space",
 	"devDependencies": {
-		"@types/node": "^15.12.4",
+		"@types/node": "^16.4.2",
 		"chalk": "^4.1.1",
 		"gzip-size": "^6.0.0",
-		"ts-node": "^10.0.0"
+		"ts-node": "^10.1.0"
 	}
 }

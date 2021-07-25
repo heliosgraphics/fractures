@@ -10,7 +10,7 @@
 		"now-build": "next build && next export -o dist"
 	},
 	"dependencies": {
-		"@sindresorhus/class-names": "^1.1.0",
+		"@sindresorhus/class-names": "^2.0.0",
 		"fractures": "2.0.0-beta-0",
 		"next": "^11.0.1",
 		"react": "^17.0.2",
@@ -19,10 +19,10 @@
 		"styled-components": "^5.3.0"
 	},
 	"devDependencies": {
+		"@babel/core": "^7.14.8",
 		"@babel/preset-typescript": "^7.14.5",
-		"@babel/core": "^7.14.6",
-		"@types/react": "^17.0.11",
+		"@types/react": "^17.0.15",
 		"babel-plugin-module-resolver": "^4.1.0",
-		"typescript": "^4.3.4"
+		"typescript": "^4.3.5"
 	}
 }
