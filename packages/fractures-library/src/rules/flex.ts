@@ -3,6 +3,7 @@ import type { FractureRuleType } from "../../types/css-rules";
 // prettier-ignore
 export const flex: Array<FractureRuleType> = [
   { selector: 'flex-wrap', declarations: {flexWrap: 'wrap'} },
+  { selector: 'flex-row', declarations: {flexDirection: 'row'}, hasBreakpoints: true },
   { selector: 'flex-column', declarations: {flexDirection: 'column'}, hasBreakpoints: true },
   { selector: 'space-around', declarations: {justifyContent: 'space-around'} },
   { selector: 'space-between', declarations: {justifyContent: 'space-between'} },
