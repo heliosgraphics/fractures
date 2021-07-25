@@ -54,8 +54,8 @@ const Layout: React.FC<LayoutProps> = (props) => {
 					href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;700&family=Inter:wght@300;400;500;700;900&family=IBM+Plex+Sans:wght@700&display=swap"
 					rel="stylesheet"
 				/>
-				<meta name="theme-color" content="#220845" media="(prefers-color-scheme: light)"/>
-				<meta name="theme-color" content="#220845" media="(prefers-color-scheme: dark)"/>
+				{/* <meta name="theme-color" content="#220845" media="(prefers-color-scheme: light)"/>
+				<meta name="theme-color" content="#220845" media="(prefers-color-scheme: dark)"/> */}
 			</Head>
 			<Circles />
 			<Nav />
