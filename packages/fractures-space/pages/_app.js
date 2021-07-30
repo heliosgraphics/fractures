@@ -8,9 +8,7 @@ function App({ Component, pageProps }) {
   const router = useRouter();
 
   useEffect(() => {
-    Fathom.load(process.env.FATHOM_FRACTURES_SPACE, {
-      includedDomains: ['fractures.space'],
-    });
+    Fathom.load(process.env.FATHOM_FRACTURES_SPACE);
 
     function onRouteChangeComplete() {
       Fathom.trackPageview();
