@@ -11,19 +11,11 @@ export const generateRules = (
 	fractureRule: FractureRuleType,
 	prefix?: string
 ): string => {
-	console.log(
-		chalk.gray(
-			`    | rules for ${prefix ? prefix + ":" : ""}${
-				fractureRule.selector
-			}`
-		)
-	);
-
 	const declarations: Array<[string, string]> = Object.entries(
 		fractureRule.declarations
 	);
-	const hasMultipleDeclarations: boolean = declarations.length > 1;
-	const declarationSpace: string = hasMultipleDeclarations ? "\n" : "";
+	const hasMultipleDeclarations: boolean = declarations.length > 1
+	const declarationSpace: string = hasMultipleDeclarations ? "\n" : ""
 	const declarationOutput: string = declarations
 		.map((prop) => {
 			const property: string = prop[0].replace(
@@ -31,13 +23,17 @@ export const generateRules = (
 				(letter) => `-${letter.toLowerCase()}`
 			);
 
-			return `${property}: ${prop[1]};`;
+			return `${property}: ${prop[1]};`
 		})
-		.join(declarationSpace);
+		.join(declarationSpace)
 
-	const rule: string = `${fractureRule.selector} {${declarationSpace}${declarationOutput}${declarationSpace}}\n`;
+	const pseudo: ":hover" | "" = prefix === "hover" ? ":hover" : ""
+	const rule: string = `${fractureRule.selector}${pseudo} {${declarationSpace}${declarationOutput}${declarationSpace}}`;
+	const selector: string = `.${prefix ? `${prefix}\\:` : ""}${rule}\n`
 
-	return `.${prefix ? `${prefix}\\:` : ""}${rule}`;
+	console.log(chalk.gray(`    | rules for ${rule}`));
+
+	return selector;
 };
 
 export const generateResponsiveRules = (
