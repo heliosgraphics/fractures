@@ -1,6 +1,7 @@
 import { background } from "./rules/background";
 import { border } from "./rules/border";
 import { color } from "./rules/color";
+import { colorOpacity } from "./rules/colorOpacity";
 import { cursor } from "./rules/cursor";
 import { display } from "./rules/display";
 import { flex } from "./rules/flex";
@@ -20,6 +21,7 @@ export const fractureFiles: FractureFiles = {
 	background,
 	border,
 	color,
+	colorOpacity,
 	cursor,
 	display,
 	flex,

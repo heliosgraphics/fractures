@@ -7,14 +7,15 @@ import type {
 import { writeFile } from "./utils";
 
 // Generates all the rules for the declarations
+// TODO @chris Experimenting, needs to be cleaned
 export const generateRules = (
 	fractureRule: FractureRuleType,
 	prefix?: string
 ): string => {
-	const declarations: Array<[string, string]> = Object.entries(
-		fractureRule.declarations
-	);
-	const hasMultipleDeclarations: boolean = declarations.length > 1
+	const declarations: Array<[string, string]> = Object.entries(fractureRule.declarations || {})
+	const variables: Array<[string, string]> = Object.entries(fractureRule.variables || {})
+	const hasMultipleDeclarations: boolean = (declarations.length + variables.length) > 1
+
 	const declarationSpace: string = hasMultipleDeclarations ? "\n" : ""
 	const declarationOutput: string = declarations
 		.map((prop) => {
@@ -27,8 +28,10 @@ export const generateRules = (
 		})
 		.join(declarationSpace)
 
+	const variablesOutput = variables.map(variable => `${variable[0]}: ${variable[1]};`)
+
 	const pseudo: ":hover" | "" = prefix === "hover" ? ":hover" : ""
-	const rule: string = `${fractureRule.selector}${pseudo} {${declarationSpace}${declarationOutput}${declarationSpace}}`;
+	const rule: string = `${fractureRule.selector}${pseudo} {${declarationSpace}${variablesOutput}${declarationSpace}${declarationOutput}${declarationSpace}}`;
 	const selector: string = `.${prefix ? `${prefix}\\:` : ""}${rule}\n`
 
 	console.log(chalk.gray(`    | rules for ${rule}`));

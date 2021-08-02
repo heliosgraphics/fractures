@@ -6,7 +6,14 @@ import Link from "next/link";
 import P from "../components/P";
 import PageContainer from "../components/PageContainer";
 import SectionBlock from "../components/SectionBlock";
-import Small from "../components/Small";
+import SectionGrid from "../components/SectionGrid";
+import {colorOpacity} from "fractures-library/src/rules/colorOpacity";
+
+const opacityDemo = colorOpacity.map(co => ({
+	...co,
+	selectorNice: co.selector,
+	selector: `${co.selector} bg-green-500 purple-500 p-3 radius-1`
+}));
 
 const Colors: React.FC<{}> = () => (
 	<Layout title="Colors">
@@ -29,7 +36,6 @@ const Colors: React.FC<{}> = () => (
 					easily accessible directly from anywhere in the code with{" "}
 					<code>var(--green-500)</code>.
 				</P>
-				<Small>Final 2.0 release will support opacity.</Small>
 				<div className="grid grid-cols-4 grid-gap-12">
 					<ColorsScale
 						mode="color"
@@ -111,6 +117,7 @@ const Colors: React.FC<{}> = () => (
 					/>
 				</div>
 			</SectionBlock>
+			<SectionGrid title='Background and Color opacity' items={opacityDemo} isDemo={true}/>
 		</PageContainer>
 	</Layout>
 );

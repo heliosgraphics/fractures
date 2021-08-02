@@ -12,25 +12,28 @@ export type { Properties };
 
 export interface FractureRuleType {
 	/** Declaration rules attached to the selector. */
-	declarations: Properties;
+	declarations?: Properties;
 	/** Demo: Description. */
 	description?: string;
-	/** Demo: Gets generated, but hidden from demo website. */
-	isHidden?: boolean;
 	/** Flag to generate breakpoints for this item. */
 	hasBreakpoints?: boolean;
 	/** Flag to generate hovers for this item. */
 	hasHover?: boolean;
+	/** Demo: Gets generated, but hidden from demo website. */
+	isHidden?: boolean;
 	/** Classname string. */
 	selector: string;
 	/** Demo: nice selector string for the demo. */
 	selectorNice?: string;
+	/** Local CSS variables. */
+	variables?: Record<string, any>;
 }
 
 export interface FractureFiles {
 	background: Array<FractureRuleType>;
 	border: Array<FractureRuleType>;
 	color: Array<FractureRuleType>;
+	colorOpacity: Array<FractureRuleType>;
 	cursor: Array<FractureRuleType>;
 	display: Array<FractureRuleType>;
 	flex: Array<FractureRuleType>;
