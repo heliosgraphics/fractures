@@ -3,7 +3,7 @@ import type { FractureRuleType } from "../../types/css-rules";
 // prettier-ignore
 export const height: Array<FractureRuleType> = [
   { selector: 'h-0', declarations: {height: 0}, hasBreakpoints: true },
-  { selector: 'h-viewport', declarations: {height: '100vh'}, hasBreakpoints: true },
+  { selector: 'h-viewport', declarations: {height: '100vh'}, hasBreakpoints: true, description: 'Height is 100 viewport height.'},
   { selector: 'h-px', declarations: {height: 'var(--box-px)'}, hasBreakpoints: true },
   { selector: 'h-1', declarations: {height: 'var(--box-1)'}, hasBreakpoints: true },
   { selector: 'h-2', declarations: {height: 'var(--box-2)'}, hasBreakpoints: true },
@@ -54,7 +54,7 @@ export const height: Array<FractureRuleType> = [
   { selector: 'hp-100', declarations: {height: '100%'}, hasBreakpoints: true },
 
   { selector: 'hmax-0', declarations: {maxHeight: 0}, hasBreakpoints: true },
-  { selector: 'h-viewport', declarations: {maxHeight: '100vh'}, hasBreakpoints: true },
+  { selector: 'hmax-viewport', declarations: {maxHeight: '100vh'}, hasBreakpoints: true, description: 'Max height is 100 viewport height.'},
   { selector: 'hmax-px', declarations: {maxHeight: 'var(--box-px)'}, hasBreakpoints: true },
   { selector: 'hmax-1', declarations: {maxHeight: 'var(--box-1)'}, hasBreakpoints: true },
   { selector: 'hmax-2', declarations: {maxHeight: 'var(--box-2)'}, hasBreakpoints: true },
@@ -104,7 +104,7 @@ export const height: Array<FractureRuleType> = [
   { selector: 'hpmax-100', declarations: {maxHeight: '100%'}, hasBreakpoints: true },
 
   { selector: 'hmin-0', declarations: {minHeight: 0}, hasBreakpoints: true },
-  { selector: 'hmin-viewport', declarations: {minHeight: '100vh'}, hasBreakpoints: true },
+  { selector: 'hmin-viewport', declarations: {minHeight: '100vh'}, hasBreakpoints: true, description: 'Min height is 100 viewport height.'},
   { selector: 'hmin-px', declarations: {minHeight: 'var(--box-px)'}, hasBreakpoints: true },
   { selector: 'hmin-1', declarations: {minHeight: 'var(--box-1)'}, hasBreakpoints: true },
   { selector: 'hmin-2', declarations: {minHeight: 'var(--box-2)'}, hasBreakpoints: true },

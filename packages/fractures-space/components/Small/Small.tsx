@@ -16,6 +16,23 @@ const Small: React.FC<SmallProps> = styled(SmallMarkup)`
 	a:hover {
 		color: var(--blue-900);
 	}
+
+	code {
+		font-family: var(--font-family-mono);
+		font-size: var(--font-size-tiny);
+
+		color: var(--purple-500);
+	}
+
+	code:after {
+		content: "\`";
+		color: var(--gray-300);
+	}
+
+	code:before {
+		content: "\`";
+		color: var(--gray-300);
+	}
 `;
 
 export default Small;

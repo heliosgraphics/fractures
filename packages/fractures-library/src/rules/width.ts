@@ -2,8 +2,8 @@ import type { FractureRuleType } from "../../types/css-rules";
 
 // prettier-ignore
 export const width: Array<FractureRuleType> = [
-  { selector: 'w-0', declarations: {width: '0'}, hasBreakpoints: true },
-  { selector: 'w-viewport', declarations: {width: '100vw'}, hasBreakpoints: true },
+  { selector: 'w-0', declarations: {width: '0'}, hasBreakpoints: true, description: 'Width is 0 pixel.'},
+  { selector: 'w-viewport', declarations: {width: '100vw'}, hasBreakpoints: true, description: 'Width is 100 viewport width.'},
   { selector: 'w-px', declarations: {width: 'var(--box-px)'}, hasBreakpoints: true },
   { selector: 'w-1', declarations: {width: 'var(--box-1)'}, hasBreakpoints: true },
   { selector: 'w-2', declarations: {width: 'var(--box-2)'}, hasBreakpoints: true },
@@ -54,7 +54,7 @@ export const width: Array<FractureRuleType> = [
   { selector: 'wp-100', declarations: {width: '100%'}, hasBreakpoints: true },
 
   { selector: 'wmax-0', declarations: {maxWidth: '0'}, hasBreakpoints: true },
-  { selector: 'w-viewport', declarations: {maxWidth: '100vw'}, hasBreakpoints: true },
+  { selector: 'wmax-viewport', declarations: {maxWidth: '100vw'}, hasBreakpoints: true, description: 'Max width is 100 viewport width.'},
   { selector: 'wmax-px', declarations: {maxWidth: 'var(--box-px)'}, hasBreakpoints: true },
   { selector: 'wmax-1', declarations: {maxWidth: 'var(--box-1)'}, hasBreakpoints: true },
   { selector: 'wmax-2', declarations: {maxWidth: 'var(--box-2)'}, hasBreakpoints: true },
@@ -104,7 +104,7 @@ export const width: Array<FractureRuleType> = [
   { selector: 'wpmax-100', declarations: {maxWidth: '100%'}, hasBreakpoints: true },
 
   { selector: 'wmin-0', declarations: {minWidth: '0'}, hasBreakpoints: true },
-  { selector: 'wmin-viewport', declarations: {minWidth: '100vw'}, hasBreakpoints: true },
+  { selector: 'wmin-viewport', declarations: {minWidth: '100vw'}, hasBreakpoints: true, description: 'Min width is 100 viewport width.'},
   { selector: 'wmin-px', declarations: {minWidth: 'var(--box-px)'}, hasBreakpoints: true },
   { selector: 'wmin-1', declarations: {minWidth: 'var(--box-1)'}, hasBreakpoints: true },
   { selector: 'wmin-2', declarations: {minWidth: 'var(--box-2)'}, hasBreakpoints: true },

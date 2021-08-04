@@ -1,19 +1,21 @@
 import { useState, useEffect } from "react";
 import Container from "../../../Container";
+import classNames from "@sindresorhus/class-names"
 import Link from "next/link";
 import styled from "styled-components";
+import Search from "../Search";
 import { AiFillGithub } from "react-icons/ai";
 import type React from "react";
 import type { HeaderLinks, NavProps } from "./Nav.types";
 
 const HEADER_LINKS: HeaderLinks = [
 	{ name: "Fractures", url: "/" },
-	{ icon: <div className="grow-1" /> },
+	{ icon: <Search key="nav-search"/> },
 	{ name: "Setup", url: "/setup" },
-	{ name: "Layout", url: "/layout" },
-	{ name: "Colors", url: "/colors" },
-	{ name: "Typography", url: "/typography" },
-	{ name: "Tools", url: "/tools" },
+	{ name: "Layout", url: "/layout", isDesktop: true},
+	{ name: "Colors", url: "/colors", isDesktop: true},
+	{ name: "Typography", url: "/typography", isDesktop: true},
+	{ name: "Tools", url: "/tools", isDesktop: true},
 	{
 		url: "http://github.com/fractures/fractures",
 		icon: <AiFillGithub size={24} key='github-icon'/>,
@@ -30,10 +32,6 @@ const NavMarkup: React.FC<NavProps> = (props) => {
 		setPath(pathname);
 	}, []);
 
-	const liClasses: string = `flex flex-y-center flex-gap-2 hp-100`;
-	const inactiveClasses: string = `gray-700`;
-	const activeClasses: string = "fr-nav__item--active purple-700";
-
 	return (
 		<div
 			className={`${props.className} fixed z-50 top-0 left-0 h-32 wp-100 sans p sm:px-4 xl:px-8`}
@@ -41,12 +39,17 @@ const NavMarkup: React.FC<NavProps> = (props) => {
 			<Container className="flex flex-y-center hp-100">
 				<ol className="flex flex-y-center flex-gap-4 hp-100 wp-100">
 					{HEADER_LINKS.map((item, key) => {
-						const isLink: boolean = !!item.url;
-						const aClasses: string = `fr-nav__item relative flex flex-y-center flex-gap-4 hp-100 lg:px-3 px-6 bold ${
-							path && path === item.url
-								? activeClasses
-								: inactiveClasses
-						}`;
+						const isLink: boolean = !!item.url
+						const isActive: boolean = path && path === item.url
+
+						const liClasses: string = classNames(`flex flex-y-center flex-gap-2 hp-100`, {
+							"lg:none": item.isDesktop,
+						});
+
+						const aClasses: string = classNames("fr-nav__item relative flex flex-y-center flex-gap-4 hp-100 lg:px-3 px-6 bold", {
+							"fr-nav__item--active purple-700": isActive,
+							"gray-700": !isActive
+						})
 
 						if (!isLink) return item.icon;
 
@@ -75,8 +78,6 @@ const NavMarkup: React.FC<NavProps> = (props) => {
 };
 
 const Nav: React.FC<NavProps> = styled(NavMarkup)`
-	overflow: scroll;
-
 	background-color: rgba(255, 255, 255, 0.75);
 	backdrop-filter: blur(12px) brightness(120%);
 

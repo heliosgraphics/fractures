@@ -54,34 +54,6 @@ const GetStarted: React.FC<{}> = () => (
 			</SectionBlock>
 			<SectionBlock title="Variables">
 				<SectionCode
-					title="Boxes"
-					code={[
-						`--box-px: <mark>1px</mark>;`,
-						`--box-1: <mark>2px</mark>;`,
-						`--box-2: <mark>4px</mark>;`,
-						`--box-3: <mark>6px</mark>;`,
-						`--box-4: <mark>8px</mark>;`,
-						`--box-5: <mark>10px</mark>;`,
-						`--box-6: <mark>12px</mark>;`,
-						`--box-7: <mark>14px</mark>;`,
-						`--box-8: <mark>16px</mark>;`,
-						`--box-9: <mark>18px</mark>;`,
-						`--box-10: <mark>20px</mark>;`,
-						`--box-11: <mark>22px</mark>;`,
-						`--box-12: <mark>24px</mark>;`,
-						`--box-13: <mark>26px</mark>;`,
-						`--box-14: <mark>28px</mark>;`,
-						`--box-15: <mark>30px</mark>;`,
-						`--box-16: <mark>32px</mark>;`,
-						`--box-24: <mark>48px</mark>;`,
-						`--box-32: <mark>64px</mark>;`,
-						`--box-40: <mark>80px</mark>;`,
-						`--box-48: <mark>96px</mark>;`,
-					]}
-				>
-					<P>Initial fracture scale, goes from 1px to 96px.</P>
-				</SectionCode>
-				<SectionCode
 					title="Font size and Line height"
 					code={[
 						`--font-size-h1: <mark>36px</mark>;`,
@@ -104,12 +76,12 @@ const GetStarted: React.FC<{}> = () => (
 						`--line-height-tiny: <mark>14px</mark>;`,
 					]}
 				>
-					<P>Default are based on a 8px scale.</P>
+					<P>Defaults are based on a 8px scale.</P>
 				</SectionCode>
 				<SectionCode
 					title="Font families"
 					code={[
-						`--font-family-sans: <mark>"Arial"</mark>;`,
+						`--font-family-sans: <mark>"Helvetica"</mark>;`,
 						`--font-family-serif: <mark>"Georgia"</mark>;`,
 						`--font-family-mono: <mark>"Monospace"</mark>;`,
 					]}
@@ -125,22 +97,6 @@ const GetStarted: React.FC<{}> = () => (
 					]}
 				>
 				</SectionCode>
-				<SectionCode
-					title="Z indices"
-					code={[
-						`--z-index-0: <mark>0</mark>;`,
-						`--z-index-10: <mark>100</mark>;`,
-						`--z-index-20: <mark>200</mark>;`,
-						`--z-index-30: <mark>300</mark>;`,
-						`--z-index-40: <mark>400</mark>;`,
-						`--z-index-50: <mark>500</mark>;`,
-						`--z-index-60: <mark>600</mark>;`,
-						`--z-index-70: <mark>700</mark>;`,
-						`--z-index-80: <mark>800</mark>;`,
-						`--z-index-90: <mark>900</mark>;`,
-						`--z-index-100: <mark>1000</mark>;`,
-					]}
-				></SectionCode>
 				<SectionCode
 					title="Colors"
 					code={[
@@ -220,13 +176,57 @@ const GetStarted: React.FC<{}> = () => (
 					]}
 				>
 					<P>
-						Read more about{" "}
-						<Link href="/colors">
-							<a>colors</a>
-						</Link>
-						.
+						Colors are defined as <code>RGB</code>.
 					</P>
+					<Small>
+					A color variable can be pulled into any CSS with <code>var(--gray-300)</code>,
+					or with an alpha channel using rgba <code>rgba(var(--rgb-gray-300), 0.1)</code>.
+					</Small>
 				</SectionCode>
+				<SectionCode
+					title="Boxes"
+					code={[
+						`--box-px: <mark>1px</mark>;`,
+						`--box-1: <mark>2px</mark>;`,
+						`--box-2: <mark>4px</mark>;`,
+						`--box-3: <mark>6px</mark>;`,
+						`--box-4: <mark>8px</mark>;`,
+						`--box-5: <mark>10px</mark>;`,
+						`--box-6: <mark>12px</mark>;`,
+						`--box-7: <mark>14px</mark>;`,
+						`--box-8: <mark>16px</mark>;`,
+						`--box-9: <mark>18px</mark>;`,
+						`--box-10: <mark>20px</mark>;`,
+						`--box-11: <mark>22px</mark>;`,
+						`--box-12: <mark>24px</mark>;`,
+						`--box-13: <mark>26px</mark>;`,
+						`--box-14: <mark>28px</mark>;`,
+						`--box-15: <mark>30px</mark>;`,
+						`--box-16: <mark>32px</mark>;`,
+						`--box-24: <mark>48px</mark>;`,
+						`--box-32: <mark>64px</mark>;`,
+						`--box-40: <mark>80px</mark>;`,
+						`--box-48: <mark>96px</mark>;`,
+					]}
+				>
+					<P>Initial fracture scale goes from 1px to 96px.</P>
+				</SectionCode>
+				<SectionCode
+					title="Z indices"
+					code={[
+						`--z-index-0: <mark>0</mark>;`,
+						`--z-index-10: <mark>100</mark>;`,
+						`--z-index-20: <mark>200</mark>;`,
+						`--z-index-30: <mark>300</mark>;`,
+						`--z-index-40: <mark>400</mark>;`,
+						`--z-index-50: <mark>500</mark>;`,
+						`--z-index-60: <mark>600</mark>;`,
+						`--z-index-70: <mark>700</mark>;`,
+						`--z-index-80: <mark>800</mark>;`,
+						`--z-index-90: <mark>900</mark>;`,
+						`--z-index-100: <mark>1000</mark>;`,
+					]}
+				></SectionCode>
 			</SectionBlock>
 		</PageContainer>
 	</Layout>
