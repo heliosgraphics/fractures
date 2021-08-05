@@ -8,7 +8,7 @@ const GridItemMarkup: React.FC<GridItemProps> = (props) => {
 
 	return (
 		<div
-			className={`${props.className} fr-section-grid__item radius-1 relative flex flex-column flex-gap-2 p-2`}
+			className={`${props.className} radius-1 relative flex flex-column flex-gap-2 p-2`}
 		>
 			<Fracture colorScale="gray" colorTint={100} rule={props.rule} />
 			{props.rule.description && (
@@ -19,9 +19,7 @@ const GridItemMarkup: React.FC<GridItemProps> = (props) => {
 };
 
 const GridItem: React.FC<GridItemProps> = styled(GridItemMarkup)`
-	.fr-section-grid__item {
-		border: 1px solid var(--gray-100);
-	}
+	border: 1px solid var(--gray-100);
 `;
 
 export default GridItem;
