@@ -63,7 +63,7 @@ export const root: string = `:root {
 	--z-index-90: 900;
 	--z-index-100: 1000;
 
-	--background-opacity: 1;
+	--bg-opacity: 1;
 	--color-opacity: 1;
 
 	--rgb-gray-0: 255 255 255;

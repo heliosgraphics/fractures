@@ -20,7 +20,7 @@ const ColorGrid: React.FC<ColorGridProps> = (props) => {
 								if (tone >= 500) return 100;
 								if (tone < 500) return 700;
 							};
-							const scaleClass: string = `wp-100 p-2 bg-${props.color}-${tone} background-opacity-${scale}`;
+							const scaleClass: string = `wp-100 p-2 bg-${props.color}-${tone} bg-opacity-${scale}`;
 
 							return (
 								<>
