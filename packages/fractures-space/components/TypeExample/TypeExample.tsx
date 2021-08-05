@@ -18,7 +18,11 @@ const TypeExample: React.FC<TypeExampleProps> = (props) => (
 					</>
 				)}
 			</span>
-			<Fracture class={props.classes} />
+			<Fracture
+				colorScale="gray"
+				colorTint={100}
+				rule={{ selector: props.classes }}
+			/>
 		</div>
 	</div>
 );
