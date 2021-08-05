@@ -6,7 +6,7 @@ import PageContainer from "../components/PageContainer";
 import Pre from "../components/Pre";
 import SectionBlock from "../components/SectionBlock";
 import SectionCode from "../components/SectionCode";
-import LightHouse from "../components/LightHouse";
+import LightHouse from "../components/Lighthouse";
 
 const GetStarted: React.FC<{}> = () => (
 	<Layout title="Get started">
