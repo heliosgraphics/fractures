@@ -44,16 +44,21 @@ const Index: React.FC<{}> = () => (
 						<Button type="secondary">GitHub</Button>
 					</a>
 				</div>
-				<div className='flex flex-gap-8'>
+				<div className="flex flex-gap-8">
 					<div className="flex flex-gap-4 flex-y-center">
 						<Small className="mono">
 							npm i fractures
-							<span className="unselectable"> @ {fracturesPackage?.version}</span>
+							<span className="unselectable">
+								{" "}
+								@ {fracturesPackage?.version}
+							</span>
 						</Small>
 						<Label text="Beta" />
 					</div>
 					<Small className="mono">
-						<a href='https://github.com/fractures/fractures/releases/tag/1.3.5'>Looking for v1?</a>
+						<a href="https://github.com/fractures/fractures/releases/tag/1.3.5">
+							Looking for v1?
+						</a>
 					</Small>
 				</div>
 			</section>
@@ -138,8 +143,8 @@ const Index: React.FC<{}> = () => (
 				>
 					<P>
 						Fractures was created at the <b>CSS level</b>, and it's{" "}
-						<b>incomplete by design</b>. Configure CSS variables at :root
-						and follow the outlined patterns with your own code.
+						<b>incomplete by design</b>. Configure CSS variables at :root and
+						follow the outlined patterns with your own code.
 					</P>
 				</SectionCode>
 			</SectionBlock>

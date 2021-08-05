@@ -13,8 +13,8 @@ const TypeExample: React.FC<TypeExampleProps> = (props) => (
 					props.children
 				) : (
 					<>
-						The observatories used a trajectory measurement system
-						called <em>Tral</em>.
+						The observatories used a trajectory measurement system called{" "}
+						<em>Tral</em>.
 					</>
 				)}
 			</span>

@@ -1,6 +1,8 @@
+import type { FractureRuleType } from 'fractures-library/types/css-rules'
+
 export interface FractureProps {
 	className?: string;
-	class: string;
+	rule: FractureRuleType;
 	colorScale?: string;
 	colorTint?: number;
 }

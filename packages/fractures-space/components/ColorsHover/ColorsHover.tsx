@@ -5,10 +5,10 @@ import type { ColorsHoverProps } from "./ColorsHover.types";
 const ColorsHoverMarkup: React.FC<ColorsHoverProps> = (props) => {
 	return (
 		<div
-			className={`${props.className} flex bg-purple-300 hover:bg-purple-100 radius-2 p-8 cursor-pointer`}
+			className={`${props.className} flex bg-gray-100 hover:bg-gray-200 radius-2 p-8 cursor-pointer`}
 		>
-			<Small className="bg-purple-900 purple-100 radius-1 px-3 py-1 mono">
-				hover:purple-300
+			<Small className="bg-gray-900 gray-100 radius-1 px-3 py-1 mono">
+				hover:gray-300
 			</Small>
 		</div>
 	);
