@@ -6,7 +6,7 @@ import PageContainer from "../components/PageContainer";
 import Pre from "../components/Pre";
 import SectionBlock from "../components/SectionBlock";
 import SectionCode from "../components/SectionCode";
-import Small from "../components/Small";
+import LightHouse from "../components/LightHouse";
 
 const GetStarted: React.FC<{}> = () => (
 	<Layout title="Get started">
@@ -51,6 +51,21 @@ const GetStarted: React.FC<{}> = () => (
 						"}",
 					]}
 				/>
+			</SectionBlock>
+			<SectionBlock title="Example">
+				<div className="flex flex-gap-8">
+					<LightHouse />
+					<LightHouse />
+					<LightHouse />
+				</div>
+				<P>
+					Fractures is below 40 KB gzipped, but for production you'll have to
+					purge the unused CSS. Check out an example built with NextJS and
+					Typescript:{" "}
+					<a href="https://github.com/fractures/fractures/tree/master/packages/fractures-examples/fractures-next-ts">
+						<code>fractures-next-ts</code>
+					</a>
+				</P>
 			</SectionBlock>
 			<SectionBlock title="Variables">
 				<SectionCode

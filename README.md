@@ -1,4 +1,4 @@
-<img src="https://fractures.space/static/badge-dark.svg" width="149" alt="Fractures badge" />
+<img src="https://fractures.space/images/share.png" height="166" width="166" alt="Fractures icon" />
 
 # fractures
 

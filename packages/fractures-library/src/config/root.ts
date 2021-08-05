@@ -37,7 +37,7 @@ export const root: string = `:root {
 	--line-height-h4: 32px;
 	--line-height-h5: 26px;
 	--line-height-h6: 24px;
-	--line-height-p: 22px;
+	--line-height-p: 24px;
 	--line-height-small: 20px;
 	--line-height-tiny: 16px;
 
