@@ -7,7 +7,9 @@ const GridItemMarkup: React.FC<GridItemProps> = (props) => {
 	if (props.rule.isHidden) return null;
 
 	return (
-		<div className="fr-section-grid__item radius-1 relative flex flex-column flex-gap-2 p-2">
+		<div
+			className={`${props.className} fr-section-grid__item radius-1 relative flex flex-column flex-gap-2 p-2`}
+		>
 			<Fracture colorScale="gray" colorTint={100} rule={props.rule} />
 			{props.rule.description && (
 				<Tiny className="gray-500">{props.rule.description}</Tiny>
