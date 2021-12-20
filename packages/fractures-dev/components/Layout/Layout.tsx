@@ -8,7 +8,7 @@ const Layout: React.FC<LayoutProps> = (props) => {
 	const meta: MetaType = {
 		description: fracturesPackage.description,
 		title: !!props.title ? `${props.title} — Fractures` : "Fractures",
-		url: "https://fractures.space",
+		url: "https://fractures.dev",
 	};
 
 	return (
@@ -36,7 +36,7 @@ const Layout: React.FC<LayoutProps> = (props) => {
 				<meta
 					name="og-image"
 					property="og:image"
-					content="https://fractures.space/images/share.png"
+					content="https://fractures.dev/images/share.png"
 				/>
 				<meta
 					name="og-image-width"

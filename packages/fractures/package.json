@@ -22,7 +22,7 @@
 	"bugs": {
 		"url": "https://github.com/fractures/fractures/issues"
 	},
-	"homepage": "https://fractures.space",
+	"homepage": "https://fractures.dev",
 	"devDependencies": {
 		"@types/node": "^16.4.10",
 		"chalk": "^4.1.2",

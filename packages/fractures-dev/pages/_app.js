@@ -10,7 +10,7 @@ export default class MyApp extends app {
     return (
       <>
         <Head>
-          <script src="https://cdn.usefathom.com/script.js" data-site={`${process.env.FATHOM_FRACTURES_SPACE}`} defer/>
+          <script src="https://cdn.usefathom.com/script.js" data-site={`${process.env.FATHOM_FRACTURES_DEV}`} defer/>
         </Head>
         <Component {...pageProps} />
       </>
