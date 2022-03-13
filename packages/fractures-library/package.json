@@ -5,6 +5,6 @@
 	"description": "Atom library",
 	"main": "src/fractures.ts",
 	"devDependencies": {
-		"csstype": "^3.0.8"
+		"csstype": "^3.0.11"
 	}
 }
