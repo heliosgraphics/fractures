@@ -11,7 +11,7 @@
 	},
 	"dependencies": {
 		"@sindresorhus/class-names": "^1.1.0",
-		"fractures": "2.0.0-beta-5",
+		"fractures": "2.0.0-beta-6",
 		"fractures-library": "0.0.1",
 		"next": "^12.1.0",
 		"react": "^17.0.2",
