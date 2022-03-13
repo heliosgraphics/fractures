@@ -4,10 +4,10 @@
 	"scripts": {
 		"fr:build": "yarn --cwd packages/fractures run build",
 		"fr:test": "yarn --cwd packages/fractures run test",
-		"docs:dev": "yarn --cwd packages/fractures-space next",
-		"docs:build": "yarn --cwd packages/fractures-space next build",
-		"docs:start": "yarn --cwd packages/fractures-space next start",
-		"docs:export": "yarn --cwd packages/fractures-space next build && next export -o dist"
+		"docs:dev": "yarn --cwd packages/fractures-dev next",
+		"docs:build": "yarn --cwd packages/fractures-dev next build",
+		"docs:start": "yarn --cwd packages/fractures-dev next start",
+		"docs:export": "yarn --cwd packages/fractures-dev next build && next export -o dist"
 	},
 	"workspaces": [
 		"packages/*"
