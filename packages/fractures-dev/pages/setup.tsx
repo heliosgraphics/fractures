@@ -37,8 +37,8 @@ const GetStarted: React.FC<{}> = () => (
 					Fractures works with empty <code>:root &#123;&#125;</code> or with a
 					fully customized one.
 					<br />
-					<code>import 'fractures'</code> then set your variables. For example,
-					this page sets only:
+					<code>import '@fractures/css'</code> then set your variables. For
+					example, this page sets only:
 				</P>
 				<Pre
 					code={[

@@ -1,6 +1,6 @@
 import Head from "next/head";
 import app from "next/app";
-import 'fractures'
+import '@fractures/css'
 import './_app.css'
 
 export default class MyApp extends app {
@@ -10,7 +10,7 @@ export default class MyApp extends app {
     return (
       <>
         <Head>
-          <script src="https://cdn.usefathom.com/script.js" data-site={`${process.env.FATHOM_FRACTURES_DEV}`} defer/>
+          <script src="https://cdn.usefathom.com/script.js" data-site={`${process.env.FATHOM_FRACTURES_DEV}`} defer />
         </Head>
         <Component {...pageProps} />
       </>

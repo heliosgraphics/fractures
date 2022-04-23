@@ -74,6 +74,11 @@
     minimatch "^3.0.4"
     strip-json-comments "^3.1.1"
 
+"@fractures/css@2.0.0-beta.7":
+  version "2.0.0-beta.7"
+  resolved "https://registry.yarnpkg.com/@fractures/css/-/css-2.0.0-beta.7.tgz#0b75f61b0680680861acb1fba06867f93ae558d0"
+  integrity sha512-E4ugaKf3+TXX0txCYm7hjTLs2xv+zjrI2CEpvVP3fK4bwQ9p673fVpKLdjdbRkw90uesBplky5MmJVpuWZFjgg==
+
 "@fullhuman/postcss-purgecss@^4.0.3":
   version "4.0.3"
   resolved "https://registry.yarnpkg.com/@fullhuman/postcss-purgecss/-/postcss-purgecss-4.0.3.tgz#55d71712ec1c7a88e0d1ba5f10ce7fb6aa05beb4"
@@ -1394,11 +1399,6 @@ foreach@^2.0.5:
   version "2.0.5"
   resolved "https://registry.yarnpkg.com/foreach/-/foreach-2.0.5.tgz#0bee005018aeb260d0a3af3ae658dd0136ec1b99"
   integrity sha1-C+4AUBiusmDQo6865ljdATbsG5k=
-
-fractures@^2.0.0-beta-0:
-  version "2.0.0-beta-0"
-  resolved "https://registry.yarnpkg.com/fractures/-/fractures-2.0.0-beta-0.tgz#97d3fdc355d1c87a1fcaceb27edcc2a4760487c5"
-  integrity sha512-uYrnNT+5njgmdaHAH/ezcfKCySmSYv/VAjTmVpbbXJQLv1FThPAgN+yFeh2BM4Tv8yFWNi6MrCsdZhG9iv/pwA==
 
 fs.realpath@^1.0.0:
   version "1.0.0"
