@@ -8,7 +8,7 @@ import {
 } from "react-icons/hi";
 import Button from "../components/Button";
 import Fractures from "../components/Fractures";
-import fracturesPackage from "fractures/package.json";
+import fracturesPackage from "@fractures/css/package.json";
 import H0 from "../components/H0";
 import Label from "../components/Label";
 import Layout from "../components/Layout";
@@ -47,7 +47,7 @@ const Index: React.FC<{}> = () => (
 				<div className="flex flex-gap-8">
 					<div className="flex flex-gap-4 flex-y-center">
 						<Small className="mono">
-							npm i fractures
+							npm i @fractures/css
 							<span className="unselectable">
 								{" "}
 								@ {fracturesPackage?.version}

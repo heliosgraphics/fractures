@@ -1,4 +1,7 @@
+import React from "react";
+
 export interface ButtonProps {
-	className?: string;
-	type: "primary" | "secondary";
+  className?: string;
+  children: React.ReactNode;
+  type: "primary" | "secondary";
 }

@@ -1,5 +1,5 @@
 import Circles from "./components/Circles";
-import fracturesPackage from "fractures/package.json";
+import fracturesPackage from "@fractures/css/package.json";
 import Head from "next/head";
 import Nav from "./components/Nav";
 import type { MetaType, LayoutProps } from "./Layout.types";

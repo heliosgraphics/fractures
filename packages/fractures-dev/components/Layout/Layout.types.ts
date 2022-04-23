@@ -1,9 +1,12 @@
+import React from "react";
+
 export interface MetaType {
-	description: string;
-	title: string;
-	url: string;
+  description: string;
+  title: string;
+  url: string;
 }
 
 export interface LayoutProps {
-	title?: string;
+  children: React.ReactNode;
+  title?: string;
 }
