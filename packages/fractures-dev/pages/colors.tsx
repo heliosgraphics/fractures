@@ -21,16 +21,18 @@ const Colors: React.FC<{}> = () => (
 			<H0>Colors</H0>
 			<SectionBlock title="Color and Background">
 				<P>
-					Colors are defined as <code>RGB</code> values and can be used with
+					Colors are defined as <code>HSL</code> values, and can be used with
 					pure CSS classes like
 					<code>.bg-red-500</code> and
 					<code>.green-500</code> or directly with <code>var(--green-500)</code>{" "}
-					or <code>rgba(var(--rgb-gray-300), 0.1)</code> with alpha channel.
+					or <code>hsla(var(--hsl-gray-300), 0.1)</code> with alpha channel.
 				</P>
 				<ColorGrid color="gray" toneScale={grayToneScale} />
 				<ColorGrid color="red" toneScale={toneScale} />
+				<ColorGrid color="orange" toneScale={toneScale} />
 				<ColorGrid color="yellow" toneScale={toneScale} />
 				<ColorGrid color="green" toneScale={toneScale} />
+				<ColorGrid color="aqua" toneScale={toneScale} />
 				<ColorGrid color="blue" toneScale={toneScale} />
 				<ColorGrid color="purple" toneScale={toneScale} />
 				<ColorGrid color="pink" toneScale={toneScale} />

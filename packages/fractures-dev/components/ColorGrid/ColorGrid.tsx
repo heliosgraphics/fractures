@@ -20,13 +20,13 @@ const ColorGrid: React.FC<ColorGridProps> = (props) => {
 								if (tone >= 500) return 100;
 								if (tone < 500) return 700;
 							};
-							const scaleClass: string = `wp-100 p-2 bg-${props.color}-${tone} bg-opacity-${scale}`;
+							const scaleClass: string = `wp-100 p-1 bg-${props.color}-${tone} bg-opacity-${scale}`;
 
 							return (
 								<>
 									{isFirst && (
 										<div
-											className={`${scaleClass} flex flex-column flex-gap-2 py-2 px-2`}
+											className={`${scaleClass} flex flex-column flex-gap-2 py-8 px-4`}
 										>
 											<Square
 												colorScale={props.color}
@@ -43,7 +43,6 @@ const ColorGrid: React.FC<ColorGridProps> = (props) => {
 											</span>
 										</div>
 									)}
-									<span className={scaleClass} />
 								</>
 							);
 						})}
