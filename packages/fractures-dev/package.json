@@ -10,12 +10,12 @@
 		"now-build": "next build && next export -o dist"
 	},
 	"dependencies": {
+		"@fractures/css": "2.0.0-beta.8",
 		"@sindresorhus/class-names": "^1.1.0",
-		"@fractures/css": "2.0.0-beta.7",
-		"fractures-library": "0.0.1",
-		"next": "^12.1.5",
-		"react": "^18.0.0",
-		"react-dom": "^18.0.0",
+		"fractures-library": "^0.0.2",
+		"next": "^12.1.6",
+		"react": "^18.1.0",
+		"react-dom": "^18.1.0",
 		"react-icons": "^4.3.1",
 		"styled-components": "^5.3.5"
 	},
@@ -23,10 +23,10 @@
 		"@babel/core": "^7.17.9",
 		"@babel/preset-typescript": "^7.16.7",
 		"@fullhuman/postcss-purgecss": "^4.1.3",
-		"@types/react": "^18.0.6",
-		"postcss": "^8.4.8",
+		"@types/react": "^18.0.9",
+		"postcss": "^8.4.14",
 		"postcss-flexbugs-fixes": "^5.0.2",
-		"postcss-preset-env": "^7.4.2",
-		"typescript": "^4.6.2"
+		"postcss-preset-env": "^7.6.0",
+		"typescript": "^4.7.2"
 	}
 }
