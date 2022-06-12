@@ -1,6 +1,5 @@
 import type { FractureRuleType } from "../../types/css-rules";
 
-// prettier-ignore
 export const cursor: Array<FractureRuleType> = [
   { selector: 'no-events', declarations: { pointerEvents: 'none' }, hasHover: true },
   { selector: 'cursor-alias', declarations: { cursor: 'alias' }, hasHover: true },

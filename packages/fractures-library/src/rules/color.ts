@@ -1,6 +1,5 @@
 import type { FractureRuleType } from "../../types/css-rules";
 
-// prettier-ignore
 export const color: Array<FractureRuleType> = [
   { selector: 'gray-0', declarations: { color: 'hsla(var(--hsl-gray-0), var(--color-opacity))' }, hasHover: true, variables: { '--color-opacity': 1 } },
   { selector: 'gray-25', declarations: { color: 'hsla(var(--hsl-gray-25), var(--color-opacity))' }, hasHover: true, variables: { '--color-opacity': 1 } },

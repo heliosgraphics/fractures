@@ -1,6 +1,5 @@
 import type { FractureRuleType } from "../../types/css-rules";
 
-// prettier-ignore
 export const grid: Array<FractureRuleType> = [
   { selector: 'grid-gap-1', declarations: { gridGap: 'var(--box-1)' }, hasBreakpoints: true },
   { selector: 'grid-gap-2', declarations: { gridGap: 'var(--box-2)' }, hasBreakpoints: true },

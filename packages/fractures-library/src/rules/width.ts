@@ -1,6 +1,5 @@
 import type { FractureRuleType } from "../../types/css-rules";
 
-// prettier-ignore
 export const width: Array<FractureRuleType> = [
   { selector: 'w-0', declarations: { width: '0' }, hasBreakpoints: true, description: 'Width is 0 pixel.' },
   { selector: 'w-viewport', declarations: { width: '100vw' }, hasBreakpoints: true, description: 'Width is 100 viewport width.' },

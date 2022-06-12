@@ -1,6 +1,5 @@
 import type { FractureRuleType } from "../../types/css-rules";
 
-// prettier-ignore
 export const type: Array<FractureRuleType> = [
   { selector: 'h1', declarations: { fontSize: 'var(--font-size-h1)', lineHeight: 'var(--line-height-h1)' }, hasBreakpoints: true },
   { selector: 'h2', declarations: { fontSize: 'var(--font-size-h2)', lineHeight: 'var(--line-height-h2)' }, hasBreakpoints: true },

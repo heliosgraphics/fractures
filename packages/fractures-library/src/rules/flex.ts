@@ -1,6 +1,5 @@
 import type { FractureRuleType } from "../../types/css-rules";
 
-// prettier-ignore
 export const flex: Array<FractureRuleType> = [
   { selector: 'flex-wrap', declarations: { flexWrap: 'wrap' } },
   { selector: 'flex-row', declarations: { flexDirection: 'row' }, hasBreakpoints: true },

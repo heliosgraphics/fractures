@@ -1,6 +1,5 @@
 import type { FractureRuleType } from "../../types/css-rules";
 
-// prettier-ignore
 export const margin: Array<FractureRuleType> = [
   { selector: 'm-px', declarations: { margin: 'var(--box-px)' }, hasBreakpoints: true },
   { selector: 'm-0', declarations: { margin: '0' }, hasBreakpoints: true },

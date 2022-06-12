@@ -1,6 +1,5 @@
 import type { FractureRuleType } from "../../types/css-rules";
 
-// prettier-ignore
 export const position: Array<FractureRuleType> = [
   { selector: "absolute", declarations: { position: "absolute" } },
   { selector: "fixed", declarations: { position: "fixed" } },

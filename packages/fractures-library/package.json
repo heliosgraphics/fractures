@@ -1,9 +1,9 @@
 {
 	"name": "fractures-library",
-	"version": "0.0.2",
+	"version": "0.0.3",
 	"author": "Chris Puska <theta@hey.com>",
 	"description": "Atomic CSS Library",
-	"main": "src/fractures.ts",
+	"main": "./src/index",
 	"devDependencies": {
 		"csstype": "^3.1.0"
 	}

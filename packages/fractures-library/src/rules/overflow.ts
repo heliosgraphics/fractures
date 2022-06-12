@@ -1,6 +1,5 @@
 import type { FractureRuleType } from "../../types/css-rules";
 
-// prettier-ignore
 export const overflow: Array<FractureRuleType> = [
   { selector: "overflow-hidden", declarations: { overflow: "hidden" } },
   { selector: "overflow-scroll", declarations: { overflow: "scroll" } },

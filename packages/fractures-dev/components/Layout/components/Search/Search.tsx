@@ -1,5 +1,5 @@
 import React, { useRef, useEffect, useState } from "react";
-import { fractureFiles } from "fractures-library/src/index";
+import { fractureFiles } from "fractures-library";
 import { HiSearch, HiX } from "react-icons/hi";
 import classNames from "@sindresorhus/class-names";
 import SearchResults from "./components/SearchResults";

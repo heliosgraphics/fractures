@@ -1,6 +1,5 @@
 import type { FractureRuleType } from "../../types/css-rules";
 
-// prettier-ignore
 export const padding: Array<FractureRuleType> = [
   { selector: 'p-px', declarations: { padding: 'var(--box-px)' }, hasBreakpoints: true },
   { selector: 'p-0', declarations: { padding: '0' }, hasBreakpoints: true },

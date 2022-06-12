@@ -1,6 +1,5 @@
 import type { FractureRuleType } from "../../types/css-rules";
 
-// prettier-ignore
 export const list: Array<FractureRuleType> = [
   { selector: 'list-circle > li', declarations: { listStyleType: 'circle' }, selectorNice: 'list-circle' },
   { selector: 'list-decimal > li', declarations: { listStyleType: 'decimal' }, selectorNice: 'list-decimal' },

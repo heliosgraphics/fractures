@@ -1,6 +1,5 @@
 import type { FractureRuleType } from "../../types/css-rules";
 
-// prettier-ignore
 export const height: Array<FractureRuleType> = [
   { selector: 'h-0', declarations: { height: 0 }, hasBreakpoints: true },
   { selector: 'h-viewport', declarations: { height: '100vh' }, hasBreakpoints: true, description: 'Height is 100 viewport height.' },
