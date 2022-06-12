@@ -9,7 +9,7 @@ import { type } from "fractures-library/src/rules/type";
 const About = () => (
 	<Layout title="Typography">
 		<PageContainer>
-			<H0>Typograpy</H0>
+			<H0>Typography</H0>
 			<SectionBlock title="Headings">
 				<TypeExample classes="h1 bolder" fontSize={36} lineHeight={42}>
 					Almost before we knew it, we had left the ground.

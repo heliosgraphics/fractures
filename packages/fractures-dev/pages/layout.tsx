@@ -21,7 +21,7 @@ const LayoutPage: React.FC<{}> = () => (
 			<H0>Layout</H0>
 			<SectionBlock title="Breakpoints">
 				<P>
-					Fractures has 5 fixed breakpoint prefix to help you build responsive
+					Fractures has 5 fixed breakpoint prefixes to help you build responsive
 					layouts.
 					<br />
 					Resize this page to see how they work.

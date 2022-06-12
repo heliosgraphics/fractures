@@ -126,8 +126,8 @@ const Index: React.FC<{}> = () => (
 					]}
 				>
 					<P>
-						An <b>opinionated</b> breakpoint and <b>customizable</b> color
-						system built in. No javascript.
+						<b>Opinionated</b> breakpoints and <b>customizable</b> color system
+						built in. No javascript.
 					</P>
 				</SectionCode>
 				<SectionCode

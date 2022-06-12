@@ -20,17 +20,6 @@ const GetStarted: React.FC<{}> = () => (
 					maintainable. It aims to be the baseline of a system to enable fast
 					moving teams to build better UIs.
 				</P>
-				<P>
-					It contains two essential concepts:{" "}
-					<Link href="/layout">
-						<a>Breakpoints</a>
-					</Link>{" "}
-					and{" "}
-					<Link href="/colors">
-						<a>Hover</a>
-					</Link>
-					.
-				</P>
 			</SectionBlock>
 			<SectionBlock title="Config">
 				<P>
@@ -114,83 +103,19 @@ const GetStarted: React.FC<{}> = () => (
 				<SectionCode
 					title="Colors"
 					code={[
-						`--rgb-gray-0: <mark>255 255 255</mark>;`,
-						`--rgb-gray-25: <mark>249 250 250</mark>;`,
-						`--rgb-gray-50: <mark>247 247 248</mark>;`,
-						`--rgb-gray-100: <mark>241 242 243</mark>;`,
-						`--rgb-gray-200: <mark>214 216 219</mark>;`,
-						`--rgb-gray-300: <mark>187 191 195</mark>;`,
-						`--rgb-gray-400: <mark>160 165 171</mark>;`,
-						`--rgb-gray-500: <mark>133 139 148</mark>;`,
-						`--rgb-gray-600: <mark>107 114 122</mark>;`,
-						`--rgb-gray-700: <mark>84 89 95</mark>;`,
-						`--rgb-gray-800: <mark>60 63 68</mark>;`,
-						`--rgb-gray-900: <mark>36 38 41</mark>;`,
-						`--rgb-gray-1000: <mark>0 0 0</mark>;`,
-						`&nbsp;`,
-						`--rgb-red-100: <mark>252 233 234</mark>;`,
-						`--rgb-red-200: <mark>245 188 192</mark>;`,
-						`--rgb-red-300: <mark>239 144 150</mark>;`,
-						`--rgb-red-400: <mark>232 99 109</mark>;`,
-						`--rgb-red-500: <mark>225 55 67</mark>;`,
-						`--rgb-red-600: <mark>200 30 41</mark>;`,
-						`--rgb-red-700: <mark>156 23 32</mark>;`,
-						`--rgb-red-800: <mark>111 16 23</mark>;`,
-						`--rgb-red-900: <mark>67 10 14</mark>;`,
-						`&nbsp;`,
-						`--rgb-yellow-100: <mark>254 246 230</mark>;`,
-						`--rgb-yellow-200: <mark>252 228 181</mark>;`,
-						`--rgb-yellow-300: <mark>250 210 132</mark>;`,
-						`--rgb-yellow-400: <mark>249 192 83</mark>;`,
-						`--rgb-yellow-500: <mark>247 174 34</mark>;`,
-						`--rgb-yellow-600: <mark>221 148 8</mark>;`,
-						`--rgb-yellow-700: <mark>172 115 6</mark>;`,
-						`--rgb-yellow-800: <mark>123 82 5</mark>;`,
-						`--rgb-yellow-900: <mark>74 49 3</mark>;`,
-						`&nbsp;`,
-						`--rgb-green-100: <mark>234 250 240</mark>;`,
-						`--rgb-green-200: <mark>193 241 209</mark>;`,
-						`--rgb-green-300: <mark>151 232 179</mark>;`,
-						`--rgb-green-400: <mark>109 222 148</mark>;`,
-						`--rgb-green-500: <mark>68 213 118</mark>;`,
-						`--rgb-green-600: <mark>42 187 92</mark>;`,
-						`--rgb-green-700: <mark>33 146 72</mark>;`,
-						`--rgb-green-800: <mark>23 104 51</mark>;`,
-						`--rgb-green-900: <mark>14 62 31</mark>;`,
-						`&nbsp;`,
-						`--rgb-blue-100: <mark>232 2 1,253</mark>;`,
-						`--rgb-blue-200: <mark>185 1 4,249</mark>;`,
-						`--rgb-blue-300: <mark>139 1 7,245</mark>;`,
-						`--rgb-blue-400: <mark>93 9 ,241</mark>;`,
-						`--rgb-blue-500: <mark>46 4 ,238</mark>;`,
-						`--rgb-blue-600: <mark>21 1 ,212</mark>;`,
-						`--rgb-blue-700: <mark>16 1 ,165</mark>;`,
-						`--rgb-blue-800: <mark>11 1 ,118</mark>;`,
-						`--rgb-blue-900: <mark>7 6 71</mark>;`,
-						`&nbsp;`,
-						`--rgb-purple-100: <mark>241 232 252</mark>;`,
-						`--rgb-purple-200: <mark>213 186 247</mark>;`,
-						`--rgb-purple-300: <mark>185 140 242</mark>;`,
-						`--rgb-purple-400: <mark>157 94 237</mark>;`,
-						`--rgb-purple-500: <mark>128 48 232</mark>;`,
-						`--rgb-purple-600: <mark>103 23 207</mark>;`,
-						`--rgb-purple-700: <mark>80 18 161</mark>;`,
-						`--rgb-purple-800: <mark>57 13 115</mark>;`,
-						`--rgb-purple-900: <mark>34 8 69</mark>;`,
-						`&nbsp;`,
-						`--rgb-pink-100: <mark>252 233 244</mark>;`,
-						`--rgb-pink-200: <mark>246 188 223</mark>;`,
-						`--rgb-pink-300: <mark>239 143 201</mark>;`,
-						`--rgb-pink-400: <mark>233 98 179</mark>;`,
-						`--rgb-pink-500: <mark>227 54 158</mark>;`,
-						`--rgb-pink-600: <mark>201 28 132</mark>;`,
-						`--rgb-pink-700: <mark>157 22 103</mark>;`,
-						`--rgb-pink-800: <mark>112 16 73</mark>;`,
-						`--rgb-pink-900: <mark>67 9 44</mark>;`,
+						`--hsl-aqua: <mark>187,87%</mark>;`,
+						`--hsl-blue: <mark>230,87%</mark>;`,
+						`--hsl-gray: <mark>225,10%</mark>;`,
+						`--hsl-green: <mark>120,75%</mark>;`,
+						`--hsl-orange: <mark>23,94%</mark>;`,
+						`--hsl-pink: <mark>324,76%</mark>;`,
+						`--hsl-purple: <mark>266,80%</mark>;`,
+						`--hsl-red: <mark>356,84%</mark>;`,
+						`--hsl-yellow: <mark>39,93%</mark>;`,
 					]}
 				>
 					<P>
-						Colors are defined as <code>RGB</code> values, see{" "}
+						Colors are defined as <code>HSL</code> values, see{" "}
 						<Link href="/colors">
 							<a>details</a>
 						</Link>
