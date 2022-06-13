@@ -1,11 +1,12 @@
 {
 	"name": "@fractures/css",
-	"version": "2.0.1",
+	"version": "2.0.2",
 	"author": "Chris Puska <theta@hey.com>",
 	"description": "Functional CSS, but only the good parts.",
 	"main": "dist/fractures.min.css",
 	"files": [
-		"dist/*.*"
+		"dist/*.*",
+		"dist/set/*.*"
 	],
 	"scripts": {
 		"prepare": "ts-node ./src/build.ts",
