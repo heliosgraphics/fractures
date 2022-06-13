@@ -1,6 +1,6 @@
 {
 	"name": "fractures-dev",
-	"version": "2.0.0",
+	"version": "2.0.1",
 	"author": "Chris Puska <theta@hey.com>",
 	"description": "Fractures Documentation",
 	"scripts": {
@@ -11,8 +11,7 @@
 	},
 	"dependencies": {
 		"@babel/preset-typescript": "^7.17.12",
-		"@fractures/css": "2.0.0-beta.9",
-		"@fractures/ui": "^0.1.37",
+		"@fractures/css": "^2.0.0",
 		"@sindresorhus/class-names": "^1.1.0",
 		"fractures-library": "*",
 		"next": "^12.1.6",

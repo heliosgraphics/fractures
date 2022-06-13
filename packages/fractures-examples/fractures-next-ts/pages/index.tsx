@@ -9,7 +9,7 @@ export default function Home() {
 					<title>Fractures ✕ NextJS</title>
 					<meta name="description" content="Fractures NextJS Example" />
 				</Head>
-				<div className="bg-blue-100 p-8 sans">
+				<div className="bg-blue-100 p-8 sans flex lg:flex-column">
 					<div className="bg-blue-200 p-8">
 						<h1 className="h1 bolder">Green and Blue</h1>
 						<div className="bg-green-300 blue-700 p-4">Test 700</div>

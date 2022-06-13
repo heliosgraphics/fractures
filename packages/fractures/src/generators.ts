@@ -5,10 +5,18 @@ import type {
 } from "fractures-library/types/css-rules";
 import { writeFile } from "./utils";
 
+const BREAKPOINTS: Array<keyof typeof FractureBreakpoints> = [
+  "xxl",
+  "xl",
+  "lg",
+  "md",
+  "sm"
+]
+
 // Generates all the rules for the declarations
 export const generateRules = (
   fractureRule: FractureRuleType,
-  prefix?: string
+  prefix?: 'hover' | keyof typeof FractureBreakpoints
 ): string => {
   const declarations: Array<[string, string]> = Object.entries(fractureRule.declarations || {})
   const variables: Array<[string, string]> = Object.entries(fractureRule.variables || {})
@@ -46,29 +54,26 @@ export const generateResponsiveRules = (
 
   if (!responsiveRules.length) return css;
 
-  // Rules for each breakpoint enum
-  const breakPointsEntries = Object.entries(FractureBreakpoints);
-
-  for (const value of breakPointsEntries) {
+  // Rules for each breakpoint
+  BREAKPOINTS.forEach((size) => {
     css += `
-			@media (max-width: ${value[1]}) {
-				${responsiveRules.map((rule) => generateRules(rule, value[0])).join("")}
+			@media (max-width: ${FractureBreakpoints[size]}) {
+				${responsiveRules.map((rule) => generateRules(rule, size)).join("")}
 			}`;
-  }
+  })
 
   return css;
 };
 
 export const generateNormalRules = (
-  rules: Array<FractureRuleType>,
-  prefix?: string
+  rules: Array<FractureRuleType>
 ): string => {
   let css: string = "";
 
   rules.forEach((rule: FractureRuleType) => {
     css += generateRules(rule);
 
-    if (!!prefix) css += generateRules(rule, prefix);
+    if (rule.hasHover) css += generateRules(rule, 'hover');
   });
 
   return css;
@@ -83,9 +88,10 @@ export const generateOutput = (
   const rules = Object.values(files).flatMap(x => x);
   const css: string = `
 		${init}
-		${generateNormalRules(rules, "hover")}
+    ${generateNormalRules(rules)}
 		${generateResponsiveRules(rules)}
 	`;
+
   const fractures: string = css.replace(/\s/g, "")
 
   return writeFile(folder, fractures);
