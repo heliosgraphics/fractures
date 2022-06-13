@@ -1,4 +1,3 @@
-import chalk from "chalk";
 import { FractureBreakpoints } from "fractures-library/types/css-rules";
 import type {
   FractureRuleType,
@@ -7,7 +6,6 @@ import type {
 import { writeFile } from "./utils";
 
 // Generates all the rules for the declarations
-// TODO @chris Experimenting, needs to be cleaned
 export const generateRules = (
   fractureRule: FractureRuleType,
   prefix?: string
@@ -34,20 +32,19 @@ export const generateRules = (
   const rule: string = `${fractureRule.selector}${pseudo} {${declarationSpace}${variablesOutput}${declarationSpace}${declarationOutput}${declarationSpace}}`;
   const selector: string = `.${prefix ? `${prefix}\\:` : ""}${rule}\n`
 
-  console.log(chalk.gray(`    | rules for ${rule}`));
-
   return selector;
 };
 
 export const generateResponsiveRules = (
-  fractureFiles: FractureFiles
+  rules: Array<FractureRuleType>
 ): string => {
   let css: string = "";
-  const responsiveRules: Array<FractureRuleType> = Object.values(
-    fractureFiles
-  )
+
+  const responsiveRules: Array<FractureRuleType> = rules
     .flatMap((x) => x)
     .filter((rule) => rule.hasBreakpoints);
+
+  if (!responsiveRules.length) return css;
 
   // Rules for each breakpoint enum
   const breakPointsEntries = Object.entries(FractureBreakpoints);
@@ -63,17 +60,16 @@ export const generateResponsiveRules = (
 };
 
 export const generateNormalRules = (
-  fractureFiles: FractureFiles,
+  rules: Array<FractureRuleType>,
   prefix?: string
 ): string => {
   let css: string = "";
 
-  for (const [, value] of Object.entries(fractureFiles)) {
-    value.forEach((rule: FractureRuleType) => {
-      css += generateRules(rule);
-      if (!!prefix) css += generateRules(rule, prefix);
-    });
-  }
+  rules.forEach((rule: FractureRuleType) => {
+    css += generateRules(rule);
+
+    if (!!prefix) css += generateRules(rule, prefix);
+  });
 
   return css;
 };
@@ -82,18 +78,15 @@ export const generateNormalRules = (
 export const generateOutput = (
   files: FractureFiles,
   init: string,
-  folder: string,
-  isMinified?: boolean
+  folder: string
 ) => {
-  console.log(
-    chalk.bold.green(`⤓ Fractures — folder: ${folder} min: ${!!isMinified}`)
-  );
+  const rules = Object.values(files).flatMap(x => x);
   const css: string = `
 		${init}
-		${generateNormalRules(files, "hover")}
-		${generateResponsiveRules(files)}
+		${generateNormalRules(rules, "hover")}
+		${generateResponsiveRules(rules)}
 	`;
-  const fractures: string = isMinified ? css.replace(/\s/g, "") : css;
+  const fractures: string = css.replace(/\s/g, "")
 
   return writeFile(folder, fractures);
 };

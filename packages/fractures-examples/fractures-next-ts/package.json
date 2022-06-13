@@ -1,6 +1,6 @@
 {
 	"name": "fractures-next-ts",
-	"version": "0.1.0",
+	"version": "0.2.0",
 	"private": true,
 	"scripts": {
 		"dev": "next dev",
@@ -9,10 +9,8 @@
 		"lint": "next lint"
 	},
 	"dependencies": {
-		"@fractures/css": "2.0.0-beta.8",
-		"@fractures/ui": "^0.1.37",
+		"@fractures/css": "2.0.0-beta.10",
 		"next": "12.1.6",
-		"next-global-css": "^1.3.1",
 		"react": "18.1.0",
 		"react-dom": "18.1.0"
 	},

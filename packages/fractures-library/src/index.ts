@@ -15,7 +15,7 @@ import { padding } from "./rules/padding";
 import { position } from "./rules/position";
 import { type } from "./rules/type";
 import { width } from "./rules/width";
-import type { FractureFiles } from "fractures-library/types/css-rules";
+import type { FractureFiles } from "../types/css-rules";
 
 export const fractureFiles: FractureFiles = {
   background,

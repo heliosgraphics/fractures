@@ -21,7 +21,7 @@ export interface FractureRuleType {
   hasHover?: boolean;
   /** Demo: Gets generated, but hidden from demo website. */
   isHidden?: boolean;
-  /** Classname string. */
+  /** Selector name. */
   selector: string;
   /** Demo: nice selector string for the demo. */
   selectorNice?: string;

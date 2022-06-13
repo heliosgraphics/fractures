@@ -1,4 +1,3 @@
-import chalk from "chalk";
 import fs from "fs";
 import gzipSize from "gzip-size";
 
@@ -12,14 +11,15 @@ export const writeFile = (openFolder: string, contents: string): void => {
     const fileName: string = f.pop() || "";
     const folder: string = f.join("/");
     const hasFolder: boolean = fs.existsSync(folder);
+    const minifiedContents: string = contents.replace(/\s/g, "");
 
     if (!hasFolder) {
       fs.mkdirSync(folder);
     }
 
-    fs.writeFileSync(openFolder, contents);
+    fs.writeFileSync(openFolder, minifiedContents);
 
-    return getStats(openFolder, fileName, contents);
+    return getStats(openFolder, fileName, minifiedContents);
   } catch (error) {
     return console.error(error);
   }
@@ -28,15 +28,11 @@ export const writeFile = (openFolder: string, contents: string): void => {
 // Gets the file statistics
 export const getStats = (folder: string, fileName: string, content: string) => {
   fs.stat(folder, (error: any, stats: any) => {
-    if (error) return console.log(chalk.red(`File doesn't exist.`));
+    if (error) return console.log(`File doesn't exist.`);
 
     const kbSize: number = Math.round(stats?.size / 1024);
     const kbGzip: number = Math.round(gzipSize.sync(content) / 1024);
 
-    console.log(
-      chalk.green(
-        `⤒ ${fileName}: ${stats?.size} bytes ${kbSize} KB | gzip: ${kbGzip} KB`
-      )
-    );
+    console.log(`⤒ ${fileName}: ${stats?.size} bytes ${kbSize} KB | gzip: ${kbGzip} KB`);
   });
 };

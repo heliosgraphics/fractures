@@ -1,4 +1,4 @@
-export const root: string = `:root {
+export const config: string = `:root {
 	--box-px: 1px;
 	--box-1: 2px;
 	--box-2: 4px;
@@ -41,9 +41,9 @@ export const root: string = `:root {
 	--line-height-small: 20px;
 	--line-height-tiny: 16px;
 
-	--font-family-sans: "Arial";
-	--font-family-serif: "Georgia";
-	--font-family-mono: "Monospace";
+	--font-family-sans: Helvetica, Arial, sans-serif;
+	--font-family-serif: Georgia, Garamond, serif;
+	--font-family-mono: "Courier New", monospace;
 
 	--font-weight-lighter: lighter;
 	--font-weight-light: light;
