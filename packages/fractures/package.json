@@ -12,7 +12,7 @@
 		"prepare": "ts-node ./src/build.ts",
 		"start": "ts-node ./src/build.ts",
 		"build": "ts-node ./src/build.ts",
-		"test": "ts-node ./src/build.ts"
+		"test": "jest --verbose --passWithNoTests"
 	},
 	"keywords": [
 		"CSS",
@@ -28,8 +28,13 @@
 	},
 	"homepage": "https://fractures.dev",
 	"devDependencies": {
+		"@swc/core": "^1.2.204",
+		"@swc/jest": "^0.2.21",
+		"@types/jest": "^28.1.2",
 		"@types/node": "^18.0.0",
 		"gzip-size": "^6.0.0",
+		"jest": "^28.1.1",
+		"jest-environment-jsdom": "^28.1.1",
 		"ts-node": "^10.8.1"
 	}
 }
