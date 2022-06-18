@@ -28,7 +28,7 @@
 	},
 	"homepage": "https://fractures.dev",
 	"devDependencies": {
-		"@types/node": "^17.0.42",
+		"@types/node": "^18.0.0",
 		"gzip-size": "^6.0.0",
 		"ts-node": "^10.8.1"
 	}
