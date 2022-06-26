@@ -1,6 +1,6 @@
 {
 	"name": "@fractures/icons",
-	"version": "0.0.1",
+	"version": "0.0.2",
 	"author": "Chris Puska <theta@hey.com>",
 	"scripts": {
 		"prepare": "yarn run build && yarn run build:meta",
