@@ -1,15 +1,15 @@
 import type { FractureRuleType } from "../../types/css-rules";
 
 export const type: Array<FractureRuleType> = [
-  { selector: 'h1', declarations: { fontSize: 'var(--font-size-h1)', lineHeight: 'var(--line-height-h1)' }, hasBreakpoints: true },
-  { selector: 'h2', declarations: { fontSize: 'var(--font-size-h2)', lineHeight: 'var(--line-height-h2)' }, hasBreakpoints: true },
-  { selector: 'h3', declarations: { fontSize: 'var(--font-size-h3)', lineHeight: 'var(--line-height-h3)' }, hasBreakpoints: true },
-  { selector: 'h4', declarations: { fontSize: 'var(--font-size-h4)', lineHeight: 'var(--line-height-h4)' }, hasBreakpoints: true },
-  { selector: 'h5', declarations: { fontSize: 'var(--font-size-h5)', lineHeight: 'var(--line-height-h5)' }, hasBreakpoints: true },
-  { selector: 'h6', declarations: { fontSize: 'var(--font-size-h6)', lineHeight: 'var(--line-height-h6)' }, hasBreakpoints: true },
-  { selector: 'p', declarations: { fontSize: 'var(--font-size-p)', lineHeight: 'var(--line-height-p)' }, hasBreakpoints: true },
-  { selector: 'small', declarations: { fontSize: 'var(--font-size-small)', lineHeight: 'var(--line-height-small)' }, hasBreakpoints: true },
-  { selector: 'tiny', declarations: { fontSize: 'var(--font-size-tiny)', lineHeight: 'var(--line-height-tiny)' }, hasBreakpoints: true },
+  { selector: 'h1', declarations: { fontSize: 'var(--font-size-h1)', lineHeight: 'var(--line-height-h1)' } },
+  { selector: 'h2', declarations: { fontSize: 'var(--font-size-h2)', lineHeight: 'var(--line-height-h2)' } },
+  { selector: 'h3', declarations: { fontSize: 'var(--font-size-h3)', lineHeight: 'var(--line-height-h3)' } },
+  { selector: 'h4', declarations: { fontSize: 'var(--font-size-h4)', lineHeight: 'var(--line-height-h4)' } },
+  { selector: 'h5', declarations: { fontSize: 'var(--font-size-h5)', lineHeight: 'var(--line-height-h5)' } },
+  { selector: 'h6', declarations: { fontSize: 'var(--font-size-h6)', lineHeight: 'var(--line-height-h6)' } },
+  { selector: 'p', declarations: { fontSize: 'var(--font-size-p)', lineHeight: 'var(--line-height-p)' } },
+  { selector: 'small', declarations: { fontSize: 'var(--font-size-small)', lineHeight: 'var(--line-height-small)' } },
+  { selector: 'tiny', declarations: { fontSize: 'var(--font-size-tiny)', lineHeight: 'var(--line-height-tiny)' } },
 
   { selector: 'sans', declarations: { fontFamily: 'var(--font-family-sans)' } },
   { selector: 'serif', declarations: { fontFamily: 'var(--font-family-serif)' } },
