@@ -1,4 +1,3 @@
-import BreakPointChart from "../components/BreakPointChart";
 import H0 from "../components/H0";
 import Layout from "../components/Layout";
 import PageContainer from "../components/PageContainer";
