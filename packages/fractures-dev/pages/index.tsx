@@ -26,11 +26,11 @@ const Index: React.FC<{}> = () => (
 				<H0>
 					<mark>Functional CSS</mark>, but only the good parts.
 				</H0>
-				<h4 className="h4 normal">
+				<h2 className="h4 normal">
 					Fractures is the <b>atomic CSS toolkit</b> that helps you create
 					resilient <u>design systems</u> and <u>rapid prototypes</u> by
 					providing a set of non-blocking utility classes.
-				</h4>
+				</h2>
 			</header>
 			<section className="flex flex-column flex-gap-8">
 				<div className="flex flex-gap-8">

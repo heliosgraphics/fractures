@@ -13,6 +13,7 @@
 		"@babel/preset-typescript": "^7.18.6",
 		"@fractures/css": "^2.1.0",
 		"@sindresorhus/class-names": "^1.1.0",
+		"fathom-client": "^3.5.0",
 		"fractures-library": "*",
 		"next": "^12.2.2",
 		"react": "^18.2.0",

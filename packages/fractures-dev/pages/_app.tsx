@@ -1,23 +1,29 @@
-import Head from "next/head";
-import app from "next/app";
+import { useEffect } from "react";
+import { useRouter } from "next/router";
+import * as Fathom from "fathom-client";
 import "@fractures/css";
 import "./_app.css";
 
-export default class MyApp extends app {
-	render() {
-		const { Component, pageProps } = this.props;
+const App = ({ Component, pageProps }) => {
+	const router = useRouter();
 
-		return (
-			<>
-				<Head>
-					<script
-						src="https://cdn.usefathom.com/script.js"
-						data-site={`${process.env.FATHOM_FRACTURES_DEV}`}
-						defer
-					/>
-				</Head>
-				<Component {...pageProps} />
-			</>
-		);
-	}
-}
+	useEffect(() => {
+		Fathom.load(`${process.env.FATHOM_FRACTURES_DEV}`, {
+			includedDomains: ["fractures.dev"],
+		});
+
+		function onRouteChangeComplete() {
+			Fathom.trackPageview();
+		}
+
+		router.events.on("routeChangeComplete", onRouteChangeComplete);
+
+		return () => {
+			router.events.off("routeChangeComplete", onRouteChangeComplete);
+		};
+	}, []);
+
+	return <Component {...pageProps} />;
+};
+
+export default App;
