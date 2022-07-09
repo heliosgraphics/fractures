@@ -1,11 +1,11 @@
 export type HeaderLinks = Array<{
-	name?: string;
-	url?: string;
-	icon?: React.ReactElement;
-	isExternal?: boolean;
-	isDesktop?: boolean;
+  component?: React.ReactNode;
+  isDesktop?: boolean;
+  isExternal?: boolean;
+  name?: string;
+  url?: string;
 }>;
 
 export interface NavProps {
-	className?: string;
+  className?: string;
 }

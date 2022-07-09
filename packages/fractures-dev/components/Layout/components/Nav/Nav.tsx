@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import Container from "../../../Container";
-import classNames from "@sindresorhus/class-names"
+import classNames from "@sindresorhus/class-names";
 import Link from "next/link";
 import styled from "styled-components";
 import Search from "../Search";
@@ -10,15 +10,15 @@ import type { HeaderLinks, NavProps } from "./Nav.types";
 
 const HEADER_LINKS: HeaderLinks = [
 	{ name: "Fractures", url: "/" },
-	{ icon: <Search key="nav-search"/> },
+	{ component: <Search key="nav-search" /> },
 	{ name: "Setup", url: "/setup" },
-	{ name: "Layout", url: "/layout", isDesktop: true},
-	{ name: "Colors", url: "/colors", isDesktop: true},
-	{ name: "Typography", url: "/typography", isDesktop: true},
-	{ name: "Tools", url: "/tools", isDesktop: true},
+	{ name: "Layout", url: "/layout", isDesktop: true },
+	{ name: "Colors", url: "/colors", isDesktop: true },
+	{ name: "Typography", url: "/typography", isDesktop: true },
+	{ name: "Tools", url: "/tools", isDesktop: true },
 	{
 		url: "http://github.com/fractures/fractures",
-		icon: <AiFillGithub size={24} key='github-icon'/>,
+		component: <AiFillGithub size={24} key="github-icon" />,
 		isExternal: true,
 	},
 ];
@@ -39,31 +39,32 @@ const NavMarkup: React.FC<NavProps> = (props) => {
 			<Container className="flex flex-y-center hp-100">
 				<ol className="flex flex-y-center flex-gap-4 hp-100 wp-100">
 					{HEADER_LINKS.map((item, key) => {
-						const isLink: boolean = !!item.url
-						const isActive: boolean = path && path === item.url
+						const isLink: boolean = !!item.url;
+						const isActive: boolean = path && path === item.url;
 
-						const liClasses: string = classNames(`flex flex-y-center flex-gap-2 hp-100`, {
-							"lg:none": item.isDesktop,
-						});
+						const liClasses: string = classNames(
+							`flex flex-y-center flex-gap-2 hp-100`,
+							{
+								"lg:none": item.isDesktop,
+							}
+						);
 
-						const aClasses: string = classNames("fr-nav__item relative flex flex-y-center flex-gap-4 hp-100 lg:px-3 px-6 bold", {
-							"fr-nav__item--active purple-700": isActive,
-							"gray-700": !isActive
-						})
+						const aClasses: string = classNames(
+							"fr-nav__item relative flex flex-y-center flex-gap-4 hp-100 lg:px-3 px-6 bold",
+							{
+								"fr-nav__item--active purple-700": isActive,
+								"gray-700": !isActive,
+							}
+						);
 
-						if (!isLink) return item.icon;
+						if (!isLink) return item.component;
 
 						return (
 							<li className={liClasses} key={key}>
-								<Link
-									href={item.url}
-									passHref={item.isExternal}
-								>
+								<Link href={item.url} passHref={item.isExternal}>
 									<a className={aClasses}>
-										{item.icon && (
-											<div className="flex flex-center">
-												{item.icon}
-											</div>
+										{item.component && (
+											<div className="flex flex-center">{item.component}</div>
 										)}
 										{item.name}
 									</a>

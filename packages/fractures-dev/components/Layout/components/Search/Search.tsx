@@ -71,7 +71,7 @@ const SearchMarkup: React.FC<SearchProps> = (props) => {
 	});
 
 	return (
-		<div className={`${props.className} grow-1 top-0 relative`}>
+		<li className={`${props.className} grow-1 top-0 relative`}>
 			<div className="absolute top-6 ml-5 no-events">
 				<HiSearch size={16} color={iconColor} />
 			</div>
@@ -93,7 +93,7 @@ const SearchMarkup: React.FC<SearchProps> = (props) => {
 				className={inputClasses}
 			/>
 			<SearchResults results={results} isVisible={isVisible} />
-		</div>
+		</li>
 	);
 };
 

@@ -62,42 +62,42 @@ const Index: React.FC<{}> = () => (
 			</section>
 			<SectionBlock title="Goals">
 				<div className="grid grid-cols-3 grid-gap-3 mb-4">
-					<h5 className="md:flex-column flex flex-gap-8 flex-y-center h5 normal center radius-2 py-4">
+					<div className="md:flex-column flex flex-gap-8 flex-y-center h5 normal center radius-2 py-4">
 						<div className="flex flex-center fr-gradient--green-to-purple h-18 w-18 purple-700 radius-2 p-6">
 							<HiOutlineCube size={32} />
 						</div>
 						<div>Atomic</div>
-					</h5>
-					<h5 className="md:flex-column flex flex-gap-8 flex-y-center h5 normal center radius-2 py-4">
+					</div>
+					<div className="md:flex-column flex flex-gap-8 flex-y-center h5 normal center radius-2 py-4">
 						<div className="flex flex-center fr-gradient--green-to-purple h-18 w-18 purple-700 radius-2 p-6">
 							<HiOutlineGlobeAlt size={32} />
 						</div>
 						<div>Framework agnostic</div>
-					</h5>
-					<h5 className="md:flex-column flex flex-gap-8 flex-y-center h5 normal center radius-2 py-4">
+					</div>
+					<div className="md:flex-column flex flex-gap-8 flex-y-center h5 normal center radius-2 py-4">
 						<div className="flex flex-center fr-gradient--green-to-purple h-18 w-18 purple-700 radius-2 p-6">
 							<HiOutlineEyeOff size={32} />
 						</div>
 						<div>No UI</div>
-					</h5>
-					<h5 className="md:flex-column flex flex-gap-8 flex-y-center h5 normal center radius-2 py-4">
+					</div>
+					<div className="md:flex-column flex flex-gap-8 flex-y-center h5 normal center radius-2 py-4">
 						<div className="flex flex-center fr-gradient--green-to-purple h-18 w-18 purple-700 radius-2 p-6">
 							<HiOutlineFire size={32} />
 						</div>
 						<div>Fast in every way</div>
-					</h5>
-					<h5 className="md:flex-column flex flex-gap-8 flex-y-center h5 normal center radius-2 py-4">
+					</div>
+					<div className="md:flex-column flex flex-gap-8 flex-y-center h5 normal center radius-2 py-4">
 						<div className="flex flex-center fr-gradient--green-to-purple h-18 w-18 purple-700 radius-2 p-6">
 							<HiOutlineFingerPrint size={32} />
 						</div>
 						<div>Small cognitive load</div>
-					</h5>
-					<h5 className="md:flex-column flex flex-gap-8 flex-y-center h5 normal center radius-2 py-4">
+					</div>
+					<div className="md:flex-column flex flex-gap-8 flex-y-center h5 normal center radius-2 py-4">
 						<div className="flex flex-center fr-gradient--green-to-purple h-18 w-18 purple-700 radius-2 p-6">
 							<HiOutlinePuzzle size={32} />
 						</div>
 						<div>Tiny footprint</div>
-					</h5>
+					</div>
 				</div>
 			</SectionBlock>
 			<SectionBlock title="Features">
