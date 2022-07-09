@@ -35,10 +35,6 @@ const Layout: React.FC<LayoutProps> = (props) => {
 				<meta name="og-image-height" property="og:image:height" content="332" />
 				<link rel="icon" href="/favicon.ico" />
 				<link rel="preconnect" href="https://fonts.gstatic.com" />
-				<link
-					href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;700&family=Inter:wght@300;400;500;700;900&family=IBM+Plex+Sans:wght@700&display=swap"
-					rel="stylesheet"
-				/>
 				<meta
 					name="theme-color"
 					content="#220845"
