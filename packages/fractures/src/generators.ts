@@ -1,22 +1,12 @@
-import { FractureBreakpoints } from "fractures-library/types/css-rules";
 import type {
   FractureRuleType,
   FractureFiles,
 } from "fractures-library/types/css-rules";
 import { writeFile } from "./utils";
 
-const BREAKPOINTS: Array<keyof typeof FractureBreakpoints> = [
-  "xxl",
-  "xl",
-  "lg",
-  "md",
-  "sm"
-]
-
 // Generates all the rules for the declarations
 export const generateRules = (
-  fractureRule: FractureRuleType,
-  prefix?: 'hover' | keyof typeof FractureBreakpoints
+  fractureRule: FractureRuleType
 ): string => {
   const declarations: Array<[string, string]> = Object.entries(fractureRule.declarations || {})
   const variables: Array<[string, string]> = Object.entries(fractureRule.variables || {})
@@ -35,34 +25,10 @@ export const generateRules = (
     .join(declarationSpace)
 
   const variablesOutput = variables.map(variable => `${variable[0]}: ${variable[1]};`)
-
-  const pseudo: ":hover" | "" = prefix === "hover" ? ":hover" : ""
-  const rule: string = `${fractureRule.selector}${pseudo} {${declarationSpace}${variablesOutput}${declarationSpace}${declarationOutput}${declarationSpace}}`;
-  const selector: string = `.${prefix ? `${prefix}\\:` : ""}${rule}\n`
+  const rule: string = `${fractureRule.selector} {${declarationSpace}${variablesOutput}${declarationSpace}${declarationOutput}${declarationSpace}}`;
+  const selector: string = `.${rule}\n`
 
   return selector;
-};
-
-export const generateResponsiveRules = (
-  rules: Array<FractureRuleType>
-): string => {
-  let css: string = "";
-
-  const responsiveRules: Array<FractureRuleType> = rules
-    .flatMap((x) => x)
-    .filter((rule) => rule.hasBreakpoints);
-
-  if (!responsiveRules.length) return css;
-
-  // Rules for each breakpoint
-  BREAKPOINTS.forEach((size) => {
-    css += `
-			@media (max-width: ${FractureBreakpoints[size]}) {
-				${responsiveRules.map((rule) => generateRules(rule, size)).join("")}
-			}`;
-  })
-
-  return css;
 };
 
 export const generateNormalRules = (
@@ -72,8 +38,6 @@ export const generateNormalRules = (
 
   rules.forEach((rule: FractureRuleType) => {
     css += generateRules(rule);
-
-    if (rule.hasHover) css += generateRules(rule, 'hover');
   });
 
   return css;
@@ -89,7 +53,6 @@ export const generateOutput = (
   const css: string = `
 		${init}
     ${generateNormalRules(rules)}
-		${generateResponsiveRules(rules)}
 	`;
 
   const fractures: string = css.replace(/\s/g, "")

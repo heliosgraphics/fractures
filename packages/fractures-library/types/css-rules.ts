@@ -1,13 +1,5 @@
 import { Properties } from "csstype";
 
-export enum FractureBreakpoints {
-  xxl = "1360px",
-  xl = "1032px",
-  lg = "864px",
-  md = "696px",
-  sm = "444px",
-}
-
 export type { Properties };
 
 export interface FractureRuleType {
@@ -15,10 +7,6 @@ export interface FractureRuleType {
   declarations?: Properties;
   /** Demo: Description. */
   description?: string;
-  /** Flag to generate breakpoints for this item. */
-  hasBreakpoints?: boolean;
-  /** Flag to generate hovers for this item. */
-  hasHover?: boolean;
   /** Demo: Gets generated, but hidden from demo website. */
   isHidden?: boolean;
   /** Selector name. */

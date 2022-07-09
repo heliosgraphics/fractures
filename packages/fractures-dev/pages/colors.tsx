@@ -1,7 +1,5 @@
-import ColorsHover from "../components/ColorsHover";
 import H0 from "../components/H0";
 import Layout from "../components/Layout";
-import Link from "next/link";
 import P from "../components/P";
 import PageContainer from "../components/PageContainer";
 import ColorGrid from "../components/ColorGrid";
@@ -23,10 +21,27 @@ const Colors: React.FC<{}> = () => (
 				<P>
 					Colors are defined as <code>HSL</code> values, and can be used with
 					pure CSS classes like
-					<code>.bg-red-500</code> and
-					<code>.green-500</code> or directly with <code>var(--green-500)</code>{" "}
-					or <code>hsla(var(--hsl-gray-300), 0.1)</code> with alpha channel.
+					<code>.bg-red-500</code> or directly, <code>var(--green-500)</code> or{" "}
+					<code>hsla(var(--hsl-gray-300), 0.1)</code> with alpha channel. Scales
+					are linear by default, but all the steps are exposed and
+					customizeable.
 				</P>
+
+				<ul className="list-disc">
+					<li className="ml-12">
+						<P>
+							For example, to have a slightly different purple scale, add{" "}
+							<code>--hsl-purple:261,80%;</code> to <code>:root</code>.
+						</P>
+					</li>
+					<li className="ml-12">
+						<P>
+							To update a single color to a more tone-correct one, you can add
+							<code>--green-600: #0F0</code> to <code>:root</code>.<br />
+						</P>
+					</li>
+				</ul>
+
 				<ColorGrid color="gray" toneScale={grayToneScale} />
 				<ColorGrid color="red" toneScale={toneScale} />
 				<ColorGrid color="orange" toneScale={toneScale} />
@@ -42,13 +57,6 @@ const Colors: React.FC<{}> = () => (
 				items={colorOpacity}
 				isDemo={true}
 			/>
-			<SectionBlock title="Hover">
-				<P>
-					The <code>hover:</code> prefix is enabled for the customizable{" "}
-					<code>color</code> and <code>background-color</code> properties.
-				</P>
-				<ColorsHover />
-			</SectionBlock>
 		</PageContainer>
 	</Layout>
 );

@@ -1,6 +1,6 @@
 {
 	"name": "fractures-dev",
-	"version": "2.0.1",
+	"version": "2.1.0",
 	"author": "Chris Puska <theta@hey.com>",
 	"description": "Fractures Documentation",
 	"scripts": {
@@ -10,19 +10,19 @@
 		"now-build": "next build && next export -o dist"
 	},
 	"dependencies": {
-		"@babel/preset-typescript": "^7.17.12",
-		"@fractures/css": "^2.0.0",
+		"@babel/preset-typescript": "^7.18.6",
+		"@fractures/css": "^2.1.0",
 		"@sindresorhus/class-names": "^1.1.0",
 		"fractures-library": "*",
-		"next": "^12.1.6",
+		"next": "^12.2.2",
 		"react": "^18.2.0",
 		"react-dom": "^18.2.0",
 		"react-icons": "^4.4.0",
 		"styled-components": "^5.3.5"
 	},
 	"devDependencies": {
-		"@babel/core": "^7.18.5",
-		"@types/react": "^18.0.14",
+		"@babel/core": "^7.18.6",
+		"@types/react": "^18.0.15",
 		"typescript": "^4.7.4"
 	}
 }

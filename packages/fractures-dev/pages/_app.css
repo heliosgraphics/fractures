@@ -24,3 +24,72 @@ html {
 	background-color: var(--green-300);
 	color: var(--purple-900);
 }
+
+@media (max-width: 1360px) {
+  .xxl\:none {
+    display: none
+  }
+}
+
+@media (max-width: 1032px) {
+  .xl\:none {
+    display: none;
+  }
+
+  .xl\:px-8 {
+    padding-left: var(--box-8);
+    padding-right:var(--box-8);
+  }
+}
+
+@media (max-width: 864px) {
+  .lg\:none {
+    display: none;
+  }
+
+  .lg\:p-8 {
+    padding: var(--box-8);
+  }
+
+  .lg\:px-3 {
+    padding-left: var(--box-3);
+    padding-right: var(--box-3);
+  }
+
+  .lg\:flex-column {
+    flex-direction: column;
+  }
+
+  .lg\:flex-gap-8 {
+    gap:var(--box-8);
+  }
+}
+
+@media (max-width: 696px) {
+  .md\:flex-column {
+    flex-direction: column;
+  }
+
+  .md\:none {
+    display: none;
+  }
+}
+
+@media (max-width: 444px) {
+  .sm\:flex {
+    display: flex;
+  }
+
+  .sm\:none {
+    display: none;
+  }
+
+  .sm\:p-4 {
+    padding: var(--box-4)
+  }
+
+  .sm\:px-4 {
+    padding-left: var(--box-4);
+    padding-right: var(--box-4);
+  }
+}

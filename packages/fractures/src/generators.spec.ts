@@ -4,7 +4,6 @@ import type { FractureRuleType } from "fractures-library/types/css-rules";
 const mockRule: FractureRuleType = {
   selector: 'bg-gray-0',
   declarations: { backgroundColor: 'hsla(var(--hsl-gray-0), var(--bg-opacity))' },
-  hasHover: true,
   variables: { '--bg-opacity': 1 }
 }
 

@@ -41,19 +41,21 @@ const GetStarted: React.FC<{}> = () => (
 					]}
 				/>
 			</SectionBlock>
-			<SectionBlock title="Example">
+			<SectionBlock title="Usage">
 				<div className="flex flex-gap-8">
+					<LightHouse />
 					<LightHouse />
 					<LightHouse />
 					<LightHouse />
 				</div>
 				<P>
-					Fractures is below 40 KB gzipped, but for production you'll have to
-					purge the unused CSS. Check out an example built with NextJS and
-					Typescript:{" "}
-					<a href="https://github.com/fractures/fractures/tree/master/packages/fractures-examples/fractures-next-ts">
-						<code>fractures-next-ts</code>
+					Fractures is below 10 KB gzipped, but for production you'll have to
+					purge the unused CSS. For NextJS, you have to have a custom{" "}
+					<a href="https://github.com/fractures/fractures/blob/master/packages/fractures-dev/pages/_app.tsx#L3">
+						_app.tsx
 					</a>
+					, with the single import at the top,{" "}
+					<code>import "@fractures/css"</code>.
 				</P>
 			</SectionBlock>
 			<SectionBlock title="Variables">
