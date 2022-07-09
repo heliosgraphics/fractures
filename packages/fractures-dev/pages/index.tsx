@@ -10,7 +10,6 @@ import Button from "../components/Button";
 import Fractures from "../components/Fractures";
 import fracturesPackage from "@fractures/css/package.json";
 import H0 from "../components/H0";
-import Label from "../components/Label";
 import Layout from "../components/Layout";
 import Link from "next/link";
 import P from "../components/P";
@@ -47,13 +46,12 @@ const Index: React.FC<{}> = () => (
 				<div className="flex flex-gap-8">
 					<div className="flex flex-gap-4 flex-y-center">
 						<Small className="mono">
-							npm i @fractures/css
+							yarn add @fractures/css
 							<span className="unselectable">
 								{" "}
 								@ {fracturesPackage?.version}
 							</span>
 						</Small>
-						<Label text="Beta" />
 					</div>
 					<Small className="mono">
 						<a href="https://github.com/fractures/fractures/releases/tag/1.3.5">
@@ -112,22 +110,23 @@ const Index: React.FC<{}> = () => (
 					]}
 				>
 					<P>
-						No more class flooding. Do better than flex flex-wrap items-baseline
-						pl-52 -mt-6 -mr-6 -ml-52 py-6 pr-6 bg-black text-white.
+						No more class flooding. Do better than repeating flex flex-wrap
+						items-baseline pl-52 -mt-6 -mr-6 -ml-52 py-6 pr-6 bg-black
+						text-white.
 					</P>
 				</SectionCode>
 				<SectionCode
 					title="Easy but powerful"
 					code={[
-						`&lt;header className="<mark>flex md:flex-column</mark>"&gt`,
-						`  &lt;a className="<mark>blue-700 hover:blue-900</mark>"/&gt`,
+						`&lt;header className="<mark>flex flex-column</mark>"&gt`,
+						`  &lt;a className="<mark>bg-blue-700 blue-600</mark>"/&gt`,
 						`  &lt;span/&gt`,
 						`&lt;/header&gt;`,
 					]}
 				>
 					<P>
-						<b>Opinionated</b> breakpoints and <b>customizable</b> color system
-						built in. No javascript.
+						<b>HSL based</b> color system built in. Customize all color or let
+						the linear scale grade your shades for you, zero javascript.
 					</P>
 				</SectionCode>
 				<SectionCode
@@ -135,16 +134,19 @@ const Index: React.FC<{}> = () => (
 					code={[
 						`&lt;div className="<mark>flex bg-gray-900</mark>"&gt`,
 						`  &ltspan className="`,
-						`    <mark>teal-700 hover:teal-100</mark>`,
-						`    <mark>dark:teal-900</mark>`,
+						`    <mark>teal-700 (forever)</mark>`,
+						`    <mark>dark:color-darkest (temporary, by you)</mark>`,
 						`  "/&gt`,
 						`&lt/div&gt`,
 					]}
 				>
 					<P>
 						Fractures was created at the <b>CSS level</b>, and it's{" "}
-						<b>incomplete by design</b>. Configure CSS variables at :root and
-						follow the outlined patterns with your own code.
+						<b>
+							<u>incomplete by design</u>
+						</b>
+						. Configure CSS variables at :root and follow the outlined patterns
+						with your own code.
 					</P>
 				</SectionCode>
 			</SectionBlock>

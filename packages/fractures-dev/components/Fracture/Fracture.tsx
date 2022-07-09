@@ -1,6 +1,5 @@
 import classNames from "@sindresorhus/class-names";
 import styled from "styled-components";
-import Square from "../Square";
 import type { FractureProps } from "./Fracture.types";
 
 const FractureMarkup: React.FC<FractureProps> = (props) => {
@@ -17,17 +16,12 @@ const FractureMarkup: React.FC<FractureProps> = (props) => {
 		}
 	);
 
-	const renderDot: React.ReactNode = (
-		<Square colorScale="purple" colorTone={700} isRounded={true} size={4} />
-	);
-
 	return (
 		<div className="inline-flex flex-gap-1">
 			<code className={fractureClasses}>
 				<span className="gray-300 unselectable">.</span>
 				{selector}
 			</code>
-			{props.rule.hasBreakpoints && renderDot}
 		</div>
 	);
 };
