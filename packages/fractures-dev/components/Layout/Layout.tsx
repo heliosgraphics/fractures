@@ -31,8 +31,8 @@ const Layout: React.FC<LayoutProps> = (props) => {
 					property="og:image"
 					content="https://fractures.dev/images/share.png"
 				/>
-				<meta name="og-image-width" property="og:image:width" content="332" />
-				<meta name="og-image-height" property="og:image:height" content="332" />
+				<meta name="og-image-width" property="og:image:width" content="1600" />
+				<meta name="og-image-height" property="og:image:height" content="800" />
 				<link rel="icon" href="/favicon.ico" />
 				<link rel="preconnect" href="https://fonts.gstatic.com" />
 				<meta
