@@ -12,11 +12,8 @@ const HEADER_LINKS: HeaderLinks = [
 	{ name: "Fractures", url: "/" },
 	{ component: <Search key="nav-search" /> },
 	{ name: "Setup", url: "/setup" },
-	// { name: "Layout", url: "/layout", isDesktop: true },
 	{ name: "Colors", url: "/colors", isDesktop: true },
-	// { name: "Typo", url: "/typography", isDesktop: true },
 	{ name: "Selectors", url: "/selectors", isDesktop: true },
-	// { name: "Tools", url: "/tools", isDesktop: true },
 	{
 		url: "http://github.com/fractures/fractures",
 		name: "GitHub",

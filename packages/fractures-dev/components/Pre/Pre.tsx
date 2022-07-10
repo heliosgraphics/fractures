@@ -11,11 +11,7 @@ const PreMarkup: React.FC<PreProps> = (props) => {
 			className={`${props.className} flex flex-column radius-3 mono overflow-scroll`}
 		>
 			{props.code.map((line, key) => (
-				<code
-					className="nowrap"
-					key={key}
-					dangerouslySetInnerHTML={getSyntax(line)}
-				/>
+				<code key={key} dangerouslySetInnerHTML={getSyntax(line)} />
 			))}
 		</pre>
 	);

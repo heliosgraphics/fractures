@@ -21,7 +21,7 @@ import Small from "../components/Small";
 const Index: React.FC<{}> = () => (
 	<Layout>
 		<PageContainer>
-			<header className="lg:flex-column flex flex-gap-24 flex-columnx py-24">
+			<header className="lg:flex-column lg:py-8 flex flex-gap-24 py-24">
 				<Fractures color="white" size={96} />
 				<div className="flex flex-column flex-gap-8">
 					<H0>

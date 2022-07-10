@@ -29,7 +29,7 @@ const Colors: React.FC<{}> = () => (
 					<li className="ml-12">
 						<P>
 							For example, to have a slightly different purple scale, add{" "}
-							<code>--hsl-purple:261,80%;</code> to <code>:root</code>.
+							<code>--hsl-purple: 261,80%;</code> to <code>:root</code>.
 						</P>
 					</li>
 					<li className="ml-12">

@@ -22,23 +22,21 @@ const Selectors: React.FC<{}> = () => (
 	<Layout title="Selectors">
 		<PageContainer>
 			<H0>Selectors</H0>
+			<SectionGrid title="Border" items={border} />
+			<SectionGrid title="Color Opacity" items={colorOpacity} />
+			<SectionGrid title="Cursor" items={cursor} />
 			<SectionGrid title="Display" items={display} />
 			<SectionGrid title="Flex" items={flex} />
 			<SectionGrid title="Grid" items={grid} isExperimental={true} />
 			<SectionGrid title="Height" items={height} />
+			<SectionGrid title="List" items={list} />
 			<SectionGrid title="Margin" items={margin} />
+			<SectionGrid title="Opacity" items={opacity} />
 			<SectionGrid title="Overflow" items={overflow} />
 			<SectionGrid title="Padding" items={padding} />
 			<SectionGrid title="Position" items={position} />
+			<SectionGrid title="Type" items={type} isDemo={true} />
 			<SectionGrid title="Width" items={width} />
-			<hr />
-			<SectionGrid title="Border" items={border} />
-			<SectionGrid title="Cursor" items={cursor} />
-			<SectionGrid title="List" items={list} />
-			<SectionGrid title="Opacity" items={opacity} />
-			<hr />
-			<SectionGrid title="Type helpers" items={type} isDemo={true} />
-			<SectionGrid title="Color and Background opacity" items={colorOpacity} />
 		</PageContainer>
 	</Layout>
 );
