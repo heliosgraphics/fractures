@@ -29,8 +29,9 @@ const Index: React.FC<{}> = () => (
 					</H0>
 					<h2 className="h4 normal">
 						Fractures is the <b>atomic CSS toolkit</b> that helps you create
-						resilient <u>design systems</u> and <u>rapid prototypes</u> by
-						providing a set of non-blocking utility classes.
+						resilient <u className="underline">design systems</u> and{" "}
+						<u className="underline">rapid prototypes</u> by providing a set of
+						non-blocking utility classes.
 					</h2>
 					<div className="flex flex-gap-8">
 						<Link href="/setup">

@@ -14,6 +14,11 @@ body {
 	position: relative;
 }
 
+body {
+  text-decoration-thickness: from-font;
+  text-underline-position: from-font;
+}
+
 html {
 	overflow-y: scroll;
 }

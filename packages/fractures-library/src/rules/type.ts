@@ -30,9 +30,9 @@ export const type: Array<FractureRuleType> = [
   { selector: 'left', declarations: { textAlign: 'left' } },
   { selector: 'right', declarations: { textAlign: 'right' } },
 
-  { selector: 'delete', declarations: { textDecoration: 'line-through' } },
-  { selector: 'overline', declarations: { textDecoration: 'overline' } },
-  { selector: 'underline', declarations: { textDecoration: 'underline' } },
+  { selector: 'delete', declarations: { textDecorationLine: 'line-through' } },
+  { selector: 'overline', declarations: { textDecorationLine: 'overline' } },
+  { selector: 'underline', declarations: { textDecorationLine: 'underline' } },
   { selector: 'capitalize', declarations: { textTransform: 'capitalize' } },
   { selector: 'lowercase', declarations: { textTransform: 'lowercase' } },
   { selector: 'uppercase', declarations: { textTransform: 'uppercase' } },
