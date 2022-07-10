@@ -21,10 +21,8 @@ const Colors: React.FC<{}> = () => (
 					pure CSS classes like
 					<code>.bg-red-500</code> or directly, <code>var(--green-500)</code> or{" "}
 					<code>hsla(var(--hsl-gray-300), 0.1)</code> with alpha channel. Scales
-					are linear by default, but all the steps are exposed and
-					customizeable.
+					are linear by default, but all the steps are exposed and customizable.
 				</P>
-
 				<ul className="list-disc">
 					<li className="ml-12">
 						<P>
@@ -39,7 +37,6 @@ const Colors: React.FC<{}> = () => (
 						</P>
 					</li>
 				</ul>
-
 				<ColorGrid color="gray" toneScale={grayToneScale} />
 				<ColorGrid color="red" toneScale={toneScale} />
 				<ColorGrid color="orange" toneScale={toneScale} />
