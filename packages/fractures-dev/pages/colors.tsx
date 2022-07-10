@@ -4,8 +4,6 @@ import P from "../components/P";
 import PageContainer from "../components/PageContainer";
 import ColorGrid from "../components/ColorGrid";
 import SectionBlock from "../components/SectionBlock";
-import SectionGrid from "../components/SectionGrid";
-import { colorOpacity } from "fractures-library/src/rules/colorOpacity";
 
 const grayToneScale: Array<number> = [
 	0, 25, 50, 100, 200, 300, 400, 500, 600, 700, 800, 900, 1000,
@@ -52,11 +50,6 @@ const Colors: React.FC<{}> = () => (
 				<ColorGrid color="purple" toneScale={toneScale} />
 				<ColorGrid color="pink" toneScale={toneScale} />
 			</SectionBlock>
-			<SectionGrid
-				title="Color and Background opacity"
-				items={colorOpacity}
-				isDemo={true}
-			/>
 		</PageContainer>
 	</Layout>
 );

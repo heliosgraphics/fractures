@@ -21,79 +21,79 @@ import Small from "../components/Small";
 const Index: React.FC<{}> = () => (
 	<Layout>
 		<PageContainer>
-			<header className="flex flex-gap-12 flex-column pt-12">
-				<Fractures color="white" size={80} />
-				<H0>
-					<mark>Functional CSS</mark>, but only the good parts.
-				</H0>
-				<h2 className="h4 normal">
-					Fractures is the <b>atomic CSS toolkit</b> that helps you create
-					resilient <u>design systems</u> and <u>rapid prototypes</u> by
-					providing a set of non-blocking utility classes.
-				</h2>
-			</header>
-			<section className="flex flex-column flex-gap-8">
-				<div className="flex flex-gap-8">
-					<Link href="/setup">
-						<a>
-							<Button type="primary">Get started</Button>
+			<header className="lg:flex-column flex flex-gap-24 flex-columnx py-24">
+				<Fractures color="white" size={96} />
+				<div className="flex flex-column flex-gap-8">
+					<H0>
+						<mark>Functional CSS</mark>, but only the good parts.
+					</H0>
+					<h2 className="h4 normal">
+						Fractures is the <b>atomic CSS toolkit</b> that helps you create
+						resilient <u>design systems</u> and <u>rapid prototypes</u> by
+						providing a set of non-blocking utility classes.
+					</h2>
+					<div className="flex flex-gap-8">
+						<Link href="/setup">
+							<a>
+								<Button type="primary">Get started</Button>
+							</a>
+						</Link>
+						<a href="https://github.com/fractures/fractures">
+							<Button type="secondary">GitHub</Button>
 						</a>
-					</Link>
-					<a href="https://github.com/fractures/fractures">
-						<Button type="secondary">GitHub</Button>
-					</a>
-				</div>
-				<div className="flex flex-gap-8">
-					<div className="flex flex-gap-4 flex-y-center">
+					</div>
+					<div className="md:flex-column md:flex-gap-4 flex flex-gap-8">
+						<div className="flex flex-gap-4 flex-y-center">
+							<Small className="mono">
+								yarn add @fractures/css
+								<span className="unselectable">
+									{" "}
+									@ {fracturesPackage?.version}
+								</span>
+							</Small>
+						</div>
 						<Small className="mono">
-							yarn add @fractures/css
-							<span className="unselectable">
-								{" "}
-								@ {fracturesPackage?.version}
-							</span>
+							<a href="https://github.com/fractures/fractures/releases/tag/1.3.5">
+								Looking for v1?
+							</a>
 						</Small>
 					</div>
-					<Small className="mono">
-						<a href="https://github.com/fractures/fractures/releases/tag/1.3.5">
-							Looking for v1?
-						</a>
-					</Small>
 				</div>
-			</section>
+			</header>
 			<SectionBlock title="Goals">
-				<div className="grid grid-cols-3 grid-gap-3 mb-4">
-					<div className="md:flex-column flex flex-gap-8 flex-y-center h5 normal center radius-2 py-4">
-						<div className="flex flex-center fr-gradient--green-to-purple h-18 w-18 purple-700 radius-2 p-6">
+				<div className="lg:grid-cols-1 grid grid-cols-3 grid-gap-3">
+					<div className="flex flex-gap-8 flex-y-center h5 normal center radius-2 py-4">
+						<div className="flex flex-center fr-gradient--green-to-purple h-32 w-32 purple-700 radius-2 p-6">
 							<HiOutlineCube size={32} />
 						</div>
 						<div>Atomic</div>
 					</div>
-					<div className="md:flex-column flex flex-gap-8 flex-y-center h5 normal center radius-2 py-4">
-						<div className="flex flex-center fr-gradient--green-to-purple h-18 w-18 purple-700 radius-2 p-6">
+					<div className="flex flex-gap-8 flex-y-center h5 normal center radius-2 py-4">
+						<div className="flex flex-center fr-gradient--green-to-purple h-32 w-32 purple-700 radius-2 p-6">
 							<HiOutlineGlobeAlt size={32} />
 						</div>
 						<div>Framework agnostic</div>
 					</div>
-					<div className="md:flex-column flex flex-gap-8 flex-y-center h5 normal center radius-2 py-4">
-						<div className="flex flex-center fr-gradient--green-to-purple h-18 w-18 purple-700 radius-2 p-6">
+					<div className="flex flex-gap-8 flex-y-center h5 normal center radius-2 py-4">
+						<div className="flex flex-center fr-gradient--green-to-purple h-32 w-32 purple-700 radius-2 p-6">
 							<HiOutlineEyeOff size={32} />
 						</div>
 						<div>No UI</div>
 					</div>
-					<div className="md:flex-column flex flex-gap-8 flex-y-center h5 normal center radius-2 py-4">
-						<div className="flex flex-center fr-gradient--green-to-purple h-18 w-18 purple-700 radius-2 p-6">
+					<div className="flex flex-gap-8 flex-y-center h5 normal center radius-2 py-4">
+						<div className="flex flex-center fr-gradient--green-to-purple h-32 w-32 purple-700 radius-2 p-6">
 							<HiOutlineFire size={32} />
 						</div>
 						<div>Fast in every way</div>
 					</div>
-					<div className="md:flex-column flex flex-gap-8 flex-y-center h5 normal center radius-2 py-4">
-						<div className="flex flex-center fr-gradient--green-to-purple h-18 w-18 purple-700 radius-2 p-6">
+					<div className="flex flex-gap-8 flex-y-center h5 normal center radius-2 py-4">
+						<div className="flex flex-center fr-gradient--green-to-purple h-32 w-32 purple-700 radius-2 p-6">
 							<HiOutlineFingerPrint size={32} />
 						</div>
 						<div>Small cognitive load</div>
 					</div>
-					<div className="md:flex-column flex flex-gap-8 flex-y-center h5 normal center radius-2 py-4">
-						<div className="flex flex-center fr-gradient--green-to-purple h-18 w-18 purple-700 radius-2 p-6">
+					<div className="flex flex-gap-8 flex-y-center h5 normal center radius-2 py-4">
+						<div className="flex flex-center fr-gradient--green-to-purple h-32 w-32 purple-700 radius-2 p-6">
 							<HiOutlinePuzzle size={32} />
 						</div>
 						<div>Tiny footprint</div>
@@ -120,7 +120,6 @@ const Index: React.FC<{}> = () => (
 					code={[
 						`&lt;header className="<mark>flex flex-column</mark>"&gt`,
 						`  &lt;a className="<mark>bg-blue-700 blue-600</mark>"/&gt`,
-						`  &lt;span/&gt`,
 						`&lt;/header&gt;`,
 					]}
 				>

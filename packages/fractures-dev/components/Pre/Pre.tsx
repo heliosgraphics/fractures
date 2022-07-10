@@ -7,9 +7,15 @@ const PreMarkup: React.FC<PreProps> = (props) => {
 	});
 
 	return (
-		<pre className={`${props.className} flex flex-column radius-3 mono`}>
+		<pre
+			className={`${props.className} flex flex-column radius-3 mono overflow-scroll`}
+		>
 			{props.code.map((line, key) => (
-				<code key={key} dangerouslySetInnerHTML={getSyntax(line)} />
+				<code
+					className="nowrap"
+					key={key}
+					dangerouslySetInnerHTML={getSyntax(line)}
+				/>
 			))}
 		</pre>
 	);
@@ -17,11 +23,8 @@ const PreMarkup: React.FC<PreProps> = (props) => {
 
 const Pre: React.FC<PreProps> = styled(PreMarkup)`
 	height: calc(
-		var(--line-height-p) * ${(props) => props.code.length} +
-			(2 * var(--box-8))
+		var(--line-height-p) * ${(props) => props.code.length} + (2 * var(--box-8))
 	);
-	min-width: 480px;
-	overflow: hidden;
 	padding: var(--box-8) var(--box-16);
 
 	background: linear-gradient(

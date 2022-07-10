@@ -1,4 +1,4 @@
-import Circles from "./components/Circles";
+// import Circles from "./components/Circles";
 import fracturesPackage from "@fractures/css/package.json";
 import Head from "next/head";
 import Nav from "./components/Nav";
@@ -46,7 +46,7 @@ const Layout: React.FC<LayoutProps> = (props) => {
 					media="(prefers-color-scheme: dark)"
 				/>
 			</Head>
-			<Circles />
+			{/* <Circles /> */}
 			<Nav />
 			<main
 				className="

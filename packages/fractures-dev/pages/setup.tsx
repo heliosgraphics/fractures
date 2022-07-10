@@ -21,13 +21,16 @@ const GetStarted: React.FC<{}> = () => (
 					moving teams to build better UIs.
 				</P>
 			</SectionBlock>
-			<SectionBlock title="Config">
+			<SectionBlock title="Setup">
 				<P>
+					For NextJS, you have to have a custom{" "}
+					<a href="https://github.com/fractures/fractures/blob/main/packages/fractures-dev/pages/_app.tsx#L4">
+						_app.tsx
+					</a>
+					, with a single import at the top:{" "}
+					<code>import "@fractures/css"</code>.<br />
 					Fractures works with empty <code>:root &#123;&#125;</code> or with a
-					fully customized one.
-					<br />
-					<code>import '@fractures/css'</code> then set your variables. For
-					example, this page sets only:
+					fully customized one. This page sets only a few:
 				</P>
 				<Pre
 					code={[
@@ -50,12 +53,7 @@ const GetStarted: React.FC<{}> = () => (
 				</div>
 				<P>
 					Fractures is below 10 KB gzipped, but for production you'll have to
-					purge the unused CSS. For NextJS, you have to have a custom{" "}
-					<a href="https://github.com/fractures/fractures/blob/master/packages/fractures-dev/pages/_app.tsx#L3">
-						_app.tsx
-					</a>
-					, with the single import at the top,{" "}
-					<code>import "@fractures/css"</code>.
+					purge the unused CSS.
 				</P>
 			</SectionBlock>
 			<SectionBlock title="Variables">

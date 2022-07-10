@@ -6,8 +6,8 @@ import styled from "styled-components";
 const ButtonMarkup: React.FC<ButtonProps> = (props) => {
 	// prettier-ignore
 	const typeClasses: string = classNames(props.className, {
-		["fr-button--secondary bg-gray-300 gray-900"]: props.type === "secondary",
-		["fr-button--primary bg-purple-900 gray-0"]: props.type === "primary",
+		["fr-button--secondary bg-purple-300 purple-800"]: props.type === "secondary",
+		["fr-button--primary bg-purple-800 gray-0"]: props.type === "primary",
 	});
 
 	return (

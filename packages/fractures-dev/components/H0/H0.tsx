@@ -7,6 +7,8 @@ const H0Markup: React.FC<h0Props> = (props) => {
 };
 
 const H0: React.FC<h0Props> = styled(H0Markup)`
+	color: var(--purple-800);
+
 	font-size: 72px;
 	font-weight: 900;
 	line-height: 70px;
@@ -16,6 +18,11 @@ const H0: React.FC<h0Props> = styled(H0Markup)`
 		background-color: transparent;
 
 		color: inherit;
+	}
+
+	@media (max-width: 864px) {
+		font-size: 56px;
+		line-height: 64px;
 	}
 `;
 

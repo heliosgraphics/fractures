@@ -9,7 +9,7 @@ const Fractures: React.FC<FracturesProps> = (props) => (
 		fill="none"
 		xmlns="http://www.w3.org/2000/svg"
 	>
-		<rect width="664" height="664" rx="48" fill="#220845" />
+		<rect width="664" height="664" rx="48" fill="#2e0a5c" />
 		<path
 			fillRule="evenodd"
 			clipRule="evenodd"
