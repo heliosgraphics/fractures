@@ -20,9 +20,9 @@ const SearchResultsMarkup: React.FC<SearchResultsProps> = (props) => {
 };
 
 const SearchResults = styled(SearchResultsMarkup)`
-	width: 320px;
+	width: 360px;
 
-	animation: 160ms 1 alternate fadein;
+	animation: 160ms 1 alternate fadeIn;
 
 	ol {
 		max-height: 460px;
@@ -71,7 +71,7 @@ const SearchResults = styled(SearchResultsMarkup)`
 		display: flex;
 	}
 
-	@keyframes fadein {
+	@keyframes fadeIn {
 		from {
 			transform: translateY(-16px);
 		}

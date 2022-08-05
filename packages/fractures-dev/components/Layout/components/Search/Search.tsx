@@ -27,27 +27,27 @@ const SearchMarkup: React.FC<SearchProps> = (props) => {
 			}
 		};
 
-		window?.addEventListener("keydown", handleKeys);
+		globalThis?.addEventListener("keydown", handleKeys);
 
 		return () => {
-			window?.removeEventListener("keydown", handleKeys);
+			globalThis?.removeEventListener("keydown", handleKeys);
 		};
 	}, []);
 
-	const resetSearch = () => {
+	const resetSearch = (): void => {
 		setResults([]);
 		setValue("");
 		setFocus(false);
 
-		inputRef?.current.blur();
+		return inputRef?.current.blur();
 	};
 
-	const searchRule = (value: string) => {
+	const searchRule = (value: string): void => {
 		const results: Array<FractureRuleType> = FRACTURE_RULES.filter((rule) => {
-			return rule.selector.includes(value);
+			return rule.selector.includes(value) || rule.description?.includes(value);
 		});
 
-		setResults(results);
+		return setResults(results);
 	};
 
 	const onChange = (event: React.ChangeEvent<HTMLInputElement>) => {
@@ -77,10 +77,10 @@ const SearchMarkup: React.FC<SearchProps> = (props) => {
 			</div>
 			{!!value && (
 				<div
-					className="absolute top-6 right-4 cursor-pointer"
+					className="absolute top-5 right-5 cursor-pointer"
 					onClick={resetSearch}
 				>
-					<HiX size={16} color="var(--gray-500)" />
+					<HiX size={22} color="var(--gray-300)" />
 				</div>
 			)}
 			<input

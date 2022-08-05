@@ -3,18 +3,12 @@ import { Properties } from "csstype";
 export type { Properties };
 
 export interface FractureRuleType {
-  /** Declaration rules attached to the selector. */
-  declarations?: Properties;
-  /** Demo: Description. */
-  description?: string;
-  /** Demo: Gets generated, but hidden from demo website. */
-  isHidden?: boolean;
-  /** Selector name. */
-  selector: string;
-  /** Demo: nice selector string for the demo. */
-  selectorNice?: string;
-  /** Local CSS variables. */
-  variables?: Record<string, any>;
+  declarations: Properties; /** Declaration rules attached to the selector. */
+  description: string; /** Description. */
+  isHidden?: boolean; /** Gets generated, but hidden from demo website. */
+  selector: string; /** Name of the selector. */
+  selectorNice?: string; /** Nice selector name. */
+  variables?: Record<string, any>; /** Local CSS variables. */
 }
 
 export interface FractureFiles {
