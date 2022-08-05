@@ -52,6 +52,11 @@ export const type: Array<FractureRuleType> = [
       textOverflow: 'ellipsis',
       whiteSpace: 'nowrap',
     },
-    description: 'Ellipsis text.'
+    description: 'Everything needed for ellipsis text-overflow.'
   },
 ];
+
+
+
+
+

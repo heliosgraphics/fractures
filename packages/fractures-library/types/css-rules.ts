@@ -4,7 +4,7 @@ export type { Properties };
 
 export interface FractureRuleType {
   declarations: Properties; /** Declaration rules attached to the selector. */
-  description: string; /** Description. */
+  description?: string; /** Description. */
   isHidden?: boolean; /** Gets generated, but hidden from demo website. */
   selector: string; /** Name of the selector. */
   selectorNice?: string; /** Nice selector name. */
