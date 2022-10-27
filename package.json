@@ -2,12 +2,13 @@
 	"author": "Chris Puska <theta@hey.com>",
 	"private": true,
 	"scripts": {
-		"docs:build": "yarn --cwd packages/fractures-dev next build",
-		"docs:dev": "yarn --cwd packages/fractures-dev next",
-		"docs:export": "yarn --cwd packages/fractures-dev next build && next export -o dist",
-		"docs:start": "yarn --cwd packages/fractures-dev next start",
-		"fr:build": "yarn --cwd packages/fractures run build",
-		"fr:test": "NODE_ENV=test yarn --cwd packages/fractures run test",
+		"docs:build": "yarn workspace fractures-dev build",
+		"docs:dev": "yarn workspace fractures-dev dev",
+		"docs:export": "yarn workspace fractures-dev build && yarn workspace fractures-dev export -o dist",
+		"docs:start": "yarn workspace fractures-dev start",
+		"docs:lint": "yarn workspace fractures-dev lint",
+		"fr:build": "yarn workspace fractures build",
+		"fr:test": "NODE_ENV=test yarn workspace fractures test",
 		"test": "yarn run fr:test"
 	},
 	"workspaces": [

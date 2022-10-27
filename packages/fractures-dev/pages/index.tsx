@@ -141,7 +141,7 @@ const Index: React.FC<{}> = () => (
 					]}
 				>
 					<P>
-						Fractures was created at the <b>CSS level</b>, and it's{" "}
+						Fractures was created at the <b>CSS level</b>, and it&apos;s{" "}
 						<b>
 							<u>incomplete by design</u>
 						</b>

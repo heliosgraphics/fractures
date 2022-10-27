@@ -28,7 +28,7 @@ const GetStarted: React.FC<{}> = () => (
 						_app.tsx
 					</a>
 					, with a single import at the top:{" "}
-					<code>import "@fractures/css"</code>.<br />
+					<code>import &quot;@fractures/css&quot;</code>.<br />
 					Fractures works with empty <code>:root &#123;&#125;</code> or with a
 					fully customized one. This page sets only a few:
 				</P>
@@ -52,8 +52,8 @@ const GetStarted: React.FC<{}> = () => (
 					<LightHouse />
 				</div>
 				<P>
-					Fractures is below 10 KB gzipped, but for production you'll have to
-					purge the unused CSS.
+					Fractures is below 10 KB gzipped, but for production you&apos;ll have
+					to purge the unused CSS.
 				</P>
 			</SectionBlock>
 			<SectionBlock title="Variables">

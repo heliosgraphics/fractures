@@ -13,7 +13,7 @@ const ColorGrid: React.FC<ColorGridProps> = (props) => {
 			</span>
 			{OPACITY_SCALE.map((scale) => {
 				return (
-					<div className="flex">
+					<div className="flex" key={key}>
 						{props.toneScale.map((tone) => {
 							const isFirst: boolean = scale === 100;
 							const getTone = (): 100 | 300 | 500 | 700 => {

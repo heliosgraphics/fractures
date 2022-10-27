@@ -3,7 +3,7 @@ import { Properties } from "csstype";
 export type { Properties };
 
 export interface FractureRuleType {
-  declarations: Properties; /** Declaration rules attached to the selector. */
+  declarations?: Properties; /** Declaration rules attached to the selector. */
   description?: string; /** Description. */
   isHidden?: boolean; /** Gets generated, but hidden from demo website. */
   selector: string; /** Name of the selector. */
