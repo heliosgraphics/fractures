@@ -13,7 +13,7 @@
 		"@babel/preset-typescript": "^7.18.6",
 		"@fractures/css": "*",
 		"@sindresorhus/class-names": "^1.1.0",
-		"fathom-client": "^3.5.0",
+		"@splitbee/web": "^0.3.0",
 		"fractures-library": "*",
 		"next": "^12.2.4",
 		"react": "^18.2.0",
