@@ -11,7 +11,7 @@ const ColorGrid: React.FC<ColorGridProps> = (props) => {
 			<span className={`small bold py-4 ${props.color}-700`}>
 				{props.color.charAt(0).toUpperCase() + props.color.slice(1)}
 			</span>
-			{OPACITY_SCALE.map((scale) => {
+			{OPACITY_SCALE.map((scale, key) => {
 				return (
 					<div className="flex" key={key}>
 						{props.toneScale.map((tone) => {
