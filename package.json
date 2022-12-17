@@ -7,17 +7,17 @@
 		"docs:export": "yarn workspace fractures-dev build && yarn workspace fractures-dev export -o dist",
 		"docs:start": "yarn workspace fractures-dev start",
 		"docs:lint": "yarn workspace fractures-dev lint",
-		"fr:build": "yarn workspace fractures build",
-		"fr:test": "NODE_ENV=test yarn workspace fractures test",
+		"fr:build": "yarn workspace @fractures/css build",
+		"fr:test": "NODE_ENV=test yarn workspace @fractures/css test",
 		"test": "yarn run fr:test"
 	},
 	"workspaces": [
 		"packages/*"
 	],
 	"devDependencies": {
-		"@types/node": "^18.6.4",
-		"eslint": "^8.21.0",
-		"prettier": "^2.7.1",
-		"typescript": "^4.7.4"
+		"@types/node": "^18.11.16",
+		"eslint": "^8.30.0",
+		"prettier": "^2.8.1",
+		"typescript": "^4.9.4"
 	}
 }

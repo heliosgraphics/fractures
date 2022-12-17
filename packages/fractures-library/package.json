@@ -5,6 +5,6 @@
 	"description": "Atomic CSS Library",
 	"main": "./src/index",
 	"devDependencies": {
-		"csstype": "^3.1.0"
+		"csstype": "^3.1.1"
 	}
 }

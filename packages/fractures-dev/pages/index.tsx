@@ -35,9 +35,7 @@ const Index: React.FC<{}> = () => (
 					</h2>
 					<div className="flex flex-gap-8">
 						<Link href="/setup">
-							<a>
-								<Button type="primary">Get started</Button>
-							</a>
+							<Button type="primary">Get started</Button>
 						</Link>
 						<a href="https://github.com/fractures/fractures">
 							<Button type="secondary">GitHub</Button>

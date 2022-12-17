@@ -116,10 +116,7 @@ const GetStarted: React.FC<{}> = () => (
 				>
 					<P>
 						Colors are defined as <code>HSL</code> values, see{" "}
-						<Link href="/colors">
-							<a>details</a>
-						</Link>
-						.
+						<Link href="/colors">details</Link>.
 					</P>
 				</SectionCode>
 				<SectionCode

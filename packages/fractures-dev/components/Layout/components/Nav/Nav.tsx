@@ -61,13 +61,16 @@ const NavMarkup: React.FC<NavProps> = (props) => {
 
 						return (
 							<li className={liClasses} key={key}>
-								<Link href={item.url} passHref={item.isExternal}>
-									<a className={aClasses} aria-label={item.name}>
-										{item.component && (
-											<div className="flex flex-center">{item.component}</div>
-										)}
-										{!item.isIconOnly && item.name}
-									</a>
+								<Link
+									href={item.url}
+									passHref={item.isExternal}
+									className={aClasses}
+									aria-label={item.name}
+								>
+									{item.component && (
+										<div className="flex flex-center">{item.component}</div>
+									)}
+									{!item.isIconOnly && item.name}
 								</Link>
 							</li>
 						);
