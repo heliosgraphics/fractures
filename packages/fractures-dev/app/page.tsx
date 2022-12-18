@@ -27,7 +27,7 @@ const Index: React.FC<{}> = () => (
 					<H0>
 						<mark>Functional CSS</mark>, but only the good parts.
 					</H0>
-					<h2 className="h4 normal">
+					<h2 className="h4 fw-normal">
 						Fractures is the <b>atomic CSS toolkit</b> that helps you create
 						resilient <u className="underline">design systems</u> and{" "}
 						<u className="underline">rapid prototypes</u> by providing a set of
@@ -61,37 +61,37 @@ const Index: React.FC<{}> = () => (
 			</header>
 			<SectionBlock title="Goals">
 				<div className="lg:grid-cols-1 grid grid-cols-3 grid-gap-3">
-					<div className="flex flex-gap-8 flex-y-center h5 normal center radius-2 py-4">
+					<div className="flex flex-gap-8 flex-y-center h5 center radius-2 py-4">
 						<div className="flex flex-center fr-gradient--green-to-purple h-32 w-32 purple-700 radius-2 p-6">
 							<HiOutlineCube size={32} />
 						</div>
 						<div>Atomic</div>
 					</div>
-					<div className="flex flex-gap-8 flex-y-center h5 normal center radius-2 py-4">
+					<div className="flex flex-gap-8 flex-y-center h5 center radius-2 py-4">
 						<div className="flex flex-center fr-gradient--green-to-purple h-32 w-32 purple-700 radius-2 p-6">
 							<HiOutlineGlobeAlt size={32} />
 						</div>
 						<div>Framework agnostic</div>
 					</div>
-					<div className="flex flex-gap-8 flex-y-center h5 normal center radius-2 py-4">
+					<div className="flex flex-gap-8 flex-y-center h5 center radius-2 py-4">
 						<div className="flex flex-center fr-gradient--green-to-purple h-32 w-32 purple-700 radius-2 p-6">
 							<HiOutlineEyeOff size={32} />
 						</div>
 						<div>No UI</div>
 					</div>
-					<div className="flex flex-gap-8 flex-y-center h5 normal center radius-2 py-4">
+					<div className="flex flex-gap-8 flex-y-center h5 center radius-2 py-4">
 						<div className="flex flex-center fr-gradient--green-to-purple h-32 w-32 purple-700 radius-2 p-6">
 							<HiOutlineFire size={32} />
 						</div>
 						<div>Fast in every way</div>
 					</div>
-					<div className="flex flex-gap-8 flex-y-center h5 normal center radius-2 py-4">
+					<div className="flex flex-gap-8 flex-y-center h5 center radius-2 py-4">
 						<div className="flex flex-center fr-gradient--green-to-purple h-32 w-32 purple-700 radius-2 p-6">
 							<HiOutlineFingerPrint size={32} />
 						</div>
 						<div>Small cognitive load</div>
 					</div>
-					<div className="flex flex-gap-8 flex-y-center h5 normal center radius-2 py-4">
+					<div className="flex flex-gap-8 flex-y-center h5 center radius-2 py-4">
 						<div className="flex flex-center fr-gradient--green-to-purple h-32 w-32 purple-700 radius-2 p-6">
 							<HiOutlinePuzzle size={32} />
 						</div>

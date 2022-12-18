@@ -92,11 +92,15 @@ const GetStarted: React.FC<{}> = () => (
 				<SectionCode
 					title="Font weights"
 					code={[
-						`--font-weight-lighter: <mark>lighter</mark>;`,
-						`--font-weight-light: <mark>light</mark>;`,
-						`--font-weight-normal: <mark>normal</mark>;`,
-						`--font-weight-bold: <mark>bold</mark>;`,
-						`--font-weight-bolder: <mark>bolder</mark>;`,
+						`--font-weight-thin: <mark>100</mark>`,
+						`--font-weight-extra-light: <mark>200</mark>`,
+						`--font-weight-light: <mark>300</mark>`,
+						`--font-weight-normal: <mark>400</mark>`,
+						`--font-weight-medium: <mark>500</mark>`,
+						`--font-weight-semi-bold: <mark>600</mark>`,
+						`--font-weight-bold: <mark>700</mark>`,
+						`--font-weight-extra-bold: <mark>800</mark>`,
+						`--font-weight-black: <mark>900</mark>`,
 					]}
 				></SectionCode>
 				<SectionCode

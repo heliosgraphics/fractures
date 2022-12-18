@@ -45,11 +45,15 @@ export const config: string = `:root {
 	--font-family-serif: Georgia, Garamond, serif;
 	--font-family-mono: "Courier New", monospace;
 
-	--font-weight-lighter: lighter;
-	--font-weight-light: light;
-	--font-weight-normal: normal;
-	--font-weight-bold: bold;
-	--font-weight-bolder: bolder;
+  --font-weight-thin: 100;
+  --font-weight-extra-light: 200;
+  --font-weight-light: 300;
+  --font-weight-normal: 400;
+  --font-weight-medium: 500;
+  --font-weight-semi-bold: 600;
+  --font-weight-bold: 700;
+  --font-weight-extra-bold: 800;
+  --font-weight-black: 900;
 
 	--z-index-0: 0;
 	--z-index-10: 100;
