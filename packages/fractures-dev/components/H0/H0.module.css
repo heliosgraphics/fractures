@@ -2,7 +2,7 @@
   color: var(--purple-800);
 
 	font-size: 72px;
-	font-weight: 900;
+	font-weight: var(--font-weight-black);
 	line-height: 70px;
 	word-break: break-word;
 }

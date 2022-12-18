@@ -37,8 +37,6 @@ const GetStarted: React.FC<{}> = () => (
 						":root {",
 						`  --font-family-sans: <mark>"Inter", Arial, sans-serif;</mark>`,
 						`  --font-family-mono: <mark>"IBM Plex Mono", monospace</mark>;`,
-						`  --font-weight-bold: 500;`,
-						`  --font-weight-bolder: 700;`,
 						"}",
 					]}
 				/>
