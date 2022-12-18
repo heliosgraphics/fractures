@@ -1,5 +1,6 @@
 .next
 .vercel
+.vscode
 dist
 dist-demo
 node_modules

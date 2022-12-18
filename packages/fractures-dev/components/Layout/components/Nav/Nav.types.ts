@@ -7,6 +7,4 @@ export type HeaderLinks = Array<{
   url?: string;
 }>;
 
-export interface NavProps {
-  className?: string;
-}
+export interface NavProps { }

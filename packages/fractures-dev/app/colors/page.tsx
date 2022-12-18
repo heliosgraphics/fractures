@@ -1,9 +1,9 @@
-import H0 from "../components/H0";
-import Layout from "../components/Layout";
-import P from "../components/P";
-import PageContainer from "../components/PageContainer";
-import ColorGrid from "../components/ColorGrid";
-import SectionBlock from "../components/SectionBlock";
+import ColorGrid from "fractures-dev/components/ColorGrid";
+import H0 from "fractures-dev/components/H0";
+import Layout from "fractures-dev/components/Layout";
+import P from "fractures-dev/components/P";
+import PageContainer from "fractures-dev/components/PageContainer";
+import SectionBlock from "fractures-dev/components/SectionBlock";
 
 const grayToneScale: Array<number> = [
 	0, 25, 50, 100, 200, 300, 400, 500, 600, 700, 800, 900, 1000,

@@ -1,0 +1,30 @@
+.search {
+  width: calc(280px - 32px);
+}
+
+.search__input {
+  height: 40px;
+  padding-left: 32px;
+  padding-right: 32px;
+  width: 100%;
+
+  background-color: transparent;
+  border: 1px solid transparent;
+  color: var(--gray-700);
+  outline: none;
+  transition: all 120ms ease-in-out;
+
+  font-family: var(--font-family-sans);
+  font-size: var(--font-size-small);
+}
+
+.search__input::placeholder {
+  color: var(--gray-300);
+}
+
+.search__inputFocus,
+.search__input:active,
+.search__input:focus {
+  border-color: var(--purple-500);
+  box-shadow: 0 0 0 1px var(--purple-500);
+}

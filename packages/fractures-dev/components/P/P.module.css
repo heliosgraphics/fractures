@@ -1,0 +1,26 @@
+.p a {
+  color: var(--blue-500);
+
+  font-weight: var(--font-weight-bold);
+}
+
+.p a:hover {
+  color: var(--blue-900);
+}
+
+.p code {
+  font-family: var(--font-family-mono);
+  font-size: var(--font-size-small);
+
+  color: var(--purple-500);
+}
+
+.p code:after {
+  content: "\`";
+  color: var(--gray-300);
+}
+
+.p code:before {
+  content: "\`";
+  color: var(--gray-300);
+}

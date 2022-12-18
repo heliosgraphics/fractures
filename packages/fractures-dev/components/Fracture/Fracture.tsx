@@ -1,13 +1,13 @@
 import classNames from "@sindresorhus/class-names";
-import styled from "styled-components";
+import styles from "./Fracture.module.css";
 import type { FractureProps } from "./Fracture.types";
 
-const FractureMarkup: React.FC<FractureProps> = (props) => {
+const Fracture: React.FC<FractureProps> = (props) => {
 	if (!props.rule) return null;
 
 	const selector: string = props.rule.selectorNice || props.rule.selector;
 	const fractureClasses: string = classNames(
-		props.className,
+		styles.fracture,
 		"inline-flex p-2 radius-1 tiny mono nowrap",
 		{
 			[`bg-${props.colorScale || "gray"}-${props.colorTint ?? 100}`]:
@@ -25,9 +25,5 @@ const FractureMarkup: React.FC<FractureProps> = (props) => {
 		</div>
 	);
 };
-
-const Fracture: React.FC<FractureProps> = styled(FractureMarkup)`
-	transition: background-color 60ms ease-in-out;
-`;
 
 export default Fracture;

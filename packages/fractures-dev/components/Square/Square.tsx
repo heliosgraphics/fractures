@@ -1,28 +1,30 @@
 import React from "react";
-import styled from "styled-components";
 import type { SquareProps } from "./Square.types";
 
-const SquareMarkup: React.FC<SquareProps> = (props) => (
+const Square: React.FC<SquareProps> = ({
+	size,
+	colorTone,
+	colorScale,
+	isRounded,
+}) => (
 	<svg
 		width="100%"
 		height="100%"
-		className={props.className}
+		style={{
+			height: `${size}px`,
+			minWidth: `${size}px`,
+			maxWidth: `${size}px`,
+			width: `${size}px`,
+		}}
 		viewBox="0 0 20 20"
 	>
 		<rect
-			fill={`var(--${props.colorScale || "purple"}-${props.colorTone ?? 500})`}
+			fill={`var(--${colorScale || "purple"}-${colorTone ?? 500})`}
 			width={20}
 			height={20}
-			rx={props.isRounded ? 4 : 0}
+			rx={isRounded ? 4 : 0}
 		/>
 	</svg>
 );
-
-const Square = styled(SquareMarkup)`
-	height: ${(props) => props.size}px;
-	min-width: ${(props) => props.size}px;
-	max-width: ${(props) => props.size}px;
-	width: ${(props) => props.size}px;
-`;
 
 export default Square;

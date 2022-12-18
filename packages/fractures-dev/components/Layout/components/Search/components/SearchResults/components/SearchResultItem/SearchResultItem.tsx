@@ -26,7 +26,7 @@ const SearchResultItem: React.FC<SearchResultItemProps> = (props) => {
 					colorTint={isCopied ? 700 : 900}
 					rule={props.rule}
 				/>
-				<a className="fr-search-results__copy flex flex-gap-2 flex-y-center p-2 radius-1 gray-300 hover:gray-600 cursor-pointer">
+				<a className="searchResults__copy flex flex-gap-2 flex-y-center p-2 radius-1 gray-300 hover:gray-600 cursor-pointer">
 					<Tiny>{isCopied ? "Copied" : "Copy"}</Tiny>
 					<HiOutlineDocumentDuplicate size={16} color="currentColor" />
 				</a>

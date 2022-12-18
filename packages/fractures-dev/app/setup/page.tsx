@@ -1,12 +1,12 @@
-import H0 from "../components/H0";
-import Layout from "../components/Layout";
+import H0 from "fractures-dev/components/H0";
+import Layout from "fractures-dev/components/Layout";
 import Link from "next/link";
-import P from "../components/P";
-import PageContainer from "../components/PageContainer";
-import Pre from "../components/Pre";
-import SectionBlock from "../components/SectionBlock";
-import SectionCode from "../components/SectionCode";
-import LightHouse from "../components/Lighthouse";
+import P from "fractures-dev/components/P";
+import PageContainer from "fractures-dev/components/PageContainer";
+import Pre from "fractures-dev/components/Pre";
+import SectionBlock from "fractures-dev/components/SectionBlock";
+import SectionCode from "fractures-dev/components/SectionCode";
+import LightHouse from "fractures-dev/components/Lighthouse";
 
 const GetStarted: React.FC<{}> = () => (
 	<Layout title="Get started">
@@ -23,9 +23,9 @@ const GetStarted: React.FC<{}> = () => (
 			</SectionBlock>
 			<SectionBlock title="Setup">
 				<P>
-					For NextJS, you have to have a custom{" "}
-					<a href="https://github.com/fractures/fractures/blob/main/packages/fractures-dev/pages/_app.tsx#L4">
-						_app.tsx
+					For NextJS 13, you have to have a{" "}
+					<a href="https://github.com/fractures/fractures/blob/main/packages/fractures-dev/app/layout.tsx#L5">
+						layout.tsx
 					</a>
 					, with a single import at the top:{" "}
 					<code>import &quot;@fractures/css&quot;</code>.<br />
@@ -36,7 +36,6 @@ const GetStarted: React.FC<{}> = () => (
 					code={[
 						":root {",
 						`  --font-family-sans: <mark>"Inter", Arial, sans-serif;</mark>`,
-						`  --font-family-serif: <mark>"Georgia"</mark>;`,
 						`  --font-family-mono: <mark>"IBM Plex Mono", monospace</mark>;`,
 						`  --font-weight-bold: 500;`,
 						`  --font-weight-bolder: 700;`,

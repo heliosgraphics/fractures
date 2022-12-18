@@ -1,52 +1,10 @@
-// import Circles from "./components/Circles";
-import fracturesPackage from "@fractures/css/package.json";
-import Head from "next/head";
+import React from "react";
 import Nav from "./components/Nav";
-import type { MetaType, LayoutProps } from "./Layout.types";
+import type { LayoutProps } from "./Layout.types";
 
 const Layout: React.FC<LayoutProps> = (props) => {
-	const meta: MetaType = {
-		description: fracturesPackage.description,
-		title: !!props.title ? `${props.title} — Fractures` : "Fractures",
-		url: "https://fractures.dev",
-	};
-
 	return (
 		<>
-			<Head>
-				<title>{meta.title}</title>
-				<meta charSet="utf-8" />
-				<meta name="viewport" content="initial-scale=1.0, width=device-width" />
-				<meta name="description" content={meta.description} />
-				<meta name="og-url" property="og:url" content={meta.url} />
-				<meta name="og-type" property="og:type" content="website" />
-				<meta name="og-title" property="og:title" content={meta.title} />
-				<meta
-					name="og-description"
-					property="og:description"
-					content={meta.description}
-				/>
-				<meta
-					name="og-image"
-					property="og:image"
-					content="https://fractures.dev/images/share.png"
-				/>
-				<meta name="og-image-width" property="og:image:width" content="1600" />
-				<meta name="og-image-height" property="og:image:height" content="800" />
-				<link rel="icon" href="/favicon.ico" />
-				<link rel="preconnect" href="https://fonts.gstatic.com" />
-				<meta
-					name="theme-color"
-					content="#220845"
-					media="(prefers-color-scheme: light)"
-				/>
-				<meta
-					name="theme-color"
-					content="#220845"
-					media="(prefers-color-scheme: dark)"
-				/>
-			</Head>
-			{/* <Circles /> */}
 			<Nav />
 			<main
 				className="

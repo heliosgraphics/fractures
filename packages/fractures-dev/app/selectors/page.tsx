@@ -13,10 +13,10 @@ import { padding } from "fractures-library/src/rules/padding";
 import { position } from "fractures-library/src/rules/position";
 import { type } from "fractures-library/src/rules/type";
 import { width } from "fractures-library/src/rules/width";
-import H0 from "../components/H0";
-import Layout from "../components/Layout";
-import PageContainer from "../components/PageContainer";
-import SectionGrid from "../components/SectionGrid";
+import H0 from "fractures-dev/components/H0";
+import Layout from "fractures-dev/components/Layout";
+import PageContainer from "fractures-dev/components/PageContainer";
+import SectionGrid from "fractures-dev/components/SectionGrid";
 
 const Selectors: React.FC<{}> = () => (
 	<Layout title="Selectors">
