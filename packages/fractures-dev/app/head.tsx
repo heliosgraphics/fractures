@@ -1,4 +1,4 @@
-import fracturesPackage from "@fractures/css/package.json";
+import fracturesPackage from "../../fractures/package.json";
 
 export interface MetaType {
 	description: string;

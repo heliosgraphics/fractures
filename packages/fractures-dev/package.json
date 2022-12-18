@@ -13,6 +13,7 @@
 	},
 	"dependencies": {
 		"@babel/preset-typescript": "^7.18.6",
+		"@fractures/css": "latest",
 		"@next/font": "^13.0.7",
 		"@sindresorhus/class-names": "^2.0.0",
 		"@splitbee/web": "^0.3.0",

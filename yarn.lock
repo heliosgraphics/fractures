@@ -694,6 +694,11 @@
     minimatch "^3.1.2"
     strip-json-comments "^3.1.1"
 
+"@fractures/css@latest":
+  version "2.1.1"
+  resolved "https://registry.yarnpkg.com/@fractures/css/-/css-2.1.1.tgz#eafbb4c82ce860b98b8fd3487337872dbb99dc10"
+  integrity sha512-IpXSkxz/JjB+2JC5x8GOvDZVS05DZHoSTjnQ4p/Lv1FfbueFKXSyuwh36eCd/WytKgoqme9WJItZkCzxpThr9g==
+
 "@humanwhocodes/config-array@^0.11.8":
   version "0.11.8"
   resolved "https://registry.yarnpkg.com/@humanwhocodes/config-array/-/config-array-0.11.8.tgz#03595ac2075a4dc0f191cc2131de14fbd7d410b9"
