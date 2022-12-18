@@ -8,7 +8,10 @@ import "./layout.css";
 splitbee.init();
 
 const fontInter = Inter({ subsets: ["latin"] });
-const fontPlexMono = IBM_Plex_Mono({ weight: ["400", "700"] });
+const fontPlexMono = IBM_Plex_Mono({
+	subsets: ["latin"],
+	weight: ["400", "700"],
+});
 
 export default function RootLayout({
 	children,
