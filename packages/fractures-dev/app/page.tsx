@@ -51,11 +51,6 @@ const Index: React.FC<{}> = () => (
 								</span>
 							</Small>
 						</div>
-						<Small className="mono">
-							<a href="https://github.com/fractures/fractures/releases/tag/1.3.5">
-								Looking for v1?
-							</a>
-						</Small>
 					</div>
 				</div>
 			</header>
@@ -160,7 +155,7 @@ const Index: React.FC<{}> = () => (
 					<a href="https://github.com/fractures/fractures/discussions">
 						question
 					</a>{" "}
-					on GitHub, say hi on <a href="https://twitter.com/pyx">twitter</a>.
+					on GitHub.
 				</P>
 			</SectionBlock>
 		</PageContainer>
