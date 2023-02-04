@@ -2,7 +2,7 @@
 
 import splitbee from "@splitbee/web";
 import { Inter, IBM_Plex_Mono } from "@next/font/google";
-import "../../fractures/dist/fractures.min.css";
+import "@fractures/css/dist/fractures.min.css";
 import "./layout.css";
 
 splitbee.init();
