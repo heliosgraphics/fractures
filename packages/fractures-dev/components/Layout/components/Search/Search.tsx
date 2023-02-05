@@ -75,7 +75,7 @@ const Search: React.FC<SearchProps> = (props) => {
 
 	return (
 		<li className={`${styles.search} grow-1 top-0 relative`}>
-			<div className="absolute top-6 ml-5 no-events">
+			<div className="absolute top-6 ml-5 no-pointer-events">
 				<HiSearch size={16} color={iconColor} />
 			</div>
 			{!!value && (

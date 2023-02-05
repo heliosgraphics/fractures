@@ -1,5 +1,5 @@
 {
-	"name": "fractures",
+	"name": "@fractures/css",
 	"version": "3.0.0",
 	"author": "Chris Puska <theta@hey.com>",
 	"description": "Functional CSS, but only the good parts.",
