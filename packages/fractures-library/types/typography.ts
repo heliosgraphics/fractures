@@ -1,5 +1,4 @@
 export interface FUITypographyUtility {
-  className?: string;
   fontFamily?: "sans" | "serif" | "mono";
   fontStyle?: "italic" | "normal" | "oblique"
   fontWeight?: "thin" | "extra-light" | "light" | "normal" | "medium" | "semibold" | "bold" | "extra-bold" | "black"

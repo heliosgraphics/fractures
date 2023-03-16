@@ -25,7 +25,7 @@ export const getTypographyUtility = (props: FUITypographyUtility, className?: st
   typoClasses.push(fontFamily)
   typoClasses.push(fontWeight)
 
-  if (props.className) typoClasses.push(props.className)
+  if (className) typoClasses.push(className)
   if (props.fontStyle) typoClasses.push(props.fontStyle)
   if (props.isEllipsis) typoClasses.push("ellipsis")
   if (props.isUnselectable) typoClasses.push("unselectable")
