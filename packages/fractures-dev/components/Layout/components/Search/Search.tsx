@@ -1,10 +1,10 @@
 import React, { useRef, useEffect, useState } from "react";
-import { fractureFiles } from "fractures-library";
+import { fractureFiles } from "@fractures/library";
 import { HiSearch, HiX } from "react-icons/hi";
 import classNames from "@sindresorhus/class-names";
 import SearchResults from "./components/SearchResults";
 import styles from "./Search.module.css";
-import type { FractureRuleType } from "fractures-library/types/css-rules";
+import type { FractureRuleType } from "@fractures/library/types/meta";
 import type { SearchProps } from "./Search.types";
 
 const FRACTURE_RULES: Array<FractureRuleType> = Object.values(fractureFiles)

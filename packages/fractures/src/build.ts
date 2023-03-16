@@ -1,7 +1,7 @@
-import { config } from "fractures-library/src/config/config";
-import { fractureFiles } from "fractures-library/src/index";
+import { config } from "@fractures/library/src/config/config";
+import { fractureFiles } from "@fractures/library/src/index";
 import { generateOutput } from "./generators";
-import { reset } from "fractures-library/src/config/reset";
+import { reset } from "@fractures/library/src/config/reset";
 import { writeFile } from "../src/utils";
 
 // Generate standalone config CSS

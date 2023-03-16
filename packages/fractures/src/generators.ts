@@ -1,7 +1,7 @@
 import type {
   FractureRuleType,
   FractureFiles,
-} from "fractures-library/types/css-rules";
+} from "@fractures/library/types/meta";
 import { writeFile } from "./utils";
 
 // Generates all the rules for the declarations
