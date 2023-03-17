@@ -1,6 +1,6 @@
 {
 	"name": "@fractures/library",
-	"version": "0.0.7",
+	"version": "0.0.8",
 	"author": "Chris Puska <theta@hey.com>",
 	"description": "Atomic CSS Library",
 	"main": "./src/index",
