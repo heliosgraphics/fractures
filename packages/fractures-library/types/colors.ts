@@ -48,6 +48,7 @@ export type FUIColors =
   | "lightest-red"
   | "lightest-yellow"
   | "currentcolor"
+  | "white"
 
 export interface FUIColorScaleOptions {
   0?: string;

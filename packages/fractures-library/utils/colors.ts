@@ -56,6 +56,7 @@ export const getColor = (
     case "darkest-yellow": return "yellow-900"
 
     case "currentcolor": return "currentcolor"
+    case "white": return "gray-0"
 
     default: undefined
   }
