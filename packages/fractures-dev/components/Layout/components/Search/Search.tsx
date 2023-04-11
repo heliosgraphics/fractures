@@ -66,12 +66,9 @@ const Search: React.FC<SearchProps> = (props) => {
 
 	const iconColor = hasFocus ? "var(--gray-500)" : "var(--gray-300)";
 
-	const inputClasses: string = classNames(
-		`${styles.search__input} radius-2 p-4`,
-		{
-			[`${styles.search__inputFocus}`]: hasFocus,
-		}
-	);
+	const inputClasses: string = classNames(`${styles.search__input} radius-2`, {
+		[`${styles.search__inputFocus}`]: hasFocus,
+	});
 
 	return (
 		<li className={`${styles.search} grow-1 top-0 relative`}>
