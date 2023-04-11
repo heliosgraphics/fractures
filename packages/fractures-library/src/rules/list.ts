@@ -1,4 +1,4 @@
-import type { FractureRuleType } from "../../types/css-rules";
+import type { FractureRuleType } from "@fractures/library/types/meta";
 
 export const list: Array<FractureRuleType> = [
   { selector: 'list-circle > li', declarations: { listStyleType: 'circle' }, selectorNice: 'list-circle' },

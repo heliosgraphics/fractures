@@ -1,4 +1,4 @@
-import type { FractureRuleType } from "../../types/css-rules";
+import type { FractureRuleType } from "@fractures/library/types/meta";
 
 export const width: Array<FractureRuleType> = [
   { selector: 'w-0', declarations: { width: '0' }, description: 'Width is 0 pixel.' },

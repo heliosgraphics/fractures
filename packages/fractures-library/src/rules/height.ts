@@ -1,4 +1,4 @@
-import type { FractureRuleType } from "../../types/css-rules";
+import type { FractureRuleType } from "@fractures/library/types/meta";
 
 export const height: Array<FractureRuleType> = [
   { selector: 'h-0', declarations: { height: 0 } },
