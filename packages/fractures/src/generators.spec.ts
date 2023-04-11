@@ -1,5 +1,6 @@
+import { it, describe, expect } from 'vitest';
 import { generateRules } from './generators'
-import type { FractureRuleType } from "fractures-library/types/css-rules";
+import type { FractureRuleType } from "@fractures/library/types/meta";
 
 const mockRule: FractureRuleType = {
   selector: 'bg-gray-0',

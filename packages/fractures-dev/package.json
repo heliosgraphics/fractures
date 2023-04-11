@@ -11,7 +11,6 @@
 		"lint": "next lint"
 	},
 	"dependencies": {
-		"@babel/preset-typescript": "^7.21.4",
 		"@fractures/css": "latest",
 		"@fractures/library": "latest",
 		"@next/font": "^13.3.0",
@@ -23,9 +22,6 @@
 		"react-icons": "^4.8.0"
 	},
 	"devDependencies": {
-		"@babel/core": "^7.21.4",
-		"@types/react": "^18.0.34",
-		"eslint-config-next": "^13.3.0",
 		"typescript": "^5.0.4"
 	}
 }

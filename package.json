@@ -10,15 +10,21 @@
 		"docs:lint": "yarn workspace fractures-dev lint",
 		"fr:build": "yarn workspace @fractures/css build",
 		"fr:test": "NODE_ENV=test yarn workspace @fractures/css test",
-		"test": "yarn run fr:test"
+		"test": "vitest run --reporter dot",
+		"test:dev": "vitest",
+		"test:coverage": "vitest run --coverage"
 	},
 	"workspaces": [
 		"packages/*"
 	],
 	"devDependencies": {
 		"@types/node": "^18.15.11",
+		"@types/react": "^18.0.34",
+		"@vitest/coverage-c8": "^0.30.1",
 		"eslint": "^8.38.0",
+		"eslint-config-next": "^13.3.0",
 		"prettier": "^2.8.7",
-		"typescript": "^5.0.4"
+		"typescript": "^5.0.4",
+		"vitest": "^0.30.1"
 	}
 }
