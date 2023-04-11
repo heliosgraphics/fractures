@@ -1,6 +1,6 @@
 {
 	"name": "@fractures/css",
-	"version": "3.0.0",
+	"version": "3.0.1",
 	"author": "Chris Puska <theta@hey.com>",
 	"description": "Functional CSS, but only the good parts.",
 	"main": "dist/fractures.min.css",
