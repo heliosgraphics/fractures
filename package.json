@@ -1,6 +1,7 @@
 {
 	"author": "Chris Puska <theta@hey.com>",
 	"private": true,
+	"license": "MIT",
 	"scripts": {
 		"docs:build": "yarn workspace fractures-dev build",
 		"docs:dev": "yarn workspace fractures-dev dev",
