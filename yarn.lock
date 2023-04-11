@@ -745,6 +745,16 @@
   resolved "https://registry.yarnpkg.com/@eslint/js/-/js-8.38.0.tgz#73a8a0d8aa8a8e6fe270431c5e72ae91b5337892"
   integrity sha512-IoD2MfUnOV58ghIHCiil01PcohxjbYR/qCxsoC+xNgUwh1EY8jOOrYmu3d3a71+tJJ23uscEV4X2HJWMsPJu4g==
 
+"@fractures/css@latest":
+  version "3.0.0"
+  resolved "https://registry.yarnpkg.com/@fractures/css/-/css-3.0.0.tgz#aa52491268903d27dfaec36a600b8d2b8c50b2e1"
+  integrity sha512-2uqF/87SGiLfrAw35uGyLsb361Q5ickyDPQpRpGpu8k2GEhoWLLsBLahgB/uMDovy3461ezFi4U5K8zqqLuZuA==
+
+"@fractures/library@latest":
+  version "0.0.9"
+  resolved "https://registry.yarnpkg.com/@fractures/library/-/library-0.0.9.tgz#5d9998148f6b5c7f6c0c848044c558e85f09d887"
+  integrity sha512-yxdckFJtpOue4GFAq3jMPcmh38jjc2Tj5USpNhu6KiTlhVtE5S3x3pERqZfHe5R9EtAnzN1l4C0zYdmUg5obtQ==
+
 "@humanwhocodes/config-array@^0.11.8":
   version "0.11.8"
   resolved "https://registry.yarnpkg.com/@humanwhocodes/config-array/-/config-array-0.11.8.tgz#03595ac2075a4dc0f191cc2131de14fbd7d410b9"
