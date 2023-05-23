@@ -5,7 +5,7 @@ import type {
 import { writeFile } from "./utils";
 
 // Generates all the rules for the declarations
-export const generateRules = (
+export const _generateRule = (
   fractureRule: FractureRuleType
 ): string => {
   const declarations: Array<[string, string]> = Object.entries(fractureRule.declarations || {})
@@ -31,13 +31,13 @@ export const generateRules = (
   return selector;
 };
 
-export const generateNormalRules = (
+export const _generateRules = (
   rules: Array<FractureRuleType>
 ): string => {
   let css: string = "";
 
   rules.forEach((rule: FractureRuleType) => {
-    css += generateRules(rule);
+    css += _generateRule(rule);
   });
 
   return css;
@@ -52,7 +52,7 @@ export const generateOutput = (
   const rules = Object.values(files).flatMap(x => x);
   const css: string = `
 		${init}
-    ${generateNormalRules(rules)}
+    ${_generateRules(rules)}
 	`;
 
   const fractures: string = css.replace(/\s/g, "")
