@@ -9,9 +9,9 @@
 		"dist/set/*.*"
 	],
 	"scripts": {
-		"prepare": "ts-node ./src/build.ts",
-		"start": "ts-node ./src/build.ts",
-		"build": "ts-node ./src/build.ts",
+		"prepare": "tsx ./src/build.ts",
+		"start": "tsx ./src/build.ts",
+		"build": "tsx ./src/build.ts",
 		"test": "vitest run --reporter dot"
 	},
 	"keywords": [
@@ -31,8 +31,10 @@
 		"@fractures/library": "*"
 	},
 	"devDependencies": {
+		"@vitest/coverage-c8": "^0.31.1",
 		"gzip-size": "^6.0.0",
-		"ts-node": "^10.9.1",
-		"typescript": "^5.0.4"
+		"tsx": "^3.12.7",
+		"typescript": "^5.0.4",
+		"vitest": "^0.31.1"
 	}
 }
