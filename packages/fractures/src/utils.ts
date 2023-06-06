@@ -29,10 +29,8 @@ export const writeFile = (openFolder: string, contents: string): void => {
 export const getStats = (folder: string, fileName: string, content: string) => {
   fs.stat(folder, (error: any, stats: any) => {
     if (error) return console.log(`File doesn't exist.`);
+    const bGzip: number = Math.round(gzipSize.sync(content));
 
-    const kbSize: number = Math.round(stats?.size / 1024);
-    const kbGzip: number = Math.round(gzipSize.sync(content) / 1024);
-
-    console.log(`⤒ ${fileName}: ${stats?.size} bytes ${kbSize} KB | gzip: ${kbGzip} KB`);
+    console.log(`⤒ ${fileName}: ${stats?.size} bytes | gzip: ${bGzip} bytes`);
   });
 };
