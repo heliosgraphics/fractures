@@ -1,3 +1,5 @@
+"use client";
+
 import { Inter, IBM_Plex_Mono } from "@next/font/google";
 import "@fractures/css/dist/fractures.min.css";
 import "./layout.css";
