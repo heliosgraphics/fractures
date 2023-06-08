@@ -3,10 +3,11 @@ import type { FUIFlexProps } from '@fractures/library/types/flex'
 export const getFlexUtility = (props: FUIFlexProps, className?: string): string => {
   const flexClasses: Array<string> = []
 
-  if (props.isInline) flexClasses.push('inline-flex')
+  if (props?.isInline) flexClasses.push('inline-flex')
   else flexClasses.push('flex')
 
-  if (className) flexClasses.push(className)
+  if (!props) return flexClasses.join(" ")
+
   if (props.isCentered) flexClasses.push('flex-center')
   if (props.isColumn) flexClasses.push('flex-column')
   if (props.isWrapping) flexClasses.push('flex-wrap')
@@ -23,6 +24,8 @@ export const getFlexUtility = (props: FUIFlexProps, className?: string): string 
   if (props.gap || props.gap === 0) flexClasses.push(`flex-gap-${props.gap}`)
   if (props.padding || props.padding === 0) flexClasses.push(`p-${props.padding}`)
   if (props.radius) flexClasses.push(`radius-${props.radius}`)
+
+  if (className) flexClasses.push(className)
 
   return flexClasses.join(" ")
 }
