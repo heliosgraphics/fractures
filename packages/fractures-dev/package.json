@@ -15,13 +15,12 @@
 		"@fractures/library": "latest",
 		"@next/font": "^13.4.4",
 		"@sindresorhus/class-names": "^2.0.0",
-		"@splitbee/web": "^0.3.0",
 		"next": "^13.4.4",
 		"react": "^18.2.0",
 		"react-dom": "^18.2.0",
 		"react-icons": "^4.9.0"
 	},
 	"devDependencies": {
-		"typescript": "^5.0.4"
+		"typescript": "^5.1.3"
 	}
 }
