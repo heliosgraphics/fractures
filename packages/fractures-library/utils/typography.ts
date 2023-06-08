@@ -1,6 +1,6 @@
 import type { FUITypographyUtility } from "@fractures/library/types/typography"
 
-const getFontWeight = (fw: FUITypographyUtility['fontWeight']): string => {
+export const _getFontWeight = (fw: FUITypographyUtility['fontWeight']): string => {
   switch (fw) {
     case 'thin': return 'fw-thin';
     case 'extra-light': return 'fw-extra-light';
@@ -20,7 +20,7 @@ export const getTypographyUtility = (props: FUITypographyUtility, className?: st
   const typoClasses: Array<string> = []
 
   const fontFamily = props.fontFamily ? props.fontFamily : "sans"
-  const fontWeight = getFontWeight(props.fontWeight)
+  const fontWeight = _getFontWeight(props.fontWeight)
 
   typoClasses.push(fontFamily)
   typoClasses.push(fontWeight)

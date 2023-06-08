@@ -31,6 +31,6 @@ describe('getFlexUtility', () => {
     isCentered: true
   }
 
-  it.skip('Generates without duplicated classes', () => expect(getFlexUtility(MOCK_FLEX_DUPLICATE, 'flex')).toEqual(MOCK_FLEX_DUPLICATE_CLASSES));
+  it('Generates without duplicated classes', () => expect(getFlexUtility(MOCK_FLEX_DUPLICATE, 'flex')).toEqual(MOCK_FLEX_DUPLICATE_CLASSES));
   it('Generates with external classname', () => expect(getFlexUtility({}, 'style-01')).toEqual('flex style-01'));
 });
