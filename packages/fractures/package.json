@@ -1,6 +1,6 @@
 {
 	"name": "@fractures/css",
-	"version": "3.0.1",
+	"version": "3.0.2",
 	"author": "Chris Puska <theta@hey.com>",
 	"description": "Functional CSS, but only the good parts.",
 	"main": "dist/fractures.min.css",
@@ -10,6 +10,7 @@
 	],
 	"scripts": {
 		"prepare": "tsx ./src/build.ts",
+		"publish": "yarn publish --access public",
 		"start": "tsx ./src/build.ts",
 		"build": "tsx ./src/build.ts",
 		"test": "vitest run --reporter dot"

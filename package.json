@@ -8,8 +8,9 @@
 		"docs:export": "yarn workspace fractures-dev build && yarn workspace fractures-dev export -o dist",
 		"docs:start": "yarn workspace fractures-dev start",
 		"docs:lint": "yarn workspace fractures-dev lint",
-		"fr:build": "yarn workspace @fractures/css build",
-		"fr:test": "NODE_ENV=test yarn workspace @fractures/css test",
+		"fractures:build": "yarn workspace @fractures/css build",
+		"fractures:publish": "yarn workspace @fractures/css publish",
+		"fractures:test": "NODE_ENV=test yarn workspace @fractures/css test",
 		"test": "vitest run --reporter dot",
 		"test:dev": "vitest",
 		"test:coverage": "vitest run --coverage"
