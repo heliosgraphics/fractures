@@ -17,6 +17,10 @@ export const flex: Array<FractureRuleType> = [
   { selector: 'flex-top', declarations: { alignItems: 'flex-start' } },
   { selector: 'flex-bottom', declarations: { alignItems: 'flex-end' } },
 
+  { selector: 'align-start', declarations: { alignItems: 'start' } },
+  { selector: 'align-end', declarations: { alignItems: 'end' } },
+  { selector: 'align-stretch', declarations: { alignItems: 'stretch' } },
+
   { selector: 'self-center', declarations: { alignSelf: 'center', justifySelf: 'center' } },
   { selector: 'self-x-center', declarations: { justifySelf: 'center' } },
   { selector: 'self-y-center', declarations: { alignSelf: 'center' } },
