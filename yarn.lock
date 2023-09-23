@@ -333,18 +333,6 @@
   resolved "https://registry.yarnpkg.com/@eslint/js/-/js-8.50.0.tgz#9e93b850f0f3fa35f5fa59adfd03adae8488e484"
   integrity sha512-NCC3zz2+nvYd+Ckfh87rA47zfu2QsQpvc6k1yzTk+b9KzRj0wkGa8LSoGOXN6Zv4lRf/EIoZ80biDh9HOI+RNQ==
 
-"@fractures/css@latest":
-  version "3.0.1"
-  resolved "https://registry.yarnpkg.com/@fractures/css/-/css-3.0.1.tgz#e55a122c6a6a6dd921c4d48863703424fec15651"
-  integrity sha512-SekF38hhkZq6AebkMqbIJ7Xr9xF0JdHByeuq8t7SE1nrIo8eXoZFziRuoBX0wFaVUZ23hJmKPBxWEGnVEfBGEg==
-  dependencies:
-    "@fractures/library" "*"
-
-"@fractures/library@0.0.11":
-  version "0.0.11"
-  resolved "https://registry.yarnpkg.com/@fractures/library/-/library-0.0.11.tgz#ef743a3182c133333c0603552d363ddf45bc6c33"
-  integrity sha512-/Qr83PQwnjvFM9HTUtkxvGPgs39hkDBNd7N9zPKM3DV0wePyjpMTDFcrDmW3c756v/xWNHQFWBpKjOa57XFR6A==
-
 "@humanwhocodes/config-array@^0.11.11":
   version "0.11.11"
   resolved "https://registry.yarnpkg.com/@humanwhocodes/config-array/-/config-array-0.11.11.tgz#88a04c570dbbc7dd943e4712429c3df09bc32844"
