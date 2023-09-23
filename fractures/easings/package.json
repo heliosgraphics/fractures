@@ -1,0 +1,28 @@
+{
+	"name": "@fractures/easings",
+	"version": "0.0.1",
+	"author": "Chris Puska <theta@hey.com>",
+	"description": "Easings as CSS variables.",
+	"main": "src/easings.css",
+	"scripts": {
+		"package:publish": "echo 'TBD'"
+	},
+	"keywords": [
+		"CSS",
+		"variables",
+		"easings"
+	],
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/fractures/fractures-easings"
+	},
+	"license": "MIT",
+	"bugs": {
+		"url": "https://github.com/fractures/fractures-easings/issues"
+	},
+	"homepage": "https://fractures.space",
+	"devDependencies": {
+		"@let/eslint-config": "latest",
+		"@let/stylelint": "latest"
+	}
+}

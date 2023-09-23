@@ -1,9 +1,0 @@
-.tiny a {
-  color: var(--blue-500);
-
-  font-weight: var(--font-weight-bold);
-}
-
-.tiny a:hover {
-  color: var(--blue-900);
-}

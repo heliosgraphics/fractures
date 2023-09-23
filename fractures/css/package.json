@@ -1,0 +1,41 @@
+{
+	"name": "@fractures/css",
+	"version": "3.0.3",
+	"author": "Chris Puska <theta@hey.com>",
+	"description": "Functional CSS, but only the good parts.",
+	"main": "dist/fractures.min.css",
+	"files": [
+		"dist/*.*",
+		"dist/set/*.*"
+	],
+	"scripts": {
+		"prepare": "tsx ./src/build.ts",
+		"package:publish": "yarn publish --access public",
+		"start": "tsx ./src/build.ts",
+		"build": "tsx ./src/build.ts",
+		"test": "vitest run --reporter dot"
+	},
+	"keywords": [
+		"CSS",
+		"atomic"
+	],
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/fractures/fractures"
+	},
+	"license": "MIT",
+	"bugs": {
+		"url": "https://github.com/fractures/fractures/issues"
+	},
+	"homepage": "https://fractures.dev",
+	"dependencies": {
+		"@fractures/library": "*"
+	},
+	"devDependencies": {
+		"@vitest/coverage-c8": "^0.33.0",
+		"gzip-size": "^6.0.0",
+		"tsx": "^3.12.10",
+		"typescript": "^5.2.2",
+		"vitest": "^0.34.5"
+	}
+}

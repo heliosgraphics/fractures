@@ -1,0 +1,13 @@
+{
+	"name": "@fractures/library",
+	"version": "0.0.14",
+	"author": "Chris Puska <theta@hey.com>",
+	"description": "Atomic CSS Library",
+	"main": "./src/index",
+	"devDependencies": {
+		"csstype": "^3.1.2"
+	},
+	"scripts": {
+		"package:publish": "yarn publish --access public"
+	}
+}

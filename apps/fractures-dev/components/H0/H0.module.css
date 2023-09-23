@@ -1,0 +1,21 @@
+.h0 {
+  color: var(--purple-800);
+
+	font-size: 72px;
+	font-weight: var(--font-weight-black);
+	line-height: 70px;
+	word-break: break-word;
+}
+
+.h0 mark {
+  background-color: transparent;
+
+  color: inherit;
+}
+
+@media (max-width: 864px) {
+  .h0 {
+    font-size: 56px;
+    line-height: 64px;
+  }
+}
