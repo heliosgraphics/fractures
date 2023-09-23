@@ -11,8 +11,8 @@
 		"lint": "next lint"
 	},
 	"dependencies": {
-		"@fractures/css": "3.0.3",
-		"@fractures/library": "0.0.14",
+		"@fractures/css": "*",
+		"@fractures/library": "*",
 		"@next/font": "^13.5.2",
 		"@sindresorhus/class-names": "^2.0.0",
 		"next": "^13.5.2",
