@@ -1,5 +1,5 @@
 import { it, describe, expect } from 'vitest';
-import { _getFontWeight } from "library/utils/typography";
+import { _getFontWeight } from "./typography";
 
 describe('_getFontWeight', () => {
   it('Generates thin fontWeight', () => expect(_getFontWeight("thin")).toEqual("fw-thin"));

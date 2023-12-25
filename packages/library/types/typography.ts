@@ -1,4 +1,4 @@
-import type { FUIColors } from "library/types/colors"
+import type { FUIColors } from "./colors"
 
 export interface FUITypographyUtility {
   children?: any;

@@ -1,4 +1,4 @@
-import type { TypeRGB } from 'library/types/colors'
+import type { TypeRGB } from '@heliosgraphics/library/types/colors'
 
 const DEFAULT_PROFILE_RGB: TypeRGB = [199, 201, 209];
 

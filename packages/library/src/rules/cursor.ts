@@ -1,4 +1,4 @@
-import type { FractureRuleType } from "library/types/meta";
+import type { FractureRuleType } from "../../types/meta";
 
 export const cursor: Array<FractureRuleType> = [
   { selector: 'no-pointer-events', declarations: { pointerEvents: 'none' } },

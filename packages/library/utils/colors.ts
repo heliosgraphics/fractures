@@ -1,4 +1,4 @@
-import type { FUIColors } from "library/types/colors"
+import type { FUIColors } from "../types/colors"
 
 export const getColor = (
   color: FUIColors,

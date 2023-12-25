@@ -1,4 +1,4 @@
-import type { FUIFlexProps } from 'library/types/flex'
+import type { FUIFlexProps } from '../types/flex'
 
 export const getFlexUtility = (props: FUIFlexProps, className?: string): string => {
   if (!props) return "flex";

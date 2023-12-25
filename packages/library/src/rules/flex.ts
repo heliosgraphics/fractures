@@ -1,4 +1,4 @@
-import type { FractureRuleType } from "library/types/meta";
+import type { FractureRuleType } from "../../types/meta";
 
 export const flex: Array<FractureRuleType> = [
   { selector: 'flex-wrap', declarations: { flexWrap: 'wrap' } },

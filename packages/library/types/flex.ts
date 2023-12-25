@@ -1,4 +1,4 @@
-import type { FUIScale } from 'library/types/scale'
+import type { FUIScale } from './scale'
 
 export interface FUIFlexProps {
   align?: 'center' | 'left' | 'right';

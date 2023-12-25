@@ -1,6 +1,6 @@
 import { it, describe, expect } from 'vitest';
-import { getFlexUtility } from "library/utils/flex";
-import type { FUIFlexProps } from "library/types/flex";
+import { getFlexUtility } from "./flex";
+import type { FUIFlexProps } from "../types/flex";
 
 describe('getFlexUtility', () => {
   const MOCK_FLEX_COLUMN_CLASSES = `flex flex-center flex-column flex-wrap`

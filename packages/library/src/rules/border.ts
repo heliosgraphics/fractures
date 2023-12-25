@@ -1,4 +1,4 @@
-import type { FractureRuleType } from "library/types/meta";
+import type { FractureRuleType } from "../../types/meta";
 
 export const border: Array<FractureRuleType> = [
   { selector: "radius-1", declarations: { borderRadius: "var(--box-1)" } },

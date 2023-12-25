@@ -1,4 +1,4 @@
-import type { FractureRuleType } from "library/types/meta";
+import type { FractureRuleType } from "../../types/meta";
 
 export const background: Array<FractureRuleType> = [
   { selector: 'bg-gray-0', declarations: { backgroundColor: 'hsla(var(--hsl-gray-0), var(--bg-opacity))' }, variables: { '--bg-opacity': 1 } },

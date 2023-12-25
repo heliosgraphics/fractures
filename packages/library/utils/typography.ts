@@ -1,4 +1,4 @@
-import type { FUITypographyUtility } from 'library/types/typography'
+import type { FUITypographyUtility } from '../types/typography'
 
 export const _getFontWeight = (fw: FUITypographyUtility['fontWeight']): string => {
   switch (fw) {

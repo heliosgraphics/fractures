@@ -1,4 +1,4 @@
-import { getSlug } from "utils/slug";
+import { getSlug } from "./slug";
 import { it, describe, expect } from 'vitest';
 
 describe('slug', () => {

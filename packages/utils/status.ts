@@ -1,4 +1,4 @@
-import { sanitizeText } from 'utils/strings'
+import { sanitizeText } from './strings'
 
 export const getStatus = (limit: number, unsafe?: string | null) => {
   const pronouns: string = sanitizeText(unsafe || '');
