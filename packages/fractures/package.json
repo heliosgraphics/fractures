@@ -1,6 +1,6 @@
 {
 	"name": "@heliosgraphics/fractures",
-	"version": "4.0.0-alpha-3",
+	"version": "4.0.0-alpha-4",
 	"type": "module",
 	"author": "Chris Puska <03b8@helios.graphics>",
 	"description": "Functional CSS, but only the good parts.",

@@ -4,6 +4,9 @@
 	"license": "MIT",
 	"scripts": {
 		"test": "vitest",
+		"pub:fractures": "pnpm publish --access public --filter fractures",
+		"pub:library": "pnpm publish --access public --filter library",
+		"pub:utils": "pnpm publish --access public --filter utils",
 		"fractures:build": "pnpm run --filter fractures build"
 	},
 	"workspaces": [
