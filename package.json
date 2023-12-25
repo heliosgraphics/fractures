@@ -4,8 +4,7 @@
 	"license": "MIT",
 	"scripts": {
 		"test": "vitest",
-		"fractures:build": "pnpm run --filter fractures build",
-		"fractures:test": "pnpm run --filter @heliosgraphics/fractures test"
+		"fractures:build": "pnpm run --filter fractures build"
 	},
 	"workspaces": [
 		"packages/*"
