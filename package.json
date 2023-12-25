@@ -1,29 +1,23 @@
 {
-	"author": "Chris Puska <theta@hey.com>",
-	"private": true,
+	"author": "Chris Puska <03b8@helios.graphics>",
+	"private": false,
 	"license": "MIT",
 	"scripts": {
-		"docs:build": "yarn workspace fractures-dev build",
-		"docs:dev": "yarn workspace fractures-dev dev",
-		"docs:export": "yarn workspace fractures-dev build && yarn workspace fractures-dev export -o dist",
-		"fractures:build": "yarn workspace @fractures/css build",
-		"fractures:test": "NODE_ENV=test yarn workspace @fractures/css test",
-		"package:fractures:publish": "yarn workspace @fractures/css package:publish",
-		"package:library:publish": "yarn workspace @fractures/library package:publish",
-		"package:easings:publish": "yarn workspace @fractures/easings package:publish",
-		"test:coverage": "vitest run --coverage",
-		"test": "vitest run --reporter dot"
+		"test": "vitest",
+		"fractures:build": "pnpm run --filter fractures build",
+		"fractures:test": "pnpm run --filter @heliosgraphics/fractures test"
 	},
 	"workspaces": [
-		"apps/*",
-		"fractures/*"
+		"packages/*"
 	],
+	"dependencies": {},
 	"devDependencies": {
 		"@types/node": "^20.6.3",
 		"@types/react": "^18.2.22",
 		"eslint": "^8.50.0",
 		"eslint-config-next": "^13.5.2",
 		"prettier": "^3.0.3",
-		"typescript": "^5.2.2"
+		"typescript": "^5.2.2",
+		"vitest": "^1.1.0"
 	}
 }

@@ -1,3 +1,0 @@
-# fractures-docs
-
-Docs

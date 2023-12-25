@@ -1,6 +1,6 @@
-# `@fractures/css` 
+# Fractures
 
-Fractures is a collection of low level styling utilities that makes products more resilient, composable and scalable. Only the good parts.
+Fractures is a collection of low level atomic utilities for humans that makes products more resilient, composable and scalable. Only the good parts.
 
 - Atomic
 - Framework agnostic
@@ -8,3 +8,13 @@ Fractures is a collection of low level styling utilities that makes products mor
 - Fast in every way
 - Manageable cognitive load
 - Small footprint
+
+### This repo publishes 3 packages:
+
+- `@heliosgraphics/fractures` Atomic CSS.
+- `@heliosgraphics/library` Types and constraints of visual spaces, no presets or definitions.
+- `@heliosgraphics/utils` Helpers functions for both.
+
+### Roadmap
+
+- `2024` Fractures as a template repository for agents to build from.

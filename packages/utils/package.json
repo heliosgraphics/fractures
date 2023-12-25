@@ -1,0 +1,16 @@
+{
+	"name": "@heliosgraphics/utils",
+	"version": "0.0.1",
+	"private": true,
+	"type": "module",
+	"author": "Chris Puska <03b8@helios.graphics>",
+	"dependencies": {
+		"@heliosgraphics/library": "workspace:*",
+		"@heliosgraphics/utils": "workspace:*",
+		"uuid": "^9.0.1",
+		"xss": "^1.0.14"
+	},
+	"devDependencies": {
+		"@types/uuid": "9.0.7"
+	}
+}
