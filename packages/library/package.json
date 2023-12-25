@@ -1,6 +1,7 @@
 {
 	"name": "@heliosgraphics/library",
 	"version": "0.0.14",
+	"private": false,
 	"type": "module",
 	"author": "Chris Puska <03b8@helios.graphics>",
 	"description": "Atomic CSS Library",
