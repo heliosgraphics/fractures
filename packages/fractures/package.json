@@ -1,6 +1,6 @@
 {
 	"name": "@heliosgraphics/fractures",
-	"version": "4.0.0-alpha-2",
+	"version": "4.0.0-alpha-3",
 	"type": "module",
 	"author": "Chris Puska <03b8@helios.graphics>",
 	"description": "Functional CSS, but only the good parts.",
@@ -28,7 +28,7 @@
 		"url": "https://github.com/heliosgraphics/fractures/issues"
 	},
 	"dependencies": {
-		"@heliosgraphics/library": "workspace:*"
+		"@heliosgraphics/library": "latest"
 	},
 	"devDependencies": {
 		"typescript": "^5.3.3",

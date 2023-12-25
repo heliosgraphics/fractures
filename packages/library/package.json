@@ -1,13 +1,13 @@
 {
 	"name": "@heliosgraphics/library",
-	"version": "0.0.15",
+	"version": "0.0.16",
 	"private": false,
 	"type": "module",
 	"author": "Chris Puska <03b8@helios.graphics>",
 	"description": "Atomic CSS Library",
 	"main": "./src/index",
 	"devDependencies": {
-		"@heliosgraphics/library": "workspace:*",
+		"@heliosgraphics/library": "latest",
 		"csstype": "^3.1.3"
 	}
 }
