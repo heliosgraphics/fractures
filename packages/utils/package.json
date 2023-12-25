@@ -1,6 +1,6 @@
 {
 	"name": "@heliosgraphics/utils",
-	"version": "0.0.1",
+	"version": "0.0.2",
 	"private": false,
 	"type": "module",
 	"author": "Chris Puska <03b8@helios.graphics>",
