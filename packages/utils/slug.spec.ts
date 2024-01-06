@@ -8,16 +8,13 @@ describe("slug", () => {
 		it("returns valid from special string", () =>
 			expect(getSlug("#$%^B#uR#n-")).toEqual("burn-"))
 		it("returns valid from parens string", () =>
-			expect(getSlug("Gaussian Blur [1](2){3}")).toEqual(
-				"gaussian-blur-123",
-			))
+			expect(getSlug("Gaussian Blur [1](2){3}")).toEqual("gaussian-blur-123"))
 		it("replaces àáäâèéëêìíïîòóöôùúüûñç", () =>
 			expect(getSlug("àáäâèéëêìíïîòóöôùúüûñç")).toEqual(
 				"aaaaeeeeiiiioooouuuunc",
 			))
 		it("fails silently from undefined", () =>
 			expect(getSlug(undefined)).toEqual(""))
-		it("fails silently from null", () =>
-			expect(getSlug(<any>null)).toEqual(""))
+		it("fails silently from null", () => expect(getSlug(<any>null)).toEqual(""))
 	})
 })

@@ -19,18 +19,16 @@ describe("strings", () => {
 				"a link hello",
 			))
 		it("removes a bold link", () =>
-			expect(
-				removeMarkdown("a [bold **link**](https://x.com) hello"),
-			).toEqual("a bold link hello"))
+			expect(removeMarkdown("a [bold **link**](https://x.com) hello")).toEqual(
+				"a bold link hello",
+			))
 	})
 
 	describe("middleEllipsis", () => {
 		it("works with short word", () =>
 			expect(middleEllipsis("ellipsis", 5)).toEqual("e...s"))
 		it("works with longer word", () =>
-			expect(middleEllipsis("lorem ipsum dolor", 12)).toEqual(
-				"lore...olor",
-			))
+			expect(middleEllipsis("lorem ipsum dolor", 12)).toEqual("lore...olor"))
 		it("fails silently for undefined", () =>
 			expect(middleEllipsis(<any>null, 12)).toEqual(""))
 	})
