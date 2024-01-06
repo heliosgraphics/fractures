@@ -1,4 +1,4 @@
-import type { FractureRuleType, FractureFiles } from "library/types/meta";
+import type { FractureRuleType, FractureFiles } from "./types/meta";
 import { writeFile } from "./utils";
 
 // Generates all the rules for the declarations
