@@ -1,26 +1,34 @@
 {
-	"author": "Chris Puska <03b8@helios.graphics>",
+	"author": "03b8 <03b8@helios.graphics>",
 	"private": false,
 	"license": "MIT",
-	"version": "4.0.0-alpha-5",
+	"version": "5.0.0",
 	"scripts": {
-		"test": "vitest",
+		"test": "NODE_ENV=test vitest run",
+		"test:u": "NODE_ENV=test vitest run --update",
+		"test:watch": "NODE_ENV=test vitest",
+		"test:coverage": "NODE_ENV=test vitest run --coverage",
 		"pub:fractures": "pnpm publish --access public --filter fractures",
 		"pub:library": "pnpm publish --access public --filter library",
 		"pub:utils": "pnpm publish --access public --filter utils",
-		"fractures:build": "pnpm run --filter fractures build"
+		"prettier:write": "prettier --no-semi --use-tabs --write ./packages/**"
 	},
 	"workspaces": [
 		"packages/*"
 	],
 	"dependencies": {},
 	"devDependencies": {
-		"@types/node": "^20.6.3",
-		"@types/react": "^18.2.22",
-		"eslint": "^8.50.0",
-		"eslint-config-next": "^13.5.2",
-		"prettier": "^3.0.3",
-		"typescript": "^5.2.2",
-		"vitest": "^1.1.0"
+		"@typescript-eslint/eslint-plugin": "latest",
+		"@types/node": "latest",
+		"@types/react": "latest",
+		"@vitest/coverage-v8": "latest",
+		"eslint": "latest",
+		"eslint-config-prettier": "latest",
+		"eslint-plugin-prettier": "latest",
+		"jsdom": "latest",
+		"prettier": "latest",
+		"typescript": "latest",
+		"vite": "latest",
+		"vitest": "latest"
 	}
 }

@@ -1,20 +1,24 @@
-export const getSlug = (subdomain: string | undefined): string => {
-  if (!subdomain) return ''
+// gets a valid slug from the given string.
+export const getSlug = (text?: string): string => {
+	const isValid: boolean = Boolean(text && typeof text == "string")
 
-  let str = subdomain;
+	if (!isValid) return ""
 
-  str = str.replace(/^\s+|\s+$/g, '')
-  str = str.toLowerCase()
-
-  var from = "àáäâèéëêìíïîòóöôùúüûñç·/_,:;"
-  var to = "aaaaeeeeiiiioooouuuunc------"
-  for (var i = 0, l = from.length; i < l; i++) {
-    str = str.replace(new RegExp(from.charAt(i), 'g'), to.charAt(i))
-  }
-
-  str = str.replace(/[^a-z0-9 -]/g, '')
-    .replace(/\s+/g, '-')
-    .replace(/-+/g, '-')
-
-  return str
+	return (
+		text!
+			// normalize characters to their base characters and diacritics
+			.normalize("NFD")
+			// remove diacritic marks
+			.replace(/[\u0300-\u036f]/g, "")
+			// remove leading and trailing whitespace
+			.trim()
+			// convert to lowercase
+			.toLowerCase()
+			// remove invalid characters
+			.replace(/[^a-z0-9 -]/g, "")
+			// replace spaces with hyphens
+			.replace(/\s+/g, "-")
+			// replace multiple hyphens with a single hyphen
+			.replace(/-+/g, "-")
+	)
 }
