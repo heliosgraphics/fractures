@@ -9,7 +9,6 @@
 		"test:watch": "NODE_ENV=test vitest",
 		"test:coverage": "NODE_ENV=test vitest run --coverage",
 		"pub:fractures": "pnpm publish --access public --filter fractures",
-		"pub:library": "pnpm publish --access public --filter library",
 		"pub:utils": "pnpm publish --access public --filter utils",
 		"prettier:write": "prettier --no-semi --use-tabs --write ./packages/**"
 	},
