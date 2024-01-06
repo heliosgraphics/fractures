@@ -34,4 +34,4 @@ ol {
 
 img { max-width: 100%; }
 sub { vertical-align: sub; }
-sup { vertical-align: super; }`;
+sup { vertical-align: super; }`

@@ -1,22 +1,22 @@
 // validates a URL.
 export const validateHttpUrl = (text?: string | null): boolean => {
-  let url: URL;
+	let url: URL
 
-  try {
-    url = new URL(text as string);
-  } catch (_) {
-    return false;
-  }
+	try {
+		url = new URL(text as string)
+	} catch (_) {
+		return false
+	}
 
-  // "http" is unsafe.
-  const isValid: boolean = Boolean(url.protocol === "https:");
+	// "http" is unsafe.
+	const isValid: boolean = Boolean(url.protocol === "https:")
 
-  return isValid;
+	return isValid
 }
 
 // validates an email.
-export const validateEmail = (email: string = ''): boolean => {
-  const re: RegExp = /^[a-zA-Z0-9._+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+export const validateEmail = (email: string = ""): boolean => {
+	const re: RegExp = /^[a-zA-Z0-9._+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/
 
-  return re.test(email);
-};
+	return re.test(email)
+}

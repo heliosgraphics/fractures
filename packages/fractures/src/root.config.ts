@@ -267,4 +267,4 @@ export const config: string = `:root {
 	--aqua-700: hsla(var(--hsl-aqua-700, 1));
 	--aqua-800: hsla(var(--hsl-aqua-800, 1));
 	--aqua-900: hsla(var(--hsl-aqua-900, 1));
-}`;
+}`

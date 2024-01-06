@@ -1,22 +1,23 @@
-import { v4 as uuidv4 } from 'uuid';
+import { v4 as uuidv4 } from "uuid"
 
-export const IS_TEST: boolean = process.env.NODE_ENV === 'test' as const;
-export const TEST_UUID: string = '00000000-0000-0000-0000-000000000000' as const;
+export const IS_TEST: boolean = process.env.NODE_ENV === ("test" as const)
+export const TEST_UUID: string = "00000000-0000-0000-0000-000000000000" as const
 
 export const getUUID = (id?: unknown) => {
-  if (!!id) return id;
+	if (!!id) return id
 
-  // this is necessary for snapshot tests, but should be dynamic.
-  if (IS_TEST) return TEST_UUID
+	// this is necessary for snapshot tests, but should be dynamic.
+	if (IS_TEST) return TEST_UUID
 
-  return uuidv4();
+	return uuidv4()
 }
 
 export const isUUID = (uuid?: unknown): boolean => {
-  const uuidRegex = /^[0-9a-fA-F]{8}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{12}$/;
-  const isValid = typeof uuid === 'string';
+	const uuidRegex =
+		/^[0-9a-fA-F]{8}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{12}$/
+	const isValid = typeof uuid === "string"
 
-  if (!isValid) return false;
+	if (!isValid) return false
 
-  return uuidRegex.test(uuid);
-};
+	return uuidRegex.test(uuid)
+}
