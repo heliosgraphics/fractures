@@ -1,6 +1,6 @@
 {
 	"name": "@heliosgraphics/fractures",
-	"version": "5.0.0",
+	"version": "5.1.0",
 	"type": "module",
 	"author": "03b8 <03b8@helios.graphics>",
 	"description": "Functional CSS, but only the good parts.",

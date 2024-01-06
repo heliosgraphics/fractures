@@ -2,6 +2,14 @@ import type { FractureRuleType } from "../types/meta"
 
 export const type: Array<FractureRuleType> = [
 	{
+		selector: "h0",
+		declarations: {
+			fontSize: "var(--font-size-h0)",
+			lineHeight: "var(--line-height-h0)",
+		},
+		description: "Heading 0 font and line.",
+	},
+	{
 		selector: "h1",
 		declarations: {
 			fontSize: "var(--font-size-h1)",

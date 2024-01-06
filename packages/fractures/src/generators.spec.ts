@@ -5,14 +5,14 @@ import type { FractureRuleType } from "./types/meta"
 const MOCK_RULE: FractureRuleType = {
 	selector: "bg-gray-0",
 	declarations: {
-		backgroundColor: "hsla(var(--hsl-gray-0), var(--bg-opacity))",
+		backgroundColor: "hsla(var(--hsl-gray-0), var(--example))",
 	},
-	variables: { "--bg-opacity": 1 },
+	variables: { "--example": 1 },
 }
 
 const MOCK_EXPECTED = `.bg-gray-0 {
---bg-opacity: 1;
-background-color: hsla(var(--hsl-gray-0), var(--bg-opacity));
+--example: 1;
+background-color: hsla(var(--hsl-gray-0), var(--example));
 }
 `
 

@@ -34,52 +34,52 @@ export const position: Array<FractureRuleType> = [
 	},
 	{
 		selector: "z-10",
-		declarations: { zIndex: "var(--z-index-10)" },
+		declarations: { zIndex: "var(--z-index-1)" },
 		description: "Z-index is {10}.",
 	},
 	{
 		selector: "z-20",
-		declarations: { zIndex: "var(--z-index-20)" },
+		declarations: { zIndex: "var(--z-index-2)" },
 		description: "Z-index is {20}.",
 	},
 	{
 		selector: "z-30",
-		declarations: { zIndex: "var(--z-index-30)" },
+		declarations: { zIndex: "var(--z-index-3)" },
 		description: "Z-index is {30}.",
 	},
 	{
 		selector: "z-40",
-		declarations: { zIndex: "var(--z-index-40)" },
+		declarations: { zIndex: "var(--z-index-4)" },
 		description: "Z-index is {40}.",
 	},
 	{
 		selector: "z-50",
-		declarations: { zIndex: "var(--z-index-50)" },
+		declarations: { zIndex: "var(--z-index-5)" },
 		description: "Z-index is {50}.",
 	},
 	{
 		selector: "z-60",
-		declarations: { zIndex: "var(--z-index-60)" },
+		declarations: { zIndex: "var(--z-index-6)" },
 		description: "Z-index is {60}.",
 	},
 	{
 		selector: "z-70",
-		declarations: { zIndex: "var(--z-index-70)" },
+		declarations: { zIndex: "var(--z-index-7)" },
 		description: "Z-index is {70}.",
 	},
 	{
 		selector: "z-80",
-		declarations: { zIndex: "var(--z-index-80)" },
+		declarations: { zIndex: "var(--z-index-8)" },
 		description: "Z-index is {80}.",
 	},
 	{
 		selector: "z-90",
-		declarations: { zIndex: "var(--z-index-90)" },
+		declarations: { zIndex: "var(--z-index-9)" },
 		description: "Z-index is {90}.",
 	},
 	{
 		selector: "z-100",
-		declarations: { zIndex: "var(--z-index-100)" },
+		declarations: { zIndex: "var(--z-index-10)" },
 		description: "Z-index is {100}.",
 	},
 
@@ -98,16 +98,8 @@ export const position: Array<FractureRuleType> = [
 		declarations: { bottom: "var(--box-1)" },
 		description: "Space from bottom is {2}px.",
 	},
-	{
-		selector: "bottom-2",
-		declarations: { bottom: "var(--box-2)" },
-		description: "Space from bottom is {4}px.",
-	},
-	{
-		selector: "bottom-3",
-		declarations: { bottom: "var(--box-3)" },
-		description: "Space from bottom is {6}px.",
-	},
+	{ selector: "bottom-2", declarations: { bottom: "var(--box-2)" } },
+	{ selector: "bottom-3", declarations: { bottom: "var(--box-3)" } },
 	{
 		selector: "bottom-4",
 		declarations: { bottom: "var(--box-4)" },
