@@ -1,5 +1,6 @@
+// validates a URL.
 export const validateHttpUrl = (text?: string | null): boolean => {
-  let url;
+  let url: URL;
 
   try {
     url = new URL(text as string);
@@ -7,11 +8,15 @@ export const validateHttpUrl = (text?: string | null): boolean => {
     return false;
   }
 
-  return Boolean(url.protocol === "http:" || url.protocol === "https:");
+  // "http" is unsafe.
+  const isValid: boolean = Boolean(url.protocol === "https:");
+
+  return isValid;
 }
 
-export const validateEmail = (email: string): boolean => {
-  const re: RegExp = /\S+@\S+\.\S+/;
+// validates an email.
+export const validateEmail = (email: string = ''): boolean => {
+  const re: RegExp = /^[a-zA-Z0-9._+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
 
   return re.test(email);
 };

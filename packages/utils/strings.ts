@@ -1,52 +1,65 @@
 import xss from 'xss';
 
+// sanitizes a given input. you're trusting the `xss` package here.
 export const sanitizeText = (input: string = ''): string => {
   const clean: string = xss(input);
 
   return clean;
 }
 
-export const middleEllipsis = (str: string = '', length: number = 19): string => {
-  const diff: number = Math.floor((length - 3) / 2);
+// removes markdown formatting.
+export const removeMarkdown = (markdownText: string): string => {
+  const patternsToRemove: Array<{ pattern: RegExp, replacement: string }> = [
+    // ![alt text](url)
+    { pattern: /!\[.*?\]\(.*?\)/g, replacement: '' },
+    // [text](url)
+    { pattern: /\[(.*?)\]\(.*?\)/g, replacement: '$1' },
+    // #, ##, etc.
+    { pattern: /#{1,6}\s/g, replacement: '' },
+    // **bold**
+    { pattern: /\*\*(.*?)\*\*/g, replacement: '$1' },
+    // __bold__
+    { pattern: /__(.*?)__/g, replacement: '$1' },
+    // *emphasized*
+    { pattern: /\*(.*?)\*/g, replacement: '$1' },
+    // _emphasized_
+    { pattern: /_(.*?)_/g, replacement: '$1' },
+    // ~~strikethrough~~
+    { pattern: /~~(.*?)~~/g, replacement: '$1' },
+    // >
+    { pattern: />/g, replacement: '' },
+    // ---
+    { pattern: /-{3,}/g, replacement: '' },
+    // ```
+    { pattern: /`{3}.*?`{3}/gs, replacement: '' },
+    // `code`
+    { pattern: /`{1,2}(.*?)`{1,2}/g, replacement: '$1' }
+  ];
 
-  if (str.length > length) {
-    return str.substring(0, diff) + '...' + str.substring(str.length - diff, str.length);
+  let cleanText = markdownText;
+
+  for (const { pattern, replacement } of patternsToRemove) {
+    cleanText = cleanText.replace(pattern, replacement);
   }
 
-  return str;
+  return cleanText;
 }
 
-// TODO @chrispuska Make this account for possible markdown parts in `text` add tests.
+// adds a middle ellipsis, eg.: (ellipsis, 6) gets "ell...sis".
+export const middleEllipsis = (text: string = '', length: number = 64): string => {
+  const diff: number = Math.floor((length - 3) / 2);
+  const isValid: boolean = Boolean(!!text && typeof text === 'string' && text.length > length)
+
+  if (!isValid) return ''
+
+  return text.substring(0, diff) + '...' + text.substring(text.length - diff, text.length);
+}
+
 export const removeNewlines = (text?: string | null, limit?: number): string => {
   if (!text) return '';
 
   const length: number = text?.length;
-  const trimmedString = text.substring(0, limit ?? length);
+  const trimmedString: string = text.substring(0, limit ?? length ?? 0);
 
   return sanitizeText(trimmedString.replace(/(?:\r\n|\r|\n)/g, ' '));
-}
-
-// TODO @chrispuska This should only touch semantics, not ui
-export const formatRawText = (inputText: string = '', pattern?: RegExp, match?: string): string => {
-  // Links
-  const URL_PATTERN = /\b(?:https?|ftp):\/\/[a-z0-9-+&@#\/%?=~_|!:,.;]*[a-z0-9-+&@#\/%=~_|]/gim;
-  const URL_PSEUDO_PATTERN = /(^|[^\/])(www\.[\S]+(\b|$))/gim;
-  const URL_EMAIL_PATTERN = /(([a-zA-Z0-9_\-\.]+)@[a-zA-Z_]+?(?:\.[a-zA-Z]{2,6}))+/gim;
-
-  // New lines
-  const NEW_LINES_PATTERN = /(?:\r\n|\r|\n)/gim;
-
-  let formattedText: string = inputText
-    // Links
-    .replace(URL_PATTERN, '<a class="underline medium" href="$&">$&</a>')
-    .replace(URL_PSEUDO_PATTERN, '$1<a class="underline medium" href="http://$2">$2</a>')
-    .replace(URL_EMAIL_PATTERN, '<a class="underline medium" href="mailto:$1">$1</a>')
-    // New lines
-    .replace(NEW_LINES_PATTERN, '<br/>')
-
-  // Replace a custom one
-  // TODO @chrispuska Make this multi pattern instead.
-  if (!pattern) formattedText.replace(pattern!, `<a class=" medium" href="${match}">$&</a>`)
-
-  return sanitizeText(formattedText);
 }

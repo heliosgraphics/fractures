@@ -1,11 +1,17 @@
-export const throttle = (fn, delay: number) => {
+export type CallbackFunction = (...args: Array<unknown>) => void
+
+// throttles the passed function with wait.
+export const throttle = (callbackFunction: CallbackFunction, wait: number) => {
   let lastCall = 0;
 
-  return (...args) => {
-    const now = new Date().getTime();
-    if (now - lastCall < delay) return;
+  return (...args: Array<unknown>) => {
+    const now: number = new Date().getTime();
+    const isInvalid: boolean = Boolean(now - lastCall < wait)
+
+    if (isInvalid) return;
 
     lastCall = now;
-    return fn(...args);
+
+    return callbackFunction(...args);
   };
 };

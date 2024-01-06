@@ -2,7 +2,7 @@
 	"name": "@heliosgraphics/fractures",
 	"version": "4.0.0-alpha-5",
 	"type": "module",
-	"author": "Chris Puska <03b8@helios.graphics>",
+	"author": "03b8 <03b8@helios.graphics>",
 	"description": "Functional CSS, but only the good parts.",
 	"main": "dist/fractures.min.css",
 	"files": [
@@ -32,6 +32,6 @@
 	},
 	"devDependencies": {
 		"typescript": "^5.3.3",
-		"vitest": "^1.1.0"
+		"vitest": "^1.1.3"
 	}
 }

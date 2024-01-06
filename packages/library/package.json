@@ -1,12 +1,12 @@
 {
 	"name": "@heliosgraphics/library",
-	"version": "4.0.0-alpha-5",
+	"version": "4.1.0",
 	"private": false,
 	"type": "module",
-	"author": "Chris Puska <03b8@helios.graphics>",
-	"description": "Atomic CSS Library",
+	"author": "03b8 <03b8@helios.graphics>",
+	"description": "Helios Library",
 	"main": "./src/index",
 	"devDependencies": {
-		"csstype": "^3.1.3"
+		"csstype": "latest"
 	}
 }
