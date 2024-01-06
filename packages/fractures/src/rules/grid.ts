@@ -1,4 +1,4 @@
-import type { FractureRuleType } from "../../types/meta";
+import type { FractureRuleType } from "../types/meta";
 
 export const grid: Array<FractureRuleType> = [
   { selector: 'grid-gap-1', declarations: { gridGap: 'var(--box-1)' }, },

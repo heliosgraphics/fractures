@@ -1,4 +1,4 @@
-import type { FractureRuleType } from "../../types/meta";
+import type { FractureRuleType } from "../types/meta";
 
 export const flex: Array<FractureRuleType> = [
   { selector: 'flex-wrap', declarations: { flexWrap: 'wrap' } },
@@ -52,7 +52,7 @@ export const flex: Array<FractureRuleType> = [
   { selector: 'flex-gap-40', declarations: { gap: 'var(--box-40)' }, },
   { selector: 'flex-gap-48', declarations: { gap: 'var(--box-48)' }, },
 
-  // TODO Minify should consider merging these
+  // TODO minify should consider merging these.
   { selector: 'grow-1', declarations: { flexBasis: 0, flexGrow: 1 } },
   { selector: 'grow-2', declarations: { flexBasis: 0, flexGrow: 2 } },
   { selector: 'grow-3', declarations: { flexBasis: 0, flexGrow: 3 } },

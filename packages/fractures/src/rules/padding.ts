@@ -1,4 +1,4 @@
-import type { FractureRuleType } from "../../types/meta";
+import type { FractureRuleType } from "../types/meta";
 
 export const padding: Array<FractureRuleType> = [
   { selector: 'p-px', declarations: { padding: 'var(--box-px)' } },

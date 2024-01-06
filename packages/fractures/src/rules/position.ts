@@ -1,4 +1,4 @@
-import type { FractureRuleType } from "../../types/meta";
+import type { FractureRuleType } from "../types/meta";
 
 export const position: Array<FractureRuleType> = [
   { selector: "absolute", declarations: { position: "absolute" }, description: 'Position is absolute.' },

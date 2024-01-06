@@ -1,4 +1,4 @@
-import type { FractureRuleType } from "../../types/meta";
+import type { FractureRuleType } from "../types/meta";
 
 export const display: Array<FractureRuleType> = [
   { selector: "block", declarations: { display: "block" } },
