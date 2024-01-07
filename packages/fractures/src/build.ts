@@ -43,7 +43,7 @@ writeFile("dist/fractures.config.css", config)
 writeFile("dist/fractures.easings.css", easings)
 
 // generates the default bundle.
-generateOutput(fractureFiles, config + reset, "dist/fractures.min.css")
+generateOutput(fractureFiles, reset, "dist/fractures.min.css")
 
 // generates set of files, eg.: `@heliosgraphics/fractures/dist/set/flex.css`
 Object.entries(fractureFiles).forEach((rules) => {
