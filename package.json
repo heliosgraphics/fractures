@@ -2,7 +2,7 @@
 	"author": "03b8 <03b8@helios.graphics>",
 	"private": false,
 	"license": "MIT",
-	"version": "5.0.0",
+	"version": "5.0.1",
 	"scripts": {
 		"test": "NODE_ENV=test vitest run",
 		"test:u": "NODE_ENV=test vitest run --update",

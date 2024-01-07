@@ -1,5 +1,7 @@
 import { it, describe, expect } from "vitest"
-import { getUUID, isUUID, TEST_UUID } from "./uuid"
+import { getUUID, isUUID } from "./uuid"
+
+const TEST_UUID: string = "00000000-0000-0000-0000-000000000000"
 
 describe("validations", () => {
 	describe("getUUID", () => {

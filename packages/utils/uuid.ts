@@ -1,7 +1,7 @@
 import { v4 as uuidv4 } from "uuid"
 
-export const IS_TEST: boolean = process.env.NODE_ENV === ("test" as const)
-export const TEST_UUID: string = "00000000-0000-0000-0000-000000000000" as const
+const IS_TEST: boolean = process.env.NODE_ENV === "test"
+const TEST_UUID: string = "00000000-0000-0000-0000-000000000000"
 
 export const getUUID = (id?: unknown) => {
 	if (!!id) return id
