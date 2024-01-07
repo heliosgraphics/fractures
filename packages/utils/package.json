@@ -1,6 +1,6 @@
 {
 	"name": "@heliosgraphics/utils",
-	"version": "5.0.1",
+	"version": "5.1.0",
 	"private": false,
 	"type": "module",
 	"author": "03b8 <03b8@helios.graphics>",
@@ -8,6 +8,10 @@
 	"dependencies": {
 		"@heliosgraphics/library": "latest",
 		"xss": "^1.0.14"
+	},
+	"engines": {
+		"npm": ">=10.2.3",
+		"node": ">=20.10.0"
 	},
 	"devDependencies": {
 		"@types/uuid": "latest"
