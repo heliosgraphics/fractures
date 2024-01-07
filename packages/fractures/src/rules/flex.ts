@@ -28,6 +28,7 @@ export const flex: Array<FractureRuleType> = [
 	{ selector: "flex-baseline", declarations: { alignItems: "baseline" } },
 	{ selector: "flex-top", declarations: { alignItems: "flex-start" } },
 	{ selector: "flex-bottom", declarations: { alignItems: "flex-end" } },
+	{ selector: "flex-stretch", declarations: { alignItems: "stretch" } },
 
 	{ selector: "align-start", declarations: { alignItems: "start" } },
 	{ selector: "align-end", declarations: { alignItems: "end" } },
