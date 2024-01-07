@@ -1,13 +1,14 @@
 {
 	"name": "@heliosgraphics/utils",
-	"version": "5.1.0",
+	"version": "5.2.0",
 	"private": false,
 	"type": "module",
 	"author": "03b8 <03b8@helios.graphics>",
 	"description": "Helios Utils",
 	"dependencies": {
 		"@heliosgraphics/library": "latest",
-		"xss": "^1.0.14"
+		"uuid": "latest",
+		"xss": "latest"
 	},
 	"engines": {
 		"npm": ">=10.2.3",
