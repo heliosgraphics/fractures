@@ -1,10 +1,14 @@
 {
 	"name": "@heliosgraphics/fractures",
-	"version": "5.2.2",
+	"version": "5.2.4",
 	"type": "module",
 	"author": "03b8 <03b8@helios.graphics>",
 	"description": "Functional CSS, but only the good parts.",
 	"main": "dist/fractures.min.css",
+	"engines": {
+		"npm": ">=10.2.4",
+		"node": ">=20.11.1"
+	},
 	"files": [
 		"dist/*.*",
 		"dist/set/*.*"

@@ -1,6 +1,6 @@
 # Fractures
 
-Fractures is a collection of low level atomic utilities that makes products more resilient, composable and scalable. Only the good parts.
+Fractures is a set of low level atomics to help compose larger systems. Only the good parts.
 
 - Atomic
 - Framework agnostic

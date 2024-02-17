@@ -239,9 +239,9 @@ export const type: Array<FractureRuleType> = [
 		description: "Break-word word-wrap.",
 	},
 	{
-		selector: "unselectable",
+		selector: "non-selectable",
 		declarations: { userSelect: "none" },
-		description: "User-select is none.",
+		description: "Non selectable text.",
 	},
 
 	{
