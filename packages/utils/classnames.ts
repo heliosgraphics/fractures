@@ -3,8 +3,8 @@ export const getClasses = (...args: Array<any>): string => {
 
 	for (const item of args) {
 		const itemType = typeof item
-		const isValidString: boolean = itemType === 'string' && item.length > 0
-		const isValidObject: boolean = itemType === 'object' && item !== null
+		const isValidString: boolean = itemType === "string" && item.length > 0
+		const isValidObject: boolean = itemType === "object" && item !== null
 
 		if (isValidString) {
 			classNames.add(item)
@@ -17,5 +17,5 @@ export const getClasses = (...args: Array<any>): string => {
 		}
 	}
 
-	return [...classNames].join(' ')
+	return [...classNames].join(" ")
 }
