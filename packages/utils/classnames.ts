@@ -17,5 +17,5 @@ export const getClasses = (...args: Array<any>): string => {
 		}
 	}
 
-	return [...classNames].join(" ")
+	return Array.from(classNames).join(" ")
 }
