@@ -11,12 +11,8 @@ describe("copyValue", () => {
 			remove: vi.fn(),
 		}
 
-		const spyCreateElement = vi
-			.spyOn(document, "createElement")
-			.mockImplementation(() => createElementMock)
-		const spyAppendChild = vi
-			.spyOn(document.body, "appendChild")
-			.mockImplementation((node) => node)
+		const spyCreateElement = vi.spyOn(document, "createElement").mockImplementation(() => createElementMock)
+		const spyAppendChild = vi.spyOn(document.body, "appendChild").mockImplementation((node) => node)
 
 		document.execCommand = vi.fn()
 
@@ -25,8 +21,7 @@ describe("copyValue", () => {
 		expect(spyAppendChild).toHaveBeenCalled()
 		expect(document.execCommand).toHaveBeenCalledWith("copy", false)
 
-		const inputElement: HTMLInputElement =
-			spyCreateElement.mock.results[0].value
+		const inputElement: HTMLInputElement = spyCreateElement.mock.results[0].value
 		expect(inputElement.value).toBe(TEXT_STRING)
 
 		spyCreateElement.mockRestore()

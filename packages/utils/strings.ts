@@ -46,28 +46,16 @@ export const removeMarkdown = (markdownText: string): string => {
 }
 
 // adds a middle ellipsis, eg.: (ellipsis, 6) gets "ell...sis"
-export const middleEllipsis = (
-	text: string = "",
-	length: number = 64,
-): string => {
+export const middleEllipsis = (text: string = "", length: number = 64): string => {
 	const diff: number = Math.floor((length - 3) / 2)
-	const isValid: boolean = Boolean(
-		!!text && typeof text === "string" && text.length > length,
-	)
+	const isValid: boolean = Boolean(!!text && typeof text === "string" && text.length > length)
 
 	if (!isValid) return ""
 
-	return (
-		text.substring(0, diff) +
-		"..." +
-		text.substring(text.length - diff, text.length)
-	)
+	return text.substring(0, diff) + "..." + text.substring(text.length - diff, text.length)
 }
 
-export const removeNewlines = (
-	text?: string | null,
-	limit?: number,
-): string => {
+export const removeNewlines = (text?: string | null, limit?: number): string => {
 	if (!text) return ""
 
 	const length: number = text?.length

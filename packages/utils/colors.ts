@@ -19,11 +19,7 @@ export const hexToRgb = (hex?: string | null): TypeRGB => {
 }
 
 // converts an rgb value to a hex string (#0cd0cd)
-export const rgbToHex = (
-	r: number | string = 255,
-	g: number | string = 255,
-	b: number | string = 255,
-): string => {
+export const rgbToHex = (r: number | string = 255, g: number | string = 255, b: number | string = 255): string => {
 	const _toHex = (c: unknown): string => {
 		const value = Number(c)
 		const isValid: boolean = isNaN(value) || value < 0 || value > 255

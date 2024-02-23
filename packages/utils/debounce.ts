@@ -1,10 +1,7 @@
 export type CallbackFunction = (...args: Array<unknown>) => void
 
 // debounces the function with wait time passed
-export const debounce = (
-	callback: CallbackFunction,
-	wait: number,
-): CallbackFunction => {
+export const debounce = (callback: CallbackFunction, wait: number): CallbackFunction => {
 	let timeoutId: any
 
 	return (...args: Array<unknown>) => {

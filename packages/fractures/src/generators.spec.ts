@@ -17,6 +17,5 @@ background-color: hsla(var(--hsl-gray-0), var(--example));
 `
 
 describe("generateRules", () => {
-	it("Generates a sample selector", () =>
-		expect(_generateRule(MOCK_RULE)).toEqual(MOCK_EXPECTED))
+	it("Generates a sample selector", () => expect(_generateRule(MOCK_RULE)).toEqual(MOCK_EXPECTED))
 })

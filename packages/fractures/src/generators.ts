@@ -3,30 +3,20 @@ import { writeFile } from "./utils"
 
 // generates all the rules for the declarations
 export const _generateRule = (fractureRule: FractureRuleType): string => {
-	const declarations: Array<[string, string]> = Object.entries(
-		fractureRule.declarations || {},
-	)
-	const variables: Array<[string, string]> = Object.entries(
-		fractureRule.variables || {},
-	)
-	const hasMultipleDeclarations: boolean =
-		declarations.length + variables.length > 1
+	const declarations: Array<[string, string]> = Object.entries(fractureRule.declarations || {})
+	const variables: Array<[string, string]> = Object.entries(fractureRule.variables || {})
+	const hasMultipleDeclarations: boolean = declarations.length + variables.length > 1
 
 	const declarationSpace: string = hasMultipleDeclarations ? "\n" : ""
 	const declarationOutput: string = declarations
 		.map((prop) => {
-			const property: string = prop[0].replace(
-				/[A-Z]/g,
-				(letter) => `-${letter.toLowerCase()}`,
-			)
+			const property: string = prop[0].replace(/[A-Z]/g, (letter) => `-${letter.toLowerCase()}`)
 
 			return `${property}: ${prop[1]};`
 		})
 		.join(declarationSpace)
 
-	const variablesOutput = variables.map(
-		(variable) => `${variable[0]}: ${variable[1]};`,
-	)
+	const variablesOutput = variables.map((variable) => `${variable[0]}: ${variable[1]};`)
 	const rule: string = `${fractureRule.selector} {${declarationSpace}${variablesOutput}${declarationSpace}${declarationOutput}${declarationSpace}}`
 	const selector: string = `.${rule}\n`
 
@@ -44,11 +34,7 @@ export const _generateRules = (rules: Array<FractureRuleType>): string => {
 }
 
 // generates a new fractures file
-export const generateOutput = (
-	files: FractureFiles,
-	init: string,
-	folder: string,
-) => {
+export const generateOutput = (files: FractureFiles, init: string, folder: string) => {
 	const rules = Object.values(files).flatMap((x) => x)
 	const css: string = `
 		${init}
