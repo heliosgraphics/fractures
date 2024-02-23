@@ -254,4 +254,4 @@ export const type: Array<FractureRuleType> = [
 		},
 		description: "Everything needed for ellipsis text-overflow.",
 	},
-]
+] as const

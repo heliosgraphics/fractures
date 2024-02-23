@@ -17,4 +17,4 @@ export const cursor: Array<FractureRuleType> = [
 	{ selector: "cursor-wait", declarations: { cursor: "wait" } },
 	{ selector: "cursor-zoom-in", declarations: { cursor: "zoom-in" } },
 	{ selector: "cursor-zoom-out", declarations: { cursor: "zoom-out" } },
-]
+] as const

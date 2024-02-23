@@ -12,4 +12,4 @@ export const opacity: Array<FractureRuleType> = [
 	{ selector: "opacity-20", declarations: { opacity: ".2" } },
 	{ selector: "opacity-10", declarations: { opacity: ".1" } },
 	{ selector: "opacity-0", declarations: { opacity: "0" } },
-]
+] as const

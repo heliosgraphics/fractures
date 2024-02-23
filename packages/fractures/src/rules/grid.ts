@@ -260,4 +260,4 @@ export const grid: Array<FractureRuleType> = [
 		selector: "grid-rows-12",
 		declarations: { gridTemplateRows: "repeat(12, 1fr)" },
 	},
-]
+] as const

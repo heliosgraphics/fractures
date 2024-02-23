@@ -1,7 +1,7 @@
 import type { FractureRuleType, FractureFiles } from "./types/meta"
 import { writeFile } from "./utils"
 
-// Generates all the rules for the declarations
+// generates all the rules for the declarations
 export const _generateRule = (fractureRule: FractureRuleType): string => {
 	const declarations: Array<[string, string]> = Object.entries(
 		fractureRule.declarations || {},
@@ -43,7 +43,7 @@ export const _generateRules = (rules: Array<FractureRuleType>): string => {
 	return css
 }
 
-// Generates a new fractures file
+// generates a new fractures file
 export const generateOutput = (
 	files: FractureFiles,
 	init: string,

@@ -66,4 +66,4 @@ export const flex: Array<FractureRuleType> = [
 	{ selector: "gap-32", declarations: { gap: "var(--box-32)" } },
 	{ selector: "gap-40", declarations: { gap: "var(--box-40)" } },
 	{ selector: "gap-48", declarations: { gap: "var(--box-48)" } },
-]
+] as const

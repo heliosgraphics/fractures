@@ -1,6 +1,6 @@
 export type CallbackFunction = (...args: Array<unknown>) => void
 
-// throttles the passed function with wait.
+// throttles the passed function with wait
 export const throttle = (callbackFunction: CallbackFunction, wait: number) => {
 	let lastCall = 0
 

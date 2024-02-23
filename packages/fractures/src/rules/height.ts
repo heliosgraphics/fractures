@@ -163,4 +163,4 @@ export const height: Array<FractureRuleType> = [
 	{ selector: "hpmin-90", declarations: { minHeight: "90%" } },
 	{ selector: "hpmin-95", declarations: { minHeight: "95%" } },
 	{ selector: "hpmin-100", declarations: { minHeight: "100%" } },
-]
+] as const

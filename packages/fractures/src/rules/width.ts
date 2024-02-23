@@ -666,4 +666,4 @@ export const width: Array<FractureRuleType> = [
 		declarations: { minWidth: "100%" },
 		description: "Min-width is 100%.",
 	},
-]
+] as const

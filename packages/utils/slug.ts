@@ -1,4 +1,4 @@
-// gets a valid slug from the given string.
+// gets a valid slug from the given string
 export const getSlug = (text?: string): string => {
 	const isValid: boolean = Boolean(text && typeof text == "string")
 

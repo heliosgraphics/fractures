@@ -36,13 +36,12 @@ export const fractureFiles: FractureFiles = {
 	width,
 }
 
-// generates standalone versions, each containing only their specific parts.
-// TODO this can be just a copy.
+// generates standalone versions, each containing only their specific parts
 writeFile("dist/fractures.reset.css", reset)
 writeFile("dist/fractures.config.css", config)
 writeFile("dist/fractures.easings.css", easings)
 
-// generates the default bundle.
+// generates the default bundle
 generateOutput(fractureFiles, reset, "dist/fractures.min.css")
 
 // generates set of files, eg.: `@heliosgraphics/fractures/dist/set/flex.css`

@@ -10,4 +10,4 @@ export const overflow: Array<FractureRuleType> = [
 	{ selector: "overflow-x-hidden", declarations: { overflowX: "hidden" } },
 	{ selector: "overflow-x-scroll", declarations: { overflowX: "scroll" } },
 	{ selector: "overflow-x-visible", declarations: { overflowX: "visible" } },
-]
+] as const

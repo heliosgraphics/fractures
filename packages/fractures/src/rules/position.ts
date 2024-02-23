@@ -518,4 +518,4 @@ export const position: Array<FractureRuleType> = [
 		declarations: { top: "var(--box-48)" },
 		description: "Space from top is {96}px.",
 	},
-]
+] as const

@@ -2,7 +2,7 @@ import type { TypeRGB } from "@heliosgraphics/library/types/colors"
 
 export const DEFAULT_PROFILE_RGB: TypeRGB = [199, 201, 209] as const
 
-// converts a hex value to a TypeRGB.
+// converts a hex value to a TypeRGB
 export const hexToRgb = (hex?: string | null): TypeRGB => {
 	const isValid: boolean = !!hex && typeof hex === "string"
 
@@ -18,7 +18,7 @@ export const hexToRgb = (hex?: string | null): TypeRGB => {
 	return [r, g, b]
 }
 
-// converts an rgb value to a hex string (#0cd0cd).
+// converts an rgb value to a hex string (#0cd0cd)
 export const rgbToHex = (
 	r: number | string = 255,
 	g: number | string = 255,

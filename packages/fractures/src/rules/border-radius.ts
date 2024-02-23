@@ -15,4 +15,4 @@ export const borderRadius: Array<FractureRuleType> = [
 	},
 	{ selector: "radius-100", declarations: { borderRadius: "100%" } },
 	{ selector: "radius-max", declarations: { borderRadius: "9999px" } },
-]
+] as const

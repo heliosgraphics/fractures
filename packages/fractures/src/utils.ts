@@ -1,6 +1,6 @@
 import fs from "fs"
 
-// Creates a folder and writes the file
+// creates a folder and writes the file
 export const writeFile = (openFolder: string, contents: string): void => {
 	if (!openFolder) return
 	if (!contents) return
@@ -24,7 +24,7 @@ export const writeFile = (openFolder: string, contents: string): void => {
 	}
 }
 
-// Gets the file statistics
+// gets the file statistics
 export const getStats = (folder: string, fileName: string, content: string) => {
 	fs.stat(folder, (error: any, stats: any) => {
 		if (error) return console.log(`File doesn't exist.`)

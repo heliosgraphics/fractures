@@ -1,4 +1,4 @@
-// copies the given value to the clipboard.
+// copies the given value to the clipboard
 export const copyValue = (text: string): void => {
 	const input: HTMLInputElement = document.createElement("input")
 

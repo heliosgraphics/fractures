@@ -6,7 +6,7 @@ export const TEST_UUID: string = "00000000-0000-0000-0000-000000000000"
 export const getUUID = (id?: unknown) => {
 	if (!!id) return id
 
-	// this is necessary for snapshot tests, but should be dynamic.
+	// this is necessary for snapshot tests, but should be dynamic
 	if (IS_TEST) return TEST_UUID
 
 	return uuidv4()

@@ -1,13 +1,13 @@
 import xss from "xss"
 
-// sanitizes a given input. you're trusting the `xss` package here.
+// sanitizes a given input, you're trusting the `xss` package here
 export const sanitizeText = (input: string = ""): string => {
 	const clean: string = xss(input)
 
 	return clean
 }
 
-// removes markdown formatting.
+// removes markdown formatting
 export const removeMarkdown = (markdownText: string): string => {
 	const patternsToRemove: Array<{ pattern: RegExp; replacement: string }> = [
 		// ![alt text](url)
@@ -45,7 +45,7 @@ export const removeMarkdown = (markdownText: string): string => {
 	return cleanText
 }
 
-// adds a middle ellipsis, eg.: (ellipsis, 6) gets "ell...sis".
+// adds a middle ellipsis, eg.: (ellipsis, 6) gets "ell...sis"
 export const middleEllipsis = (
 	text: string = "",
 	length: number = 64,

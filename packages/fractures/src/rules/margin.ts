@@ -512,4 +512,4 @@ export const margin: Array<FractureRuleType> = [
 			marginRight: "var(--box-48)",
 		},
 	},
-]
+] as const

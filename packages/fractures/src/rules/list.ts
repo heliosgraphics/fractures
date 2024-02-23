@@ -66,4 +66,4 @@ export const list: Array<FractureRuleType> = [
 		declarations: { content: "', '" },
 		isHidden: true,
 	},
-]
+] as const

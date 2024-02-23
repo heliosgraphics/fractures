@@ -38,4 +38,4 @@ export const display: Array<FractureRuleType> = [
 	{ selector: "table-layout-fixed", declarations: { tableLayout: "fixed" } },
 	{ selector: "float-left", declarations: { float: "left" } },
 	{ selector: "float-right", declarations: { float: "right" } },
-]
+] as const

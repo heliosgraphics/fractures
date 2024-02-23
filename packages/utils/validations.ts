@@ -1,4 +1,4 @@
-// validates a URL.
+// validates a URL
 export const validateHttpUrl = (text?: string | null): boolean => {
 	let url: URL
 
@@ -8,13 +8,13 @@ export const validateHttpUrl = (text?: string | null): boolean => {
 		return false
 	}
 
-	// "http" is unsafe.
+	// "http" is unsafe
 	const isValid: boolean = Boolean(url.protocol === "https:")
 
 	return isValid
 }
 
-// validates an email.
+// validates an email
 export const validateEmail = (email: string = ""): boolean => {
 	const re: RegExp = /^[a-zA-Z0-9._+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/
 

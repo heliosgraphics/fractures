@@ -508,4 +508,4 @@ export const padding: Array<FractureRuleType> = [
 			paddingRight: "var(--box-48)",
 		},
 	},
-]
+] as const
