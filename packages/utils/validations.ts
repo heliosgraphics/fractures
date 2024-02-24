@@ -1,5 +1,5 @@
 // validates a URL
-export const validateHttpUrl = (text?: string | null): boolean => {
+export const validateUrl = (text?: string | null): boolean => {
 	let url: URL
 
 	try {
