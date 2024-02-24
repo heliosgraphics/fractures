@@ -1,4 +1,4 @@
-import type { TypeRGB } from "@heliosgraphics/library/types/colors"
+type TypeRGB = [number, number, number]
 
 export const DEFAULT_PROFILE_RGB: TypeRGB = [199, 201, 209] as const
 

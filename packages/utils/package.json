@@ -1,16 +1,15 @@
 {
 	"name": "@heliosgraphics/utils",
-	"version": "5.3.1",
+	"version": "5.3.2",
 	"private": false,
 	"type": "module",
 	"author": "03b8 <03b8@helios.graphics>",
-	"description": "Helios Utils",
+	"description": "Universal javascript helpers",
 	"engines": {
 		"npm": ">=10.2.4",
 		"node": ">=20.11.1"
 	},
 	"dependencies": {
-		"@heliosgraphics/library": "latest",
 		"uuid": "latest",
 		"xss": "latest"
 	},
