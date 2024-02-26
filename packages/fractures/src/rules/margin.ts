@@ -1,7 +1,6 @@
 import type { FractureRuleType } from "../types/meta"
 
 export const MARGIN: Array<FractureRuleType> = [
-	{ selector: "m-px", declarations: { margin: "var(--box-px)" } },
 	{ selector: "m-0", declarations: { margin: "0" } },
 	{ selector: "m-1", declarations: { margin: "var(--box-1)" } },
 	{ selector: "m-2", declarations: { margin: "var(--box-2)" } },
@@ -29,7 +28,6 @@ export const MARGIN: Array<FractureRuleType> = [
 	{ selector: "m-40", declarations: { margin: "var(--box-40)" } },
 	{ selector: "m-48", declarations: { margin: "var(--box-48)" } },
 
-	{ selector: "mr-px", declarations: { marginRight: "var(--box-px)" } },
 	{ selector: "mr-0", declarations: { marginRight: "0" } },
 	{ selector: "mr-1", declarations: { marginRight: "var(--box-1)" } },
 	{ selector: "mr-2", declarations: { marginRight: "var(--box-2)" } },
@@ -57,7 +55,6 @@ export const MARGIN: Array<FractureRuleType> = [
 	{ selector: "mr-40", declarations: { marginRight: "var(--box-40)" } },
 	{ selector: "mr-48", declarations: { marginRight: "var(--box-48)" } },
 
-	{ selector: "ml-px", declarations: { marginLeft: "var(--box-px)" } },
 	{ selector: "ml-0", declarations: { marginLeft: "0" } },
 	{ selector: "ml-1", declarations: { marginLeft: "var(--box-1)" } },
 	{ selector: "ml-2", declarations: { marginLeft: "var(--box-2)" } },
@@ -85,7 +82,6 @@ export const MARGIN: Array<FractureRuleType> = [
 	{ selector: "ml-40", declarations: { marginLeft: "var(--box-40)" } },
 	{ selector: "ml-48", declarations: { marginLeft: "var(--box-48)" } },
 
-	{ selector: "mt-px", declarations: { marginTop: "var(--box-px)" } },
 	{ selector: "mt-0", declarations: { marginTop: "0" } },
 	{ selector: "mt-1", declarations: { marginTop: "var(--box-1)" } },
 	{ selector: "mt-2", declarations: { marginTop: "var(--box-2)" } },
@@ -113,7 +109,6 @@ export const MARGIN: Array<FractureRuleType> = [
 	{ selector: "mt-40", declarations: { marginTop: "var(--box-40)" } },
 	{ selector: "mt-48", declarations: { marginTop: "var(--box-48)" } },
 
-	{ selector: "mb-px", declarations: { marginBottom: "var(--box-px)" } },
 	{ selector: "mb-0", declarations: { marginBottom: "0" } },
 	{ selector: "mb-1", declarations: { marginBottom: "var(--box-1)" } },
 	{ selector: "mb-2", declarations: { marginBottom: "var(--box-2)" } },
@@ -141,13 +136,6 @@ export const MARGIN: Array<FractureRuleType> = [
 	{ selector: "mb-40", declarations: { marginBottom: "var(--box-40)" } },
 	{ selector: "mb-48", declarations: { marginBottom: "var(--box-48)" } },
 
-	{
-		selector: "my-px",
-		declarations: {
-			marginTop: "var(--box-px)",
-			marginBottom: "var(--box-px)",
-		},
-	},
 	{ selector: "my-0", declarations: { marginTop: "0", marginBottom: "0" } },
 	{
 		selector: "my-1",
@@ -328,13 +316,6 @@ export const MARGIN: Array<FractureRuleType> = [
 	{
 		selector: "mx-auto",
 		declarations: { marginLeft: "auto", marginRight: "auto" },
-	},
-	{
-		selector: "mx-px",
-		declarations: {
-			marginLeft: "var(--box-px)",
-			marginRight: "var(--box-px)",
-		},
 	},
 	{ selector: "mx-0", declarations: { marginLeft: "0", marginRight: "0" } },
 	{

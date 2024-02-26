@@ -9,11 +9,7 @@ const MOCK_RULE: FractureRuleType = {
 	},
 }
 
-const MOCK_EXPECTED = `.bg-gray-0 {
---example: 1;
-background-color: hsla(var(--hsl-gray-0), var(--example));
-}
-`
+const MOCK_EXPECTED = `.bg-gray-0 {background-color: hsla(var(--hsl-gray-0), var(--example));}`
 
 describe("generateRules", () => {
 	it("Generates a sample selector", () => expect(_generateRule(MOCK_RULE)).toEqual(MOCK_EXPECTED))

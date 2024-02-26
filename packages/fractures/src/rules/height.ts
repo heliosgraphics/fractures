@@ -3,7 +3,6 @@ import type { FractureRuleType } from "../types/meta"
 export const HEIGHT: Array<FractureRuleType> = [
 	{ selector: "h-0", declarations: { height: 0 } },
 	{ selector: "h-viewport", declarations: { height: "100vh" } },
-	{ selector: "h-px", declarations: { height: "var(--box-px)" } },
 	{ selector: "h-1", declarations: { height: "var(--box-1)" } },
 	{ selector: "h-2", declarations: { height: "var(--box-2)" } },
 	{ selector: "h-3", declarations: { height: "var(--box-3)" } },
@@ -52,7 +51,6 @@ export const HEIGHT: Array<FractureRuleType> = [
 	{ selector: "hp-100", declarations: { height: "100%" } },
 	{ selector: "hmax-0", declarations: { maxHeight: 0 } },
 	{ selector: "hmax-viewport", declarations: { maxHeight: "100vh" } },
-	{ selector: "hmax-px", declarations: { maxHeight: "var(--box-px)" } },
 	{ selector: "hmax-1", declarations: { maxHeight: "var(--box-1)" } },
 	{ selector: "hmax-2", declarations: { maxHeight: "var(--box-2)" } },
 	{ selector: "hmax-3", declarations: { maxHeight: "var(--box-3)" } },
@@ -101,7 +99,6 @@ export const HEIGHT: Array<FractureRuleType> = [
 	{ selector: "hpmax-100", declarations: { maxHeight: "100%" } },
 	{ selector: "hmin-0", declarations: { minHeight: 0 } },
 	{ selector: "hmin-viewport", declarations: { minHeight: "100vh" } },
-	{ selector: "hmin-px", declarations: { minHeight: "var(--box-px)" } },
 	{ selector: "hmin-1", declarations: { minHeight: "var(--box-1)" } },
 	{ selector: "hmin-2", declarations: { minHeight: "var(--box-2)" } },
 	{ selector: "hmin-3", declarations: { minHeight: "var(--box-3)" } },

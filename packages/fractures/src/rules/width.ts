@@ -3,7 +3,6 @@ import type { FractureRuleType } from "../types/meta"
 export const WIDTH: Array<FractureRuleType> = [
 	{ selector: "w-0", declarations: { width: "0" } },
 	{ selector: "w-viewport", declarations: { width: "100vw" } },
-	{ selector: "w-px", declarations: { width: "var(--box-px)" } },
 	{ selector: "w-1", declarations: { width: "var(--box-1)" } },
 	{ selector: "w-2", declarations: { width: "var(--box-2)" } },
 	{ selector: "w-3", declarations: { width: "var(--box-3)" } },
@@ -47,7 +46,6 @@ export const WIDTH: Array<FractureRuleType> = [
 	{ selector: "wp-100", declarations: { width: "100%" } },
 	{ selector: "wmax-0", declarations: { maxWidth: "0" } },
 	{ selector: "wmax-viewport", declarations: { maxWidth: "100vw" } },
-	{ selector: "wmax-px", declarations: { maxWidth: "var(--box-px)" } },
 	{ selector: "wmax-1", declarations: { maxWidth: "var(--box-1)" } },
 	{ selector: "wmax-2", declarations: { maxWidth: "var(--box-2)" } },
 	{ selector: "wmax-3", declarations: { maxWidth: "var(--box-3)" } },
@@ -91,7 +89,6 @@ export const WIDTH: Array<FractureRuleType> = [
 	{ selector: "wpmax-100", declarations: { maxWidth: "100%" } },
 	{ selector: "wmin-0", declarations: { minWidth: "0" } },
 	{ selector: "wmin-viewport", declarations: { minWidth: "100vw" } },
-	{ selector: "wmin-px", declarations: { minWidth: "var(--box-px)" } },
 	{ selector: "wmin-1", declarations: { minWidth: "var(--box-1)" } },
 	{ selector: "wmin-2", declarations: { minWidth: "var(--box-2)" } },
 	{ selector: "wmin-3", declarations: { minWidth: "var(--box-3)" } },

@@ -72,10 +72,6 @@ export const POSITION: Array<FractureRuleType> = [
 		declarations: { bottom: 0 },
 	},
 	{
-		selector: "bottom-px",
-		declarations: { bottom: "var(--box-px)" },
-	},
-	{
 		selector: "bottom-1",
 		declarations: { bottom: "var(--box-1)" },
 	},
@@ -152,10 +148,6 @@ export const POSITION: Array<FractureRuleType> = [
 	{
 		selector: "left-0",
 		declarations: { left: 0 },
-	},
-	{
-		selector: "left-px",
-		declarations: { left: "var(--box-px)" },
 	},
 	{
 		selector: "left-1",
@@ -243,10 +235,6 @@ export const POSITION: Array<FractureRuleType> = [
 		declarations: { right: 0 },
 	},
 	{
-		selector: "right-px",
-		declarations: { right: "var(--box-px)" },
-	},
-	{
 		selector: "right-1",
 		declarations: { right: "var(--box-1)" },
 	},
@@ -330,10 +318,6 @@ export const POSITION: Array<FractureRuleType> = [
 	{
 		selector: "top-0",
 		declarations: { top: 0 },
-	},
-	{
-		selector: "top-px",
-		declarations: { top: "var(--box-px)" },
 	},
 	{
 		selector: "top-1",

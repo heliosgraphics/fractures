@@ -1,7 +1,6 @@
 import type { FractureRuleType } from "../types/meta"
 
 export const PADDING: Array<FractureRuleType> = [
-	{ selector: "p-px", declarations: { padding: "var(--box-px)" } },
 	{ selector: "p-0", declarations: { padding: "0" } },
 	{ selector: "p-1", declarations: { padding: "var(--box-1)" } },
 	{ selector: "p-2", declarations: { padding: "var(--box-2)" } },
@@ -29,7 +28,6 @@ export const PADDING: Array<FractureRuleType> = [
 	{ selector: "p-40", declarations: { padding: "var(--box-40)" } },
 	{ selector: "p-48", declarations: { padding: "var(--box-48)" } },
 
-	{ selector: "pr-px", declarations: { paddingRight: "var(--box-px)" } },
 	{ selector: "pr-0", declarations: { paddingRight: "0" } },
 	{ selector: "pr-1", declarations: { paddingRight: "var(--box-1)" } },
 	{ selector: "pr-2", declarations: { paddingRight: "var(--box-2)" } },
@@ -57,7 +55,6 @@ export const PADDING: Array<FractureRuleType> = [
 	{ selector: "pr-40", declarations: { paddingRight: "var(--box-40)" } },
 	{ selector: "pr-48", declarations: { paddingRight: "var(--box-48)" } },
 
-	{ selector: "pl-px", declarations: { paddingLeft: "var(--box-px)" } },
 	{ selector: "pl-0", declarations: { paddingLeft: "0" } },
 	{ selector: "pl-1", declarations: { paddingLeft: "var(--box-1)" } },
 	{ selector: "pl-2", declarations: { paddingLeft: "var(--box-2)" } },
@@ -85,7 +82,6 @@ export const PADDING: Array<FractureRuleType> = [
 	{ selector: "pl-40", declarations: { paddingLeft: "var(--box-40)" } },
 	{ selector: "pl-48", declarations: { paddingLeft: "var(--box-48)" } },
 
-	{ selector: "pt-px", declarations: { paddingTop: "var(--box-px)" } },
 	{ selector: "pt-0", declarations: { paddingTop: "0" } },
 	{ selector: "pt-1", declarations: { paddingTop: "var(--box-1)" } },
 	{ selector: "pt-2", declarations: { paddingTop: "var(--box-2)" } },
@@ -113,7 +109,6 @@ export const PADDING: Array<FractureRuleType> = [
 	{ selector: "pt-40", declarations: { paddingTop: "var(--box-40)" } },
 	{ selector: "pt-48", declarations: { paddingTop: "var(--box-48)" } },
 
-	{ selector: "pb-px", declarations: { paddingBottom: "var(--box-px)" } },
 	{ selector: "pb-0", declarations: { paddingBottom: "0" } },
 	{ selector: "pb-1", declarations: { paddingBottom: "var(--box-1)" } },
 	{ selector: "pb-2", declarations: { paddingBottom: "var(--box-2)" } },
@@ -141,13 +136,6 @@ export const PADDING: Array<FractureRuleType> = [
 	{ selector: "pb-40", declarations: { paddingBottom: "var(--box-40)" } },
 	{ selector: "pb-48", declarations: { paddingBottom: "var(--box-48)" } },
 
-	{
-		selector: "py-px",
-		declarations: {
-			paddingBottom: "var(--box-px)",
-			paddingTop: "var(--box-px)",
-		},
-	},
 	{ selector: "py-0", declarations: { paddingBottom: "0", paddingTop: "0" } },
 	{
 		selector: "py-1",
@@ -325,13 +313,6 @@ export const PADDING: Array<FractureRuleType> = [
 		},
 	},
 
-	{
-		selector: "px-px",
-		declarations: {
-			paddingLeft: "var(--box-px)",
-			paddingRight: "var(--box-px)",
-		},
-	},
 	{ selector: "px-0", declarations: { paddingLeft: "0", paddingRight: "0" } },
 	{
 		selector: "px-1",
