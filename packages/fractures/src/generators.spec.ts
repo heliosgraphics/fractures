@@ -7,7 +7,6 @@ const MOCK_RULE: FractureRuleType = {
 	declarations: {
 		backgroundColor: "hsla(var(--hsl-gray-0), var(--example))",
 	},
-	variables: { "--example": 1 },
 }
 
 const MOCK_EXPECTED = `.bg-gray-0 {

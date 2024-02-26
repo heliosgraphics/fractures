@@ -1,6 +1,6 @@
 import type { FractureRuleType } from "../types/meta"
 
-export const padding: Array<FractureRuleType> = [
+export const PADDING: Array<FractureRuleType> = [
 	{ selector: "p-px", declarations: { padding: "var(--box-px)" } },
 	{ selector: "p-0", declarations: { padding: "0" } },
 	{ selector: "p-1", declarations: { padding: "var(--box-1)" } },

@@ -1,6 +1,6 @@
 import type { FractureRuleType } from "../types/meta"
 
-export const list: Array<FractureRuleType> = [
+export const LIST: Array<FractureRuleType> = [
 	{
 		selector: "list-circle > li",
 		declarations: { listStyleType: "circle" },

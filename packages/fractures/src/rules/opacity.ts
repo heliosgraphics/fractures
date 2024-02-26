@@ -1,6 +1,6 @@
 import type { FractureRuleType } from "../types/meta"
 
-export const opacity: Array<FractureRuleType> = [
+export const OPACITY: Array<FractureRuleType> = [
 	{ selector: "opacity-100", declarations: { opacity: "1" } },
 	{ selector: "opacity-90", declarations: { opacity: ".9" } },
 	{ selector: "opacity-80", declarations: { opacity: ".8" } },

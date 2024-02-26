@@ -1,6 +1,6 @@
 import type { FractureRuleType } from "../types/meta"
 
-export const margin: Array<FractureRuleType> = [
+export const MARGIN: Array<FractureRuleType> = [
 	{ selector: "m-px", declarations: { margin: "var(--box-px)" } },
 	{ selector: "m-0", declarations: { margin: "0" } },
 	{ selector: "m-1", declarations: { margin: "var(--box-1)" } },

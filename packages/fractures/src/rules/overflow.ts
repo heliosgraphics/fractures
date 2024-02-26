@@ -1,6 +1,6 @@
 import type { FractureRuleType } from "../types/meta"
 
-export const overflow: Array<FractureRuleType> = [
+export const OVERFLOW: Array<FractureRuleType> = [
 	{ selector: "overflow-hidden", declarations: { overflow: "hidden" } },
 	{ selector: "overflow-scroll", declarations: { overflow: "scroll" } },
 	{ selector: "overflow-visible", declarations: { overflow: "visible" } },

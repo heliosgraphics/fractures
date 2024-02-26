@@ -1,6 +1,6 @@
 import type { FractureRuleType } from "../types/meta"
 
-export const display: Array<FractureRuleType> = [
+export const DISPLAY: Array<FractureRuleType> = [
 	{ selector: "block", declarations: { display: "block" } },
 	{ selector: "contents", declarations: { display: "contents" } },
 	{ selector: "flex", declarations: { display: "flex" } },

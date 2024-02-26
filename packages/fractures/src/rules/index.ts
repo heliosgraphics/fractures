@@ -1,32 +1,32 @@
-import { borderRadius } from "./border-radius"
-import { cursor } from "./cursor"
-import { display } from "./display"
-import { flex } from "./flex"
-import { grid } from "./grid"
-import { height } from "./height"
-import { list } from "./list"
-import { margin } from "./margin"
-import { opacity } from "./opacity"
-import { overflow } from "./overflow"
-import { padding } from "./padding"
-import { position } from "./position"
-import { type } from "./type"
-import { width } from "./width"
+import { BORDER_RADIUS } from "./border-radius"
+import { CURSOR } from "./cursor"
+import { DISPLAY } from "./display"
+import { FLEX } from "./flex"
+import { GRID } from "./grid"
+import { HEIGHT } from "./height"
+import { LIST } from "./list"
+import { MARGIN } from "./margin"
+import { OPACITY } from "./opacity"
+import { OVERFLOW } from "./overflow"
+import { PADDING } from "./padding"
+import { POSITION } from "./position"
+import { TYPE } from "./type"
+import { WIDTH } from "./width"
 import type { FractureFiles } from "../types/meta"
 
 export const FRACTURE_FILES: FractureFiles = {
-	borderRadius,
-	cursor,
-	display,
-	flex,
-	grid,
-	height,
-	list,
-	margin,
-	opacity,
-	overflow,
-	padding,
-	position,
-	type,
-	width,
+	borderRadius: BORDER_RADIUS,
+	cursor: CURSOR,
+	display: DISPLAY,
+	flex: FLEX,
+	grid: GRID,
+	height: HEIGHT,
+	list: LIST,
+	margin: MARGIN,
+	opacity: OPACITY,
+	overflow: OVERFLOW,
+	padding: PADDING,
+	position: POSITION,
+	type: TYPE,
+	width: WIDTH,
 }

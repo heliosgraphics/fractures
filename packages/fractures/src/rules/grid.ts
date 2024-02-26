@@ -1,6 +1,6 @@
 import type { FractureRuleType } from "../types/meta"
 
-export const grid: Array<FractureRuleType> = [
+export const GRID: Array<FractureRuleType> = [
 	{ selector: "grid-gap-1", declarations: { gridGap: "var(--box-1)" } },
 	{ selector: "grid-gap-2", declarations: { gridGap: "var(--box-2)" } },
 	{ selector: "grid-gap-3", declarations: { gridGap: "var(--box-3)" } },

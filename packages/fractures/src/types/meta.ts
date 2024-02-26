@@ -4,11 +4,9 @@ export type { Properties }
 
 export interface FractureRuleType {
 	declarations?: Properties
-	description?: string
 	isHidden?: boolean
 	selector: string
 	selectorNice?: string
-	variables?: Record<string, any>
 }
 
 export interface FractureFiles {

@@ -1,12 +1,8 @@
 import type { FractureRuleType } from "../types/meta"
 
-export const height: Array<FractureRuleType> = [
+export const HEIGHT: Array<FractureRuleType> = [
 	{ selector: "h-0", declarations: { height: 0 } },
-	{
-		selector: "h-viewport",
-		declarations: { height: "100vh" },
-		description: "Height is 100 viewport height.",
-	},
+	{ selector: "h-viewport", declarations: { height: "100vh" } },
 	{ selector: "h-px", declarations: { height: "var(--box-px)" } },
 	{ selector: "h-1", declarations: { height: "var(--box-1)" } },
 	{ selector: "h-2", declarations: { height: "var(--box-2)" } },
@@ -33,7 +29,6 @@ export const height: Array<FractureRuleType> = [
 	{ selector: "h-32", declarations: { height: "var(--box-32)" } },
 	{ selector: "h-40", declarations: { height: "var(--box-40)" } },
 	{ selector: "h-48", declarations: { height: "var(--box-48)" } },
-
 	{ selector: "hp-10", declarations: { height: "10%" } },
 	{ selector: "hp-15", declarations: { height: "15%" } },
 	{ selector: "hp-20", declarations: { height: "20%" } },
@@ -55,13 +50,8 @@ export const height: Array<FractureRuleType> = [
 	{ selector: "hp-90", declarations: { height: "90%" } },
 	{ selector: "hp-95", declarations: { height: "95%" } },
 	{ selector: "hp-100", declarations: { height: "100%" } },
-
 	{ selector: "hmax-0", declarations: { maxHeight: 0 } },
-	{
-		selector: "hmax-viewport",
-		declarations: { maxHeight: "100vh" },
-		description: "Max height is 100 viewport height.",
-	},
+	{ selector: "hmax-viewport", declarations: { maxHeight: "100vh" } },
 	{ selector: "hmax-px", declarations: { maxHeight: "var(--box-px)" } },
 	{ selector: "hmax-1", declarations: { maxHeight: "var(--box-1)" } },
 	{ selector: "hmax-2", declarations: { maxHeight: "var(--box-2)" } },
@@ -109,13 +99,8 @@ export const height: Array<FractureRuleType> = [
 	{ selector: "hpmax-90", declarations: { maxHeight: "90%" } },
 	{ selector: "hpmax-95", declarations: { maxHeight: "95%" } },
 	{ selector: "hpmax-100", declarations: { maxHeight: "100%" } },
-
 	{ selector: "hmin-0", declarations: { minHeight: 0 } },
-	{
-		selector: "hmin-viewport",
-		declarations: { minHeight: "100vh" },
-		description: "Min height is 100 viewport height.",
-	},
+	{ selector: "hmin-viewport", declarations: { minHeight: "100vh" } },
 	{ selector: "hmin-px", declarations: { minHeight: "var(--box-px)" } },
 	{ selector: "hmin-1", declarations: { minHeight: "var(--box-1)" } },
 	{ selector: "hmin-2", declarations: { minHeight: "var(--box-2)" } },

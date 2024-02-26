@@ -4,8 +4,7 @@ import { writeFile } from "./utils"
 // generates all the rules for the declarations
 export const _generateRule = (fractureRule: FractureRuleType): string => {
 	const declarations: Array<[string, string]> = Object.entries(fractureRule.declarations || {})
-	const variables: Array<[string, string]> = Object.entries(fractureRule.variables || {})
-	const hasMultipleDeclarations: boolean = declarations.length + variables.length > 1
+	const hasMultipleDeclarations: boolean = declarations.length > 1
 
 	const declarationSpace: string = hasMultipleDeclarations ? "\n" : ""
 	const declarationOutput: string = declarations
@@ -16,8 +15,7 @@ export const _generateRule = (fractureRule: FractureRuleType): string => {
 		})
 		.join(declarationSpace)
 
-	const variablesOutput = variables.map((variable) => `${variable[0]}: ${variable[1]};`)
-	const rule: string = `${fractureRule.selector} {${declarationSpace}${variablesOutput}${declarationSpace}${declarationOutput}${declarationSpace}}`
+	const rule: string = `${fractureRule.selector} {${declarationSpace}${declarationSpace}${declarationOutput}${declarationSpace}}`
 	const selector: string = `.${rule}\n`
 
 	return selector

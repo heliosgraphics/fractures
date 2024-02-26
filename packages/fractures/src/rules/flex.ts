@@ -1,6 +1,6 @@
 import type { FractureRuleType } from "../types/meta"
 
-export const flex: Array<FractureRuleType> = [
+export const FLEX: Array<FractureRuleType> = [
 	{ selector: "flex-wrap", declarations: { flexWrap: "wrap" } },
 	{ selector: "flex-row", declarations: { flexDirection: "row" } },
 	{ selector: "flex-column", declarations: { flexDirection: "column" } },

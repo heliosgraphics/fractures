@@ -4,6 +4,7 @@
 	"license": "MIT",
 	"private": false,
 	"scripts": {
+		"build": "pnpm run --filter @heliosgraphics/fractures build",
 		"test": "NODE_ENV=test vitest run",
 		"test:u": "NODE_ENV=test vitest run --update",
 		"test:watch": "NODE_ENV=test vitest",

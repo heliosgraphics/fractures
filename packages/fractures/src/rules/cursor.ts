@@ -1,6 +1,6 @@
 import type { FractureRuleType } from "../types/meta"
 
-export const cursor: Array<FractureRuleType> = [
+export const CURSOR: Array<FractureRuleType> = [
 	{ selector: "no-pointer-events", declarations: { pointerEvents: "none" } },
 	{
 		selector: "cursor-context-menu",
