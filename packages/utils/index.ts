@@ -1,9 +1,9 @@
-export { getClasses } from './classnames'
-export { copyValue } from './clipboard'
-export { hexToRgb, rgbToHex } from './colors'
-export { debounce } from './debounce'
-export { getSlug } from './slug'
-export { sanitizeText, removeMarkdown, middleEllipsis, removeNewlines } from './strings'
-export { throttle } from './throttle'
-export { isUUID, getUUID } from './uuid'
-export { validateUrl, validateEmail } from './validations'
+export { getClasses } from "./classnames"
+export { copyValue } from "./clipboard"
+export { hexToRgb, rgbToHex } from "./colors"
+export { debounce } from "./debounce"
+export { getSlug } from "./slug"
+export { sanitizeText, removeMarkdown, middleEllipsis, removeNewlines } from "./strings"
+export { throttle } from "./throttle"
+export { isUUID, getUUID } from "./uuid"
+export { validateUrl, validateEmail } from "./validations"

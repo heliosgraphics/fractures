@@ -12,7 +12,7 @@ import { padding } from "./padding"
 import { position } from "./position"
 import { type } from "./type"
 import { width } from "./width"
-import type { FractureFiles } from '../types/meta'
+import type { FractureFiles } from "../types/meta"
 
 export const FRACTURE_FILES: FractureFiles = {
 	borderRadius,

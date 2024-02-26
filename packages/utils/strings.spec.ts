@@ -11,8 +11,10 @@ describe("strings", () => {
 
 	describe("removeMarkdown", () => {
 		it("removes a bold format", () => expect(removeMarkdown("a **bold** text")).toEqual("a bold text"))
-		it("removes a link but keeps the name", () => expect(removeMarkdown("a [link](https://x.com) hello")).toEqual("a link hello"))
-		it("removes a bold link", () => expect(removeMarkdown("a [bold **link**](https://x.com) hello")).toEqual("a bold link hello"))
+		it("removes a link but keeps the name", () =>
+			expect(removeMarkdown("a [link](https://x.com) hello")).toEqual("a link hello"))
+		it("removes a bold link", () =>
+			expect(removeMarkdown("a [bold **link**](https://x.com) hello")).toEqual("a bold link hello"))
 	})
 
 	describe("middleEllipsis", () => {
@@ -23,8 +25,10 @@ describe("strings", () => {
 
 	describe("removeNewlines", () => {
 		it("removes no newline", () => expect(removeNewlines("first line same line")).toEqual("first line same line"))
-		it("removes newline", () => expect(removeNewlines("first line\n\n\nsecond line\n")).toEqual("first line second line"))
-		it("removes r newline", () => expect(removeNewlines("first line\r\n\nsecond line\n")).toEqual("first line second line"))
+		it("removes newline", () =>
+			expect(removeNewlines("first line\n\n\nsecond line\n")).toEqual("first line second line"))
+		it("removes r newline", () =>
+			expect(removeNewlines("first line\r\n\nsecond line\n")).toEqual("first line second line"))
 		it("removes t newline", () => expect(removeNewlines("first line\tsecond line\n")).toEqual("first line second line"))
 		it("removes only a newline", () => expect(removeNewlines("\r")).toEqual(""))
 		it("removes nothing without newline", () => expect(removeNewlines("hey", undefined)).toEqual("hey"))

@@ -57,7 +57,7 @@ export const middleEllipsis = (text: string = "", length: number = 64): string =
 
 // returns a sanitized string
 export const removeNewlines = (text?: string | null, limit?: number): string => {
-	if (!text || typeof text !== 'string') return ""
+	if (!text || typeof text !== "string") return ""
 
 	const limitEnd: number = limit ?? text.length ?? 0
 	const cleanString: string = text
