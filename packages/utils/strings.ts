@@ -55,11 +55,15 @@ export const middleEllipsis = (text: string = "", length: number = 64): string =
 	return text.substring(0, diff) + "..." + text.substring(text.length - diff, text.length)
 }
 
+// returns a sanitized string
 export const removeNewlines = (text?: string | null, limit?: number): string => {
-	if (!text) return ""
+	if (!text || typeof text !== 'string') return ""
 
-	const length: number = text?.length
-	const trimmedString: string = text.substring(0, limit ?? length ?? 0)
+	const limitEnd: number = limit ?? text.length ?? 0
+	const cleanString: string = text
+		.replace(/(?:\r\n|\r|\n|\t)+/g, " ")
+		.substring(0, limitEnd)
+		.trim()
 
-	return sanitizeText(trimmedString.replace(/(?:\r\n|\r|\n)/g, " "))
+	return cleanString
 }

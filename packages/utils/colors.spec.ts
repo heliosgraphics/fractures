@@ -13,5 +13,6 @@ describe("colors", () => {
 		it("converts string to hex", () => expect(rgbToHex(<any>"12", <any>"44", <any>"120")).toEqual("#0c2c78"))
 		it("converts null to hex", () => expect(rgbToHex(<any>null, 44, 120)).toEqual("#002c78"))
 		it("returns undefined to hex", () => expect(rgbToHex(12, <any>undefined, 120)).toEqual("#0cff78"))
+		it("returns FF for negative", () => expect(rgbToHex(-1, -12, 120)).toEqual("#ffff78"))
 	})
 })

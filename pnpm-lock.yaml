@@ -56,9 +56,6 @@ importers:
 
   packages/utils:
     dependencies:
-      uuid:
-        specifier: latest
-        version: 9.0.1
       xss:
         specifier: latest
         version: 1.0.14
@@ -2204,11 +2201,6 @@ packages:
       querystringify: 2.2.0
       requires-port: 1.0.0
     dev: true
-
-  /uuid@9.0.1:
-    resolution: {integrity: sha512-b+1eJOlsR9K8HJpow9Ok3fiWOWSIcIzXodvv0rQjVoOVNpWMpxf1wZNpt4y9h10odCNrqnYp1OBzRktckBe3sA==}
-    hasBin: true
-    dev: false
 
   /v8-to-istanbul@9.2.0:
     resolution: {integrity: sha512-/EH/sDgxU2eGxajKdwLCDmQ4FWq+kpi3uCmBGpw1xJtnAxEjlD8j8PEiGWpCIMIs3ciNAgH0d3TTJiUkYzyZjA==}

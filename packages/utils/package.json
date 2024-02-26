@@ -1,6 +1,6 @@
 {
 	"name": "@heliosgraphics/utils",
-	"version": "5.3.3",
+	"version": "5.3.4",
 	"type": "module",
 	"author": "03b8 <03b8@helios.graphics>",
 	"license": "MIT",
@@ -12,7 +12,6 @@
 		"node": ">=20.11.1"
 	},
 	"dependencies": {
-		"uuid": "latest",
 		"xss": "latest"
 	},
 	"devDependencies": {
