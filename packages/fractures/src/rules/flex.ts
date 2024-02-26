@@ -26,8 +26,8 @@ export const FLEX: Array<FractureRuleType> = [
 	{ selector: "align-stretch", declarations: { alignItems: "stretch" } },
 	{ selector: "align-start", declarations: { alignItems: "start" } },
 	{ selector: "align-end", declarations: { alignItems: "end" } },
-	{ selector: "flex-x-center", declarations: { alignItems: "center" } },
-	{ selector: "flex-y-center", declarations: { justifyContent: "center" } },
+	{ selector: "flex-y-center", declarations: { alignItems: "center" } },
+	{ selector: "flex-x-center", declarations: { justifyContent: "center" } },
 	{ selector: "justify-flex-start", declarations: { justifyContent: "flex-start" } },
 	{ selector: "justify-flex-end", declarations: { justifyContent: "flex-end" } },
 
