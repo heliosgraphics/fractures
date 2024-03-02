@@ -3,6 +3,7 @@ import type { FractureRuleType } from "../types/meta"
 export const HEIGHT: Array<FractureRuleType> = [
 	{ selector: "h-0", declarations: { height: 0 } },
 	{ selector: "h-viewport", declarations: { height: "100vh" } },
+	{ selector: "h-px", declarations: { height: "var(--box-px)" } },
 	{ selector: "h-1", declarations: { height: "var(--box-1)" } },
 	{ selector: "h-2", declarations: { height: "var(--box-2)" } },
 	{ selector: "h-3", declarations: { height: "var(--box-3)" } },
@@ -13,7 +14,6 @@ export const HEIGHT: Array<FractureRuleType> = [
 	{ selector: "h-8", declarations: { height: "var(--box-8)" } },
 	{ selector: "h-9", declarations: { height: "var(--box-9)" } },
 	{ selector: "h-10", declarations: { height: "var(--box-10)" } },
-	{ selector: "h-11", declarations: { height: "var(--box-11)" } },
 	{ selector: "h-11", declarations: { height: "var(--box-11)" } },
 	{ selector: "h-12", declarations: { height: "var(--box-12)" } },
 	{ selector: "h-12", declarations: { height: "var(--box-12)" } },

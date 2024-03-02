@@ -2,10 +2,7 @@ import type { FractureRuleType } from "../types/meta"
 
 export const CURSOR: Array<FractureRuleType> = [
 	{ selector: "no-pointer-events", declarations: { pointerEvents: "none" } },
-	{
-		selector: "cursor-context-menu",
-		declarations: { cursor: "context-menu" },
-	},
+	{ selector: "cursor-context-menu", declarations: { cursor: "context-menu" }, },
 	{ selector: "cursor-crosshair", declarations: { cursor: "crosshair" } },
 	{ selector: "cursor-grab", declarations: { cursor: "grab" } },
 	{ selector: "cursor-grabbing", declarations: { cursor: "grabbing" } },

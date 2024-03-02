@@ -3,6 +3,7 @@ import type { FractureRuleType } from "../types/meta"
 export const WIDTH: Array<FractureRuleType> = [
 	{ selector: "w-0", declarations: { width: "0" } },
 	{ selector: "w-viewport", declarations: { width: "100vw" } },
+	{ selector: "w-px", declarations: { width: "var(--box-px)" } },
 	{ selector: "w-1", declarations: { width: "var(--box-1)" } },
 	{ selector: "w-2", declarations: { width: "var(--box-2)" } },
 	{ selector: "w-3", declarations: { width: "var(--box-3)" } },

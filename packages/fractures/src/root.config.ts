@@ -1,4 +1,5 @@
 export const config: string = `:root {
+	--box-px: unset;
 	--box-1: unset;
 	--box-2: unset;
 	--box-3: unset;
