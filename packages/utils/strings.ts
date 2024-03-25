@@ -48,9 +48,11 @@ export const removeMarkdown = (markdownText: string): string => {
 // adds a middle ellipsis, eg.: (ellipsis, 6) gets "ell...sis"
 export const middleEllipsis = (text: string = "", length: number = 64): string => {
 	const diff: number = Math.floor((length - 3) / 2)
-	const isValid: boolean = Boolean(!!text && typeof text === "string" && text.length > length)
+	const isValid: boolean = Boolean(!!text && typeof text === "string")
+	const isTooShort: boolean = isValid && text.length > length
 
 	if (!isValid) return ""
+	if (!isTooShort) return text
 
 	return text.substring(0, diff) + "..." + text.substring(text.length - diff, text.length)
 }

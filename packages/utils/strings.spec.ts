@@ -20,6 +20,7 @@ describe("strings", () => {
 	describe("middleEllipsis", () => {
 		it("works with short word", () => expect(middleEllipsis("ellipsis", 5)).toEqual("e...s"))
 		it("works with longer word", () => expect(middleEllipsis("lorem ipsum dolor", 12)).toEqual("lore...olor"))
+		it("return too short text as is", () => expect(middleEllipsis("short", 12)).toEqual("short"))
 		it("fails silently for undefined", () => expect(middleEllipsis(<any>null, 12)).toEqual(""))
 	})
 
