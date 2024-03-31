@@ -1,11 +1,11 @@
 {
 	"name": "@heliosgraphics/utils",
-	"version": "5.3.5",
+	"version": "5.3.6",
 	"type": "module",
 	"author": "03b8 <03b8@helios.graphics>",
 	"license": "MIT",
 	"private": false,
-	"description": "Universal javascript helpers",
+	"description": "Universal Javascript helpers",
 	"main": "index.ts",
 	"engines": {
 		"npm": ">=10.2.4",
