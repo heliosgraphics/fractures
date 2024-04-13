@@ -1,7 +1,7 @@
 const _orderObjectProperties = (obj: unknown): unknown | object => {
 	if (!obj || typeof obj !== 'object' || Array.isArray(obj)) return obj
 
-	return Object.keys(obj).sort().reduce((acc, key) => {
+	return Object.keys(obj).sort().reduce((acc: any, key: any) => {
 		acc[key] = _orderObjectProperties(obj[key])
 
 		return acc
