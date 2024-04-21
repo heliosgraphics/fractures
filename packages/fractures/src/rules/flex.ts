@@ -6,13 +6,13 @@ export const FLEX: Array<FractureRuleType> = [
 	{ selector: "flex-row", declarations: { flexDirection: "row" } },
 	{ selector: "flex-column", declarations: { flexDirection: "column" } },
 
-	{ selector: "space-around", declarations: { justifyContent: "space-around" }, },
-	{ selector: "space-between", declarations: { justifyContent: "space-between" }, },
-	{ selector: "space-evenly", declarations: { justifyContent: "space-evenly" }, },
+	{ selector: "space-around", declarations: { justifyContent: "space-around" } },
+	{ selector: "space-between", declarations: { justifyContent: "space-between" } },
+	{ selector: "space-evenly", declarations: { justifyContent: "space-evenly" } },
 	{ selector: "flex-x-center", declarations: { justifyContent: "center" } },
 	{ selector: "justify-flex-start", declarations: { justifyContent: "flex-start" } },
 	{ selector: "justify-flex-end", declarations: { justifyContent: "flex-end" } },
-	{ selector: "flex-center", declarations: { alignItems: "center", justifyContent: "center" }, },
+	{ selector: "flex-center", declarations: { alignItems: "center", justifyContent: "center" } },
 
 	{ selector: "align-baseline", declarations: { alignItems: "baseline" } },
 	{ selector: "align-flex-start", declarations: { alignItems: "flex-start" } },
@@ -22,7 +22,7 @@ export const FLEX: Array<FractureRuleType> = [
 	{ selector: "align-end", declarations: { alignItems: "end" } },
 	{ selector: "flex-y-center", declarations: { alignItems: "center" } },
 
-	{ selector: "self-center", declarations: { alignSelf: "center", justifySelf: "center" }, },
+	{ selector: "self-center", declarations: { alignSelf: "center", justifySelf: "center" } },
 	{ selector: "self-justify-center", declarations: { justifySelf: "center" } },
 	{ selector: "self-justify-start", declarations: { justifySelf: "flex-start" } },
 	{ selector: "self-justify-end", declarations: { justifySelf: "flex-end" } },

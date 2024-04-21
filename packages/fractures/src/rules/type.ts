@@ -71,6 +71,13 @@ export const TYPE: Array<FractureRuleType> = [
 			lineHeight: "var(--line-height-tiny)",
 		},
 	},
+	{
+		selector: "micro",
+		declarations: {
+			fontSize: "var(--font-size-micro)",
+			lineHeight: "var(--line-height-micro)",
+		},
+	},
 
 	{
 		selector: "sans",

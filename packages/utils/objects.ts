@@ -1,11 +1,13 @@
 const _orderObjectProperties = (obj: any): unknown | object => {
-	if (!obj || typeof obj !== 'object' || Array.isArray(obj)) return obj
+	if (!obj || typeof obj !== "object" || Array.isArray(obj)) return obj
 
-	return Object.keys(obj).sort().reduce((acc: any, key: any) => {
-		acc[key] = _orderObjectProperties(obj[key] as any)
+	return Object.keys(obj)
+		.sort()
+		.reduce((acc: any, key: any) => {
+			acc[key] = _orderObjectProperties(obj[key] as any)
 
-		return acc
-	}, {})
+			return acc
+		}, {})
 }
 
 export const compareObjects = (first: unknown, second: unknown): boolean => {

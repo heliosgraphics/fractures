@@ -31,6 +31,7 @@ export const config: string = `:root {
 	--font-size-p: unset;
 	--font-size-small: unset;
 	--font-size-tiny: unset;
+	--font-size-micro: unset;
 
 	--line-height-h1: unset;
 	--line-height-h2: unset;
@@ -41,6 +42,7 @@ export const config: string = `:root {
 	--line-height-p: unset;
 	--line-height-small: unset;
 	--line-height-tiny: unset;
+	--line-height-micro: unset;
 
 	--font-family-sans: unset;
 	--font-family-serif: unset;
