@@ -1,18 +1,17 @@
 {
 	"name": "@heliosgraphics/utils",
-	"version": "5.3.9",
+	"version": "5.3.10",
 	"type": "module",
 	"author": "03b8 <03b8@helios.graphics>",
 	"license": "MIT",
 	"private": false,
-	"description": "Universal Javascript helpers",
+	"description": "Universal Javascript Helpers",
 	"main": "index.ts",
 	"engines": {
-		"npm": ">=10.2.4",
-		"node": ">=20.11.1"
+		"node": ">=20.15.0"
 	},
 	"dependencies": {
-		"xss": "latest"
+		"xss": "1.0.15"
 	},
 	"devDependencies": {
 		"@types/uuid": "latest"
