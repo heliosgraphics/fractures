@@ -18,7 +18,7 @@ export const hexToRgb = (hex?: string | null): TypeRGB => {
 	return [r, g, b]
 }
 
-// converts an rgb value to a hex string
+// convert an rgb value to a hex string
 export const rgbToHex = (r: number | string = 255, g: number | string = 255, b: number | string = 255): string => {
 	const _toHex = (c: unknown): string => {
 		const value: number = Number(c)

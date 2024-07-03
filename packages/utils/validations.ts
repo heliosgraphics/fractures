@@ -1,4 +1,4 @@
-// validates a URL
+// validate a URL
 export const validateUrl = (text?: string | null): boolean => {
 	let url: URL
 
@@ -14,7 +14,7 @@ export const validateUrl = (text?: string | null): boolean => {
 	return isValid
 }
 
-// validates an email
+// validate an email
 export const validateEmail = (email: string = ""): boolean => {
 	const re: RegExp = /^[a-zA-Z0-9._+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/
 
