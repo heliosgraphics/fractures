@@ -17,7 +17,7 @@ describe("copyValue", () => {
 		document.execCommand = vi.fn()
 
 		copyValue(TEXT_STRING)
-		expect(spyCreateElement).toHaveBeenCalledWith("input")
+		expect(spyCreateElement).toHaveBeenCalledWith("textarea")
 		expect(spyAppendChild).toHaveBeenCalled()
 		expect(document.execCommand).toHaveBeenCalledWith("copy", false)
 

@@ -1,6 +1,5 @@
-// copy the given value to the clipboard
 export const copyValue = (text: string): void => {
-	const input: HTMLInputElement = document.createElement("input")
+	const input: HTMLTextAreaElement = document.createElement("textarea")
 
 	document.body.appendChild(input)
 	input.value = text
