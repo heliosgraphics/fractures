@@ -1,13 +1,18 @@
 {
 	"name": "@heliosgraphics/fractures",
-	"version": "6.3.2",
+	"version": "6.3.3",
 	"type": "module",
 	"author": "03b8 <03b8@helios.graphics>",
 	"license": "MIT",
 	"private": false,
 	"description": "Atomic CSS Library",
 	"main": "dist/fractures.min.css",
-	"files": ["dist/*.*", "dist/set/*.*", "src/rules/*.*", "src/types/*.*"],
+	"files": [
+		"dist/*.*",
+		"dist/set/*.*",
+		"src/rules/*.*",
+		"src/types/*.*"
+	],
 	"scripts": {
 		"prepare": "bun ./src/build.ts",
 		"start": "bun ./src/build.ts",
@@ -22,7 +27,10 @@
 		"csstype": "latest",
 		"typescript": "latest"
 	},
-	"keywords": ["CSS", "Atomic CSS"],
+	"keywords": [
+		"CSS",
+		"Atomic CSS"
+	],
 	"repository": {
 		"type": "git",
 		"url": "https://github.com/heliosgraphics/fractures"

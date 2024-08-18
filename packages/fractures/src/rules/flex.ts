@@ -52,4 +52,13 @@ export const FLEX: Array<FractureRuleType> = [
 	{ selector: "gap-32", declarations: { gap: "var(--box-32)" } },
 	{ selector: "gap-40", declarations: { gap: "var(--box-40)" } },
 	{ selector: "gap-48", declarations: { gap: "var(--box-48)" } },
+
+	{ selector: "grow-1", declarations: { flexGrow: 1 } },
+	{ selector: "grow-2", declarations: { flexGrow: 2 } },
+	{ selector: "grow-3", declarations: { flexGrow: 3 } },
+	{ selector: "grow-4", declarations: { flexGrow: 4 } },
+	{ selector: "grow-5", declarations: { flexGrow: 5 } },
+	{ selector: "grow-6", declarations: { flexGrow: 6 } },
+	{ selector: "grow-7", declarations: { flexGrow: 7 } },
+	{ selector: "grow-8", declarations: { flexGrow: 8 } },
 ] as const
