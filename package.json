@@ -18,17 +18,17 @@
 	],
 	"dependencies": {},
 	"devDependencies": {
-		"@typescript-eslint/eslint-plugin": "latest",
-		"@types/node": "latest",
-		"@types/react": "latest",
-		"@vitest/coverage-v8": "latest",
-		"eslint": "latest",
-		"eslint-config-prettier": "latest",
-		"eslint-plugin-prettier": "latest",
-		"jsdom": "latest",
-		"prettier": "latest",
-		"typescript": "latest",
-		"vite": "latest",
-		"vitest": "latest"
+		"@typescript-eslint/eslint-plugin": "8.15.0",
+		"@types/node": "22.9.3",
+		"@types/react": "18.3.12",
+		"@vitest/coverage-v8": "2.1.5",
+		"eslint": "9.15.0",
+		"eslint-config-prettier": "9.1.0",
+		"eslint-plugin-prettier": "5.2.1",
+		"jsdom": "25.0.1",
+		"prettier": "3.3.3",
+		"typescript": "5.7.2",
+		"vite": "5.4.11",
+		"vitest": "2.1.5"
 	}
 }
