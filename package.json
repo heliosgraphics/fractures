@@ -6,6 +6,7 @@
 	"scripts": {
 		"build": "pnpm run --filter @heliosgraphics/fractures build",
 		"test": "NODE_ENV=test vitest run",
+		"test:bench": "pnpm run --filter @heliosgraphics/benchmark bench",
 		"test:u": "NODE_ENV=test vitest run --update",
 		"test:watch": "NODE_ENV=test vitest",
 		"test:coverage": "NODE_ENV=test vitest run --coverage",
