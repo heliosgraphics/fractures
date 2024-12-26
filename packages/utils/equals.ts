@@ -7,7 +7,11 @@ export const areErrorsEqual = (a: Error, b: Error): boolean =>
 	a.message === b.message && a.name === b.name && a.stack === b.stack
 export const areBuffersEqual = (a: Buffer, b: Buffer): boolean => a.length === b.length && Buffer.compare(a, b) === 0
 
-export const areMapsEqual = <K, V>(mapA: Map<K, V>, mapB: Map<K, V>, seen = new WeakMap<object, object>()): boolean => {
+export const areMapsEqual = <K, V extends Comparable>(
+	mapA: Map<K, V>,
+	mapB: Map<K, V>,
+	seen = new WeakMap<object, object>(),
+): boolean => {
 	if (mapA.size !== mapB.size) return false
 	if (mapA === mapB) return true
 
