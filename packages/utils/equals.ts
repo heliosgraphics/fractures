@@ -14,7 +14,7 @@ export const _getMapsEqual = <K, V>(
 
 	return entriesA.every(
 		([key, value]) =>
-			entriesB.has(key) && _isEqual(value as FracturesComparable, entriesB.get(key) as FracturesComparable, seen),
+			entriesB.has(key) && _getEqual(value as FracturesComparable, entriesB.get(key) as FracturesComparable, seen),
 	)
 }
 
@@ -37,7 +37,7 @@ export const getSetsEqual = <T>(setA: Set<T>, setB: Set<T>): boolean => {
 		let foundMatch = false
 
 		for (let j = 0; j < arrB.length; j++) {
-			if (!matched[j] && isEqual((arrA as any)[i], arrB[j])) {
+			if (!matched[j] && getEqual((arrA as any)[i], arrB[j])) {
 				matched[j] = true
 				foundMatch = true
 				break
@@ -50,9 +50,23 @@ export const getSetsEqual = <T>(setA: Set<T>, setB: Set<T>): boolean => {
 	return true
 }
 
-export const _isEqual = <T extends FracturesComparable>(a: T, b: T, seen = new WeakMap<object, object>()): boolean => {
+export const _getEqual = <T extends FracturesComparable>(a: T, b: T, seen = new WeakMap<object, object>()): boolean => {
 	if (a === b) return true
-	if (a === null || b === null) return false
+	if (a === null || b === null) return a === b
+
+	if (typeof a !== "object" && typeof b !== "object") {
+		return a === b
+	}
+
+	if (Object.getPrototypeOf(a) !== Object.getPrototypeOf(b)) {
+		return false
+	}
+
+	if (Array.isArray(a) && Array.isArray(b)) {
+		if (a.length !== b.length) return false
+
+		return a.every((val, idx) => _getEqual(val, b[idx], seen))
+	}
 
 	if (Object.is(a, b)) return true
 
@@ -61,7 +75,6 @@ export const _isEqual = <T extends FracturesComparable>(a: T, b: T, seen = new W
 
 	if (typeA !== typeB) return false
 	if (typeA !== "object") return false
-	if (a === null || b === null) return a === b
 
 	const seenA = seen.get(a as object)
 	if (seenA) return seenA === b
@@ -72,7 +85,7 @@ export const _isEqual = <T extends FracturesComparable>(a: T, b: T, seen = new W
 		if (a.length !== b.length) return false
 
 		for (let i = 0; i < a.length; i++) {
-			if (!_isEqual(a[i], b[i], seen)) return false
+			if (!_getEqual(a[i], b[i], seen)) return false
 		}
 		return true
 	}
@@ -90,12 +103,12 @@ export const _isEqual = <T extends FracturesComparable>(a: T, b: T, seen = new W
 	if (keysA.length !== keysB.length) return false
 
 	return keysA.every(
-		(key) => Object.prototype.hasOwnProperty.call(b, key) && _isEqual((a as any)[key], (b as any)[key], seen),
+		(key) => Object.prototype.hasOwnProperty.call(b, key) && _getEqual((a as any)[key], (b as any)[key], seen),
 	)
 }
 
-export const isEqual = <T extends FracturesComparable>(a: T, b: T): boolean => {
-	return _isEqual(a, b)
+export const getEqual = <T extends FracturesComparable>(a: T, b: T): boolean => {
+	return _getEqual(a, b)
 }
 
 export const getMapsEqual = <T extends FracturesComparable>(a: T, b: T): boolean => {
