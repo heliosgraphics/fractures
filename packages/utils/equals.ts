@@ -1,13 +1,7 @@
-type Primitive = string | number | boolean | null | undefined | bigint | symbol
-type Comparable = Primitive | object | Array<unknown> | Set<unknown> | Map<unknown, unknown>
+type FracturesPrimitive = string | number | boolean | null | undefined | bigint | symbol
+type FracturesComparable = FracturesPrimitive | object | Array<unknown> | Set<unknown> | Map<unknown, unknown>
 
-export const areDatesEqual = (a: Date, b: Date): boolean => a.getTime() === b.getTime()
-export const areRegExpsEqual = (a: RegExp, b: RegExp): boolean => a.toString() === b.toString()
-export const areErrorsEqual = (a: Error, b: Error): boolean =>
-	a.message === b.message && a.name === b.name && a.stack === b.stack
-export const areBuffersEqual = (a: Buffer, b: Buffer): boolean => a.length === b.length && Buffer.compare(a, b) === 0
-
-export const areMapsEqual = <K, V extends Comparable>(
+export const _getMapsEqual = <K, V>(
 	mapA: Map<K, V>,
 	mapB: Map<K, V>,
 	seen = new WeakMap<object, object>(),
@@ -18,12 +12,22 @@ export const areMapsEqual = <K, V extends Comparable>(
 	const entriesA = Array.from(mapA.entries())
 	const entriesB = new Map(mapB)
 
-	return entriesA.every(([key, value]) => entriesB.has(key) && isEqual(value, entriesB.get(key), seen))
+	return entriesA.every(
+		([key, value]) =>
+			entriesB.has(key) && _isEqual(value as FracturesComparable, entriesB.get(key) as FracturesComparable, seen),
+	)
 }
 
-export const areSetsEqual = <T>(setA: Set<T>, setB: Set<T>): boolean => {
+export const getDatesEqual = (a: Date, b: Date): boolean => a.getTime() === b.getTime()
+export const getRegExpsEqual = (a: RegExp, b: RegExp): boolean => a.toString() === b.toString()
+export const getErrorsEqual = (a: Error, b: Error): boolean =>
+	a.message === b.message && a.name === b.name && a.stack === b.stack
+export const getBuffersEqual = (a: Buffer, b: Buffer): boolean => a.length === b.length && Buffer.compare(a, b) === 0
+
+export const getSetsEqual = <T>(setA: Set<T>, setB: Set<T>): boolean => {
 	if (setA.size !== setB.size) return false
 	if (setA === setB) return true
+	if (setA.size === 0) return true
 
 	const arrA = Array.from(setA)
 	const arrB = Array.from(setB)
@@ -46,7 +50,10 @@ export const areSetsEqual = <T>(setA: Set<T>, setB: Set<T>): boolean => {
 	return true
 }
 
-export const isEqual = <T extends Comparable>(a: T, b: T, seen = new WeakMap<object, object>()): boolean => {
+export const _isEqual = <T extends FracturesComparable>(a: T, b: T, seen = new WeakMap<object, object>()): boolean => {
+	if (a === b) return true
+	if (a === null || b === null) return false
+
 	if (Object.is(a, b)) return true
 
 	const typeA = typeof a
@@ -64,23 +71,18 @@ export const isEqual = <T extends Comparable>(a: T, b: T, seen = new WeakMap<obj
 	if (Array.isArray(a) && Array.isArray(b)) {
 		if (a.length !== b.length) return false
 
-		if (a.length < 20) {
-			return a.every((item, index) => isEqual(item, b[index], seen))
-		}
-
 		for (let i = 0; i < a.length; i++) {
-			if (!isEqual(a[i], b[i], seen)) return false
+			if (!_isEqual(a[i], b[i], seen)) return false
 		}
-
 		return true
 	}
 
-	if (a instanceof Date && b instanceof Date) return areDatesEqual(a, b)
-	if (a instanceof RegExp && b instanceof RegExp) return areRegExpsEqual(a, b)
-	if (a instanceof Error && b instanceof Error) return areErrorsEqual(a, b)
-	if (Buffer.isBuffer(a) && Buffer.isBuffer(b)) return areBuffersEqual(a, b)
-	if (a instanceof Set && b instanceof Set) return areSetsEqual(a, b)
-	if (a instanceof Map && b instanceof Map) return areMapsEqual(a, b, seen)
+	if (a instanceof Map && b instanceof Map) return _getMapsEqual(a, b, seen)
+	if (a instanceof Set && b instanceof Set) return getSetsEqual(a, b)
+	if (a instanceof Date && b instanceof Date) return getDatesEqual(a, b)
+	if (a instanceof Error && b instanceof Error) return getErrorsEqual(a, b)
+	if (a instanceof RegExp && b instanceof RegExp) return getRegExpsEqual(a, b)
+	if (Buffer.isBuffer(a) && Buffer.isBuffer(b)) return getBuffersEqual(a, b)
 
 	const keysA = [...Object.keys(a as object), ...Object.getOwnPropertySymbols(a as object)]
 	const keysB = [...Object.keys(b as object), ...Object.getOwnPropertySymbols(b as object)]
@@ -88,6 +90,14 @@ export const isEqual = <T extends Comparable>(a: T, b: T, seen = new WeakMap<obj
 	if (keysA.length !== keysB.length) return false
 
 	return keysA.every(
-		(key) => Object.prototype.hasOwnProperty.call(b, key) && isEqual((a as any)[key], (b as any)[key], seen),
+		(key) => Object.prototype.hasOwnProperty.call(b, key) && _isEqual((a as any)[key], (b as any)[key], seen),
 	)
+}
+
+export const isEqual = <T extends FracturesComparable>(a: T, b: T): boolean => {
+	return _isEqual(a, b)
+}
+
+export const getMapsEqual = <T extends FracturesComparable>(a: T, b: T): boolean => {
+	return _getMapsEqual(a as Map<unknown, unknown>, b as Map<unknown, unknown>)
 }

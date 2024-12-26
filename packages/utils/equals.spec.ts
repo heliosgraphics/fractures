@@ -1,4 +1,4 @@
-import { isEqual, areSetsEqual } from "./equals"
+import { isEqual, getSetsEqual } from "./equals"
 import { describe, it, expect, vi, beforeEach, afterEach } from "vitest"
 
 describe("isEqual", () => {
@@ -98,8 +98,8 @@ describe("areSetsEqual", () => {
 		const set2 = new Set([1, 2, 3])
 		const set3 = new Set([1, 2, 4])
 
-		expect(areSetsEqual(set1, set2)).toBe(true)
-		expect(areSetsEqual(set1, set3)).toBe(false)
+		expect(getSetsEqual(set1, set2)).toBe(true)
+		expect(getSetsEqual(set1, set3)).toBe(false)
 	})
 
 	it("sets with objects using deep comparison", () => {
@@ -107,16 +107,16 @@ describe("areSetsEqual", () => {
 		const set2 = new Set([{ a: 1 }, { b: 2 }])
 		const set3 = new Set([{ a: 1 }, { b: 3 }])
 
-		expect(areSetsEqual(set1, set2, true)).toBe(true)
-		expect(areSetsEqual(set1, set3, true)).toBe(false)
+		expect(getSetsEqual(set1, set2, true)).toBe(true)
+		expect(getSetsEqual(set1, set3, true)).toBe(false)
 	})
 
 	it("sets with different sizes", () => {
 		const set1 = new Set([1, 2, 3])
 		const set2 = new Set([1, 2])
 
-		expect(areSetsEqual(set1, set2)).toBe(false)
-		expect(areSetsEqual(set1, set2, true)).toBe(false)
+		expect(getSetsEqual(set1, set2)).toBe(false)
+		expect(getSetsEqual(set1, set2, true)).toBe(false)
 	})
 
 	it("sets with nested structures", () => {
@@ -124,15 +124,15 @@ describe("areSetsEqual", () => {
 		const set2 = new Set([{ a: { b: 2 } }, [1, 2, 3]])
 		const set3 = new Set([{ a: { b: 3 } }, [1, 2, 3]])
 
-		expect(areSetsEqual(set1, set2, true)).toBe(true)
-		expect(areSetsEqual(set1, set3, true)).toBe(false)
+		expect(getSetsEqual(set1, set2, true)).toBe(true)
+		expect(getSetsEqual(set1, set3, true)).toBe(false)
 	})
 
 	it("empty sets", () => {
 		const set1 = new Set()
 		const set2 = new Set()
 
-		expect(areSetsEqual(set1, set2)).toBe(true)
-		expect(areSetsEqual(set1, set2, true)).toBe(true)
+		expect(getSetsEqual(set1, set2)).toBe(true)
+		expect(getSetsEqual(set1, set2, true)).toBe(true)
 	})
 })
