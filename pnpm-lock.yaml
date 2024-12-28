@@ -7,16 +7,6 @@ settings:
 importers:
 
   .:
-    dependencies:
-      '@heliosgraphics/ui':
-        specifier: ^1.8.6
-        version: link:packages/components
-      '@rollup/rollup-darwin-x64':
-        specifier: ^4.29.1
-        version: 4.29.1
-      rollup:
-        specifier: ^4.29.1
-        version: 4.29.1
     devDependencies:
       '@babel/eslint-parser':
         specifier: ^7.25.9
@@ -63,6 +53,12 @@ importers:
       prettier:
         specifier: ^3.4.2
         version: 3.4.2
+      react:
+        specifier: ^19.0.0
+        version: 19.0.0
+      react-dom:
+        specifier: ^19.0.0
+        version: 19.0.0(react@19.0.0)
       typescript:
         specifier: ^5.7.2
         version: 5.7.2
@@ -100,9 +96,6 @@ importers:
       '@heliosgraphics/icons':
         specifier: ^0.1.2
         version: 0.1.2
-      '@heliosgraphics/ui':
-        specifier: ^1.8.6
-        version: 'link:'
       '@heliosgraphics/utils':
         specifier: ^5.3.12
         version: 5.3.13
@@ -3840,7 +3833,8 @@ snapshots:
   '@rollup/rollup-darwin-arm64@4.29.1':
     optional: true
 
-  '@rollup/rollup-darwin-x64@4.29.1': {}
+  '@rollup/rollup-darwin-x64@4.29.1':
+    optional: true
 
   '@rollup/rollup-freebsd-arm64@4.29.1':
     optional: true

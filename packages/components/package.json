@@ -29,7 +29,6 @@
 	"dependencies": {
 		"@heliosgraphics/fractures": "^6.3.3",
 		"@heliosgraphics/icons": "^0.1.2",
-		"@heliosgraphics/ui": "^1.8.6",
 		"@heliosgraphics/utils": "^5.3.12",
 		"@types/markdown-it": "^14.1.2",
 		"@use-gesture/react": "^10.3.1",
