@@ -1,0 +1,14 @@
+.inputLabel {
+	margin-bottom: var(--box-3);
+
+	color: var(--ui-text-secondary);
+
+	font-size: var(--font-size-small);
+	font-weight: var(--font-weight-normal);
+	font-family: var(--font-family-sans);
+	line-height: var(--line-height-small);
+}
+
+.inputLabelDisabled {
+	color: var(--ui-text-tertiary);
+}

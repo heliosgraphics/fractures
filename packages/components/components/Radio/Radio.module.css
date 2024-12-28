@@ -1,0 +1,130 @@
+.radio {
+	--radio-size: 24px;
+
+	position: relative;
+
+	-webkit-tap-highlight-color: transparent;
+}
+
+.radioSmall {
+	--radio-size: 18px;
+}
+
+.radioDisabled {
+	pointer-events: none;
+}
+
+.radioDisabled .radio__radioMark {
+	opacity: 0.5;
+}
+
+.radio input {
+	position: absolute;
+	top: 0;
+	left: 0;
+
+	appearance: none;
+	display: flex;
+	overflow: hidden;
+	height: var(--radio-size);
+	width: var(--radio-size);
+
+	border-radius: var(--radio-size);
+	outline-color: var(--radio-bg-checked);
+
+	cursor: pointer;
+}
+
+.radio input:active ~ .radio__radioMark:after {
+	transform: scale(1.1);
+}
+
+.radio input:checked ~ .radio__radioMark:after {
+	opacity: 1;
+}
+
+.radio input:checked ~ .radio__radioMark {
+	background-color: var(--radio-bg-checked);
+}
+
+.radioAdvise {
+	--radio-bg-checked: hsl(var(--color-intent-advise), 50%);
+}
+
+.radioAutomation {
+	--radio-bg-checked: hsl(var(--color-intent-automation), 50%);
+}
+
+.radioConfirmation {
+	--radio-bg-checked: hsl(var(--color-intent-confirmation), 50%);
+}
+
+.radioDanger {
+	--radio-bg-checked: hsl(var(--color-intent-danger), 50%);
+}
+
+.radioHighlight {
+	--radio-bg-checked: hsl(var(--color-intent-highlight), 50%);
+}
+
+.radioQuestion {
+	--radio-bg-checked: hsl(var(--color-intent-question), 50%);
+}
+
+.radioSilent {
+	--radio-bg-checked: hsl(var(--color-intent-silent), 50%);
+}
+
+.radioSuccess {
+	--radio-bg-checked: hsl(var(--color-intent-success), 50%);
+}
+
+.radioWarning {
+	--radio-bg-checked: hsl(var(--color-intent-warning), 50%);
+}
+
+.radio__radioLabel {
+	position: relative;
+
+	max-width: max-content;
+
+	cursor: pointer;
+	user-select: none;
+}
+
+.radio__radioMark {
+	height: var(--radio-size);
+	overflow: hidden;
+	width: var(--radio-size);
+
+	background-color: var(--ui-bg-inactive);
+	border-radius: 24px;
+
+	pointer-events: none;
+}
+
+.radio__radioMark:after {
+	left: 6px;
+	top: 6px;
+	position: absolute;
+
+	box-sizing: inherit;
+	height: 12px;
+	width: 12px;
+
+	background-color: var(--ui-bg);
+	border-radius: 100%;
+	opacity: 0;
+	transition: all var(--animation-fast) var(--ease-in-out);
+	content: " ";
+
+	pointer-events: none;
+}
+
+.radioSmall .radio__radioMark:after {
+	left: 5px;
+	top: 5px;
+
+	height: 8px;
+	width: 8px;
+}

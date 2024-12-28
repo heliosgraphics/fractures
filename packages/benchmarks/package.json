@@ -1,22 +1,21 @@
 {
-	"name": "@heliosgraphics/benchmark",
+	"name": "@heliosgraphics/benchmarks",
 	"version": "0.0.0",
 	"type": "module",
 	"author": "03b8 <03b8@helios.graphics>",
 	"license": "MIT",
-	"private": false,
+	"private": true,
 	"description": "benchmark",
 	"scripts": {
 		"bench": "bun run *.ts"
 	},
-	"engines": {
-		"node": ">=20.15.0"
+	"dependencies": {
+		"benchmark": "latest"
 	},
 	"devDependencies": {
 		"@types/uuid": "latest",
 		"@types/benchmark": "latest",
 		"@types/lodash": "latest",
-		"benchmark": "latest",
 		"lodash": "latest"
 	}
 }

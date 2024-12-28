@@ -1,0 +1,38 @@
+.menu {
+	position: fixed;
+	left: 0;
+	top: 0;
+	z-index: var(--z-index-1);
+
+	height: 100vh;
+	overflow: auto;
+	padding-bottom: 32px;
+	width: 260px;
+
+	background-color: var(--ui-bg);
+	box-shadow: inset -1px 0 0 0 var(--ui-border-light);
+	transition: all var(--animation-normal) var(--ease-in-out);
+}
+
+.menu:not(:target) {
+	opacity: 0;
+	visibility: hidden;
+
+	transform: translateX(-24px);
+}
+
+.menu:target {
+	opacity: 1;
+	visibility: visible;
+
+	transform: translateX(0);
+}
+
+@media (min-width: 960px) {
+	.menu:not(:target) {
+		opacity: 1;
+		visibility: visible;
+
+		transform: translateX(0);
+	}
+}

@@ -1,0 +1,81 @@
+.alert {
+	display: flex;
+	flex-direction: row;
+
+	background-color: var(--alert-bg);
+	color: var(--alert-text);
+}
+
+.alertAdvise {
+	--alert-bg: var(--ui-bg-soft-blue);
+	--alert-text: var(--ui-text-blue);
+}
+
+.alertAutomation {
+	--alert-bg: var(--ui-bg-soft-pink);
+	--alert-text: var(--ui-text-pink);
+}
+
+.alertConfirmation {
+	--alert-bg: var(--ui-bg-soft-purple);
+	--alert-text: var(--ui-text-purple);
+}
+
+.alertDanger {
+	--alert-bg: var(--ui-bg-soft-red);
+	--alert-text: var(--ui-text-red);
+}
+
+.alertHighlight {
+	--alert-bg: var(--ui-bg-soft-orange);
+	--alert-text: var(--ui-text-orange);
+}
+
+.alertQuestion {
+	--alert-bg: var(--ui-bg-soft-aqua);
+	--alert-text: var(--ui-text-aqua);
+}
+
+.alertSilent {
+	--alert-bg: var(--ui-bg-soft-gray);
+	--alert-text: var(--ui-text-gray);
+}
+
+.alertSuccess {
+	--alert-bg: var(--ui-bg-soft-green);
+	--alert-text: var(--ui-text-green);
+}
+
+.alertWarning {
+	--alert-bg: var(--ui-bg-soft-yellow);
+	--alert-text: var(--ui-text-yellow);
+}
+
+.alertSmall {
+	border-radius: var(--radius-small);
+}
+
+.alertNormal {
+	border-radius: var(--radius-normal);
+}
+
+.alertWithButton {
+	padding-right: 48px;
+}
+
+.alertButtonGroup {
+	position: absolute;
+	right: 8px;
+	top: 8px;
+}
+
+.alert a {
+	font-weight: var(--font-weight-medium);
+	text-decoration: underline;
+}
+
+@container (max-width: 640px) {
+	.alert {
+		flex-direction: column;
+	}
+}

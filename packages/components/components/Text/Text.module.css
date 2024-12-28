@@ -1,0 +1,37 @@
+.text {
+	color: currentcolor;
+
+	transition: all var(--animation-fastest) var(--ease-in-out);
+}
+
+.textPrimary {
+	color: var(--ui-text-primary);
+}
+
+.textSecondary {
+	color: var(--ui-text-secondary);
+}
+
+.textTertiary {
+	color: var(--ui-text-tertiary);
+}
+
+.text a {
+	color: inherit;
+	cursor: pointer;
+
+	text-decoration: underline;
+}
+
+.text a[rel="author"] {
+	text-decoration-style: dashed;
+}
+
+.text u {
+	text-decoration: underline;
+}
+
+.textWithLinks a {
+	font-weight: var(--font-weight-medium);
+	text-decoration: underline;
+}

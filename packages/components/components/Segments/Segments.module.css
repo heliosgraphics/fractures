@@ -1,0 +1,18 @@
+.segmentedControl {
+	padding: 4px;
+	height: 40px;
+
+	background-color: var(--ui-bg-disabled);
+	border-radius: var(--radius-normal);
+
+	user-select: none;
+}
+
+.segmentedControlFull {
+	width: 100%;
+}
+
+.segmentedControlFull div[data-component="SegmentItem"] {
+	text-align: center;
+	width: 100%;
+}

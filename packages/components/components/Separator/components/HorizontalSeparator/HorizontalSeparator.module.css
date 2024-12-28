@@ -1,0 +1,18 @@
+.horizontalSeparator {
+	width: 100%;
+
+	border: 0;
+	border-bottom: 1px solid var(--ui-border);
+}
+
+.horizontalSeparatorLight {
+	border-color: var(--ui-border-light);
+}
+
+.horizontalSeparatorDotted {
+	border-style: dotted;
+}
+
+.horizontalSeparatorDashed {
+	border-style: dashed;
+}

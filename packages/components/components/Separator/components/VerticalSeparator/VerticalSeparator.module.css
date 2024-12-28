@@ -1,0 +1,16 @@
+.verticalSeparator {
+	border: 0;
+	border-left: 1px solid var(--ui-border);
+}
+
+.verticalSeparatorLight {
+	border-color: var(--ui-border-light);
+}
+
+.verticalSeparatorDotted {
+	border-style: dotted;
+}
+
+.verticalSeparatorDashed {
+	border-style: dashed;
+}

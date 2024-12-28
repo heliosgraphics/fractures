@@ -1,0 +1,132 @@
+.toggle {
+	--toggle-height: 24px;
+	--toggle-width: 42px;
+
+	position: relative;
+
+	-webkit-tap-highlight-color: transparent;
+}
+
+.toggleSmall {
+	--toggle-height: 18px;
+	--toggle-width: 36px;
+}
+
+.toggleDisabled {
+	pointer-events: none;
+}
+
+.toggleDisabled .toggle__toggleMark {
+	opacity: 0.5;
+}
+
+.toggle input {
+	position: absolute;
+	top: 0;
+	left: 0;
+
+	appearance: none;
+	display: flex;
+	overflow: hidden;
+	height: var(--toggle-height);
+	width: var(--toggle-width);
+
+	border-radius: var(--toggle-height);
+	outline-color: var(--toggle-bg-checked);
+
+	cursor: pointer;
+}
+
+.toggle input:active ~ .toggle__toggleMark:after {
+	transform: scale(1.1);
+}
+
+.toggle input:checked ~ .toggle__toggleMark:after {
+	left: 22px;
+}
+
+.toggle input:checked ~ .toggle__toggleMark {
+	background-color: var(--toggle-bg-checked);
+}
+
+.toggleAdvise {
+	--toggle-bg-checked: hsl(var(--color-intent-advise), 50%);
+}
+
+.toggleAutomation {
+	--toggle-bg-checked: hsl(var(--color-intent-automation), 50%);
+}
+
+.toggleConfirmation {
+	--toggle-bg-checked: hsl(var(--color-intent-confirmation), 50%);
+}
+
+.toggleDanger {
+	--toggle-bg-checked: hsl(var(--color-intent-danger), 50%);
+}
+
+.toggleHighlight {
+	--toggle-bg-checked: hsl(var(--color-intent-highlight), 50%);
+}
+
+.toggleQuestion {
+	--toggle-bg-checked: hsl(var(--color-intent-question), 50%);
+}
+
+.toggleSilent {
+	--toggle-bg-checked: hsl(var(--color-intent-silent), 50%);
+}
+
+.toggleSuccess {
+	--toggle-bg-checked: hsl(var(--color-intent-success), 50%);
+}
+
+.toggleWarning {
+	--toggle-bg-checked: hsl(var(--color-intent-warning), 50%);
+}
+
+.toggle__toggleLabel {
+	position: relative;
+
+	max-width: max-content;
+
+	cursor: pointer;
+	user-select: none;
+}
+
+.toggle__toggleMark {
+	box-sizing: border-box;
+	height: var(--toggle-height);
+	overflow: hidden;
+	width: var(--toggle-width);
+
+	background-color: var(--ui-bg-inactive);
+	border-radius: 24px;
+
+	pointer-events: none;
+}
+
+.toggle__toggleMark:after {
+	left: 4px;
+	top: 4px;
+	position: absolute;
+
+	box-sizing: inherit;
+	height: 16px;
+	width: 16px;
+
+	background-color: var(--ui-bg);
+	border-radius: 100%;
+	transition: all var(--animation-fast) var(--ease-in-out);
+	content: " ";
+
+	pointer-events: none;
+}
+
+.toggleSmall .toggle__toggleMark:after {
+	left: 4px;
+	top: 4px;
+
+	height: 10px;
+	width: 10px;
+}

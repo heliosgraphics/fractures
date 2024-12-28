@@ -7,9 +7,6 @@
 	"private": false,
 	"description": "Universal Javascript Helpers",
 	"main": "index.ts",
-	"engines": {
-		"node": ">=20.15.0"
-	},
 	"dependencies": {
 		"xss": "^1.0.15"
 	},

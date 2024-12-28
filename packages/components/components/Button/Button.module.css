@@ -1,0 +1,370 @@
+.button {
+	position: relative;
+
+	background-color: var(--button-bg);
+	color: var(--button-text);
+	transition: all var(--animation-fastest) var(--ease-in-out);
+
+	cursor: pointer;
+
+	-webkit-tap-highlight-color: transparent;
+}
+
+.button:hover {
+	background-color: var(--button-hover);
+}
+
+.button .button__baseElement:focus-visible {
+	outline: 2px solid var(--button-bg);
+}
+
+.button:not(.buttonDisabled) .button__baseElement:active {
+	background-color: var(--button-active);
+}
+
+.buttonDisabled {
+	background: var(--button-disabled-bg);
+	color: var(--button-disabled);
+}
+
+/* intent: advise */
+.buttonAdvise {
+	--button-bg: hsl(var(--color-intent-advise), 50%);
+	--button-text: var(--ui-button-text-advise);
+	--button-hover: hsl(var(--color-intent-advise), 40%);
+	--button-active: hsl(var(--color-intent-advise), 30%);
+	--button-disabled: hsl(var(--color-intent-advise), 70%);
+	--button-disabled-bg: var(--ui-bg-soft-blue);
+}
+
+/* intent: automation */
+.buttonAutomation {
+	--button-bg: hsl(var(--color-intent-automation), 50%);
+	--button-text: var(--ui-button-text-automation);
+	--button-hover: hsl(var(--color-intent-automation), 40%);
+	--button-active: hsl(var(--color-intent-automation), 30%);
+	--button-disabled: hsl(var(--color-intent-automation), 70%);
+	--button-disabled-bg: var(--ui-bg-soft-pink);
+}
+
+/* intent: confirmation */
+.buttonConfirmation {
+	--button-bg: hsl(var(--color-intent-confirmation), 50%);
+	--button-text: var(--ui-button-text-confirmation);
+	--button-hover: hsl(var(--color-intent-confirmation), 40%);
+	--button-active: hsl(var(--color-intent-confirmation), 30%);
+	--button-disabled: hsl(var(--color-intent-confirmation), 70%);
+	--button-disabled-bg: var(--ui-bg-soft-purple);
+}
+
+/* intent: danger */
+.buttonDanger {
+	--button-bg: hsl(var(--color-intent-danger), 50%);
+	--button-text: var(--ui-button-text-danger);
+	--button-hover: hsl(var(--color-intent-danger), 40%);
+	--button-active: hsl(var(--color-intent-danger), 30%);
+	--button-disabled: hsl(var(--color-intent-danger), 70%);
+	--button-disabled-bg: var(--ui-bg-soft-red);
+}
+
+/* intent: highlight */
+.buttonHighlight {
+	--button-bg: hsl(var(--color-intent-highlight), 50%);
+	--button-text: var(--ui-button-text-highlight);
+	--button-hover: hsl(var(--color-intent-highlight), 40%);
+	--button-active: hsl(var(--color-intent-highlight), 30%);
+	--button-disabled: hsl(var(--color-intent-highlight), 70%);
+	--button-disabled-bg: var(--ui-bg-soft-orange);
+}
+
+/* intent: question */
+.buttonQuestion {
+	--button-bg: hsl(var(--color-intent-question), 50%);
+	--button-text: var(--ui-button-text-question);
+	--button-hover: hsl(var(--color-intent-question), 40%);
+	--button-active: hsl(var(--color-intent-question), 30%);
+	--button-disabled: hsl(var(--color-intent-question), 70%);
+	--button-disabled-bg: var(--ui-bg-soft-aqua);
+}
+
+/* intent: silent */
+.button.buttonSilent {
+	--button-bg: var(--ui-bg-action);
+	--button-text: var(--ui-button-text-silent);
+	--button-hover: var(--ui-bg-action-hover);
+	--button-active: var(--ui-bg-action-active);
+	--button-disabled: var(--ui-text-tertiary);
+	--button-disabled-bg: var(--ui-bg-soft-gray);
+
+	box-shadow: inset 0 0 0 1px var(--ui-border);
+}
+
+.button.buttonSilent .button__baseElement:active {
+	box-shadow: inset 0 0 0 1px var(--ui-border-active);
+}
+
+.button.buttonSilent .button__baseElement:focus-visible {
+	outline: 2px solid var(--ui-border-active);
+}
+
+/* intent: success */
+.buttonSuccess {
+	--button-bg: hsl(var(--color-intent-success), 50%);
+	--button-text: var(--ui-button-text-success);
+	--button-hover: hsl(var(--color-intent-success), 40%);
+	--button-active: hsl(var(--color-intent-success), 30%);
+	--button-disabled: hsl(var(--color-intent-success), 70%);
+	--button-disabled-bg: var(--ui-bg-soft-green);
+}
+
+/* intent: warning */
+.buttonWarning {
+	--button-bg: hsl(var(--color-intent-warning), 50%);
+	--button-text: var(--ui-button-text-warning);
+	--button-hover: hsl(var(--color-intent-warning), 40%);
+	--button-active: hsl(var(--color-intent-warning), 30%);
+	--button-disabled: hsl(var(--color-intent-warning), 70%);
+	--button-disabled-bg: var(--ui-bg-soft-yellow);
+}
+
+/* Reset */
+.button .button__baseElement {
+	display: inline-flex;
+
+	background-color: transparent;
+	border: 0;
+	color: inherit;
+
+	cursor: pointer;
+	user-select: none;
+}
+
+.button .button__icon {
+	position: relative;
+	z-index: 2;
+
+	pointer-events: none;
+}
+
+/* Sizes */
+.buttonSizeNormal,
+.buttonSizeNormal .button__baseElement {
+	height: 40px;
+	min-width: 40px;
+
+	line-height: 40px;
+}
+
+.buttonSizeSmall,
+.buttonSizeSmall .button__baseElement {
+	height: 30px;
+	min-width: 30px;
+
+	line-height: 30px;
+}
+
+.buttonSizeTiny,
+.buttonSizeTiny .button__baseElement {
+	height: 24px;
+	min-width: 24px;
+
+	line-height: 24px;
+}
+
+/* Loading */
+.buttonLoading,
+.buttonDisabled {
+	pointer-events: none;
+}
+
+.buttonDisabled .button__baseElement {
+	text-shadow: 0 0 0 transparent;
+}
+
+.buttonSizeNormal.buttonLoading:not(.buttonIconOnly) .button__baseElement {
+	padding-right: 40px;
+}
+
+.buttonSizeSmall.buttonLoading:not(.buttonIconOnly) .button__baseElement {
+	padding-right: 26px;
+}
+
+.buttonSizeTiny.buttonLoading:not(.buttonIconOnly) .button__baseElement {
+	padding-right: 24px;
+}
+
+.button__loading {
+	position: absolute;
+}
+
+.buttonSizeNormal:not(.buttonIconOnly) .button__loading {
+	right: 10px;
+}
+
+.buttonSizeSmall:not(.buttonIconOnly) .button__loading {
+	right: 6px;
+}
+
+.buttonSizeTiny:not(.buttonIconOnly) .button__loading {
+	right: 6px;
+}
+
+/* Flair */
+.button__flair {
+	position: absolute;
+	top: var(--ui-button-flair-offset);
+	right: var(--ui-button-flair-offset);
+
+	height: var(--ui-button-flair-size);
+	min-width: var(--ui-button-flair-size);
+	width: var(--ui-button-flair-size);
+
+	background-color: hsl(var(--color-intent-danger), 50%);
+	border-radius: 100%;
+	color: var(--ui-button-text-danger);
+}
+
+.buttonSizeNormal .button__flair {
+	--ui-button-flair-size: 24px;
+	--ui-button-flair-offset: -10px;
+}
+
+.buttonSizeSmall .button__flair {
+	--ui-button-flair-size: 20px;
+	--ui-button-flair-offset: -8px;
+}
+
+.buttonSizeTiny .button__flair {
+	--ui-button-flair-size: 16px;
+	--ui-button-flair-offset: -6px;
+}
+
+/* Icon */
+.buttonSizeNormal .button__iconLeft,
+.buttonSizeNormal .button__iconRight {
+	padding-left: 8px;
+	padding-right: 8px;
+}
+
+.buttonSizeNormal:not(.buttonIconOnly) .button__iconLeft {
+	margin-right: -12px;
+}
+
+.buttonSizeSmall:not(.buttonIconOnly) .button__iconLeft {
+	margin-right: -11px;
+	margin-top: -1px;
+}
+
+.buttonSizeSmall .button__iconLeft,
+.buttonSizeSmall .button__iconRight {
+	padding-left: 6px;
+	padding-right: 6px;
+}
+
+.buttonSizeTiny:not(.buttonIconOnly) .button__iconLeft {
+	margin-right: -6px;
+}
+
+.buttonSizeTiny .button__iconLeft,
+.buttonSizeTiny .button__iconRight {
+	padding-left: 5px;
+	padding-right: 5px;
+}
+
+/* IconRight */
+.buttonSizeNormal:not(.buttonIconOnly) .button__iconRight {
+	margin-left: -12px;
+}
+
+.buttonSizeSmall:not(.buttonIconOnly) .button__iconRight {
+	margin-left: -11px;
+	margin-top: -1px;
+}
+
+.buttonSizeTiny:not(.buttonIconOnly) .button__iconRight {
+	margin-left: -6px;
+}
+
+.button__iconRightLoading {
+	opacity: 0;
+}
+
+/* Icon:focus */
+.buttonSizeNormal.buttonIconOnly:not(.buttonIconOnlyLoading) .button__baseElement {
+	margin-left: -40px;
+	width: 40px;
+}
+
+.buttonSizeSmall.buttonIconOnly:not(.buttonIconOnlyLoading) .button__baseElement {
+	margin-left: -30px;
+	width: 30px;
+}
+
+.buttonSizeTiny.buttonIconOnly:not(.buttonIconOnlyLoading) .button__baseElement {
+	margin-left: -24px;
+	width: 24px;
+}
+
+.buttonSizeNormal.buttonWithIconLeft:not(.buttonIconOnly) .button__baseElement {
+	margin-left: -28px;
+	padding-left: 40px;
+}
+
+.buttonSizeSmall.buttonWithIconLeft:not(.buttonIconOnly) .button__baseElement {
+	margin-left: -19px;
+	padding-left: 28px;
+}
+
+.buttonSizeTiny.buttonWithIconLeft:not(.buttonIconOnly) .button__baseElement {
+	margin-left: -18px;
+	padding-left: 24px;
+}
+
+.buttonSizeNormal.buttonWithIconRight:not(.buttonIconOnly) .button__baseElement {
+	margin-right: -28px;
+	padding-right: 40px;
+}
+
+.buttonSizeSmall.buttonWithIconRight:not(.buttonIconOnly) .button__baseElement {
+	margin-right: -19px;
+	padding-right: 28px;
+}
+
+.buttonSizeTiny.buttonWithIconRight:not(.buttonIconOnly) .button__baseElement {
+	margin-right: -18px;
+	padding-right: 24px;
+}
+
+.buttonRounded {
+	border-radius: 24px;
+}
+
+.buttonRound,
+.buttonRound .button__baseElement {
+	border-radius: var(--radius-normal);
+}
+
+.buttonRoundTiny,
+.buttonRoundTiny .button__baseElement {
+	border-radius: var(--radius-small);
+}
+
+.button__label {
+	position: relative;
+	z-index: 1;
+
+	cursor: pointer;
+	border: 1px dashed red;
+}
+
+.button__inputFile {
+	position: absolute;
+
+	opacity: 0.0001;
+	padding: 0;
+	height: 0;
+	width: 100%;
+
+	pointer-events: none;
+	cursor: pointer;
+}

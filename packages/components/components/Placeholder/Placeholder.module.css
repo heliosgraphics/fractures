@@ -1,0 +1,3 @@
+.placeholder {
+	background-color: hsl(var(--color-intent-highlight), 75%);
+}

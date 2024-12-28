@@ -1,0 +1,580 @@
+:root {
+	/* Fractures */
+	--box-px: 1px;
+	--box-1: 2px;
+	--box-2: 4px;
+	--box-3: 6px;
+	--box-4: 8px;
+	--box-5: 10px;
+	--box-6: 12px;
+	--box-7: 14px;
+	--box-8: 16px;
+	--box-9: 18px;
+	--box-10: 20px;
+	--box-11: 22px;
+	--box-12: 24px;
+	--box-13: 26px;
+	--box-14: 28px;
+	--box-15: 30px;
+	--box-16: 32px;
+	--box-24: 48px;
+	--box-32: 64px;
+	--box-40: 80px;
+	--box-48: 96px;
+
+	--radius-none: 0;
+	--radius-small: 4px;
+	--radius-normal: 8px;
+	--radius-large: 12px;
+
+	--font-size-h0: 48px;
+	--font-size-h1: 36px;
+	--font-size-h2: 32px;
+	--font-size-h3: 28px;
+	--font-size-h4: 24px;
+	--font-size-h5: 20px;
+	--font-size-h6: 18px;
+	--font-size-p: 16px;
+	--font-size-small: 14px;
+	--font-size-tiny: 12px;
+	--font-size-micro: 10px;
+
+	--line-height-h1: 44px;
+	--line-height-h2: 40px;
+	--line-height-h3: 36px;
+	--line-height-h4: 32px;
+	--line-height-h5: 26px;
+	--line-height-h6: 24px;
+	--line-height-p: 24px;
+	--line-height-small: 22px;
+	--line-height-tiny: 18px;
+	--line-height-micro: 14px;
+
+	--font-family-sans: "InterVariable", "Inter", -apple-system, "Helvetica Neue", Arial, sans-serif;
+	--font-family-mono: "JetBrains Mono", courier, monospace;
+	--font-family-serif: "Times New Roman", Times, Georgia;
+
+	--font-weight-thin: 100;
+	--font-weight-extra-light: 200;
+	--font-weight-light: 300;
+	--font-weight-normal: 400;
+	--font-weight-medium: 500;
+	--font-weight-semi-bold: 600;
+	--font-weight-bold: 700;
+	--font-weight-extra-bold: 800;
+	--font-weight-black: 900;
+
+	--z-index-0: 0;
+	--z-index-1: 10;
+	--z-index-2: 20;
+	--z-index-3: 30;
+	--z-index-4: 40;
+	--z-index-5: 50;
+	--z-index-6: 60;
+	--z-index-7: 70;
+	--z-index-8: 80;
+	--z-index-9: 90;
+	--z-index-10: 100;
+
+	/* Colors */
+	--aqua-hue: 192;
+	--blue-hue: 230;
+	--gray-hue: 4;
+	--green-hue: 120;
+	--orange-hue: 30;
+	--pink-hue: 324;
+	--purple-hue: 266;
+	--red-hue: 356;
+	--yellow-hue: 45;
+
+	/* Intentions */
+	--color-intent-advise: var(--blue-hue), var(--blue-saturation);
+	--color-intent-automation: var(--pink-hue), var(--pink-saturation);
+	--color-intent-confirmation: var(--purple-hue), var(--purple-saturation);
+	--color-intent-danger: var(--red-hue), var(--red-saturation);
+	--color-intent-highlight: var(--orange-hue), var(--orange-saturation);
+	--color-intent-question: var(--aqua-hue), var(--aqua-saturation);
+	--color-intent-silent: var(--gray-hue), var(--gray-saturation);
+	--color-intent-success: var(--green-hue), var(--green-saturation);
+	--color-intent-warning: var(--yellow-hue), var(--yellow-saturation);
+
+	/* Shared UI: soft intent bg */
+	--ui-bg-soft-blue: hsla(var(--blue-hue), var(--blue-saturation), 50%, 0.25);
+	--ui-bg-soft-pink: hsla(var(--pink-hue), var(--pink-saturation), 50%, 0.25);
+	--ui-bg-soft-purple: hsla(var(--purple-hue), var(--purple-saturation), 50%, 0.25);
+	--ui-bg-soft-red: hsla(var(--red-hue), var(--red-saturation), 50%, 0.25);
+	--ui-bg-soft-orange: hsla(var(--orange-hue), var(--orange-saturation), 50%, 0.25);
+	--ui-bg-soft-aqua: hsla(var(--aqua-hue), var(--aqua-saturation), 50%, 0.25);
+	--ui-bg-soft-gray: hsla(var(--gray-hue), var(--gray-saturation), 50%, 0.25);
+	--ui-bg-soft-green: hsla(var(--green-hue), var(--green-saturation), 50%, 0.25);
+	--ui-bg-soft-yellow: hsla(var(--yellow-hue), var(--yellow-saturation), 50%, 0.25);
+
+	/* Shared UI: soft intent text */
+	--ui-text-blue: hsl(var(--blue-hue), var(--blue-saturation), var(--blue-light));
+	--ui-text-pink: hsl(var(--pink-hue), var(--pink-saturation), var(--pink-light));
+	--ui-text-purple: hsl(var(--purple-hue), var(--purple-saturation), var(--purple-light));
+	--ui-text-red: hsl(var(--red-hue), var(--red-saturation), var(--red-light));
+	--ui-text-orange: hsl(var(--orange-hue), var(--orange-saturation), var(--orange-light));
+	--ui-text-aqua: hsl(var(--aqua-hue), var(--aqua-saturation), var(--aqua-light));
+	--ui-text-gray: hsl(var(--gray-hue), var(--gray-saturation), var(--gray-light));
+	--ui-text-green: hsl(var(--green-hue), var(--green-saturation), var(--green-light));
+	--ui-text-yellow: hsl(var(--yellow-hue), var(--yellow-saturation), var(--yellow-light));
+
+	/* Animations */
+	--animation-fastest: 64ms;
+	--animation-fast: 96ms;
+	--animation-normal: 128ms;
+	--animation-slow: 160ms;
+	--animation-slowest: 192ms;
+
+	--ease-in-out: var(--easeInOutSine);
+
+	font-family: var(--font-family-sans);
+	font-feature-settings:
+		"calt" 1,
+		"cv01" 1,
+		"cv02" 1,
+		"cv03" 1,
+		"cv04" 1,
+		"cv06" 1,
+		"cv10" 1,
+		"cv09" 1,
+		"dlig" 1,
+		"ordn" 1,
+		"tnum" 1,
+		"ss03" 1,
+		"zero" 1;
+}
+
+/* setup theme light */
+:root {
+	color-scheme: light;
+
+	--aqua-saturation: 65%;
+	--blue-saturation: 87%;
+	--gray-saturation: 4%;
+	--green-saturation: 40%;
+	--orange-saturation: 94%;
+	--pink-saturation: 76%;
+	--purple-saturation: 80%;
+	--red-saturation: 84%;
+	--yellow-saturation: 80%;
+
+	--aqua-light: 35%;
+	--blue-light: 50%;
+	--gray-light: 40%;
+	--green-light: 40%;
+	--orange-light: 40%;
+	--pink-light: 40%;
+	--purple-light: 50%;
+	--red-light: 50%;
+	--yellow-light: 35%;
+
+	--ui-text-primary: hsl(var(--gray-hue), var(--gray-saturation), 8%);
+	--ui-text-secondary: hsl(var(--gray-hue), var(--gray-saturation), 44%);
+	--ui-text-tertiary: hsl(var(--gray-hue), var(--gray-saturation), 69%);
+	--ui-text-white: hsl(var(--gray-hue), var(--gray-saturation), 100%);
+
+	--ui-border-light: hsl(var(--gray-hue), var(--gray-saturation), 92%);
+	--ui-border: hsl(var(--gray-hue), var(--gray-saturation), 85%);
+	--ui-border-active: hsl(var(--gray-hue), var(--gray-saturation), 80%);
+
+	--ui-bg: hsl(var(--gray-hue), var(--gray-saturation), 100%);
+	--ui-bg-action: hsl(var(--gray-hue), var(--gray-saturation), 99%);
+	--ui-bg-soft: hsl(var(--gray-hue), var(--gray-saturation), 96%);
+	--ui-bg-action-hover: hsl(var(--gray-hue), var(--gray-saturation), 96%);
+	--ui-bg-action-active: hsl(var(--gray-hue), var(--gray-saturation), 90%);
+	--ui-bg-disabled: hsl(var(--gray-hue), var(--gray-saturation), 86%);
+	--ui-bg-glass-1: hsla(var(--gray-hue), var(--gray-saturation), 100%, 0.9);
+	--ui-bg-glass-border: hsla(var(--gray-hue), var(--gray-saturation), 80%, 0.25);
+	--ui-bg-inactive: hsl(var(--gray-hue), var(--gray-saturation), 80%);
+
+	--ui-button-text-advise: hsl(var(--blue-hue), var(--blue-saturation), 95%);
+	--ui-button-text-automation: hsl(var(--pink-hue), var(--pink-saturation), 95%);
+	--ui-button-text-confirmation: hsl(var(--purple-hue), var(--purple-saturation), 95%);
+	--ui-button-text-danger: hsl(var(--red-hue), var(--red-saturation), 95%);
+	--ui-button-text-highlight: hsl(var(--orange-hue), var(--orange-saturation), 95%);
+	--ui-button-text-question: hsl(var(--aqua-hue), var(--aqua-saturation), 95%);
+	--ui-button-text-silent: hsl(var(--gray-hue), var(--gray-saturation), 40%);
+	--ui-button-text-success: hsl(var(--green-hue), var(--green-saturation), 95%);
+	--ui-button-text-warning: hsl(var(--yellow-hue), var(--yellow-saturation), 95%);
+
+	--ui-elevation-small: 0 0 0 1px rgba(0, 0, 0, 0.024), 0 1px 1px 0 rgba(0, 0, 0, 0.04), 0 2px 4px 0 rgba(0, 0, 0, 0.04);
+	--ui-elevation-medium: 0 0 0 1px rgba(0, 0, 0, 0.024), 0 0 0 1px rgba(0, 0, 0, 0.04), 0 0 4px 0 rgba(0, 0, 0, 0.04),
+		0 0 12px 0 rgba(0, 0, 0, 0.08);
+	--ui-elevation-large: 0 0 0 1px rgba(0, 0, 0, 0.024), 0 1px 1px 0 rgba(0, 0, 0, 0.06), 0 0 4px 0 rgba(0, 0, 0, 0.08),
+		0 0 0 1px rgba(0, 0, 0, 0.04), 0 0 16px 0 rgba(0, 0, 0, 0.08);
+}
+
+/* setup theme dark */
+:root[data-theme="dark"] {
+	color-scheme: dark;
+
+	--aqua-saturation: 55%;
+	--blue-saturation: 60%;
+	--gray-saturation: 4%;
+	--green-saturation: 65%;
+	--orange-saturation: 84%;
+	--pink-saturation: 66%;
+	--purple-saturation: 70%;
+	--red-saturation: 74%;
+	--yellow-saturation: 80%;
+
+	--aqua-light: 75%;
+	--blue-light: 75%;
+	--gray-light: 75%;
+	--green-light: 75%;
+	--orange-light: 75%;
+	--pink-light: 75%;
+	--purple-light: 75%;
+	--red-light: 75%;
+	--yellow-light: 75%;
+
+	--ui-text-primary: hsl(var(--gray-hue), var(--gray-saturation), 92%);
+	--ui-text-secondary: hsl(var(--gray-hue), var(--gray-saturation), 62%);
+	--ui-text-tertiary: hsl(var(--gray-hue), var(--gray-saturation), 33%);
+	--ui-text-white: hsl(var(--gray-hue), var(--gray-saturation), 100%);
+
+	--ui-border-light: hsl(var(--gray-hue), var(--gray-saturation), 12%);
+	--ui-border: hsl(var(--gray-hue), var(--gray-saturation), 20%);
+	--ui-border-active: hsl(var(--gray-hue), var(--gray-saturation), 35%);
+
+	--ui-bg: hsl(var(--gray-hue), var(--gray-saturation), 4%);
+	--ui-bg-action: hsl(var(--gray-hue), var(--gray-saturation), 8%);
+	--ui-bg-soft: hsl(var(--gray-hue), var(--gray-saturation), 6%);
+	--ui-bg-action-hover: hsl(var(--gray-hue), var(--gray-saturation), 10%);
+	--ui-bg-action-active: hsl(var(--gray-hue), var(--gray-saturation), 16%);
+	--ui-bg-disabled: hsl(var(--gray-hue), var(--gray-saturation), 16%);
+	--ui-bg-glass-1: hsla(var(--gray-hue), var(--gray-saturation), 8%, 0.8);
+	--ui-bg-glass-border: hsla(var(--gray-hue), var(--gray-saturation), 36%, 0.25);
+	--ui-bg-inactive: hsl(var(--gray-hue), var(--gray-saturation), 24%);
+
+	--ui-button-text-advise: hsl(var(--blue-hue), var(--blue-saturation), 90%);
+	--ui-button-text-automation: hsl(var(--pink-hue), var(--pink-saturation), 90%);
+	--ui-button-text-confirmation: hsl(var(--purple-hue), var(--purple-saturation), 90%);
+	--ui-button-text-danger: hsl(var(--red-hue), var(--red-saturation), 90%);
+	--ui-button-text-highlight: hsl(var(--orange-hue), var(--orange-saturation), 15%);
+	--ui-button-text-question: hsl(var(--aqua-hue), var(--aqua-saturation), 10%);
+	--ui-button-text-silent: hsl(var(--gray-hue), var(--gray-saturation), 90%);
+	--ui-button-text-success: hsl(var(--green-hue), var(--green-saturation), 10%);
+	--ui-button-text-warning: hsl(var(--yellow-hue), var(--yellow-saturation), 15%);
+
+	--ui-elevation-small: 0 0 0 1px rgba(255, 255, 255, 0.024);
+	--ui-elevation-medium: 0 0 4px 4px rgba(0, 0, 0, 0.32), 0 0 0 1px var(--ui-border);
+	--ui-elevation-large: unset;
+}
+
+*:focus-visible {
+	outline: 2px solid hsl(var(--color-intent-highlight), 50%);
+	outline-offset: 2px;
+}
+
+a {
+	color: currentcolor;
+	cursor: pointer;
+}
+
+*::selection {
+	background-color: hsla(var(--orange-hue), var(--orange-saturation), 50%, 0.25);
+}
+
+html {
+	overscroll-behavior: none;
+}
+
+body {
+	width: 100%;
+
+	background-color: var(--ui-bg);
+	color: var(--ui-text-primary);
+}
+
+mark,
+.text-highlighted {
+	background-color: var(--ui-text-highlighted);
+}
+
+.text-balanced {
+	text-wrap: balance;
+}
+
+/* helpers: background */
+.helios-ui-bg {
+	background-color: var(--ui-bg);
+}
+
+/* helpers: background / glass */
+.helios-ui-glass-1 {
+	background-color: var(--ui-bg-glass-1);
+	backdrop-filter: blur(3px);
+}
+
+/* helpers: scrollbar */
+.helios-scrollbar::-webkit-scrollbar {
+	height: 10px;
+	width: 10px;
+}
+
+.helios-scrollbar--narrow::-webkit-scrollbar {
+	height: 6px;
+	width: 6px;
+}
+
+.helios-scrollbar::-webkit-scrollbar-corner {
+	background-color: var(--ui-bg-disabled);
+}
+
+.helios-scrollbar::-webkit-scrollbar-thumb {
+	background-color: var(--ui-bg);
+	border-left: 1px solid var(--ui-border-light);
+	border-right: 1px solid var(--ui-border-light);
+	box-shadow: 1px 0 0 1px var(--ui-border-light);
+	transition: all var(--animation-fastest) var(--ease-in-out);
+}
+
+.helios-scrollbar::-webkit-scrollbar-track {
+	background-color: var(--ui-bg-soft);
+}
+
+.helios-scrollbar::-webkit-scrollbar-thumb:hover {
+	background-color: var(--ui-bg);
+}
+
+.helios-scrollbar::-webkit-scrollbar-thumb:active {
+	background-color: var(--ui-bg-disabled);
+}
+
+/* helpers: debug */
+.debug * {
+	box-shadow: inset 0 0 0 1px hsla(var(--color-intent-highlight), 50%, 0.5);
+}
+
+.debug *[data-component] {
+	box-shadow: inset 0 0 0 1px hsla(var(--color-intent-highlight), 50%, 0.2);
+}
+
+/* helpers: elevations */
+.elevation-small {
+	box-shadow: var(--ui-elevation-small);
+}
+
+.elevation-medium {
+	box-shadow: var(--ui-elevation-medium);
+}
+
+.elevation-large {
+	box-shadow: var(--ui-elevation-large);
+}
+
+/* Responsive tests */
+@media (min-width: 641px) and (max-width: 960px) {
+	.tablet\:p-0 {
+		padding: 0 !important;
+	}
+	.tablet\:p-1 {
+		padding: var(--box-1) !important;
+	}
+	.tablet\:p-2 {
+		padding: var(--box-2) !important;
+	}
+	.tablet\:p-3 {
+		padding: var(--box-3) !important;
+	}
+	.tablet\:p-4 {
+		padding: var(--box-4) !important;
+	}
+	.tablet\:p-5 {
+		padding: var(--box-5) !important;
+	}
+	.tablet\:p-6 {
+		padding: var(--box-6) !important;
+	}
+	.tablet\:p-7 {
+		padding: var(--box-7) !important;
+	}
+	.tablet\:p-8 {
+		padding: var(--box-8) !important;
+	}
+	.tablet\:p-9 {
+		padding: var(--box-9) !important;
+	}
+	.tablet\:p-10 {
+		padding: var(--box-10) !important;
+	}
+	.tablet\:p-11 {
+		padding: var(--box-11) !important;
+	}
+	.tablet\:p-12 {
+		padding: var(--box-12) !important;
+	}
+	.tablet\:p-13 {
+		padding: var(--box-13) !important;
+	}
+	.tablet\:p-14 {
+		padding: var(--box-14) !important;
+	}
+	.tablet\:p-15 {
+		padding: var(--box-15) !important;
+	}
+	.tablet\:p-16 {
+		padding: var(--box-16) !important;
+	}
+	.tablet\:p-24 {
+		padding: var(--box-24) !important;
+	}
+	.tablet\:p-32 {
+		padding: var(--box-32) !important;
+	}
+	.tablet\:p-40 {
+		padding: var(--box-40) !important;
+	}
+	.tablet\:p-48 {
+		padding: var(--box-48) !important;
+	}
+
+	.tablet\:radius-none {
+		border-radius: var(--radius-none) !important;
+	}
+	.tablet\:radius-small {
+		border-radius: var(--radius-small) !important;
+	}
+	.tablet\:radius-normal {
+		border-radius: var(--radius-normal) !important;
+	}
+	.tablet\:radius-large {
+		border-radius: var(--radius-large) !important;
+	}
+}
+
+@media (min-width: 0) and (max-width: 640px) {
+	.mobile\:p-0 {
+		padding: 0 !important;
+	}
+	.mobile\:p-1 {
+		padding: var(--box-1) !important;
+	}
+	.mobile\:p-2 {
+		padding: var(--box-2) !important;
+	}
+	.mobile\:p-3 {
+		padding: var(--box-3) !important;
+	}
+	.mobile\:p-4 {
+		padding: var(--box-4) !important;
+	}
+	.mobile\:p-5 {
+		padding: var(--box-5) !important;
+	}
+	.mobile\:p-6 {
+		padding: var(--box-6) !important;
+	}
+	.mobile\:p-7 {
+		padding: var(--box-7) !important;
+	}
+	.mobile\:p-8 {
+		padding: var(--box-8) !important;
+	}
+	.mobile\:p-9 {
+		padding: var(--box-9) !important;
+	}
+	.mobile\:p-10 {
+		padding: var(--box-10) !important;
+	}
+	.mobile\:p-11 {
+		padding: var(--box-11) !important;
+	}
+	.mobile\:p-12 {
+		padding: var(--box-12) !important;
+	}
+	.mobile\:p-13 {
+		padding: var(--box-13) !important;
+	}
+	.mobile\:p-14 {
+		padding: var(--box-14) !important;
+	}
+	.mobile\:p-15 {
+		padding: var(--box-15) !important;
+	}
+	.mobile\:p-16 {
+		padding: var(--box-16) !important;
+	}
+	.mobile\:p-24 {
+		padding: var(--box-24) !important;
+	}
+	.mobile\:p-32 {
+		padding: var(--box-32) !important;
+	}
+	.mobile\:p-40 {
+		padding: var(--box-40) !important;
+	}
+	.mobile\:p-48 {
+		padding: var(--box-48) !important;
+	}
+
+	.mobile\:radius-none {
+		border-radius: var(--radius-none) !important;
+	}
+	.mobile\:radius-small {
+		border-radius: var(--radius-small) !important;
+	}
+	.mobile\:radius-normal {
+		border-radius: var(--radius-normal) !important;
+	}
+	.mobile\:radius-large {
+		border-radius: var(--radius-large) !important;
+	}
+}
+
+/* Code highlights */
+.hljs-title,
+.hljs-property,
+.hljs-name,
+.hljs-keyword {
+	font-weight: var(--font-weight-bold);
+}
+
+.hljs-literal,
+.hljs-keyword {
+	color: var(--ui-text-intent-danger);
+}
+
+.hljs-number {
+	color: var(--ui-text-intent-silent);
+}
+
+.hljs-title,
+.hljs-property {
+	color: var(--ui-text-intent-advise);
+}
+
+.hljs-function {
+	color: var(--ui-text-intent-silent);
+}
+
+.hljs-attr,
+.hljs-title.function_ {
+	color: var(--ui-text-intent-confirmation);
+}
+
+.hljs-string {
+	color: var(--ui-text-intent-advise);
+}
+
+.hljs-name {
+	color: var(--ui-text-intent-success);
+}
+
+/* .text-gradient-1 {
+	background-image: linear-gradient(
+		135deg,
+		hsl(var(--color-intent-highlight), 75%),
+		hsl(var(--color-intent-highlight), 75%),
+		hsl(var(--color-intent-highlight), 25%)
+	);
+	background-clip: text;
+
+	-webkit-background-clip: text;
+	-moz-background-clip: text;
+	-webkit-text-fill-color: transparent;
+	-moz-text-fill-color: transparent;
+} */

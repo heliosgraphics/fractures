@@ -1,0 +1,8 @@
+.donut .donut__svg {
+	transform: rotate(-90deg);
+	transform-origin: 50% 50%;
+}
+
+.donut .donut__svg circle {
+	transition: all var(--animation-fast) var(--ease-in-out);
+}

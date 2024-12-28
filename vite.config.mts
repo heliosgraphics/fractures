@@ -1,23 +1,24 @@
 /// <reference types="vitest" />
 /// <reference types="vite/client" />
 
-import { defineConfig } from 'vite'
-import type { InlineConfig } from 'vitest'
-import type { UserConfig } from 'vite'
+import react from "@vitejs/plugin-react"
+import { defineConfig } from "vite"
+import type { UserConfig } from "vite"
 
 interface VitestConfigExport extends UserConfig {
-	test: InlineConfig
+	test: any
 }
 
 // https://vitejs.dev/config/
 export default defineConfig({
-	plugins: [],
+	plugins: [react()],
 	test: {
 		globals: true,
-		environment: 'jsdom',
+		environment: "jsdom",
 		coverage: {
-			reporter: ['text'],
+			reporter: ["html"],
 		},
-		threads: true
-	}
+		threads: false,
+		css: true,
+	},
 } as VitestConfigExport)

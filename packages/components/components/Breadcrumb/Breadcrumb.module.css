@@ -1,0 +1,25 @@
+.table {
+	width: 100%;
+
+	border-left: 1px solid var(--fui-color-100);
+	border-right: 1px solid var(--fui-color-100);
+	border-top: 1px solid var(--fui-color-100);
+	border-collapse: collapse;
+
+	text-align: left;
+	word-break: initial;
+}
+
+.table tr {
+	border-bottom: 1px solid var(--fui-color-100);
+}
+
+.table thead td {
+	background-color: var(--fui-color-25);
+
+	font-weight: bold;
+}
+
+.table td {
+	padding: 8px;
+}
