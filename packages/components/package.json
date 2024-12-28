@@ -1,0 +1,60 @@
+{
+	"name": "@heliosgraphics/ui",
+	"version": "1.8.5",
+	"type": "module",
+	"author": "03b8 <03b8@helios.graphics>",
+	"private": false,
+	"description": "Helios User Interface",
+	"scripts": {
+		"pub:components": "pnpm publish --access public",
+		"test": "NODE_ENV=test vitest run",
+		"test:update": "NODE_ENV=test vitest run --update",
+		"test:watch": "NODE_ENV=test vitest",
+		"test:coverage": "NODE_ENV=test vitest run --coverage",
+		"ts:watch": "tsc --noEmit --incremental --watch",
+		"build:components": "next build",
+		"start:components": "next start",
+		"prettier:write": "prettier --no-semi --use-tabs --write ./src/**"
+	},
+	"files": [
+		"./components/**/*.*",
+		"./constants/*.*",
+		"./hooks/*.*",
+		"./types/*.*",
+		"./utils/*.*",
+		"globals.d.ts",
+		"components.css",
+		"index.ts"
+	],
+	"dependencies": {
+		"@heliosgraphics/fractures": "^6.3.3",
+		"@heliosgraphics/icons": "^0.1.2",
+		"@heliosgraphics/utils": "^5.3.12",
+		"@types/markdown-it": "^14.1.2",
+		"@use-gesture/react": "^10.3.1",
+		"dayjs": "^1.11.13",
+		"highlight.js": "^11.11.1",
+		"markdown-it": "^14.1.0",
+		"react": "^19.0.0",
+		"react-dom": "^19.0.0",
+		"react-plock": "^3.4.0"
+	},
+	"devDependencies": {
+		"@testing-library/react": "^16.1.0",
+		"@types/node": "^22.10.2",
+		"@types/react": "^19.0.2",
+		"@types/react-dom": "^19.0.2",
+		"@typescript-eslint/eslint-plugin": "^8.18.2",
+		"@vitejs/plugin-react": "^4.3.4",
+		"@vitest/coverage-v8": "^2.1.8",
+		"eslint": "^9.17.0",
+		"eslint-config-prettier": "^9.1.0",
+		"eslint-plugin-prettier": "^5.2.1",
+		"jsdom": "^25.0.1",
+		"next": "^15.1.3",
+		"prettier": "^3.4.2",
+		"typescript": "^5.7.2",
+		"vite": "^6.0.6",
+		"vitest": "^2.1.8"
+	}
+}

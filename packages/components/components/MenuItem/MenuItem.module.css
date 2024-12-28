@@ -1,0 +1,34 @@
+.menuItem {
+	position: relative;
+
+	margin-inline: 8px;
+	padding: 8px 8px 8px 16px;
+
+	border-radius: var(--radius-small);
+	background-color: var(--ui-bg);
+
+	transition: all var(--animation-fastest) var(--ease-in-out);
+}
+
+.menuItem small {
+	max-width: 36ch;
+}
+
+.menuItem:not(.menuItemActive):hover {
+	background-color: var(--ui-bg-action-hover);
+}
+
+.menuItemActive {
+	background-color: var(--ui-bg-action-hover);
+}
+
+.menuItemActive:before {
+	position: absolute;
+	left: -10px;
+
+	height: 100%;
+	width: 2px;
+
+	background-color: hsl(var(--orange-hue), var(--orange-saturation), 50%);
+	content: " ";
+}

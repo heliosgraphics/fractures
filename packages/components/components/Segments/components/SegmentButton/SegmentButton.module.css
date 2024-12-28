@@ -1,0 +1,25 @@
+.segmentButton {
+	height: 32px;
+	padding: 0 8px;
+
+	background: transparent;
+	border: none;
+	border-radius: var(--radius-small);
+	color: var(--ui-bg);
+	outline: none;
+
+	color: var(--ui-text-secondary);
+	cursor: pointer;
+	font-family: var(--font-family-sans);
+	font-weight: var(--font-weight-semi-bold);
+	line-height: 32px;
+}
+
+.segmentButton:focus-visible {
+	outline: 2px solid hsl(var(--color-intent-highlight), 50%);
+}
+
+.segmentButtonActive {
+	background-color: var(--ui-bg);
+	color: var(--ui-text-primary);
+}

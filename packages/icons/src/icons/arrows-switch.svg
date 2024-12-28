@@ -1,0 +1,8 @@
+<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g id="arrows-switch">
+<g id="Vector">
+<path fill-rule="evenodd" clip-rule="evenodd" d="M6.82843 9L10.4142 5.41421C10.8047 5.02369 10.8047 4.39052 10.4142 4C10.0237 3.60948 9.39052 3.60948 9 4L2 11H21C21.5523 11 22 10.5523 22 10C22 9.44772 21.5523 9 21 9L6.82843 9Z" fill="#3014FF"/>
+<path fill-rule="evenodd" clip-rule="evenodd" d="M17.1716 15L13.5858 18.5858C13.1953 18.9763 13.1953 19.6095 13.5858 20C13.9763 20.3905 14.6095 20.3905 15 20L22 13L3 13C2.44772 13 2 13.4477 2 14C2 14.5523 2.44772 15 3 15L17.1716 15Z" fill="#3014FF"/>
+</g>
+</g>
+</svg>

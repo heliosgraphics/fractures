@@ -1,0 +1,127 @@
+.checkbox {
+	--checkbox-size: 24px;
+	--checkbox-margin: 3px;
+	--checkbox-radius: var(--radius-normal);
+
+	position: relative;
+
+	-webkit-tap-highlight-color: transparent;
+}
+
+.checkboxSmall {
+	--checkbox-size: 18px;
+	--checkbox-margin: 2px;
+	--checkbox-radius: var(--radius-small);
+}
+
+.checkboxDisabled {
+	pointer-events: none;
+}
+
+.checkboxDisabled .checkbox__checkboxMark {
+	opacity: 0.5;
+}
+
+.checkbox input {
+	position: absolute;
+	top: 0;
+	left: 0;
+
+	appearance: none;
+	display: flex;
+	overflow: hidden;
+	height: var(--checkbox-size);
+	width: var(--checkbox-size);
+
+	border-radius: var(--checkbox-radius);
+	outline-color: var(--checkbox-bg-checked);
+
+	cursor: pointer;
+}
+
+.checkbox input:active ~ .checkbox__checkboxIcon {
+	transform: scale(1.1);
+}
+
+.checkbox input:checked ~ .checkbox__checkboxMark {
+	background-color: var(--checkbox-bg-checked);
+}
+
+.checkbox input:checked ~ .checkbox__checkboxIcon {
+	opacity: 1;
+}
+
+.checkboxAdvise {
+	--checkbox-bg-checked: hsl(var(--color-intent-advise), 50%);
+}
+
+.checkboxAutomation {
+	--checkbox-bg-checked: hsl(var(--color-intent-automation), 50%);
+}
+
+.checkboxConfirmation {
+	--checkbox-bg-checked: hsl(var(--color-intent-confirmation), 50%);
+}
+
+.checkboxDanger {
+	--checkbox-bg-checked: hsl(var(--color-intent-danger), 50%);
+}
+
+.checkboxHighlight {
+	--checkbox-bg-checked: hsl(var(--color-intent-highlight), 50%);
+}
+
+.checkboxQuestion {
+	--checkbox-bg-checked: hsl(var(--color-intent-question), 50%);
+}
+
+.checkboxSilent {
+	--checkbox-bg-checked: hsl(var(--color-intent-silent), 50%);
+}
+
+.checkboxSuccess {
+	--checkbox-bg-checked: hsl(var(--color-intent-success), 50%);
+}
+
+.checkboxWarning {
+	--checkbox-bg-checked: hsl(var(--color-intent-warning), 50%);
+}
+
+.checkbox__checkboxLabel {
+	position: relative;
+
+	max-width: max-content;
+
+	cursor: pointer;
+	user-select: none;
+}
+
+.checkbox__mark {
+	position: relative;
+
+	height: var(--checkbox-size);
+	min-width: var(--checkbox-size);
+	width: var(--checkbox-size);
+}
+
+.checkbox__checkboxMark {
+	height: 100%;
+	overflow: hidden;
+	width: 100%;
+
+	background-color: var(--ui-bg-inactive);
+	border-radius: var(--checkbox-radius);
+
+	pointer-events: none;
+}
+
+.checkbox__checkboxIcon {
+	position: absolute;
+	left: var(--checkbox-margin);
+	top: var(--checkbox-margin);
+
+	opacity: 0;
+
+	color: var(--ui-bg);
+	pointer-events: none;
+}

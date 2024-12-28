@@ -1,0 +1,76 @@
+.select {
+	position: relative;
+
+	max-width: max-content;
+	width: 100%;
+}
+
+.select select {
+	padding-right: 64px;
+
+	background-color: var(--ui-bg);
+}
+
+.selectDisabled select {
+	background-color: var(--ui-bg-action);
+	color: var(--ui-text-secondary);
+
+	pointer-events: none;
+}
+
+.select select:active:not(:disabled),
+.select select:focus-visible:not(:disabled) {
+	box-shadow: 0 0 0 4px var(--ui-border-light);
+	border-color: var(--ui-border-active);
+}
+
+.select__select {
+	height: 42px;
+	margin: 0;
+	padding: 0 10px;
+	width: 100%;
+
+	appearance: none;
+	background-color: transparent;
+	border: none;
+	outline: none;
+	border: 1px solid var(--ui-border);
+	border-radius: var(--radius-normal);
+	transition: all var(--animation-fast) var(--ease-in-out);
+
+	font-family: var(--font-family-mono);
+	font-size: var(--font-size-small);
+	cursor: inherit;
+	line-height: 42px;
+}
+
+.select__icon {
+	position: absolute;
+	top: 29px;
+	right: 0;
+
+	padding-top: 2px;
+	height: 40px;
+	width: 42px;
+
+	color: var(--ui-text-secondary);
+
+	border-left: 1px solid var(--ui-border-light);
+	pointer-events: none;
+}
+
+.selectHiddenLabel .select__icon {
+	top: 1px;
+}
+
+.selectSmall .select__select {
+	height: 30px;
+
+	line-height: 30px;
+}
+
+.selectSmall .select__icon {
+	/* padding-top: 2px; */
+	height: 28px;
+	width: 32px;
+}

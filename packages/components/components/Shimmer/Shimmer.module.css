@@ -1,0 +1,24 @@
+.shimmer div {
+	height: 100%;
+	width: 100%;
+	animation: shimmer 760ms linear infinite forwards;
+
+	background-color: var(--ui-bg-disabled);
+	background-image: linear-gradient(to left, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0));
+	background-position: -256px 0;
+	background-repeat: no-repeat;
+	background-size: 256px 100%;
+}
+
+:root[data-theme="dark"] .shimmer div {
+	background-image: linear-gradient(to left, rgba(128, 128, 128, 0), rgba(128, 128, 128, 0.25), rgba(128, 128, 128, 0));
+}
+
+@keyframes shimmer {
+	0% {
+		background-position: -256px 0;
+	}
+	100% {
+		background-position: calc(100% + 256px) 0;
+	}
+}

@@ -1,0 +1,19 @@
+.heading {
+	white-space: break-spaces;
+}
+
+.headingPrimary {
+	color: var(--ui-text-primary);
+}
+
+.headingSecondary {
+	color: var(--ui-text-secondary);
+}
+
+.headingTertiary {
+	color: var(--ui-text-tertiary);
+}
+
+.heading a {
+	text-decoration: none;
+}

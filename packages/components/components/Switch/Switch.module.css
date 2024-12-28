@@ -1,0 +1,136 @@
+.switch {
+	--switch-height: 40px;
+	--switch-width: 40px;
+
+	position: relative;
+
+	-webkit-tap-highlight-color: transparent;
+}
+
+.switchSmall {
+	--switch-height: 30px;
+	--switch-width: 30px;
+}
+
+.switchDisabled {
+	pointer-events: none;
+}
+
+.switchDisabled .switch__switchMark {
+	opacity: 0.5;
+}
+
+.switch input {
+	position: absolute;
+	top: 0;
+	left: 0;
+
+	appearance: none;
+	display: flex;
+	height: var(--switch-height);
+	overflow: hidden;
+	width: var(--switch-width);
+
+	border-radius: var(--radius-normal);
+	outline-color: var(--switch-bg-checked);
+
+	cursor: pointer;
+}
+
+.switch input:active ~ .switch__switchMark:after {
+	transform: scale(1.1);
+}
+
+.switch input:checked ~ .switch__switchMark:after {
+	left: 22px;
+}
+
+.switchSmall input:checked ~ .switch__switchMark:after {
+	left: 16px;
+}
+
+.switch input:checked ~ .switch__switchMark {
+	background-color: var(--switch-bg-checked);
+}
+
+.switchAdvise {
+	--switch-bg-checked: hsl(var(--color-intent-advise), 50%);
+}
+
+.switchAutomation {
+	--switch-bg-checked: hsl(var(--color-intent-automation), 50%);
+}
+
+.switchConfirmation {
+	--switch-bg-checked: hsl(var(--color-intent-confirmation), 50%);
+}
+
+.switchDanger {
+	--switch-bg-checked: hsl(var(--color-intent-danger), 50%);
+}
+
+.switchHighlight {
+	--switch-bg-checked: hsl(var(--color-intent-highlight), 50%);
+}
+
+.switchQuestion {
+	--switch-bg-checked: hsl(var(--color-intent-question), 50%);
+}
+
+.switchSilent {
+	--switch-bg-checked: hsl(var(--color-intent-silent), 50%);
+}
+
+.switchSuccess {
+	--switch-bg-checked: hsl(var(--color-intent-success), 50%);
+}
+
+.switchWarning {
+	--switch-bg-checked: hsl(var(--color-intent-warning), 50%);
+}
+
+.switch__switchLabel {
+	position: relative;
+
+	max-width: max-content;
+
+	cursor: pointer;
+	user-select: none;
+}
+
+.switch__switchMark {
+	box-sizing: border-box;
+	height: var(--switch-height);
+	overflow: hidden;
+	width: var(--switch-width);
+
+	background-color: var(--ui-bg-inactive);
+	border-radius: var(--radius-normal);
+
+	pointer-events: none;
+}
+
+.switch__switchMark:after {
+	left: 4px;
+	top: 4px;
+	position: absolute;
+
+	box-sizing: inherit;
+	height: 32px;
+	width: 14px;
+
+	background-color: var(--ui-bg);
+	border-radius: var(--radius-small);
+	transition: all var(--animation-fast) var(--ease-in-out);
+	content: " ";
+
+	pointer-events: none;
+}
+
+.switchSmall .switch__switchMark:after {
+	left: 4px;
+	top: 4px;
+
+	height: 22px;
+	width: 10px;
+}

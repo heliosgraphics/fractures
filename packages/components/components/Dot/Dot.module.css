@@ -1,0 +1,21 @@
+.dot {
+	position: relative;
+
+	overflow: hidden;
+
+	transition: all var(--animation-slow) var(--ease-in-out);
+}
+
+.dot svg {
+	position: absolute;
+	top: 0;
+	left: 0;
+
+	display: flex;
+	height: 100%;
+	width: 100%;
+}
+
+.dot svg circle {
+	transform-origin: 50% 50%;
+}

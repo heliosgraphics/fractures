@@ -2,34 +2,52 @@
 	"version": "0.0.0",
 	"author": "03b8 <03b8@helios.graphics>",
 	"license": "MIT",
-	"private": false,
+	"private": true,
 	"scripts": {
-		"build": "pnpm run --filter @heliosgraphics/fractures build",
+		"build:fractures": "pnpm run --filter @heliosgraphics/fractures build",
+		"build:icons": "pnpm run --filter @heliosgraphics/icons build",
+		"export:icons": "pnpm run --filter @heliosgraphics/icons export",
+		"prettier:write": "prettier --no-semi --use-tabs --write ./packages/**",
+		"pub:fractures": "pnpm publish --access public --filter @heliosgraphics/fractures",
+		"pub:icons": "pnpm publish --access public --filter @heliosgraphics/icons",
+		"pub:ui": "pnpm publish --access public --filter @heliosgraphics/ui",
+		"pub:utils": "pnpm publish --access public --filter @heliosgraphics/utils",
 		"test": "NODE_ENV=test vitest run",
-		"test:bench": "pnpm run --filter @heliosgraphics/benchmark bench",
-		"test:u": "NODE_ENV=test vitest run --update",
-		"test:watch": "NODE_ENV=test vitest",
+		"test:fractures": "NODE_ENV=test vitest run",
+		"test:bench": "pnpm run --filter @heliosgraphics/benchmarks bench",
 		"test:coverage": "NODE_ENV=test vitest run --coverage",
-		"pub:fractures": "pnpm publish --access public --filter fractures",
-		"pub:utils": "pnpm publish --access public --filter utils",
-		"prettier:write": "prettier --no-semi --use-tabs --write ./packages/**"
+		"test:u": "NODE_ENV=test vitest run --update",
+		"test:update": "NODE_ENV=test vitest run --update",
+		"test:watch": "NODE_ENV=test vitest",
+		"ts:watch": "tsc --noEmit --incremental --watch --project ./packages/workshop/tsconfig.json"
 	},
 	"workspaces": [
 		"packages/*"
 	],
 	"dependencies": {},
 	"devDependencies": {
+		"@babel/eslint-parser": "^7.25.9",
+		"@testing-library/react": "^16.1.0",
+		"@types/node": "^22.10.2",
 		"@typescript-eslint/eslint-plugin": "8.18.2",
-		"@types/node": "22.10.2",
-		"@types/react": "19.0.2",
-		"@vitest/coverage-v8": "2.1.8",
-		"eslint": "9.17.0",
-		"eslint-config-prettier": "9.1.0",
-		"eslint-plugin-prettier": "5.2.1",
-		"jsdom": "25.0.1",
-		"prettier": "3.4.2",
-		"typescript": "5.7.2",
-		"vite": "6.0.5",
-		"vitest": "2.1.8"
-	}
+		"@typescript-eslint/parser": "^8.18.2",
+		"@vitejs/plugin-react": "^4.3.4",
+		"@vitest/coverage-v8": "^2.1.8",
+		"concurrently": "^9.1.1",
+		"eslint": "^9.17.0",
+		"eslint-config-next": "^15.1.3",
+		"eslint-config-prettier": "^9.1.0",
+		"eslint-plugin-jsx-a11y": "^6.10.2",
+		"eslint-plugin-prettier": "^5.2.1",
+		"jsdom": "^25.0.1",
+		"react": "^19.0.0",
+		"react-dom": "^19.0.0",
+		"prettier": "^3.4.2",
+		"typescript": "^5.7.2",
+		"vite": "^6.0.6",
+		"vitest": "^2.1.8"
+	},
+	"trustedDependencies": [
+		"esbuild"
+	]
 }

@@ -19,9 +19,6 @@
 		"build": "bun ./src/build.ts",
 		"test": "vitest run --reporter dot"
 	},
-	"engines": {
-		"node": ">=20.15.0"
-	},
 	"dependencies": {},
 	"devDependencies": {
 		"csstype": "latest",

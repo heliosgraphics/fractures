@@ -1,0 +1,108 @@
+.dialog {
+	left: 50%;
+	top: calc(12px + env(safe-area-inset-top, 12px));
+
+	max-height: calc(100% - 24px);
+	max-width: 100%;
+	overflow: auto;
+	overscroll-behavior: none;
+	width: 580px;
+
+	border: 0;
+	border-radius: var(--radius-large);
+	touch-action: pan-y;
+	transform: translateX(-50%);
+}
+
+.dialogNarrow {
+	width: 420px;
+}
+
+.dialog:not(.dialogCentered) {
+	animation: dialogFadeIn var(--animation-slow) ease-in-out;
+}
+
+.dialogCentered {
+	top: 50%;
+
+	animation: dialogCenterFadeIn var(--animation-slow) ease-in-out;
+	transform: translateX(-50%) translateY(-50%);
+}
+
+.dialog::-webkit-scrollbar {
+	height: 8px;
+	width: 8px;
+}
+
+.dialog__content {
+	position: relative;
+	z-index: var(--z-index-1);
+
+	padding: 24px;
+}
+
+.dialog__content.dialog__contentNoPadding {
+	padding: 0;
+}
+
+.dialog__header {
+	border-radius: 8px 8px 0 0;
+	box-shadow: 0 1px 0 var(--ui-border-light);
+}
+
+.dialog::backdrop {
+	--ui-bg-backdrop: rgba(80, 80, 80, 0.5);
+
+	animation: backdropFadeIn var(--animation-fast) ease-in-out;
+	background-color: var(--ui-bg-backdrop);
+	backdrop-filter: blur(2px);
+}
+
+@media (max-width: 576px) {
+	.dialog:not(.dialogCentered) {
+		margin-left: 8px;
+		margin-right: 8px;
+		width: calc(100% - 16px);
+	}
+
+	.dialog__content {
+		padding: 12px;
+	}
+}
+
+@media (max-width: 576px) {
+	.dialogCentered {
+		width: calc(100% - 16px);
+	}
+}
+
+@keyframes dialogFadeIn {
+	0% {
+		opacity: 0;
+		transform: translateX(-50%) translateY(6px);
+	}
+	100% {
+		opacity: 1;
+		transform: translateX(-50%) translateY(0);
+	}
+}
+
+@keyframes dialogCenterFadeIn {
+	0% {
+		opacity: 0;
+		transform: translateX(-50%) translateY(calc(-50% + 6px));
+	}
+	100% {
+		opacity: 1;
+		transform: translateX(-50%) translateY(-50%);
+	}
+}
+
+@keyframes backdropFadeIn {
+	0% {
+		opacity: 0;
+	}
+	100% {
+		opacity: 1;
+	}
+}

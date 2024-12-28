@@ -1,0 +1,46 @@
+.pill {
+	transition: all var(--animation-fast) var(--ease-in-out);
+}
+
+.pillRounded {
+	border-radius: 30px;
+}
+
+.pillNormal {
+	height: 30px;
+	padding: 0 8px;
+}
+
+.pillNormal.pillIconOnly {
+	padding: 0 3px;
+}
+
+.pillSmall {
+	height: 24px;
+	padding: 0 6px;
+}
+
+.pillSmall.pillIconOnly {
+	padding: 0 4px;
+}
+
+.pillSmall.pillRounded:not(.pillIconOnly) {
+	padding: 0 8px;
+}
+
+.pillTiny {
+	height: 20px;
+	padding: 0 4px;
+}
+
+.pillTiny.pillIconOnly {
+	padding: 0 4px;
+}
+
+.pillTiny.pillRounded:not(.pillIconOnly) {
+	padding: 0 8px;
+}
+
+.pillDark {
+	color: var(--ui-text-white);
+}

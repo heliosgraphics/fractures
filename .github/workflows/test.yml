@@ -5,7 +5,9 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
-      - uses: actions/setup-node@v3
       - uses: oven-sh/setup-bun@v1
-      - run: npm i
-      - run: npm test
+      - uses: pnpm/action-setup@v2
+        with:
+          version: latest
+      - run: pnpm i
+      - run: pnpm run test

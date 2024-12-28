@@ -1,0 +1,71 @@
+.resultList {
+	position: absolute;
+	z-index: var(--z-index-1);
+
+	max-height: 360px;
+	max-width: 100%;
+	overflow-y: scroll;
+	overflow-x: hidden;
+	opacity: 0;
+	width: 360px;
+
+	background-color: var(--ui-bg);
+	border-radius: var(--radius-normal);
+	transform: translateX(-8px);
+	transition: all var(--animation-fastest) var(--ease-in-out);
+
+	animation: resultsFadeIn var(--animation-fastest) ease-in-out forwards;
+}
+
+.itemActive {
+	background: var(--ui-border-light);
+}
+
+.itemDisabled {
+	background: var(--ui-bg-disabled);
+	color: var(--ui-text-tertiary);
+
+	pointer-events: none;
+}
+
+.resultList .item:hover {
+	background: var(--ui-bg-action-hover);
+}
+
+.resultList .item:not(:first-child) {
+	border-top: 1px solid var(--ui-border-light);
+}
+
+.resultList .item {
+	padding: 10px 12px;
+
+	cursor: pointer;
+
+	-webkit-tap-highlight-color: transparent;
+}
+
+.resultList li.resultList__separator {
+	position: relative;
+
+	padding: 4px;
+	background-color: var(--ui-border-light);
+	border-top: 1px solid var(--ui-border);
+	border-bottom: 1px solid var(--ui-border);
+
+	pointer-events: none;
+}
+
+.resultList li.resultList__separator + .item {
+	border-top: 0;
+}
+
+@keyframes resultsFadeIn {
+	0% {
+		opacity: 0;
+		transform: translateX(-8px);
+	}
+	100% {
+		opacity: 1;
+		transform: translateX(0);
+	}
+}

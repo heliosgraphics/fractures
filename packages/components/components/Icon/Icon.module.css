@@ -1,0 +1,22 @@
+.icon {
+	transition: all var(--animation-fastest) var(--ease-in-out);
+}
+
+.icon svg {
+	height: 100%;
+	width: 100%;
+
+	fill: currentcolor;
+}
+
+.iconPrimary svg {
+	fill: var(--ui-text-primary);
+}
+
+.iconSecondary svg {
+	fill: var(--ui-text-secondary);
+}
+
+.iconTertiary svg {
+	fill: var(--ui-text-tertiary);
+}

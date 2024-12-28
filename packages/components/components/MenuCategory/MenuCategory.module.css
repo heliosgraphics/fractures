@@ -1,0 +1,21 @@
+.menuCategoryPlain {
+	padding-top: 8px;
+}
+
+.menuCategoryTitle {
+	height: 40px;
+	padding-inline: 8px;
+}
+
+.menuCategoryFolder .menuCategoryTitle {
+	border-bottom: 1px solid var(--ui-border-light);
+}
+
+.menuCategoryFolder .menuCategoryItems {
+	padding-block: 8px;
+	margin-left: 12px;
+
+	border-left: 1px solid var(--ui-border-light);
+	border-bottom: 1px solid var(--ui-border-light);
+	border-bottom-left-radius: var(--radius-normal);
+}

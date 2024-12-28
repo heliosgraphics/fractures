@@ -1,0 +1,22 @@
+.progress {
+	height: 8px;
+	width: 100%;
+
+	background-color: var(--ui-bg-disabled);
+	border: 0;
+	border-radius: 8px;
+}
+
+.progress::-webkit-progress-bar {
+	background-color: transparent;
+}
+
+.progress::-webkit-progress-value {
+	background-color: hsl(var(--blue-hue), var(--blue-saturation), 50%);
+	border-radius: 16px;
+	transition: all var(--animation-fast) var(--ease-in-out);
+}
+
+.progressSmall {
+	height: 4px;
+}

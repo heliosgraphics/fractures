@@ -1,0 +1,17 @@
+.main {
+	height: 100vh;
+
+	background-color: var(--ui-bg-soft);
+}
+
+.main:has(nav[data-component="Navigation"]) nav[data-component="Menu"] {
+	top: 64px;
+
+	height: calc(100vh - 64px);
+}
+
+@media (min-width: 960px) {
+	.main:has(nav[data-component="Menu"]) section[data-component="Content"] {
+		padding-left: 260px;
+	}
+}

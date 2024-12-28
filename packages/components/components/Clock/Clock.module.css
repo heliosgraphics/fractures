@@ -1,0 +1,27 @@
+.clock {
+	height: 64px;
+	width: 64px;
+
+	border-radius: 64px;
+}
+
+.clock__center {
+	fill: var(--ui-text-primary);
+}
+
+.clock__border {
+	stroke: var(--ui-border-light);
+}
+
+.clock__hour {
+	stroke: var(--ui-text-tertiary);
+}
+
+.clock__minute {
+	stroke: var(--ui-text-tertiary);
+}
+
+.clock__second {
+	stroke: var(--ui-text-primary);
+	transform: all 100ms linear;
+}
